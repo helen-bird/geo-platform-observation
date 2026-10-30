@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q3-R1-legacy-01",
+  "attempt_id": "C-Q3-R1",
+  "slot_id": "C-Q3-R1",
+  "method": "official read_thread transcript; rendered UI search evidence",
+  "captured_at": "2026-10-29T09:47:55.514Z",
+  "status": "completed",
+  "body_completeness": "legacy_unverified",
+  "answer_chars": 11418,
+  "source_count": 13,
+  "notes": "正文显示加载故障；通过官方 read_thread 读取同一会话存储记录，未重发或追问。保留全部可读取原文和明确URL；内部引用标记未完整映射，来源面板为空。搜索芯片为UI工具选择，不改变英文原题。",
+  "capture_kind": "initial_export",
+  "selected": false,
+  "attempt_in_main_sample": true,
+  "file": "data/captures/C-Q3-R1-legacy-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

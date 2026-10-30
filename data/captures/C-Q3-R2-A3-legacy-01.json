@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q3-R2-A3-legacy-01",
+  "attempt_id": "C-Q3-R2-A3",
+  "slot_id": "C-Q3-R2",
+  "method": "DOM-backed share-dialog preview; no public share created",
+  "captured_at": "2026-10-30T05:03:46.255Z",
+  "status": "completed",
+  "body_completeness": "legacy_unverified",
+  "answer_chars": 8562,
+  "source_count": 16,
+  "notes": "10月30日新会话逐字发送原始Q3，无追加引导。沿用Cursor补测的GPT-6 Medium条件；与Q3第一轮Extra High不同。主页面仍加载失败，从分享预览与来源菜单完整恢复，未创建公开链接。",
+  "capture_kind": "initial_export",
+  "selected": false,
+  "attempt_in_main_sample": true,
+  "file": "data/captures/C-Q3-R2-A3-legacy-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

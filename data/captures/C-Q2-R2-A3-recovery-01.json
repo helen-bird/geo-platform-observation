@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q2-R2-A3-recovery-01",
+  "attempt_id": "C-Q2-R2-A3",
+  "slot_id": "C-Q2-R2",
+  "method": "DOM-backed share-dialog preview; no public share created in this capture",
+  "captured_at": "2026-10-30T05:00:31.096Z",
+  "status": "completed",
+  "body_completeness": "completed",
+  "answer_chars": 11884,
+  "source_count": 4,
+  "notes": "恢复Cursor已提交的同一会话，无新增提问。原页面显示今天0:06，回复菜单今天0:08；提问时间精度为分钟。正文完整结尾；模型设置与生成元数据的证据边界已注明。",
+  "capture_kind": "share_preview",
+  "selected": true,
+  "attempt_in_main_sample": true,
+  "file": "data/captures/C-Q2-R2-A3-recovery-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q2-R2-legacy-01",
+  "attempt_id": "C-Q2-R2",
+  "slot_id": "C-Q2-R2",
+  "method": "UI + official read_thread; incomplete response",
+  "captured_at": "2026-10-29T09:51:59.465345+00:00",
+  "status": "incomplete",
+  "body_completeness": "legacy_unverified",
+  "answer_chars": 1029,
+  "source_count": 0,
+  "notes": "存储正文仅1029字符，停在未完成链接 [Read；官方read_thread记录与网页交叉检查。保留失败记录，不进入推荐频次统计。",
+  "capture_kind": "initial_export",
+  "selected": false,
+  "attempt_in_main_sample": false,
+  "file": "data/captures/C-Q2-R2-legacy-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

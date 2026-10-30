@@ -1,0 +1,176 @@
+{
+  "id": "G-Q3-R1",
+  "platform": "Grok",
+  "question_id": "Q3",
+  "repeat": 1,
+  "date_local": "2026-10-29",
+  "started_at": "2026-10-29T09:37:00.803Z",
+  "finished_at": "2026-10-29T09:38:29.902Z",
+  "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "observed_submitted_prompt": null,
+  "normalized_submitted_prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_prompt_provenance": "inferred_from_recorded_prompt_and_mode",
+  "mode_label": "Expert",
+  "model_label": "未披露具体模型版本",
+  "model_evidence": "页面模型选择器显示 Expert；未显示版本号",
+  "search_status": "observed",
+  "search_evidence": "执行了 3 次搜索；执行了 4 次搜索",
+  "status": "completed",
+  "answer_text": "The GEO Lab (Artur Ferreira) and practitioners like Sam Shev stand out for practical, data-backed GEO (Generative Engine Optimization) tutorials suited to independent builders.⁠Thegeolab\n\nGEO focuses on getting content cited in AI answers from tools like ChatGPT, Perplexity, Google AI Overviews, and similar systems, rather than traditional search rankings.\n\nThe GEO Lab (thegeolab.net)\n\nArtur Ferreira’s GEO Lab publishes a free library of practitioner resources, including the GEO Field Manual (a comprehensive working guide), Pocket Guide, GEO Experiments, 30-day Workbook, and related materials. These center on the five-layer GEO Stack (Retrieval Probability, Extractability, Entity Reinforcement, Structural Authority, and System Memory).⁠Thegeolab\n\nThey emphasize:\n\nDiagnostic audits and section-level scoring.\nExperiment templates and measurement (including their own tests, e.g., declarative structures outperforming narrative ones in citation rates).\nPractical implementation: answer-first openings, extractable chunks, schema, entity consistency, and 30-day starter roadmaps.\nReferences to primary research, including the foundational Princeton/IIT Delhi KDD 2024 paper.\n\nThese are free for personal and commercial use, structured as reference tools rather than pure theory, and suitable for site owners or solo builders who want measurable, experiment-driven work without agency budgets.\n\nSam Shev and similar roadmaps\n\nSam Shev (fractional CMO focused on early-stage SaaS) published a detailed 90-Day Generative Engine Optimization Roadmap. It is explicitly grounded in the Aggarwal et al. (KDD 2024 / arXiv:2311.09735) study that tested content techniques across ~10,000 queries and found lifts from adding quotations (~+40%), statistics, fluency/clarity, and inline citations, with larger relative gains often going to lower-ranked or smaller sites. Keyword stuffing performed worse than baseline.⁠Samshev\n\nThe roadmap breaks into phases:\n\nBaseline prompt audits (25–50 buyer questions across AI tools).\nTechnical fixes (crawler access, schema).\nRewrites of existing high-value pages using evidence-based techniques (Answer Capsule style, named quotes, stats with sources).\nContent production, off-site signals, and KPI tracking (citation rate, AI share of voice, referral traffic).\n\nIt prioritizes maximizing existing content equity and repeatable processes, which fits independent or lean teams.\n\nOther practical options\nApollo Digital offers a free ~100-minute GEO course with lessons on foundations, crawler access, measurement (including free Google Sheets audit templates), and tooling.\nJulian Goldie and similar creators share free step-by-step systems using tools like Search Console exports plus free AI agents.\nIndie-oriented pieces appear on sites like Indietool, HeyCatch, Solo Business Hub, and Indie Hackers, often covering 30-day plans, entity consistency, and low-cost distribution for solo founders.\nWhy these work for independent builders\n\nThe academic foundation (Aggarwal et al., KDD 2024) showed that substance—quotes, statistics, and citations—improves visibility inside AI answers more reliably than classic keyword tactics, and relative gains can be larger for smaller or mid-ranked sites. The best tutorials translate this into low-resource actions: manual prompt baselines, answer-first rewrites, schema markup, extractable structure, entity consistency across the web, and simple before/after measurement. They avoid heavy tool dependency at the start and focus on what independent builders can ship themselves.⁠Aisearch\n\nStart with the GEO Lab Field Manual or Pocket Guide for a full framework, or Sam Shev’s roadmap for a concrete 90-day sequence. Always run your own baseline prompt tests, as AI citation behavior evolves. Primary source for the key numbers remains the 2024 KDD paper (arXiv:2311.09735).",
+  "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+  "capture_method": "Rendered browser answer DOM + screenshot",
+  "citation_mapping_complete": true,
+  "attempt_number": 1,
+  "slot_id": "G-Q3-R1",
+  "attempt_id": "G-Q3-R1",
+  "capture_id": "G-Q3-R1-legacy-01",
+  "selected_eligible": true,
+  "selection_reason": "earliest_complete_attempt",
+  "sources": [
+    {
+      "url": "https://thegeolab.net/field-manual/",
+      "title": "GEO Field Manual — Practical GEO Guide (Thegeolab)",
+      "domain": "thegeolab.net",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://www.samshev.com/blog/geo-90-day-roadmap",
+      "title": "How to Start GEO: A 90-Day Generative Engine Optimization Roadmap | Sam Shev — Fractional CMO (Samshev)",
+      "domain": "www.samshev.com",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://aisearch.global/insights/princeton-geo-paper-explained",
+      "title": "The Princeton GEO Paper Explained | AISearch Global (Aisearch)",
+      "domain": "aisearch.global",
+      "kind": "inline_citation"
+    }
+  ],
+  "retrieval_sources": [],
+  "observations": [
+    {
+      "entity": "The GEO Lab",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "The GEO Lab (Artur Ferreira) and practitioners like Sam Shev stand out for practical, data-backed GEO",
+      "notes": "作者 Artur Ferreira 与 The GEO Lab 合并为同一主体。",
+      "source_urls": [
+        "https://thegeolab.net/field-manual/"
+      ]
+    },
+    {
+      "entity": "Sam Shev",
+      "entity_type": "creator",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Sam Shev (fractional CMO focused on early-stage SaaS) published a detailed 90-Day Generative Engine Optimization Roadmap.",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://www.samshev.com/blog/geo-90-day-roadmap"
+      ]
+    },
+    {
+      "entity": "Apollo Digital",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Apollo Digital offers a free ~100-minute GEO course with lessons on foundations, crawler access, measurement",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Julian Goldie",
+      "entity_type": "creator",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Julian Goldie and similar creators share free step-by-step systems using tools like Search Console exports plus free AI agents.",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Indietool",
+      "entity_type": "publication",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Indie-oriented pieces appear on sites like Indietool, HeyCatch, Solo Business Hub, and Indie Hackers",
+      "notes": "位于 Other practical options，作为独立开发者可读的资源主动提供。",
+      "source_urls": []
+    },
+    {
+      "entity": "HeyCatch",
+      "entity_type": "publication",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Indie-oriented pieces appear on sites like Indietool, HeyCatch, Solo Business Hub, and Indie Hackers",
+      "notes": "位于 Other practical options，作为独立开发者可读的资源主动提供。",
+      "source_urls": []
+    },
+    {
+      "entity": "Solo Business Hub",
+      "entity_type": "publication",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Indie-oriented pieces appear on sites like Indietool, HeyCatch, Solo Business Hub, and Indie Hackers",
+      "notes": "位于 Other practical options，作为独立开发者可读的资源主动提供。",
+      "source_urls": []
+    },
+    {
+      "entity": "Indie Hackers",
+      "entity_type": "publication",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Indie-oriented pieces appear on sites like Indietool, HeyCatch, Solo Business Hub, and Indie Hackers",
+      "notes": "位于 Other practical options，作为独立开发者可读的资源主动提供。",
+      "source_urls": []
+    },
+    {
+      "entity": "GEO research (Aggarwal et al.)",
+      "entity_type": "research",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "Primary source for the key numbers remains the 2024 KDD paper (arXiv:2311.09735).",
+      "notes": "原句仅说明关键数字的证据归属，未主动建议阅读，因此 R=false；正文明确提及论文，M=true；可见链接仅为 AISearch Global 第三方解读，未见原作直接引用，C=false。",
+      "source_urls": []
+    }
+  ],
+  "raw_file": "data/records/G-Q3-R1.json",
+  "capture_history": [
+    {
+      "capture_id": "G-Q3-R1-legacy-01",
+      "attempt_id": "G-Q3-R1",
+      "slot_id": "G-Q3-R1",
+      "method": "Rendered browser answer DOM + screenshot",
+      "captured_at": "2026-10-29T09:38:29.902Z",
+      "status": "completed",
+      "body_completeness": "completed",
+      "answer_chars": 3850,
+      "source_count": 3,
+      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "capture_kind": "initial_export",
+      "selected": true,
+      "file": "data/captures/G-Q3-R1-legacy-01.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    }
+  ],
+  "capture_provenance": {
+    "original_status": "completed",
+    "selected_capture_id": "G-Q3-R1-legacy-01",
+    "method": "Rendered browser answer DOM + screenshot",
+    "captured_at": "2026-10-29T09:38:29.902Z",
+    "same_conversation": true,
+    "review_notes": "Original export retained; no recovery selection.",
+    "selected_capture_file": "data/records/G-Q3-R1.json"
+  },
+  "public_copy": true
+}

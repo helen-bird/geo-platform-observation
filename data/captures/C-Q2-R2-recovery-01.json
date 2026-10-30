@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q2-R2-recovery-01",
+  "attempt_id": "C-Q2-R2",
+  "slot_id": "C-Q2-R2",
+  "method": "DOM-backed share-dialog preview; no public share created",
+  "captured_at": "2026-10-29T10:20:25.683Z",
+  "status": "partial",
+  "body_completeness": "partial",
+  "answer_chars": 820,
+  "source_count": 0,
+  "notes": "分享预览仍在“[Read”处终止；未恢复完整正文。",
+  "capture_kind": "share_preview",
+  "selected": true,
+  "attempt_in_main_sample": false,
+  "file": "data/captures/C-Q2-R2-recovery-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

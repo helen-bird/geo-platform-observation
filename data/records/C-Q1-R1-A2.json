@@ -1,0 +1,510 @@
+{
+  "id": "C-Q1-R1-A2",
+  "platform": "ChatGPT Search",
+  "question_id": "Q1",
+  "repeat": 1,
+  "date_local": "2026-10-29",
+  "started_at": "2026-10-29T11:57:53.000Z",
+  "finished_at": "2026-10-30T05:06:39.761934+00:00",
+  "prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+  "submitted_prompt": "网页搜索What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+  "observed_submitted_prompt": "网页搜索What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+  "normalized_submitted_prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+  "submitted_prompt_provenance": "raw_record",
+  "mode_label": "网页搜索 · Medium",
+  "model_label": "GPT-6（界面选择标签）",
+  "model_evidence": "模型菜单GPT-6 checked；思考强度 Medium（为降频/用量上限未用极高）",
+  "search_status": "observed",
+  "search_evidence": "恢复同一会话查看来源：来源区14条、更多区31条，搜索已被观察；Cursor旧记录仅凭URL跟踪参数不能独立证明搜索。",
+  "status": "completed",
+  "answer_text": "Best free resources to learn GEO in 2026\n\nGenerative Engine Optimization (GEO) is the practice of improving the likelihood that AI-powered search and answer systems — such as ChatGPT, Perplexity, Gemini, and Google AI Overviews — discover, cite, or recommend your content.\n\nMy recommendation is to learn GEO through three complementary approaches: official platform documentation, original research, and hands-on experiments with measurable outcomes. GEO is evolving quickly, and many commercial guides promote tactics whose effectiveness has not been independently established.\n\nFor a free learning path, I would prioritize the following resources.\n\n1. Best resources at a glance\n\n1. Google Search Central — Best official guidance\nStart here\nFree · Official documentation · Beginner to intermediate\nExplains how Google's AI search features discover and surface content, why conventional SEO still matters, and which popular GEO claims Google does not endorse.\nRead Google's 2026 AI optimization guide\nhttps://developers.google.com/search/docs/fundamentals/ai-optimization-guide\n\n2. The original GEO research paper — Best research foundation\nFree · Academic research · Intermediate\nThe foundational paper introduces a benchmark for measuring visibility in generative-engine responses and evaluates different content optimization strategies.\nRead the paper on arXiv\nhttps://arxiv.org/abs/2311.09735\n\n3. LearnGEO — Best structured course\nFree · 19 modules · 57 lessons\nA structured, self-paced course covering how AI answer systems source information and how to improve content visibility. The site advertises no account requirement.\nTake the course\nhttps://learngeo.io/\n\n4. Ahrefs — Best practical SEO-to-GEO bridge\nFree learning materials · Practitioner-oriented\nUseful for understanding content strategy, search intent, backlinks, authority, and the conventional SEO fundamentals that underpin AI visibility.\nExplore Ahrefs' learning resources\nhttps://ahrefs.com/academy\n\n5. Bing Webmaster Tools — Best for measurement\nFree · Requires access to a website for its own performance data\nUseful for learning how to inspect AI-related visibility and citations where supported. It helps turn GEO from a writing exercise into a measurement problem.\nOpen Bing Webmaster Tools\nhttps://www.bing.com/webmasters/\n\n6. Apollo Digital Learn GEO — Best short implementation course\nFree · 7 lessons · About 100 minutes\nA compact introduction to GEO strategy, content readiness, AI citations, and a repeatable measurement workflow. It is agency-produced, so validate its recommendations against platform documentation and your own experiments.\n\nThese resources serve different purposes. Google is the strongest source for Google's own requirements; academic papers provide research methods and evidence; courses offer a more convenient route to implementation. No single resource establishes a universal formula for getting recommended by every AI system.\n\n2. Additional resources worth bookmarking\n\nThese are useful once you have the basics.\n\nSemrush Academy\nFree AI Search courses covering visibility strategy and practical workflows. An account is required.\n\nThe GEO Community\nPractitioner-oriented guides and experiment write-ups. Treat its results as individual case studies until you can verify the methodology and reproduce the findings.\n\nAwesome GEO\nA public GitHub directory collecting research papers, platform documentation, tools, and implementation guides. Useful as a reference library after the introductory course.\n\nOfficial visibility measurement\n• Google Search Console / AI features: measures impressions from supported Google AI search features.\n• Bing Webmaster Tools AI Performance: reports citations, cited pages, and associated grounding queries across supported AI experiences.\nBoth are free. They measure different surfaces and require a website you can access and verify.\n\n3. What does the research actually support?\n\nThe original GEO paper by Aggarwal and colleagues, published at KDD 2024, is especially important because it evaluates optimization tactics experimentally. It reports visibility improvements of up to 40% on its benchmark, with results varying by domain. That is a benchmark result, not a promise of a 40% improvement for every website or AI platform.\n\nGoogle's 2026 guidance adds an important practical constraint: conventional SEO remains foundational, and Google explicitly cautions against relying on supposed GEO hacks such as unnecessary llms.txt files, artificial mentions, or rigid content-chunking rules.\n\nUse these principles to evaluate any tutorial:\n• Evidence: Does it report an actual experiment, sample size, baseline, and outcome?\n• Attribution: Can the author distinguish a content change from model updates or changes in search demand?\n• Reproducibility: Are the prompts, measurement method, and evaluation period documented?\n• Commercial incentives: Is the author selling a tool whose effectiveness the tutorial claims to demonstrate?\n• Platform specificity: Does the advice work on multiple systems, or only on one particular search experience?\n\n4. Recommended learning plan: two weeks\n\nFor an independent builder, I would spend less time collecting courses and more time publishing and measuring original work.\n\nDays 1–2\nLearn the fundamentals\nRead Google's guide and complete the Ahrefs AEO course. Write a one-page summary of how AI discovery differs from traditional search.\n\nDays 3–4\nRead the original paper\nIdentify the tested tactics, outcome measures, experimental limitations, and assumptions that might not hold in current AI systems.\n\nDays 5–7\nRun a baseline experiment\nSelect 10–20 questions relevant to your topic. Test them across ChatGPT, Perplexity, and Google AI search where available. Record brand mentions, citations, cited URLs, and competitors.\n\nDays 8–10\nPublish one controlled content change\nFor example, improve a post with original observations, verifiable evidence, and clear sourcing. Keep the topic and other conditions as consistent as possible.\n\nDays 11–14\nRe-test and publish your findings\nRepeat the same prompts, document changes and variability, and publish a short experiment report. A null result is useful if the method is transparent.\n\nOne methodological caution: AI answers can vary between runs. Use repeated tests, a consistent prompt set, and a record of the test date and platform. A simple before-and-after comparison is a useful starting point, but it does not establish causality on its own.\n\nMy final shortlist\n\nIf you only have time for three resources, choose these:\n1. Google Search Central for official platform guidance.\n2. The original GEO paper for research-backed methods and limitations.\n3. Ahrefs' free AEO course for a structured, practical introduction.\n\nThen start testing those methods on content you actually publish. That will teach you more about what works in your own context than completing several overlapping courses.\n",
+  "notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。两周计划完整到 Days11–14；分享对话框创建公开链接（已记录 share_url）。思考强度为 Medium，与早期 Extra High 不同。编码尚未完成。\nThe saved screenshot shows Days 11–14 and the final shortlist/natural ending. The complete raw answer is preserved exactly.\nNo saved share HTML or full DOM export exists for independent whole-body verification; model GPT-6 and search activity remain recorded observations with the evidence limits documented in the audit.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。",
+  "capture_method": "Preservation of complete saved Cursor raw answer and its recorded explicit links; no independent saved HTML for this attempt",
+  "citation_mapping_complete": true,
+  "attempt_number": 2,
+  "replacement_for": "C-Q1-R1",
+  "slot_id": "C-Q1-R1",
+  "attempt_id": "C-Q1-R1-A2",
+  "capture_id": "C-Q1-R1-A2-restored-20261030-01",
+  "selected_eligible": true,
+  "selection_reason": "earliest_complete_attempt",
+  "coding_reviewed_for_capture": true,
+  "sources": [
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "title": "Read Google's 2026 AI optimization guide",
+      "domain": "developers.google.com",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://arxiv.org/abs/2311.09735",
+      "title": "Read the paper on arXiv",
+      "domain": "arxiv.org",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://learngeo.io/",
+      "title": "Take the course",
+      "domain": "learngeo.io",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://ahrefs.com/academy",
+      "title": "Explore Ahrefs' learning resources",
+      "domain": "ahrefs.com",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://www.bing.com/webmasters/",
+      "title": "Open Bing Webmaster Tools",
+      "domain": "www.bing.com",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?version=published",
+      "title": "Google for Developers\nGoogle's Guide to Optimizing for Generative AI Features on Google Search | Google Search Central  |  Documentation  |  Google for Developers\n2026年7月10日",
+      "domain": "developers.google.com",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://developers.google.cn/search/blog/2026/05/a-new-resource-for-optimizing?hl=en",
+      "title": "Google for Developers\nA new resource for optimizing for generative AI in Google Search  |  Google Search Central Blog  |  Google for Developers\n2026年5月15日",
+      "domain": "developers.google.cn",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/",
+      "title": "The GEO Community\nBest GEO Resources, Courses & Tutorials [2026]\n2026年4月24日",
+      "domain": "thegeocommunity.com",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://github.com/marketingtoolslist/awesome-geo",
+      "title": "GitHub\nGitHub - marketingtoolslist/awesome-geo: A curated list of resources for Generative Engine Optimization (GEO)",
+      "domain": "github.com",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/",
+      "title": "Class Central\n25 Resources to Learn Generative Engine Optimization in 2026\n2026年1月2日",
+      "domain": "www.classcentral.com",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://geo.wiki/blog/geo-learning-resources",
+      "title": "GEO Wiki\n7 Free GEO Learning Resources for 2026",
+      "domain": "geo.wiki",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://apollodigital.io/learn/geo/",
+      "title": "Apollo Digital\nThe Free GEO Course: Learn Generative Engine Optimization",
+      "domain": "apollodigital.io",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://www.semrush.com/academy/courses/ai-search/",
+      "title": "Semrush Academy\nFree AI Search Courses & Certifications",
+      "domain": "www.semrush.com",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://support.google.com/webmasters/answer/16984139?hl=en",
+      "title": "Search Console Help\nGenerative AI performance report (Search)",
+      "domain": "support.google.com",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c",
+      "title": "Bing Webmaster Tools\nAI Performance",
+      "domain": "www.bing.com",
+      "kind": "citation_panel_match"
+    },
+    {
+      "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/",
+      "title": "Princeton University\nGEO: Generative Engine Optimization\n2024年8月24日",
+      "domain": "collaborate.princeton.edu",
+      "kind": "citation_panel_match"
+    }
+  ],
+  "retrieval_sources": [
+    {
+      "url": "https://developers.google.cn/search/docs/fundamentals/using-gen-ai-content?hl=en",
+      "title": "developers.google.cn\nGoogle Search's Guidance on Generative AI Content on Your Website | Google Search Central  |  Documentation  |  Google for Developers\n2026年10月1日",
+      "domain": "developers.google.cn",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://www.stackmatix.com/blog/free-aeo-geo-resources-2026",
+      "title": "www.stackmatix.com\nFree AEO and GEO Learning Resources in 2026\n2026年9月11日",
+      "domain": "www.stackmatix.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://www.bigbangstory.com/research/generative-engine-optimization-visibility",
+      "title": "www.bigbangstory.com\nGenerative Engine Optimization Evidence | Big Bang Story\n2026年8月28日",
+      "domain": "www.bigbangstory.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook",
+      "title": "github.com\nGitHub - ferinazumaDEV/generative-engine-optimization-handbook: The complete, free, open reference on Generative Engine Optimization (GEO): how to get your content cited by AI answer engines — ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot. Every claim sourced or flagged needs-verification; CI checks the graded claims table and every link. CC BY-SA 4.0. · GitHub\n2026年8月25日",
+      "domain": "github.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?version=published",
+      "title": "developers.google.com\nGoogle's Guide to Optimizing for Generative AI Features on Google Search | Google Search Central  |  Documentation  |  Google for Developers\n2026年7月10日",
+      "domain": "developers.google.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/",
+      "title": "blog.google\nNew opportunities, control and insights for website owners\n2026年6月3日",
+      "domain": "blog.google",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://developers.google.cn/search/blog/2026/05/a-new-resource-for-optimizing?hl=en",
+      "title": "developers.google.cn\nA new resource for optimizing for generative AI in Google Search  |  Google Search Central Blog  |  Google for Developers\n2026年5月15日",
+      "domain": "developers.google.cn",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/",
+      "title": "thegeocommunity.com\nBest GEO Resources, Courses & Tutorials [2026] | The GEO Community\n2026年4月24日",
+      "domain": "thegeocommunity.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/",
+      "title": "www.classcentral.com\n25 Resources to Learn Generative Engine Optimization in 2026 — Class Central\n2026年1月2日",
+      "domain": "www.classcentral.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "title": "developers.google.com\nAI Features and Your Website | Google Search Central  |  Documentation  |  Google for Developers\n2025年12月10日",
+      "domain": "developers.google.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/",
+      "title": "collaborate.princeton.edu\nGEO: Generative Engine Optimization - Princeton University\n2024年8月24日",
+      "domain": "collaborate.princeton.edu",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://arxiv.org/abs/2311.09735",
+      "title": "arxiv.org\nGEO: Generative Engine Optimization\n2023年11月16日",
+      "domain": "arxiv.org",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/appearance/ai-features?product=breeze",
+      "title": "developers.google.com\nAI Features and Your Website | Google Search Central  |  Documentation  |  Google for Developers",
+      "domain": "developers.google.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "title": "developers.google.com\nGoogle's Guide to Optimizing for Generative AI Features on Google Search | Google Search Central  |  Documentation  |  Google for Developers",
+      "domain": "developers.google.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://learngeo.io/",
+      "title": "learngeo.io\nFree Generative Engine Optimization Course | LearnGEO",
+      "domain": "learngeo.io",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://geo.wiki/blog/geo-learning-resources",
+      "title": "geo.wiki\n7 Free GEO Learning Resources for 2026 · GEO Wiki",
+      "domain": "geo.wiki",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://thegeolab.net/ebooks/",
+      "title": "thegeolab.net\nFree GEO Ebooks & Guides | The GEO Lab",
+      "domain": "thegeolab.net",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://github.com/marketingtoolslist/awesome-geo",
+      "title": "github.com\nGitHub - marketingtoolslist/awesome-geo: A curated list of resources for Generative Engine Optimization (GEO) · GitHub",
+      "domain": "github.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://apollodigital.io/learn/geo/",
+      "title": "apollodigital.io\nThe Free GEO Course: Learn Generative Engine Optimization | Apollo Digital",
+      "domain": "apollodigital.io",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://support.google.com/webmasters/answer/16984139?hl=en",
+      "title": "support.google.com\nGenerative AI performance report (Search) - Search Console Help",
+      "domain": "support.google.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://support.google.com/webmasters/answer/16984139?hl=en-GE",
+      "title": "support.google.com\nGenerative AI performance report (Search) - Search Console Help",
+      "domain": "support.google.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c",
+      "title": "www.bing.com\nAI Performance - Bing Webmaster Tools",
+      "domain": "www.bing.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://ahrefs.com/academy/aeo-course/",
+      "title": "ahrefs.com\nAnswer Engine Optimization (AEO) Course",
+      "domain": "ahrefs.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://ahrefs.com/academy",
+      "title": "ahrefs.com\nAhrefs Academy: Learn how to apply Ahrefs’ tools & data in your Digital Marketing",
+      "domain": "ahrefs.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://ahrefs.com/academy",
+      "title": "ahrefs.com\nAhrefs Academy: Learn how to apply Ahrefs’ tools & data in your Digital Marketing",
+      "domain": "ahrefs.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://ahrefs.com/academy/aeo-course/lesson-0-1",
+      "title": "ahrefs.com\nAnswer Engine Optimization (AEO) Course by Ahrefs: What is AEO?",
+      "domain": "ahrefs.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/brand-visibility-learn/tutorials/measurement/bing-webmaster-tools-ai-performance-report",
+      "title": "experienceleague.adobe.com\nBing Webmaster Tools AI Performance Report | Adobe Brand Visibility",
+      "domain": "experienceleague.adobe.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://www.fifthring.com/hubfs/2311.09735v3-compressed.pdf",
+      "title": "www.fifthring.com\nKDD ’24, August 25–29, 2024, Barcelona, Spain Pranjal Aggarwal et al.",
+      "domain": "www.fifthring.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://www.semrush.com/academy/courses/ai-search/",
+      "title": "www.semrush.com\nFree AI Search Courses & Certifications | Semrush Academy",
+      "domain": "www.semrush.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://academy.hubspot.com/courses/seo-in-the-age-of-ai-en",
+      "title": "academy.hubspot.com\nSEO in the Age of AI",
+      "domain": "academy.hubspot.com",
+      "kind": "retrieved_source"
+    },
+    {
+      "url": "https://bestaiseo.courses/free/",
+      "title": "bestaiseo.courses\nFree AI SEO Courses: 27 Programs With Zero Standalone Fees (2026) | bestaiseo.courses",
+      "domain": "bestaiseo.courses",
+      "kind": "retrieved_source"
+    }
+  ],
+  "observations": [
+    {
+      "entity": "Google Search Central",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Google Search Central — Best official guidance",
+      "notes": "正文直接列出该对象自有内容或原作托管页URL；记录原始URL，未独立验证内容或可访问性。",
+      "source_urls": [
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ]
+    },
+    {
+      "entity": "GEO research (Aggarwal et al.)",
+      "entity_type": "research",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "The original GEO paper by Aggarwal and colleagues, published at KDD 2024, is especially important because it evaluates optimization tactics experimentally.",
+      "notes": "正文明确点名原始GEO论文与Aggarwal，且给出原论文arXiv链接。将研究及作者团队合为主体，arXiv仅为托管站，不重复计数。",
+      "source_urls": [
+        "https://arxiv.org/abs/2311.09735"
+      ]
+    },
+    {
+      "entity": "LearnGEO",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "LearnGEO — Best structured course",
+      "notes": "正文直接列出该对象自有内容或原作托管页URL；记录原始URL，未独立验证内容或可访问性。",
+      "source_urls": [
+        "https://learngeo.io/"
+      ]
+    },
+    {
+      "entity": "Ahrefs",
+      "entity_type": "brand",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Ahrefs — Best practical SEO-to-GEO bridge",
+      "notes": "明确推荐Ahrefs学习资源，并在计划/最终清单推荐AEO课程；实际出现的URL是Academy入口，不把它改写成未出现的具体课程地址。",
+      "source_urls": [
+        "https://ahrefs.com/academy"
+      ]
+    },
+    {
+      "entity": "Bing Webmaster Tools",
+      "entity_type": "tool",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Bing Webmaster Tools — Best for measurement",
+      "notes": "Bing Webmaster Tools及AI Performance测量功能归一为一个主体；实际URL为工具入口，未补造AI Performance具体文档链接。",
+      "source_urls": [
+        "https://www.bing.com/webmasters/"
+      ]
+    },
+    {
+      "entity": "Apollo Digital",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Apollo Digital Learn GEO — Best short implementation course",
+      "notes": "10月30日通过同一回复的更多操作→查看来源，在来源区恢复对应自有内容或仓库URL，故C=true；更多检索结果未用于该判定。旧C未判定版本保留在coding-cursor-q1.json。",
+      "source_urls": [
+        "https://apollodigital.io/learn/geo/"
+      ]
+    },
+    {
+      "entity": "Semrush Academy",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Semrush Academy\nFree AI Search courses covering visibility strategy and practical workflows. An account is required.",
+      "notes": "10月30日通过同一回复的更多操作→查看来源，在来源区恢复对应自有内容或仓库URL，故C=true；更多检索结果未用于该判定。旧C未判定版本保留在coding-cursor-q1.json。",
+      "source_urls": [
+        "https://www.semrush.com/academy/courses/ai-search/"
+      ]
+    },
+    {
+      "entity": "The GEO Community",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "The GEO Community\nPractitioner-oriented guides and experiment write-ups.",
+      "notes": "10月30日通过同一回复的更多操作→查看来源，在来源区恢复对应自有内容或仓库URL，故C=true；更多检索结果未用于该判定。旧C未判定版本保留在coding-cursor-q1.json。",
+      "source_urls": [
+        "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
+      ]
+    },
+    {
+      "entity": "Awesome GEO",
+      "entity_type": "resource_directory",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Awesome GEO\nA public GitHub directory collecting research papers, platform documentation, tools, and implementation guides.",
+      "notes": "10月30日通过同一回复的更多操作→查看来源，在来源区恢复对应自有内容或仓库URL，故C=true；更多检索结果未用于该判定。旧C未判定版本保留在coding-cursor-q1.json。",
+      "source_urls": [
+        "https://github.com/marketingtoolslist/awesome-geo"
+      ]
+    },
+    {
+      "entity": "Google Search Console",
+      "entity_type": "tool",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Google Search Console / AI features: measures impressions from supported Google AI search features.",
+      "notes": "10月30日通过同一回复的更多操作→查看来源，在来源区恢复对应自有内容或仓库URL，故C=true；更多检索结果未用于该判定。旧C未判定版本保留在coding-cursor-q1.json。",
+      "source_urls": [
+        "https://support.google.com/webmasters/answer/16984139?hl=en"
+      ]
+    }
+  ],
+  "raw_file": "data/records/C-Q1-R1-A2.json",
+  "capture_history": [
+    {
+      "capture_id": "C-Q1-R1-A2-legacy-01",
+      "attempt_id": "C-Q1-R1-A2",
+      "slot_id": "C-Q1-R1",
+      "method": "Browser UI + share page fetch",
+      "captured_at": "2026-10-29T12:01:29.000Z",
+      "status": "completed",
+      "body_completeness": "legacy_unverified",
+      "answer_chars": 7050,
+      "source_count": 5,
+      "notes": "2026-10-29 网页端 GPT-6 + 网页搜索补测。两周计划完整到 Days11–14；分享对话框创建公开链接（已记录 share_url）。思考强度为 Medium，与早期 Extra High 不同。编码尚未完成。",
+      "capture_kind": "initial_export",
+      "selected": false,
+      "file": "data/captures/C-Q1-R1-A2-legacy-01.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    },
+    {
+      "capture_id": "C-Q1-R1-A2-restored-20261030-01",
+      "attempt_id": "C-Q1-R1-A2",
+      "slot_id": "C-Q1-R1",
+      "method": "Preservation of complete saved Cursor raw answer and its recorded explicit links; no independent saved HTML for this attempt",
+      "captured_at": "2026-10-30T05:06:39.761934+00:00",
+      "status": "completed",
+      "body_completeness": "completed",
+      "answer_chars": 7050,
+      "source_count": 5,
+      "notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。两周计划完整到 Days11–14；分享对话框创建公开链接（已记录 share_url）。思考强度为 Medium，与早期 Extra High 不同。编码尚未完成。\nThe saved screenshot shows Days 11–14 and the final shortlist/natural ending. The complete raw answer is preserved exactly.\nNo saved share HTML or full DOM export exists for independent whole-body verification; model GPT-6 and search activity remain recorded observations with the evidence limits documented in the audit.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。",
+      "capture_kind": "share_preview",
+      "selected": true,
+      "file": "data/captures/C-Q1-R1-A2-restored-20261030-01.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    },
+    {
+      "capture_id": "C-Q1-R1-A2-share-preview-metadata",
+      "attempt_id": "C-Q1-R1-A2",
+      "slot_id": "C-Q1-R1",
+      "method": "Saved handoff summary; not a body capture",
+      "captured_at": null,
+      "status": "metadata_only",
+      "body_completeness": "not_applicable",
+      "answer_chars": null,
+      "source_count": null,
+      "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. 分享对话框显示回答已完成\n分享页抓取正文；两周计划完整\n未做 CMR 编码",
+      "capture_kind": "metadata_summary",
+      "selected": false,
+      "file": "data/captures/C-Q1-R1-A2-share-preview-metadata.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    }
+  ],
+  "capture_provenance": {
+    "original_status": "completed",
+    "selected_capture_id": "C-Q1-R1-A2-restored-20261030-01",
+    "method": "Preservation of complete saved Cursor raw answer and its recorded explicit links; no independent saved HTML for this attempt",
+    "captured_at": "2026-10-30T05:06:39.761934+00:00",
+    "same_conversation": true,
+    "review_notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。两周计划完整到 Days11–14；分享对话框创建公开链接（已记录 share_url）。思考强度为 Medium，与早期 Extra High 不同。编码尚未完成。\nThe saved screenshot shows Days 11–14 and the final shortlist/natural ending. The complete raw answer is preserved exactly.\nNo saved share HTML or full DOM export exists for independent whole-body verification; model GPT-6 and search activity remain recorded observations with the evidence limits documented in the audit.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。",
+    "selected_capture_file": "data/records/C-Q1-R1-A2.json"
+  },
+  "public_copy": true,
+  "metadata_corrections": [
+    {
+      "field": "search_evidence",
+      "original_value": "UI 启用网页搜索；分享对话框显示“回答已完成”；正文含多个 utm_source=chatgpt.com 链接",
+      "previous_effective_value": "UI 启用网页搜索；分享对话框显示“回答已完成”；正文含多个 utm_source=chatgpt.com 链接",
+      "value": "恢复同一会话查看来源：来源区14条、更多区31条，搜索已被观察；Cursor旧记录仅凭URL跟踪参数不能独立证明搜索。",
+      "evidence": "实际浏览器来源列表，非只凭utm参数推测。"
+    }
+  ]
+}

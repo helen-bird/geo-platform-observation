@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q1-R2-A2-legacy-01",
+  "attempt_id": "C-Q1-R2-A2",
+  "slot_id": "C-Q1-R2",
+  "method": "official read_thread transcript; rendered UI search evidence",
+  "captured_at": "2026-10-29T09:56:10.103Z",
+  "status": "incomplete",
+  "body_completeness": "legacy_unverified",
+  "answer_chars": 894,
+  "source_count": 0,
+  "notes": "补测仍仅恢复到894字符的开头段落，没有推荐清单；同一原题与搜索模式；不纳入推荐统计。桌面界面自动读取权限受限。",
+  "capture_kind": "initial_export",
+  "selected": true,
+  "attempt_in_main_sample": false,
+  "file": "data/captures/C-Q1-R2-A2-legacy-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

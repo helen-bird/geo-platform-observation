@@ -1,0 +1,1830 @@
+{
+  "planned_runs": 12,
+  "recorded_runs": 12,
+  "total_prompts": 22,
+  "historical_attempts": 10,
+  "completed_runs": 12,
+  "status_counts": {
+    "completed": 12
+  },
+  "attempt_status_counts": {
+    "incomplete": 10
+  },
+  "attempt_history": [
+    {
+      "id": "C-Q1-R1",
+      "slot_id": "C-Q1-R1",
+      "attempt_id": "C-Q1-R1",
+      "platform": "ChatGPT Search",
+      "question_id": "Q1",
+      "repeat": 1,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": null,
+      "attempt_number": 1
+    },
+    {
+      "id": "C-Q1-R2-A2",
+      "slot_id": "C-Q1-R2",
+      "attempt_id": "C-Q1-R2-A2",
+      "platform": "ChatGPT Search",
+      "question_id": "Q1",
+      "repeat": 2,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": "C-Q1-R2",
+      "attempt_number": 2
+    },
+    {
+      "id": "C-Q1-R2",
+      "slot_id": "C-Q1-R2",
+      "attempt_id": "C-Q1-R2",
+      "platform": "ChatGPT Search",
+      "question_id": "Q1",
+      "repeat": 2,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": null,
+      "attempt_number": 1
+    },
+    {
+      "id": "C-Q2-R1-A2",
+      "slot_id": "C-Q2-R1",
+      "attempt_id": "C-Q2-R1-A2",
+      "platform": "ChatGPT Search",
+      "question_id": "Q2",
+      "repeat": 1,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": "C-Q2-R1",
+      "attempt_number": 2
+    },
+    {
+      "id": "C-Q2-R1-A3",
+      "slot_id": "C-Q2-R1",
+      "attempt_id": "C-Q2-R1-A3",
+      "platform": "ChatGPT Search",
+      "question_id": "Q2",
+      "repeat": 1,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": "C-Q2-R1",
+      "attempt_number": 3
+    },
+    {
+      "id": "C-Q2-R1",
+      "slot_id": "C-Q2-R1",
+      "attempt_id": "C-Q2-R1",
+      "platform": "ChatGPT Search",
+      "question_id": "Q2",
+      "repeat": 1,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": null,
+      "attempt_number": 1
+    },
+    {
+      "id": "C-Q2-R2-A2",
+      "slot_id": "C-Q2-R2",
+      "attempt_id": "C-Q2-R2-A2",
+      "platform": "ChatGPT Search",
+      "question_id": "Q2",
+      "repeat": 2,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": "C-Q2-R2",
+      "attempt_number": 2
+    },
+    {
+      "id": "C-Q2-R2",
+      "slot_id": "C-Q2-R2",
+      "attempt_id": "C-Q2-R2",
+      "platform": "ChatGPT Search",
+      "question_id": "Q2",
+      "repeat": 2,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": null,
+      "attempt_number": 1
+    },
+    {
+      "id": "C-Q3-R2-A2",
+      "slot_id": "C-Q3-R2",
+      "attempt_id": "C-Q3-R2-A2",
+      "platform": "ChatGPT Search",
+      "question_id": "Q3",
+      "repeat": 2,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": "C-Q3-R2",
+      "attempt_number": 2
+    },
+    {
+      "id": "C-Q3-R2",
+      "slot_id": "C-Q3-R2",
+      "attempt_id": "C-Q3-R2",
+      "platform": "ChatGPT Search",
+      "question_id": "Q3",
+      "repeat": 2,
+      "date_local": "2026-10-29",
+      "status": "incomplete",
+      "replacement_for": null,
+      "attempt_number": 1
+    }
+  ],
+  "capture": {
+    "scope": "main runs and historical attempts; frequency statistics use completed main runs only; additional captures are not additional prompts",
+    "read_thread_preview_run_ids": [
+      "C-Q3-R1",
+      "C-Q1-R1",
+      "C-Q1-R2-A2",
+      "C-Q1-R2",
+      "C-Q2-R1-A2",
+      "C-Q2-R1",
+      "C-Q2-R2-A2",
+      "C-Q2-R2",
+      "C-Q3-R2-A2",
+      "C-Q3-R2"
+    ],
+    "provenance_run_ids": [
+      "C-Q1-R1-A2",
+      "C-Q1-R2-A3",
+      "C-Q2-R1-A4",
+      "C-Q2-R2-A3",
+      "C-Q3-R1",
+      "C-Q3-R2-A3",
+      "G-Q1-R1",
+      "G-Q1-R2",
+      "G-Q2-R1",
+      "G-Q2-R2",
+      "G-Q3-R1",
+      "G-Q3-R2",
+      "C-Q1-R1",
+      "C-Q1-R2-A2",
+      "C-Q1-R2",
+      "C-Q2-R1-A2",
+      "C-Q2-R1-A3",
+      "C-Q2-R1",
+      "C-Q2-R2-A2",
+      "C-Q2-R2",
+      "C-Q3-R2-A2",
+      "C-Q3-R2"
+    ],
+    "capture_history_count": 37,
+    "diagnostic_correction_count": 6,
+    "incomplete_citation_mapping_run_ids": [
+      "C-Q1-R1",
+      "C-Q1-R2-A2",
+      "C-Q1-R2",
+      "C-Q2-R1-A2",
+      "C-Q2-R1-A3",
+      "C-Q2-R1",
+      "C-Q2-R2-A2",
+      "C-Q2-R2",
+      "C-Q3-R2-A2",
+      "C-Q3-R2"
+    ],
+    "observed_personalization": [
+      {
+        "run_id": "C-Q3-R1",
+        "evidence": "[个人背景信息已匿名化；保留观察到账号上下文影响这一事实。]"
+      },
+      {
+        "run_id": "C-Q3-R2-A3",
+        "evidence": "[个人背景信息已匿名化；保留观察到账号上下文影响这一事实。]"
+      },
+      {
+        "run_id": "C-Q1-R1",
+        "evidence": "[个人背景信息已匿名化；保留观察到账号上下文影响这一事实。]"
+      }
+    ],
+    "observed_memory_evidence": [
+      {
+        "run_id": "C-Q3-R1",
+        "evidence": [
+          {
+            "kind": "cross_test_context",
+            "evidence": "来源面板包含此前实验会话与个人账号背景；具体个人内容已匿名化。不能据此归因某个推荐对象。",
+            "file": "data/publication-notes.json"
+          }
+        ]
+      }
+    ],
+    "source_counts": [
+      {
+        "run_id": "C-Q1-R1-A2",
+        "answer": 16,
+        "retrieval": 31,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q1-R2-A3",
+        "answer": 14,
+        "retrieval": 22,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q2-R1-A4",
+        "answer": 7,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q2-R2-A3",
+        "answer": 16,
+        "retrieval": 34,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q3-R1",
+        "answer": 17,
+        "retrieval": 97,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q3-R2-A3",
+        "answer": 16,
+        "retrieval": 49,
+        "unknown": 0
+      },
+      {
+        "run_id": "G-Q1-R1",
+        "answer": 10,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "G-Q1-R2",
+        "answer": 11,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "G-Q2-R1",
+        "answer": 8,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "G-Q2-R2",
+        "answer": 0,
+        "retrieval": 45,
+        "unknown": 0
+      },
+      {
+        "run_id": "G-Q3-R1",
+        "answer": 3,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "G-Q3-R2",
+        "answer": 5,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q1-R1",
+        "answer": 9,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q1-R2-A2",
+        "answer": 0,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q1-R2",
+        "answer": 0,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q2-R1-A2",
+        "answer": 0,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q2-R1-A3",
+        "answer": 2,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q2-R1",
+        "answer": 0,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q2-R2-A2",
+        "answer": 0,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q2-R2",
+        "answer": 0,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q3-R2-A2",
+        "answer": 0,
+        "retrieval": 0,
+        "unknown": 0
+      },
+      {
+        "run_id": "C-Q3-R2",
+        "answer": 0,
+        "retrieval": 0,
+        "unknown": 0
+      }
+    ]
+  },
+  "groups": [
+    {
+      "platform": "ChatGPT Search",
+      "question_id": "Q1",
+      "completed_runs": 2,
+      "recommendation_coding_incomplete": false,
+      "frequencies": [
+        {
+          "entity": "Ahrefs",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Apollo Digital",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Awesome GEO",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Bing Webmaster Tools",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "GEO research (Aggarwal et al.)",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Google Search Central",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "LearnGEO",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Class Central",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "GEO Wiki",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Google Search Console",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Semrush Academy",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "The GEO Community",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        }
+      ],
+      "repeat_overlap": {
+        "run_ids": [
+          "C-Q1-R1-A2",
+          "C-Q1-R2-A3"
+        ],
+        "recommendation_coding_incomplete": false,
+        "repeat_1_recommendations": 10,
+        "repeat_2_recommendations": 9,
+        "intersection": 7,
+        "union": 12,
+        "jaccard": 0.5833333333333334,
+        "shared_entities": [
+          "Ahrefs",
+          "Apollo Digital",
+          "Awesome GEO",
+          "Bing Webmaster Tools",
+          "GEO research (Aggarwal et al.)",
+          "Google Search Central",
+          "LearnGEO"
+        ],
+        "condition_comparison": {
+          "status": "same_observed",
+          "label": "已记录界面条件一致；后端条件未经独立核实",
+          "differences": [],
+          "unknown_fields": [],
+          "runs": [
+            {
+              "run_id": "C-Q1-R1-A2",
+              "platform": "ChatGPT Search",
+              "question_id": "Q1",
+              "repeat": 1,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": "GPT-6（界面选择标签）",
+              "model_comparison": "GPT-6",
+              "reasoning_effort": "Medium",
+              "effort_basis": "mode_label",
+              "mode_label": "网页搜索 · Medium",
+              "mode_comparison": "网页搜索"
+            },
+            {
+              "run_id": "C-Q1-R2-A3",
+              "platform": "ChatGPT Search",
+              "question_id": "Q1",
+              "repeat": 2,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": "GPT-6（界面选择标签）",
+              "model_comparison": "GPT-6",
+              "reasoning_effort": "Medium",
+              "effort_basis": "mode_label",
+              "mode_label": "网页搜索 · Medium",
+              "mode_comparison": "网页搜索"
+            }
+          ]
+        }
+      },
+      "run_conditions": [
+        {
+          "run_id": "C-Q1-R1-A2",
+          "platform": "ChatGPT Search",
+          "question_id": "Q1",
+          "repeat": 1,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": "GPT-6（界面选择标签）",
+          "model_comparison": "GPT-6",
+          "reasoning_effort": "Medium",
+          "effort_basis": "mode_label",
+          "mode_label": "网页搜索 · Medium",
+          "mode_comparison": "网页搜索"
+        },
+        {
+          "run_id": "C-Q1-R2-A3",
+          "platform": "ChatGPT Search",
+          "question_id": "Q1",
+          "repeat": 2,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": "GPT-6（界面选择标签）",
+          "model_comparison": "GPT-6",
+          "reasoning_effort": "Medium",
+          "effort_basis": "mode_label",
+          "mode_label": "网页搜索 · Medium",
+          "mode_comparison": "网页搜索"
+        }
+      ]
+    },
+    {
+      "platform": "Grok",
+      "question_id": "Q1",
+      "completed_runs": 2,
+      "recommendation_coding_incomplete": false,
+      "frequencies": [
+        {
+          "entity": "Ahrefs",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Apollo Digital",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Class Central",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "HubSpot Academy",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Stackmatix",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "The GEO Lab",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "AISQ Growth",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 2
+        },
+        {
+          "entity": "GEO research (Aggarwal et al.)",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 2
+        },
+        {
+          "entity": "Google Search Central",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 2
+        },
+        {
+          "entity": "Rank Prompt",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 2
+        },
+        {
+          "entity": "Bing Webmaster Tools",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 2
+        },
+        {
+          "entity": "Google Search Console",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 2
+        },
+        {
+          "entity": "Neil Patel",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 2
+        },
+        {
+          "entity": "Profound",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 2
+        },
+        {
+          "entity": "Seer Interactive",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 2
+        },
+        {
+          "entity": "Writesonic",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 2
+        },
+        {
+          "entity": "iPullRank",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Open University",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Botric",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "The GEO Community",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Anthropic",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "daydream",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Exposure Ninja",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Finseo Academy",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Goodie",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Nathan Gotch",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "OpenAI",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Perplexity",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "SMA Marketing",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "TripleDart",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Udemy",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "AutoGEO",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 0
+        }
+      ],
+      "repeat_overlap": {
+        "run_ids": [
+          "G-Q1-R1",
+          "G-Q1-R2"
+        ],
+        "recommendation_coding_incomplete": false,
+        "repeat_1_recommendations": 24,
+        "repeat_2_recommendations": 25,
+        "intersection": 17,
+        "union": 32,
+        "jaccard": 0.53125,
+        "shared_entities": [
+          "Ahrefs",
+          "AISQ Growth",
+          "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+          "Apollo Digital",
+          "Bing Webmaster Tools",
+          "Class Central",
+          "GEO research (Aggarwal et al.)",
+          "Google Search Central",
+          "Google Search Console",
+          "HubSpot Academy",
+          "Neil Patel",
+          "Profound",
+          "Rank Prompt",
+          "Seer Interactive",
+          "Stackmatix",
+          "The GEO Lab",
+          "Writesonic"
+        ],
+        "condition_comparison": {
+          "status": "not_fully_observable",
+          "label": "条件信息不全，仅描述性比较",
+          "differences": [],
+          "unknown_fields": [
+            "模型标签",
+            "思考强度"
+          ],
+          "runs": [
+            {
+              "run_id": "G-Q1-R1",
+              "platform": "Grok",
+              "question_id": "Q1",
+              "repeat": 1,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": null,
+              "model_comparison": null,
+              "reasoning_effort": null,
+              "effort_basis": null,
+              "mode_label": "Expert",
+              "mode_comparison": "Expert"
+            },
+            {
+              "run_id": "G-Q1-R2",
+              "platform": "Grok",
+              "question_id": "Q1",
+              "repeat": 2,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": null,
+              "model_comparison": null,
+              "reasoning_effort": null,
+              "effort_basis": null,
+              "mode_label": "Expert",
+              "mode_comparison": "Expert"
+            }
+          ]
+        }
+      },
+      "run_conditions": [
+        {
+          "run_id": "G-Q1-R1",
+          "platform": "Grok",
+          "question_id": "Q1",
+          "repeat": 1,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": null,
+          "model_comparison": null,
+          "reasoning_effort": null,
+          "effort_basis": null,
+          "mode_label": "Expert",
+          "mode_comparison": "Expert"
+        },
+        {
+          "run_id": "G-Q1-R2",
+          "platform": "Grok",
+          "question_id": "Q1",
+          "repeat": 2,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": null,
+          "model_comparison": null,
+          "reasoning_effort": null,
+          "effort_basis": null,
+          "mode_label": "Expert",
+          "mode_comparison": "Expert"
+        }
+      ]
+    },
+    {
+      "platform": "ChatGPT Search",
+      "question_id": "Q2",
+      "completed_runs": 2,
+      "recommendation_coding_incomplete": false,
+      "frequencies": [
+        {
+          "entity": "Ahrefs",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "GEO research (Aggarwal et al.)",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Chen et al. (How to Dominate AI Search)",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Kumar et al. (brand visibility study)",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "SafeGEO",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Search Engine Land",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Semrush",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Smoking Gun PR",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "What Drives AI Citations?",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "What Gets Cited (competitive GEO study)",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Axios",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 0
+        },
+        {
+          "entity": "Generative Pulse",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 0
+        },
+        {
+          "entity": "Muck Rack",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 0
+        },
+        {
+          "entity": "Don't Measure Once: Measuring Visibility in AI Search (GEO)",
+          "mention": 0,
+          "citation": 1,
+          "recommendation": 0
+        },
+        {
+          "entity": "Incumbent Advantage",
+          "mention": 0,
+          "citation": 1,
+          "recommendation": 0
+        }
+      ],
+      "repeat_overlap": {
+        "run_ids": [
+          "C-Q2-R1-A4",
+          "C-Q2-R2-A3"
+        ],
+        "recommendation_coding_incomplete": false,
+        "repeat_1_recommendations": 5,
+        "repeat_2_recommendations": 7,
+        "intersection": 2,
+        "union": 10,
+        "jaccard": 0.2,
+        "shared_entities": [
+          "Ahrefs",
+          "GEO research (Aggarwal et al.)"
+        ],
+        "condition_comparison": {
+          "status": "different",
+          "label": "条件不同，仅描述性比较",
+          "differences": [
+            {
+              "field": "test_date",
+              "label": "测试日期",
+              "first": "2026-10-29",
+              "second": "2026-10-30"
+            }
+          ],
+          "unknown_fields": [],
+          "runs": [
+            {
+              "run_id": "C-Q2-R1-A4",
+              "platform": "ChatGPT Search",
+              "question_id": "Q2",
+              "repeat": 1,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": "GPT-6（界面选择标签）",
+              "model_comparison": "GPT-6",
+              "reasoning_effort": "Medium",
+              "effort_basis": "mode_label",
+              "mode_label": "网页搜索 · Medium",
+              "mode_comparison": "网页搜索"
+            },
+            {
+              "run_id": "C-Q2-R2-A3",
+              "platform": "ChatGPT Search",
+              "question_id": "Q2",
+              "repeat": 2,
+              "status": "completed",
+              "test_date": "2026-10-30",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-30",
+              "date_conflict": false,
+              "model_label": "GPT-6（界面选择标签）",
+              "model_comparison": "GPT-6",
+              "reasoning_effort": "Medium",
+              "effort_basis": "mode_label",
+              "mode_label": "网页搜索 · Medium",
+              "mode_comparison": "网页搜索"
+            }
+          ]
+        }
+      },
+      "run_conditions": [
+        {
+          "run_id": "C-Q2-R1-A4",
+          "platform": "ChatGPT Search",
+          "question_id": "Q2",
+          "repeat": 1,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": "GPT-6（界面选择标签）",
+          "model_comparison": "GPT-6",
+          "reasoning_effort": "Medium",
+          "effort_basis": "mode_label",
+          "mode_label": "网页搜索 · Medium",
+          "mode_comparison": "网页搜索"
+        },
+        {
+          "run_id": "C-Q2-R2-A3",
+          "platform": "ChatGPT Search",
+          "question_id": "Q2",
+          "repeat": 2,
+          "status": "completed",
+          "test_date": "2026-10-30",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-30",
+          "date_conflict": false,
+          "model_label": "GPT-6（界面选择标签）",
+          "model_comparison": "GPT-6",
+          "reasoning_effort": "Medium",
+          "effort_basis": "mode_label",
+          "mode_label": "网页搜索 · Medium",
+          "mode_comparison": "网页搜索"
+        }
+      ]
+    },
+    {
+      "platform": "Grok",
+      "question_id": "Q2",
+      "completed_runs": 2,
+      "recommendation_coding_incomplete": false,
+      "frequencies": [
+        {
+          "entity": "Ahrefs",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "GEO research (Aggarwal et al.)",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Olivier Martinez",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Search Engine Land",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "What Gets Cited (competitive GEO study)",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Kumar et al. (brand visibility study)",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Seer Interactive",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Bouet (schema RCT)",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "C-SEO Bench",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 0
+        },
+        {
+          "entity": "OtterlyAI",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 0
+        },
+        {
+          "entity": "SAGEO Arena",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 0
+        }
+      ],
+      "repeat_overlap": {
+        "run_ids": [
+          "G-Q2-R1",
+          "G-Q2-R2"
+        ],
+        "recommendation_coding_incomplete": false,
+        "repeat_1_recommendations": 6,
+        "repeat_2_recommendations": 7,
+        "intersection": 5,
+        "union": 8,
+        "jaccard": 0.625,
+        "shared_entities": [
+          "Ahrefs",
+          "GEO research (Aggarwal et al.)",
+          "Olivier Martinez",
+          "Search Engine Land",
+          "What Gets Cited (competitive GEO study)"
+        ],
+        "condition_comparison": {
+          "status": "not_fully_observable",
+          "label": "条件信息不全，仅描述性比较",
+          "differences": [],
+          "unknown_fields": [
+            "模型标签",
+            "思考强度"
+          ],
+          "runs": [
+            {
+              "run_id": "G-Q2-R1",
+              "platform": "Grok",
+              "question_id": "Q2",
+              "repeat": 1,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": null,
+              "model_comparison": null,
+              "reasoning_effort": null,
+              "effort_basis": null,
+              "mode_label": "Expert",
+              "mode_comparison": "Expert"
+            },
+            {
+              "run_id": "G-Q2-R2",
+              "platform": "Grok",
+              "question_id": "Q2",
+              "repeat": 2,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": null,
+              "model_comparison": null,
+              "reasoning_effort": null,
+              "effort_basis": null,
+              "mode_label": "Expert",
+              "mode_comparison": "Expert"
+            }
+          ]
+        }
+      },
+      "run_conditions": [
+        {
+          "run_id": "G-Q2-R1",
+          "platform": "Grok",
+          "question_id": "Q2",
+          "repeat": 1,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": null,
+          "model_comparison": null,
+          "reasoning_effort": null,
+          "effort_basis": null,
+          "mode_label": "Expert",
+          "mode_comparison": "Expert"
+        },
+        {
+          "run_id": "G-Q2-R2",
+          "platform": "Grok",
+          "question_id": "Q2",
+          "repeat": 2,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": null,
+          "model_comparison": null,
+          "reasoning_effort": null,
+          "effort_basis": null,
+          "mode_label": "Expert",
+          "mode_comparison": "Expert"
+        }
+      ]
+    },
+    {
+      "platform": "ChatGPT Search",
+      "question_id": "Q3",
+      "completed_runs": 2,
+      "recommendation_coding_incomplete": false,
+      "frequencies": [
+        {
+          "entity": "Ahrefs",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Kevin Indig (Growth Memo)",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Search Engine Land",
+          "mention": 2,
+          "citation": 2,
+          "recommendation": 2
+        },
+        {
+          "entity": "Seer Interactive",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 2
+        },
+        {
+          "entity": "Awesome GEO",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Canlah AI",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "GEO research (Aggarwal et al.)",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "MLforSEO (Lazarina Stoy)",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Peec AI",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Semrush",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "The GEO Community",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Axios",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 0
+        },
+        {
+          "entity": "Olivier Martinez",
+          "mention": 0,
+          "citation": 2,
+          "recommendation": 0
+        },
+        {
+          "entity": "Relevance",
+          "mention": 0,
+          "citation": 1,
+          "recommendation": 0
+        }
+      ],
+      "repeat_overlap": {
+        "run_ids": [
+          "C-Q3-R1",
+          "C-Q3-R2-A3"
+        ],
+        "recommendation_coding_incomplete": false,
+        "repeat_1_recommendations": 8,
+        "repeat_2_recommendations": 9,
+        "intersection": 5,
+        "union": 12,
+        "jaccard": 0.4166666666666667,
+        "shared_entities": [
+          "Ahrefs",
+          "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+          "Kevin Indig (Growth Memo)",
+          "Search Engine Land",
+          "Seer Interactive"
+        ],
+        "condition_comparison": {
+          "status": "different",
+          "label": "条件不同，仅描述性比较",
+          "differences": [
+            {
+              "field": "test_date",
+              "label": "测试日期",
+              "first": "2026-10-29",
+              "second": "2026-10-30"
+            },
+            {
+              "field": "reasoning_effort",
+              "label": "思考强度",
+              "first": "Extra High",
+              "second": "Medium"
+            }
+          ],
+          "unknown_fields": [],
+          "runs": [
+            {
+              "run_id": "C-Q3-R1",
+              "platform": "ChatGPT Search",
+              "question_id": "Q3",
+              "repeat": 1,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": "GPT-6（界面选择标签）",
+              "model_comparison": "GPT-6",
+              "reasoning_effort": "Extra High",
+              "effort_basis": "mode_label",
+              "mode_label": "网页搜索 · Extra High",
+              "mode_comparison": "网页搜索"
+            },
+            {
+              "run_id": "C-Q3-R2-A3",
+              "platform": "ChatGPT Search",
+              "question_id": "Q3",
+              "repeat": 2,
+              "status": "completed",
+              "test_date": "2026-10-30",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-30",
+              "date_conflict": false,
+              "model_label": "GPT-6（界面选择标签）",
+              "model_comparison": "GPT-6",
+              "reasoning_effort": "Medium",
+              "effort_basis": "mode_label",
+              "mode_label": "网页搜索 · Medium",
+              "mode_comparison": "网页搜索"
+            }
+          ]
+        }
+      },
+      "run_conditions": [
+        {
+          "run_id": "C-Q3-R1",
+          "platform": "ChatGPT Search",
+          "question_id": "Q3",
+          "repeat": 1,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": "GPT-6（界面选择标签）",
+          "model_comparison": "GPT-6",
+          "reasoning_effort": "Extra High",
+          "effort_basis": "mode_label",
+          "mode_label": "网页搜索 · Extra High",
+          "mode_comparison": "网页搜索"
+        },
+        {
+          "run_id": "C-Q3-R2-A3",
+          "platform": "ChatGPT Search",
+          "question_id": "Q3",
+          "repeat": 2,
+          "status": "completed",
+          "test_date": "2026-10-30",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-30",
+          "date_conflict": false,
+          "model_label": "GPT-6（界面选择标签）",
+          "model_comparison": "GPT-6",
+          "reasoning_effort": "Medium",
+          "effort_basis": "mode_label",
+          "mode_label": "网页搜索 · Medium",
+          "mode_comparison": "网页搜索"
+        }
+      ]
+    },
+    {
+      "platform": "Grok",
+      "question_id": "Q3",
+      "completed_runs": 2,
+      "recommendation_coding_incomplete": false,
+      "frequencies": [
+        {
+          "entity": "HeyCatch",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 2
+        },
+        {
+          "entity": "Indietool",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 2
+        },
+        {
+          "entity": "Solo Business Hub",
+          "mention": 2,
+          "citation": 1,
+          "recommendation": 2
+        },
+        {
+          "entity": "Indie Hackers",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 2
+        },
+        {
+          "entity": "GEO research (Aggarwal et al.)",
+          "mention": 2,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Sam Shev",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "The GEO Community",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "The GEO Lab",
+          "mention": 1,
+          "citation": 1,
+          "recommendation": 1
+        },
+        {
+          "entity": "Apollo Digital",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        },
+        {
+          "entity": "Julian Goldie",
+          "mention": 1,
+          "citation": 0,
+          "recommendation": 1
+        }
+      ],
+      "repeat_overlap": {
+        "run_ids": [
+          "G-Q3-R1",
+          "G-Q3-R2"
+        ],
+        "recommendation_coding_incomplete": false,
+        "repeat_1_recommendations": 8,
+        "repeat_2_recommendations": 6,
+        "intersection": 4,
+        "union": 10,
+        "jaccard": 0.4,
+        "shared_entities": [
+          "HeyCatch",
+          "Indie Hackers",
+          "Indietool",
+          "Solo Business Hub"
+        ],
+        "condition_comparison": {
+          "status": "not_fully_observable",
+          "label": "条件信息不全，仅描述性比较",
+          "differences": [],
+          "unknown_fields": [
+            "模型标签",
+            "思考强度"
+          ],
+          "runs": [
+            {
+              "run_id": "G-Q3-R1",
+              "platform": "Grok",
+              "question_id": "Q3",
+              "repeat": 1,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": null,
+              "model_comparison": null,
+              "reasoning_effort": null,
+              "effort_basis": null,
+              "mode_label": "Expert",
+              "mode_comparison": "Expert"
+            },
+            {
+              "run_id": "G-Q3-R2",
+              "platform": "Grok",
+              "question_id": "Q3",
+              "repeat": 2,
+              "status": "completed",
+              "test_date": "2026-10-29",
+              "date_basis": "date_local",
+              "date_from_submit": "2026-10-29",
+              "date_conflict": false,
+              "model_label": null,
+              "model_comparison": null,
+              "reasoning_effort": null,
+              "effort_basis": null,
+              "mode_label": "Expert",
+              "mode_comparison": "Expert"
+            }
+          ]
+        }
+      },
+      "run_conditions": [
+        {
+          "run_id": "G-Q3-R1",
+          "platform": "Grok",
+          "question_id": "Q3",
+          "repeat": 1,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": null,
+          "model_comparison": null,
+          "reasoning_effort": null,
+          "effort_basis": null,
+          "mode_label": "Expert",
+          "mode_comparison": "Expert"
+        },
+        {
+          "run_id": "G-Q3-R2",
+          "platform": "Grok",
+          "question_id": "Q3",
+          "repeat": 2,
+          "status": "completed",
+          "test_date": "2026-10-29",
+          "date_basis": "date_local",
+          "date_from_submit": "2026-10-29",
+          "date_conflict": false,
+          "model_label": null,
+          "model_comparison": null,
+          "reasoning_effort": null,
+          "effort_basis": null,
+          "mode_label": "Expert",
+          "mode_comparison": "Expert"
+        }
+      ]
+    }
+  ],
+  "insights": {
+    "scope": "Completed selected main answers only; one coded entity per answer. Not a census of products, publishers or all source URLs.",
+    "observation_count": 142,
+    "platforms": [
+      {
+        "platform": "ChatGPT Search",
+        "answer_count": 6,
+        "observation_count": 57,
+        "totals": {
+          "citation": 54,
+          "mention": 52,
+          "recommendation": 48
+        },
+        "patterns": {
+          "CMR": 47,
+          "C": 5,
+          "CM": 2,
+          "M": 2,
+          "MR": 1
+        },
+        "cited_recommendations": 47,
+        "recommendations_without_own_citation": 1,
+        "recommendations_with_unknown_citation": 0,
+        "own_citation_coverage": 0.9791666666666666
+      },
+      {
+        "platform": "Grok",
+        "answer_count": 6,
+        "observation_count": 85,
+        "totals": {
+          "citation": 39,
+          "mention": 85,
+          "recommendation": 76
+        },
+        "patterns": {
+          "CMR": 39,
+          "MR": 37,
+          "M": 9
+        },
+        "cited_recommendations": 39,
+        "recommendations_without_own_citation": 37,
+        "recommendations_with_unknown_citation": 0,
+        "own_citation_coverage": 0.5131578947368421
+      }
+    ],
+    "by_question": [
+      {
+        "platform": "ChatGPT Search",
+        "question_id": "Q1",
+        "answer_count": 2,
+        "observation_count": 19,
+        "totals": {
+          "citation": 19,
+          "mention": 19,
+          "recommendation": 19
+        },
+        "patterns": {
+          "CMR": 19
+        },
+        "cited_recommendations": 19,
+        "recommendations_without_own_citation": 0,
+        "recommendations_with_unknown_citation": 0,
+        "own_citation_coverage": 1.0
+      },
+      {
+        "platform": "Grok",
+        "question_id": "Q1",
+        "answer_count": 2,
+        "observation_count": 52,
+        "totals": {
+          "citation": 20,
+          "mention": 52,
+          "recommendation": 49
+        },
+        "patterns": {
+          "CMR": 20,
+          "MR": 29,
+          "M": 3
+        },
+        "cited_recommendations": 20,
+        "recommendations_without_own_citation": 29,
+        "recommendations_with_unknown_citation": 0,
+        "own_citation_coverage": 0.40816326530612246
+      },
+      {
+        "platform": "ChatGPT Search",
+        "question_id": "Q2",
+        "answer_count": 2,
+        "observation_count": 17,
+        "totals": {
+          "citation": 15,
+          "mention": 15,
+          "recommendation": 12
+        },
+        "patterns": {
+          "CMR": 12,
+          "C": 2,
+          "CM": 1,
+          "M": 2
+        },
+        "cited_recommendations": 12,
+        "recommendations_without_own_citation": 0,
+        "recommendations_with_unknown_citation": 0,
+        "own_citation_coverage": 1.0
+      },
+      {
+        "platform": "Grok",
+        "question_id": "Q2",
+        "answer_count": 2,
+        "observation_count": 18,
+        "totals": {
+          "citation": 13,
+          "mention": 18,
+          "recommendation": 13
+        },
+        "patterns": {
+          "CMR": 13,
+          "M": 5
+        },
+        "cited_recommendations": 13,
+        "recommendations_without_own_citation": 0,
+        "recommendations_with_unknown_citation": 0,
+        "own_citation_coverage": 1.0
+      },
+      {
+        "platform": "ChatGPT Search",
+        "question_id": "Q3",
+        "answer_count": 2,
+        "observation_count": 21,
+        "totals": {
+          "citation": 20,
+          "mention": 18,
+          "recommendation": 17
+        },
+        "patterns": {
+          "CMR": 16,
+          "CM": 1,
+          "C": 3,
+          "MR": 1
+        },
+        "cited_recommendations": 16,
+        "recommendations_without_own_citation": 1,
+        "recommendations_with_unknown_citation": 0,
+        "own_citation_coverage": 0.9411764705882353
+      },
+      {
+        "platform": "Grok",
+        "question_id": "Q3",
+        "answer_count": 2,
+        "observation_count": 15,
+        "totals": {
+          "citation": 6,
+          "mention": 15,
+          "recommendation": 14
+        },
+        "patterns": {
+          "CMR": 6,
+          "MR": 8,
+          "M": 1
+        },
+        "cited_recommendations": 6,
+        "recommendations_without_own_citation": 8,
+        "recommendations_with_unknown_citation": 0,
+        "own_citation_coverage": 0.42857142857142855
+      }
+    ],
+    "cross_platform": [
+      {
+        "question_id": "Q1",
+        "platforms": [
+          "ChatGPT Search",
+          "Grok"
+        ],
+        "complete_pairs": true,
+        "recommendation_counts": {
+          "ChatGPT Search": 12,
+          "Grok": 32
+        },
+        "intersection": 8,
+        "union": 36,
+        "jaccard": 0.2222222222222222,
+        "shared_entities": [
+          "Ahrefs",
+          "Apollo Digital",
+          "Bing Webmaster Tools",
+          "Class Central",
+          "GEO research (Aggarwal et al.)",
+          "Google Search Central",
+          "Google Search Console",
+          "The GEO Community"
+        ]
+      },
+      {
+        "question_id": "Q2",
+        "platforms": [
+          "ChatGPT Search",
+          "Grok"
+        ],
+        "complete_pairs": true,
+        "recommendation_counts": {
+          "ChatGPT Search": 10,
+          "Grok": 8
+        },
+        "intersection": 5,
+        "union": 13,
+        "jaccard": 0.38461538461538464,
+        "shared_entities": [
+          "Ahrefs",
+          "GEO research (Aggarwal et al.)",
+          "Kumar et al. (brand visibility study)",
+          "Search Engine Land",
+          "What Gets Cited (competitive GEO study)"
+        ]
+      },
+      {
+        "question_id": "Q3",
+        "platforms": [
+          "ChatGPT Search",
+          "Grok"
+        ],
+        "complete_pairs": true,
+        "recommendation_counts": {
+          "ChatGPT Search": 12,
+          "Grok": 10
+        },
+        "intersection": 2,
+        "union": 20,
+        "jaccard": 0.1,
+        "shared_entities": [
+          "GEO research (Aggarwal et al.)",
+          "The GEO Community"
+        ]
+      }
+    ]
+  }
+}

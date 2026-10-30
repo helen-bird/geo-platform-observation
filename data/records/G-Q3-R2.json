@@ -1,0 +1,162 @@
+{
+  "id": "G-Q3-R2",
+  "platform": "Grok",
+  "question_id": "Q3",
+  "repeat": 2,
+  "date_local": "2026-10-29",
+  "started_at": "2026-10-29T09:43:12.815Z",
+  "finished_at": "2026-10-29T09:44:25.274Z",
+  "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "observed_submitted_prompt": null,
+  "normalized_submitted_prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_prompt_provenance": "inferred_from_recorded_prompt_and_mode",
+  "mode_label": "Expert",
+  "model_label": "未披露具体模型版本",
+  "model_evidence": "页面模型选择器显示 Expert；未显示版本号",
+  "search_status": "observed",
+  "search_evidence": "执行了 7 次搜索",
+  "status": "completed",
+  "answer_text": "Several independent creators, tools, and practitioner communities publish the most practical, data-backed GEO (Generative Engine Optimization) tutorials aimed at independent/solo builders. GEO is the practice of structuring content and signals so generative AI systems (ChatGPT, Perplexity, Google AI Overviews/Gemini, Claude, Copilot, etc.) cite or recommend your pages/brand in answers rather than just ranking links.⁠Aisearch\n\nLeading sources for independents\n\nThe GEO Community (thegeocommunity.com) stands out for rigorous, experiment-oriented material. It maintains a practical library of frameworks, implementation notes, and a blog covering crawlability (robots.txt for AI bots), schema, LLMs.txt, entity strategy, IndexNow tests, and evaluation. It offers a guided /start learning path with role-based tracks (including Builder) that sequence from foundational research to hands-on work. Content draws heavily on controlled experiments and the core academic paper rather than pure theory or sales pitches. Free resources and practitioner experiments make it well-suited to independents who want to test and measure themselves.⁠Thegeocommunity\n\nHeyCatch (Vladyslava Sirychenko) published a dedicated July 2026 guide, “Generative Engine Optimization for Solo Founders.” It targets pre-traction builders with no audience, backlinks, or budget. The six-step framework covers on-site structure (semantic HTML + SoftwareApplication schema + 40–60-word extractable blocks), narrow topical content architecture (3–5 pieces with cited data), cross-source consistency (identical descriptions across site, Product Hunt, GitHub, Reddit, Indie Hackers, directories), extractable answer blocks under question headings, technical trust signals, and weekly monitoring. It emphasizes free tools (Rich Results Test, Search Console, curl) and sequential implementation in days, with a concrete 30-day example for a simple product. It cites statistics on zero-click search, AI Overview click impact, and evidence-based citation lifts.⁠Heycatch\n\nIndieTool offers “GEO AI Search Optimization: A Practical Guide for 2026,” focused on one-product indie founders. It prioritizes entity signals (Organization/Product JSON-LD, consistent identity, author pages, independent mentions) over high-volume content, argues for distribution breadth (directories, comparisons, community answers), and includes a clear 30-day plan (entity foundation → technical access → distribution → evaluation). It cites AI search visit growth and the Princeton study’s ~30–40% visibility lifts from quotations, statistics, and source citations.⁠Indietool\n\nSolo Business Hub publishes the “GEO: The Complete 21-Strategy Playbook (2026),” explicitly labeled an actionable guide for solo builders. It organizes tactics into four layers (content quality with sources/stats/quotes; structure & extractability via chunking and answer blocks; distribution & retrieval; system & scale with templates and clusters). Advice is low-resource and template-friendly, with pro tips for solo workflows.⁠Solobusinesshub\n\nIndie Hackers hosts multiple practical posts from independent founders: workflows for claim-level authority and pain-focused content, diagnoses of failed GEO experiments (often tracing back to indexing or crawler access), results from scanning thousands of sites (common issues: blocked AI bots, missing schema, no llms.txt), and AI-ready website field guides. These are experience-driven and low-overhead rather than systematically benchmarked.\n\nWhy these sources fit independent builders\n\nGEO is still early. Most commercial guides and agencies target larger teams or enterprises with budgets for tools, content teams, and digital PR. Independent-focused publishers fill the gap with DIY, zero-to-low-budget advice that matches solo constraints: limited time, no team, need for compounding visibility without paid distribution.\n\nThey consistently lean on the same core data: the 2024 KDD paper “GEO: Generative Engine Optimization” by Aggarwal et al. (Princeton/IIT Delhi/Georgia Tech collaboration; arXiv:2311.09735). That study tested nine content tactics across a 10,000-query benchmark (GEO-bench) and found that adding quotations, statistics, and source citations produced the largest visibility gains (roughly 30–40% on position-adjusted word count metrics), while keyword stuffing underperformed the baseline. Relative gains were often largest for lower-ranked or smaller sites—directly relevant to independents. Secondary analyses and some live checks (e.g., on Perplexity) have reinforced the directional findings around evidence density and extractability, though the original metric measures share of generated answer text rather than traffic or clicks.⁠Aisearch\n\nPractical tutorials therefore emphasize:\n\nAnswer-first / extractable blocks (40–60 words under question headings).\nSchema (FAQPage, Article, Organization/Product, etc.) and crawl access for AI bots.\nConsistent entity language across owned and third-party surfaces.\nOriginal or well-cited data points and short attributed quotes.\nSimple measurement via fixed prompt sets run manually across engines, plus Search Console.\nNarrow topical depth and templates over scale.\n\nThese tactics are implementable with free tools and existing skills, and the academic result that evidence-rich structured content helps smaller sites disproportionately makes them high-leverage for independents.\n\nOther general 90-day roadmaps (e.g., from various fractional CMOs or agencies) exist and often cite the same Princeton data, but they are less specifically calibrated to solo/pre-traction constraints. For the most relevant material, start with the GEO Community’s learning path and resources page, the HeyCatch solo-founder guide, the IndieTool 30-day plan, and the Solo Business Hub playbook, while reading the original Aggarwal et al. paper for the underlying evidence.",
+  "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+  "capture_method": "Rendered browser answer DOM + screenshot",
+  "citation_mapping_complete": true,
+  "attempt_number": 1,
+  "slot_id": "G-Q3-R2",
+  "attempt_id": "G-Q3-R2",
+  "capture_id": "G-Q3-R2-legacy-01",
+  "selected_eligible": true,
+  "selection_reason": "earliest_complete_attempt",
+  "sources": [
+    {
+      "url": "https://aisearch.global/insights/princeton-geo-paper-explained",
+      "title": "The Princeton GEO Paper Explained | AISearch Global (Aisearch)",
+      "domain": "aisearch.global",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/",
+      "title": "Best GEO Resources, Courses & Tutorials [2026] (Thegeocommunity)",
+      "domain": "thegeocommunity.com",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://heycatch.ai/blog/generative-engine-optimization-for-solo-founders",
+      "title": "Generative Engine Optimization for Solo Founders | HeyCatch (Heycatch)",
+      "domain": "heycatch.ai",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://www.indietool.io/blog/geo-ai-search-optimization",
+      "title": "GEO AI Search Optimization: A Practical Guide for 2026 | indietool (Indietool)",
+      "domain": "www.indietool.io",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://www.solobusinesshub.com/launch-and-grow/geo/",
+      "title": "GEO: The Complete 21-Strategy Playbook (2026) | Solo Business Hub (Solobusinesshub)",
+      "domain": "www.solobusinesshub.com",
+      "kind": "inline_citation"
+    }
+  ],
+  "retrieval_sources": [],
+  "observations": [
+    {
+      "entity": "The GEO Community",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "The GEO Community (thegeocommunity.com) stands out for rigorous, experiment-oriented material.",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
+      ]
+    },
+    {
+      "entity": "HeyCatch",
+      "entity_type": "publication",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "HeyCatch (Vladyslava Sirychenko) published a dedicated July 2026 guide",
+      "notes": "作者 Vladyslava Sirychenko 与 HeyCatch 合并为同一主体。",
+      "source_urls": [
+        "https://heycatch.ai/blog/generative-engine-optimization-for-solo-founders"
+      ]
+    },
+    {
+      "entity": "Indietool",
+      "entity_type": "publication",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "IndieTool offers “GEO AI Search Optimization: A Practical Guide for 2026,”",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://www.indietool.io/blog/geo-ai-search-optimization"
+      ]
+    },
+    {
+      "entity": "Solo Business Hub",
+      "entity_type": "publication",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Solo Business Hub publishes the “GEO: The Complete 21-Strategy Playbook (2026),”",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://www.solobusinesshub.com/launch-and-grow/geo/"
+      ]
+    },
+    {
+      "entity": "Indie Hackers",
+      "entity_type": "publication",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Indie Hackers hosts multiple practical posts from independent founders:",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "GEO research (Aggarwal et al.)",
+      "entity_type": "research",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "while reading the original Aggarwal et al. paper for the underlying evidence.",
+      "notes": "明确建议阅读原论文；引用链接仅为 AISearch Global 第三方解读，没有观察到原作的直接链接。",
+      "source_urls": []
+    }
+  ],
+  "raw_file": "data/records/G-Q3-R2.json",
+  "capture_history": [
+    {
+      "capture_id": "G-Q3-R2-legacy-01",
+      "attempt_id": "G-Q3-R2",
+      "slot_id": "G-Q3-R2",
+      "method": "Rendered browser answer DOM + screenshot",
+      "captured_at": "2026-10-29T09:44:25.274Z",
+      "status": "completed",
+      "body_completeness": "completed",
+      "answer_chars": 5895,
+      "source_count": 5,
+      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "capture_kind": "initial_export",
+      "selected": true,
+      "file": "data/captures/G-Q3-R2-legacy-01.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    }
+  ],
+  "capture_provenance": {
+    "original_status": "completed",
+    "selected_capture_id": "G-Q3-R2-legacy-01",
+    "method": "Rendered browser answer DOM + screenshot",
+    "captured_at": "2026-10-29T09:44:25.274Z",
+    "same_conversation": true,
+    "review_notes": "Original export retained; no recovery selection.",
+    "selected_capture_file": "data/records/G-Q3-R2.json"
+  },
+  "public_copy": true
+}

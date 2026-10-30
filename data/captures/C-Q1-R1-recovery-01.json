@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q1-R1-recovery-01",
+  "attempt_id": "C-Q1-R1",
+  "slot_id": "C-Q1-R1",
+  "method": "DOM-backed share-dialog preview; no public share created",
+  "captured_at": "2026-10-29T10:23:13.193Z",
+  "status": "partial",
+  "body_completeness": "partial",
+  "answer_chars": 6132,
+  "source_count": 9,
+  "notes": "分享预览可读6132字符和9正文链接；资源清单完整，但承诺的两周计划只到Days4–6，无法确认全文完整性。保留部分观察但从完整样本统计中排除。",
+  "capture_kind": "share_preview",
+  "selected": true,
+  "attempt_in_main_sample": false,
+  "file": "data/captures/C-Q1-R1-recovery-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

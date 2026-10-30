@@ -1,0 +1,232 @@
+{
+  "id": "C-Q2-R1-A4",
+  "platform": "ChatGPT Search",
+  "question_id": "Q2",
+  "repeat": 1,
+  "date_local": "2026-10-29",
+  "started_at": "2026-10-29T15:55:04.406000+00:00",
+  "finished_at": "2026-10-30T05:06:39.767426+00:00",
+  "prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "submitted_prompt": "网页搜索 What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "observed_submitted_prompt": "网页搜索 What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "normalized_submitted_prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "submitted_prompt_provenance": "raw_record",
+  "mode_label": "网页搜索 · Medium",
+  "model_label": "GPT-6（界面选择标签）",
+  "model_evidence": "原界面记录为GPT-6；同一会话已保存分享HTML的message model_slug/default_model_slug均为gpt-6-thinking。此为平台标识，不是精确后台构建版本的独立证明。",
+  "search_status": "observed",
+  "search_evidence": "已搜索 6 个网站；保存的会话包含web.run工具消息，原题旁有网页搜索工具chip。",
+  "status": "completed",
+  "answer_text": "# What credible experiments show about GEO effectiveness\n\nAs of October 2026, the evidence suggests that **GEO tactics can improve visibility in AI-generated answers, but the strength of evidence varies substantially by tactic and study design.** The clearest experimental evidence comes from academic research on content optimization. Large-scale industry studies support the importance of third-party brand mentions, while commercial case studies report substantial improvements after coordinated GEO campaigns.\n\nThe central distinction is whether a study demonstrates that a tactic *causes* more AI recommendations or merely shows that brands using that tactic tend to receive more mentions.\n\n## 1\\. The strongest evidence, ranked by study design\n\nimage_group{\"query\":[\"Princeton University computer science research campus\"],\"aspect_ratio\":\"3:4\",\"layout\":\"carousel\",\"num_per_query\":1}\n\n(Strongest experimental evidence)\n\n**1\\. Princeton researchers — GEO: Generative Engine Optimization (KDD 2024)**\n\nPeer-reviewed academic paper · Published August 2024\n\nThe researchers introduced GEO-bench and systematically tested content-optimization strategies across diverse queries and domains. They reported that optimization could improve content visibility in generative-engine responses by **up to 40%**\\. Tested approaches included adding relevant citations, statistics and quotations, and improving the presentation of information.\n\n**What it establishes\\:** Content-level changes can influence how generative engines represent and surface information under experimental conditions.\n\n**Limitations\\:** The headline is a maximum result, not an average guaranteed lift. The outcome is content visibility, which does not necessarily mean more brand recommendations, purchases or conversions.\n\nSource: urlKDD 2024 paper and DOIhttps://doi.org/10.1145/3637528.3671900 · urlPrinceton research recordhttps://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/\\.\n\n---\n\nimage_group{\"query\":[\"Semrush company logo on white background\"],\"aspect_ratio\":\"3:4\",\"layout\":\"carousel\",\"num_per_query\":1}\n\n(Real-world intervention)\n\n**2\\. Semrush — Its own AI visibility improvement program**\n\nCompany-reported case study · May 2026 retrospective\n\nSemrush reported that its AI share of voice for target prompts increased from **13% to 32% in one month** during summer 2025, nearly tripling its share of answers mentioning the company relative to competitors. It subsequently refined its measurement and optimization process.\n\n**What it establishes\\:** A company can measure and materially improve its own visibility over a defined campaign period.\n\n**Limitations\\:** This is a first-party case study, not an independently replicated randomized experiment. The reported change does not isolate the causal contribution of individual tactics or rule out changes in competitors, prompts or AI systems.\n\nSource: urlSemrush: How we're driving AI visibilityhttps://www.semrush.com/blog/how-we-are-using-semrush-to-drive-llm-visibility/\\.\n\n---\n\nimage_group{\"query\":[\"Ahrefs SEO software company logo\"],\"aspect_ratio\":\"3:4\",\"layout\":\"carousel\",\"num_per_query\":1}\n\n(Large-scale observational evidence)\n\n**3\\. Ahrefs — Brand visibility factors across 75,000 brands**\n\nIndustry data analysis · 2025\n\nAhrefs analyzed millions of AI-generated responses and found that brand mentions across the web correlated strongly with mentions in Google's AI Overviews. Its May 2025 study reported a Spearman correlation of **0.664** for web mentions, compared with **0.218** for backlinks and **0.392** for branded search volume.\n\nA later study extended the analysis to ChatGPT, AI Mode and AI Overviews, again finding strong associations between third-party brand mentions and AI visibility.\n\n**What it establishes\\:** Off-site brand presence is a promising GEO signal worth testing.\n\n**Limitations\\:** Correlation cannot establish whether additional mentions cause AI visibility to rise. Larger, more established brands may naturally have both more mentions and greater AI visibility.\n\nSources: url2025 studyhttps://ahrefs.com/blog/ai-overview-brand-correlation/ · urlCross-platform follow-up studyhttps://ahrefs.com/blog/ai-brand-visibility-correlations/\\.\n\n## 2\\. What does the evidence say about individual GEO tactics?\n\nThe studies above support different conclusions. The table below separates tactics with experimental support from those with mainly observational or commercial evidence.\n\n| GEO tactic | Evidence | Current conclusion |\n|--------|--------|--------|\n| Add statistics, citations and expert quotations | Princeton controlled evaluation | Promising content-level intervention; test in your own niche |\n| Earn third-party brand mentions | Large-scale Ahrefs correlation analysis | Strong association; causal effect remains uncertain |\n| Get included in “best of” lists and comparison articles | Commercial case studies and AI citation analyses | Promising for product recommendations; limited controlled evidence |\n| Publish more pages | Ahrefs observational analysis | Weak evidence that page volume alone increases AI visibility |\n| Build backlinks | Ahrefs observational analysis | Weaker association than brand mentions in its 2025 AI Overview study |\n| Publish social content | Comparative AI search research | Effects vary by platform; social content may be less influential than earned media |\n\nTwo additional sources help explain these findings.\n\n**4\\. Chen et al. — *Generative Engine Optimization: How to Dominate AI Search* \\(2025)**\n\nThis arXiv preprint uses large-scale controlled experiments to compare AI search with traditional search across verticals, languages and query variations. It finds that AI search systems favor earned media—third-party authoritative sources—over brand-owned and social content, with substantial differences between engines. urlRead the paperhttps://arxiv.org/abs/2509.08919\\.\n\nThe distinction matters: this research provides evidence about *which sources AI systems tend to use*, but it does not establish that purchasing or securing a particular media placement will cause a brand to receive more recommendations.\n\n**5\\. Smoking Gun PR — Four-month GEO campaign**\n\nA home-appliance brand's campaign combined editorial coverage, expert commentary, product comparison articles and community placements. The agency reported\\:\n\nAI share of voice\n\n# 3.2% → 9.1%\n\nBrand mentions\n\n# 274 → 1,424\n\nReported results over four months; the campaign combined several tactics.\n\nSource: urlSmoking Gun PR case studyhttps://smokinggun.agency/our-work/geo-casestudy/\\.\n\nThis is useful real-world evidence, but it is agency-reported, lacks a published control group and does not isolate which intervention drove the results.\n\n## 3\\. How to interpret the evidence correctly\n\nThree measurement distinctions are essential when evaluating GEO claims.\n\n**Brand mention rate**\n\nHow frequently an AI answer names the brand. This is the most direct measure of whether a brand appears at all.\n\n**Recommendation and position**\n\nWhether the AI actually recommends the brand, places it among the top options, or merely mentions it in passing. A citation alone does not establish a positive recommendation.\n\n**Business impact**\n\nWhether the intervention increases qualified visits, leads or purchases. Greater AI visibility does not automatically translate into commercial results.\n\nAI answers can also change across repeated runs of the same prompt. Semrush explicitly describes this non-determinism in its measurement discussion. Consequently, before-and-after comparisons based on only a handful of prompts can produce misleading conclusions. urlSource and methodology discussionhttps://www.semrush.com/blog/how-we-are-using-semrush-to-drive-llm-visibility/\\.\n\n## 4\\. What would constitute convincing evidence?\n\nFor someone conducting independent GEO experiments, I would prioritize the following design.\n\n1. **Establish a baseline.** Select 30–100 realistic prompts in one topic area and record brand mentions, recommendation rate, ranking within recommendations and citations.\n2. **Change one variable at a time.** For example, test a structured, evidence-rich article against a comparable article without the optimization. Alternatively, compare prompts associated with earned-media placements against a matched control group.\n3. **Repeat across multiple runs.** Use the same prompts, models, settings and observation schedule. Record changes in the AI system and its retrieval sources.\n4. **Measure the treatment effect.** Compare changes in the treated group with changes in the control group, ideally using a difference-in-differences design. For content experiments, account for differences in topic, baseline authority and publication timing.\n5. **Publish the results, including failures.** Share the prompt set, intervention, sample size, observation period, outcome definitions and uncertainty. This makes the findings independently testable.\n\n## Bottom line\n\nThe strongest conclusion currently supported by the evidence is that **GEO is measurable and content optimization can improve AI visibility, but reliable causal evidence for many popular tactics remains limited**\\.\n\nFor practical experimentation, I would start with two hypotheses\\:\n\n1. **Content-level optimization\\:** Does adding concrete statistics, attributable citations and useful comparisons increase the probability that an AI answer surfaces your content or mentions your brand?\n2. **Earned-media optimization\\:** Does getting your brand included in relevant third-party comparisons increase its recommendation rate relative to a matched control?\n\nThese hypotheses connect the academic evidence to real-world brand outcomes, and both can be tested without relying on vendor claims or assuming that correlation proves causation.\n\n---\n\nIf you want, I can:\n\n- Suggest a detailed plan for running a GEO experiment to test brand mention increase\n- Provide example prompts and control set for a GEO brand mention experiment\n- Explain how to distinguish AI mentions vs positive brand recommendations in GEO testing",
+  "notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。C-Q2-R1 第4次 attempt；分享页 fallbackMarkdown 提取。编码尚未完成。replacement for C-Q2-R1 / C-Q2-R1-A2/A3。\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。",
+  "capture_method": "Offline extraction of exact fallbackMarkdown from saved share-page HTML; no network, new prompt, or new public share",
+  "citation_mapping_complete": true,
+  "attempt_number": 4,
+  "replacement_for": "C-Q2-R1",
+  "slot_id": "C-Q2-R1",
+  "attempt_id": "C-Q2-R1-A4",
+  "capture_id": "C-Q2-R1-A4-restored-20261030-01",
+  "selected_eligible": true,
+  "selection_reason": "earliest_complete_attempt",
+  "coding_reviewed_for_capture": true,
+  "sources": [
+    {
+      "url": "https://doi.org/10.1145/3637528.3671900",
+      "title": "KDD 2024 paper and DOI",
+      "domain": "doi.org",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/",
+      "title": "Princeton research record",
+      "domain": "collaborate.princeton.edu",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://www.semrush.com/blog/how-we-are-using-semrush-to-drive-llm-visibility/",
+      "title": "Semrush: How we're driving AI visibility",
+      "domain": "www.semrush.com",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/",
+      "title": "2025 study",
+      "domain": "ahrefs.com",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://ahrefs.com/blog/ai-brand-visibility-correlations/",
+      "title": "Cross-platform follow-up study",
+      "domain": "ahrefs.com",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://arxiv.org/abs/2509.08919",
+      "title": "Read the paper",
+      "domain": "arxiv.org",
+      "kind": "answer_link"
+    },
+    {
+      "url": "https://smokinggun.agency/our-work/geo-casestudy/",
+      "title": "Smoking Gun PR case study",
+      "domain": "smokinggun.agency",
+      "kind": "answer_link"
+    }
+  ],
+  "retrieval_sources": [],
+  "observations": [
+    {
+      "entity": "GEO research (Aggarwal et al.)",
+      "entity_type": "research",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Princeton researchers — GEO: Generative Engine Optimization (KDD 2024)",
+      "notes": "列为最强实验性证据；原始论文完整题名明确出现，沿同一DOI归一为既有GEO研究主体。本回答未写Aggarwal姓氏，M=true依据研究题名。DOI与Princeton记录均为正文明确URL token，原样保留。",
+      "source_urls": [
+        "https://doi.org/10.1145/3637528.3671900",
+        "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/"
+      ]
+    },
+    {
+      "entity": "Semrush",
+      "entity_type": "brand",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Semrush — Its own AI visibility improvement program",
+      "notes": "作为独立编号的真实环境干预案例入选，R=true表示推荐评估该研究材料，不表示其商业主张已验证。正文直接引用Semrush自有回顾文章，同一URL在方法论部分再次出现但只保留一次。",
+      "source_urls": [
+        "https://www.semrush.com/blog/how-we-are-using-semrush-to-drive-llm-visibility/"
+      ]
+    },
+    {
+      "entity": "Ahrefs",
+      "entity_type": "brand",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Ahrefs — Brand visibility factors across 75,000 brands",
+      "notes": "作为独立编号的大规模观察性证据入选；两篇Ahrefs自有研究URL均在正文明确给出。回答保留相关性不能证明因果的限制，R=true表示阅读/证据推荐。",
+      "source_urls": [
+        "https://ahrefs.com/blog/ai-overview-brand-correlation/",
+        "https://ahrefs.com/blog/ai-brand-visibility-correlations/"
+      ]
+    },
+    {
+      "entity": "Chen et al. (How to Dominate AI Search)",
+      "entity_type": "research",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Generative Engine Optimization: How to Dominate AI Search",
+      "notes": "正文明确写Chen et al.及完整研究题名，并提供Read the paper原作arXiv链接；作为解释证据的独立研究条目，M/C/R均true。",
+      "source_urls": [
+        "https://arxiv.org/abs/2509.08919"
+      ]
+    },
+    {
+      "entity": "Smoking Gun PR",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Smoking Gun PR — Four-month GEO campaign",
+      "notes": "独立编号案例，正文称useful real-world evidence，故R=true；同时明确agency-reported、无公开控制组、不能隔离单项干预效果。引用该机构自有案例页，不推断未具名家电品牌。",
+      "source_urls": [
+        "https://smokinggun.agency/our-work/geo-casestudy/"
+      ]
+    }
+  ],
+  "raw_file": "data/records/C-Q2-R1-A4.json",
+  "capture_history": [
+    {
+      "capture_id": "C-Q2-R1-A4-legacy-01",
+      "attempt_id": "C-Q2-R1-A4",
+      "slot_id": "C-Q2-R1",
+      "method": "Browser UI + share page HTML extract",
+      "captured_at": "2026-10-29T14:05:30.000Z",
+      "status": "completed",
+      "body_completeness": "legacy_unverified",
+      "answer_chars": 8999,
+      "source_count": 7,
+      "notes": "2026-10-29 网页端 GPT-6 + 网页搜索补测。C-Q2-R1 第4次 attempt；分享页 fallbackMarkdown 提取。编码尚未完成。replacement for C-Q2-R1 / C-Q2-R1-A2/A3。",
+      "capture_kind": "initial_export",
+      "selected": false,
+      "file": "data/captures/C-Q2-R1-A4-legacy-01.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    },
+    {
+      "capture_id": "C-Q2-R1-A4-restored-20261030-01",
+      "attempt_id": "C-Q2-R1-A4",
+      "slot_id": "C-Q2-R1",
+      "method": "Offline extraction of exact fallbackMarkdown from saved share-page HTML; no network, new prompt, or new public share",
+      "captured_at": "2026-10-30T05:06:39.767426+00:00",
+      "status": "completed",
+      "body_completeness": "completed",
+      "answer_chars": 10147,
+      "source_count": 7,
+      "notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。C-Q2-R1 第4次 attempt；分享页 fallbackMarkdown 提取。编码尚未完成。replacement for C-Q2-R1 / C-Q2-R1-A2/A3。\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。",
+      "capture_kind": "share_preview",
+      "selected": true,
+      "file": "data/captures/C-Q2-R1-A4-restored-20261030-01.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    },
+    {
+      "capture_id": "C-Q2-R1-A4-share-preview-metadata",
+      "attempt_id": "C-Q2-R1-A4",
+      "slot_id": "C-Q2-R1",
+      "method": "Saved handoff summary; not a body capture",
+      "captured_at": null,
+      "status": "metadata_only",
+      "body_completeness": "not_applicable",
+      "answer_chars": null,
+      "source_count": null,
+      "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. 分享对话框显示回答已完成\n从分享页 HTML fallbackMarkdown 提取正文\nUI: GPT-6 · Medium · 网页搜索\n未做 CMR 编码",
+      "capture_kind": "metadata_summary",
+      "selected": false,
+      "file": "data/captures/C-Q2-R1-A4-share-preview-metadata.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    }
+  ],
+  "capture_provenance": {
+    "original_status": "completed",
+    "selected_capture_id": "C-Q2-R1-A4-restored-20261030-01",
+    "method": "Offline extraction of exact fallbackMarkdown from saved share-page HTML; no network, new prompt, or new public share",
+    "captured_at": "2026-10-30T05:06:39.767426+00:00",
+    "same_conversation": true,
+    "review_notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。C-Q2-R1 第4次 attempt；分享页 fallbackMarkdown 提取。编码尚未完成。replacement for C-Q2-R1 / C-Q2-R1-A2/A3。\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。",
+    "selected_capture_file": "data/records/C-Q2-R1-A4.json"
+  },
+  "public_copy": true,
+  "metadata_corrections": [
+    {
+      "field": "model_evidence",
+      "original_value": "模型菜单沿用 GPT-6；思考强度 Medium（降频）",
+      "previous_effective_value": "模型菜单沿用 GPT-6；思考强度 Medium（降频）",
+      "value": "原界面记录为GPT-6；同一会话已保存分享HTML的message model_slug/default_model_slug均为gpt-6-thinking。此为平台标识，不是精确后台构建版本的独立证明。",
+      "evidence": "Offline decoded conversation/message metadata from saved HTML; unrelated feature-flag model names are excluded."
+    },
+    {
+      "field": "search_evidence",
+      "original_value": "UI 启用网页搜索 chip；分享对话框显示“回答已完成”；正文/分享页含多个 utm_source=chatgpt.com 链接",
+      "previous_effective_value": "UI 启用网页搜索 chip；分享对话框显示“回答已完成”；正文/分享页含多个 utm_source=chatgpt.com 链接",
+      "value": "已搜索 6 个网站；保存的会话包含web.run工具消息，原题旁有网页搜索工具chip。",
+      "evidence": "Decoded actual conversation search activity and user prompt, not inferred from tracking query parameters."
+    },
+    {
+      "field": "started_at",
+      "original_value": "2026-10-29T14:02:00.000Z",
+      "previous_effective_value": "2026-10-29T14:02:00.000Z",
+      "value": "2026-10-29T15:55:04.406000+00:00",
+      "evidence": "Saved user-message create_time conflicts with raw recorded 14:02Z; shared HTML backing_conversation_id matches the raw conversation."
+    },
+    {
+      "field": "finished_at",
+      "original_value": "2026-10-29T14:05:30.000Z",
+      "previous_effective_value": "2026-10-30T05:06:39.767426+00:00",
+      "value": "2026-10-30T05:06:39.767426+00:00",
+      "evidence": "Actual current offline recovery/extraction time. Original raw 14:05:30Z predates saved user-message creation; historical first extraction time cannot be verified. This value is not model generation completion time."
+    }
+  ]
+}

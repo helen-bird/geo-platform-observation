@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q2-R1-A3-recovery-01",
+  "attempt_id": "C-Q2-R1-A3",
+  "slot_id": "C-Q2-R1",
+  "method": "DOM-backed share-dialog preview; no public share created",
+  "captured_at": "2026-10-29T10:25:42.334Z",
+  "status": "partial",
+  "body_completeness": "partial",
+  "answer_chars": 2417,
+  "source_count": 2,
+  "notes": "2026-10-29同条件新会话重现：页面显示回答已完成，但主正文无法加载；分享预览恢复2417字符与2条直链，正文在第二项研究Peer-reviewed处终止。原因不能仅凭UI确认为服务端生成故障；完整性未通过，不纳入完成样本。",
+  "capture_kind": "share_preview",
+  "selected": true,
+  "attempt_in_main_sample": false,
+  "file": "data/captures/C-Q2-R1-A3-recovery-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

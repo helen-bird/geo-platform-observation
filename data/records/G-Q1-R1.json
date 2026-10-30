@@ -1,0 +1,392 @@
+{
+  "id": "G-Q1-R1",
+  "platform": "Grok",
+  "question_id": "Q1",
+  "repeat": 1,
+  "date_local": "2026-10-29",
+  "started_at": "2026-10-29T09:35:05.795Z",
+  "finished_at": "2026-10-29T09:36:33.631Z",
+  "prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+  "submitted_prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+  "observed_submitted_prompt": null,
+  "normalized_submitted_prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+  "submitted_prompt_provenance": "inferred_from_recorded_prompt_and_mode",
+  "mode_label": "Expert",
+  "model_label": "未披露具体模型版本",
+  "model_evidence": "页面模型选择器显示 Expert；未显示版本号",
+  "search_status": "observed",
+  "search_evidence": "执行了 3 次搜索；执行了 5 次搜索",
+  "status": "completed",
+  "answer_text": "The best free resources for learning Generative Engine Optimization (GEO) in 2026 combine foundational research, official platform guidance, structured courses, curated learning paths, and practitioner content. GEO focuses on making content more likely to be retrieved, cited, or mentioned in AI-generated answers (ChatGPT, Perplexity, Google AI Overviews/AI Mode, Gemini, etc.), overlapping heavily with Answer Engine Optimization (AEO) and traditional SEO fundamentals.⁠Stackmatix\n\nFoundational Research (Start Here)\nOriginal GEO paper: GEO: Generative Engine Optimization by Aggarwal et al. (arXiv:2311.09735, published at KDD 2024). This is the primary source that named the field. It defines visibility metrics, introduces GEO-bench, and shows that certain content strategies can increase citation/visibility rates by ~30–40%. Free to read on arXiv.⁠arXiv\nFollow-up research (e.g., comparative studies across engines like ChatGPT, Claude, Perplexity, and Gemini) is also available on arXiv for deeper technical context.\nOfficial Documentation\nGoogle Search Central: “Optimizing your website for generative AI features on Google Search” (and related pages on AI features/AI Overviews). Google’s position is that standard SEO best practices (helpful, reliable, people-first content; technical eligibility for indexing and snippets) still apply. There are no special requirements or “GEO hacks” (such as llms.txt) needed for AI Overviews or AI Mode. This is the authoritative baseline for Google’s ecosystem.⁠Developers.google\nBing Webmaster Tools also provides free AI citation and visibility insights.\nFree Structured Courses\n\nThese are practical, self-paced, and require no payment (some may need a free account for certificates):\n\nApollo Digital Free GEO Course — ~7 lessons / 100 minutes across foundations, technical readiness (crawlers, robots.txt), measurement (with free Google Sheets templates for audits and share-of-voice tracking), and tooling. No signup required; progress saves in-browser. Updated 2026.⁠Apollodigital\nAhrefs Academy AEO Course — 12 lessons / ~1 hour 26 minutes. Covers how AI search works, platform differences (ChatGPT, AI Overviews, Perplexity), content that gets cited, brand mentions, technical practices, and measurement. No signup required to watch; free Ahrefs certification exam available.⁠Ahrefs\nHubSpot Academy AEO Fundamentals — Free certification course (~2 hours 20 minutes). Focuses on answer engines, metrics (visibility, share of voice, citations), content planning, and measurement. There’s also a related “SEO in the Age of AI” path.⁠Offers.hubspot\nOther solid free options: Open University’s short (~1-hour) intro to GEO; Rank Prompt’s free ~90-minute GEO & AEO course; AISQ Growth’s GEO Academy; and Finseo Academy materials (video lessons, some with certificates).\nCurated Learning Paths, Guides & Ebooks\nLearningAIsearch.com (by Aleyda Solis) — Free, non-biased roadmap that organizes reliable free guides and resources across fundamentals, measurement, technical, content, and tools. Maintained by a respected international SEO/AI search consultant; also ties into the SEOFOMO newsletter.⁠Learningaisearch\nClass Central: “25 Resources to Learn Generative Engine Optimization in 2026” — Aggregates free/paid courses, guides (e.g., iPullRank AI Search Manual), blogs (Neil Patel, Seer Interactive, Writesonic, Profound), YouTube channels (Nathan Gotch, Exposure Ninja, Ahrefs), and podcasts. Updated into 2026.⁠Classcentral\nStackmatix: Free AEO and GEO Learning Resources in 2026 — Practical overview of resource types (official docs, practitioner blogs, communities, research) plus a suggested multi-week learning path (fundamentals → competitive landscape → tactics → apply & measure).⁠Stackmatix\nThe GEO Lab free ebooks — Multiple free downloads (Pocket Guide 2026 Edition, SEO-to-GEO framework, experiments guide, 30-day workbook, technical WordPress guide, glossary, authority playbook, and full AI SEO OS). Based on their GEO Stack framework.⁠Thegeolab\nPractitioner Blogs, Video, Communities & Tools\nBlogs & newsletters: Neil Patel’s GEO content, Seer Interactive, Writesonic GEO archives, Profound, daydream, TripleDart, and Aleyda Solis’s SEOFOMO.\nYouTube: Nathan Gotch, Ahrefs channel (AEO playlist), Exposure Ninja, SMA Marketing, and Finseo Academy playlists for short practical lessons.\nCommunities: Relevant Reddit communities, Discord/Slack groups focused on AI search (look for places sharing real citation data rather than pure theory).\nFree measurement/tools: Google Search Console (AI impressions within Web search data), Bing Webmaster Tools (AI citations), free tiers or audits from various visibility checkers, plus spreadsheets for manual prompt tracking. Practice by running a fixed set of buyer prompts across engines before/after changes on a site you control.\nRecommended Learning Path (2026)\nRead the original GEO paper + Google’s official AI features docs for a clear baseline.\nComplete one structured free course (Ahrefs AEO or Apollo Digital are strong starting points).\nUse LearningAIsearch.com or the Class Central/Stackmatix roundups as hubs.\nApply tactics on a few pages, measure with free tools (prompt tracking + Search Console), and iterate.\nStay current via practitioner newsletters and communities—GEO evolves quickly as engines change.\n\nCaveats: No single official “GEO certification” exists; certificates prove study more than results. The strongest signal is measurable before/after citation or mention improvements on prompts you control. Google’s stance is that core SEO still dominates for its AI features, while multi-engine strategies (content extractability, entity clarity, earned mentions, technical crawlability) matter more broadly. Quality varies—prioritize sources with real data or experiments over pure theory.⁠Pixis\n\nThese resources are free as of late 2026 and should give a solid, practical foundation without paid courses or tools.",
+  "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+  "capture_method": "Rendered browser answer DOM + screenshot",
+  "citation_mapping_complete": true,
+  "attempt_number": 1,
+  "slot_id": "G-Q1-R1",
+  "attempt_id": "G-Q1-R1",
+  "capture_id": "G-Q1-R1-legacy-01",
+  "selected_eligible": true,
+  "selection_reason": "earliest_complete_attempt",
+  "sources": [
+    {
+      "url": "https://www.stackmatix.com/blog/free-aeo-geo-resources-2026",
+      "title": "Free AEO and GEO Learning Resources in 2026 (Stackmatix)",
+      "domain": "www.stackmatix.com",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://arxiv.org/abs/2311.09735",
+      "title": "[2311.09735] GEO: Generative Engine Optimization (arXiv)",
+      "domain": "arxiv.org",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "title": "Google's Guide to Optimizing for Generative AI Features on Google Search | Google Search Central  |  Documentation  |  Google for Developers (Developers.google)",
+      "domain": "developers.google.com",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://apollodigital.io/learn/geo/",
+      "title": "The Free GEO Course: Learn Generative Engine Optimization | Apollo Digital (Apollodigital)",
+      "domain": "apollodigital.io",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://ahrefs.com/academy/aeo-course",
+      "title": "Answer Engine Optimization (AEO) Course (Ahrefs)",
+      "domain": "ahrefs.com",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://offers.hubspot.com/academy-aeo-certifications",
+      "title": "HubSpot Academy | Become an Expert in AI Search (Offers.hubspot)",
+      "domain": "offers.hubspot.com",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://learningaisearch.com/about/",
+      "title": "About LearningAIsearch.com - By Aleyda Solis (Learningaisearch)",
+      "domain": "learningaisearch.com",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/",
+      "title": "25 Resources to Learn Generative Engine Optimization in 2026 — Class Central (Classcentral)",
+      "domain": "www.classcentral.com",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://thegeolab.net/ebooks/",
+      "title": "Free GEO Ebooks & Guides | The GEO Lab (Thegeolab)",
+      "domain": "thegeolab.net",
+      "kind": "inline_citation"
+    },
+    {
+      "url": "https://pixis.ai/blog/how-to-learn-geo-and-get-certified-in-ai-search/",
+      "title": "How to Learn GEO and Get Certified in AI Search | Pixis (Pixis)",
+      "domain": "pixis.ai",
+      "kind": "inline_citation"
+    }
+  ],
+  "retrieval_sources": [],
+  "observations": [
+    {
+      "entity": "GEO research (Aggarwal et al.)",
+      "entity_type": "research",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Original GEO paper: GEO: Generative Engine Optimization by Aggarwal et al.",
+      "notes": "原始论文作为起步资源主动推荐；arXiv 是托管站，不另外计为作者实体。",
+      "source_urls": [
+        "https://arxiv.org/abs/2311.09735"
+      ]
+    },
+    {
+      "entity": "Google Search Central",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "This is the authoritative baseline for Google’s ecosystem.",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ]
+    },
+    {
+      "entity": "Bing Webmaster Tools",
+      "entity_type": "tool",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Free measurement/tools: Google Search Console (AI impressions within Web search data), Bing Webmaster Tools (AI citations)",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Apollo Digital",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Complete one structured free course (Ahrefs AEO or Apollo Digital are strong starting points).",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://apollodigital.io/learn/geo/"
+      ]
+    },
+    {
+      "entity": "Ahrefs",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Ahrefs Academy AEO Course — 12 lessons / ~1 hour 26 minutes.",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://ahrefs.com/academy/aeo-course"
+      ]
+    },
+    {
+      "entity": "HubSpot Academy",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "HubSpot Academy AEO Fundamentals — Free certification course (~2 hours 20 minutes).",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://offers.hubspot.com/academy-aeo-certifications"
+      ]
+    },
+    {
+      "entity": "Open University",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Other solid free options: Open University’s short (~1-hour) intro to GEO",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Rank Prompt",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Rank Prompt’s free ~90-minute GEO & AEO course",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "AISQ Growth",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "AISQ Growth’s GEO Academy",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Finseo Academy",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Finseo Academy materials (video lessons, some with certificates).",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+      "entity_type": "creator",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "LearningAIsearch.com (by Aleyda Solis) — Free, non-biased roadmap",
+      "notes": "作者、其学习导航站和 SEOFOMO 合并为同一主体。",
+      "source_urls": [
+        "https://learningaisearch.com/about/"
+      ]
+    },
+    {
+      "entity": "Class Central",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Use LearningAIsearch.com or the Class Central/Stackmatix roundups as hubs.",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/"
+      ]
+    },
+    {
+      "entity": "Stackmatix",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Stackmatix: Free AEO and GEO Learning Resources in 2026 — Practical overview of resource types",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://www.stackmatix.com/blog/free-aeo-geo-resources-2026"
+      ]
+    },
+    {
+      "entity": "The GEO Lab",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "The GEO Lab free ebooks — Multiple free downloads",
+      "notes": "已引用该对象发布的内容。",
+      "source_urls": [
+        "https://thegeolab.net/ebooks/"
+      ]
+    },
+    {
+      "entity": "iPullRank",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "guides (e.g., iPullRank AI Search Manual)",
+      "notes": "仅作为 Class Central 收录内容的括号例子出现，未被单独主动推荐；第三方汇编引用不算其自有内容引用。",
+      "source_urls": []
+    },
+    {
+      "entity": "Neil Patel",
+      "entity_type": "creator",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Blogs & newsletters: Neil Patel’s GEO content, Seer Interactive, Writesonic GEO archives, Profound, daydream, TripleDart",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Seer Interactive",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Blogs & newsletters: Neil Patel’s GEO content, Seer Interactive, Writesonic GEO archives, Profound, daydream, TripleDart",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Writesonic",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Blogs & newsletters: Neil Patel’s GEO content, Seer Interactive, Writesonic GEO archives, Profound, daydream, TripleDart",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Profound",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Blogs & newsletters: Neil Patel’s GEO content, Seer Interactive, Writesonic GEO archives, Profound, daydream, TripleDart",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "daydream",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Blogs & newsletters: Neil Patel’s GEO content, Seer Interactive, Writesonic GEO archives, Profound, daydream, TripleDart",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "TripleDart",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Blogs & newsletters: Neil Patel’s GEO content, Seer Interactive, Writesonic GEO archives, Profound, daydream, TripleDart",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Nathan Gotch",
+      "entity_type": "creator",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "YouTube: Nathan Gotch, Ahrefs channel (AEO playlist), Exposure Ninja, SMA Marketing, and Finseo Academy playlists",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Exposure Ninja",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "YouTube: Nathan Gotch, Ahrefs channel (AEO playlist), Exposure Ninja, SMA Marketing, and Finseo Academy playlists",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "SMA Marketing",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "YouTube: Nathan Gotch, Ahrefs channel (AEO playlist), Exposure Ninja, SMA Marketing, and Finseo Academy playlists",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    },
+    {
+      "entity": "Google Search Console",
+      "entity_type": "tool",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Free measurement/tools: Google Search Console (AI impressions within Web search data), Bing Webmaster Tools (AI citations)",
+      "notes": "在可见回答引用中未见该对象自有内容。",
+      "source_urls": []
+    }
+  ],
+  "raw_file": "data/records/G-Q1-R1.json",
+  "capture_history": [
+    {
+      "capture_id": "G-Q1-R1-legacy-01",
+      "attempt_id": "G-Q1-R1",
+      "slot_id": "G-Q1-R1",
+      "method": "Rendered browser answer DOM + screenshot",
+      "captured_at": "2026-10-29T09:36:33.631Z",
+      "status": "completed",
+      "body_completeness": "completed",
+      "answer_chars": 5946,
+      "source_count": 10,
+      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "capture_kind": "initial_export",
+      "selected": true,
+      "file": "data/captures/G-Q1-R1-legacy-01.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    }
+  ],
+  "capture_provenance": {
+    "original_status": "completed",
+    "selected_capture_id": "G-Q1-R1-legacy-01",
+    "method": "Rendered browser answer DOM + screenshot",
+    "captured_at": "2026-10-29T09:36:33.631Z",
+    "same_conversation": true,
+    "review_notes": "Original export retained; no recovery selection.",
+    "selected_capture_file": "data/records/G-Q1-R1.json"
+  },
+  "public_copy": true
+}

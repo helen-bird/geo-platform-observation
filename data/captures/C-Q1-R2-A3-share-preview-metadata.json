@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q1-R2-A3-share-preview-metadata",
+  "attempt_id": "C-Q1-R2-A3",
+  "slot_id": "C-Q1-R2",
+  "method": "Saved handoff summary; not a body capture",
+  "captured_at": null,
+  "status": "metadata_only",
+  "body_completeness": "not_applicable",
+  "answer_chars": null,
+  "source_count": null,
+  "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. 分享对话框显示回答已完成\n从分享页 HTML fallbackMarkdown 提取正文\n计划为四周而非两周；未做 CMR 编码",
+  "capture_kind": "metadata_summary",
+  "selected": false,
+  "attempt_in_main_sample": true,
+  "file": "data/captures/C-Q1-R2-A3-share-preview-metadata.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

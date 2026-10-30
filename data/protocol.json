@@ -1,0 +1,29 @@
+{
+  "title": "GEO recommendation discovery: ChatGPT Search and Grok",
+  "planned_runs": 12,
+  "timezone": "Asia/Shanghai",
+  "design": "3 verbatim English questions × 2 platforms × 2 fresh conversations; one user prompt per conversation; no steering follow-ups",
+  "questions": {
+    "Q1": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+    "Q2": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+    "Q3": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available."
+  },
+  "coding": {
+    "mention": "Explicitly named in answer body; source-only appearances do not count.",
+    "recommendation": "Actively suggested to use, read, follow, or treated as a selected answer to the resource/experiment/creator request. Incidental mentions do not count.",
+    "citation": "The answer cites content created/published by that entity, including an original author work hosted on a repository; third-party mentions of the entity alone do not count. false means absent from observable citations, null means attribution cannot be resolved.",
+    "scope": "Main recommended or substantively discussed organizations, brands, researchers, creators and identifiable research projects; generic platforms mentioned only as measurement targets are excluded.",
+    "method": "Assistant manually read each returned answer and source links to code observations; no keyword classifier and no independent human double-coding. Human review remains possible from raw text and evidence."
+  },
+  "limits": [
+    "Twelve observations are exploratory and cannot establish whether a GEO tactic causes visibility increases.",
+    "Fresh conversations do not establish the absence of account personalization, memory, search localization or backend routing differences.",
+    "Model labels are recorded from visible UI only; exact backend versions are unknown unless independently exposed.",
+    "Search indicators and source panels demonstrate observed tool activity, not truth or completeness of the resulting claims.",
+    "URLs are captured as presented by each platform; links and empirical claims are not independently audited in this observation study."
+  ],
+  "supplement_policy": "User authorized extra fresh conversations on 2026-10-29 to replace technical failures while retaining all attempts; on 2026-10-29 also authorized model changes with explicit labeling. Actual Cursor supplements and final 2026-10-30 test use recorded GPT-6 Medium conditions; no model switch is inferred merely from authorization. Original English questions are unchanged; UI search-chip serialization is preserved separately from the canonical prompt.",
+  "timing": "started_at is observed submit time; finished_at is extraction time, not authoritative server completion time.",
+  "search_tool_prefix": "ChatGPT search is enabled through the UI Web Search chip. The stored user message includes @网页搜索 before the exact English question; no textual steering or follow-up is added.",
+  "recovery_policy": "Recovery of an existing conversation is an additional capture, not a new prompt. Cursor saved raw text, full fallback snapshots, live preview captures, citation-source sections and extra retrieval sections are retained separately. All complete main positions have reviewed observational coding."
+}

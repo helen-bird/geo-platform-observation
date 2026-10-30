@@ -1,0 +1,17 @@
+{
+  "capture_id": "C-Q2-R2-A2-legacy-01",
+  "attempt_id": "C-Q2-R2-A2",
+  "slot_id": "C-Q2-R2",
+  "method": "UI + official read_thread; incomplete response",
+  "captured_at": "2026-10-29T10:04:24.242Z",
+  "status": "incomplete",
+  "body_completeness": "legacy_unverified",
+  "answer_chars": 0,
+  "source_count": 0,
+  "notes": "逐次补测仍未返回任何assistant正文；网页与官方存储记录均为空。原题、模型和搜索入口不变；不进入推荐统计。",
+  "capture_kind": "initial_export",
+  "selected": true,
+  "attempt_in_main_sample": false,
+  "file": "data/captures/C-Q2-R2-A2-legacy-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}

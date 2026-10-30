@@ -1,0 +1,451 @@
+{
+  "id": "G-Q2-R2",
+  "platform": "Grok",
+  "question_id": "Q2",
+  "repeat": 2,
+  "date_local": "2026-10-29",
+  "started_at": "2026-10-29T09:42:19.566Z",
+  "finished_at": "2026-10-29T09:44:12.304Z",
+  "prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "submitted_prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "observed_submitted_prompt": null,
+  "normalized_submitted_prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "submitted_prompt_provenance": "inferred_from_recorded_prompt_and_mode",
+  "mode_label": "Expert",
+  "model_label": "未披露具体模型版本",
+  "model_evidence": "页面模型选择器显示 Expert；未显示版本号",
+  "search_status": "observed",
+  "search_evidence": "执行了 3 次搜索",
+  "status": "completed",
+  "answer_text": "Credible evidence on GEO (Generative Engine Optimization) tactics and AI brand mentions/recommendations is still limited and mixed. Controlled academic experiments show content-level changes can increase a source’s share of an already-generated answer, but large surveys and later work find little stable causal effect on organic discoverability (getting retrieved in the first place). Observational studies and practitioner experiments provide stronger signals for off-site mentions, listicles, and entity signals.\n\nFoundational Controlled Experiment: Aggarwal et al. (KDD 2024)\n\nThe seminal peer-reviewed paper “GEO: Generative Engine Optimization” (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, Deshpande; arXiv:2311.09735, published in Proceedings of KDD 2024) introduced GEO-bench (10,000 diverse queries).\n\nThey tested black-box content rewrites on sources already retrieved into a generative engine context (custom GPT-3.5 setup + real Perplexity.ai tests). Key results on position-adjusted word count (a metric weighting how much of the answer draws from a source, adjusted for position):\n\nQuotation addition: ~+41% relative\nStatistics addition: ~+33%\nCiting sources: ~+28%\nFluency optimization: ~+29%\nKeyword stuffing: negative (~–8%)\n\nOverall gains reached up to ~40% relative visibility; lower-ranked sources gained the most (e.g., Cite Sources +115% for rank-5 sources). They also reported up to ~37% improvement on live Perplexity.ai.\n\nLimitations: This measures how already-retrieved content is used/cited inside answers, not whether tactics increase retrieval or brand-name mentions in open real-world AI search. Domain effects vary.\n\nCritical Survey of 45 Studies (Martinez, arXiv:2607.14035, July 2026)\n\nA systematic review of 45 GEO studies (Nov 2023–July 2026) concludes:\n\nStrong evidence that interventions alter citation, prominence, or absorption once content is already retrieved into context.\nNo technique shows a stable, cross-platform, longitudinal causal effect on organic discoverability (getting into the retrieved set).\nTopical relevance and list/position in context are the most reproducible drivers.\nMany popular heuristics (formatting, fluency, statistics, quotations) transfer poorly or become null/negative under competition or different engines.\nEnd-to-end tests (e.g., SAGEO Arena) show some rewrites can even degrade upstream retrieval.\n\nIt highlights later work such as C-SEO Bench (most conversational optimization methods ineffective or harmful) and the 252k-trial study below.\n\nLarge-Scale Controlled Citation Experiment: Vishwakarma et al. (“What Gets Cited,” arXiv:2605.25517)\n\nThis factorial study ran 252,000 trials across six LLMs in a controlled two-document RAG setup (exactly two sources injected; brands anonymized; order counterbalanced).\n\nTop drivers of being cited first: topical relevance and list position (large effects). Explicit price information and a recent timestamp also helped consistently. Completeness and trust cues gave smaller gains; pure formatting edits had little impact.\n\nThis directly tests competitive GEO factors relevant to recommendations but still within a fixed-context (already-retrieved) setting.\n\nLarge Observational Baseline: Kumar et al. (“GEO at Scale,” arXiv:2606.20065)\n\nAnalysis of 100k+ prompt responses across 100+ brands (March–May 2026). Key findings:\n\nClear brand-stature ladder on unbranded prompts: household names ~73%, mid-market ~44%, niche ~11%.\n~78% of citations go to corporate sites (mostly third-party); ranked “best-of” listicles are the single most-cited page type (~21%).\nSentiment is highly unstable relative to mere mention.\n\nPrimarily measurement/baseline rather than a tactic-intervention experiment; it proposes future protocols for causal tests.\n\nPractitioner Real-World Experiments (Search Engine Land, 2026)\n\nTwo structured experiments tracked commercial-intent keywords manually across multiple AI platforms:\n\nExisting brand: Listicle placements, PR, guest posts, and on-site content produced appearances for 10–12 of 15 keywords, with peak keyword presence ~37%. Listicles drove the majority of citations.\nCold-start SaaS agency (zero baseline AI presence): 298 appearances in 30 days. Earned placements on sources already observed in AI answers (e.g., Indie Hackers citations rose 232%) drove most mentions; owned content contributed less. Comparative listicle updates produced large relative gains.\n\nThese directly measured brand appearances in recommendation-style answers and challenge some conventional advice by emphasizing observed citation sources over generic on-page tactics.\n\nStrong Observational Correlations (Ahrefs, 2025)\n\nStudies of ~75,000 brands (Domain Rating >40) found:\n\nBranded web mentions correlated ~0.66 with AI Overview visibility (far stronger than backlinks ~0.22).\nLater cross-platform work (ChatGPT, AI Mode, AI Overviews) found YouTube mentions the strongest single predictor (~0.74), followed by branded web mentions (0.66–0.71).\nTop-quartile mention brands received ~10× more AI Overview mentions than the next quartile.\n\nThese are correlations, not causal experiments, but they consistently point to off-site entity/brand signals (mentions, YouTube, anchors) over traditional on-site SEO metrics.\n\nOther Notable Work\nSeer Interactive GEO Olympics Study (2026): 231k+ LLM responses over 52 days during the Olympics. Strong “signal architecture” (entity authority + third-party validation + community discussion) associated with ~7.8× more mentions. Citation sources differ sharply by query type (factual vs. judgment/recommendation) and platform.\nVarious OtterlyAI and agency case experiments test narrow tactics (e.g., publication-date updates, awards) with mixed, often modest results.\nBottom Line\nWhat has been measured: Content rewrites (quotes, stats, citations) can increase a page’s share of an answer when it is already retrieved (Aggarwal et al.). Competitive factors like relevance and position dominate first-citation odds (Vishwakarma et al.). Real-world placements on listicles and earned mentions can produce measurable rises in brand appearances from a low base.\nWhat remains weakly supported: Stable, cross-platform causal lifts in organic retrieval or durable recommendation share. Large reviews find no such consistent effect; gains are often redistributive or eroded by competition, and visibility is stochastic (high day-to-day variability).\nOff-site brand mentions, YouTube presence, third-party listicles, and entity signals show the strongest observational associations with being named or recommended.\n\nSources: Aggarwal et al. (KDD 2024 / arXiv:2311.09735), Martinez (arXiv:2607.14035), Vishwakarma et al. (arXiv:2605.25517), Kumar et al. (arXiv:2606.20065), Ahrefs 75k-brand studies (2025), Search Engine Land experiments (2026), Seer Interactive GEO Olympics (2026).",
+  "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。 此回答未呈现可点击内联引用，末尾以文本列出文献；另存来源面板URL，面板出现不自动算作Citation。",
+  "capture_method": "Rendered browser answer DOM + screenshot",
+  "citation_mapping_complete": true,
+  "attempt_number": 1,
+  "slot_id": "G-Q2-R2",
+  "attempt_id": "G-Q2-R2",
+  "capture_id": "G-Q2-R2-legacy-01",
+  "selected_eligible": true,
+  "selection_reason": "earliest_complete_attempt",
+  "sources": [
+    {
+      "url": "https://www.seerinteractive.com/insights/what-ai-thinks-about-your-brand-is-already-written",
+      "title": "The GEO Olympics Study: What 231,347 LLM Responses Reveal About AI Brand Visibility\n\n# The GEO Olympics Study: What 231,347 LLM Responses Reveal About AI Brand Visibility Apr 27, 2026…",
+      "domain": "www.seerinteractive.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342.md",
+      "title": "I wanted measurable results, so I ran two structured experiments back to back, tracked the results…",
+      "domain": "searchengineland.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://www.rhinorank.io/blog/generative-engine-optimization-geo-for-link-building/",
+      "title": "GEO link building: which sources AI answers cite, study by study | Rhino Rank\n\nIn the dated studies below, yes: the measures most closely associated with a brand appearing in AI…",
+      "domain": "www.rhinorank.io",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://geoaura.world/blog/geo-evidence-audit-2026",
+      "title": "GEO Evidence Audit 2026: What 45 Studies Actually Prove | GeoAura\n\nGeoAura ← All articles Fundamentals # GEO Evidence Audit 2026: What 45 Studies Actually Prove…",
+      "domain": "geoaura.world",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://otterly.ai/blog/category/geo-experiments/",
+      "title": "GEO Experiments & AI Search Case Studies | OtterlyAI\n\n# GEO Experiments & AI Search Case Studies | OtterlyAI # GEO Experiments ## Hands-on GEO…",
+      "domain": "otterly.ai",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://www.researchgate.net/publication/407287604_Generative_Engine_Optimization_at_Scale_Measuring_Brand_Visibility_Across_AI_Search_Engines",
+      "title": "(PDF) Generative Engine Optimization at Scale: Measuring Brand Visibility Across AI Search Engines\n\nstatistically marginal. 6 Table 2. CRM study: average mention position by brand and engine (lower…",
+      "domain": "www.researchgate.net",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://geoaura.world/blog/princeton-geo-study-benchmark",
+      "title": "The Princeton GEO Study: Benchmark & Findings Explained | GeoAura\n\nGEO Signal Study | Pages with original statistics see +156% citation probability in Google AI…",
+      "domain": "geoaura.world",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.25517v1",
+      "title": "What Gets Cited: Competitive GEO in AI Answer Engines\n\n© cc ###### Abstract. AI answer engines generate answers from retrieved pages but cite only a few…",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://eu.36kr.com/en/p/3995276474110084",
+      "title": "First Batch of GEO Winners Emerged: Key Strategies That Led to Their Success\n\n# First Batch of GEO Winners Emerged: Key Strategies That Led to Their Success # The first batch of…",
+      "domain": "eu.36kr.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.20065",
+      "title": "1 Introduction\n\nThe top brands that are already authoritative tend to get cited naturally. The harder and more…",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://www.alphaxiv.org/abs/2606.20065",
+      "title": "Generative Engine Optimization at Scale: Measuring Brand Visibility Across AI Search Engines | alphaXiv\n\nWe analyze 100K+ prompt responses across 100+ brands tracked on Ranqo between March and May 2026.…",
+      "domain": "www.alphaxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://geoaura.world/blog/ai-search-optimization",
+      "title": "AI Search Optimization: The Complete 2026 Guide | GeoAura\n\nOnly title-and-paragraph question matching survived, at roughly +15.5% citation odds per standard…",
+      "domain": "geoaura.world",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://ar5iv.labs.arxiv.org/html/2604.07585",
+      "title": "[2604.07585] Don’t Measure Once: Measuring Visibility in AI Search (GEO)\n\nThe inherent probabilistic nature of AI search changes this paradigm. Answers can vary across runs,…",
+      "domain": "ar5iv.labs.arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.23162v1",
+      "title": "From Prompt to Recommendation:A Fitted Stage Model of Brand Visibility in AI Search\n\n### 7.1 A four-cell live-evidence ladder Table 3 gives the simplest result. With neither live…",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://ai-rebels.uhu.nl/en/geo-increases-the-visibility-of-brands-in-ai-answers-by-up-to-40-according-to-princeton-research/",
+      "title": "GEO increases brand visibility in AI responses by up to 40%, according to Princeton research — UHU AI Rebels\n\nClose Search > “Which employer branding service provider is most recommended?” Not you, unless you…",
+      "domain": "ai-rebels.uhu.nl",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://jpldigital.ca/blog/geo-tricks-measured/",
+      "title": "Do GEO Tricks Work? What a Benchmark Measured | JPL Digital\n\nWhat a Benchmark Measured | JPL Digital SEO GEO Strategy # GEO tricks, measured: what moves an AI…",
+      "domain": "jpldigital.ca",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.15033v1",
+      "title": "What Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization (GEO)\n\n© none ###### Abstract. Generative search engines such as ChatGPT, Gemini and Perplexity now decide…",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/html/2607.14035v1",
+      "title": "Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023–2026)\n\n# Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization…",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://verityscore.io/en/blog/does-geo-work-45-studies-evidence-2026/",
+      "title": "Does GEO Work? What 45 Studies Actually Prove | Verity Score\n\nShare Does GEO work, or has the industry simply given a new name to familiar content and search…",
+      "domain": "verityscore.io",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.24081",
+      "title": "[2610.24081] Location, Location, Generation: Where You Ask Matters for Generative Engine Optimization\n\nSkip to main content Search # Computer Science > Information Retrieval [Submitted on 16 Oct 2026] #…",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.21330v1",
+      "title": "VoteGEO-Bench: Measuring the Impact of Generative Engine Optimization on Electoral Visibility\n\nWe first analyze the sources cited by generative engines, finding that many citations come from…",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://autoseo.codext.de/blog/geo-techniques",
+      "title": "Which GEO techniques work? What the research actually shows · AutoSEO\n\nPublished research supports a narrow version of GEO. In the original GEO paper (Aggarwal et al.,…",
+      "domain": "autoseo.codext.de",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://geoaura.world/blog/is-geo-worth-it-2026",
+      "title": "Is GEO Worth It in 2026? What Five Studies in One Week Actually Show | GeoAura\n\nMarie Haynes (100 sites, 145M+ GA4 sessions, Search Engine Journal, 21 Oct) measured ChatGPT at…",
+      "domain": "geoaura.world",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://www.relevance.com/geo-case-studies/",
+      "title": "5 Generative Engine Optimization Case Studies to Learn From in 2026 - Relevance\n\nJudge it on that. Everything else on this list is from other agencies or researchers, and none of…",
+      "domain": "www.relevance.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2311.09735",
+      "title": "arxiv.org/pdf/2311.09735",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://arxiv.org/abs/2311.09735",
+      "title": "[2311.09735] GEO: Generative Engine Optimization\n\nSkip to main content Search # Computer Science > Machine Learning [Submitted on 16 Nov 2023 ( v1 ),…",
+      "domain": "arxiv.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://geoready.dev/guides/geo-research-papers-explained/",
+      "title": "GEO Research Papers Explained: KDD 2024 and AutoGEO\n\n**What was tested. ** Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, and Deshpande built…",
+      "domain": "geoready.dev",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization",
+      "title": "GEO: Generative Engine Optimization - Princeton University\n\nSkip to main navigation Skip to search Skip to main content # GEO: Generative Engine Optimization *…",
+      "domain": "collaborate.princeton.edu",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://openreview.net/revisions?id=UllBSC90BH",
+      "title": "Revisions | OpenReview\n\n# Revisions | OpenReview # Revision History for GEO: Generative Engine Optimization Compare…",
+      "domain": "openreview.net",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://capston.ai/capston-core/geo-benchmark-aggarwal/",
+      "title": "GEO (Aggarwal et al., KDD 2024): The Study That Started It All | CapstonAI\n\n# GEO (Aggarwal et al., KDD 2024): The Study That Started It All | CapstonAI Scientific research ›…",
+      "domain": "capston.ai",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://scholar.google.com/citations?citation_for_view=KYHL9aIAAAAJ%3AhC7cP41nSMkC&hl=en&user=KYHL9aIAAAAJ&view_op=view_citation",
+      "title": "View article\n\n# View article Loading... The system can't perform the operation now. Try again later. Authors…",
+      "domain": "scholar.google.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://marketplace.copyright.com/rs-ui-web/mp/search/all/10.1145%2F3637528.3671900",
+      "title": "Search Tips Advanced Search All types 1 publications and 1 articles/chapters matched your search…",
+      "domain": "marketplace.copyright.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://deeplearn.org/arxiv/502605/geo:-generative-engine-optimization",
+      "title": "GEO: Generative Engine Optimization - Paper Detail\n\n# GEO: Generative Engine Optimization - Paper Detail ### GEO: Generative Engine Optimization *…",
+      "domain": "deeplearn.org",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://formativedigital.com/research/geo-paper-explained/",
+      "title": "The GEO Paper, Explained Properly | Formative Digital\n\nSkip to main content RESEARCH · PAPER TEARDOWN # What the GEO Paper Actually Says: A Practitioner's…",
+      "domain": "formativedigital.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
+      "title": "searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
+      "domain": "searchengineland.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/?hubs_content=blog.hubspot.de%2Fsales%2Fvertriebs-e-mails-optimieren&hubs_content-cta=HubSpot+Blog",
+      "title": "An Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n\nWith this new reality in mind, we’ve analyzed 75,000 brands to see which search factors are most…",
+      "domain": "ahrefs.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://www.relevantaudience.com/geo/chatgpt-query-fan-out-citations-ahrefs-study/",
+      "title": "ChatGPT cites primary sources more, Ahrefs fan-out study\n\n# ChatGPT answers 6 in 7 prompts without searching and shifts citations to primary sources, Ahrefs…",
+      "domain": "www.relevantaudience.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://www.selfstorming.com/blog/ai-in-marketing/brand-mentions-beat-backlinks-in-ai-search",
+      "title": "Brand Mentions Beat Backlinks in AI Search - Ahrefs GEO Study | Selfstorming\n\nNew: Selfstorming is an approved ChatGPT plugin - install it in one click # Brand Mentions Beat…",
+      "domain": "www.selfstorming.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://ahrefs.com/blog/ai-citations-vs-impressions-study/",
+      "title": "Do AI Assistants Link When Mentioning Brands? For Ahrefs, Only 28% of the Time\n\nSEO & Marketing Educator at Ahrefs Reviewed by Ryan Law November 26, 2025 4 min read AI assistants…",
+      "domain": "ahrefs.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://thenextweb.com/news/ahrefs-youtube-mentions-ai-visibility-brand-search",
+      "title": "YouTube mentions are the single strongest predictor of whether AI will recommend your brand, according to a study of 75,000 companies\n\nAhrefs analysed brand visibility across ChatGPT, Google AI Mode, and AI Overviews, and found that…",
+      "domain": "thenextweb.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://ahrefs.com/blog/branded-web-mentions-visibility-ai-search/",
+      "title": "Google Seems More Biased Towards Big Brands Than ChatGPT and Perplexity\n\nReviewed by Ryan Law July 7, 2025 Contents Does being mentioned more on the web lead to more…",
+      "domain": "ahrefs.com",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://authoritytech.io/curated/ai-search-trust-dropped-measurement-stack-brand-mentions-2026",
+      "title": "Brand Mentions Track AI Visibility. Backlinks Barely Do.\n\nBacklinks Barely Do. Afternoon Brief AI Search & Discovery # Brand Mentions Track AI Visibility.…",
+      "domain": "authoritytech.io",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://brandmentions.link/ahrefs-brand-mentions/",
+      "title": "Ahrefs Brand Radar: AI Visibility Score and Mentions\n\nYou’ll get a worked example, a monthly audit routine in Ahrefs, and a clear line between what the…",
+      "domain": "brandmentions.link",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://blckalpaca.at/en/knowledge-base/seo-geo/geo-generative-engine-optimization/brand-mentions-vs-backlinks-the-ahrefs-75k-brand-study",
+      "title": "Brand Mentions vs. Backlinks: The Ahrefs 75K Study | Blck Alpaca\n\nThe Ahrefs 75K Brand Study (2025) analyzed 75,000 brands with a Domain Rating above 40 and used…",
+      "domain": "blckalpaca.at",
+      "kind": "search_source_panel"
+    },
+    {
+      "url": "https://ahrefs.com/es/blog/correlaciones-visibilidad-de-marca-en-ia/",
+      "title": "Principales factores de visibilidad de marca en ChatGPT, AI Mode y AI Overviews (75k marcas estudiadas)\n\nPor Louise Linehan Content Marketer en Ahrefs Revisado por Ryan Law December 16, 2025 11 min de…",
+      "domain": "ahrefs.com",
+      "kind": "search_source_panel"
+    }
+  ],
+  "retrieval_sources": [],
+  "observations": [
+    {
+      "entity": "GEO research (Aggarwal et al.)",
+      "entity_type": "research",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "The seminal peer-reviewed paper “GEO: Generative Engine Optimization”",
+      "notes": "正文 Sources 明确列出该文献，来源面板存在题名或论文编号相匹配的原始来源；不把面板单独出现等同引用。",
+      "source_urls": [
+        "https://arxiv.org/abs/2311.09735",
+        "https://arxiv.org/pdf/2311.09735"
+      ]
+    },
+    {
+      "entity": "Olivier Martinez",
+      "entity_type": "researcher",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Critical Survey of 45 Studies (Martinez, arXiv:2607.14035, July 2026)",
+      "notes": "正文 Sources 明确列出该文献，来源面板存在题名或论文编号相匹配的原始来源；不把面板单独出现等同引用。 综述本身不是新干预实验。",
+      "source_urls": [
+        "https://arxiv.org/html/2607.14035v1"
+      ]
+    },
+    {
+      "entity": "What Gets Cited (competitive GEO study)",
+      "entity_type": "research",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Large-Scale Controlled Citation Experiment: Vishwakarma et al. (“What Gets Cited,” arXiv:2605.25517)",
+      "notes": "正文 Sources 明确列出该文献，来源面板存在题名或论文编号相匹配的原始来源；不把面板单独出现等同引用。",
+      "source_urls": [
+        "https://arxiv.org/html/2605.25517v1"
+      ]
+    },
+    {
+      "entity": "Kumar et al. (brand visibility study)",
+      "entity_type": "research",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Large Observational Baseline: Kumar et al. (“GEO at Scale,” arXiv:2606.20065)",
+      "notes": "正文 Sources 明确列出该文献，来源面板存在题名或论文编号相匹配的原始来源；不把面板单独出现等同引用。 本轮作为独立完整证据板块提供，判为阅读推荐；仍是观察性研究，不是因果实验。",
+      "source_urls": [
+        "https://arxiv.org/html/2606.20065"
+      ]
+    },
+    {
+      "entity": "Search Engine Land",
+      "entity_type": "publication",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Practitioner Real-World Experiments (Search Engine Land, 2026)",
+      "notes": "正文 Sources 明确列出该文献，来源面板存在题名或论文编号相匹配的原始来源；不把面板单独出现等同引用。",
+      "source_urls": [
+        "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342.md"
+      ]
+    },
+    {
+      "entity": "Ahrefs",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Strong Observational Correlations (Ahrefs, 2025)",
+      "notes": "正文 Sources 明确列出该文献，来源面板存在题名或论文编号相匹配的原始来源；不把面板单独出现等同引用。 作为独立完整证据板块提供，虽非因果实验仍判为阅读推荐。",
+      "source_urls": [
+        "https://ahrefs.com/blog/ai-overview-brand-correlation/?hubs_content=blog.hubspot.de%2Fsales%2Fvertriebs-e-mails-optimieren&hubs_content-cta=HubSpot+Blog",
+        "https://ahrefs.com/blog/branded-web-mentions-visibility-ai-search/",
+        "https://ahrefs.com/es/blog/correlaciones-visibilidad-de-marca-en-ia/"
+      ]
+    },
+    {
+      "entity": "Seer Interactive",
+      "entity_type": "organization",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "evidence": "Seer Interactive GEO Olympics Study (2026): 231k+ LLM responses over 52 days during the Olympics.",
+      "notes": "正文 Sources 明确列出该文献，来源面板存在题名或论文编号相匹配的原始来源；不把面板单独出现等同引用。 本轮在 Other Notable Work 中独立列为参考研究，判为阅读推荐。",
+      "source_urls": [
+        "https://www.seerinteractive.com/insights/what-ai-thinks-about-your-brand-is-already-written"
+      ]
+    },
+    {
+      "entity": "OtterlyAI",
+      "entity_type": "organization",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "Various OtterlyAI and agency case experiments test narrow tactics",
+      "notes": "泛指该品牌的案例，没有确定文献；检索面板有实验分类页，但正文末尾 Sources 未列它，不能仅凭面板认定引用。",
+      "source_urls": []
+    },
+    {
+      "entity": "SAGEO Arena",
+      "entity_type": "research",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "End-to-end tests (e.g., SAGEO Arena) show some rewrites can even degrade upstream retrieval.",
+      "notes": "作为综述中一个例子提及，没有原始研究链接或单独推荐。",
+      "source_urls": []
+    },
+    {
+      "entity": "C-SEO Bench",
+      "entity_type": "research",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "It highlights later work such as C-SEO Bench (most conversational optimization methods ineffective or harmful)",
+      "notes": "作为综述提到的后续研究例子，没有原始研究链接或单独推荐。",
+      "source_urls": []
+    }
+  ],
+  "raw_file": "data/records/G-Q2-R2.json",
+  "capture_history": [
+    {
+      "capture_id": "G-Q2-R2-legacy-01",
+      "attempt_id": "G-Q2-R2",
+      "slot_id": "G-Q2-R2",
+      "method": "Rendered browser answer DOM + screenshot",
+      "captured_at": "2026-10-29T09:44:12.304Z",
+      "status": "completed",
+      "body_completeness": "completed",
+      "answer_chars": 6849,
+      "source_count": 45,
+      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。 此回答未呈现可点击内联引用，末尾以文本列出文献；另存来源面板URL，面板出现不自动算作Citation。",
+      "capture_kind": "initial_export",
+      "selected": true,
+      "file": "data/captures/G-Q2-R2-legacy-01.json",
+      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+    }
+  ],
+  "capture_provenance": {
+    "original_status": "completed",
+    "selected_capture_id": "G-Q2-R2-legacy-01",
+    "method": "Rendered browser answer DOM + screenshot",
+    "captured_at": "2026-10-29T09:44:12.304Z",
+    "same_conversation": true,
+    "review_notes": "Original export retained; no recovery selection.",
+    "selected_capture_file": "data/records/G-Q2-R2.json"
+  },
+  "public_copy": true
+}

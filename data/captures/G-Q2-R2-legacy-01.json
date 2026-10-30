@@ -1,0 +1,17 @@
+{
+  "capture_id": "G-Q2-R2-legacy-01",
+  "attempt_id": "G-Q2-R2",
+  "slot_id": "G-Q2-R2",
+  "method": "Rendered browser answer DOM + screenshot",
+  "captured_at": "2026-10-29T09:44:12.304Z",
+  "status": "completed",
+  "body_completeness": "completed",
+  "answer_chars": 6849,
+  "source_count": 45,
+  "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。 此回答未呈现可点击内联引用，末尾以文本列出文献；另存来源面板URL，面板出现不自动算作Citation。",
+  "capture_kind": "initial_export",
+  "selected": true,
+  "attempt_in_main_sample": true,
+  "file": "data/captures/G-Q2-R2-legacy-01.json",
+  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+}
