@@ -8,10 +8,10 @@
   "body_completeness": "legacy_unverified",
   "answer_chars": 7807,
   "source_count": 9,
-  "notes": "网页正文显示“无法加载此回复”。通过官方 read_thread 读取同一会话存储的 completed 回复；未重发、未追加问题。原文包含不可解析的引用内部标记；已保存全部明确URL。回答明确提及原问题未提供的个人上下文，存在账户个性化影响。网页搜索由工具芯片启用，UI存储提示前缀 @网页搜索。 已采集记录末尾学习计划仅到 Days 4–6；未补写后续，完整呈现状态无法独立保证。",
+  "notes": "The web answer displayed a reply-loading error (original UI: \\u65e0\\u6cd5\\u52a0\\u8f7d\\u6b64\\u56de\\u590d). The official read_thread tool was used to read a reply stored as completed in the same conversation; the question was neither resubmitted nor supplemented. The text contained unresolvable internal citation markers; all explicit URLs were saved. The answer explicitly referred to personal context absent from the original question, indicating account personalization. Web search was enabled through a tool chip, and the stored UI prompt had a prefix (original UI: @\\u7f51\\u9875\\u641c\\u7d22). The learning plan at the end of the captured record stopped at Days 4\u20136. No continuation was added, and complete rendering could not be independently guaranteed.",
   "capture_kind": "initial_export",
   "selected": false,
   "attempt_in_main_sample": false,
   "file": "data/captures/C-Q1-R1-legacy-01.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

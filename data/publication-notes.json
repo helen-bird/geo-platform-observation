@@ -1,18 +1,23 @@
 {
-  "edition": "公开脱敏版",
+  "edition": "Redacted public edition",
   "preserved": [
-    "12份主回答的公开副本（与实验无关的个人上下文片段已省略）",
-    "22次提交与10次历史尝试",
-    "37次采集摘要",
-    "142条主体×回答观察",
-    "公开来源与C/M/R判定",
-    "实验条件和GEO效果判断边界"
+    "Public copies of 12 main answers, with personal context unrelated to the experiment omitted",
+    "22 submissions and 10 historical attempts",
+    "37 capture summaries",
+    "142 entity \u00d7 answer observations",
+    "Public sources and Citation / Mention / Recommendation judgments",
+    "Experimental conditions and limits on conclusions about GEO effectiveness"
   ],
   "privacy": [
-    "与实验无关的个人上下文片段已省略，并保留省略标记",
-    "移除私有会话及分享链接",
-    "不公开原始截图、HTML或本地档案",
-    "公开来源链接移除跟踪参数"
+    "Personal context unrelated to the experiment has been omitted, with omission markers retained",
+    "Private conversation and share links have been removed",
+    "Original screenshots, HTML, and local archives are not published",
+    "Tracking parameters have been removed from public source URLs"
   ],
-  "scope": "编辑仅用于公开副本，本地原始文件不变；对象推荐、引用归属、C/M/R判定与统计不变。"
+  "scope": "Edits apply only to the public copies; local originals remain unchanged. Entity recommendations, citation attribution, Citation / Mention / Recommendation judgments, and statistics are unchanged.",
+  "language_policy": {
+    "annotations": "Documentation, annotations and display labels are in English.",
+    "verbatim_evidence": "Original English questions, platform answer_text, observation excerpts, submitted-prompt serializations and metadata original values retain their wording. Non-English UI tokens use JSON Unicode escapes.",
+    "source_titles": "Original source-panel titles are retained. title_en is an English display translation of non-English UI dates or source-title text; it is not a new observation."
+  }
 }

@@ -187,15 +187,15 @@
     "observed_personalization": [
       {
         "run_id": "C-Q3-R1",
-        "evidence": "[个人上下文片段已省略；保留观察到账号上下文影响这一事实。]"
+        "evidence": "[Personal-context passages omitted; the observed influence of account context is retained.]"
       },
       {
         "run_id": "C-Q3-R2-A3",
-        "evidence": "[个人上下文片段已省略；保留观察到账号上下文影响这一事实。]"
+        "evidence": "[Personal-context passages omitted; the observed influence of account context is retained.]"
       },
       {
         "run_id": "C-Q1-R1",
-        "evidence": "[个人上下文片段已省略；保留观察到账号上下文影响这一事实。]"
+        "evidence": "[Personal-context passages omitted; the observed influence of account context is retained.]"
       }
     ],
     "observed_memory_evidence": [
@@ -204,7 +204,7 @@
         "evidence": [
           {
             "kind": "cross_test_context",
-            "evidence": "来源面板包含此前实验会话与个人账号背景；具体个人内容已匿名化。不能据此归因某个推荐对象。",
+            "evidence": "The source panel included earlier experimental conversations and personal account context. Specific personal content is redacted. This does not establish that memory caused any particular recommendation.",
             "file": "data/publication-notes.json"
           }
         ]
@@ -447,7 +447,7 @@
         ],
         "condition_comparison": {
           "status": "same_observed",
-          "label": "已记录界面条件一致；后端条件未经独立核实",
+          "label": "Recorded UI conditions match; backend conditions were not independently verified",
           "differences": [],
           "unknown_fields": [],
           "runs": [
@@ -461,12 +461,12 @@
               "date_basis": "date_local",
               "date_from_submit": "2026-10-29",
               "date_conflict": false,
-              "model_label": "GPT-6（界面选择标签）",
+              "model_label": "GPT-6 (UI selection label)",
               "model_comparison": "GPT-6",
               "reasoning_effort": "Medium",
               "effort_basis": "mode_label",
-              "mode_label": "网页搜索 · Medium",
-              "mode_comparison": "网页搜索"
+              "mode_label": "Web Search \u00b7 Medium",
+              "mode_comparison": "Web Search"
             },
             {
               "run_id": "C-Q1-R2-A3",
@@ -478,12 +478,12 @@
               "date_basis": "date_local",
               "date_from_submit": "2026-10-29",
               "date_conflict": false,
-              "model_label": "GPT-6（界面选择标签）",
+              "model_label": "GPT-6 (UI selection label)",
               "model_comparison": "GPT-6",
               "reasoning_effort": "Medium",
               "effort_basis": "mode_label",
-              "mode_label": "网页搜索 · Medium",
-              "mode_comparison": "网页搜索"
+              "mode_label": "Web Search \u00b7 Medium",
+              "mode_comparison": "Web Search"
             }
           ]
         }
@@ -499,12 +499,12 @@
           "date_basis": "date_local",
           "date_from_submit": "2026-10-29",
           "date_conflict": false,
-          "model_label": "GPT-6（界面选择标签）",
+          "model_label": "GPT-6 (UI selection label)",
           "model_comparison": "GPT-6",
           "reasoning_effort": "Medium",
           "effort_basis": "mode_label",
-          "mode_label": "网页搜索 · Medium",
-          "mode_comparison": "网页搜索"
+          "mode_label": "Web Search \u00b7 Medium",
+          "mode_comparison": "Web Search"
         },
         {
           "run_id": "C-Q1-R2-A3",
@@ -516,12 +516,12 @@
           "date_basis": "date_local",
           "date_from_submit": "2026-10-29",
           "date_conflict": false,
-          "model_label": "GPT-6（界面选择标签）",
+          "model_label": "GPT-6 (UI selection label)",
           "model_comparison": "GPT-6",
           "reasoning_effort": "Medium",
           "effort_basis": "mode_label",
-          "mode_label": "网页搜索 · Medium",
-          "mode_comparison": "网页搜索"
+          "mode_label": "Web Search \u00b7 Medium",
+          "mode_comparison": "Web Search"
         }
       ]
     },
@@ -762,11 +762,11 @@
         ],
         "condition_comparison": {
           "status": "not_fully_observable",
-          "label": "条件信息不全，仅描述性比较",
+          "label": "Incomplete condition information; descriptive comparison only",
           "differences": [],
           "unknown_fields": [
-            "模型标签",
-            "思考强度"
+            "Model label",
+            "Reasoning effort"
           ],
           "runs": [
             {
@@ -957,11 +957,11 @@
         ],
         "condition_comparison": {
           "status": "different",
-          "label": "条件不同，仅描述性比较",
+          "label": "Different conditions; descriptive comparison only",
           "differences": [
             {
               "field": "test_date",
-              "label": "测试日期",
+              "label": "Test date",
               "first": "2026-10-29",
               "second": "2026-10-30"
             }
@@ -978,12 +978,12 @@
               "date_basis": "date_local",
               "date_from_submit": "2026-10-29",
               "date_conflict": false,
-              "model_label": "GPT-6（界面选择标签）",
+              "model_label": "GPT-6 (UI selection label)",
               "model_comparison": "GPT-6",
               "reasoning_effort": "Medium",
               "effort_basis": "mode_label",
-              "mode_label": "网页搜索 · Medium",
-              "mode_comparison": "网页搜索"
+              "mode_label": "Web Search \u00b7 Medium",
+              "mode_comparison": "Web Search"
             },
             {
               "run_id": "C-Q2-R2-A3",
@@ -995,12 +995,12 @@
               "date_basis": "date_local",
               "date_from_submit": "2026-10-30",
               "date_conflict": false,
-              "model_label": "GPT-6（界面选择标签）",
+              "model_label": "GPT-6 (UI selection label)",
               "model_comparison": "GPT-6",
               "reasoning_effort": "Medium",
               "effort_basis": "mode_label",
-              "mode_label": "网页搜索 · Medium",
-              "mode_comparison": "网页搜索"
+              "mode_label": "Web Search \u00b7 Medium",
+              "mode_comparison": "Web Search"
             }
           ]
         }
@@ -1016,12 +1016,12 @@
           "date_basis": "date_local",
           "date_from_submit": "2026-10-29",
           "date_conflict": false,
-          "model_label": "GPT-6（界面选择标签）",
+          "model_label": "GPT-6 (UI selection label)",
           "model_comparison": "GPT-6",
           "reasoning_effort": "Medium",
           "effort_basis": "mode_label",
-          "mode_label": "网页搜索 · Medium",
-          "mode_comparison": "网页搜索"
+          "mode_label": "Web Search \u00b7 Medium",
+          "mode_comparison": "Web Search"
         },
         {
           "run_id": "C-Q2-R2-A3",
@@ -1033,12 +1033,12 @@
           "date_basis": "date_local",
           "date_from_submit": "2026-10-30",
           "date_conflict": false,
-          "model_label": "GPT-6（界面选择标签）",
+          "model_label": "GPT-6 (UI selection label)",
           "model_comparison": "GPT-6",
           "reasoning_effort": "Medium",
           "effort_basis": "mode_label",
-          "mode_label": "网页搜索 · Medium",
-          "mode_comparison": "网页搜索"
+          "mode_label": "Web Search \u00b7 Medium",
+          "mode_comparison": "Web Search"
         }
       ]
     },
@@ -1135,11 +1135,11 @@
         ],
         "condition_comparison": {
           "status": "not_fully_observable",
-          "label": "条件信息不全，仅描述性比较",
+          "label": "Incomplete condition information; descriptive comparison only",
           "differences": [],
           "unknown_fields": [
-            "模型标签",
-            "思考强度"
+            "Model label",
+            "Reasoning effort"
           ],
           "runs": [
             {
@@ -1333,17 +1333,17 @@
         ],
         "condition_comparison": {
           "status": "different",
-          "label": "条件不同，仅描述性比较",
+          "label": "Different conditions; descriptive comparison only",
           "differences": [
             {
               "field": "test_date",
-              "label": "测试日期",
+              "label": "Test date",
               "first": "2026-10-29",
               "second": "2026-10-30"
             },
             {
               "field": "reasoning_effort",
-              "label": "思考强度",
+              "label": "Reasoning effort",
               "first": "Extra High",
               "second": "Medium"
             }
@@ -1360,12 +1360,12 @@
               "date_basis": "date_local",
               "date_from_submit": "2026-10-29",
               "date_conflict": false,
-              "model_label": "GPT-6（界面选择标签）",
+              "model_label": "GPT-6 (UI selection label)",
               "model_comparison": "GPT-6",
               "reasoning_effort": "Extra High",
               "effort_basis": "mode_label",
-              "mode_label": "网页搜索 · Extra High",
-              "mode_comparison": "网页搜索"
+              "mode_label": "Web Search \u00b7 Extra High",
+              "mode_comparison": "Web Search"
             },
             {
               "run_id": "C-Q3-R2-A3",
@@ -1377,12 +1377,12 @@
               "date_basis": "date_local",
               "date_from_submit": "2026-10-30",
               "date_conflict": false,
-              "model_label": "GPT-6（界面选择标签）",
+              "model_label": "GPT-6 (UI selection label)",
               "model_comparison": "GPT-6",
               "reasoning_effort": "Medium",
               "effort_basis": "mode_label",
-              "mode_label": "网页搜索 · Medium",
-              "mode_comparison": "网页搜索"
+              "mode_label": "Web Search \u00b7 Medium",
+              "mode_comparison": "Web Search"
             }
           ]
         }
@@ -1398,12 +1398,12 @@
           "date_basis": "date_local",
           "date_from_submit": "2026-10-29",
           "date_conflict": false,
-          "model_label": "GPT-6（界面选择标签）",
+          "model_label": "GPT-6 (UI selection label)",
           "model_comparison": "GPT-6",
           "reasoning_effort": "Extra High",
           "effort_basis": "mode_label",
-          "mode_label": "网页搜索 · Extra High",
-          "mode_comparison": "网页搜索"
+          "mode_label": "Web Search \u00b7 Extra High",
+          "mode_comparison": "Web Search"
         },
         {
           "run_id": "C-Q3-R2-A3",
@@ -1415,12 +1415,12 @@
           "date_basis": "date_local",
           "date_from_submit": "2026-10-30",
           "date_conflict": false,
-          "model_label": "GPT-6（界面选择标签）",
+          "model_label": "GPT-6 (UI selection label)",
           "model_comparison": "GPT-6",
           "reasoning_effort": "Medium",
           "effort_basis": "mode_label",
-          "mode_label": "网页搜索 · Medium",
-          "mode_comparison": "网页搜索"
+          "mode_label": "Web Search \u00b7 Medium",
+          "mode_comparison": "Web Search"
         }
       ]
     },
@@ -1510,11 +1510,11 @@
         ],
         "condition_comparison": {
           "status": "not_fully_observable",
-          "label": "条件信息不全，仅描述性比较",
+          "label": "Incomplete condition information; descriptive comparison only",
           "differences": [],
           "unknown_fields": [
-            "模型标签",
-            "思考强度"
+            "Model label",
+            "Reasoning effort"
           ],
           "runs": [
             {

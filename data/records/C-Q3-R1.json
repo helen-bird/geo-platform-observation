@@ -7,18 +7,18 @@
   "started_at": "2026-10-29T09:43:12.112Z",
   "finished_at": "2026-10-29T10:18:52.358Z",
   "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
-  "submitted_prompt": "@网页搜索 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_prompt": "@\u7f51\u9875\u641c\u7d22 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
   "observed_submitted_prompt": null,
   "normalized_submitted_prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
   "submitted_prompt_provenance": "inferred_from_recorded_prompt_and_mode",
-  "mode_label": "网页搜索 · Extra High",
-  "model_label": "GPT-6（界面选择标签）",
-  "model_evidence": "初始模型菜单显示GPT-6，全部测试保持Extra High/极高；底层版本未披露",
+  "mode_label": "Web Search \u00b7 Extra High",
+  "model_label": "GPT-6 (UI selection label)",
+  "model_evidence": "The initial model menu showed GPT-6; the original note states that all tests retained Extra High reasoning effort. The backend version was not disclosed.",
   "search_status": "observed",
-  "search_evidence": "已搜索 29 个网站",
+  "search_evidence": "The UI reported 29 websites searched.",
   "status": "completed",
-  "answer_text": "For an independent builder, I would prioritize GEO (Generative Engine Optimization) resources that teach you to establish a baseline, run a small experiment, measure AI mentions and citations, and decide what to change next. Free worksheets and reproducible research are more useful than generic lists of ranking tips.\n\nMy strongest starting points are Aleyda Solís for practical workflows, Ahrefs for structured tutorials and large-scale data, and MLforSEO for an evidence-labeled checklist. Seer Interactive and Search Engine Land are useful when you want to learn how practitioners test specific GEO hypotheses.\n\n1. Best publishers to learn from\n1. Aleyda Solís\nBest for independent builders\nFree worksheets\n\nWhat she publishes: AI Search Optimization Checklist, prompt-library workbook, and frameworks for measuring AI presence, diagnosing gaps, and connecting visibility to business impact.\n\nWhy it stands out: Her September 2026 checklist lays out a workflow from choosing important customer journeys to measuring whether optimization works. Her prompt-library tutorial explains how to create a representative set of prompts and turn observations into actions. Both are tool-agnostic. \naleydasolis.com\n+1\n\nBest use: Build your first GEO measurement spreadsheet and a repeatable monthly testing routine.\n\n2. Ahrefs\nBest structured learning path\nFree guides\n\nWhat it publishes: An eight-chapter Answer Engine Optimization guide, covering how AI answers work, visibility measurement, prompt selection, content optimization, brand mentions, technical accessibility, and inaccurate AI answers.\n\nWhy it stands out: Ahrefs says the guide draws on its own data from millions of prompts and responses. Its 75,000-brand visibility study examines relationships between AI mentions and signals such as YouTube mentions, web mentions, and domain authority. The study explicitly warns that correlation does not establish causation. \nAhrefs\n+1\n\nBest use: Learn the end-to-end workflow, then use its research to formulate hypotheses for your own account or website. You can start with the free educational content without committing to a paid tool.\n\n3. MLforSEO\nBest implementation checklist\nFree Google Sheets\n\nWhat it publishes: Lazarina Stoy's 44-check GEO checklist, covering crawler access, indexing, entity clarity, content extractability, evidence, and measurement.\n\nWhy it stands out: Each check includes an evidence label distinguishing platform-documented guidance, research-backed findings, practitioner practice, and unconfirmed claims. The resource includes a prompt tracker, progress dashboard, and links to supporting articles and official documentation. \nMLforSEO\n\nBest use: Audit a small website or landing page without buying a GEO analytics subscription. It also helps prevent unverified SEO folklore from becoming part of your workflow.\n\n4. Seer Interactive\nOriginal experiments\nLarge datasets\n\nWhat it publishes: Original GEO experiments and AI search studies, including its 2024 generative-search optimization study.\n\nWhy it stands out: The study benchmarked more than 10,000 search terms and reported improvements from particular content interventions, while finding that keyword stuffing and authoritative-sounding language did not significantly help. Its newer GEO research hub includes further experiments and guidance on assessing questionable claims of rapid visibility gains. \nseerinteractive.com\n+1\n\nBest use: Learn to formulate controlled tests and evaluate effect sizes. Treat individual findings as conditional on their experimental setup, particularly when applying older research to today's AI systems.\n\n5. Search Engine Land\nHands-on experiments\nActionable case studies\n\nWhat it publishes: Practitioner articles such as “3 GEO experiments you should try this year” and “Two GEO experiments challenge conventional AI visibility advice”.\n\nWhy it stands out: These articles show how to test content formats, investigate brand representation, identify sources AI systems cite, and monitor whether placements continue to appear. A 2026 case study reports that approximately half of some sources stopped being cited within 30 days, illustrating why repeated measurement matters. \nSearch Engine Land\n+1\n\nBest use: Find a concrete experiment to replicate each week. Check sample size, measurement window, and whether the author can distinguish an observed change from a causal effect.\n\n6. Peec AI\n\nBest for continuously discovering new GEO hypotheses.\n\nIts research blog publishes studies on citation sources, prompt tracking, query fan-outs, and content optimization. One study analyzed 5.7 million data points from nearly 200,000 AI responses across eight engines. (Peec AI) \nPeec AI\n+1\n\nLimitation: Peec sells AI visibility analytics, so its research is commercially motivated. Use it to identify experiments worth running, and inspect the underlying methodology before accepting a claimed effect.\n\n7. Kevin Indig\n\nBest for research synthesis and strategic reasoning.\n\nHis Growth Memo examines organic growth, AI search, and the evidence behind optimization strategies. Examples include a comparison of ten AI Mode studies and research on how much AI responses can be influenced. Some deeper articles require a paid subscription. \ngrowth-memo.com\n+2\n\nBest use: Understand why a tactic might work, where the evidence is weak, and how to prioritize experiments rather than following every new GEO trend.\n\n8. Canlah AI\nOpen-data playbook\nReusable under CC BY 4.0\n\nBest for learning from a small, inspectable dataset.\n\nIts free GEO Playbook documents an experiment using 110 Singapore buyer questions, 141 ChatGPT answers, and 917 citation records. The data is published openly, and the playbook is licensed under Creative Commons Attribution 4.0. \nCanlah AI\n\nLimitation: The initial dataset is a snapshot from September 23, 2026, with a Singapore focus. It is useful for learning to inspect citations and reproduce analyses, but it cannot establish universal GEO rules.\n\n2. Which sources should you prioritize?\n\nFor a solo creator or independent builder, I would use this reading order:\n\nPriority\n\n\t\n\nSource\n\n\t\n\nMain purpose\n\n\n\n\n1\n\n\t\n\nAleyda Solís\n\n\t\n\nBuild a measurement framework and experiment workflow\n\n\n\n\n2\n\n\t\n\nMLforSEO\n\n\t\n\nTurn GEO into an actionable checklist and tracker\n\n\n\n\n3\n\n\t\n\nAhrefs\n\n\t\n\nLearn the fundamentals and study large-scale data\n\n\n\n\n4\n\n\t\n\nSearch Engine Land\n\n\t\n\nFind practical experiments to replicate\n\n\n\n\n5\n\n\t\n\nPeec AI\n\n\t\n\nDiscover new research and hypotheses\n\n\n\n\n6\n\n\t\n\nKevin Indig\n\n\t\n\nCritically evaluate the evidence and strategy\n\n\n\n\n7\n\n\t\n\nCanlah AI\n\n\t\n\nInspect and reuse a small open dataset\n\n3. An important qualification about GEO evidence\n\nA tutorial can be data-backed without proving that its recommended tactic reliably causes more AI mentions.\n\nTwo findings illustrate the distinction:\n\nA study reported by Axios on October 28, 2026, found that repeated ChatGPT queries on the same day shared only 41% of cited domains. A single before-and-after observation can therefore be misleading. \nAxios\n\nA 2026 research survey covering 45 GEO studies concluded that evidence for stable, long-term, cross-platform causal improvements in organic discoverability remains limited. \narXiv\n\nWhen evaluating any tutorial, look for four things: a defined baseline, a repeatable protocol, an appropriate comparison or control, and results measured across multiple runs. Treat large correlation studies as evidence for hypotheses, not proof that a specific intervention will work for your account.\n\n4. The best fit for your current learning direction\n\n[Personal context omitted.] I would start with Aleyda Solís + Ahrefs + Search Engine Land.\n\nUse Aleyda's workflow to define a small set of questions relevant to the audience you want to reach. Use Ahrefs and Peec AI to generate hypotheses, then use Search Engine Land's experiments as examples of how to test them.\n\n[Personal-context passage omitted from the public copy.]\n\n[Personal-context passage omitted from the public copy.]",
-  "notes": "同一原始会话的分享对话框预览中读取完整正文（8548字符）和13条明确正文链接；只打开预览，未创建公开分享。\n旧页面加载故障、旧read_thread导出及其注释完整保留；此次恢复不增加提问次数。\n来源面板另存97项网页检索来源；这些来源不能全部视为正文引用。",
+  "answer_text": "For an independent builder, I would prioritize GEO (Generative Engine Optimization) resources that teach you to establish a baseline, run a small experiment, measure AI mentions and citations, and decide what to change next. Free worksheets and reproducible research are more useful than generic lists of ranking tips.\n\nMy strongest starting points are Aleyda Sol\u00eds for practical workflows, Ahrefs for structured tutorials and large-scale data, and MLforSEO for an evidence-labeled checklist. Seer Interactive and Search Engine Land are useful when you want to learn how practitioners test specific GEO hypotheses.\n\n1. Best publishers to learn from\n1. Aleyda Sol\u00eds\nBest for independent builders\nFree worksheets\n\nWhat she publishes: AI Search Optimization Checklist, prompt-library workbook, and frameworks for measuring AI presence, diagnosing gaps, and connecting visibility to business impact.\n\nWhy it stands out: Her September 2026 checklist lays out a workflow from choosing important customer journeys to measuring whether optimization works. Her prompt-library tutorial explains how to create a representative set of prompts and turn observations into actions. Both are tool-agnostic. \naleydasolis.com\n+1\n\nBest use: Build your first GEO measurement spreadsheet and a repeatable monthly testing routine.\n\n2. Ahrefs\nBest structured learning path\nFree guides\n\nWhat it publishes: An eight-chapter Answer Engine Optimization guide, covering how AI answers work, visibility measurement, prompt selection, content optimization, brand mentions, technical accessibility, and inaccurate AI answers.\n\nWhy it stands out: Ahrefs says the guide draws on its own data from millions of prompts and responses. Its 75,000-brand visibility study examines relationships between AI mentions and signals such as YouTube mentions, web mentions, and domain authority. The study explicitly warns that correlation does not establish causation. \nAhrefs\n+1\n\nBest use: Learn the end-to-end workflow, then use its research to formulate hypotheses for your own account or website. You can start with the free educational content without committing to a paid tool.\n\n3. MLforSEO\nBest implementation checklist\nFree Google Sheets\n\nWhat it publishes: Lazarina Stoy's 44-check GEO checklist, covering crawler access, indexing, entity clarity, content extractability, evidence, and measurement.\n\nWhy it stands out: Each check includes an evidence label distinguishing platform-documented guidance, research-backed findings, practitioner practice, and unconfirmed claims. The resource includes a prompt tracker, progress dashboard, and links to supporting articles and official documentation. \nMLforSEO\n\nBest use: Audit a small website or landing page without buying a GEO analytics subscription. It also helps prevent unverified SEO folklore from becoming part of your workflow.\n\n4. Seer Interactive\nOriginal experiments\nLarge datasets\n\nWhat it publishes: Original GEO experiments and AI search studies, including its 2024 generative-search optimization study.\n\nWhy it stands out: The study benchmarked more than 10,000 search terms and reported improvements from particular content interventions, while finding that keyword stuffing and authoritative-sounding language did not significantly help. Its newer GEO research hub includes further experiments and guidance on assessing questionable claims of rapid visibility gains. \nseerinteractive.com\n+1\n\nBest use: Learn to formulate controlled tests and evaluate effect sizes. Treat individual findings as conditional on their experimental setup, particularly when applying older research to today's AI systems.\n\n5. Search Engine Land\nHands-on experiments\nActionable case studies\n\nWhat it publishes: Practitioner articles such as \u201c3 GEO experiments you should try this year\u201d and \u201cTwo GEO experiments challenge conventional AI visibility advice\u201d.\n\nWhy it stands out: These articles show how to test content formats, investigate brand representation, identify sources AI systems cite, and monitor whether placements continue to appear. A 2026 case study reports that approximately half of some sources stopped being cited within 30 days, illustrating why repeated measurement matters. \nSearch Engine Land\n+1\n\nBest use: Find a concrete experiment to replicate each week. Check sample size, measurement window, and whether the author can distinguish an observed change from a causal effect.\n\n6. Peec AI\n\nBest for continuously discovering new GEO hypotheses.\n\nIts research blog publishes studies on citation sources, prompt tracking, query fan-outs, and content optimization. One study analyzed 5.7 million data points from nearly 200,000 AI responses across eight engines. (Peec AI) \nPeec AI\n+1\n\nLimitation: Peec sells AI visibility analytics, so its research is commercially motivated. Use it to identify experiments worth running, and inspect the underlying methodology before accepting a claimed effect.\n\n7. Kevin Indig\n\nBest for research synthesis and strategic reasoning.\n\nHis Growth Memo examines organic growth, AI search, and the evidence behind optimization strategies. Examples include a comparison of ten AI Mode studies and research on how much AI responses can be influenced. Some deeper articles require a paid subscription. \ngrowth-memo.com\n+2\n\nBest use: Understand why a tactic might work, where the evidence is weak, and how to prioritize experiments rather than following every new GEO trend.\n\n8. Canlah AI\nOpen-data playbook\nReusable under CC BY 4.0\n\nBest for learning from a small, inspectable dataset.\n\nIts free GEO Playbook documents an experiment using 110 Singapore buyer questions, 141 ChatGPT answers, and 917 citation records. The data is published openly, and the playbook is licensed under Creative Commons Attribution 4.0. \nCanlah AI\n\nLimitation: The initial dataset is a snapshot from September 23, 2026, with a Singapore focus. It is useful for learning to inspect citations and reproduce analyses, but it cannot establish universal GEO rules.\n\n2. Which sources should you prioritize?\n\nFor a solo creator or independent builder, I would use this reading order:\n\nPriority\n\n\t\n\nSource\n\n\t\n\nMain purpose\n\n\n\n\n1\n\n\t\n\nAleyda Sol\u00eds\n\n\t\n\nBuild a measurement framework and experiment workflow\n\n\n\n\n2\n\n\t\n\nMLforSEO\n\n\t\n\nTurn GEO into an actionable checklist and tracker\n\n\n\n\n3\n\n\t\n\nAhrefs\n\n\t\n\nLearn the fundamentals and study large-scale data\n\n\n\n\n4\n\n\t\n\nSearch Engine Land\n\n\t\n\nFind practical experiments to replicate\n\n\n\n\n5\n\n\t\n\nPeec AI\n\n\t\n\nDiscover new research and hypotheses\n\n\n\n\n6\n\n\t\n\nKevin Indig\n\n\t\n\nCritically evaluate the evidence and strategy\n\n\n\n\n7\n\n\t\n\nCanlah AI\n\n\t\n\nInspect and reuse a small open dataset\n\n3. An important qualification about GEO evidence\n\nA tutorial can be data-backed without proving that its recommended tactic reliably causes more AI mentions.\n\nTwo findings illustrate the distinction:\n\nA study reported by Axios on October 28, 2026, found that repeated ChatGPT queries on the same day shared only 41% of cited domains. A single before-and-after observation can therefore be misleading. \nAxios\n\nA 2026 research survey covering 45 GEO studies concluded that evidence for stable, long-term, cross-platform causal improvements in organic discoverability remains limited. \narXiv\n\nWhen evaluating any tutorial, look for four things: a defined baseline, a repeatable protocol, an appropriate comparison or control, and results measured across multiple runs. Treat large correlation studies as evidence for hypotheses, not proof that a specific intervention will work for your account.\n\n4. The best fit for your current learning direction\n\n[Personal context omitted.] I would start with Aleyda Sol\u00eds + Ahrefs + Search Engine Land.\n\nUse Aleyda's workflow to define a small set of questions relevant to the audience you want to reach. Use Ahrefs and Peec AI to generate hypotheses, then use Search Engine Land's experiments as examples of how to test them.\n\n[Personal-context passage omitted from the public copy.]\n\n[Personal-context passage omitted from the public copy.]",
+  "notes": "Read the complete body (8548 characters) and 13 explicit body links from the share-dialog preview of the same original conversation. Only the preview was opened; no public share was created.\nThe original page-loading failure, earlier read_thread export and annotations remain preserved. This recovery does not add a query.\nA separate 97-entry web retrieval-source list was saved from the source panel; these entries are not all body citations.",
   "capture_method": "DOM-backed share-dialog preview; no public share created",
   "citation_mapping_complete": true,
   "attempt_number": 1,
@@ -73,13 +73,13 @@
     },
     {
       "url": "https://searchengineland.com/3-geo-experiments-you-should-try-this-year",
-      "title": "“3 GEO experiments you should try this year”",
+      "title": "\u201c3 GEO experiments you should try this year\u201d",
       "domain": "searchengineland.com",
       "kind": "answer_link"
     },
     {
       "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
-      "title": "“Two GEO experiments challenge conventional AI visibility advice”",
+      "title": "\u201cTwo GEO experiments challenge conventional AI visibility advice\u201d",
       "domain": "searchengineland.com",
       "kind": "answer_link"
     },
@@ -153,7 +153,8 @@
     },
     {
       "url": "https://ahrefs.com/blog/ai-brand-visibility-correlations/",
-      "title": "AhrefsTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied)2025年12月12日",
+      "title": "AhrefsTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied)2025\u5e7412\u670812\u65e5",
+      "title_en": "AhrefsTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied) 2025-12-12",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
@@ -201,13 +202,13 @@
     },
     {
       "url": "https://www.growth-memo.com/p/the-impact-of-ai-mode-on-seo-analysis",
-      "title": "growth-memo.comThe impact of AI Mode on SEO -analysis of 10 studies20 Oct 2025 — We looked for commonalities and differences across 10 AI Mode studies - here's what we found.",
+      "title": "growth-memo.comThe impact of AI Mode on SEO -analysis of 10 studies20 Oct 2025 \u2014 We looked for commonalities and differences across 10 AI Mode studies - here's what we found.",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/how-much-can-we-influence-ai-responses",
-      "title": "by Kevin IndigHow much can we influence AI responses?12 Jan 2026 — The authors built the “E- GEO Testbed,” a dataset and evaluation framework that pairs over 7,000 real product queries (sourced from Reddit) with ... Read more",
+      "title": "by Kevin IndigHow much can we influence AI responses?12 Jan 2026 \u2014 The authors built the \u201cE- GEO Testbed,\u201d a dataset and evaluation framework that pairs over 7,000 real product queries (sourced from Reddit) with ... Read more",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
@@ -225,283 +226,324 @@
     },
     {
       "url": "https://www.axios.com/2026/10/28/ai-citation-source-geo",
-      "title": "AxiosGEO starts with the question, not the answer今天 — A new Muck Rack and Generative Pulse study suggests companies should begin generative engine optimization (GEO) by understanding what their audiences ask, rather than simply trying to secure AI citat…",
+      "title": "AxiosGEO starts with the question, not the answer\u4eca\u5929 \u2014 A new Muck Rack and Generative Pulse study suggests companies should begin generative engine optimization (GEO) by understanding what their audiences ask, rather than simply trying to secure AI citat\u2026",
+      "title_en": "AxiosGEO starts with the question, not the answerToday (as shown at capture) \u2014 A new Muck Rack and Generative Pulse study suggests companies should begin generative engine optimization (GEO) by understanding what their audiences ask, rather than simply trying to secure AI citat\u2026",
       "domain": "www.axios.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://arxiv.org/abs/2607.14035",
-      "title": "arXivOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)2026年7月16日",
+      "title": "arXivOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)2026\u5e747\u670816\u65e5",
+      "title_en": "arXivOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026) 2026-07-16",
       "domain": "arxiv.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.axios.com/2026/10/28/ai-citation-source-geo",
-      "title": "www.axios.comGEO starts with the question, not the answer今天 — A new Muck Rack and Generative Pulse study suggests companies should begin generative engine optimization (GEO) by understanding what their audiences ask, rather than simply trying to secure AI citations. Researchers tested 1,020 mostly general consumer prompts across ChatGPT, Claude, Gemini and Perplexity, finding that cited sources varied substantially by question and platform. The results challenge the idea that news coverage is always the most reliable path to AI visibility. Citation patterns were also inconsistent over time: when researchers repeated the same questions on ChatGPT on the same day, only 41% of cited domains overlapped, making isolated tests a poor measure of success. The study combined prompt testing with broader monitoring of mostly brand-related queries, covering more than 40 million responses. Its central takeaway is that GEO is unpredictable and continually changing. Communications teams should prioritize the information their audiences seek and assess visibility across relevant questions and platforms, rather than investing in content solely because they hope a particular AI system will cite it.",
+      "title": "www.axios.comGEO starts with the question, not the answer\u4eca\u5929 \u2014 A new Muck Rack and Generative Pulse study suggests companies should begin generative engine optimization (GEO) by understanding what their audiences ask, rather than simply trying to secure AI citations. Researchers tested 1,020 mostly general consumer prompts across ChatGPT, Claude, Gemini and Perplexity, finding that cited sources varied substantially by question and platform. The results challenge the idea that news coverage is always the most reliable path to AI visibility. Citation patterns were also inconsistent over time: when researchers repeated the same questions on ChatGPT on the same day, only 41% of cited domains overlapped, making isolated tests a poor measure of success. The study combined prompt testing with broader monitoring of mostly brand-related queries, covering more than 40 million responses. Its central takeaway is that GEO is unpredictable and continually changing. Communications teams should prioritize the information their audiences seek and assess visibility across relevant questions and platforms, rather than investing in content solely because they hope a particular AI system will cite it.",
+      "title_en": "www.axios.comGEO starts with the question, not the answerToday (as shown at capture) \u2014 A new Muck Rack and Generative Pulse study suggests companies should begin generative engine optimization (GEO) by understanding what their audiences ask, rather than simply trying to secure AI citations. Researchers tested 1,020 mostly general consumer prompts across ChatGPT, Claude, Gemini and Perplexity, finding that cited sources varied substantially by question and platform. The results challenge the idea that news coverage is always the most reliable path to AI visibility. Citation patterns were also inconsistent over time: when researchers repeated the same questions on ChatGPT on the same day, only 41% of cited domains overlapped, making isolated tests a poor measure of success. The study combined prompt testing with broader monitoring of mostly brand-related queries, covering more than 40 million responses. Its central takeaway is that GEO is unpredictable and continually changing. Communications teams should prioritize the information their audiences seek and assess visibility across relevant questions and platforms, rather than investing in content solely because they hope a particular AI system will cite it.",
       "domain": "www.axios.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.mlforseo.com/machine-learning-implementation-guides/ai-search-optimisation/geo-checklist/",
-      "title": "www.mlforseo.comGEO Checklist: 44 Generative Engine Optimisation Checks2026年10月24日",
+      "title": "www.mlforseo.comGEO Checklist: 44 Generative Engine Optimisation Checks2026\u5e7410\u670824\u65e5",
+      "title_en": "www.mlforseo.comGEO Checklist: 44 Generative Engine Optimisation Checks 2026-10-24",
       "domain": "www.mlforseo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://arxiv.org/abs/2610.15033",
-      "title": "arxiv.orgWhat Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization (GEO)2026年10月11日",
+      "title": "arxiv.orgWhat Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization (GEO)2026\u5e7410\u670811\u65e5",
+      "title_en": "arxiv.orgWhat Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization (GEO) 2026-10-11",
       "domain": "arxiv.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://canlah.ai/playbook",
-      "title": "canlah.aiFree GEO Playbook: How to Get Cited in AI Answers | Canlah AI2026年9月29日 — Total lines: 546\n",
+      "title": "canlah.aiFree GEO Playbook: How to Get Cited in AI Answers | Canlah AI2026\u5e749\u670829\u65e5 \u2014 Total lines: 546\n",
+      "title_en": "canlah.aiFree GEO Playbook: How to Get Cited in AI Answers | Canlah AI 2026-09-29 \u2014 Total lines: 546",
       "domain": "canlah.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
-      "title": "www.aleydasolis.comThe AI Search Optimization Checklist [Updated Sep 2026]2026年9月26日 — 26 Sept 2026 — The focus of this AI Search optimization checklist is to cover important journeys, show and give your business the information needed, and ... Read more",
+      "title": "www.aleydasolis.comThe AI Search Optimization Checklist [Updated Sep 2026]2026\u5e749\u670826\u65e5 \u2014 26 Sept 2026 \u2014 The focus of this AI Search optimization checklist is to cover important journeys, show and give your business the information needed, and\u00a0... Read more",
+      "title_en": "www.aleydasolis.comThe AI Search Optimization Checklist [Updated Sep 2026] 2026-09-26 \u2014 26 Sept 2026 \u2014 The focus of this AI Search optimization checklist is to cover important journeys, show and give your business the information needed, and\u00a0... Read more",
       "domain": "www.aleydasolis.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
-      "title": "searchengineland.comTwo GEO experiments challenge conventional AI visibility ...2026年9月14日 — 14 Sept 2026 — The data points to a different playbook for AI visibility, where the sources that mention you may matter more than the content you control.",
+      "title": "searchengineland.comTwo GEO experiments challenge conventional AI visibility ...2026\u5e749\u670814\u65e5 \u2014 14 Sept 2026 \u2014 The data points to a different playbook for AI visibility, where the sources that mention you may matter more than the content you control.",
+      "title_en": "searchengineland.comTwo GEO experiments challenge conventional AI visibility ... 2026-09-14 \u2014 14 Sept 2026 \u2014 The data points to a different playbook for AI visibility, where the sources that mention you may matter more than the content you control.",
       "domain": "searchengineland.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://help.ahrefs.com/en/articles/15501968-ai-visibility-metrics",
-      "title": "help.ahrefs.comAI Visibility Metrics | Help Center - Ahrefs2026年9月3日",
+      "title": "help.ahrefs.comAI Visibility Metrics | Help Center - Ahrefs2026\u5e749\u67083\u65e5",
+      "title_en": "help.ahrefs.comAI Visibility Metrics | Help Center - Ahrefs 2026-09-03",
       "domain": "help.ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.aleydasolis.com/en/ai-search/a-3-layer-framework-to-measure-ai-presence-readiness-and-business-impact-redefining-metrics-for-the-ai-search-era/",
-      "title": "www.aleydasolis.comA 3 Layer Framework to Measure AI Search Presence ...2026年8月26日 — I've published a fuller AI Search Readiness Checklist covering each characteristic, why it matters, how to verify it, and which tools can help assess it.",
+      "title": "www.aleydasolis.comA 3 Layer Framework to Measure AI Search Presence ...2026\u5e748\u670826\u65e5 \u2014 I've published a fuller AI Search Readiness Checklist covering each characteristic, why it matters, how to verify it, and which tools can help assess it.",
+      "title_en": "www.aleydasolis.comA 3 Layer Framework to Measure AI Search Presence ... 2026-08-26 \u2014 I've published a fuller AI Search Readiness Checklist covering each characteristic, why it matters, how to verify it, and which tools can help assess it.",
       "domain": "www.aleydasolis.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://open.spotify.com/episode/1w767RVZoYwnqONzVLlgml",
-      "title": "open.spotify.comTechnical Optimization for AI Search (GEO, AEO)2026年8月23日 — Aleyda Solis , she goes through the principles, top mistakes, best resources and do's and dont's for technical optimization for AI search",
+      "title": "open.spotify.comTechnical Optimization for AI Search (GEO, AEO)2026\u5e748\u670823\u65e5 \u2014 Aleyda Solis , she goes through the principles, top mistakes, best resources and do's and dont's for technical optimization for AI search",
+      "title_en": "open.spotify.comTechnical Optimization for AI Search (GEO, AEO) 2026-08-23 \u2014 Aleyda Solis , she goes through the principles, top mistakes, best resources and do's and dont's for technical optimization for AI search",
       "domain": "open.spotify.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://arxiv.org/abs/2608.16824",
-      "title": "arxiv.orgGEO-Flag: Detecting and Measuring GEO-Optimized Web Content2026年8月18日",
+      "title": "arxiv.orgGEO-Flag: Detecting and Measuring GEO-Optimized Web Content2026\u5e748\u670818\u65e5",
+      "title_en": "arxiv.orgGEO-Flag: Detecting and Measuring GEO-Optimized Web Content 2026-08-18",
       "domain": "arxiv.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://alstonantony.com/resources/ai-search-optimization/",
-      "title": "alstonantony.comAI SEO Optimization Checklist: Free XLSX & PDF (AEO/GEO)2026年8月9日",
+      "title": "alstonantony.comAI SEO Optimization Checklist: Free XLSX & PDF (AEO/GEO)2026\u5e748\u67089\u65e5",
+      "title_en": "alstonantony.comAI SEO Optimization Checklist: Free XLSX & PDF (AEO/GEO) 2026-08-09",
       "domain": "alstonantony.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.aleydasolis.com/en/ai-search/saas-ai-search-optimization/",
-      "title": "www.aleydasolis.comWhat It Takes for SaaS Brands to Win in AI Search: 5 Data- ...2026年7月16日 — 16 Jul 2026 — AI Search A 3 Layer Framework to Measure AI Search Presence, Readiness and Business Impact [ Workbook + Examples] The AI Search Optimization ...",
+      "title": "www.aleydasolis.comWhat It Takes for SaaS Brands to Win in AI Search: 5 Data- ...2026\u5e747\u670816\u65e5 \u2014 16 Jul 2026 \u2014 AI Search A 3 Layer Framework to Measure AI Search Presence, Readiness and Business Impact [ Workbook + Examples] The AI Search Optimization ...",
+      "title_en": "www.aleydasolis.comWhat It Takes for SaaS Brands to Win in AI Search: 5 Data- ... 2026-07-16 \u2014 16 Jul 2026 \u2014 AI Search A 3 Layer Framework to Measure AI Search Presence, Readiness and Business Impact [ Workbook + Examples] The AI Search Optimization ...",
       "domain": "www.aleydasolis.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://maxaeo.ai/blog/peec-ai-review-2026-best-for-ai-visibility-monitoring-use-cases-limits-alternatives/",
-      "title": "maxaeo.aiPeec AI Review 2026: Pricing, Limits & Top ... - MaxAEO2026年7月16日 — 15 Jul 2026 — Peec AI is an AI search analytics platform for marketing teams . It organizes visibility around prompts, brands, competitors, models, sources, ... Read more",
+      "title": "maxaeo.aiPeec AI Review 2026: Pricing, Limits & Top ... - MaxAEO2026\u5e747\u670816\u65e5 \u2014 15 Jul 2026 \u2014 Peec AI is an AI search analytics platform for marketing teams . It organizes visibility around prompts, brands, competitors, models, sources,\u00a0... Read more",
+      "title_en": "maxaeo.aiPeec AI Review 2026: Pricing, Limits & Top ... - MaxAEO 2026-07-16 \u2014 15 Jul 2026 \u2014 Peec AI is an AI search analytics platform for marketing teams . It organizes visibility around prompts, brands, competitors, models, sources,\u00a0... Read more",
       "domain": "maxaeo.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://arxiv.org/abs/2607.14035",
-      "title": "arxiv.orgOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)2026年7月16日",
+      "title": "arxiv.orgOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)2026\u5e747\u670816\u65e5",
+      "title_en": "arxiv.orgOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026) 2026-07-16",
       "domain": "arxiv.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://okara.ai/blog/geo-checklist",
-      "title": "okara.aiGEO Checklist: A Practical AI Search Audit (Free CSV)2026年7月15日",
+      "title": "okara.aiGEO Checklist: A Practical AI Search Audit (Free CSV)2026\u5e747\u670815\u65e5",
+      "title_en": "okara.aiGEO Checklist: A Practical AI Search Audit (Free CSV) 2026-07-15",
       "domain": "okara.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.architecturaldigest.com/story/is-your-business-ready-for-the-ai-overview-era",
-      "title": "www.architecturaldigest.comIs Your Business Ready for the AI Era?2026年7月6日 — The rise of AI-powered search is transforming how clients discover architecture and design firms. With Google making AI Overviews its default search mode and generative AI adoption growing rapidly, businesses must adapt their marketing strategies to remain visible. Generative engine optimization (GEO), also called answer engine optimization (AEO), focuses on getting firms cited in AI-generated answers rather than simply ranking highly in traditional search results.\n\nMarketing agencies are responding by offering AI audits that measure brand visibility across platforms such as ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews. These assessments identify where firms appear in responses to relevant customer queries and where competitors outperform them.\n\nTo improve visibility, businesses should ensure their websites are accessible to AI crawlers, organize information clearly, use structured data, and publish factual project descriptions highlighting measurable outcomes. Credibility is equally important: earned media coverage, industry awards, and reputable third-party editorial content help establish authority. LinkedIn and Reddit can also influence AI-generated recommendations, provided engagement remains authentic.\n\nBecause GEO practices are still evolving, firms should experiment and continually refine their strategies. Practical first steps include checking website crawlability, sharing achievements on LinkedIn, pursuing press coverage, and rewriting website content to answer prospective clients' questions clearly and factually.",
+      "title": "www.architecturaldigest.comIs Your Business Ready for the AI Era?2026\u5e747\u67086\u65e5 \u2014 The rise of AI-powered search is transforming how clients discover architecture and design firms. With Google making AI Overviews its default search mode and generative AI adoption growing rapidly, businesses must adapt their marketing strategies to remain visible. Generative engine optimization (GEO), also called answer engine optimization (AEO), focuses on getting firms cited in AI-generated answers rather than simply ranking highly in traditional search results.\n\nMarketing agencies are responding by offering AI audits that measure brand visibility across platforms such as ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews. These assessments identify where firms appear in responses to relevant customer queries and where competitors outperform them.\n\nTo improve visibility, businesses should ensure their websites are accessible to AI crawlers, organize information clearly, use structured data, and publish factual project descriptions highlighting measurable outcomes. Credibility is equally important: earned media coverage, industry awards, and reputable third-party editorial content help establish authority. LinkedIn and Reddit can also influence AI-generated recommendations, provided engagement remains authentic.\n\nBecause GEO practices are still evolving, firms should experiment and continually refine their strategies. Practical first steps include checking website crawlability, sharing achievements on LinkedIn, pursuing press coverage, and rewriting website content to answer prospective clients' questions clearly and factually.",
+      "title_en": "www.architecturaldigest.comIs Your Business Ready for the AI Era? 2026-07-06 \u2014 The rise of AI-powered search is transforming how clients discover architecture and design firms. With Google making AI Overviews its default search mode and generative AI adoption growing rapidly, businesses must adapt their marketing strategies to remain visible. Generative engine optimization (GEO), also called answer engine optimization (AEO), focuses on getting firms cited in AI-generated answers rather than simply ranking highly in traditional search results.\n\nMarketing agencies are responding by offering AI audits that measure brand visibility across platforms such as ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews. These assessments identify where firms appear in responses to relevant customer queries and where competitors outperform them.\n\nTo improve visibility, businesses should ensure their websites are accessible to AI crawlers, organize information clearly, use structured data, and publish factual project descriptions highlighting measurable outcomes. Credibility is equally important: earned media coverage, industry awards, and reputable third-party editorial content help establish authority. LinkedIn and Reddit can also influence AI-generated recommendations, provided engagement remains authentic.\n\nBecause GEO practices are still evolving, firms should experiment and continually refine their strategies. Practical first steps include checking website crawlability, sharing achievements on LinkedIn, pursuing press coverage, and rewriting website content to answer prospective clients' questions clearly and factually.",
       "domain": "www.architecturaldigest.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.theatlantic.com/technology/2026/06/google-search-ai-optimization/687495/",
-      "title": "www.theatlantic.comYour Search Results Are Getting Sloptimized2026年6月10日 — As AI chatbots and Google’s AI search answers replace traditional links, companies are trying to optimize for recommendations—a practice dubbed “sloptimization” or generative-engine optimization. Shopify, for example, has published dozens of rankings that place its own e-commerce platform first, and similar self-promotional lists from Figma and ClickUp may influence chatbot answers. Research suggests these tactics can work because AI systems may not distinguish brand-written rankings from independent reviews. Marketers are also planting favorable mentions on Reddit, whose posts are frequently cited by chatbots even when they have few upvotes, and embedding hidden instructions in content—a practice Microsoft calls AI recommendation poisoning. Meanwhile, AI-generated answers reduce traffic to independent publishers, and recipe creators fear their work will be copied or distorted. Google says it fights manipulation and favors genuinely useful content; experts warn that spam can eventually trigger penalties. Still, businesses are likely to keep experimenting while the tactics sometimes succeed. The trend reflects a web increasingly designed for machines rather than people, with future AI agents potentially making decisions and purchases on users’ behalf.",
+      "title": "www.theatlantic.comYour Search Results Are Getting Sloptimized2026\u5e746\u670810\u65e5 \u2014 As AI chatbots and Google\u2019s AI search answers replace traditional links, companies are trying to optimize for recommendations\u2014a practice dubbed \u201csloptimization\u201d or generative-engine optimization. Shopify, for example, has published dozens of rankings that place its own e-commerce platform first, and similar self-promotional lists from Figma and ClickUp may influence chatbot answers. Research suggests these tactics can work because AI systems may not distinguish brand-written rankings from independent reviews. Marketers are also planting favorable mentions on Reddit, whose posts are frequently cited by chatbots even when they have few upvotes, and embedding hidden instructions in content\u2014a practice Microsoft calls AI recommendation poisoning. Meanwhile, AI-generated answers reduce traffic to independent publishers, and recipe creators fear their work will be copied or distorted. Google says it fights manipulation and favors genuinely useful content; experts warn that spam can eventually trigger penalties. Still, businesses are likely to keep experimenting while the tactics sometimes succeed. The trend reflects a web increasingly designed for machines rather than people, with future AI agents potentially making decisions and purchases on users\u2019 behalf.",
+      "title_en": "www.theatlantic.comYour Search Results Are Getting Sloptimized 2026-06-10 \u2014 As AI chatbots and Google\u2019s AI search answers replace traditional links, companies are trying to optimize for recommendations\u2014a practice dubbed \u201csloptimization\u201d or generative-engine optimization. Shopify, for example, has published dozens of rankings that place its own e-commerce platform first, and similar self-promotional lists from Figma and ClickUp may influence chatbot answers. Research suggests these tactics can work because AI systems may not distinguish brand-written rankings from independent reviews. Marketers are also planting favorable mentions on Reddit, whose posts are frequently cited by chatbots even when they have few upvotes, and embedding hidden instructions in content\u2014a practice Microsoft calls AI recommendation poisoning. Meanwhile, AI-generated answers reduce traffic to independent publishers, and recipe creators fear their work will be copied or distorted. Google says it fights manipulation and favors genuinely useful content; experts warn that spam can eventually trigger penalties. Still, businesses are likely to keep experimenting while the tactics sometimes succeed. The trend reflects a web increasingly designed for machines rather than people, with future AI agents potentially making decisions and purchases on users\u2019 behalf.",
       "domain": "www.theatlantic.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.aleydasolis.com/en/ai-search/ai-search-prompt-library/",
-      "title": "www.aleydasolis.comHow to Build a Representative AI Search Prompt Library for ...2026年6月8日 — 8 Jun 2026 — The AI Search Optimization Framework & Checklist – With Worksheet [Updated Sep 2026] Layer Framework to Measure AI Search Presence, Readiness ...",
+      "title": "www.aleydasolis.comHow to Build a Representative AI Search Prompt Library for ...2026\u5e746\u67088\u65e5 \u2014 8 Jun 2026 \u2014 The AI Search Optimization Framework & Checklist \u2013 With Worksheet [Updated Sep 2026] Layer Framework to Measure AI Search Presence, Readiness\u00a0...",
+      "title_en": "www.aleydasolis.comHow to Build a Representative AI Search Prompt Library for ... 2026-06-08 \u2014 8 Jun 2026 \u2014 The AI Search Optimization Framework & Checklist \u2013 With Worksheet [Updated Sep 2026] Layer Framework to Measure AI Search Presence, Readiness\u00a0...",
       "domain": "www.aleydasolis.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://seocrawl.ai/blog/generative-engine-optimization",
-      "title": "seocrawl.aiGenerative Engine Optimization (GEO): 2026 Guide2026年5月27日 — 27 May 2026 — This guide covers what GEO is, how it : mention rate, share of voice, citation rate, sentiment mix, and topic coverage, broken down by LLM and ...",
+      "title": "seocrawl.aiGenerative Engine Optimization (GEO): 2026 Guide2026\u5e745\u670827\u65e5 \u2014 27 May 2026 \u2014 This guide covers what GEO is, how it : mention rate, share of voice, citation rate, sentiment mix, and topic coverage, broken down by LLM and\u00a0...",
+      "title_en": "seocrawl.aiGenerative Engine Optimization (GEO): 2026 Guide 2026-05-27 \u2014 27 May 2026 \u2014 This guide covers what GEO is, how it : mention rate, share of voice, citation rate, sentiment mix, and topic coverage, broken down by LLM and\u00a0...",
       "domain": "seocrawl.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://searchengineland.com/geo-metrics-to-track-476642",
-      "title": "searchengineland.com8 GEO metrics to track in 20262026年5月7日 — 7 May 2026 — AI search is creating new visibility gaps for brands. These metrics help you track presence, influence, and inclusion across platforms.",
+      "title": "searchengineland.com8 GEO metrics to track in 20262026\u5e745\u67087\u65e5 \u2014 7 May 2026 \u2014 AI search is creating new visibility gaps for brands. These metrics help you track presence, influence, and inclusion across platforms.",
+      "title_en": "searchengineland.com8 GEO metrics to track in 2026 2026-05-07 \u2014 7 May 2026 \u2014 AI search is creating new visibility gaps for brands. These metrics help you track presence, influence, and inclusion across platforms.",
       "domain": "searchengineland.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/",
-      "title": "thegeocommunity.comBest GEO Resources, Courses & Tutorials [2026]2026年4月24日 — 24 Apr 2026 — The definitive guide to learning Generative Engine Optimization in 2026 — covering free resources, courses worth taking , research papers that ...",
+      "title": "thegeocommunity.comBest GEO Resources, Courses & Tutorials [2026]2026\u5e744\u670824\u65e5 \u2014 24 Apr 2026 \u2014 The definitive guide to learning Generative Engine Optimization in 2026 \u2014 covering free resources, courses worth taking , research papers that\u00a0...",
+      "title_en": "thegeocommunity.comBest GEO Resources, Courses & Tutorials [2026] 2026-04-24 \u2014 24 Apr 2026 \u2014 The definitive guide to learning Generative Engine Optimization in 2026 \u2014 covering free resources, courses worth taking , research papers that\u00a0...",
       "domain": "thegeocommunity.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ipullrank.com/ai-search-metrics",
-      "title": "ipullrank.comDesigning AI Search Metrics for the Next Era of SEO2026年3月12日 — Generative Engine Optimization ( GEO ) Relevance Engineering identifies what modern AI systems reward, like accuracy, depth, structure, and answerability, and ...",
+      "title": "ipullrank.comDesigning AI Search Metrics for the Next Era of SEO2026\u5e743\u670812\u65e5 \u2014 Generative Engine Optimization ( GEO ) Relevance Engineering identifies what modern AI systems reward, like accuracy, depth, structure, and answerability, and\u00a0...",
+      "title_en": "ipullrank.comDesigning AI Search Metrics for the Next Era of SEO 2026-03-12 \u2014 Generative Engine Optimization ( GEO ) Relevance Engineering identifies what modern AI systems reward, like accuracy, depth, structure, and answerability, and\u00a0...",
       "domain": "ipullrank.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/monitor-brand-mentions-chatgpt/",
-      "title": "ahrefs.comHow to Monitor Brand Mentions in ChatGPT2026年2月26日",
+      "title": "ahrefs.comHow to Monitor Brand Mentions in ChatGPT2026\u5e742\u670826\u65e5",
+      "title_en": "ahrefs.comHow to Monitor Brand Mentions in ChatGPT 2026-02-26",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.itpro.com/business/marketing-and-comms/will-a-generative-engine-optimization-manager-be-your-next-big-hire",
-      "title": "www.itpro.comWill a generative engine optimization manager be your next big hire?2026年2月11日 — Generative engine optimization (GEO) is emerging as a new marketing discipline as businesses adapt to consumers increasingly using AI tools such as ChatGPT and Claude to find information. Companies including Adobe, Apple, Caterpillar and Capital One have begun hiring GEO managers, strategists or specialists to improve their visibility in AI-generated answers.\n\nUnlike traditional search engine optimization (SEO), which focuses on search rankings and keywords, GEO aims to ensure that AI systems can easily understand, extract and reuse a company's information. The role builds on SEO foundations while emphasizing website architecture, machine-readable data, content credibility, knowledge graph management and collaboration across departments.\n\nGEO managers need technical knowledge of website crawlability and AI systems, strong data stewardship skills, and the ability to coordinate developers, content teams and other stakeholders. They must ensure information is accurate, trustworthy and structured for AI discovery.\n\nInvestment is growing rapidly: Conductor's 2026 report found that 97% of 250 digital leaders saw positive GEO impacts in 2025, while 94% planned to increase AI-search investment in 2026, allocating an average of 12% of marketing budgets. Although GEO will not replace SEO, companies that develop their existing SEO capabilities into GEO strategies may gain a competitive advantage as AI-driven discovery becomes more widespread.",
+      "title": "www.itpro.comWill a generative engine optimization manager be your next big hire?2026\u5e742\u670811\u65e5 \u2014 Generative engine optimization (GEO) is emerging as a new marketing discipline as businesses adapt to consumers increasingly using AI tools such as ChatGPT and Claude to find information. Companies including Adobe, Apple, Caterpillar and Capital One have begun hiring GEO managers, strategists or specialists to improve their visibility in AI-generated answers.\n\nUnlike traditional search engine optimization (SEO), which focuses on search rankings and keywords, GEO aims to ensure that AI systems can easily understand, extract and reuse a company's information. The role builds on SEO foundations while emphasizing website architecture, machine-readable data, content credibility, knowledge graph management and collaboration across departments.\n\nGEO managers need technical knowledge of website crawlability and AI systems, strong data stewardship skills, and the ability to coordinate developers, content teams and other stakeholders. They must ensure information is accurate, trustworthy and structured for AI discovery.\n\nInvestment is growing rapidly: Conductor's 2026 report found that 97% of 250 digital leaders saw positive GEO impacts in 2025, while 94% planned to increase AI-search investment in 2026, allocating an average of 12% of marketing budgets. Although GEO will not replace SEO, companies that develop their existing SEO capabilities into GEO strategies may gain a competitive advantage as AI-driven discovery becomes more widespread.",
+      "title_en": "www.itpro.comWill a generative engine optimization manager be your next big hire? 2026-02-11 \u2014 Generative engine optimization (GEO) is emerging as a new marketing discipline as businesses adapt to consumers increasingly using AI tools such as ChatGPT and Claude to find information. Companies including Adobe, Apple, Caterpillar and Capital One have begun hiring GEO managers, strategists or specialists to improve their visibility in AI-generated answers.\n\nUnlike traditional search engine optimization (SEO), which focuses on search rankings and keywords, GEO aims to ensure that AI systems can easily understand, extract and reuse a company's information. The role builds on SEO foundations while emphasizing website architecture, machine-readable data, content credibility, knowledge graph management and collaboration across departments.\n\nGEO managers need technical knowledge of website crawlability and AI systems, strong data stewardship skills, and the ability to coordinate developers, content teams and other stakeholders. They must ensure information is accurate, trustworthy and structured for AI discovery.\n\nInvestment is growing rapidly: Conductor's 2026 report found that 97% of 250 digital leaders saw positive GEO impacts in 2025, while 94% planned to increase AI-search investment in 2026, allocating an average of 12% of marketing budgets. Although GEO will not replace SEO, companies that develop their existing SEO capabilities into GEO strategies may gain a competitive advantage as AI-driven discovery becomes more widespread.",
       "domain": "www.itpro.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.wsj.com/tech/ai/ai-what-is-geo-aeo-5c452500",
-      "title": "www.wsj.comHow Businesses Are Manipulating ChatGPT Results2026年1月30日 — Businesses are increasingly paying specialists to influence ChatGPT and other AI chatbots through generative engine optimization (GEO), an emerging practice similar to traditional search engine optimization (SEO). As chatbot recommendations drive growing numbers of customers to businesses, appearing prominently in AI-generated answers has become commercially valuable. Similarweb reports that chatbot links directed users to websites more than 230 million times monthly by September 2025, triple the figure from a year earlier. These visitors also tend to spend more time on websites and are more likely to make purchases than visitors arriving through Google.\n\nGEO practitioners manipulate AI recommendations by strategically placing favorable descriptions and superlatives across multiple websites. For example, companies may repeatedly associate their products with phrases such as “highest-rated for sciatica” to influence chatbot responses. Traditional search rankings and mentions in authoritative publications can also affect AI recommendations, while obscure products and businesses are particularly vulnerable to manipulation because AI models have less established knowledge about them.\n\nAlthough OpenAI and Google employ safeguards against manipulation, both acknowledge that protecting their systems remains an ongoing challenge. Consumers should therefore treat AI recommendations cautiously and verify important advice through independent reviews, trusted news sources, or qualified human experts.",
+      "title": "www.wsj.comHow Businesses Are Manipulating ChatGPT Results2026\u5e741\u670830\u65e5 \u2014 Businesses are increasingly paying specialists to influence ChatGPT and other AI chatbots through generative engine optimization (GEO), an emerging practice similar to traditional search engine optimization (SEO). As chatbot recommendations drive growing numbers of customers to businesses, appearing prominently in AI-generated answers has become commercially valuable. Similarweb reports that chatbot links directed users to websites more than 230 million times monthly by September 2025, triple the figure from a year earlier. These visitors also tend to spend more time on websites and are more likely to make purchases than visitors arriving through Google.\n\nGEO practitioners manipulate AI recommendations by strategically placing favorable descriptions and superlatives across multiple websites. For example, companies may repeatedly associate their products with phrases such as \u201chighest-rated for sciatica\u201d to influence chatbot responses. Traditional search rankings and mentions in authoritative publications can also affect AI recommendations, while obscure products and businesses are particularly vulnerable to manipulation because AI models have less established knowledge about them.\n\nAlthough OpenAI and Google employ safeguards against manipulation, both acknowledge that protecting their systems remains an ongoing challenge. Consumers should therefore treat AI recommendations cautiously and verify important advice through independent reviews, trusted news sources, or qualified human experts.",
+      "title_en": "www.wsj.comHow Businesses Are Manipulating ChatGPT Results 2026-01-30 \u2014 Businesses are increasingly paying specialists to influence ChatGPT and other AI chatbots through generative engine optimization (GEO), an emerging practice similar to traditional search engine optimization (SEO). As chatbot recommendations drive growing numbers of customers to businesses, appearing prominently in AI-generated answers has become commercially valuable. Similarweb reports that chatbot links directed users to websites more than 230 million times monthly by September 2025, triple the figure from a year earlier. These visitors also tend to spend more time on websites and are more likely to make purchases than visitors arriving through Google.\n\nGEO practitioners manipulate AI recommendations by strategically placing favorable descriptions and superlatives across multiple websites. For example, companies may repeatedly associate their products with phrases such as \u201chighest-rated for sciatica\u201d to influence chatbot responses. Traditional search rankings and mentions in authoritative publications can also affect AI recommendations, while obscure products and businesses are particularly vulnerable to manipulation because AI models have less established knowledge about them.\n\nAlthough OpenAI and Google employ safeguards against manipulation, both acknowledge that protecting their systems remains an ongoing challenge. Consumers should therefore treat AI recommendations cautiously and verify important advice through independent reviews, trusted news sources, or qualified human experts.",
       "domain": "www.wsj.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://openhelm.ai/blog/generative-engine-optimization-guide-2026",
-      "title": "openhelm.aiThe Complete Guide to Generative Engine Optimization ...2026年1月8日 — 8 Jan 2026 — Master AI SEO and Generative Engine Optimization (GEO ) with this definitive 2025 guide. Learn search engine optimization tactics for ChatGPT, ... Read more",
+      "title": "openhelm.aiThe Complete Guide to Generative Engine Optimization ...2026\u5e741\u67088\u65e5 \u2014 8 Jan 2026 \u2014 Master AI SEO and Generative Engine Optimization (GEO ) with this definitive 2025 guide. Learn search engine optimization tactics for ChatGPT,\u00a0... Read more",
+      "title_en": "openhelm.aiThe Complete Guide to Generative Engine Optimization ... 2026-01-08 \u2014 8 Jan 2026 \u2014 Master AI SEO and Generative Engine Optimization (GEO ) with this definitive 2025 guide. Learn search engine optimization tactics for ChatGPT,\u00a0... Read more",
       "domain": "openhelm.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-brand-visibility-correlations/",
-      "title": "ahrefs.comTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied)2025年12月12日",
+      "title": "ahrefs.comTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied)2025\u5e7412\u670812\u65e5",
+      "title_en": "ahrefs.comTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied) 2025-12-12",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
-      "title": "www.aleydasolis.comWhat we learned about AI, Discover and Shopping from ...2025年12月11日 — 10 Dec 2025 — The AI Search Optimization Framework & Checklist – With Worksheet [Updated Sep 2026]",
+      "title": "www.aleydasolis.comWhat we learned about AI, Discover and Shopping from ...2025\u5e7412\u670811\u65e5 \u2014 10 Dec 2025 \u2014 The AI Search Optimization Framework & Checklist \u2013 With Worksheet [Updated Sep 2026]",
+      "title_en": "www.aleydasolis.comWhat we learned about AI, Discover and Shopping from ... 2025-12-11 \u2014 10 Dec 2025 \u2014 The AI Search Optimization Framework & Checklist \u2013 With Worksheet [Updated Sep 2026]",
       "domain": "www.aleydasolis.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-citations-vs-impressions-study/",
-      "title": "ahrefs.comDo AI Assistants Link When Mentioning Brands? For Ahrefs, Only 28% of the Time2025年11月26日",
+      "title": "ahrefs.comDo AI Assistants Link When Mentioning Brands? For Ahrefs, Only 28% of the Time2025\u5e7411\u670826\u65e5",
+      "title_en": "ahrefs.comDo AI Assistants Link When Mentioning Brands? For Ahrefs, Only 28% of the Time 2025-11-26",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://searchengineland.com/3-geo-experiments-you-should-try-this-year-464967",
-      "title": "searchengineland.com3 GEO experiments you should try this year2025年11月24日 — 24 Nov 2025 — This experiment helps you test which summary format increases your AI visibility and improves accuracy when AI systems cite you. The three ... Read more",
+      "title": "searchengineland.com3 GEO experiments you should try this year2025\u5e7411\u670824\u65e5 \u2014 24 Nov 2025 \u2014 This experiment helps you test which summary format increases your AI visibility and improves accuracy when AI systems cite you. The three\u00a0... Read more",
+      "title_en": "searchengineland.com3 GEO experiments you should try this year 2025-11-24 \u2014 24 Nov 2025 \u2014 This experiment helps you test which summary format increases your AI visibility and improves accuracy when AI systems cite you. The three\u00a0... Read more",
       "domain": "searchengineland.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.businessinsider.com/ai-search-reshapes-seo-fueling-geo-gold-rush-2025-11",
-      "title": "www.businessinsider.comThe new SEO is GEO &mdash;&nbsp;and no one really knows the rules2025年11月19日 — Generative engine optimization (GEO) is emerging as AI chatbots increasingly influence how consumers discover and evaluate brands, but its rules remain uncertain. About half of US consumers use AI-powered search, while only 16% of brands systematically track their performance. The field has created a rush of agencies, consultants, and tools, including Adobe’s planned $1.9 billion acquisition of Semrush, alongside concerns about exaggerated claims and “snake oil” services. Unlike traditional SEO, GEO lacks historical data, standardized measurement, and stability because AI responses are personalized and models are frequently retrained. Google, Microsoft, and Perplexity say established SEO fundamentals—accurate, fresh, trustworthy, human-focused content, sound website structure, schema, sitemaps, and multimedia—remain essential. Microsoft additionally recommends question-and-answer formats, lists, tables, and IndexNow. Companies should focus on user intent and content that can be synthesized into answers rather than chasing temporary ranking tricks. RealSense’s experience shows that correcting misinformation, improving FAQs, earning credible coverage, and building executive visibility can improve AI-generated brand perceptions. Ultimately, GEO appears less a separate discipline than an evolving extension of SEO, public relations, and broader brand building.",
+      "title": "www.businessinsider.comThe new SEO is GEO &mdash;&nbsp;and no one really knows the rules2025\u5e7411\u670819\u65e5 \u2014 Generative engine optimization (GEO) is emerging as AI chatbots increasingly influence how consumers discover and evaluate brands, but its rules remain uncertain. About half of US consumers use AI-powered search, while only 16% of brands systematically track their performance. The field has created a rush of agencies, consultants, and tools, including Adobe\u2019s planned $1.9 billion acquisition of Semrush, alongside concerns about exaggerated claims and \u201csnake oil\u201d services. Unlike traditional SEO, GEO lacks historical data, standardized measurement, and stability because AI responses are personalized and models are frequently retrained. Google, Microsoft, and Perplexity say established SEO fundamentals\u2014accurate, fresh, trustworthy, human-focused content, sound website structure, schema, sitemaps, and multimedia\u2014remain essential. Microsoft additionally recommends question-and-answer formats, lists, tables, and IndexNow. Companies should focus on user intent and content that can be synthesized into answers rather than chasing temporary ranking tricks. RealSense\u2019s experience shows that correcting misinformation, improving FAQs, earning credible coverage, and building executive visibility can improve AI-generated brand perceptions. Ultimately, GEO appears less a separate discipline than an evolving extension of SEO, public relations, and broader brand building.",
+      "title_en": "www.businessinsider.comThe new SEO is GEO &mdash;&nbsp;and no one really knows the rules 2025-11-19 \u2014 Generative engine optimization (GEO) is emerging as AI chatbots increasingly influence how consumers discover and evaluate brands, but its rules remain uncertain. About half of US consumers use AI-powered search, while only 16% of brands systematically track their performance. The field has created a rush of agencies, consultants, and tools, including Adobe\u2019s planned $1.9 billion acquisition of Semrush, alongside concerns about exaggerated claims and \u201csnake oil\u201d services. Unlike traditional SEO, GEO lacks historical data, standardized measurement, and stability because AI responses are personalized and models are frequently retrained. Google, Microsoft, and Perplexity say established SEO fundamentals\u2014accurate, fresh, trustworthy, human-focused content, sound website structure, schema, sitemaps, and multimedia\u2014remain essential. Microsoft additionally recommends question-and-answer formats, lists, tables, and IndexNow. Companies should focus on user intent and content that can be synthesized into answers rather than chasing temporary ranking tricks. RealSense\u2019s experience shows that correcting misinformation, improving FAQs, earning credible coverage, and building executive visibility can improve AI-generated brand perceptions. Ultimately, GEO appears less a separate discipline than an evolving extension of SEO, public relations, and broader brand building.",
       "domain": "www.businessinsider.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ipullrank.com/probability-ai-search",
-      "title": "ipullrank.comAI Search: How Generative Engine Optimization Reshapes ...2025年10月9日 — Discover how probabilistic AI Search reshapes SEO. Learn how Generative Engine Optimization ( GEO ) shifts visibility from rankings to retrieval probability.",
+      "title": "ipullrank.comAI Search: How Generative Engine Optimization Reshapes ...2025\u5e7410\u67089\u65e5 \u2014 Discover how probabilistic AI Search reshapes SEO. Learn how Generative Engine Optimization ( GEO ) shifts visibility from rankings to retrieval probability.",
+      "title_en": "ipullrank.comAI Search: How Generative Engine Optimization Reshapes ... 2025-10-09 \u2014 Discover how probabilistic AI Search reshapes SEO. Learn how Generative Engine Optimization ( GEO ) shifts visibility from rankings to retrieval probability.",
       "domain": "ipullrank.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-visibility/",
-      "title": "ahrefs.comThe Complete AI Visibility Guide for SEOs, Marketers, and Site Owners2025年9月16日",
+      "title": "ahrefs.comThe Complete AI Visibility Guide for SEOs, Marketers, and Site Owners2025\u5e749\u670816\u65e5",
+      "title_en": "ahrefs.comThe Complete AI Visibility Guide for SEOs, Marketers, and Site Owners 2025-09-16",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/seo-vs-geo/",
-      "title": "ahrefs.comSEO vs. GEO: 5 Key Differences Despite the Similarities2025年9月10日 — 10 Sept 2025 — The key difference between SEO and GEO comes from how the search experience works. With AI answers, users don't need to click links as often, ... Read more",
+      "title": "ahrefs.comSEO vs. GEO: 5 Key Differences Despite the Similarities2025\u5e749\u670810\u65e5 \u2014 10 Sept 2025 \u2014 The key difference between SEO and GEO comes from how the search experience works. With AI answers, users don't need to click links as often,\u00a0... Read more",
+      "title_en": "ahrefs.comSEO vs. GEO: 5 Key Differences Despite the Similarities 2025-09-10 \u2014 10 Sept 2025 \u2014 The key difference between SEO and GEO comes from how the search experience works. With AI answers, users don't need to click links as often,\u00a0... Read more",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/geo-generative-engine-optimization/",
-      "title": "ahrefs.comGenerative Engine Optimization: Growth Strategies and ...2025年8月18日 — 18 Aug 2025 — In this guide, you'll learn how to get your brand noticed in the era of AI-powered search and how to track your AI visibility.",
+      "title": "ahrefs.comGenerative Engine Optimization: Growth Strategies and ...2025\u5e748\u670818\u65e5 \u2014 18 Aug 2025 \u2014 In this guide, you'll learn how to get your brand noticed in the era of AI-powered search and how to track your AI visibility.",
+      "title_en": "ahrefs.comGenerative Engine Optimization: Growth Strategies and ... 2025-08-18 \u2014 18 Aug 2025 \u2014 In this guide, you'll learn how to get your brand noticed in the era of AI-powered search and how to track your AI visibility.",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://nymag.com/intelligencer/article/seo-is-dead-say-hello-to-geo.html",
-      "title": "nymag.comSEO Is Dead. Say Hello to GEO.2025年8月4日 — The rise of AI chatbots is disrupting search-engine optimization (SEO), an industry that shaped online publishing and helped businesses attract visitors through Google. As chatbots increasingly answer questions directly, websites are losing traffic, prompting marketers to embrace generative-engine optimization (GEO): strategies to make brands and content more likely to appear in AI-generated answers. Emerging advice includes publishing concise, clearly authored, authoritative material in easily excerpted formats such as lists, tables, rankings, diagrams, and original research. Mentions on trusted, frequently crawled sites like Wikipedia, Reddit, and YouTube, along with broader public relations, may also improve visibility. Startups are building tools to track brand mentions and generate AI-optimized content, though experts warn that some tactics—such as AI-generated backlinks or hidden instructions—are scams or short-lived tricks. Several specialists argue that useful, high-quality content remains essential, with AI assisting research and drafting under human oversight. The transition is uncertain: chatbot referrals may not compensate for declining search traffic, and AI platforms could capture user relationships and monetize them through advertising. GEO may offer marketers new opportunities, but competition for visibility is likely to intensify.",
+      "title": "nymag.comSEO Is Dead. Say Hello to GEO.2025\u5e748\u67084\u65e5 \u2014 The rise of AI chatbots is disrupting search-engine optimization (SEO), an industry that shaped online publishing and helped businesses attract visitors through Google. As chatbots increasingly answer questions directly, websites are losing traffic, prompting marketers to embrace generative-engine optimization (GEO): strategies to make brands and content more likely to appear in AI-generated answers. Emerging advice includes publishing concise, clearly authored, authoritative material in easily excerpted formats such as lists, tables, rankings, diagrams, and original research. Mentions on trusted, frequently crawled sites like Wikipedia, Reddit, and YouTube, along with broader public relations, may also improve visibility. Startups are building tools to track brand mentions and generate AI-optimized content, though experts warn that some tactics\u2014such as AI-generated backlinks or hidden instructions\u2014are scams or short-lived tricks. Several specialists argue that useful, high-quality content remains essential, with AI assisting research and drafting under human oversight. The transition is uncertain: chatbot referrals may not compensate for declining search traffic, and AI platforms could capture user relationships and monetize them through advertising. GEO may offer marketers new opportunities, but competition for visibility is likely to intensify.",
+      "title_en": "nymag.comSEO Is Dead. Say Hello to GEO. 2025-08-04 \u2014 The rise of AI chatbots is disrupting search-engine optimization (SEO), an industry that shaped online publishing and helped businesses attract visitors through Google. As chatbots increasingly answer questions directly, websites are losing traffic, prompting marketers to embrace generative-engine optimization (GEO): strategies to make brands and content more likely to appear in AI-generated answers. Emerging advice includes publishing concise, clearly authored, authoritative material in easily excerpted formats such as lists, tables, rankings, diagrams, and original research. Mentions on trusted, frequently crawled sites like Wikipedia, Reddit, and YouTube, along with broader public relations, may also improve visibility. Startups are building tools to track brand mentions and generate AI-optimized content, though experts warn that some tactics\u2014such as AI-generated backlinks or hidden instructions\u2014are scams or short-lived tricks. Several specialists argue that useful, high-quality content remains essential, with AI assisting research and drafting under human oversight. The transition is uncertain: chatbot referrals may not compensate for declining search traffic, and AI platforms could capture user relationships and monetize them through advertising. GEO may offer marketers new opportunities, but competition for visibility is likely to intensify.",
       "domain": "nymag.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
-      "title": "www.aleydasolis.comKey Traditional vs AI Search Differences - A Visual ...2025年7月26日 — 26 Jul 2025 — The AI Search Content Optimization Checklist [With Examples + Google Sheets] SEO VS GEO: The AI Search Optimization Framework & Checklist – ...",
+      "title": "www.aleydasolis.comKey Traditional vs AI Search Differences - A Visual ...2025\u5e747\u670826\u65e5 \u2014 26 Jul 2025 \u2014 The AI Search Content Optimization Checklist [With Examples + Google Sheets] SEO VS GEO: The AI Search Optimization Framework & Checklist \u2013\u00a0...",
+      "title_en": "www.aleydasolis.comKey Traditional vs AI Search Differences - A Visual ... 2025-07-26 \u2014 26 Jul 2025 \u2014 The AI Search Content Optimization Checklist [With Examples + Google Sheets] SEO VS GEO: The AI Search Optimization Framework & Checklist \u2013\u00a0...",
       "domain": "www.aleydasolis.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/branded-web-mentions-visibility-ai-search/",
-      "title": "ahrefs.comGoogle Seems More Biased Towards Big Brands Than ChatGPT and Perplexity2025年7月7日",
+      "title": "ahrefs.comGoogle Seems More Biased Towards Big Brands Than ChatGPT and Perplexity2025\u5e747\u67087\u65e5",
+      "title_en": "ahrefs.comGoogle Seems More Biased Towards Big Brands Than ChatGPT and Perplexity 2025-07-07",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://arxiv.org/abs/2311.09735",
-      "title": "arxiv.orgGEO: Generative Engine Optimization2023年11月16日",
+      "title": "arxiv.orgGEO: Generative Engine Optimization2023\u5e7411\u670816\u65e5",
+      "title_en": "arxiv.orgGEO: Generative Engine Optimization 2023-11-16",
       "domain": "arxiv.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.linkedin.com/posts/olena-khodos_ive-been-reading-kevin-indigs-growth-memo-activity-7429925856598315009-AUPs",
-      "title": "www.linkedin.com5 Turning Points from Kevin Indig's Growth MemoWe stopped putting 100% of our effort into organic search . That's why we now have a fully developed content distribution system and AI -focused ... Read more",
+      "title": "www.linkedin.com5 Turning Points from Kevin Indig's Growth MemoWe stopped putting 100% of our effort into organic search . That's why we now have a fully developed content distribution system and AI -focused\u00a0... Read more",
       "domain": "www.linkedin.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.linkedin.com/posts/aleyda_i-updated-the-the-ai-search-content-optimization-activity-7347652475107061760-xwyE",
-      "title": "www.linkedin.comAleyda Solís' PostI updated the The AI Search Content Optimization Checklist with a new \"Monitor Your content AI Search Performance\" section, ...",
+      "title": "www.linkedin.comAleyda Sol\u00eds' PostI updated the The AI Search Content Optimization Checklist with a new \"Monitor Your content AI Search Performance\" section,\u00a0...",
       "domain": "www.linkedin.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.linkedin.com/posts/chrisgreenseo_such-a-valuable-resource-from-aleyda-sol%C3%ADs-activity-7509893209452441600-N1wA",
-      "title": "www.linkedin.comChris Green - Such a valuable resource from Aleyda Solís1. Establish the prompts and journeys you actually want to influence in AI systems 2. Measure your initial AI presence in popular AI systems ...",
+      "title": "www.linkedin.comChris Green - Such a valuable resource from Aleyda Sol\u00eds1. Establish the prompts and journeys you actually want to influence in AI systems 2. Measure your initial AI presence in popular AI systems\u00a0...",
       "domain": "www.linkedin.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.linkedin.com/posts/timsoulo_heres-a-practical-guide-to-answer-engine-activity-7361377248890818562-TVq4",
-      "title": "www.linkedin.comHow to Optimize for Answer Engine Optimization (AEO) ...▪️Start by measuring your current AI visibility. Check how often your brand appears in the AI chatbots you care about, and compare that to ...",
+      "title": "www.linkedin.comHow to Optimize for Answer Engine Optimization (AEO) ...\u25aa\ufe0fStart by measuring your current AI visibility. Check how often your brand appears in the AI chatbots you care about, and compare that to\u00a0...",
       "domain": "www.linkedin.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/aeo",
-      "title": "ahrefs.comAEO: The Complete Guide to Answer Engine OptimizationEight chapters on getting your brand mentioned and cited in AI answers—built. Eight chapters researched, written, and reviewed by working SEOs.",
+      "title": "ahrefs.comAEO: The Complete Guide to Answer Engine OptimizationEight chapters on getting your brand mentioned and cited in AI answers\u2014built. Eight chapters researched, written, and reviewed by working SEOs.",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/ai-visibility-index",
-      "title": "ahrefs.comAhrefs AI Visibility Index | Check ANY brand’s AI visibility instantly",
+      "title": "ahrefs.comAhrefs AI Visibility Index | Check ANY brand\u2019s AI visibility instantly",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
@@ -513,97 +555,97 @@
     },
     {
       "url": "https://peec.ai/blog",
-      "title": "peec.aiAI Search Blog | GEO, AI Visibility & Search Strategy21 Oct 2026 — Insights, interviews, and how-to guides on AI search analytics, Generative Engine Optimization ( GEO ), sources/citations, and adapting SEO ...",
+      "title": "peec.aiAI Search Blog | GEO, AI Visibility & Search Strategy21 Oct 2026 \u2014 Insights, interviews, and how-to guides on AI search analytics, Generative Engine Optimization ( GEO ), sources/citations, and adapting SEO\u00a0...",
       "domain": "peec.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://peec.ai/ai-search-geo-statistics",
-      "title": "peec.ai70+ Generative Engine Optimization (GEO) Statistics for 2026Peec AI's Listicle Rank Effect study analyzed 5.7 million data points from nearly 200,000 AI responses across 8 engines, collected September 2025–March 2026. Read more",
+      "title": "peec.ai70+ Generative Engine Optimization (GEO) Statistics for 2026Peec AI's Listicle Rank Effect study analyzed 5.7 million data points from nearly 200,000 AI responses across 8 engines, collected September 2025\u2013March 2026. Read more",
       "domain": "peec.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://peec.ai/blog/a-beginner-s-guide-to-brand-mention-gap-analysis-in-ai-search",
-      "title": "peec.aiA beginner's guide to brand mention gap analysis in AI ...5 Feb 2026 — Peec AI expert guidance to detect brand mention gaps in AI search. This guide gives you a framework for identifying the most promising ...",
+      "title": "peec.aiA beginner's guide to brand mention gap analysis in AI ...5 Feb 2026 \u2014 Peec AI expert guidance to detect brand mention gaps in AI search. This guide gives you a framework for identifying the most promising\u00a0...",
       "domain": "peec.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.mersel.ai/generative-engine-optimization",
-      "title": "www.mersel.aiGenerative Engine Optimization (GEO) for B2BGenerative Engine Optimization (GEO) for B2B: The Complete 2026 Guide . How high-ticket manufacturers, B2B services, and distributors win RFQs from ChatGPT, ... Read more",
+      "title": "www.mersel.aiGenerative Engine Optimization (GEO) for B2BGenerative Engine Optimization (GEO) for B2B: The Complete 2026 Guide . How high-ticket manufacturers, B2B services, and distributors win RFQs from ChatGPT,\u00a0... Read more",
       "domain": "www.mersel.ai",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/",
-      "title": "www.growth-memo.comGrowth Intelligence Brief #9 - by Kevin Indig22 Oct 2025 — This week, we're looking at how AI is reshaping the content ecosystem and what it means for your visibility: More than half of content is now AI ... Read more",
+      "title": "www.growth-memo.comGrowth Intelligence Brief #9 - by Kevin Indig22 Oct 2025 \u2014 This week, we're looking at how AI is reshaping the content ecosystem and what it means for your visibility: More than half of content is now AI\u00a0... Read more",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/2024-annual-review",
-      "title": "www.growth-memo.com2024 - Annual Review - by Kevin Indig16 Dec 2024 — I'll experiment with short-form videos throughout the year. AI overviews and AI chatbot search , the landscape of Search has made a profound ...",
+      "title": "www.growth-memo.com2024 - Annual Review - by Kevin Indig16 Dec 2024 \u2014 I'll experiment with short-form videos throughout the year. AI overviews and AI chatbot search , the landscape of Search has made a profound\u00a0...",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/why-proprietary-data-is-your-most",
-      "title": "www.growth-memo.comWhy proprietary data is your most defensible AI citation assetKevin Indig's avatar. This study focuses on classic search visibility and rankings … that first-party data is crucial in the era of AI search holds, publishing ...",
+      "title": "www.growth-memo.comWhy proprietary data is your most defensible AI citation assetKevin Indig's avatar. This study focuses on classic search visibility and rankings \u2026 that first-party data is crucial in the era of AI search holds, publishing\u00a0...",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/the-impact-of-ai-mode-on-seo-analysis",
-      "title": "www.growth-memo.comThe impact of AI Mode on SEO -analysis of 10 studies20 Oct 2025 — We looked for commonalities and differences across 10 AI Mode studies - here's what we found.",
+      "title": "www.growth-memo.comThe impact of AI Mode on SEO -analysis of 10 studies20 Oct 2025 \u2014 We looked for commonalities and differences across 10 AI Mode studies - here's what we found.",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/how-much-can-we-influence-ai-responses",
-      "title": "www.growth-memo.comHow much can we influence AI responses? - by Kevin Indig12 Jan 2026 — The authors built the “E- GEO Testbed,” a dataset and evaluation framework that pairs over 7,000 real product queries (sourced from Reddit) with ... Read more",
+      "title": "www.growth-memo.comHow much can we influence AI responses? - by Kevin Indig12 Jan 2026 \u2014 The authors built the \u201cE- GEO Testbed,\u201d a dataset and evaluation framework that pairs over 7,000 real product queries (sourced from Reddit) with\u00a0... Read more",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/ai-halftime-report-h1-2026",
-      "title": "www.growth-memo.comAI Halftime Report: H1 2026 - by Kevin Indig27 Jul 2026 — H1 2026 moved money, traffic, jobs, and market cap. I published a series of user behavior studies and data analyses in the first half of 2026.",
+      "title": "www.growth-memo.comAI Halftime Report: H1 2026 - by Kevin Indig27 Jul 2026 \u2014 H1 2026 moved money, traffic, jobs, and market cap. I published a series of user behavior studies and data analyses in the first half of 2026.",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/is-geoaeo-the-same-as-seo",
-      "title": "www.growth-memo.comHow is answer engine optimization different from SEO?21 Apr 2025 — Data reveals why some brands dominate in search but disappear in ChatGPT—and what you can do about it Kevin Indig's avatar. Organic search ...",
+      "title": "www.growth-memo.comHow is answer engine optimization different from SEO?21 Apr 2025 \u2014 Data reveals why some brands dominate in search but disappear in ChatGPT\u2014and what you can do about it Kevin Indig's avatar. Organic search ...",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/2025-reflection",
-      "title": "www.growth-memo.com2025 Reflection - by Kevin Indig15 Dec 2025 — Get performance tracking, live content scoring, and real-time optimization guidance for both SEO and AI search visibility in one place. Plus, ... Read more",
+      "title": "www.growth-memo.com2025 Reflection - by Kevin Indig15 Dec 2025 \u2014 Get performance tracking, live content scoring, and real-time optimization guidance for both SEO and AI search visibility in one place. Plus,\u00a0... Read more",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/how-to-build-an-ai-seo-strategy-that",
-      "title": "www.growth-memo.comHow to build an AI SEO strategy that outlasts tactics2 Mar 2026 — Kevin Indig's . EO/ GEO strategies” The gap between your revenue data and your AI visibility data is your challenge.",
+      "title": "www.growth-memo.comHow to build an AI SEO strategy that outlasts tactics2 Mar 2026 \u2014 Kevin Indig's . EO/ GEO strategies\u201d The gap between your revenue data and your AI visibility data is your challenge.",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://podcasts.apple.com/us/podcast/how-to-establish-an-ai-search-optimization-geo-aeo/id1513567674?i=1000779498703&l=pt-BR",
-      "title": "podcasts.apple.comHow to Establish an AI Search Optimization (GEO, AEO) ...2 Aug 2026 — Aleyda Soli s , she goes through the principles and do's and dont's to set an AI Search Optimization (GEO/AEO) strategy",
+      "title": "podcasts.apple.comHow to Establish an AI Search Optimization (GEO, AEO) ...2 Aug 2026 \u2014 Aleyda Soli s , she goes through the principles and do's and dont's to set an AI Search Optimization (GEO/AEO) strategy",
       "domain": "podcasts.apple.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.aleydasolis.com/en/ai-search/ai-search-citations/",
-      "title": "www.aleydasolis.comAI Search Is a 3rd-Party Citation Problem With an On-Page ...2 Aug 2026 — AI search can be understood as a third-party citation problem with an on-page corroboration base: Optimization can't stop at the brand's website ... Read more",
+      "title": "www.aleydasolis.comAI Search Is a 3rd-Party Citation Problem With an On-Page ...2 Aug 2026 \u2014 AI search can be understood as a third-party citation problem with an on-page corroboration base: Optimization can't stop at the brand's website\u00a0... Read more",
       "domain": "www.aleydasolis.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.aleydasolis.com/en/",
-      "title": "www.aleydasolis.comAleyda Solis, Strategical SEO & AI Search Optimization ...Learn about AI search optimization (GEO, AEO, LLMO ) with free, reliable guides and resources, from the fundamentals, to technical configurations, content  ...",
+      "title": "www.aleydasolis.comAleyda Solis, Strategical SEO & AI Search Optimization ...Learn about AI search optimization (GEO, AEO, LLMO ) with free, reliable guides and resources, from the fundamentals, to technical configurations, content \u00a0...",
       "domain": "www.aleydasolis.com",
       "kind": "retrieved_source"
     },
@@ -621,31 +663,31 @@
     },
     {
       "url": "https://www.seerinteractive.com/insights/optimizing-content-for-generative-search-engines",
-      "title": "www.seerinteractive.comOptimizing Content for Generative Search Resulted in +40 ...24 May 2024 — Authoritative optimization methods showed no significant improvement, indicating the robustness of generative engines to stylistic changes. Read more",
+      "title": "www.seerinteractive.comOptimizing Content for Generative Search Resulted in +40 ...24 May 2024 \u2014 Authoritative optimization methods showed no significant improvement, indicating the robustness of generative engines to stylistic changes. Read more",
       "domain": "www.seerinteractive.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.seerinteractive.com/insights/how-to-optimize-your-website-for-both-human-and-ai-visitors",
-      "title": "www.seerinteractive.comHow to Optimize Your Website for Both Human and AI ...17 Apr 2026 — ... Generative Engine Optimization ( GEO ). It ensures that AI -optimized content and design changes improve machine visibility without ... Read more",
+      "title": "www.seerinteractive.comHow to Optimize Your Website for Both Human and AI ...17 Apr 2026 \u2014 ... Generative Engine Optimization ( GEO ). It ensures that AI -optimized content and design changes improve machine visibility without\u00a0... Read more",
       "domain": "www.seerinteractive.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.seerinteractive.com/insights/the-case-for-answer-optimization-vs-seo-aio-geo-will-you-join-me",
-      "title": "www.seerinteractive.comThe case for Answer Optimization vs SEO, AIO, GEO, will ...4 Apr 2025 — SEO, AIO, or GEO can better serve your audience and drive meaningful engagement. Generative Engine Optimization, Our focus is on doing things ...",
+      "title": "www.seerinteractive.comThe case for Answer Optimization vs SEO, AIO, GEO, will ...4 Apr 2025 \u2014 SEO, AIO, or GEO can better serve your audience and drive meaningful engagement. Generative Engine Optimization, Our focus is on doing things\u00a0...",
       "domain": "www.seerinteractive.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.seerinteractive.com/work/case-studies/author-bylines",
-      "title": "www.seerinteractive.comDo Author Bylines Influence AI Visibility? Testing EEAT ...Generative Engine Optimization ( GEO ). We run enterprise-scale AI search experiments and turn them into proven strategies that deliver AI visibility and ...",
+      "title": "www.seerinteractive.comDo Author Bylines Influence AI Visibility? Testing EEAT ...Generative Engine Optimization ( GEO ). We run enterprise-scale AI search experiments and turn them into proven strategies that deliver AI visibility and\u00a0...",
       "domain": "www.seerinteractive.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.seerinteractive.com/insights/study-the-ai-search-landscape-beyond-the-seo-vs-geo-hype",
-      "title": "www.seerinteractive.comThe AI Search Landscape, Beyond the SEO VS GEO Hype22 Sept 2025 — The study breaks down AI search's impact on traffic and conversion rate by industry and ends with a three-step plan to measure, track, and test. Read more",
+      "title": "www.seerinteractive.comThe AI Search Landscape, Beyond the SEO VS GEO Hype22 Sept 2025 \u2014 The study breaks down AI search's impact on traffic and conversion rate by industry and ends with a three-step plan to measure, track, and test. Read more",
       "domain": "www.seerinteractive.com",
       "kind": "retrieved_source"
     },
@@ -669,7 +711,7 @@
     },
     {
       "url": "https://ipullrank.com/tech-seo-connect",
-      "title": "ipullrank.comEverything You Should Know About Query Fan OutGenerative Engine Optimization (GEO) Mike King breaks down how Query Fan Out drives every major AI search system today. Google, ChatGPT, Gemini, and Perplexity ...",
+      "title": "ipullrank.comEverything You Should Know About Query Fan OutGenerative Engine Optimization (GEO) Mike King breaks down how Query Fan Out drives every major AI search system today. Google, ChatGPT, Gemini, and Perplexity\u00a0...",
       "domain": "ipullrank.com",
       "kind": "retrieved_source"
     },
@@ -681,19 +723,19 @@
     },
     {
       "url": "https://ipullrank.com/webinar-registration",
-      "title": "ipullrank.comWebinar RegistrationGenerative Engine Optimization (GEO) The AI Search Manual explains. It covers the rise of conversational search platforms, the mechanics behind Generative ...",
+      "title": "ipullrank.comWebinar RegistrationGenerative Engine Optimization (GEO) The AI Search Manual explains. It covers the rise of conversational search platforms, the mechanics behind Generative\u00a0...",
       "domain": "ipullrank.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://info.seerinteractive.com/the-factors-that-influence-ai-search-visibility",
-      "title": "info.seerinteractive.comThe Factors That Influence AI Search Visibility4 Mar 2025 — How AI search engines pull data – The role of Bing rankings ... What Is Generative Engine Optimization (GEO ) & How Does It Impact SEO? Read more",
+      "title": "info.seerinteractive.comThe Factors That Influence AI Search Visibility4 Mar 2025 \u2014 How AI search engines pull data \u2013 The role of Bing rankings ... What Is Generative Engine Optimization (GEO ) & How Does It Impact SEO? Read more",
       "domain": "info.seerinteractive.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.whatsgeo.io/",
-      "title": "www.whatsgeo.ioWhatsGEO — Is Your Business Invisible to AI?",
+      "title": "www.whatsgeo.ioWhatsGEO \u2014 Is Your Business Invisible to AI?",
       "domain": "www.whatsgeo.io",
       "kind": "retrieved_source"
     },
@@ -705,7 +747,7 @@
     },
     {
       "url": "https://thegeolab.net/geo-workbook/",
-      "title": "thegeolab.netThe GEO Workbook — 30-Day Action Plan | The GEO LabTotal lines: 1454\n",
+      "title": "thegeolab.netThe GEO Workbook \u2014 30-Day Action Plan | The GEO LabTotal lines: 1454\n",
       "domain": "thegeolab.net",
       "kind": "retrieved_source"
     },
@@ -723,8 +765,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "My strongest starting points are Aleyda Solís for practical workflows",
-      "notes": "作者与其学习站点归一；完整预览正文直接链接作者自有博客清单与 prompt-library 教程，均为明确推荐。",
+      "evidence": "My strongest starting points are Aleyda Sol\u00eds for practical workflows",
+      "notes": "The author and learning site are one entity. The complete preview links directly to the author's own blog directory and prompt-library tutorial, both explicitly recommended.",
       "source_urls": [
         "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
         "https://www.aleydasolis.com/en/ai-search/ai-search-prompt-library/"
@@ -737,7 +779,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Ahrefs for structured tutorials and large-scale data",
-      "notes": "完整预览正文直接链接 Ahrefs 自有 AEO 指南与 75,000 品牌研究；明确推荐其教程与数据。",
+      "notes": "The complete preview directly links Ahrefs' own AEO guide and 75,000-brand study, explicitly recommending its tutorials and data.",
       "source_urls": [
         "https://ahrefs.com/aeo",
         "https://ahrefs.com/blog/ai-brand-visibility-correlations/"
@@ -750,7 +792,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "MLforSEO for an evidence-labeled checklist.",
-      "notes": "Lazarina Stoy 与 MLforSEO 合并；完整预览直接链接 44-check 清单，并明确建议用于小站审计。",
+      "notes": "Lazarina Stoy and MLforSEO are one entity. The complete preview directly links the 44-check checklist and explicitly suggests using it to audit small sites.",
       "source_urls": [
         "https://www.mlforseo.com/resource/generative-engine-optimisation-geo-checklist/"
       ]
@@ -762,7 +804,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Seer Interactive and Search Engine Land are useful when you want to learn how practitioners test specific GEO hypotheses.",
-      "notes": "完整预览直接链接其 2024 文章与 GEO 研究中心；记录回答将其称作 original experiments 的说法，未独立核实该研究归属或效果。",
+      "notes": "The complete preview directly links its 2024 article and GEO research hub. The answer's description of these as original experiments is recorded, without independent verification of research attribution or effects.",
       "source_urls": [
         "https://www.seerinteractive.com/insights/optimizing-content-for-generative-search-engines",
         "https://www.seerinteractive.com/generative-engine-optimization"
@@ -775,7 +817,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Find a concrete experiment to replicate each week.",
-      "notes": "完整预览正文直接链接两篇实验文章；明确建议每周选实验复现，并在最终起步组合再次推荐。",
+      "notes": "The complete preview directly links two experiment articles, explicitly suggests reproducing one experiment per week, and recommends the entity again in the final starter combination.",
       "source_urls": [
         "https://searchengineland.com/3-geo-experiments-you-should-try-this-year",
         "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
@@ -788,7 +830,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Best for continuously discovering new GEO hypotheses.",
-      "notes": "完整预览正文直接链接研究博客及统计文章；明确建议产生实验假设，并保留回答对其商业利益的提示。",
+      "notes": "The complete preview directly links the research blog and a statistics article, explicitly suggests using it to formulate experimental hypotheses, and preserves the answer's caveat about commercial interests.",
       "source_urls": [
         "https://peec.ai/blog",
         "https://peec.ai/ai-search-geo-statistics"
@@ -801,7 +843,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Best for research synthesis and strategic reasoning.",
-      "notes": "完整预览直接链接 Growth Memo 首页。紧随段落的 growth-memo.com +2 引用胶囊，以及正文两个研究主题，与来源面板的十项 AI Mode 研究比较、How much can we influence AI responses 两篇文章题名精确对应，故同时保留这两个实际观察到的 URL；不是将该域名全部检索结果当引用。",
+      "notes": "The complete preview directly links the Growth Memo homepage. The following growth-memo.com +2 capsule and the two research topics precisely match source-panel article titles for the comparison of ten AI Mode studies and How much can we influence AI responses. Both observed URLs are retained; not all retrieval results from this domain were treated as citations.",
       "source_urls": [
         "https://www.growth-memo.com/",
         "https://www.growth-memo.com/p/the-impact-of-ai-mode-on-seo-analysis",
@@ -815,7 +857,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Best for learning from a small, inspectable dataset.",
-      "notes": "完整预览直接链接其免费 playbook；明确推荐以其公开小样本学习检查和复现，保留回答说明的地域与单日样本限制。",
+      "notes": "The complete preview directly links its free playbook and explicitly recommends using the published small sample to learn inspection and replication. The answer's regional and single-day sampling limitations are preserved.",
       "source_urls": [
         "https://canlah.ai/playbook"
       ]
@@ -827,7 +869,7 @@
       "mention": true,
       "recommendation": false,
       "evidence": "A study reported by Axios on October 28, 2026, found that repeated ChatGPT queries on the same day shared only 41% of cited domains.",
-      "notes": "正文明确点名 Axios，并在 2026-10-28、同日重复问题的被引域名重合 41% 这一段后显示 Axios 引用胶囊。来源面板第16项为同日期 Axios 原文，第18项同一规范 URL 的摘要明确包含 41% 结果；据域名、日期与独特统计量联合匹配，C=true。它仅支撑测量不稳定性，未被建议作为教程来源，R=false。未取得内部 cite ID 到 URL 的机器映射。",
+      "notes": "The body explicitly names Axios, with an Axios citation capsule after the passage describing 41% cited-domain overlap for repeated same-day questions on 2026-10-28. Source-panel item 16 is the dated original Axios article; item 18 is a summary at the same canonical URL and explicitly contains the 41% result. Domain, date and distinctive statistic jointly support C=true. It only supports measurement instability and is not recommended as a tutorial source, so R=false. No machine mapping from internal cite ID to URL was obtained.",
       "source_urls": [
         "https://www.axios.com/2026/10/28/ai-citation-source-geo"
       ]
@@ -839,7 +881,7 @@
       "mention": false,
       "recommendation": false,
       "evidence": "A 2026 research survey covering 45 GEO studies concluded that evidence for stable, long-term, cross-platform causal improvements in organic discoverability remains limited.",
-      "notes": "正文实质讨论该综述，并紧接 arXiv 引用胶囊；面板第17/31项同一 2607.14035 题名与年份匹配，按已有 C-Q1-R1 中同一论文 ID 的主体记录归一为 Olivier Martinez。本回答未写作者姓名或论文题名，故作者 M=false；只是证据限制说明，R=false。没有把 arXiv 托管站另算推荐主体；未独立验证作者身份或研究结论。",
+      "notes": "The body substantively discusses this review, immediately followed by an arXiv citation capsule. Panel items 17/31 match paper ID 2607.14035 by title and year; the entity is normalized to Olivier Martinez using the same paper ID already recorded in C-Q1-R1. This answer does not name the author or paper title, so author M=false. It only explains evidence limits, so R=false. arXiv is not counted as another recommended entity; author identity and study conclusions were not independently verified.",
       "source_urls": [
         "https://arxiv.org/abs/2607.14035"
       ]
@@ -857,11 +899,11 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 11418,
       "source_count": 13,
-      "notes": "正文显示加载故障；通过官方 read_thread 读取同一会话存储记录，未重发或追问。保留全部可读取原文和明确URL；内部引用标记未完整映射，来源面板为空。搜索芯片为UI工具选择，不改变英文原题。",
+      "notes": "The body showed a loading failure. The official read_thread tool retrieved a stored record of the same conversation without resubmitting or following up. All readable text and explicit URLs were preserved; internal citation markers were not fully mapped, and the original note said the source panel was empty. The search chip is a UI tool selection and does not change the original English question.",
       "capture_kind": "initial_export",
       "selected": false,
       "file": "data/captures/C-Q3-R1-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R1-recovery-01",
@@ -873,11 +915,11 @@
       "body_completeness": "completed",
       "answer_chars": 8548,
       "source_count": 13,
-      "notes": "同一原始会话的分享对话框预览中读取完整正文（8548字符）和13条明确正文链接；只打开预览，未创建公开分享。\n旧页面加载故障、旧read_thread导出及其注释完整保留；此次恢复不增加提问次数。\n来源面板另存97项网页检索来源；这些来源不能全部视为正文引用。",
+      "notes": "Read the complete body (8548 characters) and 13 explicit body links from the share-dialog preview of the same original conversation. Only the preview was opened; no public share was created.\nThe original page-loading failure, earlier read_thread export and annotations remain preserved. This recovery does not add a query.\nA separate 97-entry web retrieval-source list was saved from the source panel; these entries are not all body citations.",
       "capture_kind": "share_preview",
       "selected": true,
       "file": "data/captures/C-Q3-R1-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     }
   ],
   "capture_provenance": {
@@ -886,16 +928,16 @@
     "method": "DOM-backed share-dialog preview; no public share created",
     "captured_at": "2026-10-29T10:18:52.358Z",
     "same_conversation": true,
-    "review_notes": "同一原始会话的分享对话框预览中读取完整正文（8548字符）和13条明确正文链接；只打开预览，未创建公开分享。\n旧页面加载故障、旧read_thread导出及其注释完整保留；此次恢复不增加提问次数。\n来源面板另存97项网页检索来源；这些来源不能全部视为正文引用。",
+    "review_notes": "Read the complete body (8548 characters) and 13 explicit body links from the share-dialog preview of the same original conversation. Only the preview was opened; no public share was created.\nThe original page-loading failure, earlier read_thread export and annotations remain preserved. This recovery does not add a query.\nA separate 97-entry web retrieval-source list was saved from the source panel; these entries are not all body citations.",
     "selected_capture_file": "data/records/C-Q3-R1.json"
   },
   "public_copy": true,
   "memory_evidence": [
     {
       "kind": "cross_test_context",
-      "evidence": "来源面板包含此前实验会话与个人账号背景；具体个人内容已匿名化。不能据此归因某个推荐对象。",
+      "evidence": "The source panel included earlier experimental conversations and personal account context. Specific personal content is redacted. This does not establish that memory caused any particular recommendation.",
       "file": "data/publication-notes.json"
     }
   ],
-  "personalization_evidence": "[个人上下文片段已省略；保留观察到账号上下文影响这一事实。]"
+  "personalization_evidence": "[Personal-context passages omitted; the observed influence of account context is retained.]"
 }

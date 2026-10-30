@@ -8,10 +8,10 @@
   "body_completeness": "legacy_unverified",
   "answer_chars": 0,
   "source_count": 0,
-  "notes": "逐次补测仍未返回任何assistant正文；网页与官方存储记录均为空。原题、模型和搜索入口不变；不进入推荐统计。",
+  "notes": "The additional attempt still returned no assistant answer text; both the web page and the official stored record were empty. The original question, model, and search entry point were unchanged. This attempt is excluded from recommendation statistics.",
   "capture_kind": "initial_export",
   "selected": true,
   "attempt_in_main_sample": false,
   "file": "data/captures/C-Q2-R2-A2-legacy-01.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

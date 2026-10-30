@@ -1,11 +1,11 @@
-# GEO 学习实验记录
+# GEO Learning Log
 
-持续记录学习 Generative Engine Optimization（GEO）过程中实际完成的实验、资料整理与阶段性理解。每个阶段保留问题、方法、证据和结论边界，便于复查与后续修正。
+An ongoing record of experiments, resource reviews, and lessons from learning Generative Engine Optimization (GEO). Each stage preserves its questions, methods, evidence, and limitations for review and future revision.
 
-## 阶段索引
+## Stages
 
-| 阶段 | 学习内容 | 材料 |
+| Stage | Learning focus | Materials |
 | --- | --- | --- |
-| 阶段一 | 通过 ChatGPT Search 与 Grok 的重复提问，观察引用、提及和推荐的区别 | [学习记录与数据说明](stages/01-platform-observation.md) · [可视化报告](https://helen-bird.github.io/geo-platform-observation/) |
+| Stage 1 | Repeated queries to ChatGPT Search and Grok to explore the differences between Citation, Mention, and Recommendation | [Learning notes and data guide](stages/01-platform-observation.md) · [Visual report](https://helen-bird.github.io/geo-platform-observation/) |
 
-后续按实际完成的学习与实验继续更新阶段索引。当前的双平台对比是阶段一成果；其发现、数据目录、复算命令和公开范围均保留在阶段文档中。后续更正通过文件历史追溯。
+New stages will be added as learning and experiments are completed. The current platform comparison is the outcome of Stage 1; its findings, data directory, reproduction commands, and publication scope are documented in that stage. File history preserves subsequent corrections.

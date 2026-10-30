@@ -8,10 +8,10 @@
   "body_completeness": "completed",
   "answer_chars": 8548,
   "source_count": 13,
-  "notes": "同一原始会话的分享对话框预览中读取完整正文（8548字符）和13条明确正文链接；只打开预览，未创建公开分享。\n旧页面加载故障、旧read_thread导出及其注释完整保留；此次恢复不增加提问次数。\n来源面板另存97项网页检索来源；这些来源不能全部视为正文引用。",
+  "notes": "Read the complete body (8548 characters) and 13 explicit body links from the share-dialog preview of the same original conversation. Only the preview was opened; no public share was created.\nThe original page-loading failure, earlier read_thread export and annotations remain preserved. This recovery does not add a query.\nA separate 97-entry web retrieval-source list was saved from the source panel; these entries are not all body citations.",
   "capture_kind": "share_preview",
   "selected": true,
   "attempt_in_main_sample": true,
   "file": "data/captures/C-Q3-R1-recovery-01.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

@@ -8,10 +8,10 @@
   "body_completeness": "completed",
   "answer_chars": 8562,
   "source_count": 15,
-  "notes": "10月30日新会话逐字发送原始Q3，无追加引导。沿用Cursor补测的GPT-6 Medium条件；与Q3第一轮Extra High不同。主页面仍加载失败，从分享预览与来源菜单完整恢复，未创建公开链接。",
+  "notes": "On October 30, the original Q3 was sent verbatim in a new conversation, with no steering follow-up. It retained Cursor's GPT-6 Medium supplement settings, unlike the first Q3 run's Extra High. The main page still failed to load; the body and sources were recovered from the share preview and source menu without creating a public link.",
   "capture_kind": "share_preview",
   "selected": true,
   "attempt_in_main_sample": true,
   "file": "data/captures/C-Q3-R2-A3-recovery-01.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

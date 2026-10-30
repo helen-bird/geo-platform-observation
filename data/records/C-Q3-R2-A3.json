@@ -7,18 +7,18 @@
   "started_at": "2026-10-30T05:02:34.209Z",
   "finished_at": "2026-10-30T05:03:46.255Z",
   "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
-  "submitted_prompt": "@网页搜索 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
-  "observed_submitted_prompt": "@网页搜索 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_prompt": "@\u7f51\u9875\u641c\u7d22 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "observed_submitted_prompt": "@\u7f51\u9875\u641c\u7d22 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
   "normalized_submitted_prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
   "submitted_prompt_provenance": "raw_record",
-  "mode_label": "网页搜索 · Medium",
-  "model_label": "GPT-6（界面选择标签）",
-  "model_evidence": "新会话提交前菜单GPT-6 checked，思考强度中；已保存模型截图与DOM。底层精确版本未披露。",
+  "mode_label": "Web Search \u00b7 Medium",
+  "model_label": "GPT-6 (UI selection label)",
+  "model_evidence": "Before submission in the new conversation, GPT-6 was checked and reasoning effort was Medium. A model screenshot and DOM record were saved locally. The exact backend version was not disclosed.",
   "search_status": "observed",
-  "search_evidence": "网页搜索工具标记；来源区7条被引来源，更多区49条检索结果。",
+  "search_evidence": "Web Search tool marker; 7 cited-source entries and 49 additional retrieval results.",
   "status": "completed",
-  "answer_text": "Who publishes the best practical, data-backed GEO tutorials for independent builders?\n\nAs of October 2026, I would prioritize independent SEO researchers, experimental marketing teams, and practitioners who publish reproducible experiments over generic GEO agencies.\n\nThere is an important distinction between three types of content:\n\nExperimental research: Tests whether a particular GEO tactic actually changes AI visibility.\n\nImplementation tutorials: Shows how to execute GEO improvements on a real website or personal brand.\n\nIndustry analysis: Explains how ChatGPT, Perplexity, Gemini and Google AI Overviews discover and recommend sources.\n\nFor an independent builder, the ideal learning source combines the first two.\n\n1. My recommended publishers\n\n1. Seer Interactive — Best for controlled experiments\n\nHighest priority\n\nResearch team / SEO agency · Free research\n\nPublishes experiments testing individual GEO variables.\n\nFocuses on whether changes to content, author information, schema, freshness and page structure affect AI visibility.\n\nIts experimental approach is useful because it attempts to isolate individual factors instead of changing everything simultaneously.\n\nWhy follow: This is closest to the scientific method. You can reproduce its experiments on your own website.\n\nStart with: Seer Interactive experiments and case studies. The article describes its AI Lab and controlled testing methodology.\n\n2. Ahrefs — Best for large-scale quantitative research\n\nHighest priority\n\nSEO software company · Extensive free research\n\nAnalyzed 75,000 brands across millions of AI responses.\n\nExamines relationships between brand mentions, YouTube presence, backlinks and AI visibility.\n\nPublishes practical guides on monitoring ChatGPT mentions and identifying third-party sources.\n\nWhy follow: Its research provides useful quantitative evidence and actionable ideas for content distribution.\n\nRecommended reading:\n\nTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews — 75,000 brands.\n\nHow to Monitor Brand Mentions in ChatGPT — includes a free manual monitoring approach.\n\nAI Search Strategy: 4 Pillars to Show Up More — practical strategy.\n\nImportant limitation: Most of its large-scale findings are correlations, not causal experiments.\n\n3. Kevin Indig / Growth Memo — Best for understanding AI recommendations\n\nHighest priority\n\nIndependent growth researcher · Newsletter and research\n\nStudies how brands appear in AI answers and how users respond to recommendations.\n\nDistinguishes brand mentions, citations, visibility and actual business outcomes.\n\nCollaborates with Semrush on large-scale research.\n\nWhy follow: Many GEO practitioners optimize for citations without understanding whether AI actually recommends their brand. Kevin's work addresses this distinction.\n\nRecommended reading:\n\nAI Halftime Report H1 2026.\n\nAI Visibility Is a Topic-Level Game.\n\nThe Ghost Citations Study — 3,981 domain appearances across 115 prompts and 14 countries.\n\nParticularly useful insight: appearing as a cited source does not guarantee that your brand is mentioned in the answer.\n\n4. Aleyda Solis — Best for structured learning and implementation\n\nHighest priority\n\nIndependent SEO consultant · Free learning resources\n\nCreated a free AI Search Optimization learning roadmap.\n\nCovers GEO fundamentals, content optimization, prompt research, technical SEO, brand authority and measurement.\n\nCurates resources from multiple practitioners rather than restricting learning to her own material.\n\nWhy follow: She provides a structured curriculum, reducing the time spent searching for disconnected tutorials.\n\nRecommended resources:\n\nLearning AI Search — Free Roadmap.\n\nAleyda's AI Search Articles.\n\nAI Search Optimization Framework and Worksheets.\n\n5. Search Engine Land — Best for practitioner experiments and industry developments\n\nIndustry publication · Free articles\n\nPublishes practitioner-led experiments, technical analyses and case studies.\n\nProvides detailed accounts of what worked and what failed.\n\nUseful for discovering emerging tactics and checking whether conventional GEO advice holds up.\n\nWhy follow: It offers a broader range of real-world experiments than most individual newsletters.\n\nStart with: Two GEO Experiments Challenge Conventional AI Visibility Advice (September 2026).\n\nThe article documents two experiments, including a 30-day cold-start SaaS experiment, and reports the relative contribution of listicles, PR and guest posts.\n\n6. Princeton University — Best for foundational scientific evidence\n\nAcademic research · Open research paper\n\nPublished the foundational GEO paper at ACM KDD 2024.\n\nIntroduced GEO-Bench and a framework for measuring visibility in generative engine responses.\n\nExperimented with different content optimization methods.\n\nWhy follow: It provides a research foundation for evaluating GEO tactics instead of relying on marketing claims.\n\nStart with: GEO: Generative Engine Optimization (KDD 2024).\n\nThe paper reported visibility improvements of up to 40% in its experimental setting. This result should not be interpreted as a guaranteed 40% improvement in real-world AI recommendations.\n\n2. Which publishers are most useful for independent builders?\n\nHere is my comparative assessment:\n\nPublisher\n\n\t\n\nExperiments\n\n\t\n\nImplementation\n\n\t\n\nFree learning\n\n\t\n\nBest use\n\n\n\n\nSeer Interactive\n\n\t\n\nExcellent\n\n\t\n\nGood\n\n\t\n\nYes\n\n\t\n\nTesting tactics\n\n\n\n\nAhrefs\n\n\t\n\nExcellent\n\n\t\n\nExcellent\n\n\t\n\nYes\n\n\t\n\nQuantitative research\n\n\n\n\nKevin Indig\n\n\t\n\nExcellent\n\n\t\n\nGood\n\n\t\n\nPartly\n\n\t\n\nStrategy and measurement\n\n\n\n\nAleyda Solis\n\n\t\n\nGood\n\n\t\n\nExcellent\n\n\t\n\nYes\n\n\t\n\nStructured learning\n\n\n\n\nSearch Engine Land\n\n\t\n\nGood\n\n\t\n\nGood\n\n\t\n\nYes\n\n\t\n\nFinding new experiments\n\n\n\n\nPrinceton\n\n\t\n\nExcellent\n\n\t\n\nModerate\n\n\t\n\nYes\n\n\t\n\nScientific foundations\n\nThese ratings are qualitative assessments of their published material, not independently measured scores.\n\n3. Additional resources worth monitoring\n\nThese are useful, although I would assign them lower priority than the six above.\n\nSemrush — AI Search Research. Particularly useful for large datasets and research conducted with Kevin Indig. Its 2026 ghost-citation study is a good example. \nSemrush\n+1\n\nThe GEO Community — Resource directory. Useful for discovering new tutorials, research and practitioners. Evaluate individual contributions rather than assuming everything is independently verified. \nThe GEO Community\n\nGitHub — Awesome GEO. A community-maintained directory of research, documentation and tools. Useful for finding open-source projects. \nGitHub\n\n4. My suggested learning combination\n\n[Personal context omitted.] I would avoid following all these publishers equally.\n\nI would use four as the core learning sources:\n\nRecommended learning stack\n\nAleyda Solis — Learn the framework\n\nFollow the roadmap and understand the different components of GEO.\n\nAhrefs — Understand the data\n\nStudy large-scale research and identify potentially useful optimization factors.\n\nSeer Interactive — Reproduce experiments\n\nSelect individual tactics, formulate hypotheses and run controlled tests.\n\nKevin Indig — Understand the business impact\n\nLearn how to distinguish AI citations, brand recommendations and actual user behavior.\n\n5. One important research principle\n\nGEO is still an evolving field. A lot of published advice is based on correlations, small case studies or vendor-reported results.\n\nFor example:\n\nAhrefs' research involving 75,000 brands identifies strong correlations between brand mentions and AI visibility. It cannot establish that deliberately increasing mentions will cause higher visibility. \nAhrefs\n\nThe Princeton study demonstrates improvements under controlled experimental conditions, with limitations when transferring findings to live AI search systems. \n数字对象标识符\n\nRecent academic reviews also highlight substantial variation across platforms, prompts and measurement methods. \narXiv\n\nI would use the following evidence hierarchy when evaluating a GEO tutorial:\n\nControlled experiments with control groups.\n\nRepeated experiments with disclosed datasets and methodology.\n\nLarge-scale observational research.\n\nCase studies with baseline, timeframe and measurable outcomes.\n\nPractitioner opinions and unverified recommendations.\n\nMy overall recommendation: Build your learning around Aleyda + Ahrefs + Seer, and use Kevin Indig to connect the technical work with business outcomes.\n\n[Personal-context passage omitted from the public copy.]",
-  "notes": "10月30日新会话逐字发送原始Q3，无追加引导。沿用Cursor补测的GPT-6 Medium条件；与Q3第一轮Extra High不同。主页面仍加载失败，从分享预览与来源菜单完整恢复，未创建公开链接。",
+  "answer_text": "Who publishes the best practical, data-backed GEO tutorials for independent builders?\n\nAs of October 2026, I would prioritize independent SEO researchers, experimental marketing teams, and practitioners who publish reproducible experiments over generic GEO agencies.\n\nThere is an important distinction between three types of content:\n\nExperimental research: Tests whether a particular GEO tactic actually changes AI visibility.\n\nImplementation tutorials: Shows how to execute GEO improvements on a real website or personal brand.\n\nIndustry analysis: Explains how ChatGPT, Perplexity, Gemini and Google AI Overviews discover and recommend sources.\n\nFor an independent builder, the ideal learning source combines the first two.\n\n1. My recommended publishers\n\n1. Seer Interactive \u2014 Best for controlled experiments\n\nHighest priority\n\nResearch team / SEO agency \u00b7 Free research\n\nPublishes experiments testing individual GEO variables.\n\nFocuses on whether changes to content, author information, schema, freshness and page structure affect AI visibility.\n\nIts experimental approach is useful because it attempts to isolate individual factors instead of changing everything simultaneously.\n\nWhy follow: This is closest to the scientific method. You can reproduce its experiments on your own website.\n\nStart with: Seer Interactive experiments and case studies. The article describes its AI Lab and controlled testing methodology.\n\n2. Ahrefs \u2014 Best for large-scale quantitative research\n\nHighest priority\n\nSEO software company \u00b7 Extensive free research\n\nAnalyzed 75,000 brands across millions of AI responses.\n\nExamines relationships between brand mentions, YouTube presence, backlinks and AI visibility.\n\nPublishes practical guides on monitoring ChatGPT mentions and identifying third-party sources.\n\nWhy follow: Its research provides useful quantitative evidence and actionable ideas for content distribution.\n\nRecommended reading:\n\nTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews \u2014 75,000 brands.\n\nHow to Monitor Brand Mentions in ChatGPT \u2014 includes a free manual monitoring approach.\n\nAI Search Strategy: 4 Pillars to Show Up More \u2014 practical strategy.\n\nImportant limitation: Most of its large-scale findings are correlations, not causal experiments.\n\n3. Kevin Indig / Growth Memo \u2014 Best for understanding AI recommendations\n\nHighest priority\n\nIndependent growth researcher \u00b7 Newsletter and research\n\nStudies how brands appear in AI answers and how users respond to recommendations.\n\nDistinguishes brand mentions, citations, visibility and actual business outcomes.\n\nCollaborates with Semrush on large-scale research.\n\nWhy follow: Many GEO practitioners optimize for citations without understanding whether AI actually recommends their brand. Kevin's work addresses this distinction.\n\nRecommended reading:\n\nAI Halftime Report H1 2026.\n\nAI Visibility Is a Topic-Level Game.\n\nThe Ghost Citations Study \u2014 3,981 domain appearances across 115 prompts and 14 countries.\n\nParticularly useful insight: appearing as a cited source does not guarantee that your brand is mentioned in the answer.\n\n4. Aleyda Solis \u2014 Best for structured learning and implementation\n\nHighest priority\n\nIndependent SEO consultant \u00b7 Free learning resources\n\nCreated a free AI Search Optimization learning roadmap.\n\nCovers GEO fundamentals, content optimization, prompt research, technical SEO, brand authority and measurement.\n\nCurates resources from multiple practitioners rather than restricting learning to her own material.\n\nWhy follow: She provides a structured curriculum, reducing the time spent searching for disconnected tutorials.\n\nRecommended resources:\n\nLearning AI Search \u2014 Free Roadmap.\n\nAleyda's AI Search Articles.\n\nAI Search Optimization Framework and Worksheets.\n\n5. Search Engine Land \u2014 Best for practitioner experiments and industry developments\n\nIndustry publication \u00b7 Free articles\n\nPublishes practitioner-led experiments, technical analyses and case studies.\n\nProvides detailed accounts of what worked and what failed.\n\nUseful for discovering emerging tactics and checking whether conventional GEO advice holds up.\n\nWhy follow: It offers a broader range of real-world experiments than most individual newsletters.\n\nStart with: Two GEO Experiments Challenge Conventional AI Visibility Advice (September 2026).\n\nThe article documents two experiments, including a 30-day cold-start SaaS experiment, and reports the relative contribution of listicles, PR and guest posts.\n\n6. Princeton University \u2014 Best for foundational scientific evidence\n\nAcademic research \u00b7 Open research paper\n\nPublished the foundational GEO paper at ACM KDD 2024.\n\nIntroduced GEO-Bench and a framework for measuring visibility in generative engine responses.\n\nExperimented with different content optimization methods.\n\nWhy follow: It provides a research foundation for evaluating GEO tactics instead of relying on marketing claims.\n\nStart with: GEO: Generative Engine Optimization (KDD 2024).\n\nThe paper reported visibility improvements of up to 40% in its experimental setting. This result should not be interpreted as a guaranteed 40% improvement in real-world AI recommendations.\n\n2. Which publishers are most useful for independent builders?\n\nHere is my comparative assessment:\n\nPublisher\n\n\t\n\nExperiments\n\n\t\n\nImplementation\n\n\t\n\nFree learning\n\n\t\n\nBest use\n\n\n\n\nSeer Interactive\n\n\t\n\nExcellent\n\n\t\n\nGood\n\n\t\n\nYes\n\n\t\n\nTesting tactics\n\n\n\n\nAhrefs\n\n\t\n\nExcellent\n\n\t\n\nExcellent\n\n\t\n\nYes\n\n\t\n\nQuantitative research\n\n\n\n\nKevin Indig\n\n\t\n\nExcellent\n\n\t\n\nGood\n\n\t\n\nPartly\n\n\t\n\nStrategy and measurement\n\n\n\n\nAleyda Solis\n\n\t\n\nGood\n\n\t\n\nExcellent\n\n\t\n\nYes\n\n\t\n\nStructured learning\n\n\n\n\nSearch Engine Land\n\n\t\n\nGood\n\n\t\n\nGood\n\n\t\n\nYes\n\n\t\n\nFinding new experiments\n\n\n\n\nPrinceton\n\n\t\n\nExcellent\n\n\t\n\nModerate\n\n\t\n\nYes\n\n\t\n\nScientific foundations\n\nThese ratings are qualitative assessments of their published material, not independently measured scores.\n\n3. Additional resources worth monitoring\n\nThese are useful, although I would assign them lower priority than the six above.\n\nSemrush \u2014 AI Search Research. Particularly useful for large datasets and research conducted with Kevin Indig. Its 2026 ghost-citation study is a good example. \nSemrush\n+1\n\nThe GEO Community \u2014 Resource directory. Useful for discovering new tutorials, research and practitioners. Evaluate individual contributions rather than assuming everything is independently verified. \nThe GEO Community\n\nGitHub \u2014 Awesome GEO. A community-maintained directory of research, documentation and tools. Useful for finding open-source projects. \nGitHub\n\n4. My suggested learning combination\n\n[Personal context omitted.] I would avoid following all these publishers equally.\n\nI would use four as the core learning sources:\n\nRecommended learning stack\n\nAleyda Solis \u2014 Learn the framework\n\nFollow the roadmap and understand the different components of GEO.\n\nAhrefs \u2014 Understand the data\n\nStudy large-scale research and identify potentially useful optimization factors.\n\nSeer Interactive \u2014 Reproduce experiments\n\nSelect individual tactics, formulate hypotheses and run controlled tests.\n\nKevin Indig \u2014 Understand the business impact\n\nLearn how to distinguish AI citations, brand recommendations and actual user behavior.\n\n5. One important research principle\n\nGEO is still an evolving field. A lot of published advice is based on correlations, small case studies or vendor-reported results.\n\nFor example:\n\nAhrefs' research involving 75,000 brands identifies strong correlations between brand mentions and AI visibility. It cannot establish that deliberately increasing mentions will cause higher visibility. \nAhrefs\n\nThe Princeton study demonstrates improvements under controlled experimental conditions, with limitations when transferring findings to live AI search systems. \n\u6570\u5b57\u5bf9\u8c61\u6807\u8bc6\u7b26\n\nRecent academic reviews also highlight substantial variation across platforms, prompts and measurement methods. \narXiv\n\nI would use the following evidence hierarchy when evaluating a GEO tutorial:\n\nControlled experiments with control groups.\n\nRepeated experiments with disclosed datasets and methodology.\n\nLarge-scale observational research.\n\nCase studies with baseline, timeframe and measurable outcomes.\n\nPractitioner opinions and unverified recommendations.\n\nMy overall recommendation: Build your learning around Aleyda + Ahrefs + Seer, and use Kevin Indig to connect the technical work with business outcomes.\n\n[Personal-context passage omitted from the public copy.]",
+  "notes": "On October 30, the original Q3 was sent verbatim in a new conversation, with no steering follow-up. It retained Cursor's GPT-6 Medium supplement settings, unlike the first Q3 run's Extra High. The main page still failed to load; the body and sources were recovered from the share preview and source menu without creating a public link.",
   "capture_method": "DOM-backed share-dialog preview; no public share created",
   "citation_mapping_complete": true,
   "attempt_number": 3,
@@ -74,7 +74,7 @@
     },
     {
       "url": "https://learningaisearch.com/",
-      "title": "Learning AI Search — Free Roadmap",
+      "title": "Learning AI Search \u2014 Free Roadmap",
       "domain": "learningaisearch.com",
       "kind": "answer_link"
     },
@@ -122,7 +122,8 @@
     },
     {
       "url": "https://arxiv.org/abs/2607.14035",
-      "title": "arXiv\nOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)\n2026年7月16日",
+      "title": "arXiv\nOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)\n2026\u5e747\u670816\u65e5",
+      "title_en": "arXiv\nOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)\n 2026-07-16",
       "domain": "arxiv.org",
       "kind": "citation_panel_match"
     }
@@ -130,199 +131,232 @@
   "retrieval_sources": [
     {
       "url": "https://firstpagesage.com/seo-blog/the-top-generative-engine-optimization-geo-experts/",
-      "title": "firstpagesage.com\nThe Top Generative Engine Optimization (GEO) Experts  – First Page Sage\n2026年10月26日",
+      "title": "firstpagesage.com\nThe Top Generative Engine Optimization (GEO) Experts\u00a0 \u2013 First Page Sage\n2026\u5e7410\u670826\u65e5",
+      "title_en": "firstpagesage.com\nThe Top Generative Engine Optimization (GEO) Experts\u00a0 \u2013 First Page Sage\n 2026-10-26",
       "domain": "firstpagesage.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.relevance.com/geo-case-studies/",
-      "title": "www.relevance.com\n5 Generative Engine Optimization Case Studies to Learn From in 2026 - Relevance\n2026年10月13日",
+      "title": "www.relevance.com\n5 Generative Engine Optimization Case Studies to Learn From in 2026 - Relevance\n2026\u5e7410\u670813\u65e5",
+      "title_en": "www.relevance.com\n5 Generative Engine Optimization Case Studies to Learn From in 2026 - Relevance\n 2026-10-13",
       "domain": "www.relevance.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
-      "title": "searchengineland.com\nTwo GEO experiments challenge conventional AI visibility advice\n2026年9月14日",
+      "title": "searchengineland.com\nTwo GEO experiments challenge conventional AI visibility advice\n2026\u5e749\u670814\u65e5",
+      "title_en": "searchengineland.com\nTwo GEO experiments challenge conventional AI visibility advice\n 2026-09-14",
       "domain": "searchengineland.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://help.ahrefs.com/en/articles/11064852-what-is-brand-radar-and-how-to-use-it",
-      "title": "help.ahrefs.com\nWhat is Brand Radar, and how to use it? | Help Center - Ahrefs\n2026年9月3日",
+      "title": "help.ahrefs.com\nWhat is Brand Radar, and how to use it? | Help Center - Ahrefs\n2026\u5e749\u67083\u65e5",
+      "title_en": "help.ahrefs.com\nWhat is Brand Radar, and how to use it? | Help Center - Ahrefs\n 2026-09-03",
       "domain": "help.ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook",
-      "title": "github.com\nGitHub - ferinazumaDEV/generative-engine-optimization-handbook: The complete, free, open reference on Generative Engine Optimization (GEO): how to get your content cited by AI answer engines — ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot. Every claim sourced or flagged needs-verification; CI checks the graded claims table and every link. CC BY-SA 4.0. · GitHub\n2026年8月25日",
+      "title": "github.com\nGitHub - ferinazumaDEV/generative-engine-optimization-handbook: The complete, free, open reference on Generative Engine Optimization (GEO): how to get your content cited by AI answer engines \u2014 ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot. Every claim sourced or flagged needs-verification; CI checks the graded claims table and every link. CC BY-SA 4.0. \u00b7 GitHub\n2026\u5e748\u670825\u65e5",
+      "title_en": "github.com\nGitHub - ferinazumaDEV/generative-engine-optimization-handbook: The complete, free, open reference on Generative Engine Optimization (GEO): how to get your content cited by AI answer engines \u2014 ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot. Every claim sourced or flagged needs-verification; CI checks the graded claims table and every link. CC BY-SA 4.0. \u00b7 GitHub\n 2026-08-25",
       "domain": "github.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://content.delphi.co/aleyda-solis/how-to-optimize-your-content-for-be66dad15a8c",
-      "title": "content.delphi.co\nHow to Optimize your Content for AI Search (GEO, AEO) · Aleyda Solis\n2026年8月15日",
+      "title": "content.delphi.co\nHow to Optimize your Content for AI Search (GEO, AEO) \u00b7 Aleyda Solis\n2026\u5e748\u670815\u65e5",
+      "title_en": "content.delphi.co\nHow to Optimize your Content for AI Search (GEO, AEO) \u00b7 Aleyda Solis\n 2026-08-15",
       "domain": "content.delphi.co",
       "kind": "retrieved_source"
     },
     {
       "url": "https://content.delphi.co/aleyda-solis/how-to-communicate-and-sell-ai-ce425189e4e2",
-      "title": "content.delphi.co\nHow to Communicate and Sell AI Search Optimization (GEO, AEO, LLMO) to Decision Makers · Aleyda Solis\n2026年8月8日",
+      "title": "content.delphi.co\nHow to Communicate and Sell AI Search Optimization (GEO, AEO, LLMO) to Decision Makers \u00b7 Aleyda Solis\n2026\u5e748\u67088\u65e5",
+      "title_en": "content.delphi.co\nHow to Communicate and Sell AI Search Optimization (GEO, AEO, LLMO) to Decision Makers \u00b7 Aleyda Solis\n 2026-08-08",
       "domain": "content.delphi.co",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.semrush.com/blog/chatgpt-topical-focus-study/",
-      "title": "www.semrush.com\nHow topical authority spreads (and where it doesn’t) in ChatGPT [Study]\n2026年8月3日",
+      "title": "www.semrush.com\nHow topical authority spreads (and where it doesn\u2019t) in ChatGPT [Study]\n2026\u5e748\u67083\u65e5",
+      "title_en": "www.semrush.com\nHow topical authority spreads (and where it doesn\u2019t) in ChatGPT [Study]\n 2026-08-03",
       "domain": "www.semrush.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.searchenginejournal.com/89-of-ai-search-demand-has-no-clear-owner-use-this-before-the-window-closes/583255/",
-      "title": "www.searchenginejournal.com\n89% Of AI Search Demand Has No Clear Owner: Use This Before The Window Closes\n2026年7月29日",
+      "title": "www.searchenginejournal.com\n89% Of AI Search Demand Has No Clear Owner: Use This Before The Window Closes\n2026\u5e747\u670829\u65e5",
+      "title_en": "www.searchenginejournal.com\n89% Of AI Search Demand Has No Clear Owner: Use This Before The Window Closes\n 2026-07-29",
       "domain": "www.searchenginejournal.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.growth-memo.com/p/ai-halftime-report-h1-2026",
-      "title": "www.growth-memo.com\nAI Halftime Report: H1 2026 - by Kevin Indig - Growth Memo\n2026年7月27日",
+      "title": "www.growth-memo.com\nAI Halftime Report: H1 2026 - by Kevin Indig - Growth Memo\n2026\u5e747\u670827\u65e5",
+      "title_en": "www.growth-memo.com\nAI Halftime Report: H1 2026 - by Kevin Indig - Growth Memo\n 2026-07-27",
       "domain": "www.growth-memo.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.tryprofound.com/articles/top-experts-in-generative-engine-optimization",
-      "title": "www.tryprofound.com\nThe 2026 A-list of generative engine optimization (GEO) experts\n2026年7月26日",
+      "title": "www.tryprofound.com\nThe 2026 A-list of generative engine optimization (GEO) experts\n2026\u5e747\u670826\u65e5",
+      "title_en": "www.tryprofound.com\nThe 2026 A-list of generative engine optimization (GEO) experts\n 2026-07-26",
       "domain": "www.tryprofound.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-search-strategy/",
-      "title": "ahrefs.com\nAI Search Strategy: 4 Pillars to Show Up More (and Right) in AI Answers\n2026年7月24日",
+      "title": "ahrefs.com\nAI Search Strategy: 4 Pillars to Show Up More (and Right) in AI Answers\n2026\u5e747\u670824\u65e5",
+      "title_en": "ahrefs.com\nAI Search Strategy: 4 Pillars to Show Up More (and Right) in AI Answers\n 2026-07-24",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.semrush.com/blog/chatgpt-topic-authority-study/",
-      "title": "www.semrush.com\nAI visibility is a topic-level game: A study of 50,000 brands in ChatGPT [Study]\n2026年7月20日",
+      "title": "www.semrush.com\nAI visibility is a topic-level game: A study of 50,000 brands in ChatGPT [Study]\n2026\u5e747\u670820\u65e5",
+      "title_en": "www.semrush.com\nAI visibility is a topic-level game: A study of 50,000 brands in ChatGPT [Study]\n 2026-07-20",
       "domain": "www.semrush.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://arxiv.org/abs/2607.14035",
-      "title": "arxiv.org\nOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)\n2026年7月16日",
+      "title": "arxiv.org\nOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)\n2026\u5e747\u670816\u65e5",
+      "title_en": "arxiv.org\nOptimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)\n 2026-07-16",
       "domain": "arxiv.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.semrush.com/blog/the-ghost-citations-study/",
-      "title": "www.semrush.com\nWhy 62% of AI citations don’t lead to brand mentions [Study]\n2026年6月9日",
+      "title": "www.semrush.com\nWhy 62% of AI citations don\u2019t lead to brand mentions [Study]\n2026\u5e746\u67089\u65e5",
+      "title_en": "www.semrush.com\nWhy 62% of AI citations don\u2019t lead to brand mentions [Study]\n 2026-06-09",
       "domain": "www.semrush.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://arxiv.org/abs/2604.27790",
-      "title": "arxiv.org\nHow Generative AI Disrupts Search: An Empirical Study of Google Search, Gemini, and AI Overviews\n2026年4月30日",
+      "title": "arxiv.org\nHow Generative AI Disrupts Search: An Empirical Study of Google Search, Gemini, and AI Overviews\n2026\u5e744\u670830\u65e5",
+      "title_en": "arxiv.org\nHow Generative AI Disrupts Search: An Empirical Study of Google Search, Gemini, and AI Overviews\n 2026-04-30",
       "domain": "arxiv.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/",
-      "title": "thegeocommunity.com\nBest GEO Resources, Courses & Tutorials [2026] | The GEO Community\n2026年4月24日",
+      "title": "thegeocommunity.com\nBest GEO Resources, Courses & Tutorials [2026] | The GEO Community\n2026\u5e744\u670824\u65e5",
+      "title_en": "thegeocommunity.com\nBest GEO Resources, Courses & Tutorials [2026] | The GEO Community\n 2026-04-24",
       "domain": "thegeocommunity.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://www.seerinteractive.com/insights/seer-interactive-launches-local-ai-optimization-internship-program-launchpad-partnership",
-      "title": "www.seerinteractive.com\nSeer Interactive Launches Local GEO Academy\n2026年4月24日",
+      "title": "www.seerinteractive.com\nSeer Interactive Launches Local GEO Academy\n2026\u5e744\u670824\u65e5",
+      "title_en": "www.seerinteractive.com\nSeer Interactive Launches Local GEO Academy\n 2026-04-24",
       "domain": "www.seerinteractive.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://learningaisearch.com/",
-      "title": "learningaisearch.com\nLearn AI Search: The Free AI Search Optimization Roadmap\n2026年3月20日",
+      "title": "learningaisearch.com\nLearn AI Search: The Free AI Search Optimization Roadmap\n2026\u5e743\u670820\u65e5",
+      "title_en": "learningaisearch.com\nLearn AI Search: The Free AI Search Optimization Roadmap\n 2026-03-20",
       "domain": "learningaisearch.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://learningaisearch.com/",
-      "title": "learningaisearch.com\nLearn AI Search: The Free AI Search Optimization Roadmap\n2026年3月20日",
+      "title": "learningaisearch.com\nLearn AI Search: The Free AI Search Optimization Roadmap\n2026\u5e743\u670820\u65e5",
+      "title_en": "learningaisearch.com\nLearn AI Search: The Free AI Search Optimization Roadmap\n 2026-03-20",
       "domain": "learningaisearch.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/monitor-brand-mentions-chatgpt/",
-      "title": "ahrefs.com\nHow to Monitor Brand Mentions in ChatGPT\n2026年2月26日",
+      "title": "ahrefs.com\nHow to Monitor Brand Mentions in ChatGPT\n2026\u5e742\u670826\u65e5",
+      "title_en": "ahrefs.com\nHow to Monitor Brand Mentions in ChatGPT\n 2026-02-26",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/brand-radar-methodology/",
-      "title": "ahrefs.com\nAhrefs Brand Radar Methodology: How we collect and model AI visibility data\n2026年2月26日",
+      "title": "ahrefs.com\nAhrefs Brand Radar Methodology: How we collect and model AI visibility data\n2026\u5e742\u670826\u65e5",
+      "title_en": "ahrefs.com\nAhrefs Brand Radar Methodology: How we collect and model AI visibility data\n 2026-02-26",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-brand-visibility-correlations/",
-      "title": "ahrefs.com\nTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied)\n2025年12月12日",
+      "title": "ahrefs.com\nTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied)\n2025\u5e7412\u670812\u65e5",
+      "title_en": "ahrefs.com\nTop Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews (75k Brands Studied)\n 2025-12-12",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-citations-vs-impressions-study/",
-      "title": "ahrefs.com\nDo AI Assistants Link When Mentioning Brands? For Ahrefs, Only 28% of the Time\n2025年11月26日",
+      "title": "ahrefs.com\nDo AI Assistants Link When Mentioning Brands? For Ahrefs, Only 28% of the Time\n2025\u5e7411\u670826\u65e5",
+      "title_en": "ahrefs.com\nDo AI Assistants Link When Mentioning Brands? For Ahrefs, Only 28% of the Time\n 2025-11-26",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-visibility/",
-      "title": "ahrefs.com\nThe Complete AI Visibility Guide for SEOs, Marketers, and Site Owners\n2025年9月16日",
+      "title": "ahrefs.com\nThe Complete AI Visibility Guide for SEOs, Marketers, and Site Owners\n2025\u5e749\u670816\u65e5",
+      "title_en": "ahrefs.com\nThe Complete AI Visibility Guide for SEOs, Marketers, and Site Owners\n 2025-09-16",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://doi.org/10.48550/arXiv.2509.08919",
-      "title": "doi.org\n[2509.08919] Generative Engine Optimization: How to Dominate AI Search\n2025年9月10日",
+      "title": "doi.org\n[2509.08919] Generative Engine Optimization: How to Dominate AI Search\n2025\u5e749\u670810\u65e5",
+      "title_en": "doi.org\n[2509.08919] Generative Engine Optimization: How to Dominate AI Search\n 2025-09-10",
       "domain": "doi.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/llm-search/",
-      "title": "ahrefs.com\nWhat We Actually Know About Optimizing for LLM Search\n2025年9月2日",
+      "title": "ahrefs.com\nWhat We Actually Know About Optimizing for LLM Search\n2025\u5e749\u67082\u65e5",
+      "title_en": "ahrefs.com\nWhat We Actually Know About Optimizing for LLM Search\n 2025-09-02",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://learningaisearch.com/about/",
-      "title": "learningaisearch.com\nAbout LearningAIsearch.com - By Aleyda Solis\n2025年7月9日",
+      "title": "learningaisearch.com\nAbout LearningAIsearch.com - By Aleyda Solis\n2025\u5e747\u67089\u65e5",
+      "title_en": "learningaisearch.com\nAbout LearningAIsearch.com - By Aleyda Solis\n 2025-07-09",
       "domain": "learningaisearch.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/?LanguageId=1",
-      "title": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n2025年5月26日",
+      "title": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n2025\u5e745\u670826\u65e5",
+      "title_en": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n 2025-05-26",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/",
-      "title": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n2025年5月26日",
+      "title": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n2025\u5e745\u670826\u65e5",
+      "title_en": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n 2025-05-26",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/",
-      "title": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n2025年5月26日",
+      "title": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n2025\u5e745\u670826\u65e5",
+      "title_en": "ahrefs.com\nAn Analysis of AI Overview Brand Visibility Factors (75K Brands Studied)\n 2025-05-26",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://doi.org/10.1145/3637528.3671900",
-      "title": "doi.org\nGEO: Generative Engine Optimization | Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining\n2024年8月24日",
+      "title": "doi.org\nGEO: Generative Engine Optimization | Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining\n2024\u5e748\u670824\u65e5",
+      "title_en": "doi.org\nGEO: Generative Engine Optimization | Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining\n 2024-08-24",
       "domain": "doi.org",
       "kind": "retrieved_source"
     },
     {
       "url": "https://hub.seofomo.co/about/",
-      "title": "hub.seofomo.co\nAbout SEOFOMO & The SEOFOMO Hub\n2023年9月25日",
+      "title": "hub.seofomo.co\nAbout SEOFOMO & The SEOFOMO Hub\n2023\u5e749\u670825\u65e5",
+      "title_en": "hub.seofomo.co\nAbout SEOFOMO & The SEOFOMO Hub\n 2023-09-25",
       "domain": "hub.seofomo.co",
       "kind": "retrieved_source"
     },
@@ -334,7 +368,7 @@
     },
     {
       "url": "https://www.sjarmak.ai/projects/geo",
-      "title": "www.sjarmak.ai\nGEO: Generative Engine Optimization — Stephanie Jarmak",
+      "title": "www.sjarmak.ai\nGEO: Generative Engine Optimization \u2014 Stephanie Jarmak",
       "domain": "www.sjarmak.ai",
       "kind": "retrieved_source"
     },
@@ -346,13 +380,13 @@
     },
     {
       "url": "https://geoexperiment.com/",
-      "title": "geoexperiment.com\nGeoExperiment — Live LLM Citation Experiments | GEO & AEO Tracking",
+      "title": "geoexperiment.com\nGeoExperiment \u2014 Live LLM Citation Experiments | GEO & AEO Tracking",
       "domain": "geoexperiment.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://latentanalytics.com.au/geo-case-studies/",
-      "title": "latentanalytics.com.au\nGEO Case Studies & Client Results – Latent Analytics",
+      "title": "latentanalytics.com.au\nGEO Case Studies & Client Results \u2013 Latent Analytics",
       "domain": "latentanalytics.com.au",
       "kind": "retrieved_source"
     },
@@ -364,19 +398,19 @@
     },
     {
       "url": "https://github.com/marketingtoolslist/awesome-geo",
-      "title": "github.com\nGitHub - marketingtoolslist/awesome-geo: A curated list of resources for Generative Engine Optimization (GEO) · GitHub",
+      "title": "github.com\nGitHub - marketingtoolslist/awesome-geo: A curated list of resources for Generative Engine Optimization (GEO) \u00b7 GitHub",
       "domain": "github.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/07-research-cases.md",
-      "title": "github.com\ngenerative-engine-optimization-handbook/docs/07-research-cases.md at main · ferinazumaDEV/generative-engine-optimization-handbook · GitHub",
+      "title": "github.com\ngenerative-engine-optimization-handbook/docs/07-research-cases.md at main \u00b7 ferinazumaDEV/generative-engine-optimization-handbook \u00b7 GitHub",
       "domain": "github.com",
       "kind": "retrieved_source"
     },
     {
       "url": "https://ahrefs.com/blog/category/ai-search/",
-      "title": "ahrefs.com\nAI Search — Ahrefs Blog",
+      "title": "ahrefs.com\nAI Search \u2014 Ahrefs Blog",
       "domain": "ahrefs.com",
       "kind": "retrieved_source"
     },
@@ -406,7 +440,7 @@
     },
     {
       "url": "https://substack.com/profile/556308-kevin-indig/note/c-298265127",
-      "title": "substack.com\nKevin Indig (@kevinindig): \"The most cited domain in ChatGPT answers is rarely the most mentioned brand. * In the Semrush dataset I analyzed for this week's Growth Memo (1,094 US categories, +600k ChatGPT citations, Jan through Jun 2026), the correlation between citations and brand mentions came out sligh…\"",
+      "title": "substack.com\nKevin Indig (@kevinindig): \"The most cited domain in ChatGPT answers is rarely the most mentioned brand. * In the Semrush dataset I analyzed for this week's Growth Memo (1,094 US categories, +600k ChatGPT citations, Jan through Jun 2026), the correlation between citations and brand mentions came out sligh\u2026\"",
       "domain": "substack.com",
       "kind": "retrieved_source"
     },
@@ -430,8 +464,8 @@
       "citation": false,
       "mention": true,
       "recommendation": true,
-      "evidence": "Seer Interactive — Best for controlled experiments",
-      "notes": "明确主动推荐Seer，但推荐锚点实际指向第三方Relevance的文章；来源区没有Seer自有作品，故C=false，保留锚点错配。",
+      "evidence": "Seer Interactive \u2014 Best for controlled experiments",
+      "notes": "Seer is explicitly recommended, but the recommendation anchor points to a third-party Relevance article. No Seer own-content work appears in the cited-source section, so C=false. The anchor mismatch is preserved.",
       "source_urls": [
         "https://www.relevance.com/geo-case-studies/"
       ]
@@ -442,8 +476,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Ahrefs — Best for large-scale quantitative research",
-      "notes": "三篇Ahrefs自有正文直链，明确推荐。",
+      "evidence": "Ahrefs \u2014 Best for large-scale quantitative research",
+      "notes": "Three direct links to Ahrefs' own content appear in the body, with an explicit recommendation.",
       "source_urls": [
         "https://ahrefs.com/blog/ai-brand-visibility-correlations/",
         "https://ahrefs.com/blog/monitor-brand-mentions-chatgpt/",
@@ -456,8 +490,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Kevin Indig / Growth Memo — Best for understanding AI recommendations",
-      "notes": "正文推荐其研究并明确列三篇文章；Growth Memo首页/文章为自有内容，Semrush两篇仅按回答对其研究的归属记录，未外查作者署名。",
+      "evidence": "Kevin Indig / Growth Memo \u2014 Best for understanding AI recommendations",
+      "notes": "The body recommends the research and explicitly lists three articles. The Growth Memo homepage/article is own content. The two Semrush articles are recorded only according to the answer's attribution of the research; external author bylines were not checked.",
       "source_urls": [
         "https://www.growth-memo.com/p/ai-halftime-report-h1-2026",
         "https://www.semrush.com/blog/the-ghost-citations-study/",
@@ -470,8 +504,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Aleyda Solis — Best for structured learning and implementation",
-      "notes": "按旧记录统一作者与学习站点，自有博客/路线图三个正文直链。",
+      "evidence": "Aleyda Solis \u2014 Best for structured learning and implementation",
+      "notes": "The author and learning site are normalized to one entity as in earlier records, with three direct body links to the author's blog/roadmap.",
       "source_urls": [
         "https://www.aleydasolis.com/en/blog/",
         "https://www.aleydasolis.com/en/category/ai-search/",
@@ -484,7 +518,7 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Search Engine Land — Best for practitioner experiments and industry developments",
+      "evidence": "Search Engine Land \u2014 Best for practitioner experiments and industry developments",
       "notes": "",
       "source_urls": [
         "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
@@ -496,8 +530,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Princeton University — Best for foundational scientific evidence",
-      "notes": "Princeton与研究组/原始GEO论文统一为同一研究主体，避免大学与作者机构重复计推荐。",
+      "evidence": "Princeton University \u2014 Best for foundational scientific evidence",
+      "notes": "Princeton, the research team and original GEO paper are one study entity, avoiding duplicate recommendation counts for the university and author institutions.",
       "source_urls": [
         "https://doi.org/10.1145/3637528.3671900"
       ]
@@ -508,8 +542,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Semrush — AI Search Research.",
-      "notes": "列为值得监测的额外资源，主动建议虽优先级较低仍R=true。",
+      "evidence": "Semrush \u2014 AI Search Research.",
+      "notes": "Listed as an additional resource worth monitoring. The active suggestion is lower priority but still supports R=true.",
       "source_urls": [
         "https://www.semrush.com/blog/chatgpt-topic-authority-study/",
         "https://www.semrush.com/blog/the-ghost-citations-study/",
@@ -522,7 +556,7 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "The GEO Community — Resource directory.",
+      "evidence": "The GEO Community \u2014 Resource directory.",
       "notes": "",
       "source_urls": [
         "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
@@ -534,8 +568,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "GitHub — Awesome GEO.",
-      "notes": "与Q1相同仓库资源统一；GitHub只是托管平台不另算作者/推荐。",
+      "evidence": "GitHub \u2014 Awesome GEO.",
+      "notes": "Normalized to the same repository resource as Q1. GitHub is only the host, not another author or recommendation.",
       "source_urls": [
         "https://github.com/marketingtoolslist/awesome-geo"
       ]
@@ -547,7 +581,7 @@
       "mention": false,
       "recommendation": false,
       "evidence": "Recent academic reviews also highlight substantial variation across platforms, prompts and measurement methods.",
-      "notes": "正文arXiv引用胶囊与来源区同一综述对应，按已有论文ID统一；正文未点名作者，无主动阅读建议。",
+      "notes": "The arXiv citation capsule in the body matches the same review in the cited-source section, normalized using the existing paper ID. The author is not named in the body, and there is no active reading suggestion.",
       "source_urls": [
         "https://arxiv.org/abs/2607.14035"
       ]
@@ -559,7 +593,7 @@
       "mention": false,
       "recommendation": false,
       "evidence": "Seer Interactive experiments and case studies.",
-      "notes": "AI将Seer推荐锚点指向Relevance第三方案例文章。该出版者内容实际被用作来源，但正文没有点名或主动推荐Relevance。",
+      "notes": "The AI's Seer recommendation anchor points to a third-party Relevance case-study article. That publisher's content is actually used as a source, but Relevance is neither named nor actively recommended in the body.",
       "source_urls": [
         "https://www.relevance.com/geo-case-studies/"
       ]
@@ -577,11 +611,11 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 8562,
       "source_count": 16,
-      "notes": "10月30日新会话逐字发送原始Q3，无追加引导。沿用Cursor补测的GPT-6 Medium条件；与Q3第一轮Extra High不同。主页面仍加载失败，从分享预览与来源菜单完整恢复，未创建公开链接。",
+      "notes": "On October 30, the original Q3 was sent verbatim in a new conversation, with no steering follow-up. It retained Cursor's GPT-6 Medium supplement settings, unlike the first Q3 run's Extra High. The main page still failed to load; the body and sources were recovered from the share preview and source menu without creating a public link.",
       "capture_kind": "initial_export",
       "selected": false,
       "file": "data/captures/C-Q3-R2-A3-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R2-A3-recovery-01",
@@ -593,11 +627,11 @@
       "body_completeness": "completed",
       "answer_chars": 8562,
       "source_count": 15,
-      "notes": "10月30日新会话逐字发送原始Q3，无追加引导。沿用Cursor补测的GPT-6 Medium条件；与Q3第一轮Extra High不同。主页面仍加载失败，从分享预览与来源菜单完整恢复，未创建公开链接。",
+      "notes": "On October 30, the original Q3 was sent verbatim in a new conversation, with no steering follow-up. It retained Cursor's GPT-6 Medium supplement settings, unlike the first Q3 run's Extra High. The main page still failed to load; the body and sources were recovered from the share preview and source menu without creating a public link.",
       "capture_kind": "share_preview",
       "selected": true,
       "file": "data/captures/C-Q3-R2-A3-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     }
   ],
   "capture_provenance": {
@@ -606,9 +640,9 @@
     "method": "DOM-backed share-dialog preview; no public share created",
     "captured_at": "2026-10-30T05:03:46.255Z",
     "same_conversation": true,
-    "review_notes": "10月30日新会话逐字发送原始Q3，无追加引导。沿用Cursor补测的GPT-6 Medium条件；与Q3第一轮Extra High不同。主页面仍加载失败，从分享预览与来源菜单完整恢复，未创建公开链接。",
+    "review_notes": "On October 30, the original Q3 was sent verbatim in a new conversation, with no steering follow-up. It retained Cursor's GPT-6 Medium supplement settings, unlike the first Q3 run's Extra High. The main page still failed to load; the body and sources were recovered from the share preview and source menu without creating a public link.",
     "selected_capture_file": "data/records/C-Q3-R2-A3.json"
   },
   "public_copy": true,
-  "personalization_evidence": "[个人上下文片段已省略；保留观察到账号上下文影响这一事实。]"
+  "personalization_evidence": "[Personal-context passages omitted; the observed influence of account context is retained.]"
 }

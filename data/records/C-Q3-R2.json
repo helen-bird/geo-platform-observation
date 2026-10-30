@@ -7,18 +7,18 @@
   "started_at": "2026-10-29T09:47:57.158Z",
   "finished_at": "2026-10-29T10:21:08.814Z",
   "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
-  "submitted_prompt": "@网页搜索 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
-  "observed_submitted_prompt": "@网页搜索 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_prompt": "@\u7f51\u9875\u641c\u7d22 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "observed_submitted_prompt": "@\u7f51\u9875\u641c\u7d22 Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
   "normalized_submitted_prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
   "submitted_prompt_provenance": "raw_record",
-  "mode_label": "网页搜索 · Extra High",
-  "model_label": "GPT-6（界面选择标签）",
-  "model_evidence": "模型菜单GPT-6 checked；极高思考强度",
+  "mode_label": "Web Search \u00b7 Extra High",
+  "model_label": "GPT-6 (UI selection label)",
+  "model_evidence": "GPT-6 was checked in the model menu, with Extra High reasoning effort.",
   "search_status": "observed",
-  "search_evidence": "已搜索 12 个网站",
+  "search_evidence": "The UI reported that 12 websites had been searched.",
   "status": "incomplete",
-  "answer_text": "Practical, data-backed GEO resources for independent builders\n\nFor independent builders, I would prioritize publishers that combine repeatable experiments, step-by-step implementation guides, and measurable outcomes. GEO (Generative Engine Optimization) aims to improve how often AI-powered search and answer engines mention, recommend, or cite your brand and content.\n\nThe most useful resources fall into three groups:\n\nPractical tutorials: how to change content, publish evidence, and improve discoverability.\n\nData-driven research: what actually changes AI mentions and citations, supported by experiments or observational data.\n\nMeasurement frameworks: how to determine whether your work produces a real improvement.\n\nOne important caveat: GEO is still an emerging field. A tactic that improves citations in one experiment may not work across ChatGPT, Perplexity, Gemini, and Google AI Overviews. The original GEO research introduced measurable content-optimization techniques, while later research continues to examine their limitations and generalizability. 【turn522626search7】【turn522626academia30】",
-  "notes": "分享预览只恢复1105字符的开头说明，未出现具体创作者推荐主体，未补齐正文。",
+  "answer_text": "Practical, data-backed GEO resources for independent builders\n\nFor independent builders, I would prioritize publishers that combine repeatable experiments, step-by-step implementation guides, and measurable outcomes. GEO (Generative Engine Optimization) aims to improve how often AI-powered search and answer engines mention, recommend, or cite your brand and content.\n\nThe most useful resources fall into three groups:\n\nPractical tutorials: how to change content, publish evidence, and improve discoverability.\n\nData-driven research: what actually changes AI mentions and citations, supported by experiments or observational data.\n\nMeasurement frameworks: how to determine whether your work produces a real improvement.\n\nOne important caveat: GEO is still an emerging field. A tactic that improves citations in one experiment may not work across ChatGPT, Perplexity, Gemini, and Google AI Overviews. The original GEO research introduced measurable content-optimization techniques, while later research continues to examine their limitations and generalizability. \u3010turn522626search7\u3011\u3010turn522626academia30\u3011",
+  "notes": "The share preview recovered only an 1105-character introduction, with no specific creator recommendation entries. The full answer text was not recovered.",
   "capture_method": "DOM-backed share-dialog preview; no public share created",
   "citation_mapping_complete": false,
   "attempt_number": 1,
@@ -42,11 +42,11 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 1132,
       "source_count": 0,
-      "notes": "存储正文仅开头说明，无完整推荐名单；官方read_thread记录与网页交叉检查。保留失败记录，不进入推荐频次统计。",
+      "notes": "The stored answer text contained only an introduction, without a complete recommendation list. The official read_thread record was cross-checked against the web page. The failed attempt is retained and excluded from recommendation-frequency statistics.",
       "capture_kind": "initial_export",
       "selected": false,
       "file": "data/captures/C-Q3-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R2-recovery-01",
@@ -58,11 +58,11 @@
       "body_completeness": "partial",
       "answer_chars": 1105,
       "source_count": 0,
-      "notes": "分享预览只恢复1105字符的开头说明，未出现具体创作者推荐主体，未补齐正文。",
+      "notes": "The share preview recovered only an 1105-character introduction, with no specific creator recommendation entries. The full answer text was not recovered.",
       "capture_kind": "share_preview",
       "selected": true,
       "file": "data/captures/C-Q3-R2-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     }
   ],
   "capture_provenance": {
@@ -71,7 +71,7 @@
     "method": "DOM-backed share-dialog preview; no public share created",
     "captured_at": "2026-10-29T10:21:08.814Z",
     "same_conversation": true,
-    "review_notes": "分享预览只恢复1105字符的开头说明，未出现具体创作者推荐主体，未补齐正文。",
+    "review_notes": "The share preview recovered only an 1105-character introduction, with no specific creator recommendation entries. The full answer text was not recovered.",
     "selected_capture_file": "data/records/C-Q3-R2.json"
   },
   "public_copy": true

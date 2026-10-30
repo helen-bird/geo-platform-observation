@@ -8,10 +8,10 @@
   "body_completeness": "completed",
   "answer_chars": 7286,
   "source_count": 10,
-  "notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。学习计划为四周（Week1–4）而非两周 Days 格式；分享对话框创建公开链接。编码尚未完成。replacement for C-Q1-R2 / C-Q1-R2-A2。\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。\n当前正文采用现场DOM预览，恢复了原导出遗漏的portfolio结尾句；保存HTML完整fallback（含额外续问建议与标记）另作原始证据保留。",
+  "notes": "Historical note (Cursor had not yet coded this record; coding is now complete): 2026-10-29 web supplement using GPT-6 + Web Search. The plan covers four weeks (Weeks 1\u20134), rather than a two-week Days format. A public link was created through the share dialog. Coding was not yet complete. Replacement for C-Q1-R2 / C-Q1-R2-A2.\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\nCitations and individual observations were reviewed on October 30; Cursor's original files and all recovery captures remain preserved locally.\nThe selected body now uses a live DOM preview, which recovered the final portfolio sentence missing from the earlier export. The complete saved HTML fallback, including additional follow-up suggestions and markers, remains separate original evidence.",
   "capture_kind": "share_preview",
   "selected": true,
   "attempt_in_main_sample": true,
   "file": "data/captures/C-Q1-R2-A3-live-20261030-01.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

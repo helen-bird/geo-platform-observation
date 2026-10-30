@@ -8,10 +8,10 @@
   "body_completeness": "completed",
   "answer_chars": 5946,
   "source_count": 10,
-  "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+  "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
   "capture_kind": "initial_export",
   "selected": true,
   "attempt_in_main_sample": true,
   "file": "data/captures/G-Q1-R1-legacy-01.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

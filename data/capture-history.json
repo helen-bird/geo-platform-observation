@@ -11,12 +11,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 7050,
       "source_count": 5,
-      "notes": "2026-10-29 网页端 GPT-6 + 网页搜索补测。两周计划完整到 Days11–14；分享对话框创建公开链接（已记录 share_url）。思考强度为 Medium，与早期 Extra High 不同。编码尚未完成。",
+      "notes": "2026-10-29 web supplement using GPT-6 + Web Search. The two-week plan reaches Days 11\u201314. A public link was created through the share dialog (share_url was recorded). Reasoning effort was Medium, unlike the earlier Extra High setting. Coding was not yet complete.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q1-R1-A2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R1-legacy-01",
@@ -28,12 +28,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 7807,
       "source_count": 9,
-      "notes": "网页正文显示“无法加载此回复”。通过官方 read_thread 读取同一会话存储的 completed 回复；未重发、未追加问题。原文包含不可解析的引用内部标记；已保存全部明确URL。回答明确提及原问题未提供的个人上下文，存在账户个性化影响。网页搜索由工具芯片启用，UI存储提示前缀 @网页搜索。 已采集记录末尾学习计划仅到 Days 4–6；未补写后续，完整呈现状态无法独立保证。",
+      "notes": "The web answer displayed a reply-loading error (original UI: \\u65e0\\u6cd5\\u52a0\\u8f7d\\u6b64\\u56de\\u590d). The official read_thread tool was used to read a reply stored as completed in the same conversation; the question was neither resubmitted nor supplemented. The text contained unresolvable internal citation markers; all explicit URLs were saved. The answer explicitly referred to personal context absent from the original question, indicating account personalization. Web search was enabled through a tool chip, and the stored UI prompt had a prefix (original UI: @\\u7f51\\u9875\\u641c\\u7d22). The learning plan at the end of the captured record stopped at Days 4\u20136. No continuation was added, and complete rendering could not be independently guaranteed.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q1-R1-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R2-A2-legacy-01",
@@ -45,12 +45,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 894,
       "source_count": 0,
-      "notes": "补测仍仅恢复到894字符的开头段落，没有推荐清单；同一原题与搜索模式；不纳入推荐统计。桌面界面自动读取权限受限。",
+      "notes": "The additional attempt again yielded only an 894-character opening passage, with no recommendation list. It used the same original question and search mode and is excluded from recommendation statistics. Automated read access to the desktop interface was restricted.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q1-R2-A2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R2-A3-legacy-01",
@@ -62,12 +62,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 7922,
       "source_count": 10,
-      "notes": "2026-10-29 网页端 GPT-6 + 网页搜索补测。学习计划为四周（Week1–4）而非两周 Days 格式；分享对话框创建公开链接。编码尚未完成。replacement for C-Q1-R2 / C-Q1-R2-A2。",
+      "notes": "2026-10-29 web supplement using GPT-6 + Web Search. The plan covers four weeks (Weeks 1\u20134), rather than a two-week Days format. A public link was created through the share dialog. Coding was not yet complete. Replacement for C-Q1-R2 / C-Q1-R2-A2.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q1-R2-A3-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R2-legacy-01",
@@ -79,12 +79,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 0,
       "source_count": 0,
-      "notes": "完成搜索后未返回正文；官方read_thread记录与网页交叉检查。保留失败记录，不进入推荐频次统计。",
+      "notes": "No answer text was returned after search completed; the official read_thread record was cross-checked against the web page. The failed attempt is retained and excluded from recommendation-frequency statistics.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q1-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R1-A2-legacy-01",
@@ -96,12 +96,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 0,
       "source_count": 0,
-      "notes": "逐次补测仍未返回任何assistant正文；网页与官方存储记录均为空。原题、模型和搜索入口不变；不进入推荐统计。",
+      "notes": "The additional attempt still returned no assistant answer text; both the web page and the official stored record were empty. The original question, model, and search entry point were unchanged. This attempt is excluded from recommendation statistics.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q2-R1-A2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R1-A3-legacy-01",
@@ -113,12 +113,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 2417,
       "source_count": 2,
-      "notes": "2026-10-29同条件新会话重现：页面显示回答已完成，但主正文无法加载；分享预览恢复2417字符与2条直链，正文在第二项研究Peer-reviewed处终止。原因不能仅凭UI确认为服务端生成故障；完整性未通过，不纳入完成样本。",
+      "notes": "The issue recurred in a new conversation under the same conditions on 2026-10-29. The page indicated that the answer had completed, but the main answer text could not load. The share preview recovered 2417 characters and 2 direct links, ending at Peer-reviewed in the second study. The UI alone cannot establish a server-side generation failure as the cause. The answer did not pass the completeness check and is excluded from the completed sample.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q2-R1-A3-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R1-A4-legacy-01",
@@ -130,12 +130,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 8999,
       "source_count": 7,
-      "notes": "2026-10-29 网页端 GPT-6 + 网页搜索补测。C-Q2-R1 第4次 attempt；分享页 fallbackMarkdown 提取。编码尚未完成。replacement for C-Q2-R1 / C-Q2-R1-A2/A3。",
+      "notes": "2026-10-29 web supplement using GPT-6 + Web Search. This was attempt 4 for C-Q2-R1; text was extracted from the share-page fallbackMarkdown. Coding was not yet complete. Replacement for C-Q2-R1 / C-Q2-R1-A2/A3.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q2-R1-A4-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R1-legacy-01",
@@ -147,12 +147,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 0,
       "source_count": 0,
-      "notes": "完成搜索后未返回正文；官方read_thread记录与网页交叉检查。保留失败记录，不进入推荐频次统计。",
+      "notes": "No answer text was returned after search completed; the official read_thread record was cross-checked against the web page. The failed attempt is retained and excluded from recommendation-frequency statistics.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q2-R1-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R2-A2-legacy-01",
@@ -164,12 +164,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 0,
       "source_count": 0,
-      "notes": "逐次补测仍未返回任何assistant正文；网页与官方存储记录均为空。原题、模型和搜索入口不变；不进入推荐统计。",
+      "notes": "The additional attempt still returned no assistant answer text; both the web page and the official stored record were empty. The original question, model, and search entry point were unchanged. This attempt is excluded from recommendation statistics.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q2-R2-A2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R2-A3-legacy-01",
@@ -181,12 +181,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 11884,
       "source_count": 16,
-      "notes": "恢复Cursor已提交的同一会话，无新增提问。原页面显示今天0:06，回复菜单今天0:08；提问时间精度为分钟。正文完整结尾；模型设置与生成元数据的证据边界已注明。",
+      "notes": "Recovered the same conversation already submitted by Cursor; no new question was sent. The original page showed today 0:06 and the reply menu today 0:08 (UI date labels translated here); submission time has minute precision. The answer has a complete ending. The evidence limits for model settings and generation metadata are documented.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q2-R2-A3-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R2-legacy-01",
@@ -198,12 +198,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 1029,
       "source_count": 0,
-      "notes": "存储正文仅1029字符，停在未完成链接 [Read；官方read_thread记录与网页交叉检查。保留失败记录，不进入推荐频次统计。",
+      "notes": "The stored answer text contained only 1029 characters and stopped at an unfinished link, [Read. The official read_thread record was cross-checked against the web page. The failed attempt is retained and excluded from recommendation-frequency statistics.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q2-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R1-legacy-01",
@@ -215,12 +215,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 11418,
       "source_count": 13,
-      "notes": "正文显示加载故障；通过官方 read_thread 读取同一会话存储记录，未重发或追问。保留全部可读取原文和明确URL；内部引用标记未完整映射，来源面板为空。搜索芯片为UI工具选择，不改变英文原题。",
+      "notes": "The body showed a loading failure. The official read_thread tool retrieved a stored record of the same conversation without resubmitting or following up. All readable text and explicit URLs were preserved; internal citation markers were not fully mapped, and the original note said the source panel was empty. The search chip is a UI tool selection and does not change the original English question.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q3-R1-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R2-A2-legacy-01",
@@ -232,12 +232,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 0,
       "source_count": 0,
-      "notes": "逐次补测仍未返回任何assistant正文；网页与官方存储记录均为空。原题、模型和搜索入口不变；不进入推荐统计。",
+      "notes": "The additional attempt still returned no assistant answer text; both the web page and the official stored record were empty. The original question, model, and search entry point were unchanged. This attempt is excluded from recommendation statistics.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q3-R2-A2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R2-A3-legacy-01",
@@ -249,12 +249,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 8562,
       "source_count": 16,
-      "notes": "10月30日新会话逐字发送原始Q3，无追加引导。沿用Cursor补测的GPT-6 Medium条件；与Q3第一轮Extra High不同。主页面仍加载失败，从分享预览与来源菜单完整恢复，未创建公开链接。",
+      "notes": "On October 30, the original Q3 was sent verbatim in a new conversation, with no steering follow-up. It retained Cursor's GPT-6 Medium supplement settings, unlike the first Q3 run's Extra High. The main page still failed to load; the body and sources were recovered from the share preview and source menu without creating a public link.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q3-R2-A3-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R2-legacy-01",
@@ -266,12 +266,12 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 1132,
       "source_count": 0,
-      "notes": "存储正文仅开头说明，无完整推荐名单；官方read_thread记录与网页交叉检查。保留失败记录，不进入推荐频次统计。",
+      "notes": "The stored answer text contained only an introduction, without a complete recommendation list. The official read_thread record was cross-checked against the web page. The failed attempt is retained and excluded from recommendation-frequency statistics.",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q3-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "G-Q1-R1-legacy-01",
@@ -283,12 +283,12 @@
       "body_completeness": "completed",
       "answer_chars": 5946,
       "source_count": 10,
-      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/G-Q1-R1-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "G-Q1-R2-legacy-01",
@@ -300,12 +300,12 @@
       "body_completeness": "completed",
       "answer_chars": 6070,
       "source_count": 11,
-      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/G-Q1-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "G-Q2-R1-legacy-01",
@@ -317,12 +317,12 @@
       "body_completeness": "completed",
       "answer_chars": 6177,
       "source_count": 8,
-      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/G-Q2-R1-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "G-Q2-R2-legacy-01",
@@ -334,12 +334,12 @@
       "body_completeness": "completed",
       "answer_chars": 6849,
       "source_count": 45,
-      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。 此回答未呈现可点击内联引用，末尾以文本列出文献；另存来源面板URL，面板出现不自动算作Citation。",
+      "notes": "A new web conversation was opened and the original question was submitted once. Existing account personalization settings were not changed. This answer had no clickable inline citations and listed references as text at the end. Source-panel URLs were saved separately; presence in the panel does not automatically count as Citation.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/G-Q2-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "G-Q3-R1-legacy-01",
@@ -351,12 +351,12 @@
       "body_completeness": "completed",
       "answer_chars": 3850,
       "source_count": 3,
-      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/G-Q3-R1-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "G-Q3-R2-legacy-01",
@@ -368,12 +368,12 @@
       "body_completeness": "completed",
       "answer_chars": 5895,
       "source_count": 5,
-      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
       "capture_kind": "initial_export",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/G-Q3-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R1-A2-restored-20261030-01",
@@ -385,12 +385,12 @@
       "body_completeness": "completed",
       "answer_chars": 7050,
       "source_count": 5,
-      "notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。两周计划完整到 Days11–14；分享对话框创建公开链接（已记录 share_url）。思考强度为 Medium，与早期 Extra High 不同。编码尚未完成。\nThe saved screenshot shows Days 11–14 and the final shortlist/natural ending. The complete raw answer is preserved exactly.\nNo saved share HTML or full DOM export exists for independent whole-body verification; model GPT-6 and search activity remain recorded observations with the evidence limits documented in the audit.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。",
+      "notes": "Historical note (Cursor had not yet coded this record; coding is now complete): 2026-10-29 web supplement using GPT-6 + Web Search. The two-week plan reaches Days 11\u201314. A public link was created through the share dialog (share_url was recorded). Reasoning effort was Medium, unlike the earlier Extra High setting. Coding was not yet complete.\nThe saved screenshot shows Days 11\u201314 and the final shortlist/natural ending. The complete raw answer is preserved exactly.\nNo saved share HTML or full DOM export exists for independent whole-body verification; model GPT-6 and search activity remain recorded observations with the evidence limits documented in the audit.\nCitations and individual observations were reviewed on October 30; Cursor's original files and all recovery captures remain preserved locally.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q1-R1-A2-restored-20261030-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R1-A2-share-preview-metadata",
@@ -402,12 +402,12 @@
       "body_completeness": "not_applicable",
       "answer_chars": null,
       "source_count": null,
-      "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. 分享对话框显示回答已完成\n分享页抓取正文；两周计划完整\n未做 CMR 编码",
+      "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. The share dialog indicated that the answer was complete.\nThe body was extracted from the share page; the two-week plan was complete.\nC/M/R coding had not yet been performed.",
       "capture_kind": "metadata_summary",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q1-R1-A2-share-preview-metadata.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R1-recovery-01",
@@ -419,12 +419,12 @@
       "body_completeness": "partial",
       "answer_chars": 6132,
       "source_count": 9,
-      "notes": "分享预览可读6132字符和9正文链接；资源清单完整，但承诺的两周计划只到Days4–6，无法确认全文完整性。保留部分观察但从完整样本统计中排除。",
+      "notes": "The share preview exposed 6132 readable characters and 9 links in the answer body. The resource list was complete, but the promised two-week plan stopped at Days 4\u20136, so completeness of the full answer could not be confirmed. Partial observations are retained but excluded from complete-sample statistics.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q1-R1-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R2-A2-recovery-01",
@@ -436,12 +436,12 @@
       "body_completeness": "error",
       "answer_chars": 7,
       "source_count": 0,
-      "notes": "分享预览仍只显示“无法加载此回复”（7字符）；不能视为正文或完成回答。",
+      "notes": "The share preview still displayed only a reply-loading error (original UI: \\u65e0\\u6cd5\\u52a0\\u8f7d\\u6b64\\u56de\\u590d; 7 characters). This cannot be treated as answer text or a completed answer.",
       "capture_kind": "share_preview",
       "selected": false,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q1-R2-A2-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R2-A3-live-20261030-01",
@@ -453,12 +453,12 @@
       "body_completeness": "completed",
       "answer_chars": 7286,
       "source_count": 10,
-      "notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。学习计划为四周（Week1–4）而非两周 Days 格式；分享对话框创建公开链接。编码尚未完成。replacement for C-Q1-R2 / C-Q1-R2-A2。\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。\n当前正文采用现场DOM预览，恢复了原导出遗漏的portfolio结尾句；保存HTML完整fallback（含额外续问建议与标记）另作原始证据保留。",
+      "notes": "Historical note (Cursor had not yet coded this record; coding is now complete): 2026-10-29 web supplement using GPT-6 + Web Search. The plan covers four weeks (Weeks 1\u20134), rather than a two-week Days format. A public link was created through the share dialog. Coding was not yet complete. Replacement for C-Q1-R2 / C-Q1-R2-A2.\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\nCitations and individual observations were reviewed on October 30; Cursor's original files and all recovery captures remain preserved locally.\nThe selected body now uses a live DOM preview, which recovered the final portfolio sentence missing from the earlier export. The complete saved HTML fallback, including additional follow-up suggestions and markers, remains separate original evidence.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q1-R2-A3-live-20261030-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R2-A3-restored-20261030-01",
@@ -475,7 +475,7 @@
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q1-R2-A3-restored-20261030-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q1-R2-A3-share-preview-metadata",
@@ -487,12 +487,12 @@
       "body_completeness": "not_applicable",
       "answer_chars": null,
       "source_count": null,
-      "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. 分享对话框显示回答已完成\n从分享页 HTML fallbackMarkdown 提取正文\n计划为四周而非两周；未做 CMR 编码",
+      "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. The share dialog indicated that the answer was complete.\nThe body was extracted from fallbackMarkdown in the share-page HTML.\nThe plan covers four weeks rather than two; C/M/R coding had not yet been performed.",
       "capture_kind": "metadata_summary",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q1-R2-A3-share-preview-metadata.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R1-A3-recovery-01",
@@ -504,12 +504,12 @@
       "body_completeness": "partial",
       "answer_chars": 2417,
       "source_count": 2,
-      "notes": "2026-10-29同条件新会话重现：页面显示回答已完成，但主正文无法加载；分享预览恢复2417字符与2条直链，正文在第二项研究Peer-reviewed处终止。原因不能仅凭UI确认为服务端生成故障；完整性未通过，不纳入完成样本。",
+      "notes": "The issue recurred in a new conversation under the same conditions on 2026-10-29. The page indicated that the answer had completed, but the main answer text could not load. The share preview recovered 2417 characters and 2 direct links, ending at Peer-reviewed in the second study. The UI alone cannot establish a server-side generation failure as the cause. The answer did not pass the completeness check and is excluded from the completed sample.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q2-R1-A3-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R1-A4-restored-20261030-01",
@@ -521,12 +521,12 @@
       "body_completeness": "completed",
       "answer_chars": 10147,
       "source_count": 7,
-      "notes": "历史原备注（Cursor当时未做编码，本轮已完成）：2026-10-29 网页端 GPT-6 + 网页搜索补测。C-Q2-R1 第4次 attempt；分享页 fallbackMarkdown 提取。编码尚未完成。replacement for C-Q2-R1 / C-Q2-R1-A2/A3。\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\n10月30日完成引用与逐项观察复核；Cursor原始文件及所有恢复capture均保留。",
+      "notes": "Historical note (Cursor had not yet coded this record; coding is now complete): 2026-10-29 web supplement using GPT-6 + Web Search. This was attempt 4 for C-Q2-R1; text was extracted from the share-page fallbackMarkdown. Coding was not yet complete. Replacement for C-Q2-R1 / C-Q2-R1-A2/A3.\ntext preserves the complete fallbackMarkdown verbatim, including URL and citation tokens. links contains only explicit URL tokens in that answer, not the broader retrieved-source list.\nThe existing HTML snapshot was created by Cursor on 2026-10-29; capturedAt is this offline recovery time.\nCitations and individual observations were reviewed on October 30; Cursor's original files and all recovery captures remain preserved locally.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q2-R1-A4-restored-20261030-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R1-A4-share-preview-metadata",
@@ -538,12 +538,12 @@
       "body_completeness": "not_applicable",
       "answer_chars": null,
       "source_count": null,
-      "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. 分享对话框显示回答已完成\n从分享页 HTML fallbackMarkdown 提取正文\nUI: GPT-6 · Medium · 网页搜索\n未做 CMR 编码",
+      "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. The share dialog indicated that the answer was complete.\nThe body was extracted from fallbackMarkdown in the share-page HTML.\nUI: GPT-6 \u00b7 Medium \u00b7 Web Search.\nC/M/R coding had not yet been performed.",
       "capture_kind": "metadata_summary",
       "selected": false,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q2-R1-A4-share-preview-metadata.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R2-A3-recovery-01",
@@ -555,12 +555,12 @@
       "body_completeness": "completed",
       "answer_chars": 11884,
       "source_count": 4,
-      "notes": "恢复Cursor已提交的同一会话，无新增提问。原页面显示今天0:06，回复菜单今天0:08；提问时间精度为分钟。正文完整结尾；模型设置与生成元数据的证据边界已注明。",
+      "notes": "Recovered the same conversation already submitted by Cursor; no new question was sent. The original page showed today 0:06 and the reply menu today 0:08 (UI date labels translated here); submission time has minute precision. The answer has a complete ending. The evidence limits for model settings and generation metadata are documented.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q2-R2-A3-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R2-recovery-01",
@@ -572,12 +572,12 @@
       "body_completeness": "partial",
       "answer_chars": 820,
       "source_count": 0,
-      "notes": "分享预览仍在“[Read”处终止；未恢复完整正文。",
+      "notes": "The share preview still ended at [Read; the full answer text was not recovered.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q2-R2-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R1-recovery-01",
@@ -589,12 +589,12 @@
       "body_completeness": "completed",
       "answer_chars": 8548,
       "source_count": 13,
-      "notes": "同一原始会话的分享对话框预览中读取完整正文（8548字符）和13条明确正文链接；只打开预览，未创建公开分享。\n旧页面加载故障、旧read_thread导出及其注释完整保留；此次恢复不增加提问次数。\n来源面板另存97项网页检索来源；这些来源不能全部视为正文引用。",
+      "notes": "Read the complete body (8548 characters) and 13 explicit body links from the share-dialog preview of the same original conversation. Only the preview was opened; no public share was created.\nThe original page-loading failure, earlier read_thread export and annotations remain preserved. This recovery does not add a query.\nA separate 97-entry web retrieval-source list was saved from the source panel; these entries are not all body citations.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q3-R1-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R2-A3-recovery-01",
@@ -606,12 +606,12 @@
       "body_completeness": "completed",
       "answer_chars": 8562,
       "source_count": 15,
-      "notes": "10月30日新会话逐字发送原始Q3，无追加引导。沿用Cursor补测的GPT-6 Medium条件；与Q3第一轮Extra High不同。主页面仍加载失败，从分享预览与来源菜单完整恢复，未创建公开链接。",
+      "notes": "On October 30, the original Q3 was sent verbatim in a new conversation, with no steering follow-up. It retained Cursor's GPT-6 Medium supplement settings, unlike the first Q3 run's Extra High. The main page still failed to load; the body and sources were recovered from the share preview and source menu without creating a public link.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": true,
       "file": "data/captures/C-Q3-R2-A3-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q3-R2-recovery-01",
@@ -623,27 +623,27 @@
       "body_completeness": "partial",
       "answer_chars": 1105,
       "source_count": 0,
-      "notes": "分享预览只恢复1105字符的开头说明，未出现具体创作者推荐主体，未补齐正文。",
+      "notes": "The share preview recovered only an 1105-character introduction, with no specific creator recommendation entries. The full answer text was not recovered.",
       "capture_kind": "share_preview",
       "selected": true,
       "attempt_in_main_sample": false,
       "file": "data/captures/C-Q3-R2-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     }
   ],
   "corrections": [
     {
       "id": "source-panel-not-empty",
-      "previous_claim": "C-Q3-R1旧记录称来源面板为空。",
-      "corrected_claim": "原始DOM已记录网页97及6个可见链接，另有“显示另外91个”；恢复时另存97项检索来源。检索列表与正文引用分开记录。",
+      "previous_claim": "The earlier C-Q3-R1 record stated that the source panel was empty.",
+      "corrected_claim": "The original DOM already recorded a count of 97 web pages and 6 visible links, plus a control to show another 91 (original UI: \\u663e\\u793a\\u53e6\\u591691\\u4e2a). All 97 retrieved sources were saved separately during recovery. The retrieval list and answer citations are recorded separately.",
       "run_ids": [
         "C-Q3-R1"
       ]
     },
     {
       "id": "capture-failure-is-not-server-proof",
-      "previous_claim": "旧注释将read_thread无正文或短文本与网页交叉检查作为“未返回正文”的确认。",
-      "corrected_claim": "现有导出能证明当时采集为空或不完整，不能独立证明服务端没有完整回答；C-Q3-R1同一会话的分享预览可读取正文与链接，说明至少此条的主页面加载失败与采集通道有关。其他条目的原因仍依各自证据判断。",
+      "previous_claim": "Earlier notes treated an empty or short read_thread result, cross-checked against the web page, as confirmation that no answer text had been returned.",
+      "corrected_claim": "The existing exports establish that the capture was empty or incomplete at the time; they cannot independently establish that the server lacked a complete answer. The share preview of the same C-Q3-R1 conversation exposed answer text and links, showing that at least this main-page loading failure was related to the capture channel. The causes of other cases must still be assessed from their respective evidence.",
       "run_ids": [
         "C-Q1-R1",
         "C-Q1-R2",
@@ -655,35 +655,35 @@
     },
     {
       "id": "cross-test-memory-observed",
-      "previous_claim": "新建会话只能控制会话内追问，账户记忆影响仅作为一般限制。",
-      "corrected_claim": "C-Q3-R1原始DOM的记忆来源实际包含本实验更早的Q1会话，以及用户背景；这是可观察到的跨测试记忆影响，不能声称12次测试完全独立。",
+      "previous_claim": "Opening new conversations controlled only within-conversation follow-ups; account memory was treated merely as a general limitation.",
+      "corrected_claim": "Memory sources in the original C-Q3-R1 DOM actually included an earlier Q1 conversation from this experiment and user background. This is observable cross-test memory influence; the 12 tests cannot be described as fully independent.",
       "run_ids": [
         "C-Q3-R1"
       ]
     },
     {
       "id": "q1-completeness-downgrade",
-      "previous_claim": "C-Q1-R1曾被计入completed。",
-      "corrected_claim": "分享预览保留9个资源链接，但两周计划仅到Days4–6；不能验证全文完整，现降为partial并排除完整样本统计。",
+      "previous_claim": "C-Q1-R1 had previously been counted as completed.",
+      "corrected_claim": "The share preview retained 9 resource links, but the two-week plan stopped at Days 4\u20136. Completeness of the full answer could not be verified, so it is now classified as partial and excluded from complete-sample statistics.",
       "run_ids": [
         "C-Q1-R1"
       ]
     },
     {
       "id": "same-condition-failure-reproduced",
-      "previous_claim": "额外提问可直接解决空白和截断问题。",
-      "corrected_claim": "同条件第三次尝试C-Q2-R1-A3显示回答已完成、已搜索21网站，但主页面无法加载；分享预览只有2417字符、2条直链并在第二项研究中终止。采集方法已修正，但平台故障未被解决，具体底层原因仍未知。",
+      "previous_claim": "Additional queries could directly resolve the blank and truncated answer issues.",
+      "corrected_claim": "The third attempt under the same conditions, C-Q2-R1-A3, indicated that the answer had completed and 21 websites had been searched, but the main page could not load it. The share preview contained only 2417 characters and 2 direct links, ending within the second study. The capture method had been corrected, but the platform failure had not been resolved; its underlying cause remained unknown.",
       "run_ids": [
         "C-Q2-R1-A3"
       ]
     },
     {
       "id": "cursor-handoff-completed-20261030",
-      "previous_claim": "报告仍显示7/12完整，并称未换模型补测。",
-      "corrected_claim": "Cursor已提交4个补测会话（3份raw完成、1份待恢复），10月30日恢复并审核已有正文、追加1次Q3新会话后，12个位置都有完整主回答；实际模型记录仍为GPT-6，5个补充位置为Medium，与早期Extra High不同，按各条实际证据记录而非沿用拟定模型。"
+      "previous_claim": "The report still showed 7/12 complete answers and stated that no additional attempts had used a different model.",
+      "corrected_claim": "Cursor had submitted 4 additional test conversations: 3 with completed raw captures and 1 awaiting recovery. After the existing answers were recovered and reviewed on October 30 and 1 new Q3 conversation was added, all 12 slots had complete main answers. The actual model records still showed GPT-6. The 5 supplemental slots used Medium reasoning effort, unlike the earlier Extra High setting. Each record follows the actual evidence rather than the proposed model."
     }
   ],
   "notes": [
-    "公开版保留采集失败与恢复摘要；私人会话、截图、完整HTML与本地证据路径不公开。"
+    "The public edition retains summaries of capture failures and recovery. Private conversations, screenshots, full HTML, and local evidence paths are not published."
   ]
 }

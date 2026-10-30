@@ -12,13 +12,13 @@
   "normalized_submitted_prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
   "submitted_prompt_provenance": "inferred_from_recorded_prompt_and_mode",
   "mode_label": "Expert",
-  "model_label": "未披露具体模型版本",
-  "model_evidence": "页面模型选择器显示 Expert；未显示版本号",
+  "model_label": "Not disclosed (exact model version)",
+  "model_evidence": "The page model selector showed Expert without a version number.",
   "search_status": "observed",
-  "search_evidence": "执行了 3 次搜索；执行了 2 次搜索",
+  "search_evidence": "The UI reported 3 searches performed, followed by 2 searches performed.",
   "status": "completed",
-  "answer_text": "Credible experiments show that certain GEO tactics can increase a brand’s share of visibility or citations once a source is already retrieved into an AI model’s context, but there is little strong evidence of stable, cross-platform causal effects on organic discoverability (getting retrieved in the first place) or on brand mentions/recommendations at scale. A 2026 critical survey of 45 studies reached this conclusion.⁠Geoaura\n\nFoundational Controlled Study: Princeton GEO Paper\n\nThe most-cited rigorous experiment is “GEO: Generative Engine Optimization” by Aggarwal et al. (Princeton, Georgia Tech, and others; arXiv:2311.09735, presented at KDD 2024).⁠Collaborate.princeton\n\nMethod: GEO-bench with ~10,000 real queries. Content modifications were applied to sources already placed in a generative engine’s context (primarily an open-source GPT-3.5-style system, with some validation on Perplexity). Visibility was measured mainly via position-adjusted word count (share of the answer text attributable to the source, weighted by position).\nResults (relative lifts on the main metric, approximate):\nExpert quotations: +41%\nStatistics addition: +33%\nFluency optimization: +29%\nCiting sources: +28%\nQuotation addition: +21%\nKeyword stuffing: −8% (harmful)\nLower-ranked sites saw larger relative gains (up to ~115% in some cases for fifth-ranked pages under certain tactics). The widely quoted “up to 40%” figure refers to this conditional share-of-answer improvement, not a guaranteed increase in mention/citation probability or traffic.\nKey caveat: Effects are conditional on the source already being retrieved. Later analyses and replications note that some volume-controlled tests of the same tactics showed little or no pooled effect when relevance is controlled, and the gains are better understood as redistributive within fixed context rather than pure discovery lifts.⁠Geoaura\nControlled Tests of Specific Tactics (Mostly Null for Schema)\nAhrefs schema experiment (2026): Difference-in-differences analysis of 1,885 pages that added JSON-LD schema vs. ~4,000 matched controls. Adding schema produced no meaningful citation lift (Google AI Mode +2.4%, ChatGPT +2.2% — both within noise; Google AI Overviews −4.6%). Observational correlations (cited pages more often have schema) did not hold as causal effects for already-visible pages.⁠Ahrefs\nSynthetic-brand RCT on schema (Bouet, 2026): Randomized controlled trial with eight invented low-authority running-shoe brands (four with Schema.org markup, four controls). On Gemini with Google Search grounding, schema brands showed essentially identical mention rates to controls (~8.8%). The study ruled out large industry-claimed gains and attributed prior correlations to confounding by authority. Low-authority pages were rarely retrieved, so markup never reached the model.⁠Rucforsk.ruc\nCompetitive / Factorial Experiments on Citation Preference\n\nA 2026 controlled study (“What Gets Cited,” arXiv:2605.25517) ran 252,000 trials across six LLMs. It injected exactly two competing sources into context (differing in one factor at a time), with brand anonymization and order counterbalancing.⁠arXiv\n\nStrongest drivers of being cited first: topical relevance and list position (near-deterministic).\nConsistent helps: explicit price information and recent timestamps.\nSmaller gains: completeness and trust cues.\nNegligible: pure formatting edits.\n\nThis reinforces that content factors matter mainly in competition after retrieval.\n\nCritical Survey Synthesis\n\nOlivier Martinez’s 2026 critical survey (arXiv:2607.14035) reviewed 45 studies (2023–2026). It found solid evidence that tactics can change how an already-retrieved page is cited or used, but no reviewed technique showed a stable, longitudinal, cross-platform causal effect on organic discoverability or downstream behavior. Relevance and position are the most reproducible levers; generic heuristics transfer poorly and can erode under competition. The Princeton gains are valid in their fixed-context setting but do not establish broader discovery effects.⁠arXiv\n\nPractical / Quasi-Experimental Work\nSearch Engine Land structured experiments (2026): Two before/after tests (existing brand over months; cold-start SaaS agency over 30 days) tracking commercial keywords across multiple platforms. Placing listicles and other content on sources already commonly cited by AI produced clear increases in appearances and citations (hundreds of citation events; cold-start yielded 298 appearances). Earned third-party placements outperformed owned content; concentration on a few sources was extreme. These are not randomized but are among the more transparent real-world measurements of off-site tactics.⁠Searchengineland\nLarge observational baselines (e.g., Kumar et al. arXiv:2606.20065 on 100k+ responses; Seer Interactive’s 231k+ response GEO Olympics study) document brand-stature ladders, the dominance of third-party/earned sources for recommendations, and signal architecture effects (entity authority + third-party validation + community discussion), but they are primarily correlational rather than interventional experiments.\nOverall Takeaways from the Evidence\nTactic Category\tEvidence Strength for Increasing Mentions/Citations\tNotes\nOn-page evidence (stats, expert quotes, citations, fluency)\tModerate (conditional on retrieval)\tPrinceton and related; mainly share-of-answer once in context\nSchema / structured data\tWeak / null\tAhrefs DiD + synthetic RCT\nOff-site placements / listicles on already-cited sources\tPractical positive signals\tQuasi-experiments; third-party mentions strongly correlated in large studies\nPure formatting or keyword stuffing\tWeak or negative\tMultiple studies\n\nBottom line: GEO tactics that make content more extractable, verifiable, and relevant can improve how a brand is used if the model already retrieves the material. Getting retrieved (and becoming a known entity that models mention or query for) appears driven more by existing authority, third-party mentions, and retrieval match than by isolated on-page “GEO tricks.” Rigorous causal evidence for large, generalizable lifts in brand recommendations remains limited.",
-  "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+  "answer_text": "Credible experiments show that certain GEO tactics can increase a brand\u2019s share of visibility or citations once a source is already retrieved into an AI model\u2019s context, but there is little strong evidence of stable, cross-platform causal effects on organic discoverability (getting retrieved in the first place) or on brand mentions/recommendations at scale. A 2026 critical survey of 45 studies reached this conclusion.\u2060Geoaura\n\nFoundational Controlled Study: Princeton GEO Paper\n\nThe most-cited rigorous experiment is \u201cGEO: Generative Engine Optimization\u201d by Aggarwal et al. (Princeton, Georgia Tech, and others; arXiv:2311.09735, presented at KDD 2024).\u2060Collaborate.princeton\n\nMethod: GEO-bench with ~10,000 real queries. Content modifications were applied to sources already placed in a generative engine\u2019s context (primarily an open-source GPT-3.5-style system, with some validation on Perplexity). Visibility was measured mainly via position-adjusted word count (share of the answer text attributable to the source, weighted by position).\nResults (relative lifts on the main metric, approximate):\nExpert quotations: +41%\nStatistics addition: +33%\nFluency optimization: +29%\nCiting sources: +28%\nQuotation addition: +21%\nKeyword stuffing: \u22128% (harmful)\nLower-ranked sites saw larger relative gains (up to ~115% in some cases for fifth-ranked pages under certain tactics). The widely quoted \u201cup to 40%\u201d figure refers to this conditional share-of-answer improvement, not a guaranteed increase in mention/citation probability or traffic.\nKey caveat: Effects are conditional on the source already being retrieved. Later analyses and replications note that some volume-controlled tests of the same tactics showed little or no pooled effect when relevance is controlled, and the gains are better understood as redistributive within fixed context rather than pure discovery lifts.\u2060Geoaura\nControlled Tests of Specific Tactics (Mostly Null for Schema)\nAhrefs schema experiment (2026): Difference-in-differences analysis of 1,885 pages that added JSON-LD schema vs. ~4,000 matched controls. Adding schema produced no meaningful citation lift (Google AI Mode +2.4%, ChatGPT +2.2% \u2014 both within noise; Google AI Overviews \u22124.6%). Observational correlations (cited pages more often have schema) did not hold as causal effects for already-visible pages.\u2060Ahrefs\nSynthetic-brand RCT on schema (Bouet, 2026): Randomized controlled trial with eight invented low-authority running-shoe brands (four with Schema.org markup, four controls). On Gemini with Google Search grounding, schema brands showed essentially identical mention rates to controls (~8.8%). The study ruled out large industry-claimed gains and attributed prior correlations to confounding by authority. Low-authority pages were rarely retrieved, so markup never reached the model.\u2060Rucforsk.ruc\nCompetitive / Factorial Experiments on Citation Preference\n\nA 2026 controlled study (\u201cWhat Gets Cited,\u201d arXiv:2605.25517) ran 252,000 trials across six LLMs. It injected exactly two competing sources into context (differing in one factor at a time), with brand anonymization and order counterbalancing.\u2060arXiv\n\nStrongest drivers of being cited first: topical relevance and list position (near-deterministic).\nConsistent helps: explicit price information and recent timestamps.\nSmaller gains: completeness and trust cues.\nNegligible: pure formatting edits.\n\nThis reinforces that content factors matter mainly in competition after retrieval.\n\nCritical Survey Synthesis\n\nOlivier Martinez\u2019s 2026 critical survey (arXiv:2607.14035) reviewed 45 studies (2023\u20132026). It found solid evidence that tactics can change how an already-retrieved page is cited or used, but no reviewed technique showed a stable, longitudinal, cross-platform causal effect on organic discoverability or downstream behavior. Relevance and position are the most reproducible levers; generic heuristics transfer poorly and can erode under competition. The Princeton gains are valid in their fixed-context setting but do not establish broader discovery effects.\u2060arXiv\n\nPractical / Quasi-Experimental Work\nSearch Engine Land structured experiments (2026): Two before/after tests (existing brand over months; cold-start SaaS agency over 30 days) tracking commercial keywords across multiple platforms. Placing listicles and other content on sources already commonly cited by AI produced clear increases in appearances and citations (hundreds of citation events; cold-start yielded 298 appearances). Earned third-party placements outperformed owned content; concentration on a few sources was extreme. These are not randomized but are among the more transparent real-world measurements of off-site tactics.\u2060Searchengineland\nLarge observational baselines (e.g., Kumar et al. arXiv:2606.20065 on 100k+ responses; Seer Interactive\u2019s 231k+ response GEO Olympics study) document brand-stature ladders, the dominance of third-party/earned sources for recommendations, and signal architecture effects (entity authority + third-party validation + community discussion), but they are primarily correlational rather than interventional experiments.\nOverall Takeaways from the Evidence\nTactic Category\tEvidence Strength for Increasing Mentions/Citations\tNotes\nOn-page evidence (stats, expert quotes, citations, fluency)\tModerate (conditional on retrieval)\tPrinceton and related; mainly share-of-answer once in context\nSchema / structured data\tWeak / null\tAhrefs DiD + synthetic RCT\nOff-site placements / listicles on already-cited sources\tPractical positive signals\tQuasi-experiments; third-party mentions strongly correlated in large studies\nPure formatting or keyword stuffing\tWeak or negative\tMultiple studies\n\nBottom line: GEO tactics that make content more extractable, verifiable, and relevant can improve how a brand is used if the model already retrieves the material. Getting retrieved (and becoming a known entity that models mention or query for) appears driven more by existing authority, third-party mentions, and retrieval match than by isolated on-page \u201cGEO tricks.\u201d Rigorous causal evidence for large, generalizable lifts in brand recommendations remains limited.",
+  "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
   "capture_method": "Rendered browser answer DOM + screenshot",
   "citation_mapping_complete": true,
   "attempt_number": 1,
@@ -54,7 +54,7 @@
     },
     {
       "url": "https://rucforsk.ruc.dk/ws/files/125024275/Bouet_Brand_Visibility_in_Generative_AI_Engines.pdf",
-      "title": "⁠Rucforsk.ruc",
+      "title": "\u2060Rucforsk.ruc",
       "domain": "rucforsk.ruc.dk",
       "kind": "inline_citation"
     },
@@ -66,13 +66,13 @@
     },
     {
       "url": "https://arxiv.org/html/2607.14035v1",
-      "title": "Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023–2026) (arXiv)",
+      "title": "Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023\u20132026) (arXiv)",
       "domain": "arxiv.org",
       "kind": "inline_citation"
     },
     {
       "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342.md",
-      "title": "⁠Searchengineland",
+      "title": "\u2060Searchengineland",
       "domain": "searchengineland.com",
       "kind": "inline_citation"
     }
@@ -85,8 +85,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "The most-cited rigorous experiment is “GEO: Generative Engine Optimization” by Aggarwal et al.",
-      "notes": "作为核心可信研究提供；引用为研究所属大学的论文记录页。Princeton/Georgia Tech 仅作者机构，不另计推荐。",
+      "evidence": "The most-cited rigorous experiment is \u201cGEO: Generative Engine Optimization\u201d by Aggarwal et al.",
+      "notes": "Presented as a key credible study, with a citation to the paper record on an affiliated university's website. Princeton/Georgia Tech are only author affiliations and are not counted as separate Recommendations.",
       "source_urls": [
         "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization"
       ]
@@ -98,7 +98,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Ahrefs schema experiment (2026): Difference-in-differences analysis of 1,885 pages",
-      "notes": "作为受控实验提供，结果为无显著提升；推荐该证据不等于推荐 schema 战术。",
+      "notes": "Presented as a controlled experiment that found no significant improvement. Recommending this evidence does not mean recommending the schema tactic.",
       "source_urls": [
         "https://ahrefs.com/blog/schema-ai-citations/"
       ]
@@ -110,7 +110,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Synthetic-brand RCT on schema (Bouet, 2026): Randomized controlled trial with eight invented low-authority running-shoe brands",
-      "notes": "作为受控实验提供；原文仅给 Bouet，未推断其全名。",
+      "notes": "Presented as a controlled experiment. The answer gives only Bouet; no full name was inferred.",
       "source_urls": [
         "https://rucforsk.ruc.dk/ws/files/125024275/Bouet_Brand_Visibility_in_Generative_AI_Engines.pdf"
       ]
@@ -121,8 +121,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "A 2026 controlled study (“What Gets Cited,” arXiv:2605.25517) ran 252,000 trials across six LLMs.",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "A 2026 controlled study (\u201cWhat Gets Cited,\u201d arXiv:2605.25517) ran 252,000 trials across six LLMs.",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://arxiv.org/html/2605.25517v1"
       ]
@@ -133,8 +133,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Olivier Martinez’s 2026 critical survey (arXiv:2607.14035) reviewed 45 studies (2023–2026).",
-      "notes": "作为证据综述的主要参考提供；综述本身不属于新干预实验。",
+      "evidence": "Olivier Martinez\u2019s 2026 critical survey (arXiv:2607.14035) reviewed 45 studies (2023\u20132026).",
+      "notes": "Presented as a main reference for an evidence review. The review itself is not a new intervention experiment.",
       "source_urls": [
         "https://arxiv.org/html/2607.14035v1"
       ]
@@ -146,7 +146,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Search Engine Land structured experiments (2026): Two before/after tests",
-      "notes": "作为透明的真实环境准实验提供；回答明确称非随机试验。",
+      "notes": "Presented as a transparent real-world quasi-experiment. The answer explicitly states that it was not a randomized trial.",
       "source_urls": [
         "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342.md"
       ]
@@ -158,7 +158,7 @@
       "mention": true,
       "recommendation": false,
       "evidence": "Large observational baselines (e.g., Kumar et al. arXiv:2606.20065 on 100k+ responses;",
-      "notes": "仅作为观察性背景研究讨论，正文明确区分于干预实验；仅有论文编号，没有可见自有内容引用链接。",
+      "notes": "Discussed only as observational background research, explicitly distinguished from intervention experiments in the answer. Only a paper identifier is given; no visible citation link to the entity's own content was observed.",
       "source_urls": []
     },
     {
@@ -167,8 +167,8 @@
       "citation": false,
       "mention": true,
       "recommendation": false,
-      "evidence": "Seer Interactive’s 231k+ response GEO Olympics study",
-      "notes": "仅作为观察性背景研究讨论，正文明确区分于干预实验；未见自有内容引用。",
+      "evidence": "Seer Interactive\u2019s 231k+ response GEO Olympics study",
+      "notes": "Discussed only as observational background research, explicitly distinguished from intervention experiments in the answer. No citation to the entity's own content was observed.",
       "source_urls": []
     }
   ],
@@ -184,11 +184,11 @@
       "body_completeness": "completed",
       "answer_chars": 6177,
       "source_count": 8,
-      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
       "capture_kind": "initial_export",
       "selected": true,
       "file": "data/captures/G-Q2-R1-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     }
   ],
   "capture_provenance": {

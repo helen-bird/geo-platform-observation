@@ -8,10 +8,10 @@
   "body_completeness": "not_applicable",
   "answer_chars": null,
   "source_count": null,
-  "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. 分享对话框显示回答已完成\n从分享页 HTML fallbackMarkdown 提取正文\n计划为四周而非两周；未做 CMR 编码",
+  "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. The share dialog indicated that the answer was complete.\nThe body was extracted from fallbackMarkdown in the share-page HTML.\nThe plan covers four weeks rather than two; C/M/R coding had not yet been performed.",
   "capture_kind": "metadata_summary",
   "selected": false,
   "attempt_in_main_sample": true,
   "file": "data/captures/C-Q1-R2-A3-share-preview-metadata.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

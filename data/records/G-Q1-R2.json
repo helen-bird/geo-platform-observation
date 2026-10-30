@@ -12,13 +12,13 @@
   "normalized_submitted_prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
   "submitted_prompt_provenance": "inferred_from_recorded_prompt_and_mode",
   "mode_label": "Expert",
-  "model_label": "未披露具体模型版本",
-  "model_evidence": "页面模型选择器显示 Expert；未显示版本号",
+  "model_label": "Not disclosed (exact model version)",
+  "model_evidence": "The page model selector showed Expert without a version number.",
   "search_status": "observed",
-  "search_evidence": "执行了 3 次搜索",
+  "search_evidence": "The UI reported 3 searches performed.",
   "status": "completed",
-  "answer_text": "Generative Engine Optimization (GEO) is the practice of optimizing content, entities, and technical signals so AI systems (ChatGPT, Perplexity, Google AI Overviews/AI Mode, Gemini, Claude, etc.) cite, mention, or recommend your brand/pages in synthesized answers rather than just ranking blue links. It overlaps heavily with Answer Engine Optimization (AEO) and traditional SEO fundamentals (crawlability, E-E-A-T, clear structure, authority).\n\nHere are the strongest free resources available as of late 2026, prioritized for practical value from active practitioners and official sources.\n\nStructured Free Courses (Best Starting Points)\n\nThese offer the fastest path from fundamentals to measurement:\n\nApollo Digital Free GEO Course — 7 lessons (~100 minutes) covering foundations, ChatGPT citations, technical readiness (robots.txt), measurement loops, and free Google Sheets templates (visibility audit + share-of-voice tracker). No signup required; progress saves in the browser. Runs entirely on free tools.⁠Apollodigital\nRank Prompt Free GEO & AEO Course — ~20 lessons (~90 minutes). Covers the GEO framework (internal vs external), on-site optimization (schema, crawlability, llms.txt context), off-site citations, and packaging GEO as a service. Free with templates/SOPs.⁠Rankprompt\nAhrefs Academy Answer Engine Optimization (AEO) Course — 12 lessons (1 hour 26 minutes). Explains how AI search works, platform differences (Google AI Overviews, ChatGPT, Perplexity), brand gap analysis, content that gets cited, technical practices, and measurement. No signup required.⁠Ahrefs\nHubSpot Academy AEO Fundamentals — Free certification course (~2 hours 20 minutes, 19 videos). Covers how answer engines select content, E-E-A-T, content structure for citations, and measurement. Account required but free.⁠Academy.hubspot\nAISQ Growth GEO Academy — Free standalone course (5 lessons + worksheets/templates) focused on getting recommended by ChatGPT, Perplexity, Claude, and Google AI Overviews. No paywall.⁠Aisq\nBotric GEO Foundations — Free practical modules (several hours of content available, more rolling out) on GEO vs SEO, how LLMs/RAG work, citation gaps, and the four pillars of AI visibility.⁠Botric\n\nOther short free options appear on platforms like Udemy (search “GEO” or “AEO GEO 2026”) and Open University-style intros listed on Class Central.\n\nCurated Learning Paths and Aggregators\nLearningAIsearch.com (by Aleyda Solis) — Free, non-biased roadmap aggregating reliable free guides across fundamentals, technical setup, content, brand authority/citations, measurement, prompt research, and e-commerce/agentic commerce. Continuously updated; no ads or paid placements.⁠Learningaisearch\nThe GEO Community — Practitioner blog with experiment-backed guides (crawlability, schema, entity strategy, log analysis) plus a structured /start learning path with role-based tracks (Strategist, Builder, Engineer). Strong emphasis on live experiments and documented results.⁠Thegeocommunity\nClass Central’s “25 Resources to Learn Generative Engine Optimization in 2026” — Roundup of free courses, blogs, tools, podcasts, and YouTube channels, with beginner-friendly recommendations.⁠Classcentral\nStackmatix free AEO/GEO resources overview — Comparison of resource types plus a practical 4-phase learning path (fundamentals → competitive landscape → tactical frameworks → apply & measure).⁠Stackmatix\nFoundational Research (Read These Early)\nOriginal GEO paper: “GEO: Generative Engine Optimization” by Aggarwal et al. (Princeton/IIT Delhi, KDD 2024, arXiv:2311.09735). Defines the problem, tests strategies (e.g., statistics, expert quotes, fluency, citations) across thousands of queries, and reports substantial citation lifts. Primary source for the field.⁠Thegeocommunity\nFollow-up comparative studies (e.g., across ChatGPT, Claude, Perplexity, Gemini) and related work such as AutoGEO frameworks.\nFree Ebooks, Guides, and Practitioner Content\nThe GEO Lab free ebooks — Multiple titles including The GEO Pocket Guide (2026), SEO to GEO: The Complete Framework, GEO Experiments, workbook, WordPress technical guide, glossary, field manual, and authority playbook. All free (email optional via Gumroad; price $0). Built around a consistent GEO Stack framework.⁠Thegeolab\nNeil Patel’s GEO guide and related posts.\niPullRank AI Search Manual (free blueprint).\nPractitioner blogs from Seer Interactive, Profound, Goodie, Writesonic, and others for tactical depth and case data.\nOfficial platform docs: Google Search Central material on AI features/Overviews and structured data; Bing Webmaster Tools AI visibility insights; crawler documentation from OpenAI, Perplexity, and Anthropic.\nFree Tools for Practice and Measurement\nGoogle Search Console (AI Overview/AI Mode impressions where available).\nBing Webmaster Tools (AI citation data).\nFree tiers or limited views from tools like Ahrefs Brand Radar concepts, plus free audit helpers and Sheets templates from the courses above.\nManual testing: Run the same prompts across ChatGPT, Perplexity, and Google AI experiences and track mentions.\nRecommended Learning Path (Self-Study)\nWeek 1: Read the original arXiv GEO paper + one short course (Ahrefs AEO or Apollo Digital) for foundations.\nWeeks 2–3: Work through LearningAIsearch.com or The GEO Community /start path; complete HubSpot or Rank Prompt for structure and measurement.\nOngoing: Apply tactics (lead with clear, quotable answers; add statistics/sources; strengthen entity signals and crawlability) on 3–5 pages. Measure with free tools + manual prompt testing. Supplement with practitioner blogs and the GEO Lab pocket guide.\nTrack results and iterate—real citation data from your own site is the best feedback.\n\nGEO evolves quickly with AI platform changes, so prioritize recent practitioner content and primary research over generic theory. Combine one structured course with the Aleyda Solis roadmap or GEO Community materials for the most efficient free path. Official Google/Bing documentation provides the authoritative baseline for their ecosystems.",
-  "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+  "answer_text": "Generative Engine Optimization (GEO) is the practice of optimizing content, entities, and technical signals so AI systems (ChatGPT, Perplexity, Google AI Overviews/AI Mode, Gemini, Claude, etc.) cite, mention, or recommend your brand/pages in synthesized answers rather than just ranking blue links. It overlaps heavily with Answer Engine Optimization (AEO) and traditional SEO fundamentals (crawlability, E-E-A-T, clear structure, authority).\n\nHere are the strongest free resources available as of late 2026, prioritized for practical value from active practitioners and official sources.\n\nStructured Free Courses (Best Starting Points)\n\nThese offer the fastest path from fundamentals to measurement:\n\nApollo Digital Free GEO Course \u2014 7 lessons (~100 minutes) covering foundations, ChatGPT citations, technical readiness (robots.txt), measurement loops, and free Google Sheets templates (visibility audit + share-of-voice tracker). No signup required; progress saves in the browser. Runs entirely on free tools.\u2060Apollodigital\nRank Prompt Free GEO & AEO Course \u2014 ~20 lessons (~90 minutes). Covers the GEO framework (internal vs external), on-site optimization (schema, crawlability, llms.txt context), off-site citations, and packaging GEO as a service. Free with templates/SOPs.\u2060Rankprompt\nAhrefs Academy Answer Engine Optimization (AEO) Course \u2014 12 lessons (1 hour 26 minutes). Explains how AI search works, platform differences (Google AI Overviews, ChatGPT, Perplexity), brand gap analysis, content that gets cited, technical practices, and measurement. No signup required.\u2060Ahrefs\nHubSpot Academy AEO Fundamentals \u2014 Free certification course (~2 hours 20 minutes, 19 videos). Covers how answer engines select content, E-E-A-T, content structure for citations, and measurement. Account required but free.\u2060Academy.hubspot\nAISQ Growth GEO Academy \u2014 Free standalone course (5 lessons + worksheets/templates) focused on getting recommended by ChatGPT, Perplexity, Claude, and Google AI Overviews. No paywall.\u2060Aisq\nBotric GEO Foundations \u2014 Free practical modules (several hours of content available, more rolling out) on GEO vs SEO, how LLMs/RAG work, citation gaps, and the four pillars of AI visibility.\u2060Botric\n\nOther short free options appear on platforms like Udemy (search \u201cGEO\u201d or \u201cAEO GEO 2026\u201d) and Open University-style intros listed on Class Central.\n\nCurated Learning Paths and Aggregators\nLearningAIsearch.com (by Aleyda Solis) \u2014 Free, non-biased roadmap aggregating reliable free guides across fundamentals, technical setup, content, brand authority/citations, measurement, prompt research, and e-commerce/agentic commerce. Continuously updated; no ads or paid placements.\u2060Learningaisearch\nThe GEO Community \u2014 Practitioner blog with experiment-backed guides (crawlability, schema, entity strategy, log analysis) plus a structured /start learning path with role-based tracks (Strategist, Builder, Engineer). Strong emphasis on live experiments and documented results.\u2060Thegeocommunity\nClass Central\u2019s \u201c25 Resources to Learn Generative Engine Optimization in 2026\u201d \u2014 Roundup of free courses, blogs, tools, podcasts, and YouTube channels, with beginner-friendly recommendations.\u2060Classcentral\nStackmatix free AEO/GEO resources overview \u2014 Comparison of resource types plus a practical 4-phase learning path (fundamentals \u2192 competitive landscape \u2192 tactical frameworks \u2192 apply & measure).\u2060Stackmatix\nFoundational Research (Read These Early)\nOriginal GEO paper: \u201cGEO: Generative Engine Optimization\u201d by Aggarwal et al. (Princeton/IIT Delhi, KDD 2024, arXiv:2311.09735). Defines the problem, tests strategies (e.g., statistics, expert quotes, fluency, citations) across thousands of queries, and reports substantial citation lifts. Primary source for the field.\u2060Thegeocommunity\nFollow-up comparative studies (e.g., across ChatGPT, Claude, Perplexity, Gemini) and related work such as AutoGEO frameworks.\nFree Ebooks, Guides, and Practitioner Content\nThe GEO Lab free ebooks \u2014 Multiple titles including The GEO Pocket Guide (2026), SEO to GEO: The Complete Framework, GEO Experiments, workbook, WordPress technical guide, glossary, field manual, and authority playbook. All free (email optional via Gumroad; price $0). Built around a consistent GEO Stack framework.\u2060Thegeolab\nNeil Patel\u2019s GEO guide and related posts.\niPullRank AI Search Manual (free blueprint).\nPractitioner blogs from Seer Interactive, Profound, Goodie, Writesonic, and others for tactical depth and case data.\nOfficial platform docs: Google Search Central material on AI features/Overviews and structured data; Bing Webmaster Tools AI visibility insights; crawler documentation from OpenAI, Perplexity, and Anthropic.\nFree Tools for Practice and Measurement\nGoogle Search Console (AI Overview/AI Mode impressions where available).\nBing Webmaster Tools (AI citation data).\nFree tiers or limited views from tools like Ahrefs Brand Radar concepts, plus free audit helpers and Sheets templates from the courses above.\nManual testing: Run the same prompts across ChatGPT, Perplexity, and Google AI experiences and track mentions.\nRecommended Learning Path (Self-Study)\nWeek 1: Read the original arXiv GEO paper + one short course (Ahrefs AEO or Apollo Digital) for foundations.\nWeeks 2\u20133: Work through LearningAIsearch.com or The GEO Community /start path; complete HubSpot or Rank Prompt for structure and measurement.\nOngoing: Apply tactics (lead with clear, quotable answers; add statistics/sources; strengthen entity signals and crawlability) on 3\u20135 pages. Measure with free tools + manual prompt testing. Supplement with practitioner blogs and the GEO Lab pocket guide.\nTrack results and iterate\u2014real citation data from your own site is the best feedback.\n\nGEO evolves quickly with AI platform changes, so prioritize recent practitioner content and primary research over generic theory. Combine one structured course with the Aleyda Solis roadmap or GEO Community materials for the most efficient free path. Official Google/Bing documentation provides the authoritative baseline for their ecosystems.",
+  "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
   "capture_method": "Rendered browser answer DOM + screenshot",
   "citation_mapping_complete": true,
   "attempt_number": 1,
@@ -78,7 +78,7 @@
     },
     {
       "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/",
-      "title": "25 Resources to Learn Generative Engine Optimization in 2026 — Class Central (Classcentral)",
+      "title": "25 Resources to Learn Generative Engine Optimization in 2026 \u2014 Class Central (Classcentral)",
       "domain": "www.classcentral.com",
       "kind": "inline_citation"
     },
@@ -103,8 +103,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Apollo Digital Free GEO Course — 7 lessons (~100 minutes)",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "Apollo Digital Free GEO Course \u2014 7 lessons (~100 minutes)",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://apollodigital.io/learn/geo/"
       ]
@@ -115,8 +115,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Rank Prompt Free GEO & AEO Course — ~20 lessons (~90 minutes).",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "Rank Prompt Free GEO & AEO Course \u2014 ~20 lessons (~90 minutes).",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://rankprompt.com/geo-course/"
       ]
@@ -127,8 +127,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Ahrefs Academy Answer Engine Optimization (AEO) Course — 12 lessons (1 hour 26 minutes).",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "Ahrefs Academy Answer Engine Optimization (AEO) Course \u2014 12 lessons (1 hour 26 minutes).",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://ahrefs.com/academy/aeo-course"
       ]
@@ -139,8 +139,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "HubSpot Academy AEO Fundamentals — Free certification course (~2 hours 20 minutes, 19 videos).",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "HubSpot Academy AEO Fundamentals \u2014 Free certification course (~2 hours 20 minutes, 19 videos).",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://academy.hubspot.com/courses/aeo-fundamentals-certification-en"
       ]
@@ -151,8 +151,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "AISQ Growth GEO Academy — Free standalone course (5 lessons + worksheets/templates)",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "AISQ Growth GEO Academy \u2014 Free standalone course (5 lessons + worksheets/templates)",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://aisq.com/learn-geo/"
       ]
@@ -163,8 +163,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Botric GEO Foundations — Free practical modules",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "Botric GEO Foundations \u2014 Free practical modules",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://www.botric.ai/learn/geo-foundations"
       ]
@@ -175,8 +175,8 @@
       "citation": false,
       "mention": true,
       "recommendation": true,
-      "evidence": "Other short free options appear on platforms like Udemy (search “GEO” or “AEO GEO 2026”)",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "evidence": "Other short free options appear on platforms like Udemy (search \u201cGEO\u201d or \u201cAEO GEO 2026\u201d)",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -186,7 +186,7 @@
       "mention": true,
       "recommendation": false,
       "evidence": "Open University-style intros listed on Class Central.",
-      "notes": "原文为 Open University-style，未明确指向该机构的某一课程；保留提及，未认定直接推荐。",
+      "notes": "The original wording is Open University-style and does not identify a specific course from the institution. Mention is recorded, but no direct Recommendation is assigned.",
       "source_urls": []
     },
     {
@@ -195,8 +195,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "LearningAIsearch.com (by Aleyda Solis) — Free, non-biased roadmap",
-      "notes": "作者与其学习导航站合并为同一主体。",
+      "evidence": "LearningAIsearch.com (by Aleyda Solis) \u2014 Free, non-biased roadmap",
+      "notes": "The author and their learning resource directory are grouped as one entity.",
       "source_urls": [
         "https://learningaisearch.com/about/"
       ]
@@ -207,8 +207,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "The GEO Community — Practitioner blog with experiment-backed guides",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "The GEO Community \u2014 Practitioner blog with experiment-backed guides",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
       ]
@@ -219,8 +219,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Class Central’s “25 Resources to Learn Generative Engine Optimization in 2026”",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "Class Central\u2019s \u201c25 Resources to Learn Generative Engine Optimization in 2026\u201d",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/"
       ]
@@ -231,8 +231,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "Stackmatix free AEO/GEO resources overview — Comparison of resource types",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "Stackmatix free AEO/GEO resources overview \u2014 Comparison of resource types",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://www.stackmatix.com/blog/free-aeo-geo-resources-2026"
       ]
@@ -244,7 +244,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Week 1: Read the original arXiv GEO paper + one short course",
-      "notes": "明确推荐原始论文并给出题名/编号；可见引用链接仅指向 The GEO Community 第三方汇编，未见直接原作链接。",
+      "notes": "The answer explicitly recommends the original paper and provides its title or identifier. The visible citation link points only to a third-party compilation by The GEO Community; no direct link to the original work was observed.",
       "source_urls": []
     },
     {
@@ -254,7 +254,7 @@
       "mention": true,
       "recommendation": false,
       "evidence": "Follow-up comparative studies (e.g., across ChatGPT, Claude, Perplexity, Gemini) and related work such as AutoGEO frameworks.",
-      "notes": "泛指相关后续研究的例子，没有具体文献或单独阅读建议。",
+      "notes": "A general example of related follow-up research, without a specific publication or separate reading recommendation.",
       "source_urls": []
     },
     {
@@ -263,8 +263,8 @@
       "citation": true,
       "mention": true,
       "recommendation": true,
-      "evidence": "The GEO Lab free ebooks — Multiple titles including The GEO Pocket Guide (2026)",
-      "notes": "已引用该对象发布的内容。",
+      "evidence": "The GEO Lab free ebooks \u2014 Multiple titles including The GEO Pocket Guide (2026)",
+      "notes": "The answer cites content published by this entity.",
       "source_urls": [
         "https://thegeolab.net/ebooks/"
       ]
@@ -275,8 +275,8 @@
       "citation": false,
       "mention": true,
       "recommendation": true,
-      "evidence": "Neil Patel’s GEO guide and related posts.",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "evidence": "Neil Patel\u2019s GEO guide and related posts.",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -286,7 +286,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "iPullRank AI Search Manual (free blueprint).",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -296,7 +296,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Practitioner blogs from Seer Interactive, Profound, Goodie, Writesonic, and others for tactical depth and case data.",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -306,7 +306,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Practitioner blogs from Seer Interactive, Profound, Goodie, Writesonic, and others for tactical depth and case data.",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -316,7 +316,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Practitioner blogs from Seer Interactive, Profound, Goodie, Writesonic, and others for tactical depth and case data.",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -326,7 +326,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Practitioner blogs from Seer Interactive, Profound, Goodie, Writesonic, and others for tactical depth and case data.",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -336,7 +336,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Official platform docs: Google Search Central material on AI features/Overviews and structured data;",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -346,7 +346,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Bing Webmaster Tools AI visibility insights;",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     },
     {
@@ -356,7 +356,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "crawler documentation from OpenAI, Perplexity, and Anthropic.",
-      "notes": "此处主动推荐爬虫文档，区别于仅作为测试目标的 AI 平台提及。",
+      "notes": "The answer actively recommends the crawler documentation here, unlike mentions of AI platforms solely as test targets.",
       "source_urls": []
     },
     {
@@ -366,7 +366,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "crawler documentation from OpenAI, Perplexity, and Anthropic.",
-      "notes": "此处主动推荐爬虫文档，区别于仅作为测试目标的 AI 平台提及。",
+      "notes": "The answer actively recommends the crawler documentation here, unlike mentions of AI platforms solely as test targets.",
       "source_urls": []
     },
     {
@@ -376,7 +376,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "crawler documentation from OpenAI, Perplexity, and Anthropic.",
-      "notes": "此处主动推荐爬虫文档，区别于仅作为测试目标的 AI 平台提及。",
+      "notes": "The answer actively recommends the crawler documentation here, unlike mentions of AI platforms solely as test targets.",
       "source_urls": []
     },
     {
@@ -386,7 +386,7 @@
       "mention": true,
       "recommendation": true,
       "evidence": "Google Search Console (AI Overview/AI Mode impressions where available).",
-      "notes": "在可见回答引用中未见该对象自有内容。",
+      "notes": "No content owned or authored by this entity was observed among the visible answer citations.",
       "source_urls": []
     }
   ],
@@ -402,11 +402,11 @@
       "body_completeness": "completed",
       "answer_chars": 6070,
       "source_count": 11,
-      "notes": "新建网页会话，仅提交一次原始问题；现有账户的个性化设置未修改。",
+      "notes": "A fresh web conversation received the original question once, with no follow-up. Existing account-personalization settings were not changed.",
       "capture_kind": "initial_export",
       "selected": true,
       "file": "data/captures/G-Q1-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     }
   ],
   "capture_provenance": {

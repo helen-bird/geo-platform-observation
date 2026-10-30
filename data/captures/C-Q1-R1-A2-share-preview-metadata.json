@@ -8,10 +8,10 @@
   "body_completeness": "not_applicable",
   "answer_chars": null,
   "source_count": null,
-  "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. 分享对话框显示回答已完成\n分享页抓取正文；两周计划完整\n未做 CMR 编码",
+  "notes": "This file contains summary metadata only. Missing body fields do not establish an empty or failed answer. The share dialog indicated that the answer was complete.\nThe body was extracted from the share page; the two-week plan was complete.\nC/M/R coding had not yet been performed.",
   "capture_kind": "metadata_summary",
   "selected": false,
   "attempt_in_main_sample": true,
   "file": "data/captures/C-Q1-R1-A2-share-preview-metadata.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

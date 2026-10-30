@@ -7,18 +7,18 @@
   "started_at": "2026-10-29T09:46:16.857Z",
   "finished_at": "2026-10-29T10:20:25.683Z",
   "prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
-  "submitted_prompt": "@网页搜索 What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
-  "observed_submitted_prompt": "@网页搜索 What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "submitted_prompt": "@\u7f51\u9875\u641c\u7d22 What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "observed_submitted_prompt": "@\u7f51\u9875\u641c\u7d22 What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
   "normalized_submitted_prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
   "submitted_prompt_provenance": "raw_record",
-  "mode_label": "网页搜索 · Extra High",
-  "model_label": "GPT-6（界面选择标签）",
-  "model_evidence": "模型菜单GPT-6 checked；极高思考强度",
+  "mode_label": "Web Search \u00b7 Extra High",
+  "model_label": "GPT-6 (UI selection label)",
+  "model_evidence": "GPT-6 was checked in the model menu, with Extra High reasoning effort.",
   "search_status": "observed",
-  "search_evidence": "已搜索 41 个网站",
+  "search_evidence": "The UI reported that 41 websites had been searched.",
   "status": "incomplete",
-  "answer_text": "As of October 2026, there is credible evidence that GEO tactics can improve AI-generated search visibility, but much weaker evidence that they reliably increase a brand’s organic mentions or recommendations across AI platforms.\n\nThe most useful research separates three outcomes:\n\nCitation visibility: Does the AI cite your website or content?\n\nBrand mentions: Does the AI actually name your brand in its answer?\n\nRecommendations: Does the AI recommend your brand over competitors?\n\nThese outcomes can move independently. Several experiments have increased citations without producing a measurable increase in brand mentions.\n\n1. The most credible experiments\nStrongest controlled evidence\n\n1. Aggarwal et al. — GEO: Generative Engine Optimization (KDD 2024)\n\nAcademic paper · Peer-reviewed conference publication\n\n[Read",
-  "notes": "分享预览仍在“[Read”处终止；未恢复完整正文。",
+  "answer_text": "As of October 2026, there is credible evidence that GEO tactics can improve AI-generated search visibility, but much weaker evidence that they reliably increase a brand\u2019s organic mentions or recommendations across AI platforms.\n\nThe most useful research separates three outcomes:\n\nCitation visibility: Does the AI cite your website or content?\n\nBrand mentions: Does the AI actually name your brand in its answer?\n\nRecommendations: Does the AI recommend your brand over competitors?\n\nThese outcomes can move independently. Several experiments have increased citations without producing a measurable increase in brand mentions.\n\n1. The most credible experiments\nStrongest controlled evidence\n\n1. Aggarwal et al. \u2014 GEO: Generative Engine Optimization (KDD 2024)\n\nAcademic paper \u00b7 Peer-reviewed conference publication\n\n[Read",
+  "notes": "The share preview still ended at [Read; the full answer text was not recovered.",
   "capture_method": "DOM-backed share-dialog preview; no public share created",
   "citation_mapping_complete": false,
   "attempt_number": 1,
@@ -42,11 +42,11 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 1029,
       "source_count": 0,
-      "notes": "存储正文仅1029字符，停在未完成链接 [Read；官方read_thread记录与网页交叉检查。保留失败记录，不进入推荐频次统计。",
+      "notes": "The stored answer text contained only 1029 characters and stopped at an unfinished link, [Read. The official read_thread record was cross-checked against the web page. The failed attempt is retained and excluded from recommendation-frequency statistics.",
       "capture_kind": "initial_export",
       "selected": false,
       "file": "data/captures/C-Q2-R2-legacy-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     },
     {
       "capture_id": "C-Q2-R2-recovery-01",
@@ -58,11 +58,11 @@
       "body_completeness": "partial",
       "answer_chars": 820,
       "source_count": 0,
-      "notes": "分享预览仍在“[Read”处终止；未恢复完整正文。",
+      "notes": "The share preview still ended at [Read; the full answer text was not recovered.",
       "capture_kind": "share_preview",
       "selected": true,
       "file": "data/captures/C-Q2-R2-recovery-01.json",
-      "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+      "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
     }
   ],
   "capture_provenance": {
@@ -71,7 +71,7 @@
     "method": "DOM-backed share-dialog preview; no public share created",
     "captured_at": "2026-10-29T10:20:25.683Z",
     "same_conversation": true,
-    "review_notes": "分享预览仍在“[Read”处终止；未恢复完整正文。",
+    "review_notes": "The share preview still ended at [Read; the full answer text was not recovered.",
     "selected_capture_file": "data/records/C-Q2-R2.json"
   },
   "public_copy": true

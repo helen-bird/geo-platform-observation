@@ -8,10 +8,10 @@
   "body_completeness": "error",
   "answer_chars": 7,
   "source_count": 0,
-  "notes": "分享预览仍只显示“无法加载此回复”（7字符）；不能视为正文或完成回答。",
+  "notes": "The share preview still displayed only a reply-loading error (original UI: \\u65e0\\u6cd5\\u52a0\\u8f7d\\u6b64\\u56de\\u590d; 7 characters). This cannot be treated as answer text or a completed answer.",
   "capture_kind": "share_preview",
   "selected": false,
   "attempt_in_main_sample": false,
   "file": "data/captures/C-Q1-R2-A2-recovery-01.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }

@@ -13,9 +13,11 @@ DIST = ROOT
 class Page(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.links, self.ids, self.details = [], set(), []
+        self.links, self.ids, self.details, self.language = [], set(), [], None
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'html':
+            self.language = attrs.get('lang')
         if 'id' in attrs:
             self.ids.add(attrs['id'])
         if tag == 'a' and 'href' in attrs:
@@ -27,14 +29,17 @@ def main():
     texts = []
     files = [p for p in DIST.rglob('*') if p.is_file() and not {'.git', '__pycache__'}.intersection(p.relative_to(DIST).parts)]
     for path in files:
-        if path.suffix in ('.html', '.json', '.txt', '.md'):
-            texts.append((str(path.relative_to(DIST)), path.read_text()))
+        if path.suffix in ('.html', '.json', '.txt', '.md', '.py'):
+            value = path.read_text()
+            assert not re.search(r'[\u3400-\u9fff]', value), ('Untranslated text', str(path.relative_to(DIST)))
+            if path.suffix != '.py':
+                texts.append((str(path.relative_to(DIST)), value))
     forbidden = {
         'private conversation': r'https?://(?:chatgpt\.com/(?:c|share)/|grok\.com/c/)',
         'local path': r'/Users/|(?:data/)(?:raw|recovery|screenshots|diagnostics|archive)/',
         'tracking parameter': r'[?&](?:(?:a?utm_)\w+|roistat_visit|_ga|_bhlid|fbclid|gclid)=',
-        'personal X context': r'your (?:existing|own) X account|Given your focus on building GEO knowledge through original content on X|X engagement|publish on X|experiments on X|用户在X上的背景',
-        'excluded personal plans': r'\bX account\b|illustrative publishing context|social-first content practice|personal background anonymized|platform anonymized|个人发布背景',
+        'personal X context': r'your (?:existing|own) X account|Given your focus on building GEO knowledge through original content on X|X engagement|publish on X|experiments on X|\u7528\u6237\u5728X\u4e0a\u7684\u80cc\u666f',
+        'excluded personal plans': r'\bX account\b|illustrative publishing context|social-first content practice|personal background anonymized|platform anonymized|\u4e2a\u4eba\u53d1\u5e03\u80cc\u666f',
         'credential': r'Bearer [A-Za-z0-9._-]{16,}|(?:access_token|refresh_token|source_repository_credential)\s*[":=]',
     }
     for name, value in texts:
@@ -42,6 +47,7 @@ def main():
             assert not re.search(pattern, value, re.I), (name, label)
     page = Page()
     page.feed((DIST / 'index.html').read_text())
+    assert page.language == 'en', 'Report language must be English'
     for link in page.links:
         parsed = urlsplit(link)
         if parsed.scheme or parsed.netloc:
@@ -67,7 +73,7 @@ def main():
         assert set(archive.namelist()) == expected
         for name in archive.namelist():
             assert archive.read(name) == (DIST / name).read_bytes()
-    print(json.dumps({'privacy_check': 'passed', 'public_files': len(files), 'valid_links': len(page.links), 'expanded_details': len(page.details), 'main_answers': 12, 'historical_attempts': 10, 'captures': 37, 'statistics_match': True}))
+    print(json.dumps({'privacy_check': 'passed', 'language_check': 'passed', 'public_files': len(files), 'valid_links': len(page.links), 'expanded_details': len(page.details), 'main_answers': 12, 'historical_attempts': 10, 'captures': 37, 'statistics_match': True}))
 
 if __name__ == '__main__':
     main()

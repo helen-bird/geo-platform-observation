@@ -8,10 +8,10 @@
   "body_completeness": "partial",
   "answer_chars": 1105,
   "source_count": 0,
-  "notes": "分享预览只恢复1105字符的开头说明，未出现具体创作者推荐主体，未补齐正文。",
+  "notes": "The share preview recovered only an 1105-character introduction, with no specific creator recommendation entries. The full answer text was not recovered.",
   "capture_kind": "share_preview",
   "selected": true,
   "attempt_in_main_sample": false,
   "file": "data/captures/C-Q3-R2-recovery-01.json",
-  "public_evidence_scope": "公开采集摘要；原始截图、完整HTML与私有会话信息留存本地。"
+  "public_evidence_scope": "Public capture summary; original screenshots, full HTML and private conversation information remain local."
 }
