@@ -170,15 +170,6 @@ def personalization_evidence(run):
     supplied = run.get("personalization_evidence")
     if supplied:
         return str(supplied)
-    answer = str(run.get("answer_text") or "")
-    # Show only the specific observed personalization, not a guessed profile.
-    plain = re.sub(r"[*_`]", "", answer)
-    start = plain.casefold().find("given your focus")
-    if start >= 0 and "original content on x" in plain[start:start + 650].casefold():
-        end = plain.find("\n\n", start)
-        if end < 0 or end > start + 650:
-            end = min(len(plain), start + 650)
-        return plain[start:end].strip()
     return None
 
 
@@ -884,7 +875,7 @@ def render(runs, findings, attempts=None, capture_history=None):
         short_limits += "。"
     document = f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GEO · 双平台观察实验</title><style>{CSS}</style></head><body><div class="report-shell">{sidebar}<main>
-<header><div class="eyebrow">GEO / Platform observation</div><h1>AI 会推荐谁，又引用了谁？</h1><p class="lede">ChatGPT Search 与 Grok 的推荐对象、引用来源和回答差异观察。</p></header>
+<header><div class="eyebrow">GEO / Learning experiments</div><h1>GEO 学习实验记录</h1><p class="lede">持续记录学习过程中的提问、实验、数据与阶段性认识。</p><div id="stage-1"><h2>阶段一 · AI 会推荐谁，又引用了谁？</h2><p class="lede">ChatGPT Search 与 Grok 的推荐对象、引用来源和回答差异观察。这是当前阶段的学习成果，后续实验将继续补充到本仓库。</p></div></header>
 {executive_summary}
 {platform_findings}
 <section class="section" id="repeat-stability"><h2>同一问题，两次回答有多相似？</h2><ul class="section-conclusions"><li><strong>本批没有一个平台在所有问题上都更稳定。</strong>实证研究题中 Grok 两轮更接近，另外两题的差距较小。</li><li><strong>这些数值只描述回答的一致程度。</strong>日期、思考强度和账号上下文没有完全控制，不能据此评价平台固有优劣。</li></ul><p class="note section-lead">推荐对象重合度（Jaccard）= 共同推荐数 ÷ 至少出现一次的推荐对象数；该值不衡量准确性或效果。下方同时列出每组的条件差异与未知字段。</p>{overlap_chart}<details><summary>查看交集、并集与共同对象</summary>{overlap_table}</details></section>

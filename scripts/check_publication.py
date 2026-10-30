@@ -25,15 +25,16 @@ class Page(HTMLParser):
 
 def main():
     texts = []
-    files = [p for p in DIST.rglob('*') if p.is_file()]
+    files = [p for p in DIST.rglob('*') if p.is_file() and not {'.git', '__pycache__'}.intersection(p.relative_to(DIST).parts)]
     for path in files:
-        if path.suffix in ('.html', '.json', '.txt'):
+        if path.suffix in ('.html', '.json', '.txt', '.md'):
             texts.append((str(path.relative_to(DIST)), path.read_text()))
     forbidden = {
         'private conversation': r'https?://(?:chatgpt\.com/(?:c|share)/|grok\.com/c/)',
         'local path': r'/Users/|(?:data/)(?:raw|recovery|screenshots|diagnostics|archive)/',
         'tracking parameter': r'[?&](?:(?:a?utm_)\w+|roistat_visit|_ga|_bhlid|fbclid|gclid)=',
         'personal X context': r'your (?:existing|own) X account|Given your focus on building GEO knowledge through original content on X|X engagement|publish on X|experiments on X|用户在X上的背景',
+        'excluded personal plans': r'\bX account\b|illustrative publishing context|social-first content practice|personal background anonymized|platform anonymized|个人发布背景',
         'credential': r'Bearer [A-Za-z0-9._-]{16,}|(?:access_token|refresh_token|source_repository_credential)\s*[":=]',
     }
     for name, value in texts:

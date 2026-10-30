@@ -28,7 +28,7 @@
       "body_completeness": "legacy_unverified",
       "answer_chars": 7807,
       "source_count": 9,
-      "notes": "网页正文显示“无法加载此回复”。通过官方 read_thread 读取同一会话存储的 completed 回复；未重发、未追加问题。原文包含不可解析的引用内部标记；已保存全部明确URL。回答明确提及用户的个人发布背景（具体平台已匿名化），存在账户个性化影响。网页搜索由工具芯片启用，UI存储提示前缀 @网页搜索。 已采集记录末尾学习计划仅到 Days 4–6；未补写后续，完整呈现状态无法独立保证。",
+      "notes": "网页正文显示“无法加载此回复”。通过官方 read_thread 读取同一会话存储的 completed 回复；未重发、未追加问题。原文包含不可解析的引用内部标记；已保存全部明确URL。回答明确提及原问题未提供的个人上下文，存在账户个性化影响。网页搜索由工具芯片启用，UI存储提示前缀 @网页搜索。 已采集记录末尾学习计划仅到 Days 4–6；未补写后续，完整呈现状态无法独立保证。",
       "capture_kind": "initial_export",
       "selected": false,
       "attempt_in_main_sample": false,
