@@ -35,7 +35,7 @@ def main():
             if path.suffix != '.py':
                 texts.append((str(path.relative_to(DIST)), value))
     forbidden = {
-        'private conversation': r'https?://(?:chatgpt\.com/(?:c|share)/|grok\.com/c/)',
+        'private conversation': r'https?://(?:chatgpt\.com/(?:c|s|share)/|grok\.com/c/)',
         'local path': r'/Users/|(?:data/)(?:raw|recovery|screenshots|diagnostics|archive)/',
         'tracking parameter': r'[?&](?:(?:a?utm_)\w+|roistat_visit|_ga|_bhlid|fbclid|gclid)=',
         'personal X context': r'your (?:existing|own) X account|Given your focus on building GEO knowledge through original content on X|X engagement|publish on X|experiments on X|\u7528\u6237\u5728X\u4e0a\u7684\u80cc\u666f',
@@ -57,6 +57,8 @@ def main():
             assert not parsed.fragment or unquote(parsed.fragment) in page.ids, 'Broken anchor'
         else:
             target = (DIST / unquote(parsed.path).lstrip('/')).resolve()
+            if target.is_dir():
+                target = target / 'index.html'
             assert target.is_relative_to(DIST) and target.is_file(), ('Broken public link', parsed.path)
     assert page.details and all(page.details), 'All details must remain expanded'
     load = lambda name: json.loads((DIST / name).read_text())
@@ -73,6 +75,8 @@ def main():
         assert set(archive.namelist()) == expected
         for name in archive.namelist():
             assert archive.read(name) == (DIST / name).read_bytes()
+    import check_stage2_publication
+    check_stage2_publication.main()
     print(json.dumps({'privacy_check': 'passed', 'language_check': 'passed', 'public_files': len(files), 'valid_links': len(page.links), 'expanded_details': len(page.details), 'main_answers': 12, 'historical_attempts': 10, 'captures': 37, 'statistics_match': True}))
 
 if __name__ == '__main__':

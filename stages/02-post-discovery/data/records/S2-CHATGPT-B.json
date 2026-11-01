@@ -1,0 +1,64 @@
+{
+  "id": "S2-CHATGPT-B",
+  "slot_id": "S2-CHATGPT-B",
+  "platform": "ChatGPT Search",
+  "condition": "B",
+  "attempt_number": 1,
+  "prompt": "Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+  "observed_composer_text": "\\u7f51\\u9875\\u641c\\u7d22 Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+  "model_label": "GPT-5.6 Sol",
+  "reasoning_effort": "Medium",
+  "temporary": true,
+  "personalization": false,
+  "search_enabled_ui": true,
+  "submitted_at": "2026-10-31T03:46:11.104Z",
+  "captured_at": "2026-10-31T04:04:40.944638+00:00",
+  "recovered_at": "2026-10-31T04:04:40.944638+00:00",
+  "saved_at": "2026-10-31T04:01:18.911Z",
+  "status": "recovered",
+  "body_complete": true,
+  "answer_text": "**I could not find or verify the original X post containing that exact sentence.**\n\nI searched for\\:\n\n- The complete sentence in quotation marks.\n- The distinctive phrase `\"2 of 20 unique recommended entities\"`\\.\n- Variations of `\"about 10% overlap\"` and `\"shared only 2 of 20\"`\\.\n- Indexed X/Twitter posts using both `x.com` and `twitter.com` domain searches.\n\n**Verification result**\n\n| Requested information | Result |\n|--------|--------|\n| Exact sentence found | No |\n| Original X post URL | Not found |\n| Author | Not verified |\n| Link-to-quote verification | Not possible |\n\nI also attempted to access X's search page directly, but the request returned HTTP 403 (access denied).\n\n**Conclusion\\:** I cannot reliably identify the original post or its author. I won't invent an X URL or attribute the quotation to someone without evidence.\n\nThe original public post remains unverified.",
+  "answer_links": [],
+  "search_observed": null,
+  "search_evidence": "Native Web Search chip selected; final answer reports phrase/domain searches. No independent native search activity panel was captured for B.",
+  "search_queries": [],
+  "main_page_error": "Unable to load this response",
+  "copy_result": "\\u65e0\\u6cd5\\u52a0\\u8f7d\\u6b64\\u56de\\u590d",
+  "notes": "Full answer recovered without resubmission. Main UI rendering failure and failed Copy remain in capture history; the response itself reports no successful access/discovery. Saved after generation under explicit user authorization.",
+  "capture_method": "Saved existing generated temporary conversation, then read its full agentMessage through native read_thread; page.hasMore=false, no truncation marker. No prompt resubmission.",
+  "capture_provenance": "Original generation used fresh non-personalized temporary mode. Saving after generation created an ordinary-history copy with a new conversation ID. Original UI/copy failures are retained. Returned native agentMessage text is preserved verbatim, including escaped Markdown/citation serialization; it is not a retrieval summary.",
+  "assessment": {
+    "outcome": "fail",
+    "x_post_content_access": "not_assessed",
+    "exact_discovery": "fail",
+    "unprompted_discovery": "not_applicable",
+    "github_only": false,
+    "rationale": "The complete recovered answer explicitly says the original X post URL was not found, the author was not verified, and quote-to-link verification was impossible. No target URL returned.",
+    "access_error_claim": "The answer reports HTTP 403 from X; this is a platform-reported cause, not an independently captured HTTP response."
+  },
+  "recovery_history": [
+    {
+      "captured_at": "2026-10-31T03:50:25.114Z",
+      "method": "Original temporary UI and Copy",
+      "status": "capture_incomplete",
+      "body_complete": false,
+      "notes": "Unable to load response; Copy exposed only error text."
+    },
+    {
+      "captured_at": "2026-10-31T04:01:18.911Z",
+      "method": "User-approved save existing chat",
+      "status": "saved_copy_created",
+      "notes": "Ordinary-history copy; no new question or generation."
+    },
+    {
+      "method": "Native full turn message read of saved copy",
+      "status": "recovered",
+      "body_complete": true,
+      "notes": "Native full agentMessage, not preview alone; original generated_at unknown.",
+      "recorded_at": "2026-10-31T04:04:40.944638+00:00"
+    }
+  ],
+  "raw_file": "records/S2-CHATGPT-B.json",
+  "public_copy": true,
+  "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private."
+}

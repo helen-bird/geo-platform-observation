@@ -1,0 +1,25 @@
+{
+  "edition": "Redacted public edition",
+  "published_on": "2026-11-01",
+  "preserved": [
+    "Six selected complete answers across three conditions and two platforms",
+    "All ten actual submissions, including four earlier failed or incomplete ChatGPT C attempts",
+    "Registered prompts, model/time/search evidence, recovery summaries and reviewer judgments",
+    "Original target post identity, exact excerpt and public body evidence",
+    "Answer URLs and domains, included/excluded source roles and recorded C/M/R observations"
+  ],
+  "removed": [
+    "Private ChatGPT/Grok conversation and share URLs, including ChatGPT /s/ URLs",
+    "Private conversation/message identifiers, automation and browser operation identifiers",
+    "Original account screenshots, full DOM/HTML, native tool exports and local archives",
+    "Local filesystem paths and links to private capture files",
+    "Original account preference values and unrelated navigation/consent links",
+    "Tracking parameters in public source URLs"
+  ],
+  "not_published_as_source_results": "Unscoped full-page anchor inventories are retained locally. Their entries and source badge totals must not be interpreted as citation counts.",
+  "manual_C_answer": "The public answer_text is the user-supplied complete English paste, corroborated against the complete original native message. Formatting and citation representations differ; eleven URLs are preserved separately. The private native dump is excluded.",
+  "controls": "Manual ChatGPT C model and approximate time are user-confirmed; pre-submit temporary/personalization controls were not independently captured. Full answer collection is not proof of identical control evidence.",
+  "external_claims": "Study statistics and verified labels in platform answers are platform claims; this stage did not independently audit those studies.",
+  "scope": "Only public copies are redacted; local originals and all historical failures remain unchanged. Outcomes and recommendation roles are preserved.",
+  "language_policy": "Documentation and annotations are English. Original English answers and questions retain their wording apart from marked privacy edits and tracking removal. Captured non-English UI tokens use literal Unicode escapes."
+}

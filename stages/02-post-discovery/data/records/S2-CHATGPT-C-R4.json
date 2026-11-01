@@ -1,0 +1,84 @@
+{
+  "id": "S2-CHATGPT-C-R4",
+  "slot_id": "S2-CHATGPT-C",
+  "platform": "ChatGPT Search",
+  "condition": "C",
+  "attempt_number": 4,
+  "replacement_for": "S2-CHATGPT-C-R3",
+  "prompt": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+  "observed_composer_text": "\\u7f51\\u9875\\u641c\\u7d22 Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+  "model_label": "GPT-5.6 Sol",
+  "reasoning_effort": "Medium",
+  "fresh_session": true,
+  "temporary": true,
+  "personalization": false,
+  "search_enabled_ui": true,
+  "submitted_at": "2026-10-31T07:32:32.721Z",
+  "captured_at": "2026-10-31T07:39:13.362617+00:00",
+  "saved_at": "2026-10-31T07:37:42.432Z",
+  "status": "capture_incomplete",
+  "body_complete": false,
+  "answer_text": "",
+  "answer_links": [],
+  "source_inventory_complete": false,
+  "search_observed": true,
+  "search_evidence": "Native activity reports searched 45 websites; UI says answer complete. No answer body or source links were visible in the main page.",
+  "main_page_error": "Answer body absent after UI completion",
+  "notes": [
+    "One delayed retry authorized by user; same prompt/model/reasoning/search in a new non-personalized temporary chat. User identity and target URL were not supplied.",
+    "Prior chats are saved in account history; this chat visibly disables memory, plugins and custom instructions. Backend isolation is not independently audited.",
+    "Native activity reports 45 searched websites and answer complete; no answer body was visible. This is a capture limitation, not a negative retrieval result.",
+    "User-approved save recovery created an ordinary-history copy; its native read returned only the user message. Original failures and earlier partial C prefixes remain unchanged.",
+    "No public share link was created or copied; the ordinary header preview was attempted without publishing. The one-shot scheduled retry is complete and will not repeat automatically."
+  ],
+  "capture_method": "Main temporary UI, saved ordinary-history copy and native read_thread snapshot. Native snapshot contains only the user message; no assistant answer body was available.",
+  "capture_provenance": "The UI completed after reporting 45 searched websites. Main and saved views show activity summaries without an answer. Saved native turn has completed status but only a userMessage. These surfaces do not establish whether a full original response exists elsewhere; they do not establish no discovery.",
+  "assessment": {
+    "outcome": "indeterminate",
+    "x_post_content_access": "not_assessed",
+    "exact_discovery": "not_applicable",
+    "unprompted_discovery": {
+      "verdict": "indeterminate",
+      "evidence": "Native web search was observed, but neither UI nor saved-message snapshot exposed the answer body. Target presence or absence in the full response is unresolved."
+    },
+    "github_only": "not_assessed",
+    "rationale": "Scheduled same-condition retry executed once. Missing original body and source inventory keep the required ChatGPT C cell unresolved, not a discovery failure."
+  },
+  "recovery_history": [
+    {
+      "captured_at": "2026-10-31T07:37:38.910Z",
+      "method": "Temporary UI completed; native search activity visible",
+      "status": "capture_incomplete",
+      "body_complete": false
+    },
+    {
+      "captured_at": "2026-10-31T07:37:42.432Z",
+      "method": "User-approved C save for recovery",
+      "status": "saved_copy_created"
+    },
+    {
+      "captured_at": "2026-10-31T07:39:13.362617+00:00",
+      "method": "Read saved native turn",
+      "status": "capture_incomplete",
+      "body_complete": false,
+      "notes": "Only userMessage is present in the returned completed turn; no assistant body exposed."
+    },
+    {
+      "captured_at": "2026-10-31T07:39:53.148498+00:00",
+      "method": "Normal header preview attempt",
+      "status": "capture_incomplete",
+      "body_complete": false,
+      "notes": "Share control remained loading; no preview body or public link was exposed and no publish/copy-link action was used."
+    },
+    {
+      "captured_at": "2026-10-31T07:40:11.487688+00:00",
+      "method": "Reload saved conversation",
+      "status": "capture_incomplete",
+      "body_complete": false,
+      "notes": "Completed load still shows search activity only, without an assistant answer."
+    }
+  ],
+  "raw_file": "records/S2-CHATGPT-C-R4.json",
+  "public_copy": true,
+  "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private."
+}

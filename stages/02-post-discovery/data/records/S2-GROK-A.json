@@ -1,0 +1,51 @@
+{
+  "id": "S2-GROK-A",
+  "slot_id": "S2-GROK-A",
+  "platform": "Grok",
+  "condition": "A",
+  "attempt_number": 1,
+  "prompt": "Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+  "observed_composer_text": "Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+  "model_label": "Exact backend version not disclosed",
+  "mode_label": "Expert",
+  "search_mode": "Expert native web/X retrieval; direct public URL provided",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "submitted_at": "2026-10-31T03:46:31.827Z",
+  "captured_at": "2026-10-31T03:49:00.560Z",
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Post content successfully retrieved via X tools (no access issues).\n\nSource: https://x.com/bird_helen67403/status/2116080254523445676\n\nAuthor: HelenBird (@bird_helen67403)\n\nPosted: Fri, 30 Oct 2026 08:10:22 GMT\n\nTitle/theme: GEO Lab #01: Why do AI search engines recommend different sources?\n\nTwo specific experimental findings stated in the post\nLow entity overlap between platforms. In an experiment comparing ChatGPT Search vs. Grok (3 GEO questions \u00d7 2 platforms \u00d7 2 runs = 12 answers), when the query asked for practical, data-backed GEO tutorials for indie builders, the two platforms shared only 2 of 20 unique recommended entities \u2014 roughly 10% overlap.\nHigh run-to-run variability. Even near-simultaneous searches on the same platforms produced totally different recommendation lists.\n\nThe post frames these as exploratory observations (not causal claims) from a small first run and notes related takeaways such as \u201ccitation \u2260 mention \u2260 recommendation\u201d and that a single answer is insufficient for measuring GEO. It points to a full write-up and repo for more detail but does not expand the experimental numbers further in the post itself.",
+  "answer_links": [
+    {
+      "text": "https://x.com/bird_helen67403/status/2116080254523445676",
+      "url": "https://x.com/bird_helen67403/status/2116080254523445676",
+      "domain": "x.com",
+      "kind": "link in answer"
+    }
+  ],
+  "search_observed": true,
+  "search_evidence": "Native web/X retrieval observed. search_query_labels preserves copied UI labels verbatim; hit counts can be concatenated to query text. These labels are not parsed search-query strings. Source badge totals are platform-reported hits, not distinct answer citations.",
+  "search_query_labels": [
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcsite:x.com bird_helen67403 21160802545234456765"
+  ],
+  "source_panel_declared_hits": 5,
+  "assessment": {
+    "outcome": "pass",
+    "x_post_content_access": "pass",
+    "exact_discovery": "not_applicable",
+    "unprompted_discovery": "not_applicable",
+    "github_only": false,
+    "rationale": "Direct content access demonstrated: native post-reading activity, correct author/title, and accurate body-specific observations (2/20\u224810% entity overlap; citation, mention and recommendation can occur separately). The 12-answer design is corroborating context. A supplied URL does not establish discovery. The added \u201con the same platforms\u201d qualifier remains unsupported by the supplied text.",
+    "faithfulness": {
+      "verdict": "partly_supported",
+      "caveat": "The answer adds \u201con the same platforms\u201d to the variability finding. That qualifier is not explicit in the target post; this excerpt alone does not establish within-platform repeat variability."
+    }
+  },
+  "recovery_history": [],
+  "raw_file": "records/S2-GROK-A.json",
+  "public_copy": true,
+  "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private.",
+  "source_inventory_notes": "Whole-page anchor inventory is not included in the public edition. It was captured while source panels were expanded and includes query, answer and activity links; it is not a scoped retrieval-result set or a list of answer citations. Original captures remain local. Source badge totals are reported hits, not distinct cited URLs. The answer links and search-activity labels are retained below."
+}

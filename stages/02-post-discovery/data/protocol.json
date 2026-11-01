@@ -1,0 +1,221 @@
+{
+  "title": "Stage 2: Discovery and access to the GEO Lab #01 X post",
+  "registered_at": "2026-10-31T03:35:43.619947+00:00",
+  "timezone": "Asia/Shanghai",
+  "test_date": "2026-10-31",
+  "target": {
+    "url": "https://x.com/bird_helen67403/status/2116080254523445676",
+    "status_id": "2116080254523445676",
+    "author_display": "HelenBird",
+    "author_handle": "bird_helen67403",
+    "published_ui": "4:10 PM \u00b7 Oct 30, 2026",
+    "ground_truth": "User supplied full post; verified against the rendered X page before tests.",
+    "ground_truth_evidence": "target-post.json"
+  },
+  "design": {
+    "planned_submissions": 6,
+    "platforms": [
+      "ChatGPT Search",
+      "Grok"
+    ],
+    "conditions": [
+      "A",
+      "B",
+      "C"
+    ],
+    "repetitions_per_cell": 1,
+    "execution_order": [
+      "S2-CHATGPT-C",
+      "S2-GROK-C",
+      "S2-CHATGPT-B",
+      "S2-GROK-B",
+      "S2-CHATGPT-A",
+      "S2-GROK-A"
+    ],
+    "order_rationale": "Natural discovery before exact excerpt before direct URL, limiting identity leakage within this batch. Each uses a fresh temporary/private conversation; only one user prompt, no steering follow-up.",
+    "publication": "Redacted public edition authorized on 2026-11-01; private originals remain local.",
+    "actual_execution_order": [
+      "S2-CHATGPT-C",
+      "S2-GROK-C",
+      "S2-GROK-B",
+      "S2-CHATGPT-B",
+      "S2-GROK-A",
+      "S2-CHATGPT-A",
+      "S2-CHATGPT-C-R2",
+      "S2-CHATGPT-C-R3",
+      "S2-CHATGPT-C-R4",
+      "S2-CHATGPT-C-R5"
+    ],
+    "actual_submission_attempts": 10,
+    "deviations": [
+      "Grok B and A were submitted before ChatGPT B and A because of ChatGPT access interruption. Within each original platform sequence the order remained C\u2192B\u2192A.",
+      "ChatGPT C was supplemented twice after the six planned attempts with explicit user authorization, retaining the initial Cloudflare failure.",
+      "The C supplement was submitted in fresh non-personalized temporary mode before A/B were saved to ordinary history. No follow-up or seeded prompt was added.",
+      "Existing A/B chats were saved after generation under explicit user authorization to recover full body text; these are capture recovery actions, not additional submissions.",
+      "After C-R2 recovery exposed only a truncated prefix, C-R3 repeated the unchanged prompt/settings in a new non-personalized temporary chat. A/B/C-R2 were then already saved in account history; visible memory/plugins/custom-instruction access remained disabled for C-R3. Backend isolation is not audited.",
+      "A single delayed C-R4 retry ran at the user-requested later time on 2026-10-31, using the same visible Sol Medium model and native Web Search in a fresh non-personalized temporary chat. Forty-five searched websites were observed. No complete answer body was recovered.",
+      "C-R5 was user-operated. The source contains the exact C question plus the native Search marker and no steering; original activity verifies 29 searched websites. User confirms GPT-5.6 Sol / Medium and approximate time. No pre-submit temporary/personalization screenshot exists; the manual control evidence is qualified."
+    ],
+    "selected_attempt_policy": "Six planned cells now have complete answer captures. ChatGPT C selects the first complete manual replacement (C-R5), with its collection provenance qualified. No outcome-based cherry-picking: all four earlier C failures/partial captures and all ten submissions remain in attempts.json.",
+    "publication_at_collection": "Local collection only; no X post, public share, repository push or website update is authorized for this stage."
+  },
+  "prompts": {
+    "A": "Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+    "B": "Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+    "C": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions."
+  },
+  "exact_search_excerpt": "the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.",
+  "excerpt_whitespace_tokens": 15,
+  "scoring": {
+    "A": "Pass requires two distinct specific findings supported by the actual post, the original URL as source, and visible evidence of post-content retrieval. Repeating the supplied URL or claiming to have read it is insufficient. Correct facts obtained only from the linked report are tracked separately, not as demonstrated access to the X post.",
+    "B": "Pass requires the real target X status URL and correct author, plus evidence that retrieved page content matches the excerpt. Repeating the supplied excerpt or guessing a plausible URL is insufficient.",
+    "C": "Target-discovery pass requires proactively finding and citing the target X status without supplied identity, URL or excerpt. Finding the GitHub report, author, or another genuine experiment is tracked separately; it does not establish discovery of this X post.",
+    "outcomes": [
+      "pass",
+      "fail",
+      "indeterminate",
+      "technical_failure"
+    ],
+    "capture_failure": "Missing or incomplete capture is not coded as no discovery. Reading a preview or source panel does not prove full stored content."
+  },
+  "reference_facts": [
+    {
+      "id": "design",
+      "fact": "3 GEO questions \u00d7 2 platforms \u00d7 2 runs = 12 answers."
+    },
+    {
+      "id": "creator_overlap",
+      "fact": "For practical data-backed tutorials for indie builders, 2 of 20 unique recommended entities were shared: about 10% cross-platform overlap."
+    },
+    {
+      "id": "cmr_distinction",
+      "fact": "Citation, mention and recommendation can occur separately; citation does not necessarily mean brand recommendation."
+    },
+    {
+      "id": "source_variation",
+      "fact": "The same query can return different retrieval results/source picks across platforms."
+    },
+    {
+      "id": "answer_variation",
+      "fact": "Recommendations vary; one answer is insufficient to measure GEO."
+    }
+  ],
+  "preflight": {
+    "chatgpt": {
+      "conversation": "Temporary Chat",
+      "personalization": "Not personalized; UI states no memory, plugins or custom instructions",
+      "model": "GPT-5.6 Sol (UI selection; composer label 5.6 Medium)",
+      "reasoning_effort": "Medium",
+      "search": "Web Search tool chip selected before submission",
+      "model_choice": "GPT-5.6 Sol / Medium was explicitly selected in the UI; backend routing was not independently verified."
+    },
+    "grok": {
+      "conversation": "Private Chat",
+      "mode": "Expert",
+      "backend_model_version": "Not disclosed in visible selector",
+      "customization": "Custom style and all listed styles unchecked",
+      "personalize_using_x_test": false,
+      "personalize_using_history_test": false,
+      "restoration": "Original personalization settings restored after tests; original preference values omitted."
+    },
+    "manual_chatgpt_c_replacement": {
+      "collector": "User",
+      "exact_prompt": "Verified against original native user message after separating Search tool marker",
+      "search": "Actual native activity: 29 websites searched",
+      "model_and_reasoning": "GPT-5.6 Sol / Medium, user-confirmed; generation UI not independently captured",
+      "time": "User says now (around16:49Asia/Shanghai); native source turn16:47:24\u201316:47:36 and UI thought36s retained separately",
+      "personalization_isolation": "Not independently recorded before submission",
+      "interpretation": "Complete answer capture does not establish identical pre-submit control evidence."
+    }
+  },
+  "limitations": [
+    "Only one run per platform and condition; no estimate of stable retrieval rates or GEO causal effectiveness.",
+    "Temporary/private UI settings reduce visible personalization; backend isolation is not independently audited.",
+    "The post was published the previous day; indexing delay may affect results.",
+    "X-content access, exact matching, natural discovery, and GitHub-report retrieval are separate outcomes.",
+    "Grok source-panel page-anchor inventories include query/answer/activity links and are not fully scoped retrieval-result sets. Consent UI links are excluded from derived analysis while original captures remain unchanged. UI query labels can concatenate result counts; source badge counts are not distinct citations.",
+    "Selected ChatGPT C is a user-operated replacement. Its full answer, exact question and actual search were corroborated, but the generation model is user-confirmed, time is approximate and pre-submit memory/temporary controls were not captured. Comparisons must retain this collection difference."
+  ],
+  "amendments": [
+    {
+      "recorded_at": "2026-10-31T03:56:52.731421+00:00",
+      "authorization": "User explicitly approved supplementing the Cloudflare-blocked ChatGPT C test while retaining the failed record. User also approved saving already-generated temporary chats to recover their bodies through ordinary preview UI, with no public sharing.",
+      "scope": "Six planned platform\u00d7condition cells remain; additional submission attempts must be counted separately.",
+      "isolation_order": "Submit the fresh non-personalized C supplement before converting A/B chats to normal saved history.",
+      "publication": "No new X post, public conversation share, repository push, or website publication."
+    },
+    {
+      "recorded_at": "2026-10-31T04:24:28.101644+00:00",
+      "authorization": "User approved saving C for body recovery. Prior approval permits extra C supplements while retaining all failed attempts.",
+      "action": "Saved C-R2; preserved truncated prefix. Submitted same C prompt once more as C-R3 with original selected model/reasoning/search and a fresh non-personalized temporary chat.",
+      "capture_constraint": "Do not interpret a partial prefix as complete or classify whole-answer discovery from missing target in that prefix."
+    },
+    {
+      "recorded_at": "2026-10-31T07:33:13.397548+00:00",
+      "authorization": "User requested a delayed same-condition retry; one-shot heartbeat [One-shot retry identifier omitted.] scheduled for 2026-10-31 15:30 Asia/Shanghai.",
+      "action": "One C-R4 submission in a fresh non-personalized temporary conversation, GPT-5.6 Sol / Medium, native Web Search. No other cells re-tested.",
+      "publication": "Local records and report only; no public publishing."
+    },
+    {
+      "recorded_at": "2026-10-31T08:59:29.987331+00:00",
+      "authorization": "User supplied a new manual C answer, affirmed specified model and current time, and provided an existing share link for collection.",
+      "action": "Imported as C-R5, recovered complete original native answer and 11 URLs, selected complete manual record, retained all prior attempts. No new model prompt or publication by agent.",
+      "qualification": "Manual controls and timing provenance explicitly distinguished from preflight-captured automated attempts."
+    },
+    {
+      "date": "2026-11-01",
+      "authorization": "User approved a redacted Stage 2 edition in the existing public GitHub repository.",
+      "scope": "Publish six selected answers, all ten submission records, source URLs, qualified judgments and the report. Preserve private originals locally."
+    }
+  ],
+  "restoration": {
+    "restored_at": "2026-10-31T03:50:56.650Z",
+    "completed": true,
+    "scope": "Original Grok personalization settings restored. Original preferences and account UI are not published.",
+    "other_settings_changed": false
+  },
+  "findings": [
+    {
+      "title": "Direct access and discovery are different outcomes.",
+      "detail": "Grok retrieved body-specific facts when given the URL. Neither selected exact-excerpt nor natural-query answer returned the target X post. The complete ChatGPT C is a later manual supplement with qualified control evidence. A direct-URL pass does not show proactive discovery."
+    },
+    {
+      "title": "The direct-URL result differs across these two platform runs.",
+      "detail": "Grok met the content-access criterion; ChatGPT explicitly said it could not access the post. Grok\u2019s summary added \u201con the same platforms,\u201d an unsupported qualifier that is recorded separately from access."
+    },
+    {
+      "title": "Exact quotation did not guarantee discovery.",
+      "detail": "Both complete B answers reported no matching original post. The experimenter independently verified that the public post exists and matches the quote; a no-result answer does not establish that it is absent or unindexed. The supplied 86-character excerpt is an exact continuous fragment from the latter part of a sentence, not a full sentence. A Unicode-level comparison found no transcription difference; Grok also tried shorter and punctuation-free variants. ChatGPT reports variants, but its actual B search queries were not independently captured."
+    },
+    {
+      "title": "The answer dataset is complete, with one qualified manual replacement.",
+      "detail": "Ten submissions cover six planned cells, now all with complete answer bodies. The user supplied C-R5; the complete native original corroborates it and supplies 11 URLs. Four earlier C technical/partial captures remain intact. Model/time are user-reported and session-isolation preflight was not independently recorded."
+    },
+    {
+      "title": "A citation can accompany an explicit exclusion.",
+      "detail": "ChatGPT C cites and mentions Artur Ferreira while placing him among sources to exclude; Grok C presents him as a research candidate to read. ChatGPT\u2019s conclusion instead prioritizes Rank Prompt, mapou, Zeeshan Yaseen and Charles Cousyn. These are observed selection differences, not evidence of GEO causality."
+    }
+  ],
+  "capture_gap": {
+    "slot": "S2-CHATGPT-C",
+    "status": "answer_body_and_returned_urls_complete_with_qualified_manual_controls",
+    "resolved_by": "S2-CHATGPT-C-R5",
+    "resolved_at": "2026-10-31T08:59:29.987331+00:00",
+    "available": "Complete user paste, complete 11,699-character native original answer, 11 explicit URLs and 29-site native search activity. All prior failed/partial records remain retained.",
+    "remaining_provenance_limits": "Generation model/reasoning user-confirmed; submission time approximate; original temporary/personalization preflight not independently recorded."
+  },
+  "publication_date": "2026-11-01",
+  "public_edition": {
+    "edition": "Redacted public edition",
+    "published_on": "2026-11-01",
+    "authorization": "User approved redaction and publication to the existing GitHub repository.",
+    "historical_scope": "Local-only statements in collection amendments describe authorization at collection time."
+  },
+  "exact_excerpt_verification": {
+    "character_count": 86,
+    "exact_unicode_substring": true,
+    "scope": "Continuous latter clause of the original sentence, including the U+2014 em dash and final period.",
+    "prompt_match": "Both recorded B prompts include the same registered excerpt.",
+    "limit": "An exact prompt does not establish the exact query submitted by the platform to a search service."
+  }
+}

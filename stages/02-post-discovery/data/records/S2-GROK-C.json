@@ -1,0 +1,77 @@
+{
+  "id": "S2-GROK-C",
+  "slot_id": "S2-GROK-C",
+  "platform": "Grok",
+  "condition": "C",
+  "attempt_number": 1,
+  "prompt": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+  "observed_composer_text": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+  "model_label": "Exact backend version not disclosed",
+  "mode_label": "Expert",
+  "search_mode": "Expert supports native web/X retrieval; no separate force-search toggle exposed; actual search to be checked",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "submitted_at": "2026-10-31T03:37:26.510Z",
+  "captured_at": "2026-10-31T03:40:47.148Z",
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Independent builders have published a handful of original, data-backed experiments comparing GEO (Generative Engine Optimization) tactics and outcomes across ChatGPT Search and Grok. Most public discussion remains opinion or anecdotal. The verified experiments below are distinguished by disclosed methods, sample sizes, and direct links to primary write-ups or data. Larger academic or vendor studies (e.g., Princeton GEO-bench, Fudan fabricated-concept paper, Peec AI fanout analysis) are noted only where they contextualize, as they are not from independent builders.\n\nKasra Dash (@Kasra_Dash) \u2014 Self-referencing listicles, comparisons, and alternatives\n\nDirect link: X post with setup, results, and data images (April 2026; also covered in interviews such as Ryan Doser\u2019s video).\n\nMethodology: Published 50 self-referencing articles on a mid-age domain in three batches (roughly 10, then 20, then 20), with ~3 weeks between drops. Formats: comparison pages (e.g., brand A vs brand B), listicles (\u201cbest X for Y\u201d), and alternative pages (\u201cZ alternatives\u201d). Tracked brand mentions/citations across ChatGPT, Grok, Perplexity, Claude, and Google AI Overviews. Later 410\u2019d (removed) all pages and monitored retention of citations.\n\nSample size: 50 articles; multi-week observation with batch-level tracking of mentions (e.g., Grok mentions scaled from ~7 \u2192 25 \u2192 41 across batches).\n\nKey verified findings (vs. ChatGPT Search): Grok and Perplexity picked up the brand fastest and most readily (high single-digit to low double-digit \u201cout of 10\u201d style pickup rates in summaries; Grok highly responsive). ChatGPT and Claude were slower/more moderate (~6/10 range in secondary reports) but retained references to deleted pages for weeks, while Grok and Perplexity dropped faster after 410s. Google AI was least responsive. This is presented as a live, tracked test rather than theory; data visuals are in the primary post.\n\nThis is a clear original experiment by an independent SEO/AI-search practitioner.\n\nLennart Vallo / Cited (wearecited.com) \u2014 New-domain niche content to #1 citations\n\nDirect link: Full results write-up (April 2026 case study on BaliPropertyRules.com).\n\nMethodology: Registered a blank domain (early February 2026), published 18 original articles on Bali property regulations/costs/processes with technical/strategic optimization and no link building, paid placements, or ads. Tracked citations via 10 audits over ~6\u20138 weeks (Feb 12\u2013Mar 29, 2026) using a fixed set of prompts. Measured coverage (% of prompts citing the site), total citations, share of voice, win rate (first-position citations), domain rank, unique URLs, and referral traffic (GA4 + GSC). Also noted volatility and response to a Google Core Update.\n\nSample size: 18 articles; 73 prompts across the engines; 10 audits; 202 total citations recorded.\n\nKey verified findings (ChatGPT Search vs. Grok):\n\nGrok: Higher coverage (~72.6%), more citations (68), broader unique URLs (~20), strong/high win rate (cited first in a large majority of cases when it cited the site), #1 domain rank. More volatile but loyal and broad in trust from early on.\nChatGPT/OpenAI: Lower coverage (~28.8%), fewer citations (25), fewer unique URLs (~11), still #1 domain rank on the prompts it covered, but narrower (favored information-scarcity/time-sensitive angles) and more correlated with Google signals. Drove more tracked referral sessions in this test despite lower coverage.\n\nSite reached #1 domain rank on all four engines tested (including ChatGPT and Grok). Data is summarized in tables in the public write-up (no raw CSV download noted, but methodology and metrics are disclosed). This is an original controlled-style experiment by an independent/small-team builder.\n\nAdditional relevant independent or small-lab work\nSecond Wind (Marty Coleman, secondwind.cloud): Original 360-probe study asking ChatGPT, Claude, Gemini, Perplexity, and Grok to rank/recommend/describe each other. Direct link. Sample: 360 probes. GEO takeaways include strong \u201cniche-boxing\u201d for Grok (high specialty association, low general-mention rate ~13.5%, niche-boxing ~78.7%) versus ChatGPT\u2019s default/generalist strength. More observational ranking experiment than content-tactic test, but original and quantified.\nThe GEO Lab (Artur Ferreira, thegeolab.net): Multiple pre-registered/public experiments and logs (e.g., Experiment 001 on narrative vs. declarative structure producing a ~23-percentage-point citation-rate gap on Perplexity; 330-query tests across engines including ChatGPT). GEO Log and related pages. Stronger on controlled single-variable tests and methodology transparency than pure ChatGPT-vs-Grok head-to-heads, but independent and data-driven.\nVerified experiments vs. general opinions\n\nVerified experiments (above) publish concrete methods, sample sizes, tracking periods, and (at least summarized) results or data visuals. They allow inspection of what was actually tested (listicle formats, new-domain niche content, structural changes, etc.) and how ChatGPT Search and Grok differed in speed of pickup, breadth of citation, retention after content removal, volatility, or ranking style.\n\nGeneral opinions dominate elsewhere: blog posts, X threads, and agency advice asserting that \u201clisticles work,\u201d \u201cadd statistics/quotes,\u201d \u201cGrok is easier,\u201d or \u201cChatGPT prefers X\u201d without disclosed sample sizes, controls, tracking windows, or primary data. Many recycle the original Princeton GEO paper\u2019s simulated findings (top-5 Google results fed to an older model) without live multi-engine tests. Company tools (Qwairy, VectorGap, AthenaHQ, Promptwatch, etc.) produce large observational datasets that include both engines but are product/vendor reports rather than independent builder experiments.\n\nCaveats that apply across the independent work: Sample sizes are modest by academic standards (tens of articles or prompts, not tens of thousands); engines update frequently, so results are time-bound; most are not peer-reviewed; and \u201csuccess\u201d is usually measured in citations/mentions rather than downstream traffic or conversions (though some track the latter). Retrieval behavior and model knowledge often matter more than on-page tweaks alone, per larger studies.\n\nThese are the clearest publicly documented independent-builder experiments that directly compare GEO outcomes on ChatGPT Search versus Grok. Primary sources remain the Kasra Dash X thread and the Cited results page.",
+  "answer_links": [
+    {
+      "text": "X post with setup, results, and data images",
+      "url": "https://x.com/Kasra_Dash/status/2043655628665639220",
+      "domain": "x.com",
+      "kind": "link in answer"
+    },
+    {
+      "text": "Full results write-up",
+      "url": "https://wearecited.com/results",
+      "domain": "wearecited.com",
+      "kind": "link in answer"
+    },
+    {
+      "text": "Direct link",
+      "url": "https://secondwind.cloud/intelligence/what-ai-systems-ranking-each-other-reveals-about-geo",
+      "domain": "secondwind.cloud",
+      "kind": "link in answer"
+    },
+    {
+      "text": "GEO Log",
+      "url": "https://thegeolab.net/log/",
+      "domain": "thegeolab.net",
+      "kind": "link in answer"
+    }
+  ],
+  "search_observed": true,
+  "search_evidence": "Native web/X retrieval observed. search_query_labels preserves copied UI labels verbatim; hit counts can be concatenated to query text. These labels are not parsed search-query strings. Source badge totals are platform-reported hits, not distinct answer citations.",
+  "search_query_labels": [
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcindependent experiments comparing GEO Generative Engine Optimization ChatGPT Search vs Grok15",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"GEO\" OR \"Generative Engine Optimization\" experiment OR study OR test ChatGPT Grok OR \"ChatGPT Search\"10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"ChatGPT Search\" OR \"Grok\" GEO OR \"generative engine\" optimization experiment OR comparison site:medium.com OR site:substack.com OR site:github.com10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcKasra GEO OR \"self-referencing\" OR listicles ChatGPT Grok experiment OR test10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"independent\" OR indie OR \"solo\" OR builder OR \"I tested\" OR \"my experiment\" GEO OR \"generative engine\" ChatGPT Grok10",
+    "\\u5df2\\u641c\\u7d22 \ud835\udd4f(\"GEO\" OR \"generative engine optimization\" OR AEO) (Grok) (ChatGPT OR \"ChatGPT Search\") (experiment OR tested OR study OR results OR methodology)10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcKasra Dash GEO experiment 50 articles OR listicles Grok ChatGPT10",
+    "\\u5df2\\u641c\\u7d22 \ud835\udd4ffrom:Kasra_Dash (GEO OR AEO OR \"self-referencing\" OR listicle OR \"AI search\")5",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"I tested\" OR \"my experiment\" OR \"I published\" (GEO OR AEO OR \"AI citations\" OR \"generative engine\") (ChatGPT) (Grok) -Kasra10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcLennart Vallo OR wearecited GEO OR \"BaliPropertyRules\" experiment10",
+    "\\u5df2\\u641c\\u7d22 \ud835\udd4f(\"I tested\" OR experiment OR \"sample size\" OR methodology OR \"50 articles\" OR \"published\") (GEO OR AEO) (Grok) (ChatGPT)5",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"360-probe\" OR \"secondwind\" GEO ChatGPT Grok10"
+  ],
+  "source_panel_declared_hits": 115,
+  "assessment": {
+    "outcome": "fail",
+    "x_post_content_access": "not_assessed",
+    "exact_discovery": "not_applicable",
+    "unprompted_discovery": "fail",
+    "github_only": false,
+    "rationale": "The complete captured answer did not return the target original X URL or author. The captured page-anchor inventory likewise contains no target X URL or own GitHub/Pages URL, but is not claimed to be the full underlying retrieval set. This is one observed failure to discover, not evidence the post is absent or unindexed.",
+    "candidate_verification": "Other experiments and sample sizes described by Grok are platform claims, not independently verified by this experiment."
+  },
+  "recovery_history": [],
+  "raw_file": "records/S2-GROK-C.json",
+  "public_copy": true,
+  "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private.",
+  "source_inventory_notes": "Whole-page anchor inventory is not included in the public edition. It was captured while source panels were expanded and includes query, answer and activity links; it is not a scoped retrieval-result set or a list of answer citations. Original captures remain local. Source badge totals are reported hits, not distinct cited URLs. The answer links and search-activity labels are retained below."
+}

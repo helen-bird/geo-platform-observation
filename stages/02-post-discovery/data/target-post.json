@@ -1,0 +1,13 @@
+{
+  "url": "https://x.com/bird_helen67403/status/2116080254523445676",
+  "author_display": "HelenBird",
+  "author_handle": "bird_helen67403",
+  "published_ui": "4:10 PM \u00b7 Oct 30, 2026",
+  "observed_at": "2026-10-31T03:29:43.329Z",
+  "body_text": "GEO Lab #01: Why do AI search engines recommend different sources?\n\nI'm learning Generative Engine Optimization by running small experiments and sharing what I find.\n\nFirst one: ChatGPT Search vs Grok \u2014 3 GEO questions \u00d7 2 platforms \u00d7 2 runs = 12 answers.\n\nSurprise: when asked for practical, data-backed GEO tutorials for indie builders, the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap. Even near-simultaneous searches produced totally different lists.\n\nWhat stuck with me:\n\nCitation \u2260 mention \u2260 recommendation \u2014 getting cited doesn\u2019t mean your brand gets recommended\nSame query, different platforms \u2192 different retrieval and source picks\nAI recommendations move around \u2014 one answer isn\u2019t enough to measure GEO\n\nSmall exploratory run, so these are observations, not causal claims.\n\nNext: how AI retrieves/selects sources, and whether my own X posts can show up in AI search.\n\nFull write-up: \nhttp://\nhelen-bird.github.io/geo-platform-o\nbservation\n\u2026\nRepo: \nhttp://\ngithub.com/helen-bird/geo\n-platform-observation\n\u2026\n\n#GEO #AISearch #BuildInPublic",
+  "body_provenance": "Body extracted from the rendered public X post captured before testing. Surrounding account/navigation UI and link-preview card omitted. Original line wraps and shortened-link display are retained.",
+  "exact_search_excerpt": "the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.",
+  "exact_unicode_substring": true,
+  "linked_public_report": "https://helen-bird.github.io/geo-platform-observation/",
+  "linked_public_repository": "https://github.com/helen-bird/geo-platform-observation"
+}

@@ -1,0 +1,650 @@
+[
+  {
+    "id": "S2-CHATGPT-A",
+    "slot_id": "S2-CHATGPT-A",
+    "platform": "ChatGPT Search",
+    "condition": "A",
+    "attempt_number": 1,
+    "prompt": "Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+    "observed_composer_text": "\\u7f51\\u9875\\u641c\\u7d22 Read this public X post: \nhttps://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+    "model_label": "GPT-5.6 Sol",
+    "reasoning_effort": "Medium",
+    "temporary": true,
+    "personalization": false,
+    "search_enabled_ui": true,
+    "submitted_at": "2026-10-31T03:48:50.116Z",
+    "captured_at": "2026-10-31T04:04:40.909814+00:00",
+    "recovered_at": "2026-10-31T04:04:40.909814+00:00",
+    "saved_at": "2026-10-31T04:03:18.268Z",
+    "status": "recovered",
+    "body_complete": true,
+    "answer_text": "I\u2019m unable to access the actual content of the X post.\n\nI attempted to retrieve the original post, but X returned **403 Forbidden**\\. Searches for the post ID and account did not reveal an indexed copy of its contents.\n\n**Original source\\:**\n\ue200url\ue202https\\://x.com/bird\\_helen67403/status/2116080254523445676\ue202https://x.com/bird_helen67403/status/2116080254523445676\ue201\n\n**Experimental findings\\:**\n\n1. **First finding\\:** Cannot verify because the post content is inaccessible.\n2. **Second finding\\:** Cannot verify because the post content is inaccessible.\n\nI won't invent or infer experimental results without seeing the original evidence.\n\n**If you paste the post text or upload a screenshot,** I can identify and summarize exactly two specific experimental findings, preserving the reported results and quantitative details.",
+    "answer_links": [
+      {
+        "url": "https://x.com/bird_helen67403/status/2116080254523445676",
+        "domain": "x.com",
+        "kind": "Prompt-supplied original URL repeated in answer; not proof of post access"
+      }
+    ],
+    "search_observed": true,
+    "search_evidence": "Expanded native activity shows search query and \u201csearched 12 websites\u201d; separate code analysis decodes status timestamp only.",
+    "search_queries": [
+      "\"https://x.com/bird_helen67403/status/2116080254523445676\" OR \"2116080254523445676\" 2026"
+    ],
+    "main_page_error": "Unable to load this response",
+    "copy_result": "\\u65e0\\u6cd5\\u52a0\\u8f7d\\u6b64\\u56de\\u590d",
+    "notes": "Full answer recovered without resubmission. Main UI rendering failure and failed Copy remain in capture history; the response itself reports no successful access/discovery. Saved after generation under explicit user authorization.",
+    "capture_method": "Saved existing generated temporary conversation, then read its full agentMessage through native read_thread; page.hasMore=false, no truncation marker. No prompt resubmission.",
+    "capture_provenance": "Original generation used fresh non-personalized temporary mode. Saving after generation created an ordinary-history copy with a new conversation ID. Original UI/copy failures are retained. Returned native agentMessage text is preserved verbatim, including escaped Markdown/citation serialization; it is not a retrieval summary.",
+    "assessment": {
+      "outcome": "fail",
+      "x_post_content_access": "fail",
+      "exact_discovery": "not_applicable",
+      "unprompted_discovery": "not_applicable",
+      "github_only": false,
+      "rationale": "The complete recovered answer explicitly says it cannot access the X post and supplies no experimental findings. The original URL was already supplied in the prompt, so repeating it does not establish retrieval.",
+      "access_error_claim": "The answer reports HTTP 403 from X; this is a platform-reported cause, not an independently captured HTTP response."
+    },
+    "tool_activity": [
+      "Visible Python analysis decodes the X status ID into a timestamp; this is not evidence of reading the post body."
+    ],
+    "selected_attempt_id": "S2-CHATGPT-A",
+    "recovery_history": [
+      {
+        "captured_at": "2026-10-31T03:54:37.850Z",
+        "method": "Original temporary UI and Copy",
+        "status": "capture_incomplete",
+        "body_complete": false,
+        "notes": "Unable to load response; Copy exposed only error text."
+      },
+      {
+        "captured_at": "2026-10-31T04:03:18.268Z",
+        "method": "User-approved save existing chat",
+        "status": "saved_copy_created",
+        "notes": "Ordinary-history copy; no new question or generation."
+      },
+      {
+        "method": "Native full turn message read of saved copy",
+        "status": "recovered",
+        "body_complete": true,
+        "notes": "Native full agentMessage, not preview alone; original generated_at unknown.",
+        "recorded_at": "2026-10-31T04:04:40.909814+00:00"
+      }
+    ],
+    "raw_file": "records/S2-CHATGPT-A.json",
+    "public_copy": true,
+    "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private."
+  },
+  {
+    "id": "S2-GROK-A",
+    "slot_id": "S2-GROK-A",
+    "platform": "Grok",
+    "condition": "A",
+    "attempt_number": 1,
+    "prompt": "Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+    "observed_composer_text": "Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+    "model_label": "Exact backend version not disclosed",
+    "mode_label": "Expert",
+    "search_mode": "Expert native web/X retrieval; direct public URL provided",
+    "private": true,
+    "personalize_using_x": false,
+    "personalize_using_history": false,
+    "submitted_at": "2026-10-31T03:46:31.827Z",
+    "captured_at": "2026-10-31T03:49:00.560Z",
+    "status": "completed",
+    "body_complete": true,
+    "answer_text": "Post content successfully retrieved via X tools (no access issues).\n\nSource: https://x.com/bird_helen67403/status/2116080254523445676\n\nAuthor: HelenBird (@bird_helen67403)\n\nPosted: Fri, 30 Oct 2026 08:10:22 GMT\n\nTitle/theme: GEO Lab #01: Why do AI search engines recommend different sources?\n\nTwo specific experimental findings stated in the post\nLow entity overlap between platforms. In an experiment comparing ChatGPT Search vs. Grok (3 GEO questions \u00d7 2 platforms \u00d7 2 runs = 12 answers), when the query asked for practical, data-backed GEO tutorials for indie builders, the two platforms shared only 2 of 20 unique recommended entities \u2014 roughly 10% overlap.\nHigh run-to-run variability. Even near-simultaneous searches on the same platforms produced totally different recommendation lists.\n\nThe post frames these as exploratory observations (not causal claims) from a small first run and notes related takeaways such as \u201ccitation \u2260 mention \u2260 recommendation\u201d and that a single answer is insufficient for measuring GEO. It points to a full write-up and repo for more detail but does not expand the experimental numbers further in the post itself.",
+    "answer_links": [
+      {
+        "text": "https://x.com/bird_helen67403/status/2116080254523445676",
+        "url": "https://x.com/bird_helen67403/status/2116080254523445676",
+        "domain": "x.com",
+        "kind": "link in answer"
+      }
+    ],
+    "search_observed": true,
+    "search_evidence": "Native web/X retrieval observed. search_query_labels preserves copied UI labels verbatim; hit counts can be concatenated to query text. These labels are not parsed search-query strings. Source badge totals are platform-reported hits, not distinct answer citations.",
+    "search_query_labels": [
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcsite:x.com bird_helen67403 21160802545234456765"
+    ],
+    "source_panel_declared_hits": 5,
+    "assessment": {
+      "outcome": "pass",
+      "x_post_content_access": "pass",
+      "exact_discovery": "not_applicable",
+      "unprompted_discovery": "not_applicable",
+      "github_only": false,
+      "rationale": "Direct content access demonstrated: native post-reading activity, correct author/title, and accurate body-specific observations (2/20\u224810% entity overlap; citation, mention and recommendation can occur separately). The 12-answer design is corroborating context. A supplied URL does not establish discovery. The added \u201con the same platforms\u201d qualifier remains unsupported by the supplied text.",
+      "faithfulness": {
+        "verdict": "partly_supported",
+        "caveat": "The answer adds \u201con the same platforms\u201d to the variability finding. That qualifier is not explicit in the target post; this excerpt alone does not establish within-platform repeat variability."
+      }
+    },
+    "selected_attempt_id": "S2-GROK-A",
+    "recovery_history": [],
+    "raw_file": "records/S2-GROK-A.json",
+    "public_copy": true,
+    "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private.",
+    "source_inventory_notes": "Whole-page anchor inventory is not included in the public edition. It was captured while source panels were expanded and includes query, answer and activity links; it is not a scoped retrieval-result set or a list of answer citations. Original captures remain local. Source badge totals are reported hits, not distinct cited URLs. The answer links and search-activity labels are retained below."
+  },
+  {
+    "id": "S2-CHATGPT-B",
+    "slot_id": "S2-CHATGPT-B",
+    "platform": "ChatGPT Search",
+    "condition": "B",
+    "attempt_number": 1,
+    "prompt": "Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+    "observed_composer_text": "\\u7f51\\u9875\\u641c\\u7d22 Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+    "model_label": "GPT-5.6 Sol",
+    "reasoning_effort": "Medium",
+    "temporary": true,
+    "personalization": false,
+    "search_enabled_ui": true,
+    "submitted_at": "2026-10-31T03:46:11.104Z",
+    "captured_at": "2026-10-31T04:04:40.944638+00:00",
+    "recovered_at": "2026-10-31T04:04:40.944638+00:00",
+    "saved_at": "2026-10-31T04:01:18.911Z",
+    "status": "recovered",
+    "body_complete": true,
+    "answer_text": "**I could not find or verify the original X post containing that exact sentence.**\n\nI searched for\\:\n\n- The complete sentence in quotation marks.\n- The distinctive phrase `\"2 of 20 unique recommended entities\"`\\.\n- Variations of `\"about 10% overlap\"` and `\"shared only 2 of 20\"`\\.\n- Indexed X/Twitter posts using both `x.com` and `twitter.com` domain searches.\n\n**Verification result**\n\n| Requested information | Result |\n|--------|--------|\n| Exact sentence found | No |\n| Original X post URL | Not found |\n| Author | Not verified |\n| Link-to-quote verification | Not possible |\n\nI also attempted to access X's search page directly, but the request returned HTTP 403 (access denied).\n\n**Conclusion\\:** I cannot reliably identify the original post or its author. I won't invent an X URL or attribute the quotation to someone without evidence.\n\nThe original public post remains unverified.",
+    "answer_links": [],
+    "search_observed": null,
+    "search_evidence": "Native Web Search chip selected; final answer reports phrase/domain searches. No independent native search activity panel was captured for B.",
+    "search_queries": [],
+    "main_page_error": "Unable to load this response",
+    "copy_result": "\\u65e0\\u6cd5\\u52a0\\u8f7d\\u6b64\\u56de\\u590d",
+    "notes": "Full answer recovered without resubmission. Main UI rendering failure and failed Copy remain in capture history; the response itself reports no successful access/discovery. Saved after generation under explicit user authorization.",
+    "capture_method": "Saved existing generated temporary conversation, then read its full agentMessage through native read_thread; page.hasMore=false, no truncation marker. No prompt resubmission.",
+    "capture_provenance": "Original generation used fresh non-personalized temporary mode. Saving after generation created an ordinary-history copy with a new conversation ID. Original UI/copy failures are retained. Returned native agentMessage text is preserved verbatim, including escaped Markdown/citation serialization; it is not a retrieval summary.",
+    "assessment": {
+      "outcome": "fail",
+      "x_post_content_access": "not_assessed",
+      "exact_discovery": "fail",
+      "unprompted_discovery": "not_applicable",
+      "github_only": false,
+      "rationale": "The complete recovered answer explicitly says the original X post URL was not found, the author was not verified, and quote-to-link verification was impossible. No target URL returned.",
+      "access_error_claim": "The answer reports HTTP 403 from X; this is a platform-reported cause, not an independently captured HTTP response."
+    },
+    "selected_attempt_id": "S2-CHATGPT-B",
+    "recovery_history": [
+      {
+        "captured_at": "2026-10-31T03:50:25.114Z",
+        "method": "Original temporary UI and Copy",
+        "status": "capture_incomplete",
+        "body_complete": false,
+        "notes": "Unable to load response; Copy exposed only error text."
+      },
+      {
+        "captured_at": "2026-10-31T04:01:18.911Z",
+        "method": "User-approved save existing chat",
+        "status": "saved_copy_created",
+        "notes": "Ordinary-history copy; no new question or generation."
+      },
+      {
+        "method": "Native full turn message read of saved copy",
+        "status": "recovered",
+        "body_complete": true,
+        "notes": "Native full agentMessage, not preview alone; original generated_at unknown.",
+        "recorded_at": "2026-10-31T04:04:40.944638+00:00"
+      }
+    ],
+    "raw_file": "records/S2-CHATGPT-B.json",
+    "public_copy": true,
+    "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private."
+  },
+  {
+    "id": "S2-GROK-B",
+    "slot_id": "S2-GROK-B",
+    "platform": "Grok",
+    "condition": "B",
+    "attempt_number": 1,
+    "prompt": "Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+    "observed_composer_text": "Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+    "model_label": "Exact backend version not disclosed",
+    "mode_label": "Expert",
+    "search_mode": "Expert native web/X retrieval; prompt explicitly requests web and X search",
+    "private": true,
+    "personalize_using_x": false,
+    "personalize_using_history": false,
+    "submitted_at": "2026-10-31T03:42:12.672Z",
+    "captured_at": "2026-10-31T03:45:51.332Z",
+    "status": "completed",
+    "body_complete": true,
+    "answer_text": "I could not find any public post (on X or the web) containing that exact sentence.\n\nI searched:\n\nExact phrase matches for \u201cthe two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\u201d\nClose variants (\u201c2 of 20 unique recommended entities,\u201d \u201cunique recommended entities\u201d + overlap, \u201cplatforms shared only 2 of 20,\u201d \u201c10% overlap\u201d with recommended/entities, etc.).\nKeyword and semantic searches on X.\nBroader web searches for related concepts (platform overlap of recommended entities/items).\n\nNone returned a matching post, article, or source. No X post with that wording (or a near-identical version) appeared in results.\n\nPossible reasons it is not surfacing:\n\nThe post is very recent and not yet indexed.\nIt was deleted, set to private, or from a protected account.\nMinor wording/punctuation differences (e.g., hyphen vs. em dash, \u201capprox.\u201d instead of \u201cabout,\u201d slight rephrasing).\nIt originated elsewhere (newsletter, private chat, non-public document) and was only partially quoted.\n\nIf you have additional context (author name, approximate date, platform names involved, surrounding text, or a screenshot/link fragment), I can search more specifically.",
+    "answer_links": [],
+    "search_observed": true,
+    "search_evidence": "Native web/X retrieval observed. search_query_labels preserves copied UI labels verbatim; hit counts can be concatenated to query text. These labels are not parsed search-query strings. Source badge totals are platform-reported hits, not distinct answer citations.",
+    "search_query_labels": [
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"15",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"two platforms shared only 2 of 20 unique recommended entities\"10",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"the two platforms shared only 2 of 20 unique recommended entities\"",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"2 of 20 unique recommended entities\"",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"2 of 20 unique recommended entities\"10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"unique recommended entities\" overlap platforms10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"about 10% overlap\" recommended entities OR recommendations platforms10",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"recommended entities\" overlap",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4fthe two platforms shared only 2 of 20 unique recommended entities about 10% overlap9",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"2 of 20\" overlap recommended OR recommendations platforms OR systems10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"10% overlap\" \"recommended\" entities OR items platforms10",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"2 of 20\" (overlap OR recommended OR recommendations)5",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"unique recommended\"5",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"platforms shared only 2 of 20\"10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"2 of 20 unique\" recommended10",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"shared only 2 of 20\"",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"10% overlap\" (recommended OR recommendations OR entities)",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4ftwo platforms shared only 2 of 20 unique recommended entities about 10% overlap4",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"recommended entities\"4",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"unique recommended entities\"",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"recommended entities\" \"10%\" OR \"2 of 20\" OR \"overlap\"10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"two platforms\" \"recommended\" overlap OR \"10%\" entities OR items OR accounts10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"the two platforms shared only\"10",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f\"platforms shared only\""
+    ],
+    "source_panel_declared_hits": 152,
+    "assessment": {
+      "outcome": "fail",
+      "x_post_content_access": "not_assessed",
+      "exact_discovery": "fail",
+      "unprompted_discovery": "not_applicable",
+      "github_only": false,
+      "rationale": "The complete captured answer did not return the target original X URL or author. The captured page-anchor inventory likewise contains no target X URL or own GitHub/Pages URL, but is not claimed to be the full underlying retrieval set. This is one observed failure to discover, not evidence the post is absent or unindexed."
+    },
+    "selected_attempt_id": "S2-GROK-B",
+    "recovery_history": [],
+    "raw_file": "records/S2-GROK-B.json",
+    "public_copy": true,
+    "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private.",
+    "source_inventory_notes": "Whole-page anchor inventory is not included in the public edition. It was captured while source panels were expanded and includes query, answer and activity links; it is not a scoped retrieval-result set or a list of answer citations. Original captures remain local. Source badge totals are reported hits, not distinct cited URLs. The answer links and search-activity labels are retained below."
+  },
+  {
+    "id": "S2-CHATGPT-C",
+    "slot_id": "S2-CHATGPT-C",
+    "platform": "ChatGPT Search",
+    "condition": "C",
+    "attempt_number": 5,
+    "replacement_for": "S2-CHATGPT-C-R4",
+    "collector": "User-operated manual supplement; imported by agent",
+    "prompt": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+    "observed_user_message": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions. @\\u641c\\u7d22",
+    "prompt_match": true,
+    "model_label": "GPT-5.6 Sol",
+    "reasoning_effort": "Medium",
+    "model_evidence": "User explicitly confirms GPT-5.6 Sol / Medium. The generation-time model selection was not independently captured; recorded as user-confirmed.",
+    "mode_label": "Manual collection; original single-prompt conversation, pre-submit temporary/personalization controls not captured",
+    "fresh_session": true,
+    "temporary": null,
+    "personalization": null,
+    "search_enabled_ui": true,
+    "submitted_at": null,
+    "submitted_time_reported": "Around 2026-10-31 16:49 Asia/Shanghai (user said \u201cnow\u201d; approximate, not a measured submission time)",
+    "source_turn_started_at": "2026-10-31T08:47:24.314577+00:00",
+    "source_turn_completed_at": "2026-10-31T08:47:36.202617+00:00",
+    "captured_at": "2026-10-31T08:59:29.987331+00:00",
+    "status": "completed",
+    "body_complete": true,
+    "answer_text": "Independent GEO experiments: ChatGPT Search vs Grok\n\nResearch cutoff: October 31, 2026\n\nI found several published first-party studies that measure AI brand visibility across ChatGPT and Grok, including experiments by smaller GEO research teams and independent operators.\n\nThe key distinction is between recommendation experiments (which brands an AI suggests), citation experiments (which websites an AI references), and GEO intervention experiments (whether changing content causes AI visibility to improve).\n\nThese test different hypotheses. In particular, a study comparing ChatGPT and Grok does not automatically establish that it tested the actual consumer-facing ChatGPT Search interface.\n\n1. Strongest published cross-platform experiments\n\n1. mapou \u2014 State of AI Search 2026\u2060\ufffc\n\nOriginal observational benchmark \u00b7 May 2026\n\nCompares which brands ChatGPT, Grok and three other engines recommend or cite across buyer-intent prompts.\n\nSample: 500 brands, 25 competitive segments, 5 engines, 20 canonical prompts per segment and 12 buyer personas. The authors report approximately 30,000 baseline brand-level verdicts per monthly run.\n\nMethod: Fixed prompts spanning discovery, filtered discovery, comparison and evaluation. Measures brand visibility, engine agreement and the effects of buyer personas, with Wilson 95% confidence intervals.\n\nFinding: Mean cross-engine brand-ranking agreement was reported at 52%. AI visibility changes materially by engine and buyer persona.\n\nEvidence status: Published comparative measurement with a methodology. ChatGPT Search interface equivalence is not established by the headline report. mapou\n\n2. AI Visibility Report Group \u2014 Six AI Platforms, Same Eight Questions\u2060\ufffc\n\nOriginal repeated citation test \u00b7 August 29, 2026\n\nDirect comparison of ChatGPT, Grok, Gemini, Claude, Perplexity and Meta AI.\n\nSample: Eight unbranded buying questions, six platforms, two rounds. Of 96 planned responses, 87 were successful (39 in round one, 48 in round two).\n\nMethod: Ask identical buyer questions separately, extract citation URLs, normalize sources to domains and compare overlap.\n\nFinding: In the complete second round, 468 of 551 cited domains (85%) appeared on just one platform. Grok cited 256 domains and ChatGPT 50.\n\nEvidence status: Verified published experiment on citation-source diversity. Small sample, restricted to Dutch-market AI visibility questions. The figures do not measure the number of brands recommended. research\n\n3. GOSH AI \u2014 The Search vs Learned Divergence\u2060\ufffc\n\nOriginal multi-model observational study \u00b7 March\u2013May 2026\n\nTests whether brands surfaced through live retrieval differ from brands generated using learned model knowledge.\n\nSample: Six AI-model families, including ChatGPT and Grok; more than 23,800 model executions, 80,300 citations and 8,600 brands identified across the reported baseline.\n\nMethod: Apply equivalent prompts with retrieval enabled and disabled, then classify observed brand-category pairs by presence in each path.\n\nFinding: Only 8.28% of observed brand-category pairs appeared in both the live-search and learned-knowledge paths.\n\nEvidence status: Published original research with substantial reported sample size. The headline result is aggregated across models, and the comparable dual-path category analysis is narrower. It should not be presented as a ChatGPT-vs-Grok-specific effect. GOSH AI\n\n2. Individual builders running original tests\n\nThese are particularly relevant if your goal is to identify people publishing their own experiments rather than relying on generic GEO advice.\n\n4. Zeeshan Yaseen \u2014 Two GEO experiments challenging conventional AI visibility advice\n\nFirst-person field experiments \u00b7 Published September 14, 2026\n\nRead the original experiment write-up\u2060\ufffc\n\nMethod and sample: Two sequential tests, each using 15 commercial-intent keywords. The first compared four engines and the second added Grok and Google AI Mode, for six engines total. The second was a 30-day cold-start campaign for a SaaS link-building agency, with manual checks and tracked content placements.\n\nResult: In the second experiment, the tracked brand appeared 32 times on ChatGPT versus 4 times on Grok, out of 298 appearances across all six platforms. Both experiments together logged 775 citation events.\n\nAssessment: A genuine first-person GEO intervention study involving both engines. It has commercial interventions and before/after measurements, but no randomized control or established ChatGPT Search interface matching. Search Engine Land\n\n5. Charles Cousyn / Weftd \u2014 ChatGPT, Instinct, Grok Bot: Our Test\n\nIndependent real-world recommendation test \u00b7 September 23, 2026\n\nRead the restaurant recommendation experiment\u2060\ufffc\n\nMethod and sample: The builder gave the same practical mission to ChatGPT, Grok Bot and Instinct: identify three restaurants near Lyon Part-Dieu station for a business lunch with a specified reservation requirement. Five agent configurations were tested on September 22\u201323.\n\nResult: The configurations suggested 12 different restaurants, with only one appearing in more than two configurations. The one reservation verified in depth exposed contradictory availability information.\n\nAssessment: A first-person, real-world comparison of AI recommendations, especially useful for local GEO. The sample is just five configurations for one mission. The research tests agent behavior, not a broad SEO optimization intervention. Weftd\n\n6. Queraid \u2014 AI Visibility Study 2026\n\nOriginal brand recommendation benchmark \u00b7 May 25, 2026\n\nRead the 70+ brand experiment\u2060\ufffc\n\nMethod and sample: Over 70 brands across more than 50 industries, evaluated using six prompts per brand on each of five engines, including ChatGPT and Grok. The authors report more than 2,000 responses.\n\nThe prompts cover brand identity, recommendations, comparisons, reputation, use cases and best-in-class selections. Scores combine mention rate (40%), sentiment (30%), competitor parity (20%) and cross-model consistency (10%).\n\nAssessment: Published first-party quantitative benchmarking. The composite score is proprietary to the researchers, and the reported headline rankings do not separately isolate ChatGPT Search versus Grok. The authors say the underlying dataset is available through their API. Queraid\n\n3. Evidence ranking\n\nStudy\tOriginal observations?\tChatGPT + Grok?\tDirect user-facing Search comparison established?\nmapou\tYes\tYes\tUnclear\nAI Visibility Report Group\tYes\tYes\tUnclear\nGOSH AI\tYes\tYes\tNo, tests retrieval modes\nZeeshan Yaseen\tYes, plus interventions\tYes, second study\tUnclear\nCharles Cousyn / Weftd\tYes\tYes\tAgent comparison; not isolated\nQueraid\tYes\tYes\tUnclear\n\n\u201cVerified\u201d here means a first-party experiment write-up with identifiable testing procedures and reported observations. It does not mean the findings have been independently audited or replicated. The studies above are also self-published by people or businesses active in the AI visibility market, so their commercial interests should be considered.\n\n4. Two additional studies worth including\n\n7. Nazareno Castro Bay / Rank Prompt \u2014 Same brand, different AI surfaces\n\nOriginal test and methodology\u2060\ufffc\n\nThis is one of the closest matches to your request because the authors explicitly separate ChatGPT Search, ChatGPT without search, and Grok.\n\nOn July 30, 2026, they tested one B2B brand using 70 prompts across seven engine surfaces, producing 490 prompt-by-engine observations. They held the country, language, date and brand constant.\n\nThey reported:\n\n* 5.71% brand presence on Grok versus 0% on ChatGPT overall.\n* 25.5 citations per answer on Grok versus 4.2 on ChatGPT Search.\n* 87.45% of cited URLs appeared on exactly one engine for the same question.\n\nEvidence status: Original, documented experiment with explicit search-mode separation. However, the test concerns one brand and one market category, and the published collection uses the company\u2019s API rather than a verified consumer-interface session. Rank Prompt\n\n8. Columbia University Tow Center \u2014 ChatGPT Search vs Grok source accuracy\n\nRead the Tow Center\u2019s original study\u2060\ufffc\n\nThis is an independent academic-journalism benchmark, published March 6, 2025.\n\nSample: 20 news publishers \u00d7 10 articles \u00d7 8 AI search tools = 1,600 queries, with 200 queries per tool.\n\nMethod: Researchers supplied article excerpts and asked each AI search engine to identify the article, publisher and URL. They manually assessed accuracy.\n\nResults: ChatGPT Search incorrectly identified 134 of 200 articles (67%). Grok-3 answered 94% incorrectly.\n\nEvidence status: Strong direct evidence about retrieval and citation accuracy, with explicitly named ChatGPT Search and Grok versions. It does not test commercial GEO brand recommendations. Columbia Journalism Review\n\n5. General opinions and weaker claims to exclude\n\nSource\tWhy it doesn\u2019t qualify as strong experimental evidence\nLivesov \u2014 Who Gets Recommended\tExplicitly says its figures are illustrative, with no fixed completed sample established in the article.\nAstroFabric \u2014 ChatGPT vs Grok\tClaims zero citation overlap, but the social post alone does not establish an adequate sample size or repeated-run methodology.\nArtur Ferreira \u2014 GEO Experiment Files\tDescribes actual experiments, but the referenced cross-engine comparison uses ChatGPT, Gemini and Perplexity; Grok is absent.\n\nLivesov Blog +2\n\nConclusion\n\nFor your specific research question, I would prioritize Rank Prompt, mapou, Zeeshan Yaseen, and Charles Cousyn.\n\nRank Prompt provides the clearest reported distinction between ChatGPT Search and Grok. mapou has the broader brand recommendation panel. Yaseen documents an actual GEO campaign intervention. Cousyn provides a concrete, first-person comparison of real-world local business recommendations.\n\nThe evidence supports measurable differences across AI systems in brand visibility and citation selection. It does not yet establish a universal GEO tactic that reliably increases recommendations on both ChatGPT Search and Grok. A stronger demonstration would require identical pre-registered buyer prompts, repeated runs, documented interface versions, publicly available raw responses and a controlled content intervention.",
+    "answer_links": [
+      {
+        "text": "mapou \u2014 State of AI Search 2026",
+        "url": "https://mapou.ai/research/state-of-ai-search",
+        "domain": "mapou.ai",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "AI Visibility Report Group \u2014 Six AI Platforms, Same Eight Questions",
+        "url": "https://aivisibilityreport.group/en/six-ai-platforms-same-questions-different-sources",
+        "domain": "aivisibilityreport.group",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "GOSH AI \u2014 The Search vs Learned Divergence",
+        "url": "https://www.mygosh.ai/search-learned-divergence",
+        "domain": "www.mygosh.ai",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Read the original experiment write-up",
+        "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
+        "domain": "searchengineland.com",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Read the restaurant recommendation experiment",
+        "url": "https://www.weftd.com/resources/use-cases/same-mission-three-ais-chatgpt-instinct-grok-bot",
+        "domain": "www.weftd.com",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Read the 70+ brand experiment",
+        "url": "https://queraid.com/blog/ai-visibility-study-2026/",
+        "domain": "queraid.com",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Original test and methodology",
+        "url": "https://rankprompt.com/how-to-measure-ai-search-visibility/",
+        "domain": "rankprompt.com",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Read the Tow Center's original study",
+        "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php",
+        "domain": "www.cjr.org",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Livesov \u2014 Who Gets Recommended",
+        "url": "https://livesov.com/blog/ai-visibility-study-who-gets-recommended",
+        "domain": "livesov.com",
+        "kind": "Explicitly excluded candidate; cited and mentioned, not recommended"
+      },
+      {
+        "text": "AstroFabric \u2014 ChatGPT vs Grok",
+        "url": "https://www.linkedin.com/posts/astrofabric_why-chatgpt-and-grok-cite-different-sources-activity-7496921932441743360-YebH",
+        "domain": "www.linkedin.com",
+        "kind": "Explicitly excluded candidate; cited and mentioned, not recommended"
+      },
+      {
+        "text": "Artur Ferreira \u2014 GEO Experiment Files",
+        "url": "https://www.linkedin.com/posts/arturgeo_three-weeks-ago-i-started-publishing-the-activity-7494675142204125185-djT0",
+        "domain": "www.linkedin.com",
+        "kind": "Explicitly excluded candidate; cited and mentioned, not recommended"
+      }
+    ],
+    "cited_sources": [
+      {
+        "text": "mapou \u2014 State of AI Search 2026",
+        "url": "https://mapou.ai/research/state-of-ai-search",
+        "domain": "mapou.ai",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "AI Visibility Report Group \u2014 Six AI Platforms, Same Eight Questions",
+        "url": "https://aivisibilityreport.group/en/six-ai-platforms-same-questions-different-sources",
+        "domain": "aivisibilityreport.group",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "GOSH AI \u2014 The Search vs Learned Divergence",
+        "url": "https://www.mygosh.ai/search-learned-divergence",
+        "domain": "www.mygosh.ai",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Read the original experiment write-up",
+        "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
+        "domain": "searchengineland.com",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Read the restaurant recommendation experiment",
+        "url": "https://www.weftd.com/resources/use-cases/same-mission-three-ais-chatgpt-instinct-grok-bot",
+        "domain": "www.weftd.com",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Read the 70+ brand experiment",
+        "url": "https://queraid.com/blog/ai-visibility-study-2026/",
+        "domain": "queraid.com",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Original test and methodology",
+        "url": "https://rankprompt.com/how-to-measure-ai-search-visibility/",
+        "domain": "rankprompt.com",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Read the Tow Center's original study",
+        "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php",
+        "domain": "www.cjr.org",
+        "kind": "Included study / suggested reading"
+      },
+      {
+        "text": "Livesov \u2014 Who Gets Recommended",
+        "url": "https://livesov.com/blog/ai-visibility-study-who-gets-recommended",
+        "domain": "livesov.com",
+        "kind": "Explicitly excluded candidate; cited and mentioned, not recommended"
+      },
+      {
+        "text": "AstroFabric \u2014 ChatGPT vs Grok",
+        "url": "https://www.linkedin.com/posts/astrofabric_why-chatgpt-and-grok-cite-different-sources-activity-7496921932441743360-YebH",
+        "domain": "www.linkedin.com",
+        "kind": "Explicitly excluded candidate; cited and mentioned, not recommended"
+      },
+      {
+        "text": "Artur Ferreira \u2014 GEO Experiment Files",
+        "url": "https://www.linkedin.com/posts/arturgeo_three-weeks-ago-i-started-publishing-the-activity-7494675142204125185-djT0",
+        "domain": "www.linkedin.com",
+        "kind": "Explicitly excluded candidate; cited and mentioned, not recommended"
+      }
+    ],
+    "source_inventory_complete": true,
+    "source_inventory_scope": "All 11 explicit URLs and corresponding citation markers in the complete native answer: 8 included studies and 3 excluded candidates. This is not an inventory of all searched results; external study claims were not independently verified.",
+    "entity_observations": [
+      {
+        "entity": "mapou",
+        "url": "https://mapou.ai/research/state-of-ai-search",
+        "citation": true,
+        "mention": true,
+        "recommendation": true,
+        "role": "included"
+      },
+      {
+        "entity": "AI Visibility Report Group",
+        "url": "https://aivisibilityreport.group/en/six-ai-platforms-same-questions-different-sources",
+        "citation": true,
+        "mention": true,
+        "recommendation": true,
+        "role": "included"
+      },
+      {
+        "entity": "GOSH AI",
+        "url": "https://www.mygosh.ai/search-learned-divergence",
+        "citation": true,
+        "mention": true,
+        "recommendation": true,
+        "role": "included"
+      },
+      {
+        "entity": "Zeeshan Yaseen",
+        "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
+        "citation": true,
+        "mention": true,
+        "recommendation": true,
+        "role": "included"
+      },
+      {
+        "entity": "Charles Cousyn / Weftd",
+        "url": "https://www.weftd.com/resources/use-cases/same-mission-three-ais-chatgpt-instinct-grok-bot",
+        "citation": true,
+        "mention": true,
+        "recommendation": true,
+        "role": "included"
+      },
+      {
+        "entity": "Queraid",
+        "url": "https://queraid.com/blog/ai-visibility-study-2026/",
+        "citation": true,
+        "mention": true,
+        "recommendation": true,
+        "role": "included"
+      },
+      {
+        "entity": "Nazareno Castro Bay / Rank Prompt",
+        "url": "https://rankprompt.com/how-to-measure-ai-search-visibility/",
+        "citation": true,
+        "mention": true,
+        "recommendation": true,
+        "role": "included"
+      },
+      {
+        "entity": "Columbia University Tow Center",
+        "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php",
+        "citation": true,
+        "mention": true,
+        "recommendation": true,
+        "role": "included"
+      },
+      {
+        "entity": "Livesov",
+        "url": "https://livesov.com/blog/ai-visibility-study-who-gets-recommended",
+        "citation": true,
+        "mention": true,
+        "recommendation": false,
+        "role": "excluded"
+      },
+      {
+        "entity": "AstroFabric",
+        "url": "https://www.linkedin.com/posts/astrofabric_why-chatgpt-and-grok-cite-different-sources-activity-7496921932441743360-YebH",
+        "citation": true,
+        "mention": true,
+        "recommendation": false,
+        "role": "excluded"
+      },
+      {
+        "entity": "Artur Ferreira",
+        "url": "https://www.linkedin.com/posts/arturgeo_three-weeks-ago-i-started-publishing-the-activity-7494675142204125185-djT0",
+        "citation": true,
+        "mention": true,
+        "recommendation": false,
+        "role": "excluded"
+      }
+    ],
+    "prioritized_entities": [
+      "Rank Prompt",
+      "mapou",
+      "Zeeshan Yaseen",
+      "Charles Cousyn"
+    ],
+    "search_observed": true,
+    "search_evidence": "Original user message contains the native Search marker. Expanded original UI activity says searched 29 websites and thought 36s. No search-result URL inventory was exposed by the activity panel.",
+    "searched_websites_reported": 29,
+    "notes": [
+      "This manual submission fills the missing answer body and returned-URL inventory; all four earlier C attempts remain retained.",
+      "Model/reasoning and approximate question time are user-confirmed. Native turn timestamps and UI thought duration are recorded separately and must not be treated as interchangeable timing measurements.",
+      "Eleven cited/linked sources comprise eight included studies and three exclusions. Artur Ferreira is cited and mentioned but explicitly excluded, so Recommendation=false.",
+      "This is a qualified manual replacement, not proof that all pre-submit controls matched the earlier automated collection."
+    ],
+    "capture_method": "User-pasted complete answer corroborated by the complete original native agentMessage; all 11 URLs recovered from native URL tags. Read-only original UI verifies search activity.",
+    "capture_provenance": "The pasted and native versions correspond in content, with different formatting and citation representations; they are not byte-identical. Both run through the final conclusion. The public share and original web views still show a loading error, but the native original message is complete. The agent sent no new prompt, created no share link and made no public repository/site change.",
+    "assessment": {
+      "outcome": "fail",
+      "x_post_content_access": "not_assessed",
+      "exact_discovery": "not_applicable",
+      "unprompted_discovery": {
+        "verdict": "fail",
+        "evidence": "The complete supplied/native answer and its 11 explicit URLs contain no target X post, status ID or author. Other experiments are returned; the target-specific criterion was not met in this selected answer."
+      },
+      "github_only": false,
+      "rationale": "Complete manual C answer collected and original links recovered. It identifies other GEO research but does not proactively discover the target X post. Citation-source inclusion and exclusion are coded separately; cited excluded candidates are not recommendations.",
+      "candidate_verification": "The answer\u2019s study statistics and \u201cverified\u201d labels are platform claims, not independent verification by this experiment.",
+      "protocol_qualification": "Manual supplement: exact prompt and live-search activity verified; generation model is user-confirmed and pre-submit personalization isolation was not recorded."
+    },
+    "selected_attempt_id": "S2-CHATGPT-C-R5",
+    "condition_verification": "Exact question and actual web search verified. Model/reasoning and approximate question time are user-reported. Session memory isolation and original temporary mode remain unverified; this manual supplement must be distinguished from agent-operated preflight captures.",
+    "memory_evidence": "Native conversation contains one user prompt and one complete answer, with no added target identity or steering. Pre-submission memory/personalization state was not independently recorded.",
+    "recovery_history": [
+      {
+        "captured_at": "2026-10-31T08:59:29.987331+00:00",
+        "method": "User supplied complete paste and existing share URL",
+        "status": "complete_user_paste",
+        "body_complete": true
+      },
+      {
+        "captured_at": "2026-10-31T08:59:29.987331+00:00",
+        "method": "Read original native conversation",
+        "status": "complete_native_corresponding_answer",
+        "body_complete": true,
+        "notes": "11,699 native characters; complete through conclusion; 11 explicit URL tags."
+      },
+      {
+        "captured_at": "2026-10-31T08:59:29.987331+00:00",
+        "method": "Original web view and shared view inspection",
+        "status": "web_render_failure",
+        "notes": "Both body views fail to render. Native original text and user paste supply the complete body. Original activity verifies 29 searched websites."
+      }
+    ],
+    "raw_file": "records/S2-CHATGPT-C-R5.json",
+    "public_copy": true,
+    "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private."
+  },
+  {
+    "id": "S2-GROK-C",
+    "slot_id": "S2-GROK-C",
+    "platform": "Grok",
+    "condition": "C",
+    "attempt_number": 1,
+    "prompt": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+    "observed_composer_text": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+    "model_label": "Exact backend version not disclosed",
+    "mode_label": "Expert",
+    "search_mode": "Expert supports native web/X retrieval; no separate force-search toggle exposed; actual search to be checked",
+    "private": true,
+    "personalize_using_x": false,
+    "personalize_using_history": false,
+    "submitted_at": "2026-10-31T03:37:26.510Z",
+    "captured_at": "2026-10-31T03:40:47.148Z",
+    "status": "completed",
+    "body_complete": true,
+    "answer_text": "Independent builders have published a handful of original, data-backed experiments comparing GEO (Generative Engine Optimization) tactics and outcomes across ChatGPT Search and Grok. Most public discussion remains opinion or anecdotal. The verified experiments below are distinguished by disclosed methods, sample sizes, and direct links to primary write-ups or data. Larger academic or vendor studies (e.g., Princeton GEO-bench, Fudan fabricated-concept paper, Peec AI fanout analysis) are noted only where they contextualize, as they are not from independent builders.\n\nKasra Dash (@Kasra_Dash) \u2014 Self-referencing listicles, comparisons, and alternatives\n\nDirect link: X post with setup, results, and data images (April 2026; also covered in interviews such as Ryan Doser\u2019s video).\n\nMethodology: Published 50 self-referencing articles on a mid-age domain in three batches (roughly 10, then 20, then 20), with ~3 weeks between drops. Formats: comparison pages (e.g., brand A vs brand B), listicles (\u201cbest X for Y\u201d), and alternative pages (\u201cZ alternatives\u201d). Tracked brand mentions/citations across ChatGPT, Grok, Perplexity, Claude, and Google AI Overviews. Later 410\u2019d (removed) all pages and monitored retention of citations.\n\nSample size: 50 articles; multi-week observation with batch-level tracking of mentions (e.g., Grok mentions scaled from ~7 \u2192 25 \u2192 41 across batches).\n\nKey verified findings (vs. ChatGPT Search): Grok and Perplexity picked up the brand fastest and most readily (high single-digit to low double-digit \u201cout of 10\u201d style pickup rates in summaries; Grok highly responsive). ChatGPT and Claude were slower/more moderate (~6/10 range in secondary reports) but retained references to deleted pages for weeks, while Grok and Perplexity dropped faster after 410s. Google AI was least responsive. This is presented as a live, tracked test rather than theory; data visuals are in the primary post.\n\nThis is a clear original experiment by an independent SEO/AI-search practitioner.\n\nLennart Vallo / Cited (wearecited.com) \u2014 New-domain niche content to #1 citations\n\nDirect link: Full results write-up (April 2026 case study on BaliPropertyRules.com).\n\nMethodology: Registered a blank domain (early February 2026), published 18 original articles on Bali property regulations/costs/processes with technical/strategic optimization and no link building, paid placements, or ads. Tracked citations via 10 audits over ~6\u20138 weeks (Feb 12\u2013Mar 29, 2026) using a fixed set of prompts. Measured coverage (% of prompts citing the site), total citations, share of voice, win rate (first-position citations), domain rank, unique URLs, and referral traffic (GA4 + GSC). Also noted volatility and response to a Google Core Update.\n\nSample size: 18 articles; 73 prompts across the engines; 10 audits; 202 total citations recorded.\n\nKey verified findings (ChatGPT Search vs. Grok):\n\nGrok: Higher coverage (~72.6%), more citations (68), broader unique URLs (~20), strong/high win rate (cited first in a large majority of cases when it cited the site), #1 domain rank. More volatile but loyal and broad in trust from early on.\nChatGPT/OpenAI: Lower coverage (~28.8%), fewer citations (25), fewer unique URLs (~11), still #1 domain rank on the prompts it covered, but narrower (favored information-scarcity/time-sensitive angles) and more correlated with Google signals. Drove more tracked referral sessions in this test despite lower coverage.\n\nSite reached #1 domain rank on all four engines tested (including ChatGPT and Grok). Data is summarized in tables in the public write-up (no raw CSV download noted, but methodology and metrics are disclosed). This is an original controlled-style experiment by an independent/small-team builder.\n\nAdditional relevant independent or small-lab work\nSecond Wind (Marty Coleman, secondwind.cloud): Original 360-probe study asking ChatGPT, Claude, Gemini, Perplexity, and Grok to rank/recommend/describe each other. Direct link. Sample: 360 probes. GEO takeaways include strong \u201cniche-boxing\u201d for Grok (high specialty association, low general-mention rate ~13.5%, niche-boxing ~78.7%) versus ChatGPT\u2019s default/generalist strength. More observational ranking experiment than content-tactic test, but original and quantified.\nThe GEO Lab (Artur Ferreira, thegeolab.net): Multiple pre-registered/public experiments and logs (e.g., Experiment 001 on narrative vs. declarative structure producing a ~23-percentage-point citation-rate gap on Perplexity; 330-query tests across engines including ChatGPT). GEO Log and related pages. Stronger on controlled single-variable tests and methodology transparency than pure ChatGPT-vs-Grok head-to-heads, but independent and data-driven.\nVerified experiments vs. general opinions\n\nVerified experiments (above) publish concrete methods, sample sizes, tracking periods, and (at least summarized) results or data visuals. They allow inspection of what was actually tested (listicle formats, new-domain niche content, structural changes, etc.) and how ChatGPT Search and Grok differed in speed of pickup, breadth of citation, retention after content removal, volatility, or ranking style.\n\nGeneral opinions dominate elsewhere: blog posts, X threads, and agency advice asserting that \u201clisticles work,\u201d \u201cadd statistics/quotes,\u201d \u201cGrok is easier,\u201d or \u201cChatGPT prefers X\u201d without disclosed sample sizes, controls, tracking windows, or primary data. Many recycle the original Princeton GEO paper\u2019s simulated findings (top-5 Google results fed to an older model) without live multi-engine tests. Company tools (Qwairy, VectorGap, AthenaHQ, Promptwatch, etc.) produce large observational datasets that include both engines but are product/vendor reports rather than independent builder experiments.\n\nCaveats that apply across the independent work: Sample sizes are modest by academic standards (tens of articles or prompts, not tens of thousands); engines update frequently, so results are time-bound; most are not peer-reviewed; and \u201csuccess\u201d is usually measured in citations/mentions rather than downstream traffic or conversions (though some track the latter). Retrieval behavior and model knowledge often matter more than on-page tweaks alone, per larger studies.\n\nThese are the clearest publicly documented independent-builder experiments that directly compare GEO outcomes on ChatGPT Search versus Grok. Primary sources remain the Kasra Dash X thread and the Cited results page.",
+    "answer_links": [
+      {
+        "text": "X post with setup, results, and data images",
+        "url": "https://x.com/Kasra_Dash/status/2043655628665639220",
+        "domain": "x.com",
+        "kind": "link in answer"
+      },
+      {
+        "text": "Full results write-up",
+        "url": "https://wearecited.com/results",
+        "domain": "wearecited.com",
+        "kind": "link in answer"
+      },
+      {
+        "text": "Direct link",
+        "url": "https://secondwind.cloud/intelligence/what-ai-systems-ranking-each-other-reveals-about-geo",
+        "domain": "secondwind.cloud",
+        "kind": "link in answer"
+      },
+      {
+        "text": "GEO Log",
+        "url": "https://thegeolab.net/log/",
+        "domain": "thegeolab.net",
+        "kind": "link in answer"
+      }
+    ],
+    "search_observed": true,
+    "search_evidence": "Native web/X retrieval observed. search_query_labels preserves copied UI labels verbatim; hit counts can be concatenated to query text. These labels are not parsed search-query strings. Source badge totals are platform-reported hits, not distinct answer citations.",
+    "search_query_labels": [
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcindependent experiments comparing GEO Generative Engine Optimization ChatGPT Search vs Grok15",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"GEO\" OR \"Generative Engine Optimization\" experiment OR study OR test ChatGPT Grok OR \"ChatGPT Search\"10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"ChatGPT Search\" OR \"Grok\" GEO OR \"generative engine\" optimization experiment OR comparison site:medium.com OR site:substack.com OR site:github.com10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcKasra GEO OR \"self-referencing\" OR listicles ChatGPT Grok experiment OR test10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"independent\" OR indie OR \"solo\" OR builder OR \"I tested\" OR \"my experiment\" GEO OR \"generative engine\" ChatGPT Grok10",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f(\"GEO\" OR \"generative engine optimization\" OR AEO) (Grok) (ChatGPT OR \"ChatGPT Search\") (experiment OR tested OR study OR results OR methodology)10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcKasra Dash GEO experiment 50 articles OR listicles Grok ChatGPT10",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4ffrom:Kasra_Dash (GEO OR AEO OR \"self-referencing\" OR listicle OR \"AI search\")5",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"I tested\" OR \"my experiment\" OR \"I published\" (GEO OR AEO OR \"AI citations\" OR \"generative engine\") (ChatGPT) (Grok) -Kasra10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcLennart Vallo OR wearecited GEO OR \"BaliPropertyRules\" experiment10",
+      "\\u5df2\\u641c\\u7d22 \ud835\udd4f(\"I tested\" OR experiment OR \"sample size\" OR methodology OR \"50 articles\" OR \"published\") (GEO OR AEO) (Grok) (ChatGPT)5",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"360-probe\" OR \"secondwind\" GEO ChatGPT Grok10"
+    ],
+    "source_panel_declared_hits": 115,
+    "assessment": {
+      "outcome": "fail",
+      "x_post_content_access": "not_assessed",
+      "exact_discovery": "not_applicable",
+      "unprompted_discovery": "fail",
+      "github_only": false,
+      "rationale": "The complete captured answer did not return the target original X URL or author. The captured page-anchor inventory likewise contains no target X URL or own GitHub/Pages URL, but is not claimed to be the full underlying retrieval set. This is one observed failure to discover, not evidence the post is absent or unindexed.",
+      "candidate_verification": "Other experiments and sample sizes described by Grok are platform claims, not independently verified by this experiment."
+    },
+    "selected_attempt_id": "S2-GROK-C",
+    "recovery_history": [],
+    "raw_file": "records/S2-GROK-C.json",
+    "public_copy": true,
+    "publication_scope": "Redacted answer and capture summaries; original screenshots, DOM, native tool exports, private conversation/share identifiers and local evidence remain private.",
+    "source_inventory_notes": "Whole-page anchor inventory is not included in the public edition. It was captured while source panels were expanded and includes query, answer and activity links; it is not a scoped retrieval-result set or a list of answer citations. Original captures remain local. Source badge totals are reported hits, not distinct cited URLs. The answer links and search-activity labels are retained below."
+  }
+]
