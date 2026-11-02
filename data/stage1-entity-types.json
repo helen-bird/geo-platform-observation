@@ -1,0 +1,681 @@
+{
+  "version": "1.0",
+  "recorded_on": "2026-11-02",
+  "analysis_status": "post_hoc_assistant_classification",
+  "scope": "All 56 strict entity names coded Recommendation=true in the 12 selected Stage 1 answers. Original names, C/M/R decisions and totals are unchanged.",
+  "unit": "Unique strict recommended entity, or entity-by-answer recommendation record as labeled; one strict name receives one mutually exclusive supplemental category.",
+  "categories": [
+    {
+      "id": "research_or_study",
+      "label": "Research / study",
+      "definition": "A specific paper, study, research series or researcher normalized to that cited work."
+    },
+    {
+      "id": "individual_creator",
+      "label": "Individual creator",
+      "definition": "An explicitly named practitioner and their associated personal publishing brand, as grouped in the original coding. Does not establish employment status or independence."
+    },
+    {
+      "id": "mixed_creator_organization",
+      "label": "Creator + organization",
+      "definition": "Original coding joins an individual with a training or publishing organization; neither component is split into a new entity."
+    },
+    {
+      "id": "organization_or_publisher",
+      "label": "Organization / publisher",
+      "definition": "Agency, company, university, training organization or publishing brand. This broad category does not establish expertise, original evidence or commercial neutrality."
+    },
+    {
+      "id": "community_platform",
+      "label": "Community / discussion platform",
+      "definition": "A named community or community-hosting platform, not one identified individual creator."
+    },
+    {
+      "id": "resource_directory",
+      "label": "Resource / learning directory",
+      "definition": "A named repository, resource directory or multi-author course marketplace whose recommendation is treated as one resource."
+    },
+    {
+      "id": "tool",
+      "label": "Tool",
+      "definition": "A specifically named measurement or webmaster tool, rather than the vendor as a publisher."
+    }
+  ],
+  "mappings": [
+    {
+      "entity": "AISQ Growth",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Ahrefs",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "brand",
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+      "category": "individual_creator",
+      "original_entity_types": [
+        "creator"
+      ],
+      "rationale": "The recorded entity names a practitioner; any associated personal publishing brand stays grouped as originally coded."
+    },
+    {
+      "entity": "Anthropic",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Apollo Digital",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Awesome GEO",
+      "category": "resource_directory",
+      "original_entity_types": [
+        "resource_directory"
+      ],
+      "rationale": "The recommendation is to a resource collection or multi-author learning marketplace."
+    },
+    {
+      "entity": "Bing Webmaster Tools",
+      "category": "tool",
+      "original_entity_types": [
+        "tool"
+      ],
+      "rationale": "The strict name identifies a webmaster measurement tool."
+    },
+    {
+      "entity": "Botric",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Bouet (schema RCT)",
+      "category": "research_or_study",
+      "original_entity_types": [
+        "researcher"
+      ],
+      "rationale": "The original recommended entity identifies a study or groups a researcher with the referenced research."
+    },
+    {
+      "entity": "Canlah AI",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Chen et al. (How to Dominate AI Search)",
+      "category": "research_or_study",
+      "original_entity_types": [
+        "research"
+      ],
+      "rationale": "The original recommended entity identifies a study or groups a researcher with the referenced research."
+    },
+    {
+      "entity": "Class Central",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Exposure Ninja",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Finseo Academy",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "GEO Wiki",
+      "category": "resource_directory",
+      "original_entity_types": [
+        "resource_directory"
+      ],
+      "rationale": "The recommendation is to a resource collection or multi-author learning marketplace."
+    },
+    {
+      "entity": "GEO research (Aggarwal et al.)",
+      "category": "research_or_study",
+      "original_entity_types": [
+        "research"
+      ],
+      "rationale": "The original recommended entity identifies a study or groups a researcher with the referenced research."
+    },
+    {
+      "entity": "Goodie",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Google Search Central",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Google Search Console",
+      "category": "tool",
+      "original_entity_types": [
+        "tool"
+      ],
+      "rationale": "The strict name identifies a webmaster measurement tool."
+    },
+    {
+      "entity": "HeyCatch",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "publication"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "HubSpot Academy",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Indie Hackers",
+      "category": "community_platform",
+      "original_entity_types": [
+        "publication"
+      ],
+      "rationale": "The recommendation is to the named community or hosting platform, rather than a single creator."
+    },
+    {
+      "entity": "Indietool",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "publication"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Julian Goldie",
+      "category": "individual_creator",
+      "original_entity_types": [
+        "creator"
+      ],
+      "rationale": "The recorded entity names a practitioner; any associated personal publishing brand stays grouped as originally coded."
+    },
+    {
+      "entity": "Kevin Indig (Growth Memo)",
+      "category": "individual_creator",
+      "original_entity_types": [
+        "creator"
+      ],
+      "rationale": "The recorded entity names a practitioner; any associated personal publishing brand stays grouped as originally coded."
+    },
+    {
+      "entity": "Kumar et al. (brand visibility study)",
+      "category": "research_or_study",
+      "original_entity_types": [
+        "research"
+      ],
+      "rationale": "The original recommended entity identifies a study or groups a researcher with the referenced research."
+    },
+    {
+      "entity": "LearnGEO",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "MLforSEO (Lazarina Stoy)",
+      "category": "mixed_creator_organization",
+      "original_entity_types": [
+        "creator_organization"
+      ],
+      "rationale": "The original strict entity deliberately joins Lazarina Stoy with MLforSEO; retain that combined unit."
+    },
+    {
+      "entity": "Nathan Gotch",
+      "category": "individual_creator",
+      "original_entity_types": [
+        "creator"
+      ],
+      "rationale": "The recorded entity names a practitioner; any associated personal publishing brand stays grouped as originally coded."
+    },
+    {
+      "entity": "Neil Patel",
+      "category": "individual_creator",
+      "original_entity_types": [
+        "creator"
+      ],
+      "rationale": "The recorded entity names a practitioner; any associated personal publishing brand stays grouped as originally coded."
+    },
+    {
+      "entity": "Olivier Martinez",
+      "category": "research_or_study",
+      "original_entity_types": [
+        "researcher"
+      ],
+      "rationale": "The original recommended entity identifies a study or groups a researcher with the referenced research."
+    },
+    {
+      "entity": "Open University",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "OpenAI",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Peec AI",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "brand"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Perplexity",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Profound",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Rank Prompt",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "SMA Marketing",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "SafeGEO",
+      "category": "research_or_study",
+      "original_entity_types": [
+        "research"
+      ],
+      "rationale": "The original recommended entity identifies a study or groups a researcher with the referenced research."
+    },
+    {
+      "entity": "Sam Shev",
+      "category": "individual_creator",
+      "original_entity_types": [
+        "creator"
+      ],
+      "rationale": "The recorded entity names a practitioner; any associated personal publishing brand stays grouped as originally coded."
+    },
+    {
+      "entity": "Search Engine Land",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "publication",
+        "publisher"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Seer Interactive",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Semrush",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "brand",
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Semrush Academy",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Smoking Gun PR",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Solo Business Hub",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "publication"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Stackmatix",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "The GEO Community",
+      "category": "community_platform",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The recommendation is to the named community or hosting platform, rather than a single creator."
+    },
+    {
+      "entity": "The GEO Lab",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "TripleDart",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "Udemy",
+      "category": "resource_directory",
+      "original_entity_types": [
+        "platform"
+      ],
+      "rationale": "The recommendation is to a resource collection or multi-author learning marketplace."
+    },
+    {
+      "entity": "What Drives AI Citations?",
+      "category": "research_or_study",
+      "original_entity_types": [
+        "research"
+      ],
+      "rationale": "The original recommended entity identifies a study or groups a researcher with the referenced research."
+    },
+    {
+      "entity": "What Gets Cited (competitive GEO study)",
+      "category": "research_or_study",
+      "original_entity_types": [
+        "research"
+      ],
+      "rationale": "The original recommended entity identifies a study or groups a researcher with the referenced research."
+    },
+    {
+      "entity": "Writesonic",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "daydream",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    },
+    {
+      "entity": "iPullRank",
+      "category": "organization_or_publisher",
+      "original_entity_types": [
+        "organization"
+      ],
+      "rationale": "The original type and recommendation context identify an institutional, company, training or publishing brand."
+    }
+  ],
+  "summary": [
+    {
+      "scope": "all_questions",
+      "platform": "ChatGPT Search",
+      "answer_count": 6,
+      "unique_recommended_entities": 26,
+      "recommendation_records": 48,
+      "categories": [
+        {
+          "category": "research_or_study",
+          "unique_entities": 6,
+          "entity_answer_records": 10
+        },
+        {
+          "category": "individual_creator",
+          "unique_entities": 2,
+          "entity_answer_records": 4
+        },
+        {
+          "category": "mixed_creator_organization",
+          "unique_entities": 1,
+          "entity_answer_records": 1
+        },
+        {
+          "category": "organization_or_publisher",
+          "unique_entities": 12,
+          "entity_answer_records": 24
+        },
+        {
+          "category": "community_platform",
+          "unique_entities": 1,
+          "entity_answer_records": 2
+        },
+        {
+          "category": "resource_directory",
+          "unique_entities": 2,
+          "entity_answer_records": 4
+        },
+        {
+          "category": "tool",
+          "unique_entities": 2,
+          "entity_answer_records": 3
+        }
+      ]
+    },
+    {
+      "scope": "all_questions",
+      "platform": "Grok",
+      "answer_count": 6,
+      "unique_recommended_entities": 43,
+      "recommendation_records": 76,
+      "categories": [
+        {
+          "category": "research_or_study",
+          "unique_entities": 5,
+          "entity_answer_records": 11
+        },
+        {
+          "category": "individual_creator",
+          "unique_entities": 5,
+          "entity_answer_records": 7
+        },
+        {
+          "category": "mixed_creator_organization",
+          "unique_entities": 0,
+          "entity_answer_records": 0
+        },
+        {
+          "category": "organization_or_publisher",
+          "unique_entities": 28,
+          "entity_answer_records": 49
+        },
+        {
+          "category": "community_platform",
+          "unique_entities": 2,
+          "entity_answer_records": 4
+        },
+        {
+          "category": "resource_directory",
+          "unique_entities": 1,
+          "entity_answer_records": 1
+        },
+        {
+          "category": "tool",
+          "unique_entities": 2,
+          "entity_answer_records": 4
+        }
+      ]
+    },
+    {
+      "scope": "Q3",
+      "platform": "ChatGPT Search",
+      "answer_count": 2,
+      "unique_recommended_entities": 12,
+      "recommendation_records": 17,
+      "categories": [
+        {
+          "category": "research_or_study",
+          "unique_entities": 1,
+          "entity_answer_records": 1
+        },
+        {
+          "category": "individual_creator",
+          "unique_entities": 2,
+          "entity_answer_records": 4
+        },
+        {
+          "category": "mixed_creator_organization",
+          "unique_entities": 1,
+          "entity_answer_records": 1
+        },
+        {
+          "category": "organization_or_publisher",
+          "unique_entities": 6,
+          "entity_answer_records": 9
+        },
+        {
+          "category": "community_platform",
+          "unique_entities": 1,
+          "entity_answer_records": 1
+        },
+        {
+          "category": "resource_directory",
+          "unique_entities": 1,
+          "entity_answer_records": 1
+        },
+        {
+          "category": "tool",
+          "unique_entities": 0,
+          "entity_answer_records": 0
+        }
+      ]
+    },
+    {
+      "scope": "Q3",
+      "platform": "Grok",
+      "answer_count": 2,
+      "unique_recommended_entities": 10,
+      "recommendation_records": 14,
+      "categories": [
+        {
+          "category": "research_or_study",
+          "unique_entities": 1,
+          "entity_answer_records": 1
+        },
+        {
+          "category": "individual_creator",
+          "unique_entities": 2,
+          "entity_answer_records": 2
+        },
+        {
+          "category": "mixed_creator_organization",
+          "unique_entities": 0,
+          "entity_answer_records": 0
+        },
+        {
+          "category": "organization_or_publisher",
+          "unique_entities": 5,
+          "entity_answer_records": 8
+        },
+        {
+          "category": "community_platform",
+          "unique_entities": 2,
+          "entity_answer_records": 3
+        },
+        {
+          "category": "resource_directory",
+          "unique_entities": 0,
+          "entity_answer_records": 0
+        },
+        {
+          "category": "tool",
+          "unique_entities": 0,
+          "entity_answer_records": 0
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Types describe what kind of entity was recommended; they do not rate relevance, expertise, evidence quality or GEO success.",
+    "Classification is an assistant judgment based on the original names, types and recommendation context. Most entities were not independently source-checked.",
+    "Original entity normalization is retained, including combined person/brand entities. Categories do not infer that every named practitioner is an independent builder.",
+    "Unique counts are deduplicated within the stated scope. Entity-by-answer records count repeat appearances. Neither is a quality score or a population recommendation rate."
+  ]
+}

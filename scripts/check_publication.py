@@ -52,22 +52,30 @@ def main():
             if name.startswith('stages/03-question-sensitivity/') and label in {'personal X context', 'excluded personal plans'}:
                 continue
             assert not re.search(pattern, value, re.I), (name, label)
-    page = Page()
-    page.feed((DIST / 'index.html').read_text())
-    assert page.language == 'en', 'Report language must be English'
-    for link in page.links:
-        parsed = urlsplit(link)
-        if parsed.scheme or parsed.netloc:
-            assert parsed.scheme in ('http', 'https'), 'Unexpected link protocol'
-            continue
-        if not parsed.path:
-            assert not parsed.fragment or unquote(parsed.fragment) in page.ids, 'Broken anchor'
-        else:
-            target = (DIST / unquote(parsed.path).lstrip('/')).resolve()
-            if target.is_dir():
-                target = target / 'index.html'
-            assert target.is_relative_to(DIST) and target.is_file(), ('Broken public link', parsed.path)
-    assert page.details and all(page.details), 'All details must remain expanded'
+    page_paths = [DIST / name for name in ['index.html','technical-appendix.html',
+        'stages/02-post-discovery/index.html','stages/02-post-discovery/technical-appendix.html',
+        'stages/03-question-sensitivity/index.html','stages/03-question-sensitivity/technical-appendix.html']]
+    pages = {}
+    for path in page_paths:
+        page = Page(); document = path.read_text(); page.feed(document); pages[path.resolve()] = page
+        assert page.language == 'en', 'Report language must be English'
+        assert all(page.details), 'All evidence details must remain expanded'
+        assert 'data-report-series="v1"' in document and 'id="report-version"' in document
+        assert all(label in document for label in ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity'])
+        if path.name == 'index.html':
+            assert path.stat().st_size < 100_000, 'Keep full evidence in the appendix'
+    assert len(pages[(DIST/'technical-appendix.html').resolve()].details) >= 150
+    for path, page in pages.items():
+        for link in page.links:
+            parsed = urlsplit(link)
+            if parsed.scheme or parsed.netloc:
+                assert parsed.scheme in ('http', 'https'), 'Unexpected link protocol'
+                continue
+            target = (path.parent/unquote(parsed.path)).resolve() if parsed.path else path
+            if target.is_dir(): target = target / 'index.html'
+            assert target.is_relative_to(DIST) and target.is_file(), ('Broken public link', str(path), link)
+            if parsed.fragment and target in pages:
+                assert unquote(parsed.fragment) in pages[target].ids, ('Broken anchor',str(path),link)
     load = lambda name: json.loads((DIST / name).read_text())
     runs, attempts, history = load('data/runs.json'), load('data/attempts.json'), load('data/capture-history.json')
     assert (len(runs), len(attempts), len(history['captures'])) == (12, 10, 37)
@@ -76,9 +84,29 @@ def main():
     original = {'insights': build_report.summarize_insights(runs)}
     public = load('findings.json')
     assert public['insights'] == original['insights']
+    mapping = load('data/stage1-entity-types.json')
+    mapped = {x['entity']:x['category'] for x in mapping['mappings']}
+    recommended = {o['entity'] for r in runs for o in r['observations'] if o.get('recommendation') is True}
+    assert set(mapped) == recommended and len(mapped) == 56
+    assert len(mapping['categories']) == 7
+    audit = load('data/stage1-source-audit.json')
+    assert len(audit['cases']) == 10 and audit['human_review'] is False
+    assert all(len(x['entities']) == 5 for x in audit['platform_selection'])
+    for case in audit['cases']:
+        assert case['checked_urls']
+        assert all(x['url'] in case['recorded_source_urls'] for x in case['checked_urls'])
+        for platform in case['selected_for_platforms']:
+            assert any(r['platform']==platform and r['question_id']=='Q3' and any(o['entity']==case['entity'] and o.get('recommendation') is True for o in r['observations']) for r in runs)
+    versions = load('report-versions.json')['reports']
+    assert len(versions) == 3 and {r['stage'] for r in versions} == {1,2,3}
+    assert all(r['first_published'] <= r['last_revised'] for r in versions)
+    follow = load('stages/02-post-discovery/data/post-publication-checks.json')
+    assert follow['original_six_cell_outcomes_unchanged'] is True
+    assert follow['checks'][0]['observed_on'] is None and follow['checks'][0]['evidence_level']=='user_reported_observation'
+    assert follow['future_retest']['results']==[] and follow['future_retest']['automation_created'] is False
     with zipfile.ZipFile(DIST / 'public-data.zip') as archive:
         assert archive.testzip() is None
-        expected = {str(p.relative_to(DIST)) for p in (DIST / 'data').rglob('*.json')} | {'findings.json'}
+        expected = {str(p.relative_to(DIST)) for p in (DIST / 'data').rglob('*') if p.is_file() and p.suffix in {'.json','.md'}} | {'findings.json'}
         assert set(archive.namelist()) == expected
         for name in archive.namelist():
             assert archive.read(name) == (DIST / name).read_bytes()
@@ -86,7 +114,7 @@ def main():
     check_stage2_publication.main()
     import check_stage3_publication
     check_stage3_publication.main()
-    print(json.dumps({'privacy_check': 'passed', 'language_check': 'passed', 'public_files': len(files), 'valid_links': len(page.links), 'expanded_details': len(page.details), 'main_answers': 12, 'historical_attempts': 10, 'captures': 37, 'statistics_match': True}))
+    print(json.dumps({'privacy_check': 'passed', 'language_check': 'passed', 'public_files': len(files), 'report_pages':len(pages),'valid_links':sum(len(p.links) for p in pages.values()),'expanded_details':sum(len(p.details) for p in pages.values()), 'main_answers': 12, 'historical_attempts': 10, 'captures': 37, 'statistics_match': True,'source_audit_cases':10,'series_navigation_and_versions':'passed'}))
 
 if __name__ == '__main__':
     main()

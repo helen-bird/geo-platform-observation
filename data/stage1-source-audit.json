@@ -1,0 +1,382 @@
+{
+  "version": "1.0",
+  "recorded_on": "2026-11-02",
+  "audit_status": "completed_bounded_assistant_source_check",
+  "human_review": false,
+  "scope": "Ten purposively selected Q3 recommended entities: five from each platform, drawn from the two selected repetitions per platform. No original observations or C/M/R labels changed.",
+  "selection_rationale": "Cover practical creators, commercial research, agencies, a publisher, community curation and founder-oriented guides. This is not random sampling or a matched test of platform quality.",
+  "platform_selection": [
+    {
+      "platform": "ChatGPT Search",
+      "entities": [
+        "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+        "Ahrefs",
+        "MLforSEO (Lazarina Stoy)",
+        "Seer Interactive",
+        "Search Engine Land"
+      ]
+    },
+    {
+      "platform": "Grok",
+      "entities": [
+        "The GEO Lab",
+        "Sam Shev",
+        "HeyCatch",
+        "Indietool",
+        "The GEO Community"
+      ]
+    }
+  ],
+  "checks_performed": [
+    "Open one recorded primary/bylined URL per selected entity",
+    "Inspect topical and audience relevance",
+    "Distinguish original completed observations from interpretation, curation and suggested workflows",
+    "Record whether method and sample information is present, with explicit qualifications"
+  ],
+  "cases": [
+    {
+      "id": "S1-Q3-AUDIT-01",
+      "entity": "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+      "selected_for_platforms": [
+        "ChatGPT Search"
+      ],
+      "platforms": [
+        "ChatGPT Search"
+      ],
+      "record_ids": [
+        "C-Q3-R1",
+        "C-Q3-R2-A3"
+      ],
+      "recorded_source_urls": [
+        "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+        "https://www.aleydasolis.com/en/ai-search/ai-search-prompt-library/",
+        "https://www.aleydasolis.com/en/blog/",
+        "https://www.aleydasolis.com/en/category/ai-search/",
+        "https://learningaisearch.com/"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+          "domain": "www.aleydasolis.com",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "The AI Search Optimization Framework & Checklist",
+          "content_role": "Practical authored checklist"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "Not established by this checked page",
+      "method_sample_reporting": "Workflow specifies a tagged prompt bank and repeated tests; these are instructions, not a reported completed sample.",
+      "indie_builder_fit": "Actionable worksheets and sequencing may suit a small builder; examples also target marketing teams. Worksheet execution was not tested.",
+      "assessment": "Relevant practical resource; do not describe this checklist itself as an original experiment.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-02",
+      "entity": "Ahrefs",
+      "selected_for_platforms": [
+        "ChatGPT Search"
+      ],
+      "platforms": [
+        "ChatGPT Search"
+      ],
+      "record_ids": [
+        "C-Q3-R1",
+        "C-Q3-R2-A3"
+      ],
+      "recorded_source_urls": [
+        "https://ahrefs.com/aeo",
+        "https://ahrefs.com/blog/ai-brand-visibility-correlations/",
+        "https://ahrefs.com/blog/monitor-brand-mentions-chatgpt/",
+        "https://ahrefs.com/blog/ai-search-strategy/"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://ahrefs.com/blog/ai-brand-visibility-correlations/",
+          "domain": "ahrefs.com",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "Top Brand Visibility Factors in ChatGPT, AI Mode, and AI Overviews",
+          "content_role": "First-party observational study"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "Yes, published observational analysis; not a controlled intervention",
+      "method_sample_reporting": "Reports 75,000 brands, selection thresholds and Spearman correlations using proprietary response data.",
+      "indie_builder_fit": "Readable research context, but selected established domains and proprietary tooling limit transfer to a new, zero-budget SaaS.",
+      "assessment": "Original quantitative evidence exists; correlation and vendor interests limit causal and budget claims.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-03",
+      "entity": "MLforSEO (Lazarina Stoy)",
+      "selected_for_platforms": [
+        "ChatGPT Search"
+      ],
+      "platforms": [
+        "ChatGPT Search"
+      ],
+      "record_ids": [
+        "C-Q3-R1"
+      ],
+      "recorded_source_urls": [
+        "https://www.mlforseo.com/resource/generative-engine-optimisation-geo-checklist/"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://www.mlforseo.com/resource/generative-engine-optimisation-geo-checklist/",
+          "domain": "www.mlforseo.com",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "Generative Engine Optimisation (GEO) Checklist",
+          "content_role": "Evidence-labeled practical checklist"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "Not established by this checked page",
+      "method_sample_reporting": "Describes 44 checks with platform/research/practice/unconfirmed labels, not a completed intervention sample.",
+      "indie_builder_fit": "No-code checklist relevant to a small site. Download requests email; no form submitted or workbook tested.",
+      "assessment": "Practical training resource with explicit evidence labels; not itself original causal evidence.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-04",
+      "entity": "Seer Interactive",
+      "selected_for_platforms": [
+        "ChatGPT Search"
+      ],
+      "platforms": [
+        "ChatGPT Search"
+      ],
+      "record_ids": [
+        "C-Q3-R1",
+        "C-Q3-R2-A3"
+      ],
+      "recorded_source_urls": [
+        "https://www.seerinteractive.com/insights/optimizing-content-for-generative-search-engines",
+        "https://www.seerinteractive.com/generative-engine-optimization",
+        "https://www.relevance.com/geo-case-studies/"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://www.seerinteractive.com/insights/optimizing-content-for-generative-search-engines",
+          "domain": "www.seerinteractive.com",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "Optimizing Content for Generative Search Engines Resulted in 40% More Visibility",
+          "content_role": "Secondary research interpretation and checklist"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "No first-party Seer experiment established on this checked page",
+      "method_sample_reporting": "The 10,000-query and up-to-40% figures are attributed to Aggarwal and colleagues, not a Seer-run test.",
+      "indie_builder_fit": "Content-editing guidance is actionable; the academic setting does not establish current ChatGPT/Grok gains.",
+      "assessment": "Correct the attribution in interpretation: this page summarizes external research. The original AI recommendation remains unchanged.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-05",
+      "entity": "Search Engine Land",
+      "selected_for_platforms": [
+        "ChatGPT Search"
+      ],
+      "platforms": [
+        "ChatGPT Search"
+      ],
+      "record_ids": [
+        "C-Q3-R1",
+        "C-Q3-R2-A3"
+      ],
+      "recorded_source_urls": [
+        "https://searchengineland.com/3-geo-experiments-you-should-try-this-year",
+        "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
+          "domain": "searchengineland.com",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "Two GEO experiments challenge conventional AI visibility advice",
+          "content_role": "First-person commercial field tests by Zeeshan Yaseen"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "Yes, reported campaign observations; no randomized control established",
+      "method_sample_reporting": "Reports two tests with 15 keywords each, four then six engines, and manual checks.",
+      "indie_builder_fit": "Methods are inspectable, but paid placement/PR and agency campaigns do not match every zero-budget solo-builder constraint.",
+      "assessment": "Specific first-person evidence is present; the publisher is not itself one independent creator and the campaign effects are not isolated.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-06",
+      "entity": "The GEO Lab",
+      "selected_for_platforms": [
+        "Grok"
+      ],
+      "platforms": [
+        "Grok"
+      ],
+      "record_ids": [
+        "G-Q3-R1"
+      ],
+      "recorded_source_urls": [
+        "https://thegeolab.net/field-manual/"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://thegeolab.net/field-manual/",
+          "domain": "thegeolab.net",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "GEO Field Manual: The Complete Practitioner Guide",
+          "content_role": "Practitioner manual with a self-reported experiment"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "A completed experiment is described, with internal reporting conflict",
+      "method_sample_reporting": "Methods say 15 prompts repeated five times: 75 runs per version. Corrected results use 18/30 versus 11/30 and p=0.07; later prose still claims significance.",
+      "indie_builder_fit": "Templates and single-variable protocols are practical; denominator and conclusion inconsistencies require clarification before relying on the reported effect.",
+      "assessment": "Exists and relevant, but do not treat its numerical experiment as fully verified. The checked experiment is Perplexity-only.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-07",
+      "entity": "Sam Shev",
+      "selected_for_platforms": [
+        "Grok"
+      ],
+      "platforms": [
+        "Grok"
+      ],
+      "record_ids": [
+        "G-Q3-R1"
+      ],
+      "recorded_source_urls": [
+        "https://www.samshev.com/blog/geo-90-day-roadmap"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://www.samshev.com/blog/geo-90-day-roadmap",
+          "domain": "www.samshev.com",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "How to Start Generative Engine Optimization (GEO): A 90-Day Roadmap",
+          "content_role": "Authored implementation roadmap"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "No completed first-party experiment established on this checked page",
+      "method_sample_reporting": "Provides a suggested prompt-audit workflow and attributes empirical lifts to external research.",
+      "indie_builder_fit": "Concrete sequencing is usable; its multi-page program and commercial-tool suggestions may exceed solo-builder resources.",
+      "assessment": "Practical advice with external evidence, rather than demonstrated original measurement on this page.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-08",
+      "entity": "HeyCatch",
+      "selected_for_platforms": [
+        "Grok"
+      ],
+      "platforms": [
+        "Grok"
+      ],
+      "record_ids": [
+        "G-Q3-R1",
+        "G-Q3-R2"
+      ],
+      "recorded_source_urls": [
+        "https://heycatch.ai/blog/generative-engine-optimization-for-solo-founders"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://heycatch.ai/blog/generative-engine-optimization-for-solo-founders",
+          "domain": "heycatch.ai",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "Generative Engine Optimization for Solo Founders",
+          "content_role": "Founder-oriented guide"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "No completed first-party experiment established on this checked page",
+      "method_sample_reporting": "Uses outside statistics and implementation prescriptions without a reported original prompt sample or before/after dataset.",
+      "indie_builder_fit": "Explicitly addresses pre-traction solo founders without a marketing budget.",
+      "assessment": "Strong audience targeting does not establish original evidence or validate the guide's timing and effect claims.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-09",
+      "entity": "Indietool",
+      "selected_for_platforms": [
+        "Grok"
+      ],
+      "platforms": [
+        "Grok"
+      ],
+      "record_ids": [
+        "G-Q3-R1",
+        "G-Q3-R2"
+      ],
+      "recorded_source_urls": [
+        "https://www.indietool.io/blog/geo-ai-search-optimization"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://www.indietool.io/blog/geo-ai-search-optimization",
+          "domain": "www.indietool.io",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "GEO AI Search Optimization: A Practical Guide for 2026",
+          "content_role": "Commercial founder-oriented guide"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "No completed first-party experiment established on this checked page",
+      "method_sample_reporting": "Recommends fixed prompts, separate mention/citation logs and baseline comparisons; no completed original result sample is shown.",
+      "indie_builder_fit": "Targets indie founders but promotes its own directory/distribution offering; paid/free delivery was not tested.",
+      "assessment": "Relevant measurement advice and commercial positioning coexist; this is not a verified GEO intervention study.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    },
+    {
+      "id": "S1-Q3-AUDIT-10",
+      "entity": "The GEO Community",
+      "selected_for_platforms": [
+        "Grok"
+      ],
+      "platforms": [
+        "ChatGPT Search",
+        "Grok"
+      ],
+      "record_ids": [
+        "C-Q3-R2-A3",
+        "G-Q3-R2"
+      ],
+      "recorded_source_urls": [
+        "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
+      ],
+      "checked_urls": [
+        {
+          "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/",
+          "domain": "thegeocommunity.com",
+          "access": "readable_with_web_retrieval_tool",
+          "source_title": "Generative Engine Optimization (GEO): Best Resources, Courses & Tutorials [2026]",
+          "content_role": "Community resource directory and synthesis"
+        }
+      ],
+      "existence": "Identifiable first-party or bylined resource at the recorded URL",
+      "original_experiments": "Not established by the checked directory; linked experiment claims not followed",
+      "method_sample_reporting": "Lists academic studies and an experiment archive; the directory itself does not supply a completed original sample.",
+      "indie_builder_fit": "Sequenced resource discovery can help a builder; it is a community resource, not one creator.",
+      "assessment": "A resource directory can fit discovery needs without meeting the narrower original-experiment criterion.",
+      "limitations": "Bounded current-page assistant check, not independent replication, a full entity-site audit, or verification of every linked statistic."
+    }
+  ],
+  "summary": {
+    "selected_entity_cases": 10,
+    "selected_cases_per_platform": 5,
+    "recorded_URLs_checked": 10,
+    "readable_recorded_URLs": 10,
+    "unavailable_recorded_URLs": 0,
+    "claims_of_platform_quality_ranking": false,
+    "all_claims_verified": false
+  },
+  "limitations": [
+    "This is post-hoc assistant analysis on 2026-11-02, after the original experiment. Pages may have changed; current content does not prove what was available at collection time.",
+    "The purposive cases cannot estimate the share of good recommendations on either platform. No per-platform quality score is calculated.",
+    "Readable content establishes availability to this retrieval tool, not that its data, causal claims, authorship credentials or free-plan operation were independently validated.",
+    "No course, download, commercial tool or content intervention was executed. No email was submitted.",
+    "The audit covers ten source pages, not every resource, paper or link on those pages. Non-observation on one page is not proof the entity never publishes original experiments."
+  ]
+}

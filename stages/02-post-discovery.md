@@ -1,14 +1,13 @@
 # Stage 2: Accessing and discovering a public experiment post
 
-[Back to the GEO Learning Log](../README.md) · **[Read the visual report](https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/)** · [Selected answers](02-post-discovery/data/runs.json) · [All submissions](02-post-discovery/data/attempts.json) · [Download public data](02-post-discovery/public-data.zip)
+[Back to the GEO Learning Log](../README.md) · **[Read the visual report](https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/)** · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/technical-appendix.html) · [Selected answers](02-post-discovery/data/runs.json) · [All submissions](02-post-discovery/data/attempts.json) · [Download public data](02-post-discovery/public-data.zip)
 
 This stage tests three routes to the same [public GEO Lab #01 post by HelenBird](https://x.com/bird_helen67403/status/2116080254523445676): a supplied URL, an exact excerpt, and an unbranded research request. ChatGPT Search and Grok each received one question per condition in a fresh conversation. Collection took place on **October 31, 2026**. The six planned cells ultimately required ten submissions to obtain six complete selected answer bodies.
 
 ## Main findings
 
 - **Access by a supplied URL did not establish discovery.** Grok extracted body-specific findings when given the link. ChatGPT explicitly said it could not access the post. Neither platform returned the target post in the exact-excerpt or natural-discovery condition.
-- **The exact excerpt matched the post character for character.** It was an 86-character continuous passage from the latter part of a sentence, with matching case, spaces, numbers, and punctuation. Grok's recorded activity also included shorter phrases and variants without punctuation. The failed searches cannot be attributed to an observed transcription error.
-- **Citation and mention can accompany an explicit exclusion.** ChatGPT cited and mentioned Artur Ferreira but excluded his work from the requested cross-platform evidence; Grok presented him as a research candidate. ChatGPT's selected C answer returned eleven explicit source URLs, covering eight included studies and three excluded sources.
+- **The exact excerpt matched the post character for character.** It was an 86-character continuous passage from the latter part of a sentence, with matching case, spaces, numbers, and punctuation. Grok's recorded activity also included shorter phrases and variants without punctuation. The unsuccessful B answers cannot be attributed to an observed transcription error. Grok retrieval activity was recorded; ChatGPT B's actual search queries were not independently captured.
 - **The missing ChatGPT C body was recovered through a qualified manual replacement.** Four earlier technical failures or incomplete captures remain in the submission history. They were not silently replaced, treated as complete, or scored as failures to discover the target.
 
 > These are small, exploratory observations, not platform-wide performance estimates. They do not establish whether the post is indexed, identify the cause of a search failure, rank the author's GEO performance, or demonstrate that a GEO intervention works. The platforms' claims about external experiments, sample sizes, and effectiveness were collected as answers and were **not independently fact-checked**.
@@ -20,6 +19,8 @@ This stage tests three routes to the same [public GEO Lab #01 post by HelenBird]
 | A — Direct URL | Original X post URL | Did not demonstrate content access; explicitly reported inability to access the body | Met the content-access criterion; summary wording has a separate qualification |
 | B — Exact Search | Exact excerpt, without URL or author | Did not find and verify the original post | Did not find and verify the original post |
 | C — Natural Search | A research need, without target identity, URL, or excerpt | Returned other experiments; did not discover the target post | Returned other experiments; did not discover the target post |
+
+> Each cell has one selected complete answer. These are observed outcomes, not stable success/failure rates. The later manual ChatGPT C has qualified control evidence.
 
 The supplied excerpt was:
 
@@ -41,7 +42,7 @@ Grok A correctly extracted the reported two-of-twenty overlap and other body-spe
 
 | File | Contents |
 | --- | --- |
-| [index.html](02-post-discovery/index.html) | English report with findings, comparisons, full selected answers, and submission history |
+| [index.html](02-post-discovery/index.html) | Concise reader with findings and six-cell comparison; complete answers and attempts remain in the [technical appendix](02-post-discovery/technical-appendix.html) |
 | [data/protocol.json](02-post-discovery/data/protocol.json) | Original prompts, criteria, controls, and methodological qualifications |
 | [data/runs.json](02-post-discovery/data/runs.json) | Six selected plan cells, linked to their chosen actual submissions |
 | [data/attempts.json](02-post-discovery/data/attempts.json) | All ten actual submissions, including the four earlier unsuccessful C captures |
@@ -72,3 +73,11 @@ python3 -m http.server 8000
 ```
 
 Open the [local Stage 2 report](http://localhost:8000/stages/02-post-discovery/). Rebuilding does not submit new questions or access either AI account.
+
+## Post-publication checks and revisions
+
+On November 2, the user reported that X native search returned the original post for `from:bird_helen67403 "2 of 20"` and `from:bird_helen67403 "GEO Lab"`, with Latest and All users selected. The actual search date and a screenshot were not supplied. An independent browser attempt on November 2 showed only a loading placeholder, so independent confirmation remains unresolved; it is not a negative search result.
+
+> This user-reported, author-scoped native-search observation is separate from the October 31 experiment and does not alter any A/B/C outcome. It does not establish availability on the experiment date or explain the AI result. Details are in [post-publication-checks.json](02-post-discovery/data/post-publication-checks.json).
+
+The review proposed a November 7 B/C follow-up. This date is **unconfirmed**; there are no new results and no automation. If conducted, later runs will have their own dates, conditions and records. The Artur Ferreira citation/exclusion example remains a supporting observation in the appendix. See [review decisions](../reviews/2026-11-02-stages-01-02.md), [version metadata](../report-versions.json) and [revision history](../CHANGELOG.md).

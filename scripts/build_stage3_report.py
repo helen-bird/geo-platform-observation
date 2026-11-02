@@ -21,6 +21,7 @@ import json
 import os
 import re
 import zipfile
+from report_series import finish_page
 from pathlib import Path
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
@@ -1007,6 +1008,8 @@ def main():
     appendix = technical_appendix(protocol, runs, attempts, findings, root, public=True)
     legacy_ids = [html.unescape(x) for x in re.findall(r'\bid="([^"]+)"', appendix)]
     report = reader_report(protocol, runs, attempts, findings, root, public=True, legacy_ids=legacy_ids)
+    report = finish_page(report, 3, kind='reader')
+    appendix = finish_page(appendix, 3, kind='appendix')
     STAGE.mkdir(parents=True, exist_ok=True)
     (STAGE / 'findings.json').write_text(json.dumps(findings, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (STAGE / 'index.html').write_text(report, encoding='utf-8')

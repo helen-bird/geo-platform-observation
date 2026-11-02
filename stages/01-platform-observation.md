@@ -1,23 +1,23 @@
 # Stage 1: Observing ChatGPT Search and Grok
 
-[Back to the GEO Learning Log](../README.md) · **[Read the visual report](https://helen-bird.github.io/geo-platform-observation/)** · [Main answer data](../data/runs.json) · [Historical attempts](../data/attempts.json) · [Aggregate results](../findings.json) · [Download public data](../public-data.zip)
+[Back to the GEO Learning Log](../README.md) · **[Read the visual report](https://helen-bird.github.io/geo-platform-observation/)** · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/technical-appendix.html) · [Main answer data](../data/runs.json) · [Historical attempts](../data/attempts.json) · [Aggregate results](../findings.json) · [Download public data](../public-data.zip)
 
 This stage uses repeated queries to explore which entities AI answers recommend, which sources they cite, and how answers vary. ChatGPT Search and Grok received the same 3 English questions, with 2 repetitions per question on each platform. Testing took place on **2026-10-29 to 2026-10-30**.
 
 ## Main findings
 
-- **The creator question produced the largest difference between platforms' recommendation sets**: after combining each platform's two answers, 2 / 20 distinct recommended entities were shared, an overlap of 10.0%.
-- **In this sample, ChatGPT recommendations more often cited content published or authored by the recommended entity**: 47 / 48 (97.9%) for ChatGPT, compared with 39 / 76 (51.3%) for Grok.
+- **The creator-seeking question produced the lowest pooled overlap of mixed recommended entities/resources**: after combining each platform's two answers, 2 / 20 distinct recommended entities/resources were shared, an overlap of 10.0%. These were GEO research (Aggarwal et al.) and The GEO Community; the candidate lists are not lists of individual creators alone.
+- **Observed own/bylined-content citations accompanied 47/48 ChatGPT Search and 39/76 Grok recommendation records** (97.9% and 51.3%). These conditional entity-by-answer proportions exclude third-party support, depend on capture/coding coverage, and do not establish accuracy or an inherent platform citation preference.
 - **Neither platform had higher repeat overlap on every question.** Grok's two answers were more similar on the empirical research question; the other two questions showed smaller differences.
 - **Citation, Mention, and Recommendation can occur separately.** Content can be cited without the entity being named or recommended, and an entity can be recommended without its own content being cited.
 
-> This is a small exploratory learning exercise. The assistant read and coded each answer; there was no independent human double-coding. Each question had only two repetitions per platform, testing spanned multiple days, reasoning effort varied, and account context appeared in the responses and retrieval evidence. There was no pre-optimization baseline, intervention, or control group. **These observations cannot establish whether a GEO tactic works, assess a brand's GEO performance, or demonstrate an inherent advantage of either platform.** External studies and effectiveness claims in the platform answers were not independently verified in this stage.
+> This is a small exploratory learning exercise. The assistant read and coded each answer; there was no independent human double-coding. Each question had only two repetitions per platform, testing spanned multiple days, reasoning effort varied, and account context appeared in the responses and retrieval evidence. There was no pre-optimization baseline, intervention, or control group. **These observations cannot establish whether a GEO tactic works, assess a brand's GEO performance, or demonstrate an inherent advantage of either platform.** A later purposive ten-page assistant source audit is available separately; it is not independent human coding, corpus-wide fact-checking or study replication.
 
 ## Data, sources, and traceability
 
 | File | Contents |
 | --- | --- |
-| [index.html](../index.html#stage-1) | Stage 1 report with a sidebar, findings, charts, and individual public answers |
+| [index.html](../index.html) | Concise Stage 1 reader, with links to the complete expanded [technical appendix](../technical-appendix.html) |
 | [data/protocol.json](../data/protocol.json) | The three original English questions, study design, and coding definitions |
 | [data/runs.json](../data/runs.json) | 12 complete main answers and 142 entity × answer observations |
 | [data/attempts.json](../data/attempts.json) | 10 historical submissions excluded from the main statistics, with failure and recovery status preserved |
@@ -50,3 +50,9 @@ python3 -m http.server 8000
 ```
 
 Open the [local report](http://localhost:8000/) to read the full results. The GitHub repository provides these stage notes, JSON data, and code; GitHub Pages serves the same [index.html](../index.html) with its layout and charts.
+
+## November 2 review revision
+
+A declared [post-hoc type mapping](../data/stage1-entity-types.json) distinguishes seven resource categories, with unique-entity and entity-by-answer counts. A [bounded Q3 source audit](../data/stage1-source-audit.md) checks five purposive recommendations per platform. Relevant tutorials, original observation reports and controlled experiments are different evidence types; the sample does not rank platform quality. Current pages can differ from experiment-date versions.
+
+> **Observed Repeat Overlap** is descriptive: ChatGPT Q2 spans dates and Q3 also changes Extra High to Medium reasoning; Grok backend conditions were not disclosed. Original numbers and strict coding are unchanged. See [all review decisions](../reviews/2026-11-02-stages-01-02.md) and [report version history](../CHANGELOG.md).

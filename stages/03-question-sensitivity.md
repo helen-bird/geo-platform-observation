@@ -107,3 +107,7 @@ python3 -m http.server 8000
 ```
 
 Open the [local Stage 3 report](http://localhost:8000/stages/03-question-sensitivity/). These commands rebuild and check the public report offline. They do not call either platform, require an API key or incur new API charges. Repeating the original collection is a separate activity with its own interface, budget and condition requirements.
+
+## Series navigation revision
+
+The November 2 v1.2 update adds shared navigation and explicit dates/version notes. The v1.1 analyses, original strict coding, API qualification and eight pending independent human-review cases are unchanged. See [revision history](../CHANGELOG.md) and [version metadata](../report-versions.json).

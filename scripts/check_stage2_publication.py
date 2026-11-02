@@ -75,23 +75,48 @@ def main():
             value = path.read_text()
             for label, pattern in forbidden.items():
                 assert not re.search(pattern, value, re.I), (str(path.relative_to(ROOT)), label)
-    document = (STAGE / 'index.html').read_text()
-    assert 'file unavailable' not in document and 'private local evidence links' not in document
-    page = Page()
-    page.feed(document)
-    assert page.language == 'en' and page.details and all(page.details)
-    for link in page.links:
-        parsed = urlsplit(link)
-        if parsed.scheme or parsed.netloc:
-            assert parsed.scheme in {'http', 'https'}
-            continue
-        path = (STAGE / unquote(parsed.path)).resolve() if parsed.path else STAGE / 'index.html'
-        assert path.is_relative_to(ROOT), ('Escaping public repository', link)
-        if path.is_dir():
-            path = path / 'index.html'
-        assert path.is_file(), ('Broken Stage 2 link', link)
-        if parsed.fragment and path == STAGE / 'index.html':
-            assert unquote(parsed.fragment) in page.ids, ('Broken Stage 2 anchor', link)
+    pages = {}
+    for filename in ('index.html', 'technical-appendix.html'):
+        document = (STAGE / filename).read_text()
+        assert 'file unavailable' not in document and 'private local evidence links' not in document
+        page = Page(); page.feed(document); pages[filename] = page
+        assert page.language == 'en' and all(page.details)
+    reader = (STAGE / 'index.html').read_text()
+    appendix = (STAGE / 'technical-appendix.html').read_text()
+    assert len(reader.encode()) < 100_000, 'Keep the reader separate from raw evidence'
+    assert not pages['index.html'].details, 'Original answers belong in the complete appendix'
+    assert len(pages['technical-appendix.html'].details) >= 60
+    assert '6 planned cells' in reader and '10 actual submissions' in reader and '6 complete selected answers' in reader
+    assert 'Four earlier ChatGPT C attempts' in reader
+    assert 'actual query execution was not independently captured' in reader
+    assert 'later user-operated C-R5 replacement' in reader
+    assert 'pre-submit temporary/personalization controls not independently recorded' in reader
+    assert 'One selected answer per platform' in reader
+    assert '86-character continuous fragment' in reader
+    assert 'No completed retest results' in reader
+    assert 'independently recorded' in reader and 'stable retrieval success rate' in reader
+    assert '6 of 6 selected records have complete captures; 0 have a technical failure' not in reader + appendix
+    route = re.search(r'const allowed=new Set\((\[.*?\])\)', reader)
+    assert route, 'Whitelist-only legacy fragment routing must remain explicit'
+    allowed = set(json.loads(route.group(1)))
+    assert allowed <= pages['technical-appendix.html'].ids
+    assert allowed.isdisjoint(pages['index.html'].ids)
+    assert {r['id'] for r in runs} <= allowed
+    assert {'method', 'conditions', 'attempts', 'records', 'inputs'} <= allowed
+    assert "location.replace('technical-appendix.html#'+encodeURIComponent(id))" in reader
+    for filename, page in pages.items():
+        for link in page.links:
+            parsed = urlsplit(link)
+            if parsed.scheme or parsed.netloc:
+                assert parsed.scheme in {'http', 'https'}
+                continue
+            path = (STAGE / unquote(parsed.path)).resolve() if parsed.path else STAGE / filename
+            assert path.is_relative_to(ROOT), ('Escaping public repository', link)
+            if path.is_dir():
+                path = path / 'index.html'
+            assert path.is_file(), ('Broken Stage 2 link', link)
+            if parsed.fragment and path.parent == STAGE and path.name in pages:
+                assert unquote(parsed.fragment) in pages[path.name].ids, ('Broken Stage 2 anchor', link)
     expected = {str(p.relative_to(STAGE)) for p in DATA.rglob('*.json')}
     with zipfile.ZipFile(STAGE / 'public-data.zip') as archive:
         assert archive.testzip() is None and set(archive.namelist()) == expected
@@ -99,8 +124,9 @@ def main():
             assert archive.read(name) == (STAGE / name).read_bytes()
     print(json.dumps({'stage': 2, 'selected_answers': 6, 'actual_submissions': 10,
                       'earlier_C_failures_or_partial_captures': 4, 'manual_C_urls': 11,
-                      'privacy_check': 'passed', 'expanded_details': len(page.details),
-                      'valid_report_links': len(page.links)}))
+                      'privacy_check': 'passed', 'expanded_details': len(pages['technical-appendix.html'].details),
+                      'reader_bytes': len(reader.encode()),
+                      'valid_report_links': sum(len(p.links) for p in pages.values())}))
 
 
 if __name__ == '__main__':

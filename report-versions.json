@@ -1,0 +1,39 @@
+{
+  "date_timezone": "Asia/Shanghai",
+  "scope": "Report presentation and analysis revisions. Original experiment records retain their own dates and provenance.",
+  "reports": [
+    {
+      "stage": 1,
+      "title": "AI Recommendations",
+      "path": "index.html",
+      "experiment_dates": "2026-10-29 to 2026-10-30",
+      "first_published": "2026-10-30",
+      "first_publication_evidence": "Git commit ab0c22c, the first public report commit. No earlier hosting date is inferred.",
+      "last_revised": "2026-11-02",
+      "version": "1.1",
+      "revision_note": "Clarified mixed recommended entities, citation denominators and repeat-condition changes; added post-hoc entity types and a bounded source audit; split reader and expanded appendix. Original data and outcomes unchanged."
+    },
+    {
+      "stage": 2,
+      "title": "Content Discovery",
+      "path": "stages/02-post-discovery/index.html",
+      "experiment_dates": "2026-10-31",
+      "first_published": "2026-11-01",
+      "first_publication_evidence": "Git commit 1b7e89e and the original public-edition record.",
+      "last_revised": "2026-11-02",
+      "version": "1.1",
+      "revision_note": "Clarified six selected cells versus ten submissions, search and manual-control evidence; separated post-publication X search observations; split reader and expanded appendix. Original A/B/C outcomes unchanged."
+    },
+    {
+      "stage": 3,
+      "title": "Prompt Sensitivity",
+      "path": "stages/03-question-sensitivity/index.html",
+      "experiment_dates": "2026-11-02",
+      "first_published": "2026-11-02",
+      "first_publication_evidence": "Git commit f18647b.",
+      "last_revised": "2026-11-02",
+      "version": "1.2",
+      "revision_note": "Added the shared experiment navigation and explicit version metadata. The preceding peer-review analyses, API qualification and pending human-review status are unchanged."
+    }
+  ]
+}

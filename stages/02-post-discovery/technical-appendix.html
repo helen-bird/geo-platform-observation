@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Technical appendix · GEO Lab 02</title><link rel="canonical" href="https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/technical-appendix.html"><meta name="description" content="GEO Learning Log Stage 2: six ChatGPT Search and Grok tests of direct URL access, exact-excerpt retrieval, and natural discovery, with redacted answers and all ten submissions."><meta property="og:type" content="website"><meta property="og:title" content="GEO Learning Log | Stage 2: Post discovery"><meta property="og:url" content="https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/"><style>
+:root{--ink:#182b36;--muted:#5e717c;--line:#dce5e9;--bg:#f3f6f8;--paper:#fff;--accent:#176a76;--soft:#eaf4f4;--bad:#a94635}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;color:var(--ink);background:var(--bg);font:15px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}.layout{display:grid;grid-template-columns:235px minmax(0,1fr);min-height:100vh}nav{position:sticky;top:0;height:100vh;overflow:auto;background:#17343d;color:#edf7f7;padding:30px 22px}nav strong{display:block;font-size:19px;line-height:1.3;margin:0 0 12px}nav p{font-size:12px;color:#bed4db}nav a{display:block;color:#e0eeee;text-decoration:none;padding:7px 0;font-size:14px}nav .sub{padding-left:12px;font-size:12px;color:#b7d3db}main{max-width:1450px;width:100%;padding:36px 4vw 72px;min-width:0}h1{font-size:clamp(27px,3vw,42px);line-height:1.17;letter-spacing:-.035em;margin:8px 0 18px}h2{font-size:23px;line-height:1.3;margin:0 0 20px}h3{font-size:18px;margin:25px 0 12px}h4{font-size:15px;margin:18px 0 8px}p{margin:10px 0}section,.hero{background:var(--paper);margin-bottom:30px;padding:26px;min-width:0}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:750}.lead{font-size:17px;max-width:950px}.conclusions{padding-left:23px;margin:16px 0}.conclusions li{padding:4px 0}.counts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0 4px}.count{padding:15px;background:var(--bg);border-radius:10px}.count strong{display:block;font-size:28px;line-height:1.25}.count span{font-size:12px;color:var(--muted)}blockquote{border:1px solid #adc9ce;background:var(--soft);margin:17px 0;padding:11px 17px;font-size:14px;color:#385560}blockquote p:first-child{margin-top:0}blockquote p:last-child{margin-bottom:0}.muted{color:var(--muted);font-size:13px}.preserve{white-space:pre-wrap}.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:9px}table{border-collapse:collapse;width:100%;font-size:13px;text-align:left}td,th{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}thead th{background:#edf3f5;white-space:nowrap}tbody tr:last-child>*{border-bottom:0}.matrix{min-width:1050px}.matrix td{min-width:105px}.badge{display:inline-block;white-space:normal;line-height:1.3;font-size:11px;font-weight:700;padding:5px 7px;border-radius:5px;background:#eef1f3;color:#52656f}.badge.good{background:#def1e8;color:#226246}.badge.bad{background:#fae7e2;color:var(--bad)}.badge.neutral{background:#edf0f3;color:#52656f}.badge.muted{background:transparent;color:#829099}.run{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:16px 0;overflow:hidden}details{border:1px solid var(--line);border-radius:8px;margin:15px 0}summary{cursor:pointer;font-weight:700;padding:15px 17px;background:#f7fafb;line-height:1.45}summary .badge{margin-left:13px}.detail-body{padding:3px 18px 18px}pre{font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:10px 0;padding:14px;background:#f4f7f8;border:1px solid #e5ecef;border-radius:7px;max-width:100%}.keytable{display:grid;grid-template-columns:minmax(160px,23%) minmax(0,1fr);font-size:13px;margin:14px 0}.keytable dt,.keytable dd{border-bottom:1px solid var(--line);padding:9px 11px;margin:0;overflow-wrap:anywhere}.keytable dt{font-weight:650;background:#f5f8f9}.keytable dd pre{margin:0}ul{padding-left:21px}.definitions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.definition{background:var(--bg);border-radius:9px;padding:14px}.definition strong{display:block}.definition p{font-size:13px;margin-bottom:0}.footer{font-size:12px;color:var(--muted)}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr)}nav{padding:25px 17px}main{padding:24px}section,.hero{padding:20px}.counts{grid-template-columns:repeat(2,1fr)}.definitions{grid-template-columns:1fr}.keytable{grid-template-columns:145px minmax(0,1fr)}}
+@media(max-width:650px){.layout{display:block}nav{position:static;height:auto;padding:16px 20px}nav strong{margin-bottom:6px}nav p{margin:5px 0}nav .links{display:flex;flex-wrap:wrap;gap:2px 17px}nav a{font-size:12px;padding:3px 0}nav .sub{display:none}main{padding:18px 12px 45px}section,.hero{padding:18px 15px}h1{font-size:30px}h2{font-size:22px}.lead{font-size:15px}.keytable{grid-template-columns:1fr}.keytable dt{border-bottom:0;padding-bottom:3px}.keytable dd{padding-top:3px}.detail-body{padding:2px 12px 14px}summary{padding:12px}.run summary .badge{margin-top:6px;margin-left:0;display:table}pre{font-size:12px;padding:11px}}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}::selection{background:#c2e2e3;color:#122e36}html{scrollbar-color:#8aaeb5 #eff5f6}table{font-variant-numeric:tabular-nums}.reader{max-width:1120px}.reader .lead,.reader .conclusions,.reader p{max-width:74ch}.reader .conclusions li{margin:15px 0}.reader section,.reader .hero{padding:22px 26px}.reader h2{margin-top:0}.reader table{min-width:620px}.reader .compact th:first-child{min-width:140px}.reader .compact td{min-width:140px}.reader .flow{padding-left:22px}.reader .flow li{margin:10px 0}.reader .followup{margin-top:22px}.reader .limits{max-width:75ch}@media(max-width:650px){.reader section,.reader .hero{padding:18px 15px}.reader .conclusions{padding-left:20px}.reader table{min-width:650px}}
+@media print{nav{display:none}.layout{display:block}main{max-width:none;padding:0}body{background:#fff}section,.hero,.run{break-inside:avoid;border-color:#bbb}a{color:inherit}summary{list-style:none}.table-scroll{overflow:visible}.matrix{min-width:0}table{font-size:9px}td,th{padding:5px}.counts{grid-template-columns:repeat(4,1fr)}}
+</style><style>
+.experiment-series{margin:0 0 22px;padding:0 0 18px;border-bottom:1px solid currentColor}
+.experiment-series strong{font-size:15px;letter-spacing:0;margin:0 0 8px}
+.experiment-series a{display:block;font-size:13px;line-height:1.5;padding:7px 0;text-decoration:none}
+.experiment-series a[aria-current]{font-weight:750;text-decoration:underline;text-underline-offset:4px}
+.experiment-series a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.report-version{margin-top:38px;font-size:13px;line-height:1.65;border:1px solid #b9cdd1;background:#edf5f5;color:#243d46;padding:16px 18px;overflow-wrap:anywhere}
+.report-version p{margin:5px 0}.report-version a{color:#155b65}
+@media(max-width:650px){.experiment-series{margin-bottom:12px;padding-bottom:10px}.experiment-series strong{font-size:14px}.experiment-series a{display:inline-block;padding:6px 0;margin-right:14px;font-size:12px}.report-version{padding:12px}}
+</style></head>
+<body><div class="layout"><nav aria-label="Report contents"><div class="experiment-series" data-report-series="v1" aria-label="GEO Lab experiment series"><strong>GEO Lab experiments</strong><a href="../../index.html">#01 · AI Recommendations</a><a href="index.html" aria-current="step">#02 · Content Discovery</a><a href="../03-question-sensitivity/index.html">#03 · Prompt Sensitivity</a></div><strong>GEO Learning Log</strong><p>Stage 2 · Public record<br>2026-10-31</p><div class="links"><a href="index.html">Concise reader report</a><a href="#overview">Appendix overview</a><a href="#comparison">Six-cell comparison</a><a href="#conditions">Test conditions</a><a href="#method">Method and boundaries</a><a href="#records">Prompts and answers</a><a class="sub" href="#S2-CHATGPT-A">A · ChatGPT Search</a><a class="sub" href="#S2-GROK-A">A · Grok</a><a class="sub" href="#S2-CHATGPT-B">B · ChatGPT Search</a><a class="sub" href="#S2-GROK-B">B · Grok</a><a class="sub" href="#S2-CHATGPT-C">C · ChatGPT Search</a><a class="sub" href="#S2-GROK-C">C · Grok</a><a href="#attempts">Attempts and recovery</a><a href="#inputs">Inputs and provenance</a><a href="../02-post-discovery.md">Stage 2 data guide</a><a href="https://github.com/helen-bird/geo-platform-observation">GitHub learning log</a></div><a href="#report-version">Report version</a></nav>
+<main><header class="hero" id="overview"><h1>Technical appendix</h1><p class="lead">Stage 2: complete prompts, answers, source roles, judgments and collection history.</p><p><a href="index.html">Return to the concise reader report</a></p><h2>Original authored findings · supporting observations</h2>
+<ul class="conclusions"><li><strong>Direct access and discovery are different outcomes.</strong> Grok retrieved body-specific facts when given the URL. Neither selected exact-excerpt nor natural-query answer returned the target X post. The complete ChatGPT C is a later manual supplement with qualified control evidence. A direct-URL pass does not show proactive discovery.</li><li><strong>The direct-URL result differs across these two platform runs.</strong> Grok met the content-access criterion; ChatGPT explicitly said it could not access the post. Grok’s summary added “on the same platforms,” an unsupported qualifier that is recorded separately from access.</li><li><strong>Exact quotation did not guarantee discovery.</strong> Both complete B answers reported no matching original post. The experimenter independently verified that the public post exists and matches the quote; a no-result answer does not establish that it is absent or unindexed. The supplied 86-character excerpt is an exact continuous fragment from the latter part of a sentence, not a full sentence. A Unicode-level comparison found no transcription difference; Grok also tried shorter and punctuation-free variants. ChatGPT reports variants, but its actual B search queries were not independently captured.</li><li><strong>The answer dataset is complete, with one qualified manual replacement.</strong> Ten submissions cover six planned cells, now all with complete answer bodies. The user supplied C-R5; the complete native original corroborates it and supplies 11 URLs. Four earlier C technical/partial captures remain intact. Model/time are user-reported and session-isolation preflight was not independently recorded.</li><li><strong>A citation can accompany an explicit exclusion.</strong> ChatGPT C cites and mentions Artur Ferreira while placing him among sources to exclude; Grok C presents him as a research candidate to read. ChatGPT’s conclusion instead prioritizes Rank Prompt, mapou, Zeeshan Yaseen and Charles Cousyn. These are observed selection differences, not evidence of GEO causality.</li></ul><ul class="conclusions"><li><strong>Six planned cells, 10 actual submissions, 6 complete selected answers.</strong> Four earlier ChatGPT C submissions had technical or body-capture problems before the complete manual replacement was obtained. Selection completeness does not mean the collection had no failures. These are collection counts, not retrieval success rates.</li><li><strong>A · Direct URL access.</strong> ChatGPT Search: Not demonstrated; Grok: Demonstrated.</li><li><strong>B · Exact-excerpt discovery.</strong> ChatGPT Search: Not demonstrated; Grok: Not demonstrated.</li><li><strong>C · Natural discovery.</strong> ChatGPT Search: Not demonstrated; Grok: Not demonstrated.</li></ul><blockquote><p><strong>Scope:</strong> The comparison contains six planned cells. Actual submissions and supplemental attempts are tracked separately below; a recovered capture is not a new query. There is no generalizable success rate. A supplied URL, a repeated excerpt, or facts recovered from GitHub do not demonstrate access to the X post.</p><p>Results below display recorded reviewer judgments. The generator does not classify answers from keywords, links, or a model's claims of verification. Missing assessments remain explicit.</p></blockquote>
+<blockquote><p><strong>Redacted public edition:</strong> Questions, observed outcomes, returned source URLs, and failure history are preserved. Private conversation and share links, screenshots, account-interface material, local paths, and original diagnostic captures are excluded. Complete originals remain local. Captured non-English UI tokens are preserved as Unicode escape sequences.</p><p><a href="public-data.zip">Download Stage 2 public data</a> · <a href="data/publication-notes.json">Publication scope</a> · <a href="../02-post-discovery.md">Learning notes and data guide</a></p></blockquote>
+<blockquote><p><strong>Collection summary:</strong> 6 planned cells · 10 actual submissions · 6 complete selected answers. Four earlier ChatGPT C attempts retain technical/capture problems. Each cell has one selected answer; no stable success or failure rate is estimated.</p></blockquote></header>
+<section id="comparison"><h2>Six-cell comparison</h2><div class="definitions"><div class="definition"><strong>A · Direct URL</strong><p>The URL is supplied. The test concerns demonstrated access to the post's content.</p></div><div class="definition"><strong>B · Exact excerpt</strong><p>An exact continuous excerpt is supplied. Discovery requires the original post and matching retrieved content.</p></div><div class="definition"><strong>C · Natural query</strong><p>No target identity, URL, or excerpt is supplied. Other experiments and GitHub-only results are separate outcomes.</p></div></div>
+<div class="table-scroll" style="margin-top:18px"><table class="matrix"><thead><tr><th>Condition · platform</th><th>Collection status</th><th>X post content access</th><th>Exact discovery</th><th>Unprompted discovery</th><th>GitHub only</th><th>Actual search</th></tr></thead><tbody><tr><th><a href="#S2-CHATGPT-A">A · ChatGPT Search</a></th><td><span class="badge good">Recovered capture · complete</span></td><td><span class="badge neutral">Not demonstrated</span></td><td><span class="badge muted">N/A</span></td><td><span class="badge muted">N/A</span></td><td><span class="badge neutral">No</span></td><td>Observed</td></tr><tr><th><a href="#S2-GROK-A">A · Grok</a></th><td><span class="badge good">Completed</span></td><td><span class="badge good">Demonstrated</span></td><td><span class="badge muted">N/A</span></td><td><span class="badge muted">N/A</span></td><td><span class="badge neutral">No</span></td><td>Observed</td></tr><tr><th><a href="#S2-CHATGPT-B">B · ChatGPT Search</a></th><td><span class="badge good">Recovered capture · complete</span></td><td><span class="badge neutral">Not assessed</span></td><td><span class="badge neutral">Not demonstrated</span></td><td><span class="badge muted">N/A</span></td><td><span class="badge neutral">No</span></td><td>Not recorded</td></tr><tr><th><a href="#S2-GROK-B">B · Grok</a></th><td><span class="badge good">Completed</span></td><td><span class="badge neutral">Not assessed</span></td><td><span class="badge neutral">Not demonstrated</span></td><td><span class="badge muted">N/A</span></td><td><span class="badge neutral">No</span></td><td>Observed</td></tr><tr><th><a href="#S2-CHATGPT-C">C · ChatGPT Search</a><br><span class="muted">Selected: S2-CHATGPT-C-R5</span></th><td><span class="badge good">Completed</span></td><td><span class="badge neutral">Not assessed</span></td><td><span class="badge muted">N/A</span></td><td><span class="badge neutral">Not demonstrated</span></td><td><span class="badge neutral">No</span></td><td>Observed</td></tr><tr><th><a href="#S2-GROK-C">C · Grok</a></th><td><span class="badge good">Completed</span></td><td><span class="badge neutral">Not assessed</span></td><td><span class="badge muted">N/A</span></td><td><span class="badge neutral">Not demonstrated</span></td><td><span class="badge neutral">No</span></td><td>Observed</td></tr></tbody></table></div>
+<blockquote><p><strong>One selected answer per platform × condition.</strong> This is a six-cell observation table, not an estimate of stable success/failure rates. ChatGPT B search queries were not independently captured. ChatGPT C is the later user-operated C-R5 replacement; its exact question and actual search were corroborated, but generation model/effort and time are user-confirmed and pre-submit session isolation was not independently recorded.</p><p><strong>Reading the matrix:</strong> Demonstrated / Not demonstrated are explicit recorded judgments, not automatic scores. N/A marks a discovery task that the condition did not test. Unknown, Not assessed, and technical failure are not negative discovery evidence. “GitHub only” applies only when explicitly coded; it is never inferred from a GitHub URL.</p><p>Search enabled in the interface and search actually observed are different fields. External experiments described as “verified” inside an answer are still platform claims unless a separate assessment records verification.</p></blockquote></section>
+<section id="conditions"><h2>Test conditions and account controls</h2><p>Protocol registered: <span title="2026-10-31T03:35:43.619947+00:00">2026-10-31 11:35:43 Asia/Shanghai (UTC+08:00)</span>.</p><h3>chatgpt</h3><dl class="keytable"><dt>conversation</dt><dd>Temporary Chat</dd><dt>personalization</dt><dd>Not personalized; UI states no memory, plugins or custom instructions</dd><dt>model</dt><dd>GPT-5.6 Sol (UI selection; composer label 5.6 Medium)</dd><dt>reasoning effort</dt><dd>Medium</dd><dt>search</dt><dd>Web Search tool chip selected before submission</dd><dt>model choice</dt><dd>GPT-5.6 Sol / Medium was explicitly selected in the UI; backend routing was not independently verified.</dd></dl><h3>grok</h3><dl class="keytable"><dt>conversation</dt><dd>Private Chat</dd><dt>mode</dt><dd>Expert</dd><dt>backend model version</dt><dd>Not disclosed in visible selector</dd><dt>customization</dt><dd>Custom style and all listed styles unchecked</dd><dt>personalize using x test</dt><dd>No</dd><dt>personalize using history test</dt><dd>No</dd><dt>restoration</dt><dd>Original personalization settings restored after tests; original preference values omitted.</dd></dl><h3>manual chatgpt c replacement</h3><dl class="keytable"><dt>collector</dt><dd>User</dd><dt>exact prompt</dt><dd>Verified against original native user message after separating Search tool marker</dd><dt>search</dt><dd>Actual native activity: 29 websites searched</dd><dt>model and reasoning</dt><dd>GPT-5.6 Sol / Medium, user-confirmed; generation UI not independently captured</dd><dt>time</dt><dd>User says now (around16:49Asia/Shanghai); native source turn16:47:24–16:47:36 and UI thought36s retained separately</dd><dt>personalization isolation</dt><dd>Not independently recorded before submission</dd><dt>interpretation</dt><dd>Complete answer capture does not establish identical pre-submit control evidence.</dd></dl><h3>Recorded post-test restoration</h3><dl class="keytable"><dt>restored at</dt><dd>2026-10-31T03:50:56.650Z</dd><dt>completed</dt><dd>Yes</dd><dt>scope</dt><dd>Original Grok personalization settings restored. Original preferences and account UI are not published.</dd><dt>other settings changed</dt><dd>No</dd></dl><blockquote><p>Temporary/private conversations and visible personalization controls reduce known account-context paths. They do not establish audited backend isolation or complete independence. See each run for its actual model, mode, search evidence, and any contamination evidence.</p></blockquote></section>
+<section id="method"><h2>Method and interpretation limits</h2><h3>Design and execution order</h3><dl class="keytable"><dt>planned submissions</dt><dd>6</dd><dt>platforms</dt><dd><pre>[
+  &quot;ChatGPT Search&quot;,
+  &quot;Grok&quot;
+]</pre></dd><dt>conditions</dt><dd><pre>[
+  &quot;A&quot;,
+  &quot;B&quot;,
+  &quot;C&quot;
+]</pre></dd><dt>repetitions per cell</dt><dd>1</dd><dt>execution order</dt><dd><pre>[
+  &quot;S2-CHATGPT-C&quot;,
+  &quot;S2-GROK-C&quot;,
+  &quot;S2-CHATGPT-B&quot;,
+  &quot;S2-GROK-B&quot;,
+  &quot;S2-CHATGPT-A&quot;,
+  &quot;S2-GROK-A&quot;
+]</pre></dd><dt>order rationale</dt><dd>Natural discovery before exact excerpt before direct URL, limiting identity leakage within this batch. Each uses a fresh temporary/private conversation; only one user prompt, no steering follow-up.</dd><dt>publication</dt><dd>Redacted public edition authorized on 2026-11-01; private originals remain local.</dd><dt>actual execution order</dt><dd><pre>[
+  &quot;S2-CHATGPT-C&quot;,
+  &quot;S2-GROK-C&quot;,
+  &quot;S2-GROK-B&quot;,
+  &quot;S2-CHATGPT-B&quot;,
+  &quot;S2-GROK-A&quot;,
+  &quot;S2-CHATGPT-A&quot;,
+  &quot;S2-CHATGPT-C-R2&quot;,
+  &quot;S2-CHATGPT-C-R3&quot;,
+  &quot;S2-CHATGPT-C-R4&quot;,
+  &quot;S2-CHATGPT-C-R5&quot;
+]</pre></dd><dt>actual submission attempts</dt><dd>10</dd><dt>deviations</dt><dd><pre>[
+  &quot;Grok B and A were submitted before ChatGPT B and A because of ChatGPT access interruption. Within each original platform sequence the order remained C→B→A.&quot;,
+  &quot;ChatGPT C was supplemented twice after the six planned attempts with explicit user authorization, retaining the initial Cloudflare failure.&quot;,
+  &quot;The C supplement was submitted in fresh non-personalized temporary mode before A/B were saved to ordinary history. No follow-up or seeded prompt was added.&quot;,
+  &quot;Existing A/B chats were saved after generation under explicit user authorization to recover full body text; these are capture recovery actions, not additional submissions.&quot;,
+  &quot;After C-R2 recovery exposed only a truncated prefix, C-R3 repeated the unchanged prompt/settings in a new non-personalized temporary chat. A/B/C-R2 were then already saved in account history; visible memory/plugins/custom-instruction access remained disabled for C-R3. Backend isolation is not audited.&quot;,
+  &quot;A single delayed C-R4 retry ran at the user-requested later time on 2026-10-31, using the same visible Sol Medium model and native Web Search in a fresh non-personalized temporary chat. Forty-five searched websites were observed. No complete answer body was recovered.&quot;,
+  &quot;C-R5 was user-operated. The source contains the exact C question plus the native Search marker and no steering; original activity verifies 29 searched websites. User confirms GPT-5.6 Sol / Medium and approximate time. No pre-submit temporary/personalization screenshot exists; the manual control evidence is qualified.&quot;
+]</pre></dd><dt>selected attempt policy</dt><dd>Six planned cells now have complete answer captures. ChatGPT C selects the first complete manual replacement (C-R5), with its collection provenance qualified. No outcome-based cherry-picking: all four earlier C failures/partial captures and all ten submissions remain in attempts.json.</dd><dt>publication at collection</dt><dd>Local collection only; no X post, public share, repository push or website update is authorized for this stage.</dd></dl><blockquote><p><strong>Exact-excerpt verification:</strong> The B prompt calls the quotation a sentence. It is an 86-character continuous passage from the latter part of a longer sentence, verified character for character against the captured public post, including case, spaces, numbers, and punctuation. The question is preserved unchanged. No transcription mismatch was observed.</p></blockquote><h3>A · Direct URL access</h3><blockquote><p class="preserve">Pass requires two distinct specific findings supported by the actual post, the original URL as source, and visible evidence of post-content retrieval. Repeating the supplied URL or claiming to have read it is insufficient. Correct facts obtained only from the linked report are tracked separately, not as demonstrated access to the X post.</p></blockquote><h3>B · Exact-excerpt discovery</h3><blockquote><p class="preserve">Pass requires the real target X status URL and correct author, plus evidence that retrieved page content matches the excerpt. Repeating the supplied excerpt or guessing a plausible URL is insufficient.</p></blockquote><h3>C · Natural discovery</h3><blockquote><p class="preserve">Target-discovery pass requires proactively finding and citing the target X status without supplied identity, URL or excerpt. Finding the GitHub report, author, or another genuine experiment is tracked separately; it does not establish discovery of this X post.</p></blockquote>
+<blockquote><p class="preserve">Missing or incomplete capture is not coded as no discovery. Reading a preview or source panel does not prove full stored content.</p></blockquote><h3>Target and reference facts</h3><p><a href="https://x.com/bird_helen67403/status/2116080254523445676" target="_blank" rel="noopener noreferrer">https://x.com/bird_helen67403/status/2116080254523445676</a></p><dl class="keytable"><dt>status id</dt><dd>2116080254523445676</dd><dt>author display</dt><dd>HelenBird</dd><dt>author handle</dt><dd>bird_helen67403</dd><dt>published ui</dt><dd>4:10 PM · Oct 30, 2026</dd><dt>ground truth</dt><dd>User supplied full post; verified against the rendered X page before tests.</dd></dl>
+<p>Ground-truth evidence: <a href="data/target-post.json">target-post.json</a></p><ul><li><strong>design:</strong> 3 GEO questions × 2 platforms × 2 runs = 12 answers.</li><li><strong>creator_overlap:</strong> For practical data-backed tutorials for indie builders, 2 of 20 unique recommended entities were shared: about 10% cross-platform overlap.</li><li><strong>cmr_distinction:</strong> Citation, mention and recommendation can occur separately; citation does not necessarily mean brand recommendation.</li><li><strong>source_variation:</strong> The same query can return different retrieval results/source picks across platforms.</li><li><strong>answer_variation:</strong> Recommendations vary; one answer is insufficient to measure GEO.</li></ul><h3>Boundaries</h3><blockquote><ul><li>Only one run per platform and condition; no estimate of stable retrieval rates or GEO causal effectiveness.</li><li>Temporary/private UI settings reduce visible personalization; backend isolation is not independently audited.</li><li>The post was published the previous day; indexing delay may affect results.</li><li>X-content access, exact matching, natural discovery, and GitHub-report retrieval are separate outcomes.</li><li>Grok source-panel page-anchor inventories include query/answer/activity links and are not fully scoped retrieval-result sets. Consent UI links are excluded from derived analysis while original captures remain unchanged. UI query labels can concatenate result counts; source badge counts are not distinct citations.</li><li>Selected ChatGPT C is a user-operated replacement. Its full answer, exact question and actual search were corroborated, but the generation model is user-confirmed, time is approximate and pre-submit memory/temporary controls were not captured. Comparisons must retain this collection difference.</li></ul><p>These tests cannot establish causal GEO effectiveness, stable indexing or retrieval rates, a platform's inherent superiority, or that an undiscovered post does not exist. The conditions provide different amounts of identifying information and should not be treated as equivalent tasks.</p></blockquote></section>
+<section id="records"><h2>Full prompts, answers, and evidence</h2><blockquote><p>All sections are expanded initially. Public prompt and answer copies are escaped and preserve their wording apart from marked privacy edits. Original private capture files are excluded. A planned protocol prompt is identified when no submitted prompt was recorded.</p></blockquote><details class="run" id="S2-CHATGPT-A" open>
+<summary><span>S2-CHATGPT-A · ChatGPT Search · Direct URL access</span><span class="badge good">Recovered capture · complete</span></summary>
+<div class="detail-body"><p class="muted">Input: runs.json + selected public record. Submitted: <span title="2026-10-31T03:48:50.116Z">2026-10-31 11:48:50 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T04:04:40.909814+00:00">2026-10-31 12:04:40 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p class="preserve">Full answer recovered without resubmission. Main UI rendering failure and failed Copy remain in capture history; the response itself reports no successful access/discovery. Saved after generation under explicit user authorization.</p></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not demonstrated</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>GitHub only</th><td><span class="badge neutral">No</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>fail</dd><dt>rationale</dt><dd>The complete recovered answer explicitly says it cannot access the X post and supplies no experimental findings. The original URL was already supplied in the prompt, so repeating it does not establish retrieval.</dd><dt>access error claim</dt><dd>The answer reports HTTP 403 from X; this is a platform-reported cause, not an independently captured HTTP response.</dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676
+
+Summarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.</pre>
+<h4>Observed composer text</h4><pre>\u7f51\u9875\u641c\u7d22 Read this public X post:&#32;
+https://x.com/bird_helen67403/status/2116080254523445676
+
+Summarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.</pre></div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>I’m unable to access the actual content of the X post.
+
+I attempted to retrieve the original post, but X returned **403 Forbidden**\. Searches for the post ID and account did not reveal an indexed copy of its contents.
+
+**Original source\:**
+urlhttps\://x.com/bird\_helen67403/status/2116080254523445676https://x.com/bird_helen67403/status/2116080254523445676
+
+**Experimental findings\:**
+
+1. **First finding\:** Cannot verify because the post content is inaccessible.
+2. **Second finding\:** Cannot verify because the post content is inaccessible.
+
+I won&#x27;t invent or infer experimental results without seeing the original evidence.
+
+**If you paste the post text or upload a screenshot,** I can identify and summarize exactly two specific experimental findings, preserving the reported results and quantitative details.</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Observed</p><dl class="keytable"><dt>model label</dt><dd>GPT-5.6 Sol</dd><dt>reasoning effort</dt><dd>Medium</dd><dt>search enabled ui</dt><dd>Yes</dd><dt>temporary</dt><dd>Yes</dd><dt>personalization</dt><dd>No</dd><dt>body complete</dt><dd>Yes</dd><dt>main page error</dt><dd>Unable to load this response</dd><dt>copy result</dt><dd>\u65e0\u6cd5\u52a0\u8f7d\u6b64\u56de\u590d</dd><dt>tool activity</dt><dd><pre>[
+  &quot;Visible Python analysis decodes the X status ID into a timestamp; this is not evidence of reading the post body.&quot;
+]</pre></dd><dt>selected attempt id</dt><dd>S2-CHATGPT-A</dd><dt>attempt number</dt><dd>1</dd><dt>capture method</dt><dd>Saved existing generated temporary conversation, then read its full agentMessage through native read_thread; page.hasMore=false, no truncation marker. No prompt resubmission.</dd><dt>capture provenance</dt><dd>Original generation used fresh non-personalized temporary mode. Saving after generation created an ordinary-history copy with a new conversation ID. Original UI/copy failures are retained. Returned native agentMessage text is preserved verbatim, including escaped Markdown/citation serialization; it is not a retrieval summary.</dd></dl><dl class="keytable"><dt>search evidence</dt><dd>Expanded native activity shows search query and “searched 12 websites”; separate code analysis decodes status timestamp only.</dd><dt>search queries</dt><dd><pre>[
+  &quot;\&quot;https://x.com/bird_helen67403/status/2116080254523445676\&quot; OR \&quot;2116080254523445676\&quot; 2026&quot;
+]</pre></dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T03:48:50.116Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T04:04:40.909814+00:00&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-CHATGPT-A.json">records/S2-CHATGPT-A.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T03:54:37.850Z">2026-10-31 11:54:37 Asia/Shanghai (UTC+08:00)</span></td><td>Original temporary UI and Copy</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Unable to load response; Copy exposed only error text.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T04:03:18.268Z">2026-10-31 12:03:18 Asia/Shanghai (UTC+08:00)</span></td><td>User-approved save existing chat</td><td>saved_copy_created</td><td>Not recorded</td><td><pre>{
+  &quot;notes&quot;: &quot;Ordinary-history copy; no new question or generation.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T04:04:40.909814+00:00">2026-10-31 12:04:40 Asia/Shanghai (UTC+08:00)</span></td><td>Native full turn message read of saved copy</td><td>recovered</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: true,
+  &quot;notes&quot;: &quot;Native full agentMessage, not preview alone; original generated_at unknown.&quot;,
+  &quot;recorded_at&quot;: &quot;2026-10-31T04:04:40.909814+00:00&quot;
+}</pre></td></tr></tbody></table></div></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><div class="table-scroll"><table><thead><tr><th>Label / evidence</th><th>URL</th><th>Domain</th><th>Recorded role</th></tr></thead><tbody><tr><td>Untitled source</td><td><a href="https://x.com/bird_helen67403/status/2116080254523445676" target="_blank" rel="noopener noreferrer">https://x.com/bird_helen67403/status/2116080254523445676</a></td><td>x.com</td><td>Prompt-supplied original URL repeated in answer; not proof of post access</td></tr></tbody></table></div><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p></div></details>
+</div></details><details class="run" id="S2-GROK-A" open>
+<summary><span>S2-GROK-A · Grok · Direct URL access</span><span class="badge good">Completed</span></summary>
+<div class="detail-body"><p class="muted">Input: runs.json + selected public record. Submitted: <span title="2026-10-31T03:46:31.827Z">2026-10-31 11:46:31 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T03:49:00.560Z">2026-10-31 11:49:00 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p class="muted">No notes recorded.</p></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge good">Demonstrated</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>GitHub only</th><td><span class="badge neutral">No</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>pass</dd><dt>rationale</dt><dd>Direct content access demonstrated: native post-reading activity, correct author/title, and accurate body-specific observations (2/20≈10% entity overlap; citation, mention and recommendation can occur separately). The 12-answer design is corroborating context. A supplied URL does not establish discovery. The added “on the same platforms” qualifier remains unsupported by the supplied text.</dd><dt>faithfulness</dt><dd><pre>{
+  &quot;verdict&quot;: &quot;partly_supported&quot;,
+  &quot;caveat&quot;: &quot;The answer adds “on the same platforms” to the variability finding. That qualifier is not explicit in the target post; this excerpt alone does not establish within-platform repeat variability.&quot;
+}</pre></dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676
+
+Summarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.</pre>
+<h4>Observed composer text</h4><pre>Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676
+
+Summarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.</pre></div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>Post content successfully retrieved via X tools (no access issues).
+
+Source: https://x.com/bird_helen67403/status/2116080254523445676
+
+Author: HelenBird (@bird_helen67403)
+
+Posted: Fri, 30 Oct 2026 08:10:22 GMT
+
+Title/theme: GEO Lab #01: Why do AI search engines recommend different sources?
+
+Two specific experimental findings stated in the post
+Low entity overlap between platforms. In an experiment comparing ChatGPT Search vs. Grok (3 GEO questions × 2 platforms × 2 runs = 12 answers), when the query asked for practical, data-backed GEO tutorials for indie builders, the two platforms shared only 2 of 20 unique recommended entities — roughly 10% overlap.
+High run-to-run variability. Even near-simultaneous searches on the same platforms produced totally different recommendation lists.
+
+The post frames these as exploratory observations (not causal claims) from a small first run and notes related takeaways such as “citation ≠ mention ≠ recommendation” and that a single answer is insufficient for measuring GEO. It points to a full write-up and repo for more detail but does not expand the experimental numbers further in the post itself.</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Observed</p><dl class="keytable"><dt>model label</dt><dd>Exact backend version not disclosed</dd><dt>mode label</dt><dd>Expert</dd><dt>search mode</dt><dd>Expert native web/X retrieval; direct public URL provided</dd><dt>private</dt><dd>Yes</dd><dt>personalize using x</dt><dd>No</dd><dt>personalize using history</dt><dd>No</dd><dt>body complete</dt><dd>Yes</dd><dt>selected attempt id</dt><dd>S2-GROK-A</dd><dt>attempt number</dt><dd>1</dd></dl><dl class="keytable"><dt>search evidence</dt><dd>Native web/X retrieval observed. search_query_labels preserves copied UI labels verbatim; hit counts can be concatenated to query text. These labels are not parsed search-query strings. Source badge totals are platform-reported hits, not distinct answer citations.</dd><dt>search query labels</dt><dd><pre>[
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edcsite:x.com bird_helen67403 21160802545234456765&quot;
+]</pre></dd><dt>source panel declared hits</dt><dd>5</dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T03:46:31.827Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T03:49:00.560Z&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-GROK-A.json">records/S2-GROK-A.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><p class="muted">No capture or recovery events recorded in this field.</p></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><div class="table-scroll"><table><thead><tr><th>Label / evidence</th><th>URL</th><th>Domain</th><th>Recorded role</th></tr></thead><tbody><tr><td>https://x.com/bird_helen67403/status/2116080254523445676</td><td><a href="https://x.com/bird_helen67403/status/2116080254523445676" target="_blank" rel="noopener noreferrer">https://x.com/bird_helen67403/status/2116080254523445676</a></td><td>x.com</td><td>link in answer</td></tr></tbody></table></div><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Source-inventory scope</h4><blockquote><p class="preserve">Whole-page anchor inventory is not included in the public edition. It was captured while source panels were expanded and includes query, answer and activity links; it is not a scoped retrieval-result set or a list of answer citations. Original captures remain local. Source badge totals are reported hits, not distinct cited URLs. The answer links and search-activity labels are retained below.</p></blockquote></div></details>
+</div></details><details class="run" id="S2-CHATGPT-B" open>
+<summary><span>S2-CHATGPT-B · ChatGPT Search · Exact-excerpt discovery</span><span class="badge good">Recovered capture · complete</span></summary>
+<div class="detail-body"><p class="muted">Input: runs.json + selected public record. Submitted: <span title="2026-10-31T03:46:11.104Z">2026-10-31 11:46:11 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T04:04:40.944638+00:00">2026-10-31 12:04:40 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p class="preserve">Full answer recovered without resubmission. Main UI rendering failure and failed Copy remain in capture history; the response itself reports no successful access/discovery. Saved after generation under explicit user authorization.</p></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge neutral">Not demonstrated</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>GitHub only</th><td><span class="badge neutral">No</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>fail</dd><dt>rationale</dt><dd>The complete recovered answer explicitly says the original X post URL was not found, the author was not verified, and quote-to-link verification was impossible. No target URL returned.</dd><dt>access error claim</dt><dd>The answer reports HTTP 403 from X; this is a platform-reported cause, not an independently captured HTTP response.</dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Search the web and X for the original public post containing this exact sentence:
+
+&quot;the two platforms shared only 2 of 20 unique recommended entities — about 10% overlap.&quot;
+
+Return the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.</pre>
+<h4>Observed composer text</h4><pre>\u7f51\u9875\u641c\u7d22 Search the web and X for the original public post containing this exact sentence:
+
+&quot;the two platforms shared only 2 of 20 unique recommended entities — about 10% overlap.&quot;
+
+Return the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.</pre></div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>**I could not find or verify the original X post containing that exact sentence.**
+
+I searched for\:
+
+- The complete sentence in quotation marks.
+- The distinctive phrase `&quot;2 of 20 unique recommended entities&quot;`\.
+- Variations of `&quot;about 10% overlap&quot;` and `&quot;shared only 2 of 20&quot;`\.
+- Indexed X/Twitter posts using both `x.com` and `twitter.com` domain searches.
+
+**Verification result**
+
+| Requested information | Result |
+|--------|--------|
+| Exact sentence found | No |
+| Original X post URL | Not found |
+| Author | Not verified |
+| Link-to-quote verification | Not possible |
+
+I also attempted to access X&#x27;s search page directly, but the request returned HTTP 403 (access denied).
+
+**Conclusion\:** I cannot reliably identify the original post or its author. I won&#x27;t invent an X URL or attribute the quotation to someone without evidence.
+
+The original public post remains unverified.</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Not recorded</p><dl class="keytable"><dt>model label</dt><dd>GPT-5.6 Sol</dd><dt>reasoning effort</dt><dd>Medium</dd><dt>search enabled ui</dt><dd>Yes</dd><dt>temporary</dt><dd>Yes</dd><dt>personalization</dt><dd>No</dd><dt>body complete</dt><dd>Yes</dd><dt>main page error</dt><dd>Unable to load this response</dd><dt>copy result</dt><dd>\u65e0\u6cd5\u52a0\u8f7d\u6b64\u56de\u590d</dd><dt>selected attempt id</dt><dd>S2-CHATGPT-B</dd><dt>attempt number</dt><dd>1</dd><dt>capture method</dt><dd>Saved existing generated temporary conversation, then read its full agentMessage through native read_thread; page.hasMore=false, no truncation marker. No prompt resubmission.</dd><dt>capture provenance</dt><dd>Original generation used fresh non-personalized temporary mode. Saving after generation created an ordinary-history copy with a new conversation ID. Original UI/copy failures are retained. Returned native agentMessage text is preserved verbatim, including escaped Markdown/citation serialization; it is not a retrieval summary.</dd></dl><dl class="keytable"><dt>search evidence</dt><dd>Native Web Search chip selected; final answer reports phrase/domain searches. No independent native search activity panel was captured for B.</dd><dt>search queries</dt><dd><pre>[]</pre></dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T03:46:11.104Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T04:04:40.944638+00:00&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-CHATGPT-B.json">records/S2-CHATGPT-B.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T03:50:25.114Z">2026-10-31 11:50:25 Asia/Shanghai (UTC+08:00)</span></td><td>Original temporary UI and Copy</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Unable to load response; Copy exposed only error text.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T04:01:18.911Z">2026-10-31 12:01:18 Asia/Shanghai (UTC+08:00)</span></td><td>User-approved save existing chat</td><td>saved_copy_created</td><td>Not recorded</td><td><pre>{
+  &quot;notes&quot;: &quot;Ordinary-history copy; no new question or generation.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T04:04:40.944638+00:00">2026-10-31 12:04:40 Asia/Shanghai (UTC+08:00)</span></td><td>Native full turn message read of saved copy</td><td>recovered</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: true,
+  &quot;notes&quot;: &quot;Native full agentMessage, not preview alone; original generated_at unknown.&quot;,
+  &quot;recorded_at&quot;: &quot;2026-10-31T04:04:40.944638+00:00&quot;
+}</pre></td></tr></tbody></table></div></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><p class="muted">No links recorded in this field.</p><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p></div></details>
+</div></details><details class="run" id="S2-GROK-B" open>
+<summary><span>S2-GROK-B · Grok · Exact-excerpt discovery</span><span class="badge good">Completed</span></summary>
+<div class="detail-body"><p class="muted">Input: runs.json + selected public record. Submitted: <span title="2026-10-31T03:42:12.672Z">2026-10-31 11:42:12 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T03:45:51.332Z">2026-10-31 11:45:51 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p class="muted">No notes recorded.</p></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge neutral">Not demonstrated</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>GitHub only</th><td><span class="badge neutral">No</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>fail</dd><dt>rationale</dt><dd>The complete captured answer did not return the target original X URL or author. The captured page-anchor inventory likewise contains no target X URL or own GitHub/Pages URL, but is not claimed to be the full underlying retrieval set. This is one observed failure to discover, not evidence the post is absent or unindexed.</dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Search the web and X for the original public post containing this exact sentence:
+
+&quot;the two platforms shared only 2 of 20 unique recommended entities — about 10% overlap.&quot;
+
+Return the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.</pre>
+<h4>Observed composer text</h4><pre>Search the web and X for the original public post containing this exact sentence:
+
+&quot;the two platforms shared only 2 of 20 unique recommended entities — about 10% overlap.&quot;
+
+Return the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.</pre></div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>I could not find any public post (on X or the web) containing that exact sentence.
+
+I searched:
+
+Exact phrase matches for “the two platforms shared only 2 of 20 unique recommended entities — about 10% overlap.”
+Close variants (“2 of 20 unique recommended entities,” “unique recommended entities” + overlap, “platforms shared only 2 of 20,” “10% overlap” with recommended/entities, etc.).
+Keyword and semantic searches on X.
+Broader web searches for related concepts (platform overlap of recommended entities/items).
+
+None returned a matching post, article, or source. No X post with that wording (or a near-identical version) appeared in results.
+
+Possible reasons it is not surfacing:
+
+The post is very recent and not yet indexed.
+It was deleted, set to private, or from a protected account.
+Minor wording/punctuation differences (e.g., hyphen vs. em dash, “approx.” instead of “about,” slight rephrasing).
+It originated elsewhere (newsletter, private chat, non-public document) and was only partially quoted.
+
+If you have additional context (author name, approximate date, platform names involved, surrounding text, or a screenshot/link fragment), I can search more specifically.</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Observed</p><dl class="keytable"><dt>model label</dt><dd>Exact backend version not disclosed</dd><dt>mode label</dt><dd>Expert</dd><dt>search mode</dt><dd>Expert native web/X retrieval; prompt explicitly requests web and X search</dd><dt>private</dt><dd>Yes</dd><dt>personalize using x</dt><dd>No</dd><dt>personalize using history</dt><dd>No</dd><dt>body complete</dt><dd>Yes</dd><dt>selected attempt id</dt><dd>S2-GROK-B</dd><dt>attempt number</dt><dd>1</dd></dl><dl class="keytable"><dt>search evidence</dt><dd>Native web/X retrieval observed. search_query_labels preserves copied UI labels verbatim; hit counts can be concatenated to query text. These labels are not parsed search-query strings. Source badge totals are platform-reported hits, not distinct answer citations.</dd><dt>search query labels</dt><dd><pre>[
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;the two platforms shared only 2 of 20 unique recommended entities — about 10% overlap.\&quot;15&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;two platforms shared only 2 of 20 unique recommended entities\&quot;10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;the two platforms shared only 2 of 20 unique recommended entities\&quot;&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;2 of 20 unique recommended entities\&quot;&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;2 of 20 unique recommended entities\&quot;10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;unique recommended entities\&quot; overlap platforms10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;about 10% overlap\&quot; recommended entities OR recommendations platforms10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;recommended entities\&quot; overlap&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏the two platforms shared only 2 of 20 unique recommended entities about 10% overlap9&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;2 of 20\&quot; overlap recommended OR recommendations platforms OR systems10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;10% overlap\&quot; \&quot;recommended\&quot; entities OR items platforms10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;2 of 20\&quot; (overlap OR recommended OR recommendations)5&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;unique recommended\&quot;5&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;platforms shared only 2 of 20\&quot;10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;2 of 20 unique\&quot; recommended10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;shared only 2 of 20\&quot;&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;10% overlap\&quot; (recommended OR recommendations OR entities)&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏two platforms shared only 2 of 20 unique recommended entities about 10% overlap4&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;recommended entities\&quot;4&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;unique recommended entities\&quot;&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;recommended entities\&quot; \&quot;10%\&quot; OR \&quot;2 of 20\&quot; OR \&quot;overlap\&quot;10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;two platforms\&quot; \&quot;recommended\&quot; overlap OR \&quot;10%\&quot; entities OR items OR accounts10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;the two platforms shared only\&quot;10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏\&quot;platforms shared only\&quot;&quot;
+]</pre></dd><dt>source panel declared hits</dt><dd>152</dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T03:42:12.672Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T03:45:51.332Z&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-GROK-B.json">records/S2-GROK-B.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><p class="muted">No capture or recovery events recorded in this field.</p></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><p class="muted">No links recorded in this field.</p><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Source-inventory scope</h4><blockquote><p class="preserve">Whole-page anchor inventory is not included in the public edition. It was captured while source panels were expanded and includes query, answer and activity links; it is not a scoped retrieval-result set or a list of answer citations. Original captures remain local. Source badge totals are reported hits, not distinct cited URLs. The answer links and search-activity labels are retained below.</p></blockquote></div></details>
+</div></details><details class="run" id="S2-CHATGPT-C" open>
+<summary><span>S2-CHATGPT-C · ChatGPT Search · Natural discovery</span><span class="badge good">Completed</span></summary>
+<div class="detail-body"><p class="muted">Input: runs.json + selected public record. Submitted: <span title="Around 2026-10-31 16:49 Asia/Shanghai (user said “now”; approximate, not a measured submission time)">Around 2026-10-31 16:49 Asia/Shanghai (user said “now”; approximate, not a measured submission time)</span>. Captured: <span title="2026-10-31T08:59:29.987331+00:00">2026-10-31 16:59:29 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><ul><li>This manual submission fills the missing answer body and returned-URL inventory; all four earlier C attempts remain retained.</li><li>Model/reasoning and approximate question time are user-confirmed. Native turn timestamps and UI thought duration are recorded separately and must not be treated as interchangeable timing measurements.</li><li>Eleven cited/linked sources comprise eight included studies and three exclusions. Artur Ferreira is cited and mentioned but explicitly excluded, so Recommendation=false.</li><li>This is a qualified manual replacement, not proof that all pre-submit controls matched the earlier automated collection.</li></ul></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge neutral">Not demonstrated</span></td><td><pre>{
+  &quot;evidence&quot;: &quot;The complete supplied/native answer and its 11 explicit URLs contain no target X post, status ID or author. Other experiments are returned; the target-specific criterion was not met in this selected answer.&quot;
+}</pre></td></tr><tr><th>GitHub only</th><td><span class="badge neutral">No</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>fail</dd><dt>rationale</dt><dd>Complete manual C answer collected and original links recovered. It identifies other GEO research but does not proactively discover the target X post. Citation-source inclusion and exclusion are coded separately; cited excluded candidates are not recommendations.</dd><dt>candidate verification</dt><dd>The answer’s study statistics and “verified” labels are platform claims, not independent verification by this experiment.</dd><dt>protocol qualification</dt><dd>Manual supplement: exact prompt and live-search activity verified; generation model is user-confirmed and pre-submit personalization isolation was not recorded.</dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre>
+</div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>Independent GEO experiments: ChatGPT Search vs Grok
+
+Research cutoff: October 31, 2026
+
+I found several published first-party studies that measure AI brand visibility across ChatGPT and Grok, including experiments by smaller GEO research teams and independent operators.
+
+The key distinction is between recommendation experiments (which brands an AI suggests), citation experiments (which websites an AI references), and GEO intervention experiments (whether changing content causes AI visibility to improve).
+
+These test different hypotheses. In particular, a study comparing ChatGPT and Grok does not automatically establish that it tested the actual consumer-facing ChatGPT Search interface.
+
+1. Strongest published cross-platform experiments
+
+1. mapou — State of AI Search 2026⁠￼
+
+Original observational benchmark · May 2026
+
+Compares which brands ChatGPT, Grok and three other engines recommend or cite across buyer-intent prompts.
+
+Sample: 500 brands, 25 competitive segments, 5 engines, 20 canonical prompts per segment and 12 buyer personas. The authors report approximately 30,000 baseline brand-level verdicts per monthly run.
+
+Method: Fixed prompts spanning discovery, filtered discovery, comparison and evaluation. Measures brand visibility, engine agreement and the effects of buyer personas, with Wilson 95% confidence intervals.
+
+Finding: Mean cross-engine brand-ranking agreement was reported at 52%. AI visibility changes materially by engine and buyer persona.
+
+Evidence status: Published comparative measurement with a methodology. ChatGPT Search interface equivalence is not established by the headline report. mapou
+
+2. AI Visibility Report Group — Six AI Platforms, Same Eight Questions⁠￼
+
+Original repeated citation test · August 29, 2026
+
+Direct comparison of ChatGPT, Grok, Gemini, Claude, Perplexity and Meta AI.
+
+Sample: Eight unbranded buying questions, six platforms, two rounds. Of 96 planned responses, 87 were successful (39 in round one, 48 in round two).
+
+Method: Ask identical buyer questions separately, extract citation URLs, normalize sources to domains and compare overlap.
+
+Finding: In the complete second round, 468 of 551 cited domains (85%) appeared on just one platform. Grok cited 256 domains and ChatGPT 50.
+
+Evidence status: Verified published experiment on citation-source diversity. Small sample, restricted to Dutch-market AI visibility questions. The figures do not measure the number of brands recommended. research
+
+3. GOSH AI — The Search vs Learned Divergence⁠￼
+
+Original multi-model observational study · March–May 2026
+
+Tests whether brands surfaced through live retrieval differ from brands generated using learned model knowledge.
+
+Sample: Six AI-model families, including ChatGPT and Grok; more than 23,800 model executions, 80,300 citations and 8,600 brands identified across the reported baseline.
+
+Method: Apply equivalent prompts with retrieval enabled and disabled, then classify observed brand-category pairs by presence in each path.
+
+Finding: Only 8.28% of observed brand-category pairs appeared in both the live-search and learned-knowledge paths.
+
+Evidence status: Published original research with substantial reported sample size. The headline result is aggregated across models, and the comparable dual-path category analysis is narrower. It should not be presented as a ChatGPT-vs-Grok-specific effect. GOSH AI
+
+2. Individual builders running original tests
+
+These are particularly relevant if your goal is to identify people publishing their own experiments rather than relying on generic GEO advice.
+
+4. Zeeshan Yaseen — Two GEO experiments challenging conventional AI visibility advice
+
+First-person field experiments · Published September 14, 2026
+
+Read the original experiment write-up⁠￼
+
+Method and sample: Two sequential tests, each using 15 commercial-intent keywords. The first compared four engines and the second added Grok and Google AI Mode, for six engines total. The second was a 30-day cold-start campaign for a SaaS link-building agency, with manual checks and tracked content placements.
+
+Result: In the second experiment, the tracked brand appeared 32 times on ChatGPT versus 4 times on Grok, out of 298 appearances across all six platforms. Both experiments together logged 775 citation events.
+
+Assessment: A genuine first-person GEO intervention study involving both engines. It has commercial interventions and before/after measurements, but no randomized control or established ChatGPT Search interface matching. Search Engine Land
+
+5. Charles Cousyn / Weftd — ChatGPT, Instinct, Grok Bot: Our Test
+
+Independent real-world recommendation test · September 23, 2026
+
+Read the restaurant recommendation experiment⁠￼
+
+Method and sample: The builder gave the same practical mission to ChatGPT, Grok Bot and Instinct: identify three restaurants near Lyon Part-Dieu station for a business lunch with a specified reservation requirement. Five agent configurations were tested on September 22–23.
+
+Result: The configurations suggested 12 different restaurants, with only one appearing in more than two configurations. The one reservation verified in depth exposed contradictory availability information.
+
+Assessment: A first-person, real-world comparison of AI recommendations, especially useful for local GEO. The sample is just five configurations for one mission. The research tests agent behavior, not a broad SEO optimization intervention. Weftd
+
+6. Queraid — AI Visibility Study 2026
+
+Original brand recommendation benchmark · May 25, 2026
+
+Read the 70+ brand experiment⁠￼
+
+Method and sample: Over 70 brands across more than 50 industries, evaluated using six prompts per brand on each of five engines, including ChatGPT and Grok. The authors report more than 2,000 responses.
+
+The prompts cover brand identity, recommendations, comparisons, reputation, use cases and best-in-class selections. Scores combine mention rate (40%), sentiment (30%), competitor parity (20%) and cross-model consistency (10%).
+
+Assessment: Published first-party quantitative benchmarking. The composite score is proprietary to the researchers, and the reported headline rankings do not separately isolate ChatGPT Search versus Grok. The authors say the underlying dataset is available through their API. Queraid
+
+3. Evidence ranking
+
+Study	Original observations?	ChatGPT + Grok?	Direct user-facing Search comparison established?
+mapou	Yes	Yes	Unclear
+AI Visibility Report Group	Yes	Yes	Unclear
+GOSH AI	Yes	Yes	No, tests retrieval modes
+Zeeshan Yaseen	Yes, plus interventions	Yes, second study	Unclear
+Charles Cousyn / Weftd	Yes	Yes	Agent comparison; not isolated
+Queraid	Yes	Yes	Unclear
+
+“Verified” here means a first-party experiment write-up with identifiable testing procedures and reported observations. It does not mean the findings have been independently audited or replicated. The studies above are also self-published by people or businesses active in the AI visibility market, so their commercial interests should be considered.
+
+4. Two additional studies worth including
+
+7. Nazareno Castro Bay / Rank Prompt — Same brand, different AI surfaces
+
+Original test and methodology⁠￼
+
+This is one of the closest matches to your request because the authors explicitly separate ChatGPT Search, ChatGPT without search, and Grok.
+
+On July 30, 2026, they tested one B2B brand using 70 prompts across seven engine surfaces, producing 490 prompt-by-engine observations. They held the country, language, date and brand constant.
+
+They reported:
+
+* 5.71% brand presence on Grok versus 0% on ChatGPT overall.
+* 25.5 citations per answer on Grok versus 4.2 on ChatGPT Search.
+* 87.45% of cited URLs appeared on exactly one engine for the same question.
+
+Evidence status: Original, documented experiment with explicit search-mode separation. However, the test concerns one brand and one market category, and the published collection uses the company’s API rather than a verified consumer-interface session. Rank Prompt
+
+8. Columbia University Tow Center — ChatGPT Search vs Grok source accuracy
+
+Read the Tow Center’s original study⁠￼
+
+This is an independent academic-journalism benchmark, published March 6, 2025.
+
+Sample: 20 news publishers × 10 articles × 8 AI search tools = 1,600 queries, with 200 queries per tool.
+
+Method: Researchers supplied article excerpts and asked each AI search engine to identify the article, publisher and URL. They manually assessed accuracy.
+
+Results: ChatGPT Search incorrectly identified 134 of 200 articles (67%). Grok-3 answered 94% incorrectly.
+
+Evidence status: Strong direct evidence about retrieval and citation accuracy, with explicitly named ChatGPT Search and Grok versions. It does not test commercial GEO brand recommendations. Columbia Journalism Review
+
+5. General opinions and weaker claims to exclude
+
+Source	Why it doesn’t qualify as strong experimental evidence
+Livesov — Who Gets Recommended	Explicitly says its figures are illustrative, with no fixed completed sample established in the article.
+AstroFabric — ChatGPT vs Grok	Claims zero citation overlap, but the social post alone does not establish an adequate sample size or repeated-run methodology.
+Artur Ferreira — GEO Experiment Files	Describes actual experiments, but the referenced cross-engine comparison uses ChatGPT, Gemini and Perplexity; Grok is absent.
+
+Livesov Blog +2
+
+Conclusion
+
+For your specific research question, I would prioritize Rank Prompt, mapou, Zeeshan Yaseen, and Charles Cousyn.
+
+Rank Prompt provides the clearest reported distinction between ChatGPT Search and Grok. mapou has the broader brand recommendation panel. Yaseen documents an actual GEO campaign intervention. Cousyn provides a concrete, first-person comparison of real-world local business recommendations.
+
+The evidence supports measurable differences across AI systems in brand visibility and citation selection. It does not yet establish a universal GEO tactic that reliably increases recommendations on both ChatGPT Search and Grok. A stronger demonstration would require identical pre-registered buyer prompts, repeated runs, documented interface versions, publicly available raw responses and a controlled content intervention.</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Observed</p><dl class="keytable"><dt>model label</dt><dd>GPT-5.6 Sol</dd><dt>model evidence</dt><dd>User explicitly confirms GPT-5.6 Sol / Medium. The generation-time model selection was not independently captured; recorded as user-confirmed.</dd><dt>reasoning effort</dt><dd>Medium</dd><dt>mode label</dt><dd>Manual collection; original single-prompt conversation, pre-submit temporary/personalization controls not captured</dd><dt>fresh session</dt><dd>Yes</dd><dt>search enabled ui</dt><dd>Yes</dd><dt>temporary</dt><dd>Not recorded</dd><dt>personalization</dt><dd>Not recorded</dd><dt>body complete</dt><dd>Yes</dd><dt>selected attempt id</dt><dd>S2-CHATGPT-C-R5</dd><dt>attempt number</dt><dd>5</dd><dt>replacement for</dt><dd>S2-CHATGPT-C-R4</dd><dt>capture method</dt><dd>User-pasted complete answer corroborated by the complete original native agentMessage; all 11 URLs recovered from native URL tags. Read-only original UI verifies search activity.</dd><dt>capture provenance</dt><dd>The pasted and native versions correspond in content, with different formatting and citation representations; they are not byte-identical. Both run through the final conclusion. The public share and original web views still show a loading error, but the native original message is complete. The agent sent no new prompt, created no share link and made no public repository/site change.</dd><dt>memory evidence</dt><dd>Native conversation contains one user prompt and one complete answer, with no added target identity or steering. Pre-submission memory/personalization state was not independently recorded.</dd><dt>collector</dt><dd>User-operated manual supplement; imported by agent</dd><dt>submitted time reported</dt><dd>Around 2026-10-31 16:49 Asia/Shanghai (user said “now”; approximate, not a measured submission time)</dd><dt>source turn started at</dt><dd>2026-10-31T08:47:24.314577+00:00</dd><dt>source turn completed at</dt><dd>2026-10-31T08:47:36.202617+00:00</dd><dt>condition verification</dt><dd>Exact question and actual web search verified. Model/reasoning and approximate question time are user-reported. Session memory isolation and original temporary mode remain unverified; this manual supplement must be distinguished from agent-operated preflight captures.</dd><dt>source inventory complete</dt><dd>Yes</dd><dt>source inventory scope</dt><dd>All 11 explicit URLs and corresponding citation markers in the complete native answer: 8 included studies and 3 excluded candidates. This is not an inventory of all searched results; external study claims were not independently verified.</dd></dl><dl class="keytable"><dt>search evidence</dt><dd>Original user message contains the native Search marker. Expanded original UI activity says searched 29 websites and thought 36s. No search-result URL inventory was exposed by the activity panel.</dd><dt>searched websites reported</dt><dd>29</dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;Around 2026-10-31 16:49 Asia/Shanghai (user said “now”; approximate, not a measured submission time)&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T08:59:29.987331+00:00&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-CHATGPT-C-R5.json">records/S2-CHATGPT-C-R5.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T08:59:29.987331+00:00">2026-10-31 16:59:29 Asia/Shanghai (UTC+08:00)</span></td><td>User supplied complete paste and existing share URL</td><td>complete_user_paste</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: true
+}</pre></td></tr><tr><td><span title="2026-10-31T08:59:29.987331+00:00">2026-10-31 16:59:29 Asia/Shanghai (UTC+08:00)</span></td><td>Read original native conversation</td><td>complete_native_corresponding_answer</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: true,
+  &quot;notes&quot;: &quot;11,699 native characters; complete through conclusion; 11 explicit URL tags.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T08:59:29.987331+00:00">2026-10-31 16:59:29 Asia/Shanghai (UTC+08:00)</span></td><td>Original web view and shared view inspection</td><td>web_render_failure</td><td>Not recorded</td><td><pre>{
+  &quot;notes&quot;: &quot;Both body views fail to render. Native original text and user paste supply the complete body. Original activity verifies 29 searched websites.&quot;
+}</pre></td></tr></tbody></table></div></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><div class="table-scroll"><table><thead><tr><th>Label / evidence</th><th>URL</th><th>Domain</th><th>Recorded role</th></tr></thead><tbody><tr><td>mapou — State of AI Search 2026</td><td><a href="https://mapou.ai/research/state-of-ai-search" target="_blank" rel="noopener noreferrer">https://mapou.ai/research/state-of-ai-search</a></td><td>mapou.ai</td><td>Included study / suggested reading</td></tr><tr><td>AI Visibility Report Group — Six AI Platforms, Same Eight Questions</td><td><a href="https://aivisibilityreport.group/en/six-ai-platforms-same-questions-different-sources" target="_blank" rel="noopener noreferrer">https://aivisibilityreport.group/en/six-ai-platforms-same-questions-different-sources</a></td><td>aivisibilityreport.group</td><td>Included study / suggested reading</td></tr><tr><td>GOSH AI — The Search vs Learned Divergence</td><td><a href="https://www.mygosh.ai/search-learned-divergence" target="_blank" rel="noopener noreferrer">https://www.mygosh.ai/search-learned-divergence</a></td><td>www.mygosh.ai</td><td>Included study / suggested reading</td></tr><tr><td>Read the original experiment write-up</td><td><a href="https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342" target="_blank" rel="noopener noreferrer">https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342</a></td><td>searchengineland.com</td><td>Included study / suggested reading</td></tr><tr><td>Read the restaurant recommendation experiment</td><td><a href="https://www.weftd.com/resources/use-cases/same-mission-three-ais-chatgpt-instinct-grok-bot" target="_blank" rel="noopener noreferrer">https://www.weftd.com/resources/use-cases/same-mission-three-ais-chatgpt-instinct-grok-bot</a></td><td>www.weftd.com</td><td>Included study / suggested reading</td></tr><tr><td>Read the 70+ brand experiment</td><td><a href="https://queraid.com/blog/ai-visibility-study-2026/" target="_blank" rel="noopener noreferrer">https://queraid.com/blog/ai-visibility-study-2026/</a></td><td>queraid.com</td><td>Included study / suggested reading</td></tr><tr><td>Original test and methodology</td><td><a href="https://rankprompt.com/how-to-measure-ai-search-visibility/" target="_blank" rel="noopener noreferrer">https://rankprompt.com/how-to-measure-ai-search-visibility/</a></td><td>rankprompt.com</td><td>Included study / suggested reading</td></tr><tr><td>Read the Tow Center&#x27;s original study</td><td><a href="https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php" target="_blank" rel="noopener noreferrer">https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php</a></td><td>www.cjr.org</td><td>Included study / suggested reading</td></tr><tr><td>Livesov — Who Gets Recommended</td><td><a href="https://livesov.com/blog/ai-visibility-study-who-gets-recommended" target="_blank" rel="noopener noreferrer">https://livesov.com/blog/ai-visibility-study-who-gets-recommended</a></td><td>livesov.com</td><td>Explicitly excluded candidate; cited and mentioned, not recommended</td></tr><tr><td>AstroFabric — ChatGPT vs Grok</td><td><a href="https://www.linkedin.com/posts/astrofabric_why-chatgpt-and-grok-cite-different-sources-activity-7496921932441743360-YebH" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/posts/astrofabric_why-chatgpt-and-grok-cite-different-sources-activity-7496921932441743360-YebH</a></td><td>www.linkedin.com</td><td>Explicitly excluded candidate; cited and mentioned, not recommended</td></tr><tr><td>Artur Ferreira — GEO Experiment Files</td><td><a href="https://www.linkedin.com/posts/arturgeo_three-weeks-ago-i-started-publishing-the-activity-7494675142204125185-djT0" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/posts/arturgeo_three-weeks-ago-i-started-publishing-the-activity-7494675142204125185-djT0</a></td><td>www.linkedin.com</td><td>Explicitly excluded candidate; cited and mentioned, not recommended</td></tr></tbody></table></div><h4>Explicitly recorded answer citations</h4><p>The same 11 URLs are listed above and explicitly recorded as citations. Their inclusion or exclusion roles are preserved per link.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p></div></details>
+</div></details><details class="run" id="S2-GROK-C" open>
+<summary><span>S2-GROK-C · Grok · Natural discovery</span><span class="badge good">Completed</span></summary>
+<div class="detail-body"><p class="muted">Input: runs.json + selected public record. Submitted: <span title="2026-10-31T03:37:26.510Z">2026-10-31 11:37:26 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T03:40:47.148Z">2026-10-31 11:40:47 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p class="muted">No notes recorded.</p></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge neutral">Not demonstrated</span></td><td>No supporting assessment recorded.</td></tr><tr><th>GitHub only</th><td><span class="badge neutral">No</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>fail</dd><dt>rationale</dt><dd>The complete captured answer did not return the target original X URL or author. The captured page-anchor inventory likewise contains no target X URL or own GitHub/Pages URL, but is not claimed to be the full underlying retrieval set. This is one observed failure to discover, not evidence the post is absent or unindexed.</dd><dt>candidate verification</dt><dd>Other experiments and sample sizes described by Grok are platform claims, not independently verified by this experiment.</dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre>
+<h4>Observed composer text</h4><pre>Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre></div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>Independent builders have published a handful of original, data-backed experiments comparing GEO (Generative Engine Optimization) tactics and outcomes across ChatGPT Search and Grok. Most public discussion remains opinion or anecdotal. The verified experiments below are distinguished by disclosed methods, sample sizes, and direct links to primary write-ups or data. Larger academic or vendor studies (e.g., Princeton GEO-bench, Fudan fabricated-concept paper, Peec AI fanout analysis) are noted only where they contextualize, as they are not from independent builders.
+
+Kasra Dash (@Kasra_Dash) — Self-referencing listicles, comparisons, and alternatives
+
+Direct link: X post with setup, results, and data images (April 2026; also covered in interviews such as Ryan Doser’s video).
+
+Methodology: Published 50 self-referencing articles on a mid-age domain in three batches (roughly 10, then 20, then 20), with ~3 weeks between drops. Formats: comparison pages (e.g., brand A vs brand B), listicles (“best X for Y”), and alternative pages (“Z alternatives”). Tracked brand mentions/citations across ChatGPT, Grok, Perplexity, Claude, and Google AI Overviews. Later 410’d (removed) all pages and monitored retention of citations.
+
+Sample size: 50 articles; multi-week observation with batch-level tracking of mentions (e.g., Grok mentions scaled from ~7 → 25 → 41 across batches).
+
+Key verified findings (vs. ChatGPT Search): Grok and Perplexity picked up the brand fastest and most readily (high single-digit to low double-digit “out of 10” style pickup rates in summaries; Grok highly responsive). ChatGPT and Claude were slower/more moderate (~6/10 range in secondary reports) but retained references to deleted pages for weeks, while Grok and Perplexity dropped faster after 410s. Google AI was least responsive. This is presented as a live, tracked test rather than theory; data visuals are in the primary post.
+
+This is a clear original experiment by an independent SEO/AI-search practitioner.
+
+Lennart Vallo / Cited (wearecited.com) — New-domain niche content to #1 citations
+
+Direct link: Full results write-up (April 2026 case study on BaliPropertyRules.com).
+
+Methodology: Registered a blank domain (early February 2026), published 18 original articles on Bali property regulations/costs/processes with technical/strategic optimization and no link building, paid placements, or ads. Tracked citations via 10 audits over ~6–8 weeks (Feb 12–Mar 29, 2026) using a fixed set of prompts. Measured coverage (% of prompts citing the site), total citations, share of voice, win rate (first-position citations), domain rank, unique URLs, and referral traffic (GA4 + GSC). Also noted volatility and response to a Google Core Update.
+
+Sample size: 18 articles; 73 prompts across the engines; 10 audits; 202 total citations recorded.
+
+Key verified findings (ChatGPT Search vs. Grok):
+
+Grok: Higher coverage (~72.6%), more citations (68), broader unique URLs (~20), strong/high win rate (cited first in a large majority of cases when it cited the site), #1 domain rank. More volatile but loyal and broad in trust from early on.
+ChatGPT/OpenAI: Lower coverage (~28.8%), fewer citations (25), fewer unique URLs (~11), still #1 domain rank on the prompts it covered, but narrower (favored information-scarcity/time-sensitive angles) and more correlated with Google signals. Drove more tracked referral sessions in this test despite lower coverage.
+
+Site reached #1 domain rank on all four engines tested (including ChatGPT and Grok). Data is summarized in tables in the public write-up (no raw CSV download noted, but methodology and metrics are disclosed). This is an original controlled-style experiment by an independent/small-team builder.
+
+Additional relevant independent or small-lab work
+Second Wind (Marty Coleman, secondwind.cloud): Original 360-probe study asking ChatGPT, Claude, Gemini, Perplexity, and Grok to rank/recommend/describe each other. Direct link. Sample: 360 probes. GEO takeaways include strong “niche-boxing” for Grok (high specialty association, low general-mention rate ~13.5%, niche-boxing ~78.7%) versus ChatGPT’s default/generalist strength. More observational ranking experiment than content-tactic test, but original and quantified.
+The GEO Lab (Artur Ferreira, thegeolab.net): Multiple pre-registered/public experiments and logs (e.g., Experiment 001 on narrative vs. declarative structure producing a ~23-percentage-point citation-rate gap on Perplexity; 330-query tests across engines including ChatGPT). GEO Log and related pages. Stronger on controlled single-variable tests and methodology transparency than pure ChatGPT-vs-Grok head-to-heads, but independent and data-driven.
+Verified experiments vs. general opinions
+
+Verified experiments (above) publish concrete methods, sample sizes, tracking periods, and (at least summarized) results or data visuals. They allow inspection of what was actually tested (listicle formats, new-domain niche content, structural changes, etc.) and how ChatGPT Search and Grok differed in speed of pickup, breadth of citation, retention after content removal, volatility, or ranking style.
+
+General opinions dominate elsewhere: blog posts, X threads, and agency advice asserting that “listicles work,” “add statistics/quotes,” “Grok is easier,” or “ChatGPT prefers X” without disclosed sample sizes, controls, tracking windows, or primary data. Many recycle the original Princeton GEO paper’s simulated findings (top-5 Google results fed to an older model) without live multi-engine tests. Company tools (Qwairy, VectorGap, AthenaHQ, Promptwatch, etc.) produce large observational datasets that include both engines but are product/vendor reports rather than independent builder experiments.
+
+Caveats that apply across the independent work: Sample sizes are modest by academic standards (tens of articles or prompts, not tens of thousands); engines update frequently, so results are time-bound; most are not peer-reviewed; and “success” is usually measured in citations/mentions rather than downstream traffic or conversions (though some track the latter). Retrieval behavior and model knowledge often matter more than on-page tweaks alone, per larger studies.
+
+These are the clearest publicly documented independent-builder experiments that directly compare GEO outcomes on ChatGPT Search versus Grok. Primary sources remain the Kasra Dash X thread and the Cited results page.</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Observed</p><dl class="keytable"><dt>model label</dt><dd>Exact backend version not disclosed</dd><dt>mode label</dt><dd>Expert</dd><dt>search mode</dt><dd>Expert supports native web/X retrieval; no separate force-search toggle exposed; actual search to be checked</dd><dt>private</dt><dd>Yes</dd><dt>personalize using x</dt><dd>No</dd><dt>personalize using history</dt><dd>No</dd><dt>body complete</dt><dd>Yes</dd><dt>selected attempt id</dt><dd>S2-GROK-C</dd><dt>attempt number</dt><dd>1</dd></dl><dl class="keytable"><dt>search evidence</dt><dd>Native web/X retrieval observed. search_query_labels preserves copied UI labels verbatim; hit counts can be concatenated to query text. These labels are not parsed search-query strings. Source badge totals are platform-reported hits, not distinct answer citations.</dd><dt>search query labels</dt><dd><pre>[
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edcindependent experiments comparing GEO Generative Engine Optimization ChatGPT Search vs Grok15&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;GEO\&quot; OR \&quot;Generative Engine Optimization\&quot; experiment OR study OR test ChatGPT Grok OR \&quot;ChatGPT Search\&quot;10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;ChatGPT Search\&quot; OR \&quot;Grok\&quot; GEO OR \&quot;generative engine\&quot; optimization experiment OR comparison site:medium.com OR site:substack.com OR site:github.com10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edcKasra GEO OR \&quot;self-referencing\&quot; OR listicles ChatGPT Grok experiment OR test10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;independent\&quot; OR indie OR \&quot;solo\&quot; OR builder OR \&quot;I tested\&quot; OR \&quot;my experiment\&quot; GEO OR \&quot;generative engine\&quot; ChatGPT Grok10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏(\&quot;GEO\&quot; OR \&quot;generative engine optimization\&quot; OR AEO) (Grok) (ChatGPT OR \&quot;ChatGPT Search\&quot;) (experiment OR tested OR study OR results OR methodology)10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edcKasra Dash GEO experiment 50 articles OR listicles Grok ChatGPT10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏from:Kasra_Dash (GEO OR AEO OR \&quot;self-referencing\&quot; OR listicle OR \&quot;AI search\&quot;)5&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;I tested\&quot; OR \&quot;my experiment\&quot; OR \&quot;I published\&quot; (GEO OR AEO OR \&quot;AI citations\&quot; OR \&quot;generative engine\&quot;) (ChatGPT) (Grok) -Kasra10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edcLennart Vallo OR wearecited GEO OR \&quot;BaliPropertyRules\&quot; experiment10&quot;,
+  &quot;\\u5df2\\u641c\\u7d22 𝕏(\&quot;I tested\&quot; OR experiment OR \&quot;sample size\&quot; OR methodology OR \&quot;50 articles\&quot; OR \&quot;published\&quot;) (GEO OR AEO) (Grok) (ChatGPT)5&quot;,
+  &quot;\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\&quot;360-probe\&quot; OR \&quot;secondwind\&quot; GEO ChatGPT Grok10&quot;
+]</pre></dd><dt>source panel declared hits</dt><dd>115</dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T03:37:26.510Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T03:40:47.148Z&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-GROK-C.json">records/S2-GROK-C.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><p class="muted">No capture or recovery events recorded in this field.</p></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><div class="table-scroll"><table><thead><tr><th>Label / evidence</th><th>URL</th><th>Domain</th><th>Recorded role</th></tr></thead><tbody><tr><td>X post with setup, results, and data images</td><td><a href="https://x.com/Kasra_Dash/status/2043655628665639220" target="_blank" rel="noopener noreferrer">https://x.com/Kasra_Dash/status/2043655628665639220</a></td><td>x.com</td><td>link in answer</td></tr><tr><td>Full results write-up</td><td><a href="https://wearecited.com/results" target="_blank" rel="noopener noreferrer">https://wearecited.com/results</a></td><td>wearecited.com</td><td>link in answer</td></tr><tr><td>Direct link</td><td><a href="https://secondwind.cloud/intelligence/what-ai-systems-ranking-each-other-reveals-about-geo" target="_blank" rel="noopener noreferrer">https://secondwind.cloud/intelligence/what-ai-systems-ranking-each-other-reveals-about-geo</a></td><td>secondwind.cloud</td><td>link in answer</td></tr><tr><td>GEO Log</td><td><a href="https://thegeolab.net/log/" target="_blank" rel="noopener noreferrer">https://thegeolab.net/log/</a></td><td>thegeolab.net</td><td>link in answer</td></tr></tbody></table></div><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Source-inventory scope</h4><blockquote><p class="preserve">Whole-page anchor inventory is not included in the public edition. It was captured while source panels were expanded and includes query, answer and activity links; it is not a scoped retrieval-result set or a list of answer citations. Original captures remain local. Source badge totals are reported hits, not distinct cited URLs. The answer links and search-activity labels are retained below.</p></blockquote></div></details>
+</div></details></section>
+<section id="attempts"><h2>All submissions, failures, and recovery history</h2><blockquote><p>attempts.json lists all actual submissions, including those selected for the six main slots. Its entries are counted once; they are not added to the six-slot count. Capturing, copying, reopening, or recovering an existing answer is not a new submission. Full records of non-selected attempts remain below; selected attempts link to their full records above.</p><p>Technical failure and incomplete body capture describe observation limits, not retrieval failure. A recovered capture is counted as complete only when body_complete is explicitly true.</p></blockquote><div class="table-scroll"><table><thead><tr><th>Actual submission</th><th>Plan slot</th><th>Selection</th><th>Status</th><th>Submitted</th><th>Search</th><th>Public record</th></tr></thead><tbody><tr><th><a href="#attempt-S2-CHATGPT-C">S2-CHATGPT-C</a></th><td>S2-CHATGPT-C</td><td>Historical / not selected</td><td><span class="badge bad">Technical failure</span></td><td><span title="2026-10-31T03:37:07.000Z">2026-10-31 11:37:07 Asia/Shanghai (UTC+08:00)</span></td><td>Not observed</td><td><ul><li><a href="data/records/S2-CHATGPT-C.json">records/S2-CHATGPT-C.json</a></li></ul></td></tr><tr><th><a href="#S2-GROK-C">S2-GROK-C</a></th><td>S2-GROK-C</td><td>Selected for main comparison</td><td><span class="badge good">Completed</span></td><td><span title="2026-10-31T03:37:26.510Z">2026-10-31 11:37:26 Asia/Shanghai (UTC+08:00)</span></td><td>Observed</td><td><ul><li><a href="data/records/S2-GROK-C.json">records/S2-GROK-C.json</a></li></ul></td></tr><tr><th><a href="#S2-GROK-B">S2-GROK-B</a></th><td>S2-GROK-B</td><td>Selected for main comparison</td><td><span class="badge good">Completed</span></td><td><span title="2026-10-31T03:42:12.672Z">2026-10-31 11:42:12 Asia/Shanghai (UTC+08:00)</span></td><td>Observed</td><td><ul><li><a href="data/records/S2-GROK-B.json">records/S2-GROK-B.json</a></li></ul></td></tr><tr><th><a href="#S2-CHATGPT-B">S2-CHATGPT-B</a></th><td>S2-CHATGPT-B</td><td>Selected for main comparison</td><td><span class="badge good">Recovered capture · complete</span></td><td><span title="2026-10-31T03:46:11.104Z">2026-10-31 11:46:11 Asia/Shanghai (UTC+08:00)</span></td><td>Not recorded</td><td><ul><li><a href="data/records/S2-CHATGPT-B.json">records/S2-CHATGPT-B.json</a></li></ul></td></tr><tr><th><a href="#S2-GROK-A">S2-GROK-A</a></th><td>S2-GROK-A</td><td>Selected for main comparison</td><td><span class="badge good">Completed</span></td><td><span title="2026-10-31T03:46:31.827Z">2026-10-31 11:46:31 Asia/Shanghai (UTC+08:00)</span></td><td>Observed</td><td><ul><li><a href="data/records/S2-GROK-A.json">records/S2-GROK-A.json</a></li></ul></td></tr><tr><th><a href="#S2-CHATGPT-A">S2-CHATGPT-A</a></th><td>S2-CHATGPT-A</td><td>Selected for main comparison</td><td><span class="badge good">Recovered capture · complete</span></td><td><span title="2026-10-31T03:48:50.116Z">2026-10-31 11:48:50 Asia/Shanghai (UTC+08:00)</span></td><td>Observed</td><td><ul><li><a href="data/records/S2-CHATGPT-A.json">records/S2-CHATGPT-A.json</a></li></ul></td></tr><tr><th><a href="#attempt-S2-CHATGPT-C-R2">S2-CHATGPT-C-R2</a></th><td>S2-CHATGPT-C</td><td>Historical / not selected</td><td><span class="badge neutral">Body capture incomplete</span></td><td><span title="2026-10-31T03:59:43.857Z">2026-10-31 11:59:43 Asia/Shanghai (UTC+08:00)</span></td><td>Observed</td><td><ul><li><a href="data/records/S2-CHATGPT-C-R2.json">records/S2-CHATGPT-C-R2.json</a></li></ul></td></tr><tr><th><a href="#attempt-S2-CHATGPT-C-R3">S2-CHATGPT-C-R3</a></th><td>S2-CHATGPT-C</td><td>Historical / not selected</td><td><span class="badge neutral">Body capture incomplete</span></td><td><span title="2026-10-31T04:23:00.221Z">2026-10-31 12:23:00 Asia/Shanghai (UTC+08:00)</span></td><td>Observed</td><td><ul><li><a href="data/records/S2-CHATGPT-C-R3.json">records/S2-CHATGPT-C-R3.json</a></li></ul></td></tr><tr><th><a href="#attempt-S2-CHATGPT-C-R4">S2-CHATGPT-C-R4</a></th><td>S2-CHATGPT-C</td><td>Historical / not selected</td><td><span class="badge neutral">Body capture incomplete</span></td><td><span title="2026-10-31T07:32:32.721Z">2026-10-31 15:32:32 Asia/Shanghai (UTC+08:00)</span></td><td>Observed</td><td><ul><li><a href="data/records/S2-CHATGPT-C-R4.json">records/S2-CHATGPT-C-R4.json</a></li></ul></td></tr><tr><th><a href="#S2-CHATGPT-C">S2-CHATGPT-C-R5</a></th><td>S2-CHATGPT-C</td><td>Selected for main comparison</td><td><span class="badge good">Completed</span></td><td><span title="Around 2026-10-31 16:49 Asia/Shanghai (user said “now”; approximate, not a measured submission time)">Around 2026-10-31 16:49 Asia/Shanghai (user said “now”; approximate, not a measured submission time)</span></td><td>Observed</td><td><ul><li><a href="data/records/S2-CHATGPT-C-R5.json">records/S2-CHATGPT-C-R5.json</a></li></ul></td></tr></tbody></table></div><details class="run" id="attempt-S2-CHATGPT-C" open>
+<summary><span>S2-CHATGPT-C · ChatGPT Search · Natural discovery</span><span class="badge bad">Technical failure</span></summary>
+<div class="detail-body"><p class="muted">Input: attempts.json + public record. Submitted: <span title="2026-10-31T03:37:07.000Z">2026-10-31 11:37:07 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T03:38:36.175Z">2026-10-31 11:38:36 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p><strong>Capture limitation:</strong> The response body is incomplete or unavailable. This does not establish that retrieval failed or that the target was not found.</p></blockquote><blockquote><p class="preserve">No assistant answer; do not code as failure to discover the target. The visible client shows a local-chatgpt conversation route and a Retry button.</p></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>GitHub only</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre>
+<h4>Observed composer text</h4><pre>\u7f51\u9875\u641c\u7d22 Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre></div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>No assistant answer text captured. This is not evidence of no discovery.</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Not observed</p><dl class="keytable"><dt>model label</dt><dd>GPT-5.6 Sol</dd><dt>reasoning effort</dt><dd>Medium</dd><dt>search enabled ui</dt><dd>Yes</dd><dt>temporary</dt><dd>Yes</dd><dt>personalization</dt><dd>No</dd><dt>error</dt><dd>cloudflare_challenge</dd><dt>attempt number</dt><dd>1</dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T03:37:07.000Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T03:38:36.175Z&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-CHATGPT-C.json">records/S2-CHATGPT-C.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><p class="muted">No capture or recovery events recorded in this field.</p></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><p class="muted">No links recorded in this field.</p><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p></div></details>
+</div></details><details open><summary>S2-CHATGPT-B · attempt-ledger capture history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T03:50:25.114Z">2026-10-31 11:50:25 Asia/Shanghai (UTC+08:00)</span></td><td>Original temporary UI and Copy</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Unable to load response; Copy exposed only error text.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T04:01:18.911Z">2026-10-31 12:01:18 Asia/Shanghai (UTC+08:00)</span></td><td>User-approved save existing chat</td><td>saved_copy_created</td><td>Not recorded</td><td><pre>{
+  &quot;notes&quot;: &quot;Ordinary-history copy; no new question or generation.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T04:04:40.944638+00:00">2026-10-31 12:04:40 Asia/Shanghai (UTC+08:00)</span></td><td>Native full turn message read of saved copy</td><td>recovered</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: true,
+  &quot;notes&quot;: &quot;Native full agentMessage, not preview alone; original generated_at unknown.&quot;,
+  &quot;recorded_at&quot;: &quot;2026-10-31T04:04:40.944638+00:00&quot;
+}</pre></td></tr></tbody></table></div></div></details><details open><summary>S2-CHATGPT-A · attempt-ledger capture history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T03:54:37.850Z">2026-10-31 11:54:37 Asia/Shanghai (UTC+08:00)</span></td><td>Original temporary UI and Copy</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Unable to load response; Copy exposed only error text.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T04:03:18.268Z">2026-10-31 12:03:18 Asia/Shanghai (UTC+08:00)</span></td><td>User-approved save existing chat</td><td>saved_copy_created</td><td>Not recorded</td><td><pre>{
+  &quot;notes&quot;: &quot;Ordinary-history copy; no new question or generation.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T04:04:40.909814+00:00">2026-10-31 12:04:40 Asia/Shanghai (UTC+08:00)</span></td><td>Native full turn message read of saved copy</td><td>recovered</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: true,
+  &quot;notes&quot;: &quot;Native full agentMessage, not preview alone; original generated_at unknown.&quot;,
+  &quot;recorded_at&quot;: &quot;2026-10-31T04:04:40.909814+00:00&quot;
+}</pre></td></tr></tbody></table></div></div></details><details class="run" id="attempt-S2-CHATGPT-C-R2" open>
+<summary><span>S2-CHATGPT-C-R2 · ChatGPT Search · Natural discovery</span><span class="badge neutral">Body capture incomplete</span></summary>
+<div class="detail-body"><p class="muted">Input: attempts.json + public record. Submitted: <span title="2026-10-31T03:59:43.857Z">2026-10-31 11:59:43 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T04:24:28.101644+00:00">2026-10-31 12:24:28 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p><strong>Capture limitation:</strong> The response body is incomplete or unavailable. This does not establish that retrieval failed or that the target was not found.</p></blockquote><blockquote><ul><li>Initial C Cloudflare failure retained separately. C-R2 searched 33 websites and UI said complete, but main page and Copy initially exposed only a loading error.</li><li>User approved saving C for recovery. Native saved message and rendered preview recovered a matching prefix only. C-R2 stays unscored for target discovery.</li><li>Original temporary URL redirected to an empty chat after save; no model prompt was sent during this recovery.</li></ul></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge neutral">Unclear</span></td><td>No supporting assessment recorded.</td></tr><tr><th>GitHub only</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>indeterminate</dd><dt>rationale</dt><dd>Recovered prefix discusses Obsurfable, but stops mid-sentence in the first study. No target X URL appears in this prefix. Later unobserved content could change the discovery assessment, so no whole-answer pass/fail is assigned.</dd><dt>candidate verification</dt><dd>Claims and sample sizes in this partial answer have not been independently verified.</dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre>
+</div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre># Independent GEO experiments comparing ChatGPT Search and Grok
+
+I found several relevant first-party research projects, including experiments that explicitly tested both ChatGPT and Grok. The strongest evidence comes from studies that publish their prompts, model configurations, query counts, and observed recommendations or citations.
+
+An important distinction: **measuring which businesses an AI recommends is not the same as measuring which websites it cites.** Both are useful for GEO, but they test different things.
+
+Here are the most relevant findings, with the evidence classified separately from general industry commentary.
+
+## 1\. Strongest direct comparisons
+
+### A. Obsurfable — ChatGPT vs Grok brand-shortlist experiment
+
+(Strongest direct match) (Matched prompts)
+
+**Research\:** urlWhen AI engines disagree on brand shortlistshttps://obsurfable.com/resources/reports/cross-platform-brand-shortlist-disagreement
+
+Published September 15, 2026 · Obsurfable
+
+This is particularly relevant because it measures actual brand recommendations, rather than just which domains AI cites.
+
+**Methodology**
+
+- Started with a research corpus of 31,166 active buyer-style prompts.
+- Collected 35,794 platform observations.
+- Matched prompts across AI platforms.
+- Extracted the first five brands mentioned in each answer.
+- Compared brand overlap, agreement on the first recommendation, and empty brand lists.
+- Used the latest observation for each prompt/platform combination, preferring UI captures over API observations when timestamps were equal.
+
+**ChatGPT vs Grok results**
+
+# 265
+
+Matched prompts
+
+# 28.7%
+
+Same \#1 recommendation
+
+# 22.6%
+
+Zero overlap in top-five lists
+
+# 1.64
+
+Average shared brands
+
+In other words, identical buyer questions frequently produced different brand shortlists.
+
+**Why this matters for GEO\:** Getting recommended by ChatGPT does not guarantee that Grok will recommend the same brand. Measuring visibility on only</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Observed</p><dl class="keytable"><dt>model label</dt><dd>GPT-5.6 Sol</dd><dt>reasoning effort</dt><dd>Medium</dd><dt>model</dt><dd>GPT-5.6 Sol</dd><dt>reasoning</dt><dd>Medium</dd><dt>mode</dt><dd>Temporary / non-personalized</dd><dt>search enabled</dt><dd>Yes</dd><dt>search selection</dt><dd>Native Web Search chip</dd><dt>fresh session</dt><dd>Yes</dd><dt>personalization disabled</dt><dd>Yes</dd><dt>search enabled ui</dt><dd>Yes</dd><dt>temporary</dt><dd>Yes</dd><dt>personalization</dt><dd>No</dd><dt>body complete</dt><dd>No</dd><dt>main page error</dt><dd>Unable to load this response</dd><dt>copy result</dt><dd>\u65e0\u6cd5\u52a0\u8f7d\u6b64\u56de\u590d</dd><dt>attempt number</dt><dd>2</dd><dt>replacement for</dt><dd>S2-CHATGPT-C</dd><dt>capture method</dt><dd>User-approved save of existing C-R2; native agentMessage and rendered share-preview compared. Both stop at the same mid-sentence boundary.</dd><dt>capture provenance</dt><dd>Native page.hasMore=false is a turn-pagination field and does not establish response-body completeness. Saved copy and rendered DOM expose only a prefix. Whether the original generated body or the recovery path truncated it is unresolved. No public share link was created or copied.</dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T03:59:43.857Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T04:24:28.101644+00:00&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-CHATGPT-C-R2.json">records/S2-CHATGPT-C-R2.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T04:02:25.892Z">2026-10-31 12:02:25 Asia/Shanghai (UTC+08:00)</span></td><td>Temporary UI and Copy</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false
+}</pre></td></tr><tr><td><span title="2026-10-31T04:20:36.533Z">2026-10-31 12:20:36 Asia/Shanghai (UTC+08:00)</span></td><td>User-approved save existing C supplement</td><td>saved_copy_created</td><td>Not recorded</td><td>No additional notes.</td></tr><tr><td><span title="2026-10-31T04:24:28.101644+00:00">2026-10-31 12:24:28 Asia/Shanghai (UTC+08:00)</span></td><td>Native message + rendered preview + saved page</td><td>partial_recovery_truncated</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Text ends mid-sentence; hasMore=false does not prove completeness.&quot;
+}</pre></td></tr></tbody></table></div></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><div class="table-scroll"><table><thead><tr><th>Label / evidence</th><th>URL</th><th>Domain</th><th>Recorded role</th></tr></thead><tbody><tr><td>When AI engines disagree on brand shortlists</td><td><a href="https://obsurfable.com/resources/reports/cross-platform-brand-shortlist-disagreement" target="_blank" rel="noopener noreferrer">https://obsurfable.com/resources/reports/cross-platform-brand-shortlist-disagreement</a></td><td>obsurfable.com</td><td>Link in recovered prefix; other later links may be missing</td></tr></tbody></table></div><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p></div></details>
+</div></details><details class="run" id="attempt-S2-CHATGPT-C-R3" open>
+<summary><span>S2-CHATGPT-C-R3 · ChatGPT Search · Natural discovery</span><span class="badge neutral">Body capture incomplete</span></summary>
+<div class="detail-body"><p class="muted">Input: attempts.json + public record. Submitted: <span title="2026-10-31T04:23:00.221Z">2026-10-31 12:23:00 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T04:27:56.626279+00:00">2026-10-31 12:27:56 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p><strong>Capture limitation:</strong> The response body is incomplete or unavailable. This does not establish that retrieval failed or that the target was not found.</p></blockquote><blockquote><ul><li>Additional supplement under prior user approval after C-R2 saved-copy and preview both ended mid-sentence. Fresh non-personalized temporary chat, same prompt/model/reasoning/search. Earlier A/B and C-R2 are in account history, but this new chat visibly disables memory, plugins and custom instructions. Backend isolation not independently audited.</li><li>The initial C Cloudflare error and C-R2 mid-sentence prefix are retained as historical attempts. This third C submission also remains incomplete.</li><li>Only one external study link was recovered in this prefix. Do not treat it as a complete citation inventory or infer the target was absent from the whole answer.</li></ul></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge neutral">Unclear</span></td><td><pre>{
+  &quot;evidence&quot;: &quot;Only the first-study fragment was recovered. No target X URL appears in this prefix, but later unobserved content could contain it; no whole-answer discovery conclusion is valid.&quot;
+}</pre></td></tr><tr><th>GitHub only</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>indeterminate</dd><dt>rationale</dt><dd>Fresh same-prompt supplement searched 24 websites and UI indicated completion. Main rendering/Copy failed, while saved-message and preview recovery both stop in the first study. ChatGPT C remains a required unresolved capture, not a negative discovery result.</dd><dt>candidate verification</dt><dd>GeoGenius methodology, sample sizes and verified labels are platform claims in a partial answer, not independently verified findings of this experiment.</dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre>
+<h4>Observed composer text</h4><pre>\u7f51\u9875\u641c\u7d22 Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre></div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>I found several published first-party GEO experiments that compare ChatGPT and Grok, including work by independent researchers, consultants, and small research teams.
+
+An important distinction: **measuring which brands an AI recommends is not the same as measuring which websites it cites.** Some experiments measure brand recommendation frequency, others measure citations and source selection, and a few measure both.
+
+I would prioritize experiments that disclose their prompts, number of trials, model versions, and raw data. A screenshot showing that ChatGPT recommends one company while Grok recommends another is interesting, but it is not sufficient evidence of a repeatable GEO result.
+
+## 1\. Best-matched published experiments
+
+### A. GeoGenius — 36 markets, 720 search probes
+
+(Verified first-party experiment) (Strongest matched search comparison)
+
+**Research\:** urlThe AI Citation Study: 36 Markets, 4 LLMs, 720 Probeshttps://geogenius.ai/ai-report
+
+GeoGenius Research · May 14, 2026
+
+This is one of the strongest direct comparisons I found.
+
+**Methodology**
+
+- 36 US real-estate markets.
+- Five standardized buyer and seller discovery queries per market.
+- Four AI systems: ChatGPT, Grok, Google AI and Claude.
+- 720 total probes, with 180 each for ChatGPT and Grok.
+- Both ChatGPT and Grok used web-search-enabled APIs.
+- The researchers collected and analyzed 4,455 citations across 1,002 unique domains.
+
+The model configurations were\:
+
+- ChatGPT: GPT-4o with OpenAI web search.
+- Grok: Grok-4-fast-non-reasoning with xAI web search.
+
+**What they found**
+
+| Measurement | ChatGPT | Grok |
+|--------|--------|--------|
+| Successful probes | 180/180 |  |</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Observed</p><dl class="keytable"><dt>model label</dt><dd>GPT-5.6 Sol</dd><dt>reasoning effort</dt><dd>Medium</dd><dt>fresh session</dt><dd>Yes</dd><dt>search enabled ui</dt><dd>Yes</dd><dt>temporary</dt><dd>Yes</dd><dt>personalization</dt><dd>No</dd><dt>body complete</dt><dd>No</dd><dt>main page error</dt><dd>Unable to load this response</dd><dt>copy result</dt><dd>\u65e0\u6cd5\u52a0\u8f7d\u6b64\u56de\u590d</dd><dt>attempt number</dt><dd>3</dd><dt>replacement for</dt><dd>S2-CHATGPT-C-R2</dd><dt>capture method</dt><dd>User-approved C recovery: saved already-generated C-R3; native agentMessage and rendered preview both expose a truncated first-study fragment.</dd><dt>capture provenance</dt><dd>Generation used fresh non-personalized temporary mode with the unchanged prompt and selected Sol Medium model. Save created an ordinary-history copy after generation; no follow-up was sent. hasMore=false concerns turn pagination and is not evidence of full body completeness. No public share link was created or copied.</dd></dl><dl class="keytable"><dt>search evidence</dt><dd>Expanded native activity: searched 24 websites; thought 1m35s. Native Web Search chip was selected before submission.</dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T04:23:00.221Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T04:27:56.626279+00:00&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-CHATGPT-C-R3.json">records/S2-CHATGPT-C-R3.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T04:25:36.906Z">2026-10-31 12:25:36 Asia/Shanghai (UTC+08:00)</span></td><td>Temporary UI/Copy, actual native search activity expanded</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false
+}</pre></td></tr><tr><td><span title="2026-10-31T04:25:41.720Z">2026-10-31 12:25:41 Asia/Shanghai (UTC+08:00)</span></td><td>User-approved C recovery save</td><td>saved_copy_created</td><td>Not recorded</td><td>No additional notes.</td></tr><tr><td><span title="2026-10-31T04:27:56.626279+00:00">2026-10-31 12:27:56 Asia/Shanghai (UTC+08:00)</span></td><td>Native full turn read + rendered reply preview</td><td>partial_recovery_truncated</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Both surfaces return only the first-study fragment; no complete-body or no-discovery claim.&quot;
+}</pre></td></tr></tbody></table></div></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><div class="table-scroll"><table><thead><tr><th>Label / evidence</th><th>URL</th><th>Domain</th><th>Recorded role</th></tr></thead><tbody><tr><td>The AI Citation Study: 36 Markets, 4 LLMs, 720 Probes<pre>{
+  &quot;observed_rendered_url&quot;: &quot;https://geogenius.ai/ai-report&quot;
+}</pre></td><td><a href="https://geogenius.ai/ai-report" target="_blank" rel="noopener noreferrer">https://geogenius.ai/ai-report</a></td><td>geogenius.ai</td><td>Link in recovered prefix; later links may be missing</td></tr></tbody></table></div><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p></div></details>
+</div></details><details class="run" id="attempt-S2-CHATGPT-C-R4" open>
+<summary><span>S2-CHATGPT-C-R4 · ChatGPT Search · Natural discovery</span><span class="badge neutral">Body capture incomplete</span></summary>
+<div class="detail-body"><p class="muted">Input: attempts.json + public record. Submitted: <span title="2026-10-31T07:32:32.721Z">2026-10-31 15:32:32 Asia/Shanghai (UTC+08:00)</span>. Captured: <span title="2026-10-31T07:39:13.362617+00:00">2026-10-31 15:39:13 Asia/Shanghai (UTC+08:00)</span>.</p>
+<blockquote><p><strong>Capture limitation:</strong> The response body is incomplete or unavailable. This does not establish that retrieval failed or that the target was not found.</p></blockquote><blockquote><ul><li>One delayed retry authorized by user; same prompt/model/reasoning/search in a new non-personalized temporary chat. User identity and target URL were not supplied.</li><li>Prior chats are saved in account history; this chat visibly disables memory, plugins and custom instructions. Backend isolation is not independently audited.</li><li>Native activity reports 45 searched websites and answer complete; no answer body was visible. This is a capture limitation, not a negative retrieval result.</li><li>User-approved save recovery created an ordinary-history copy; its native read returned only the user message. Original failures and earlier partial C prefixes remain unchanged.</li><li>No public share link was created or copied; the ordinary header preview was attempted without publishing. The one-shot scheduled retry is complete and will not repeat automatically.</li></ul></blockquote>
+<h3>Recorded assessment</h3><div class="table-scroll"><table><thead><tr><th>Dimension</th><th>Judgment</th><th>Evidence / qualification</th></tr></thead><tbody><tr><th>X post content access</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Exact discovery</th><td><span class="badge muted">N/A</span></td><td>No supporting assessment recorded.</td></tr><tr><th>Unprompted discovery</th><td><span class="badge neutral">Unclear</span></td><td><pre>{
+  &quot;evidence&quot;: &quot;Native web search was observed, but neither UI nor saved-message snapshot exposed the answer body. Target presence or absence in the full response is unresolved.&quot;
+}</pre></td></tr><tr><th>GitHub only</th><td><span class="badge neutral">Not assessed</span></td><td>No supporting assessment recorded.</td></tr></tbody></table></div>
+<dl class="keytable"><dt>outcome</dt><dd>indeterminate</dd><dt>rationale</dt><dd>Scheduled same-condition retry executed once. Missing original body and source inventory keep the required ChatGPT C cell unresolved, not a discovery failure.</dd></dl>
+<details open><summary>Full prompt</summary><div class="detail-body"><p class="muted">Recorded prompt; retained verbatim.</p><pre>Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre>
+<h4>Observed composer text</h4><pre>\u7f51\u9875\u641c\u7d22 Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?
+
+Include direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.</pre></div></details>
+<details open><summary>Captured answer</summary><div class="detail-body"><pre>No assistant answer text captured. This is not evidence of no discovery.</pre></div></details>
+<details open><summary>Model, mode, search, and capture evidence</summary><div class="detail-body"><p><strong>Actual search:</strong> Observed</p><dl class="keytable"><dt>model label</dt><dd>GPT-5.6 Sol</dd><dt>reasoning effort</dt><dd>Medium</dd><dt>fresh session</dt><dd>Yes</dd><dt>search enabled ui</dt><dd>Yes</dd><dt>temporary</dt><dd>Yes</dd><dt>personalization</dt><dd>No</dd><dt>body complete</dt><dd>No</dd><dt>main page error</dt><dd>Answer body absent after UI completion</dd><dt>attempt number</dt><dd>4</dd><dt>replacement for</dt><dd>S2-CHATGPT-C-R3</dd><dt>capture method</dt><dd>Main temporary UI, saved ordinary-history copy and native read_thread snapshot. Native snapshot contains only the user message; no assistant answer body was available.</dd><dt>capture provenance</dt><dd>The UI completed after reporting 45 searched websites. Main and saved views show activity summaries without an answer. Saved native turn has completed status but only a userMessage. These surfaces do not establish whether a full original response exists elsewhere; they do not establish no discovery.</dd><dt>source inventory complete</dt><dd>No</dd></dl><dl class="keytable"><dt>search evidence</dt><dd>Native activity reports searched 45 websites; UI says answer complete. No answer body or source links were visible in the main page.</dd></dl>
+<p><strong>Original timestamps:</strong> {
+  &quot;submitted_at&quot;: &quot;2026-10-31T07:32:32.721Z&quot;,
+  &quot;captured_at&quot;: &quot;2026-10-31T07:39:13.362617+00:00&quot;
+}</p>
+
+<ul><li><a href="data/records/S2-CHATGPT-C-R4.json">records/S2-CHATGPT-C-R4.json</a></li></ul></div></details>
+<details open><summary>Capture and recovery history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T07:37:38.910Z">2026-10-31 15:37:38 Asia/Shanghai (UTC+08:00)</span></td><td>Temporary UI completed; native search activity visible</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false
+}</pre></td></tr><tr><td><span title="2026-10-31T07:37:42.432Z">2026-10-31 15:37:42 Asia/Shanghai (UTC+08:00)</span></td><td>User-approved C save for recovery</td><td>saved_copy_created</td><td>Not recorded</td><td>No additional notes.</td></tr><tr><td><span title="2026-10-31T07:39:13.362617+00:00">2026-10-31 15:39:13 Asia/Shanghai (UTC+08:00)</span></td><td>Read saved native turn</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Only userMessage is present in the returned completed turn; no assistant body exposed.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T07:39:53.148498+00:00">2026-10-31 15:39:53 Asia/Shanghai (UTC+08:00)</span></td><td>Normal header preview attempt</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Share control remained loading; no preview body or public link was exposed and no publish/copy-link action was used.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T07:40:11.487688+00:00">2026-10-31 15:40:11 Asia/Shanghai (UTC+08:00)</span></td><td>Reload saved conversation</td><td>capture_incomplete</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: false,
+  &quot;notes&quot;: &quot;Completed load still shows search activity only, without an assistant answer.&quot;
+}</pre></td></tr></tbody></table></div></div></details>
+<details open><summary>Returned answer links and recorded sources</summary><div class="detail-body"><blockquote><p>Answer links and retrieved sources have different roles. A URL appearing in either list does not by itself establish access to the X post or satisfy an assessment.</p></blockquote>
+<h4>Links in the answer</h4><p class="muted">No links recorded in this field.</p><h4>Explicitly recorded answer citations</h4><p class="muted">No links recorded in this field.</p><h4>Retrieval-panel sources · not automatically answer citations</h4><p class="muted">No links recorded in this field.</p></div></details>
+</div></details><details open><summary>S2-CHATGPT-C-R5 · attempt-ledger capture history</summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>Capture time</th><th>Method</th><th>Capture status</th><th>File</th><th>Evidence and notes</th></tr></thead><tbody><tr><td><span title="2026-10-31T08:59:29.987331+00:00">2026-10-31 16:59:29 Asia/Shanghai (UTC+08:00)</span></td><td>User supplied complete paste and existing share URL</td><td>complete_user_paste</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: true
+}</pre></td></tr><tr><td><span title="2026-10-31T08:59:29.987331+00:00">2026-10-31 16:59:29 Asia/Shanghai (UTC+08:00)</span></td><td>Read original native conversation</td><td>complete_native_corresponding_answer</td><td>Not recorded</td><td><pre>{
+  &quot;body_complete&quot;: true,
+  &quot;notes&quot;: &quot;11,699 native characters; complete through conclusion; 11 explicit URL tags.&quot;
+}</pre></td></tr><tr><td><span title="2026-10-31T08:59:29.987331+00:00">2026-10-31 16:59:29 Asia/Shanghai (UTC+08:00)</span></td><td>Original web view and shared view inspection</td><td>web_render_failure</td><td>Not recorded</td><td><pre>{
+  &quot;notes&quot;: &quot;Both body views fail to render. Native original text and user paste supply the complete body. Original activity verifies 29 searched websites.&quot;
+}</pre></td></tr></tbody></table></div></div></details><h3>Stage-level capture and recovery events</h3><p class="muted">No capture or recovery events recorded in this field.</p></section>
+<section id="inputs"><h2>Inputs and provenance</h2><ul><li><a href="data/protocol.json">protocol.json</a></li><li><a href="data/runs.json">runs.json</a></li><li><a href="data/attempts.json">attempts.json</a></li></ul><blockquote><p>runs.json selects six planned slots. Each selected_attempt_id/raw_file points to that slot's actual submission in the public records; the selected attempt can supply missing fields. Original failures remain in attempts.json. That ledger contains all actual submissions and is not added to the six main rows. Supporting capture and recovery events are never counted as additional tests. Private screenshots, DOM and native-tool dumps are not included in this public edition. No network requests are made by this report or its generator.</p><p>Timestamps with an explicit offset are displayed in Asia/Shanghai and their original values are preserved in each record. Capture time is not asserted to be the server's answer-completion time.</p></blockquote><p class="footer">Public edition date: 2026-11-01. Rebuilt offline from versioned public records; the generator does not submit questions or publish changes.</p></section>
+<blockquote class="report-version" id="report-version"><p><strong>Experiment date:</strong> 2026-10-31 · <strong>First published:</strong> 2026-11-01 · <strong>Last revised:</strong> 2026-11-02 · <strong>Version:</strong> v1.1</p><p>Clarified six selected cells versus ten submissions, search and manual-control evidence; separated post-publication X search observations; split reader and expanded appendix. Original A/B/C outcomes unchanged.</p><p><a href="../../report-versions.json">Version metadata</a> · <a href="../../CHANGELOG.md">Revision history</a> · <a href="../../reviews/2026-11-02-stages-01-02.md">Cross-report review decisions</a></p></blockquote></main></div></body></html>

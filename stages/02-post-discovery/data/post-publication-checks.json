@@ -1,0 +1,57 @@
+{
+  "record_kind": "post_publication_follow_up_not_original_test",
+  "recorded_on": "2026-11-02",
+  "timezone": "Asia/Shanghai",
+  "original_experiment_date": "2026-10-31",
+  "original_six_cell_outcomes_unchanged": true,
+  "checks": [
+    {
+      "id": "S2-FOLLOWUP-X-USER-01",
+      "platform": "X native search",
+      "evidence_level": "user_reported_observation",
+      "reported_on": "2026-11-02",
+      "observed_on": null,
+      "queries": [
+        "from:bird_helen67403 \"2 of 20\"",
+        "from:bird_helen67403 \"GEO Lab\""
+      ],
+      "sort": "Latest",
+      "people_scope": "All users",
+      "outcome": "target_post_found_user_reported",
+      "target_url": "https://x.com/bird_helen67403/status/2116080254523445676",
+      "observation": "The user reports finding the original October 30 post using the listed native X search queries and filters.",
+      "limits": [
+        "The actual date of that search was not supplied; reported_on is the date of the confirmation, not an inferred observation date.",
+        "No screenshot or retained result list was supplied. This is a user-reported follow-up, not independently verified search evidence.",
+        "Account-scoped native X search supplies the author identity; it is not the unbranded AI B or C task.",
+        "This later observation does not establish native-search availability or indexing on October 31, nor identify why the AI answers did not return the post."
+      ]
+    },
+    {
+      "id": "S2-FOLLOWUP-X-ACCESS-01",
+      "platform": "X native search",
+      "evidence_level": "assistant_access_check_only",
+      "attempted_on": "2026-11-02",
+      "query": "from:bird_helen67403 \"2 of 20\"",
+      "sort_requested": "Latest",
+      "outcome": "indeterminate_page_did_not_load",
+      "observation": "An independent browser check timed out during navigation. Reading the existing tab showed only a Loading placeholder and no result list.",
+      "limits": [
+        "No native-search result was observed by the assistant. This is an access obstruction, not a negative search result.",
+        "No settings were changed, no CAPTCHA was completed, and no AI test prompt was submitted."
+      ]
+    }
+  ],
+  "future_retest": {
+    "suggested_date": "2026-11-07",
+    "conditions": [
+      "B",
+      "C"
+    ],
+    "status": "reviewer_proposal_not_confirmed",
+    "results": [],
+    "automation_created": false,
+    "notes": "A separately versioned follow-up can be added if conducted. The date is a review suggestion; no confirmed schedule or result was supplied."
+  },
+  "summary": "Native X discovery was later reported by the user; independent browser verification is unresolved. The original AI A/B/C outcomes remain unchanged."
+}
