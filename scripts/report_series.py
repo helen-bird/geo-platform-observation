@@ -7,7 +7,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 CSS = '''
-.experiment-series{margin:0 0 22px;padding:0 0 18px;border-bottom:1px solid currentColor}
+.experiment-series{grid-column:1/-1;margin:0 0 22px;padding:0 0 18px;border-bottom:1px solid currentColor}
 .experiment-series strong{font-size:15px;letter-spacing:0;margin:0 0 8px}
 .experiment-series a{display:block;font-size:13px;line-height:1.5;padding:7px 0;text-decoration:none}
 .experiment-series a[aria-current]{font-weight:750;text-decoration:underline;text-underline-offset:4px}
