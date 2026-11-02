@@ -1,0 +1,391 @@
+{
+  "id": "S3-GROK-M2-R2",
+  "source_record": "records/S3-GROK-M2-R2.json",
+  "coding_method": "Assistant review of the complete 3,717-character rendered answer and recorded native web-query/browsed-link evidence; no outside webpage queries, factual verification or independent human double-coding.",
+  "coding_scope": "Substantively named tools/services/features, with supplied target platforms and company context separate. Measurement tools, prompt inputs, review examples and content-channel advice retain distinct roles.",
+  "answer_type": {
+    "primary": "Manual measurement workflow",
+    "secondary": [
+      "Conceptual explanation",
+      "Tool-led solution"
+    ],
+    "evidence": "A free, repeatable workflow is a fixed set of buyer-intent prompts + manual sampling in fresh sessions + a simple spreadsheet.",
+    "rationale": "Fixed prompt construction, clean-session sampling, per-run logging, metrics and cadence dominate; named trackers and a checker preview are supplements."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Keep branded prompts only for accuracy checks (pricing, features, downsides)."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run each prompt 2\u20133 times in fresh chats."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Use a Temporary Chat and choose the unpersonalized option (or log out / use a private window)."
+    },
+    "model_search_version_logging": {
+      "value": false,
+      "evidence": null
+    },
+    "search_mode_logging_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "search_mode_enablement_advice": {
+      "value": true,
+      "evidence": "Prefer sessions with web search enabled when available."
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_rates_separate": {
+      "value": true,
+      "evidence": "Citation rate (how often your site or a trusted third-party page about you is linked)"
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "| Date | Engine | Prompt | Mentioned (Y/N) | Position | Competitors | Citations | Notes |"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Brief framing (how it described you or why it preferred someone else)"
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_caution": {
+      "value": false,
+      "evidence": null
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "Answers are non-deterministic\u2014the same prompt can produce different shortlists across sessions, models, and dates"
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "manual sampling in fresh sessions"
+    },
+    "downstream_conversions": {
+      "value": false,
+      "evidence": null
+    },
+    "downstream_traffic_or_impressions": {
+      "value": false,
+      "evidence": null
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google People also ask",
+      "observed_name": "Google\u2019s People also ask",
+      "entity_type": "search_feature_prompt_input",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Pull language from customer calls, support tickets, Google\u2019s \u201cPeople also ask,\u201d Reddit, or your own Search Console queries.",
+      "source_urls": [],
+      "notes": "Explicit buyer-language input recommendation; no supporting Google inline citation."
+    },
+    {
+      "entity": "Reddit",
+      "observed_name": "Reddit",
+      "entity_type": "community_prompt_input",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Pull language from customer calls, support tickets, Google\u2019s \u201cPeople also ask,\u201d Reddit, or your own Search Console queries.",
+      "source_urls": [],
+      "notes": "Explicitly suggested for prompt wording, rather than a publication instruction."
+    },
+    {
+      "entity": "Google Search Console",
+      "observed_name": "Search Console",
+      "entity_type": "analytics_and_prompt_input",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Pull language from customer calls, support tickets, Google\u2019s \u201cPeople also ask,\u201d Reddit, or your own Search Console queries.",
+      "source_urls": [],
+      "notes": "Manually normalized shorthand Search Console to Google Search Console; suggested for query-language inputs, not direct recommendation-rate measurement."
+    },
+    {
+      "entity": "Google Sheets",
+      "observed_name": "Google Sheet",
+      "entity_type": "spreadsheet",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "A Google Sheet or Notion table is enough. No special tools required.",
+      "source_urls": [],
+      "notes": "Explicit spreadsheet service recommendation; singular label normalized."
+    },
+    {
+      "entity": "Notion",
+      "observed_name": "Notion table",
+      "entity_type": "table_workspace",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "A Google Sheet or Notion table is enough. No special tools required.",
+      "source_urls": [],
+      "notes": "Explicit alternative tracker; free sufficiency is answer output, not a pricing audit."
+    },
+    {
+      "entity": "G2",
+      "observed_name": "G2",
+      "entity_type": "review_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Extra spot-checks after major content launches, new reviews (G2/Capterra/etc.), or big X activity.",
+      "source_urls": [],
+      "notes": "A review-platform example in a remeasurement trigger. It does not explicitly instruct adopting or publishing on G2."
+    },
+    {
+      "entity": "Capterra",
+      "observed_name": "Capterra",
+      "entity_type": "review_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Extra spot-checks after major content launches, new reviews (G2/Capterra/etc.), or big X activity.",
+      "source_urls": [],
+      "notes": "A review-platform example in a remeasurement trigger, not an explicit product-use or publication recommendation."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X",
+      "entity_type": "community_distribution_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "unspecified",
+      "evidence": "For Grok specifically, an authentic presence on X helps because of its heavier weighting of X content.",
+      "source_urls": [],
+      "notes": "Positive contextual advice favors an authentic X presence. Preserve role as a content/distribution suggestion, not measurement software. Claimed engine weighting is unverified."
+    },
+    {
+      "entity": "Ahrefs Brand Radar",
+      "observed_name": "Ahrefs Brand Radar free preview",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "mixed/limited tier",
+      "evidence": "Free one-shot checkers (Ahrefs Brand Radar free preview, various \u201cAI visibility\u201d free tools) can give a quick extra data point, but they don\u2019t replace your controlled, repeated prompt set.",
+      "source_urls": [],
+      "notes": "Specific Brand Radar preview named; keep distinct from generic Ahrefs tools and free AI Visibility Checker unless separately justified. Suggested only as an extra point, not a replacement workflow."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for fresh-session repeated checks",
+      "evidence": "ChatGPT (chatgpt.com):",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target supplied in prompt and explicitly used in workflow; not a newly discovered tool. Prose addresses are not inline citations."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for fresh-session repeated checks",
+      "evidence": "Grok (grok.com or via X):",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target supplied in prompt and explicitly used in workflow; not a newly discovered tool. Prose addresses are not inline citations."
+    }
+  ],
+  "contextual_non_tool_entities": [
+    {
+      "entity": "OpenAI",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "OpenAI has stated product results are not ads",
+      "notes": "Company attribution in a product-results/advertising claim, not a measurement product; unverified platform output."
+    }
+  ],
+  "generic_methods": [
+    "Frozen unbranded buyer prompts plus separate branded accuracy checks",
+    "Repeated fresh unpersonalized ChatGPT and fresh Grok sessions",
+    "One-row-per-run tracking table",
+    "Mention rate, competitor share of voice and citation rate",
+    "Baseline and monthly/fortnightly cadence",
+    "Event-triggered spot checks",
+    "Crawler access checks",
+    "Third-party coverage and clear on-site content"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Mention rate",
+      "definition_verbatim": "Mention rate (how often you appear on unbranded prompts)"
+    },
+    {
+      "label": "Share of voice",
+      "definition_verbatim": "Share of voice vs the 2\u20133 competitors that keep showing up",
+      "notes": "No explicit formula is supplied."
+    },
+    {
+      "label": "Citation rate",
+      "definition_verbatim": "Citation rate (how often your site or a trusted third-party page about you is linked)",
+      "notes": "This includes third-party pages about the brand and is broader than the experiment's entity-own-content C definition. Do not silently harmonize it with own-site-only citation advice."
+    }
+  ],
+  "answer_sources": [],
+  "retrieval_sources": [
+    {
+      "domain": "www.stork.ai",
+      "kind": "Browsed link in search-activity panel; not an inline answer citation",
+      "text": "stork.ai/blog/does-chatgpt-recommend-your-product",
+      "url": "https://www.stork.ai/blog/does-chatgpt-recommend-your-product",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_activity_label_and_URL_only",
+      "classification_evidence": "The how-to blog path suggests a practical guide. Authorship, original empirical research and commercial provenance were not established from this captured metadata.",
+      "content_verified": false,
+      "role_in_analysis": "Browsed retrieval source only; exclude from cited-domain and answer-citation statistics."
+    },
+    {
+      "domain": "arahi.ai",
+      "kind": "Browsed link in search-activity panel; not an inline answer citation",
+      "text": "arahi.ai/blog/how-to-check-brand-visibility-in-chatgpt",
+      "url": "https://arahi.ai/blog/how-to-check-brand-visibility-in-chatgpt",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_activity_label_and_URL_only",
+      "classification_evidence": "The how-to blog path suggests a practical guide. Authorship, original empirical research and commercial provenance were not established from this captured metadata.",
+      "content_verified": false,
+      "role_in_analysis": "Browsed retrieval source only; exclude from cited-domain and answer-citation statistics."
+    }
+  ],
+  "cited_hostname_set": [],
+  "registrable_domain_mapping": {
+    "method": "No inline answer citation domains to normalize. Separate retrieval hosts normalize www.stork.ai to stork.ai while retaining observed hrefs; arahi.ai unchanged. No external public-suffix lookup used.",
+    "cited_mapping": {},
+    "retrieval_mapping": {
+      "www.stork.ai": "stork.ai",
+      "arahi.ai": "arahi.ai"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 3717,
+    "observed_inline_link_occurrences": 0,
+    "unique_DOM_answer_URLs": 0,
+    "observed_inline_cited_domains": 0,
+    "retrieval_links_recorded": 2,
+    "source_badge_hits": 65,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": true,
+    "citation_mapping_scope": "Scoped rendered answer has zero observable inline anchors. This does not establish absence of retrieval or a complete source-panel inventory.",
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "search_query_labels": [
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcfree method to check if product appears in ChatGPT recommendations15",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edchow to monitor SaaS product visibility in Grok and ChatGPT AI search10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcrepeatable workflow AI SEO for bootstrapped SaaS ChatGPT Grok10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"ChatGPT\" \"appears in\" OR \"mentioned in\" recommendations SaaS free tool OR method10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcGrok AI recommendations how to check product visibility free10",
+      "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcChatGPT temporary chat OR private for AI visibility check10"
+    ],
+    "search_hit_counts_reported": [
+      15,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "notes": [
+      "Six recorded native web-query labels carry hit counts 15 plus five groups of 10. Their sum is 65 result hits, not 65 unique sources or citations.",
+      "Preserve query labels verbatim, including UI text and concatenated result counts; they are not asserted as parsed exact provider-query strings.",
+      "Two browsed links are explicitly retrieval/activity sources, not answer citations. Their domain/category fields are separate from the empty inline-cited-domain set.",
+      "All tool pricing/feature claims, model weighting, time estimates and reliability assertions remain unverified Grok output."
+    ],
+    "original_capture_answer_characters": 3717,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 9,
+    "citation_true": 0,
+    "mention_true": 9,
+    "recommendation_true": 7,
+    "visibility_checker_recommendations": [
+      "Ahrefs Brand Radar"
+    ],
+    "default_mentioned_tools": [
+      "Google People also ask",
+      "Reddit",
+      "Google Search Console",
+      "Google Sheets",
+      "Notion",
+      "G2",
+      "Capterra",
+      "X",
+      "Ahrefs Brand Radar"
+    ],
+    "default_recommended_tools": [
+      "Google People also ask",
+      "Reddit",
+      "Google Search Console",
+      "Google Sheets",
+      "Notion",
+      "X",
+      "Ahrefs Brand Radar"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "inline_link_occurrences": 0,
+    "unique_answer_URLs": 0,
+    "observed_inline_cited_domains": 0,
+    "retrieval_links_recorded": 2
+  },
+  "coding_cautions": [
+    "Recommended prompt inputs, spreadsheet/table tools and content channels are different roles; avoid presenting all seven as dedicated GEO measurement tools.",
+    "G2/Capterra are examples of review-change events, not explicit adoption or posting recommendations.",
+    "Citation rate in this answer includes trusted third-party pages about the brand. This is a substantive metric-definition difference, not a change to the experiment's C coding.",
+    "Active recommendation rate is not operationalized separately from appearance rate.",
+    "Search enablement is advised, but logging actual search use/model versions is not explicit in the tracking columns.",
+    "Zero observed inline citation domains does not imply no evidence retrieval. Preserve both separate lists and their coverage limits."
+  ],
+  "source_record_sha256": "3ea767f5d062eb184e9725de1fb93b18505a4860cc039e2ba340cf7992468746"
+}

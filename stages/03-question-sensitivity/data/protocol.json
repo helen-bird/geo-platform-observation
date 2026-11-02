@@ -1,0 +1,377 @@
+{
+  "title": "Stage 3: Sensitivity to question design in GEO measurement advice",
+  "registered_at": "2026-11-02T14:03:10.188434+08:00",
+  "timezone": "Asia/Shanghai",
+  "prompts": {
+    "M1": "I'm a solo SaaS founder with no GEO budget. How can I reliably measure whether ChatGPT and Grok recommend my product to potential buyers?",
+    "M2": "As a bootstrapped SaaS builder, what's a free, repeatable workflow for checking whether my product appears in ChatGPT and Grok recommendations?",
+    "V1": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+    "V2": "As a bootstrapped SaaS builder, what checks should I perform before trusting reported ChatGPT and Grok visibility scores for my product?"
+  },
+  "design": {
+    "intents": 2,
+    "wordings_per_intent": 2,
+    "platforms": 2,
+    "repeats_per_prompt_platform": 3,
+    "planned_answers": 24,
+    "unit": "One Grok fresh conversation or one independent stateless OpenAI Responses API request receiving exactly one registered prompt.",
+    "order": "Three repeat blocks, shuffled prompts and platform order with seed 20261102; planned order retained, actual order and deviations recorded.",
+    "planned_order": [
+      "S3-GROK-V1-R1",
+      "S3-CHATGPT-V1-R1",
+      "S3-CHATGPT-V2-R1",
+      "S3-GROK-V2-R1",
+      "S3-GROK-M2-R1",
+      "S3-CHATGPT-M2-R1",
+      "S3-GROK-M1-R1",
+      "S3-CHATGPT-M1-R1",
+      "S3-GROK-M1-R2",
+      "S3-CHATGPT-M1-R2",
+      "S3-GROK-M2-R2",
+      "S3-CHATGPT-M2-R2",
+      "S3-CHATGPT-V1-R2",
+      "S3-GROK-V1-R2",
+      "S3-CHATGPT-V2-R2",
+      "S3-GROK-V2-R2",
+      "S3-GROK-M2-R3",
+      "S3-CHATGPT-M2-R3",
+      "S3-GROK-V2-R3",
+      "S3-CHATGPT-V2-R3",
+      "S3-GROK-M1-R3",
+      "S3-CHATGPT-M1-R3",
+      "S3-GROK-V1-R3",
+      "S3-CHATGPT-V1-R3"
+    ],
+    "unit_at_registration": "One fresh conversation receiving exactly one registered prompt.",
+    "current_comparison_surfaces": [
+      "Grok consumer web interface, Expert mode",
+      "OpenAI Responses API, gpt-5.6-sol / medium, native web_search required"
+    ],
+    "interpretation_amendment": "The OpenAI arm is an API configuration, not a measurement of consumer ChatGPT Search. Cross-arm differences include interface, retrieval and execution-time differences; they cannot be interpreted as pure consumer-platform or wording effects."
+  },
+  "controls": {
+    "chatgpt": {
+      "interface_requested": "desktop",
+      "desktop_preflight": "Computer-use tool denied protected application [Protected desktop application]; no prompt submitted.",
+      "web_fallback": "Explicitly approved by user on 2026-11-02, conditional on complete answer/source capture preflight.",
+      "model": "gpt-5.6-sol (requested and returned undated API identifier)",
+      "reasoning_effort": "medium",
+      "search": "Responses API hosted web_search; tool_choice required; live access true; actual returned calls recorded.",
+      "personalization": "Stateless API requests, exactly one original user prompt, no prior-response/conversation/history, no system/developer additions.",
+      "historical_ui_blocker": "One Cloudflare failure followed by a searched but unreadable answer. Copy yields loading error, Save Chat disabled. Five source-panel URLs recovered; body remains unavailable. No batch submission until capture preflight succeeds or user chooses manual/delayed completion.",
+      "collection_status": "12 complete API answers selected; all three incomplete historical consumer-UI submissions retained separately.",
+      "current_formal_interface": "OpenAI Responses API web_search, explicitly approved; not consumer ChatGPT Search.",
+      "current_blocker": null,
+      "historical_ui_model": "GPT-5.6 Sol (explicit UI selection)",
+      "historical_ui_reasoning_effort": "Medium",
+      "historical_ui_search": "Select native web search; capture actual search separately.",
+      "historical_ui_personalization": "Use non-personalized fresh temporary chats where available; document actual controls.",
+      "backend_snapshot": "Undated API ID; exact underlying snapshot not independently established."
+    },
+    "grok": {
+      "model": "Expert; exact backend version not exposed",
+      "search": "Native web/X retrieval; UI enabled state and actual activity recorded separately.",
+      "personalization": "X/history personalization disabled for all twelve tests; restored to pre-test values afterward. Original preference values omitted.",
+      "settings_restoration_pending": false
+    },
+    "openai_api": {
+      "provider": "OpenAI",
+      "interface": "Responses API",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "configuration_status": "awaiting_credentials_and_setup_validation",
+      "model_availability_verified": false,
+      "search_required": true,
+      "search_evidence_policy": "Require search in API configuration; record actual returned web-search tool calls separately from configured search and citation annotations.",
+      "request_context": "Stateless independent requests, no prior response ID, conversation history, personal account context or seeded prior answers. Exact registered user prompt only; no additional user/system steering.",
+      "minimum_seconds_between_same_platform_submissions": 90,
+      "fallback_policy": "No silent model, effort, provider or search-setting substitution. Report an unavailable condition instead.",
+      "platform": "OpenAI API + web search"
+    }
+  },
+  "capture_policy": [
+    "Prompts remain verbatim; no output-format directions, identity/product seed, prior answers or follow-up questions.",
+    "Record complete text and explicit returned URLs/domains; do not equate retrieval panels or whole-page anchors with citations.",
+    "A failed or partial capture does not establish a negative result. Preserve every actual submission and recovery separately.",
+    "Before changing fixed model/effort, additional submission policy or accepted scope, obtain confirmation.",
+    "No publication authorized by this collection request. Public edition requires separate instruction.",
+    "For the public edition, historical publication restrictions are superseded by the dated public-release authorization; private originals remain local."
+  ],
+  "analysis": "analysis-plan.md",
+  "preflight_submissions": 1,
+  "status": "complete_redacted_public_edition",
+  "actual_order": [
+    "S3-CHATGPT-V1-R1",
+    "S3-CHATGPT-V1-R1-A2",
+    "S3-GROK-V1-R1",
+    "S3-GROK-V2-R1",
+    "S3-GROK-M2-R1",
+    "S3-GROK-M1-R1",
+    "S3-GROK-M1-R2",
+    "S3-GROK-M2-R2",
+    "S3-GROK-V1-R2",
+    "S3-GROK-V2-R2",
+    "S3-GROK-M2-R3",
+    "S3-GROK-V2-R3",
+    "S3-GROK-M1-R3",
+    "S3-GROK-V1-R3",
+    "S3-CHATGPT-V1-R1-A3",
+    "S3-OPENAIAPI-V1-R1",
+    "S3-OPENAIAPI-V2-R1",
+    "S3-OPENAIAPI-M2-R1",
+    "S3-OPENAIAPI-M1-R1",
+    "S3-OPENAIAPI-M1-R2",
+    "S3-OPENAIAPI-M2-R2",
+    "S3-OPENAIAPI-V1-R2",
+    "S3-OPENAIAPI-V2-R2",
+    "S3-OPENAIAPI-M2-R3",
+    "S3-OPENAIAPI-V2-R3",
+    "S3-OPENAIAPI-M1-R3",
+    "S3-OPENAIAPI-V1-R3"
+  ],
+  "submission_pacing": {
+    "minimum_seconds_between_same_platform_submissions": 90,
+    "policy": "Alternate platforms where possible. No burst retries. Record all actual submission timestamps.",
+    "requested_by_user": "2026-11-02"
+  },
+  "supplement_policy": {
+    "authorized": true,
+    "target": "24 complete selected answer bodies",
+    "failures": "Retain each failed or partial submission separately; extra submissions use a new attempt ID and unchanged prompt/model settings."
+  },
+  "amendments": [
+    {
+      "date": "2026-11-02",
+      "change": "User approved web fallback after native desktop app was denied by computer-use tool."
+    },
+    {
+      "date": "2026-11-02",
+      "change": "User approved extra supplements with failures retained; requested longer intervals."
+    },
+    {
+      "date": "2026-11-02",
+      "change": "Chrome browser connection became available after initial native UI collection. Same browser/profile and platform settings retained. New records use scoped visible article text and exact DOM hrefs. First three Grok records preserve native display-target URL precision limitations."
+    },
+    {
+      "date": "2026-11-02",
+      "recorded_at": "2026-11-02T09:03:25.362981+00:00",
+      "change": "User explicitly authorized replacing the incomplete ChatGPT consumer-web arm with 12 new formal OpenAI Responses API web_search answers using gpt-5.6-sol / Medium, total budget US$10. Retain all UI failures; stateless exact prompts, required search and minimum 90-second same-platform pacing remain.",
+      "scope": "Original S3-CHATGPT slot IDs retained for position mapping, with explicit API platform/interface metadata; new actual attempt IDs planned as S3-OPENAIAPI-{prompt}-R{repeat}. No API submission has occurred.",
+      "limitation": "API web_search is not equivalent to consumer ChatGPT Search; cross-arm differences must preserve that condition change."
+    },
+    {
+      "date": "2026-11-02",
+      "change": "Redacted public edition authorized. All 24 selected answers, 27 prompt submissions and 24 coding records retained. The formal OpenAI arm used the Responses API with web search; it cannot represent consumer ChatGPT Search."
+    }
+  ],
+  "restoration": {
+    "completed": true,
+    "restored_at": "2026-11-02T06:54:34.518Z",
+    "scope": "Grok personalization restored to pre-test values. Original preference values and account UI omitted.",
+    "evidence": "settings-summary.json",
+    "other_settings_changed": false
+  },
+  "preview_verification": {
+    "historical_local_preview": "Local browser-file preview was unavailable during collection. Public deployment verification is a separate later step."
+  },
+  "api_collection": {
+    "authorized": true,
+    "authorized_on": "2026-11-02",
+    "planned_formal_answers": 12,
+    "actual_submissions": 12,
+    "complete_answers": 12,
+    "budget_currency": "USD",
+    "authorized_total_budget": 10.0,
+    "budget_policy": "US$10 authorized total; sequential admission with US$6.60 reservation, usage-priced estimates, stop on unknown outcomes. No automatic budget increase. Estimates require provider-billing reconciliation.",
+    "status": "complete",
+    "planned_slot_mapping": [
+      {
+        "slot_id": "S3-CHATGPT-V1-R1",
+        "planned_attempt_id": "S3-OPENAIAPI-V1-R1",
+        "prompt_id": "V1",
+        "repeat": 1
+      },
+      {
+        "slot_id": "S3-CHATGPT-V2-R1",
+        "planned_attempt_id": "S3-OPENAIAPI-V2-R1",
+        "prompt_id": "V2",
+        "repeat": 1
+      },
+      {
+        "slot_id": "S3-CHATGPT-M2-R1",
+        "planned_attempt_id": "S3-OPENAIAPI-M2-R1",
+        "prompt_id": "M2",
+        "repeat": 1
+      },
+      {
+        "slot_id": "S3-CHATGPT-M1-R1",
+        "planned_attempt_id": "S3-OPENAIAPI-M1-R1",
+        "prompt_id": "M1",
+        "repeat": 1
+      },
+      {
+        "slot_id": "S3-CHATGPT-M1-R2",
+        "planned_attempt_id": "S3-OPENAIAPI-M1-R2",
+        "prompt_id": "M1",
+        "repeat": 2
+      },
+      {
+        "slot_id": "S3-CHATGPT-M2-R2",
+        "planned_attempt_id": "S3-OPENAIAPI-M2-R2",
+        "prompt_id": "M2",
+        "repeat": 2
+      },
+      {
+        "slot_id": "S3-CHATGPT-V1-R2",
+        "planned_attempt_id": "S3-OPENAIAPI-V1-R2",
+        "prompt_id": "V1",
+        "repeat": 2
+      },
+      {
+        "slot_id": "S3-CHATGPT-V2-R2",
+        "planned_attempt_id": "S3-OPENAIAPI-V2-R2",
+        "prompt_id": "V2",
+        "repeat": 2
+      },
+      {
+        "slot_id": "S3-CHATGPT-M2-R3",
+        "planned_attempt_id": "S3-OPENAIAPI-M2-R3",
+        "prompt_id": "M2",
+        "repeat": 3
+      },
+      {
+        "slot_id": "S3-CHATGPT-V2-R3",
+        "planned_attempt_id": "S3-OPENAIAPI-V2-R3",
+        "prompt_id": "V2",
+        "repeat": 3
+      },
+      {
+        "slot_id": "S3-CHATGPT-M1-R3",
+        "planned_attempt_id": "S3-OPENAIAPI-M1-R3",
+        "prompt_id": "M1",
+        "repeat": 3
+      },
+      {
+        "slot_id": "S3-CHATGPT-V1-R3",
+        "planned_attempt_id": "S3-OPENAIAPI-V1-R3",
+        "prompt_id": "V1",
+        "repeat": 3
+      }
+    ],
+    "historical_ui_submissions": 3,
+    "historical_ui_policy": "All three historical consumer-UI attempts retained and excluded from the 12 formal API answers.",
+    "platform": "OpenAI API + web search",
+    "interface": "Responses API",
+    "estimated_spend_usd": 1.667876,
+    "access_preflight": {
+      "generation_submitted": false,
+      "model_access_established": true,
+      "http_status": 200,
+      "returned_model": "gpt-5.6-sol",
+      "evidence": "setup-history.json",
+      "earlier_failed_setup_checks_retained": true
+    },
+    "cost_estimate_complete": true,
+    "billing_reconciled": false,
+    "collection_completed_at": "2026-11-02T09:41:54.845343+00:00",
+    "no_further_submissions_planned": true
+  },
+  "collection_checkpoint": {
+    "recorded_at": "2026-11-02T09:03:25.362981+00:00",
+    "grok_complete_answers": 12,
+    "consumer_chatgpt_ui_actual_submissions": 3,
+    "consumer_chatgpt_ui_complete_answers": 0,
+    "formal_api_actual_submissions": 0,
+    "formal_api_complete_answers": 0,
+    "total_actual_submissions": 15,
+    "selected_complete_answers": 12
+  },
+  "condition_limitations": [
+    "The OpenAI formal condition is Responses API with web search, not consumer ChatGPT Search.",
+    "All OpenAI API submissions occurred after Grok collection; interface, model and collection-time differences confound cross-platform interpretations.",
+    "Requested and returned gpt-5.6-sol is an undated identifier; exact backend snapshot and equivalence to consumer ChatGPT are not established.",
+    "Assistant qualitative coding is not independent human double-coding. Source categories are provisional; external content, capabilities and commercial claims are not audited.",
+    "Three repeats per cell are exploratory. This tests sensitivity of observed advice to question design, not effectiveness of a GEO intervention."
+  ],
+  "findings": [
+    {
+      "title": "The same question did not freeze the detailed advice.",
+      "detail": "Grok\u2019s mean pairwise overlap of recommended tool/surface sets ranged from 27.5% to 60.0% across the four prompts (three pairs per prompt). OpenAI API M1 changed from a 0\u20133 rubric in runs 1\u20132 to a \u22121/0\u20134 rubric in run 3; only the third run recommended Google Sheets, GA4, Plausible and PostHog. These generated rules are not validated scoring standards.",
+      "evidence": [
+        "S3-GROK-M1-R1",
+        "S3-GROK-M1-R2",
+        "S3-GROK-M1-R3",
+        "S3-GROK-M2-R1",
+        "S3-GROK-M2-R2",
+        "S3-GROK-M2-R3",
+        "S3-OPENAIAPI-M1-R1",
+        "S3-OPENAIAPI-M1-R2",
+        "S3-OPENAIAPI-M1-R3"
+      ]
+    },
+    {
+      "title": "Within-intent phrasing changed tool lists more than some source-domain pools.",
+      "detail": "Pooling three runs per variant, Grok M1/M2 shared 7 of 27 recommended entities (25.9%), and V1/V2 shared 4 of 14 (28.6%). OpenAI API M1/M2 shared 0 of 7 recommended entities but all 3 normalized cited domains. Its V variants recommended no new named tools, so their tool-overlap comparison is N/A, not 0% or 100%. Sparse lists and the registered budget/action cues limit a pure wording interpretation.",
+      "evidence": [
+        "runs.json",
+        "analysis-plan.md"
+      ]
+    },
+    {
+      "title": "Intent was a consistent signal for answer type.",
+      "detail": "For each interface, all six M answers primarily gave measurement workflows and all six V answers gave score-audit checklists. The tool pools still differed: Grok M versus V shared 11 of 30 unique recommended entities (36.7%); OpenAI API had 7 M entities and no new V tool recommendations. This compares different tasks, not a pure phrasing effect.",
+      "evidence": [
+        "coding/",
+        "analysis-plan.md"
+      ]
+    },
+    {
+      "title": "The two collected interfaces selected visibly different source mixes.",
+      "detail": "All 12 OpenAI API answers cited platform documentation; one also cited academic/methods research. Grok had editorial/industry sources in 7 of 12 answers, product pages in 4, vendor research in 1, and unresolved source types in 10. Categories can overlap and remain provisional. The API requests were collected after Grok and used a different interface and model configuration, so these observations do not isolate a platform effect.",
+      "evidence": [
+        "coding/",
+        "protocol.json"
+      ]
+    },
+    {
+      "title": "Citation, mention and recommendation remained separate observations.",
+      "detail": "Among new tool/service/feature/channel entity-by-answer rows, OpenAI API had 10 C+M rows without R, 7 M+R rows without C, and 13 mention-only rows (30 total). Grok had 7 C+M+R, 76 M+R without C, and 43 mention-only rows (126 total). C refers to the entity\u2019s own content under the codebook; supplied targets and source-publisher-only records are excluded. These distributions cannot grade a product\u2019s GEO work or establish an optimization effect.",
+      "evidence": [
+        "coding/",
+        "analysis-plan.md"
+      ]
+    }
+  ],
+  "interpretation_limits": [
+    "Three repeats per cell are exploratory and do not establish causality or a GEO optimization effect.",
+    "Within-intent variants are registered phrase packages, not perfect synonyms: V1 explicitly says no GEO budget while V2 says bootstrapped; M1 emphasizes reliable measurement and M2 free repeatability.",
+    "A small or empty new-tool list is not evidence of missing advice: OpenAI API gave detailed generic workflows and audits. Both-empty tool sets are N/A for Jaccard.",
+    "Grok\u2019s first three native captures preserve display-target URL precision and unresolved citation coverage; strict and qualified observed-link comparisons must remain separate.",
+    "Tool/service/feature/channel C/M/R rows are not all source publishers, not brand market share, and not independent causal trials."
+  ],
+  "coding_checkpoint": {
+    "completed_at": "2026-11-02T09:45:33.433100+00:00",
+    "eligible_files": 24,
+    "api_files": 12,
+    "grok_files": 12,
+    "method": "Assistant semantic review with exact excerpts and raw-record hashes; no independent human double-coding."
+  },
+  "completed_at": "2026-11-02T09:51:21.228488+00:00",
+  "completion_scope": {
+    "complete_selected_answers": 24,
+    "complete_assistant_coding": 24,
+    "local_report_generated": true,
+    "published": true,
+    "browser_visual_preview": "Publication checks are reported separately; historical local-file preview restriction is not a public-page rendering result.",
+    "external_claims_fact_checked": false,
+    "additional_API_submissions_planned": false
+  },
+  "publication_date": "2026-11-02",
+  "public_edition": {
+    "edition": "Redacted public edition",
+    "authorized_on": "2026-11-02",
+    "authorization": "User approved Stage 3 redaction and publication to the existing public GitHub repository and GitHub Pages.",
+    "condition_notice": "OpenAI API + web search, not consumer ChatGPT Search. These results do not represent ChatGPT web app performance.",
+    "historical_scope": "Earlier local-only, awaiting-credentials and intermediate-count statements describe their dated collection checkpoints, not current release authorization."
+  }
+}

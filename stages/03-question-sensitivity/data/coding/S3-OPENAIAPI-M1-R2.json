@@ -1,0 +1,414 @@
+{
+  "id": "S3-OPENAIAPI-M1-R2",
+  "source_record": "records/S3-OPENAIAPI-M1-R2.json",
+  "coding_method": "Assistant review of the complete 6,955-character API answer, all three citation annotations and matching explicit Markdown URLs. No outside webpage access, factual audit or independent human double-coding.",
+  "coding_scope": "Named measurement services/channels are separate from supplied platforms, source publishers, hypothetical buyer-prompt products and signup attribution examples. Generic spreadsheets, analytics and server logs remain unbranded.",
+  "answer_type": {
+    "primary": "Manual measurement workflow",
+    "secondary": [
+      "Conceptual explanation",
+      "Score validation or audit checklist"
+    ],
+    "evidence": "Build a fixed \u201cbuyer prompt panel\u201d",
+    "rationale": "The answer supplies a buyer-panel audit, repeated controlled sampling, scoring formulas, spreadsheet schema and pipeline attribution. No particular third-party measurement product is suggested."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Aided tests diagnose what the model knows; they do not measure discovery."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Repeat each prompt three times on different days."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Start a fresh conversation."
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Record date, model/mode, whether web search occurred, location, and personalization state."
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "Record date, model/mode, whether web search occurred, location, and personalization state."
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": true,
+      "evidence": "**1:** Mentioned, but not recommended"
+    },
+    "citation_and_mention_rates_separate": {
+      "value": true,
+      "evidence": "Citation rate = Runs citing your site / Searched runs"
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Website linked or cited? Yes/no"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "inspect the actual cited pages."
+    },
+    "raw_answer_archiving_explicit": {
+      "value": true,
+      "evidence": "Save the complete response and cited sources."
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "Recommendation rate = Runs scoring 2 or 3 / Total runs"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": true,
+      "evidence": "Weight your overall score by business importance."
+    },
+    "composite_score_caution": {
+      "value": false,
+      "evidence": null
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "Models, search results, source selection, and wording vary; evaluate rolling monthly trends instead."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Any serious factual error"
+    },
+    "downstream_conversions": {
+      "value": true,
+      "evidence": "Trial-to-paid rate"
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "AI-referred sessions"
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    },
+    "branded_diagnostic_separated": {
+      "value": true,
+      "evidence": "Aided tests diagnose what the model knows; they do not measure discovery."
+    },
+    "universal_rank_caution": {
+      "value": true,
+      "evidence": "There is no single universal ranking\u2014only recommendation rates under documented prompts, conditions, and dates."
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "X",
+      "observed_name": "X activity; public X posts",
+      "entity_type": "community_source_context",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed as a Grok retrieval/personalization context",
+      "free_budget_fit": "unspecified",
+      "evidence": "Grok may search both public X posts and the broader web, and its answers can be personalized using account activity and interests.",
+      "source_urls": [
+        "https://help.x.com/en/using-x/about-grok"
+      ],
+      "canonicalization_status": "exact_platform_name",
+      "notes": "Own X Help Center content is cited. No active instruction to use X for measurement or publish there is supplied; platform/personalization claims remain unverified."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for controlled manual audit",
+      "free_budget_fit": "stated free",
+      "evidence": "Use identical wording on both platforms.",
+      "source_urls": [
+        "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+        "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Supplied target platform. Provider/OpenAI or X Help Center about Grok is cited; no independently verified platform behavior is asserted."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for controlled manual audit",
+      "free_budget_fit": "stated free",
+      "evidence": "Use identical wording on both platforms.",
+      "source_urls": [
+        "https://help.x.com/en/using-x/about-grok"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Supplied target platform. Provider/OpenAI or X Help Center about Grok is cited; no independently verified platform behavior is asserted."
+    }
+  ],
+  "contextual_non_tool_entities": [
+    {
+      "entity": "Stripe",
+      "entity_type": "hypothetical_buyer_prompt_product",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "Recommend an invoicing SaaS under $20/month with Stripe integration.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "An integration constraint in an example buyer prompt, not a recommendation to use Stripe as a measurement tool."
+    },
+    {
+      "entity": "QuickBooks",
+      "entity_type": "hypothetical_buyer_prompt_product",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "What are simpler alternatives to QuickBooks for freelancers?",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "An alternatives-query example, not a recommendation for measurement or an actual target product."
+    },
+    {
+      "entity": "Google",
+      "entity_type": "signup_attribution_option",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "Google/search engine",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "A survey option, not a recommended product or a Google Analytics mention."
+    },
+    {
+      "entity": "OpenAI",
+      "entity_type": "provider_attribution",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "OpenAI also cautions that citations and search results can be incomplete or incorrect, so inspect the actual cited pages.",
+      "source_urls": [
+        "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+        "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Provider attribution/documentation publisher, not another named measurement tool."
+    }
+  ],
+  "generic_methods": [
+    "Fixed unaided buyer-prompt panel with separate aided diagnostics",
+    "Controlled default-versus-search audit in fresh sessions",
+    "Manual per-response 0\u20133 rubric and longitudinal metrics",
+    "Unnamed spreadsheet plus prompt metadata sheet",
+    "Business-importance weighting without a complete aggregate formula",
+    "Unnamed analytics/server logs; no GA4 brand inferred",
+    "Signup self-report and qualitative customer attribution",
+    "Weekly pulse and monthly repeated benchmark"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Mention rate",
+      "definition_verbatim": "Mention rate = Runs mentioning you / Total runs"
+    },
+    {
+      "label": "Recommendation rate",
+      "definition_verbatim": "Recommendation rate = Runs scoring 2 or 3 / Total runs"
+    },
+    {
+      "label": "Top-pick rate",
+      "definition_verbatim": "Top-pick rate = Runs scoring 3 / Total runs"
+    },
+    {
+      "label": "Citation rate",
+      "definition_verbatim": "Citation rate = Runs citing your site / Searched runs"
+    },
+    {
+      "label": "Consistency rate",
+      "definition_verbatim": "Consistency rate = Prompts where you appear in at least 2 of 3 runs / Total prompts",
+      "notes": "Retain appearance-based wording; the formula does not explicitly require score 2 or 3."
+    },
+    {
+      "label": "Competitor share of voice",
+      "definition_verbatim": "Your recommendation appearances /\nAll recommendation appearances across you and tracked competitors"
+    },
+    {
+      "label": "Business-importance weighting",
+      "definition_verbatim": "Weight your overall score by business importance.",
+      "notes": "Prompt sheet assigns 1\u20135 importance, but no explicit overall weighted formula is supplied."
+    }
+  ],
+  "answer_sources": [
+    {
+      "type": "url_citation",
+      "title": "Data controls in ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+      "text": "Data controls in ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "Returned OpenAI/X Help Center title and official help hostname identify platform help; page contents and factual claims were not independently checked.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation for controls/search behavior, not a recommendation for a third-party measurement product"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "Returned OpenAI/X Help Center title and official help hostname identify platform help; page contents and factual claims were not independently checked.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation for controls/search behavior, not a recommendation for a third-party measurement product"
+    },
+    {
+      "type": "url_citation",
+      "title": "About Grok | X Help Center",
+      "url": "https://help.x.com/en/using-x/about-grok",
+      "text": "About Grok | X Help Center",
+      "domain": "help.x.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "Returned OpenAI/X Help Center title and official help hostname identify platform help; page contents and factual claims were not independently checked.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation for controls/search behavior, not a recommendation for a third-party measurement product"
+    }
+  ],
+  "explicit_body_links": [
+    {
+      "url": "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://help.x.com/en/using-x/about-grok",
+      "domain": "help.x.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    }
+  ],
+  "cited_hostname_set": [
+    "help.openai.com",
+    "help.x.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping of help.openai.com to openai.com and help.x.com to x.com, retaining exact observed URLs and hostnames. No external suffix lookup.",
+    "mapping": {
+      "help.openai.com": "openai.com",
+      "help.x.com": "x.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 6901,
+    "transport_body_complete": true,
+    "response_status": "completed",
+    "incomplete_details": null,
+    "coherent_ending": true,
+    "url_citation_occurrences": 3,
+    "explicit_body_URL_occurrences": 3,
+    "unique_answer_URLs": 3,
+    "unique_cited_hostnames": 2,
+    "unique_normalized_cited_domains": 2,
+    "citation_mapping_complete": true,
+    "source_inventory_scope": "Three citation annotations match three explicit Markdown source URLs and map to two publisher domains. Separate retrieved action.sources records are not answer citations.",
+    "source_inventory_complete_for_answer_URLs": true,
+    "retrieval_inventory_complete": false,
+    "search_observed": true,
+    "search_enabled_API": true,
+    "web_action_count": 1,
+    "search_action_count": 1,
+    "reported_billable_search_requests": 1,
+    "requested_model": "gpt-5.6-sol",
+    "returned_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "medium",
+    "returned_reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "model_and_effort_match": true,
+    "request_file": "requests/S3-OPENAIAPI-M1-R2.json",
+    "response_file": "responses/S3-OPENAIAPI-M1-R2.json",
+    "request_context_check": {
+      "exact_registered_prompt": true,
+      "store": false,
+      "tool_choice": "required"
+    },
+    "notes": [
+      "Full six-section workflow, dashboard and final sentence reviewed; not relying only on completed status.",
+      "Three annotations and three explicit Markdown links are the same three source occurrences, not six.",
+      "One returned search action is independent of citation count and of the number of queries inside the action.",
+      "No observed tool/output cap reached; all illustrative recommendation/conversion statistics remain model examples."
+    ],
+    "original_capture_answer_characters": 6955,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "cost_and_limits_review": {
+    "estimated_cost": {
+      "estimated_usd": 0.0980916,
+      "token_cost_usd": 0.0880916,
+      "charged_searches_estimate": 1,
+      "search_count_basis": "reported billable web_search.num_requests",
+      "billing_reconciled": false
+    },
+    "usage": {
+      "input_tokens": 12997,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 4349
+      },
+      "output_tokens": 2588,
+      "output_tokens_details": {
+        "reasoning_tokens": 1098
+      },
+      "total_tokens": 15585
+    },
+    "max_tool_calls": 8,
+    "observed_web_actions": 1,
+    "max_output_tokens": 32768,
+    "observed_output_tokens": 2588,
+    "tool_limit_reached": false,
+    "output_limit_reached": false,
+    "budget_currency": "USD",
+    "authorized_total_budget": 10.0,
+    "concerns": [
+      "No observed tool/output cap reached. Returned usage supports an estimated charge, not reconciled provider billing; total budget remains a cumulative collection constraint."
+    ]
+  },
+  "summary": {
+    "substantive_tools_services_features": 1,
+    "citation_true": 1,
+    "mention_true": 1,
+    "recommendation_true": 0,
+    "visibility_checker_recommendations": [],
+    "default_mentioned_tools": [
+      "X"
+    ],
+    "default_recommended_tools": [],
+    "supplied_target_platforms_excluded": 2,
+    "source_publishers_excluded_from_tool_overlap": 1,
+    "example_products_excluded_from_tool_overlap": 2,
+    "inline_link_occurrences": 3,
+    "unique_answer_URLs": 3,
+    "unique_cited_hostnames": 2,
+    "unique_cited_domains": 2
+  },
+  "coding_cautions": [
+    "Stripe and QuickBooks are hypothetical buyer-prompt examples, not measurement recommendations.",
+    "Google/search engine is an attribution survey option; no branded analytics/spreadsheet service is inferred.",
+    "Business-importance weighting is advised, but a complete composite-score formula is absent.",
+    "The final numeric dashboard example is illustrative model output, not this experiment's observed recommendation/conversion data.",
+    "Citation source contents, free-process time estimates and platform behavior remain unverified output.",
+    "API-versus-consumer-interface differences and within-cell repeats must remain explicit."
+  ],
+  "source_record_sha256": "8b18741a56d11fc4846ebb13eba45efde8df7902ee4a941372ab07a12f20707e"
+}

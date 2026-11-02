@@ -1,0 +1,724 @@
+{
+  "id": "S3-OPENAIAPI-V1-R3",
+  "slot_id": "S3-CHATGPT-V1-R3",
+  "platform": "OpenAI API + web search",
+  "interface": "Responses API",
+  "prompt_id": "V1",
+  "intent": "V",
+  "wording": 1,
+  "repeat": 3,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+  "submitted_at": "2026-11-02T09:40:11.574647+00:00",
+  "model_label": "gpt-5.6-sol",
+  "requested_model": "gpt-5.6-sol",
+  "returned_model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "returned_reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "personalization": false,
+  "search_enabled_api": true,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "**Treat an AI visibility score as a sampled estimate\u2014not an objective ranking.** ChatGPT and Grok can change answers based on model version, search mode, location, prompt wording, session context, and randomness. ChatGPT may rewrite searches and use approximate location; Grok\u2019s results differ depending on whether web/X search is enabled. ([help.openai.com](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt))\n\n## A trustworthy score should pass these tests\n\n1. **Prompts are visible**\n   - You can inspect every prompt.\n   - They resemble real buyer questions.\n   - Most are unbranded, such as \u201cbest invoicing software for solo consultants,\u201d rather than prompts containing your company name.\n\n2. **The exact environment is disclosed**\n   - ChatGPT and Grok versions or product surfaces.\n   - Consumer app versus API.\n   - Web search on/off.\n   - Country or location.\n   - Date and frequency of collection.\n   - Fresh conversations, with memory/personalization controlled.\n\n   An API test without search is not a valid proxy for users asking a search-enabled consumer product. OpenAI and xAI both document that search changes how current information and sources are retrieved. ([help.openai.com](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt))\n\n3. **Each prompt is run repeatedly**\n   - One response per prompt is essentially anecdotal.\n   - Look for at least **3 independent runs per prompt**, preferably spread across different days.\n   - The report should show variance or a range, not false precision like \u201c43.72.\u201d\n\n   For perspective, even observing a mention in 5 of 10 runs produces an approximate 95% interval of **24%\u201376%**. Small samples cannot support precise claims.\n\n4. **You can inspect the raw evidence**\n   Every score should click through to:\n   - Full answer text\n   - Timestamp\n   - Model and mode\n   - Brand mentions and competitors\n   - Position in the answer\n   - Citations and source URLs\n\n   OpenAI explicitly recommends opening citations because search results can be incomplete, outdated, or incorrect. ([help.openai.com](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt))\n\n5. **ChatGPT and Grok are reported separately**\n   A combined \u201cAI score\u201d can hide \u201cstrong on ChatGPT, invisible on Grok.\u201d Require per-engine results before any combined number.\n\n6. **It measures more than name mentions**\n   Useful dimensions include:\n   - **Mention rate:** Were you named?\n   - **Shortlist rate:** Were you presented as a viable option?\n   - **Prominence:** First recommendation versus footnote\n   - **Citation rate:** Did the answer cite your site?\n   - **Accuracy:** Were claims about your product correct?\n   - **Competitive share:** How often did you appear relative to relevant alternatives?\n\n7. **The methodology is stable and versioned**\n   Prompts, weights, and scoring rules should not quietly change between reports. Model changes should be annotated because score movement may come from the engine rather than anything you did.\n\n## Free validation process\n\nCreate a spreadsheet with **10\u201320 important buyer prompts**. For each:\n\n1. Run it three times in fresh ChatGPT conversations.\n2. Run it three times in fresh Grok conversations.\n3. Keep search settings consistent.\n4. Record mentions, shortlist position, competitors, citations, and factual errors.\n5. Repeat monthly using the same prompt set.\n\nYour simplest useful metric is:\n\n> **Visibility rate = responses containing an unprompted, relevant mention \u00f7 total responses**\n\nKeep separate columns for ChatGPT and Grok. Also maintain a \u201ccommercial shortlist rate\u201d\u2014the percentage of responses where your SaaS is genuinely recommended, not merely mentioned.\n\n## Fast red-flag checklist\n\nDo **not** trust the score if the provider:\n\n- Hides the prompts or raw responses\n- Runs each prompt only once\n- Cannot identify the model or search mode\n- Mixes branded and unbranded prompts without disclosure\n- Combines all engines into one unexplained number\n- Changes the prompt set between reporting periods\n- Claims tiny week-over-week movements are meaningful\n- Equates mentions with traffic, trials, or revenue\n- Uses the score mainly to generate an alarming sales audit\n\n**Bottom line:** trust the underlying prompt-level evidence and repeatability\u2014not the headline number. For a solo founder, a small frozen prompt panel measured consistently is more useful than a sophisticated black-box \u201cvisibility score.\u201d",
+  "answer_links": [
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    }
+  ],
+  "captured_at": "2026-11-02T09:40:39.468143+00:00",
+  "source_inventory_complete": true,
+  "transport_body_complete": true,
+  "refusals": [],
+  "response_status": "completed",
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 19633,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 4349
+    },
+    "output_tokens": 1816,
+    "output_tokens_details": {
+      "reasoning_tokens": 872
+    },
+    "total_tokens": 21449
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 3
+    }
+  },
+  "estimated_cost": {
+    "estimated_usd": 0.1291956,
+    "token_cost_usd": 0.09919560000000001,
+    "charged_searches_estimate": 3,
+    "search_count_basis": "reported billable web_search.num_requests",
+    "billing_reconciled": false
+  },
+  "reserved_budget_usd": 6.6,
+  "http_status": 200,
+  "service_tier": "default",
+  "review_note": "Read complete seven-test trust checklist, DIY process, red flags and coherent final paragraph. Three citation occurrences point to the same explicit URL and match annotations; correct model/effort and three actual searches, no caps. Interval example and vendor-method claims remain collected advice, not this experiment results or an external audit.",
+  "tool_limit_reached": false,
+  "body_review": {
+    "reviewed_at": "2026-11-02T09:40:56.685058+00:00",
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "annotation_and_explicit_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "search_calls": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:openai.com ChatGPT search how results sources official",
+          "site:x.ai Grok search sources official",
+          "AI visibility score methodology ChatGPT Grok brand monitoring"
+        ],
+        "query": "site:openai.com ChatGPT search how results sources official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://www.theaivisibilityindex.ai/faq"
+          },
+          {
+            "type": "url",
+            "url": "https://llm-visibility-index.com/methodology/"
+          },
+          {
+            "type": "url",
+            "url": "https://visibilityradar.ai/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%3F.pls"
+          },
+          {
+            "type": "url",
+            "url": "https://sofindable.com/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://www.generaldataworks.com/ai-visibility/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://www.temso.ai/rankings/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://pondral.com/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://recosignal.com/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://promptedbrand.com/ai-visibility-index/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://ogoing.ai/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://scratchmm.com/ai-tools-buyers-guide"
+          },
+          {
+            "type": "url",
+            "url": "https://substack-post-media.s3.us-east-1.amazonaws.com/post-files/173102281/5d38c637-fe29-4d63-9fb2-41c2ee842734.pdf?response-content-disposition=attachment%3B+filename%3D%22Profound_Answer_Engine_Optimization_Guide_2025.pdf%22&x-id=GetObject"
+          },
+          {
+            "type": "url",
+            "url": "https://getfoundonai.com/assets/attachments/AIVO_Methodology.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.dominoeffectlabads.com/_files/ugd/4045c2_59478a2c888e40b4b6abc7e4d2736a1d.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.britopian.com/wp-content/uploads/2025/04/Report-Brand-Visibility-and-Reputation-in-the-Age-of-AI-Driven-Search.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.whitelabeliq.com/wp-content/uploads/2025/09/AI-Visibility-Audit-Report.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2610.00253"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2609.23162"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SaaS/comments/1u2al4v/i_built_an_ai_visibility_tracker_ran_it_on_my_own/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AISearchLab/comments/1qjuas4/what_geo_metrics_actually_measure_and_what_they/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1x5i3kq/which_ai_visibility_tracking_tool_are_you_guys/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1xbgclz/i_have_a_problem_with_ai_visibility_reports_that/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/digital_marketing/comments/1ule9bi/sat_through_6_ai_search_optimization_pitches_this/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1uis2co/some_findings_from_working_on_branded_ai/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/aeo/comments/1wy7ei5/how_we_measure_ai_visibility_20_sealed_buyer/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SEO/comments/1wm7txg/how_are_you_guys_actually_measuring_ai_visibility/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SaaS/comments/1qp8uu7/how_to_track_ai_visibility_i_need_more_than_just/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SEO/comments/1t53rdl/most_ai_search_visibility_tools_are_statistically/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SaaS/comments/1qz7exs/how_to_measure_ai_search_visibility/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/b2bmarketing/comments/1qws059/this_is_why_the_data_from_most_ai_visibility/"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2401.13138"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2605.19720"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/how-to-track-your-brands-visibility-in-ai-search-results"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/surfer-ai-tracker-review"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/ahrefs-brand-radar-review"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/i-tested-the-7-best-aeo-tools"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:docs.x.ai Grok web search citations official docs",
+          "site:docs.x.ai Grok API search tool official",
+          "site:x.ai/news Grok search web citations"
+        ],
+        "query": "site:docs.x.ai Grok web search citations official docs",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/citations"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/news/grok-business"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/news/grok-1212?TB_iframe=true&height=512.1&width=921.6"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/news/grok/model-card"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/news/grok-4-1-fast"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/news/grok-4-1"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/models"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/legal/faq"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/collections-search"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/news/grok-collections-api"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-08-20-grok-4-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "calculator: (0.5+1.96^2/(2*10)-1.96*sqrt((0.5*0.5+1.96^2/(4*10))/10))/(1+1.96^2/10)"
+        ],
+        "query": "calculator: (0.5+1.96^2/(2*10)-1.96*sqrt((0.5*0.5+1.96^2/(4*10))/10))/(1+1.96^2/10)",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "api",
+            "name": "oai-calculator"
+          }
+        ]
+      }
+    }
+  ],
+  "retrieval_sources": [
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.theaivisibilityindex.ai/faq",
+      "domain": "www.theaivisibilityindex.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://llm-visibility-index.com/methodology/",
+      "domain": "llm-visibility-index.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://visibilityradar.ai/methodology",
+      "domain": "visibilityradar.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%3F.pls",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://sofindable.com/methodology",
+      "domain": "sofindable.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.generaldataworks.com/ai-visibility/methodology",
+      "domain": "www.generaldataworks.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.temso.ai/rankings/methodology",
+      "domain": "www.temso.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://pondral.com/methodology",
+      "domain": "pondral.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://recosignal.com/methodology",
+      "domain": "recosignal.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://promptedbrand.com/ai-visibility-index/methodology",
+      "domain": "promptedbrand.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ogoing.ai/methodology",
+      "domain": "ogoing.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://scratchmm.com/ai-tools-buyers-guide",
+      "domain": "scratchmm.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://substack-post-media.s3.us-east-1.amazonaws.com/post-files/173102281/5d38c637-fe29-4d63-9fb2-41c2ee842734.pdf?response-content-disposition=attachment%3B+filename%3D%22Profound_Answer_Engine_Optimization_Guide_2025.pdf%22&x-id=GetObject",
+      "domain": "substack-post-media.s3.us-east-1.amazonaws.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://getfoundonai.com/assets/attachments/AIVO_Methodology.pdf",
+      "domain": "getfoundonai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.dominoeffectlabads.com/_files/ugd/4045c2_59478a2c888e40b4b6abc7e4d2736a1d.pdf",
+      "domain": "www.dominoeffectlabads.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.britopian.com/wp-content/uploads/2025/04/Report-Brand-Visibility-and-Reputation-in-the-Age-of-AI-Driven-Search.pdf",
+      "domain": "www.britopian.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.whitelabeliq.com/wp-content/uploads/2025/09/AI-Visibility-Audit-Report.pdf",
+      "domain": "www.whitelabeliq.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2610.00253",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2609.23162",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u2al4v/i_built_an_ai_visibility_tracker_ran_it_on_my_own/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/AISearchLab/comments/1qjuas4/what_geo_metrics_actually_measure_and_what_they/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1x5i3kq/which_ai_visibility_tracking_tool_are_you_guys/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1xbgclz/i_have_a_problem_with_ai_visibility_reports_that/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/digital_marketing/comments/1ule9bi/sat_through_6_ai_search_optimization_pitches_this/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1uis2co/some_findings_from_working_on_branded_ai/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/aeo/comments/1wy7ei5/how_we_measure_ai_visibility_20_sealed_buyer/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SEO/comments/1wm7txg/how_are_you_guys_actually_measuring_ai_visibility/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qp8uu7/how_to_track_ai_visibility_i_need_more_than_just/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SEO/comments/1t53rdl/most_ai_search_visibility_tools_are_statistically/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SaaS/comments/1qz7exs/how_to_measure_ai_search_visibility/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/b2bmarketing/comments/1qws059/this_is_why_the_data_from_most_ai_visibility/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2401.13138",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2605.19720",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.techradar.com/pro/how-to-track-your-brands-visibility-in-ai-search-results",
+      "domain": "www.techradar.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.techradar.com/pro/surfer-ai-tracker-review",
+      "domain": "www.techradar.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.techradar.com/pro/ahrefs-brand-radar-review",
+      "domain": "www.techradar.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.techradar.com/pro/i-tested-the-7-best-aeo-tools",
+      "domain": "www.techradar.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/tools/citations",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://x.ai/news/grok-business",
+      "domain": "x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://x.ai/news/grok-1212?TB_iframe=true&height=512.1&width=921.6",
+      "domain": "x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://x.ai/news/grok/model-card",
+      "domain": "x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://x.ai/news/grok-4-1-fast",
+      "domain": "x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://x.ai/news/grok-4-1",
+      "domain": "x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/models",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://x.ai/legal/faq",
+      "domain": "x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/tools/collections-search",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://x.ai/news/grok-collections-api",
+      "domain": "x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+      "domain": "data.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://data.x.ai/2025-08-20-grok-4-model-card.pdf",
+      "domain": "data.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf",
+      "domain": "data.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf",
+      "domain": "data.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    }
+  ],
+  "raw_file": "records/S3-OPENAIAPI-V1-R3.json",
+  "request_file": "requests/S3-OPENAIAPI-V1-R3.json",
+  "response_file": "responses/S3-OPENAIAPI-V1-R3.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 4519,
+  "public_answer_characters": 4465,
+  "answer_privacy_edits": {
+    "body_changed": true,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

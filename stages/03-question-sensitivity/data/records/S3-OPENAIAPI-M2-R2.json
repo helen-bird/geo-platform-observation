@@ -1,0 +1,465 @@
+{
+  "id": "S3-OPENAIAPI-M2-R2",
+  "slot_id": "S3-CHATGPT-M2-R2",
+  "platform": "OpenAI API + web search",
+  "interface": "Responses API",
+  "prompt_id": "M2",
+  "intent": "M",
+  "wording": 2,
+  "repeat": 2,
+  "prompt": "As a bootstrapped SaaS builder, what's a free, repeatable workflow for checking whether my product appears in ChatGPT and Grok recommendations?",
+  "submitted_at": "2026-11-02T09:28:30.430693+00:00",
+  "model_label": "gpt-5.6-sol",
+  "requested_model": "gpt-5.6-sol",
+  "returned_model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "returned_reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "personalization": false,
+  "search_enabled_api": true,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "A good **$0 workflow** is a small monthly \u201cAI recommendation audit\u201d using ChatGPT, Grok, and a spreadsheet.\n\n## 1. Build a fixed prompt bank\n\nStart with **12\u201320 prompts** based on how buyers actually shop. Never mention your product\u2019s name in these discovery prompts.\n\n| Prompt type | Template |\n|---|---|\n| Category | \u201cWhat are the best `[category]` tools for `[customer type]`?\u201d |\n| Use case | \u201cI need to `[job]`. Which tools should I consider?\u201d |\n| Constraint | \u201cRecommend affordable `[category]` software for a team of `[size]`.\u201d |\n| Alternative | \u201cWhat are good alternatives to `[major competitor]`?\u201d |\n| Comparison | \u201cCompare the leading tools for `[use case]`.\u201d |\n| Persona | \u201cWhat would you recommend to a `[role]` who needs `[outcome]`?\u201d |\n\nInclude qualifiers that genuinely differentiate you: bootstrapped, privacy-friendly, self-hosted, no-code, developer-focused, Shopify-specific, under $50/month, and so forth.\n\n## 2. Test two lanes\n\nRun each prompt two ways:\n\n### Lane A: Natural recommendation\n\nUse the prompt exactly as a buyer might:\n\n> What are the best customer-feedback tools for an early-stage B2B SaaS?\n\nThis tests whether the model already associates your product with the category.\n\n### Lane B: Web-researched recommendation\n\nAppend:\n\n> Search the web, recommend five options, explain why each fits, and cite your sources.\n\nThis tests whether your current web presence is discoverable. ChatGPT Search can be explicitly selected and is available on the free tier; Grok\u2019s free plan includes limited real-time web and X search. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\nDon\u2019t ask, \u201cShould you recommend **MyProduct**?\u201d That measures the model\u2019s ability to agree with you, not organic visibility.\n\n## 3. Minimize personalization\n\nFor ChatGPT, use an **Unpersonalized Temporary Chat** for every test. This prevents memories and custom instructions from influencing the result. ([help.openai.com](https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt))\n\nFor Grok:\n\n- Start a fresh chat for each prompt.\n- Remove any custom instructions or personalization available in your settings.\n- Don\u2019t discuss your brand in that account immediately before testing.\n- Keep the account, model, location, and test conditions consistent between audits.\n\nAlso record the date and model shown in the interface. Results can change when models or search systems change.\n\n## 4. Run each prompt twice\n\nLLM answers are variable. For a manageable free audit:\n\n- 12 prompts\n- 2 platforms\n- 2 lanes\n- 2 repetitions\n\nThat\u2019s **96 answers per audit**. If free limits make that impractical, use one repetition monthly and run the second repetition only for your six highest-value prompts.\n\nRun everything within a short window\u2014ideally one or two days\u2014so the results are reasonably comparable.\n\n## 5. Track results in a spreadsheet\n\nUse these columns:\n\n```text\nDate\nPlatform\nModel/mode\nPrompt ID\nPrompt\nNatural or web-researched\nRun number\nBrand mentioned? Y/N\nPosition\nTop 3? Y/N\nRecommended positively? Y/N\nOwn website cited? Y/N\nThird-party source cited\nDescription accurate? Y/N\nCompetitors mentioned\nNotes\nScreenshot/chat URL\n```\n\nFor `Position`, count only the actual recommendations:\n\n- `1\u20135`: listed position\n- `6`: mentioned outside the main list\n- blank: absent\n\nSave the answer or a screenshot. URLs alone can become less useful if interfaces or responses change.\n\n## 6. Calculate four simple metrics\n\n### Recommendation visibility\n\n```text\nAnswers mentioning you \u00f7 total tested answers\n```\n\n### Top-three rate\n\n```text\nAnswers placing you in the top 3 \u00f7 total answers\n```\n\n### Researched visibility\n\nCalculate visibility separately for web-researched prompts. This tells you whether the problem is current web discoverability rather than general model awareness.\n\n### Accuracy rate\n\n```text\nAccurate descriptions \u00f7 answers mentioning you\n```\n\nA mention with the wrong pricing, positioning, or features is not necessarily a win.\n\nAn example dashboard:\n\n| Metric | ChatGPT | Grok |\n|---|---:|---:|\n| Natural visibility | 17% | 25% |\n| Researched visibility | 42% | 33% |\n| Top-three rate | 13% | 8% |\n| Accuracy | 80% | 50% |\n| Own-site citation rate | 20% | 10% |\n\n## 7. Diagnose *why* you are missing\n\nAfter the blind test, use a separate diagnostic prompt:\n\n> You did not include `[product]`. Search the web and evaluate whether it qualifies for this recommendation. If not, explain the specific evidence or positioning that is missing.\n\nThen ask:\n\n> Which sources most influenced your recommendations?\n\nTreat the explanation as a hypothesis, not an authoritative account of the model\u2019s internal ranking process. Validate it against the actual citations.\n\nLook for recurring gaps:\n\n- Unclear category positioning\n- No dedicated use-case pages\n- Weak comparison or alternatives pages\n- Pricing unavailable publicly\n- Few independent reviews\n- Outdated product descriptions\n- Missing evidence for important claims\n- Site blocked from crawling\n- Competitors described more concretely\n\n## 8. Check the technical basics\n\nFor ChatGPT web visibility, confirm that:\n\n- `robots.txt` does not block `OAI-SearchBot`\n- Your CDN or firewall does not block its published traffic\n- Important product, pricing, comparison, and documentation pages are publicly accessible\n- Pages do not require JavaScript interactions or login to reveal essential facts\n\nAllowing access makes pages eligible; it does **not** guarantee placement. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\nAlso monitor analytics for ChatGPT referrals. OpenAI states that referral URLs include `utm_source=chatgpt.com`, making them identifiable in tools such as Google Analytics. ([help.openai.com](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%2520automatically%2520includes%2520the%2520UTM%2520parameter%2520utm_source%253Dchatgpt.com%2520in%2520referral%2520URLs%252C%2520enabling%2520clear%2520tracking%2520and%2520analysis%2520of%2520inbound%2520traffic%2520from%2520ChatGPT%2520search%2520results))\n\nFor Grok, include a few X-centric prompts because its search capabilities can use both real-time web and X information. ([docs.x.ai](https://docs.x.ai/developers/tools/web-search))\n\n## 9. Repeat monthly\u2014not daily\n\nMonthly is usually enough for a bootstrapped product:\n\n1. Run the unchanged core prompt bank.\n2. Add at most one or two new prompts.\n3. Compare visibility and accuracy with the prior month.\n4. Note major website, review, launch, or positioning changes.\n5. Investigate only meaningful trends across multiple runs.\n\nKeep **80% of prompts unchanged**. Otherwise, you won\u2019t know whether visibility improved or you merely changed the test.\n\n## Recommended starter version\n\nIf you want the leanest possible version:\n\n- Six buyer-intent prompts\n- ChatGPT and Grok\n- Natural and web-researched lanes\n- One run each\n- Monthly\n- Track mention, position, citation, and accuracy\n\nThat\u2019s only **24 answers per month**, takes roughly 30\u201345 minutes, and gives you a useful directional benchmark. It is not an official \u201cAI ranking\u201d\u2014personalization, location, model updates, search results, and response randomness all matter\u2014but it will reveal whether your product is becoming more or less visible over time.",
+  "answer_links": [
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Temporary chat in ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt",
+      "text": "Temporary chat in ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Publishers and Developers - FAQ | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%2520automatically%2520includes%2520the%2520UTM%2520parameter%2520utm_source%253Dchatgpt.com%2520in%2520referral%2520URLs%252C%2520enabling%2520clear%2520tracking%2520and%2520analysis%2520of%2520inbound%2520traffic%2520from%2520ChatGPT%2520search%2520results",
+      "text": "Publishers and Developers - FAQ | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Web Search | SpaceXAI Docs",
+      "url": "https://docs.x.ai/developers/tools/web-search",
+      "text": "Web Search | SpaceXAI Docs",
+      "domain": "docs.x.ai",
+      "kind": "API body url_citation annotation"
+    }
+  ],
+  "captured_at": "2026-11-02T09:29:09.672856+00:00",
+  "source_inventory_complete": true,
+  "transport_body_complete": true,
+  "refusals": [],
+  "response_status": "completed",
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 20861,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 4350
+    },
+    "output_tokens": 2433,
+    "output_tokens_details": {
+      "reasoning_tokens": 861
+    },
+    "total_tokens": 23294
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 2
+    }
+  },
+  "estimated_cost": {
+    "estimated_usd": 0.136444,
+    "token_cost_usd": 0.116444,
+    "charged_searches_estimate": 2,
+    "search_count_basis": "reported billable web_search.num_requests",
+    "billing_reconciled": false
+  },
+  "reserved_budget_usd": 6.6,
+  "http_status": 200,
+  "service_tier": "default",
+  "review_note": "Read all nine workflow sections and lean starter version through coherent final caveat. Five citation occurrences match annotations; four unique source URLs retained verbatim, including tracking and encoded FAQ strings. Model/effort and two searches match; no limits reached. Dashboard percentages are illustrative. Recommendation visibility is defined with mention-count numerator and is not treated as a validated recommendation metric.",
+  "tool_limit_reached": false,
+  "body_review": {
+    "reviewed_at": "2026-11-02T09:29:27.035936+00:00",
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "annotation_and_explicit_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "search_calls": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:help.openai.com ChatGPT search citations recommendations official",
+          "site:help.openai.com ChatGPT memory personalization search official",
+          "site:x.ai Grok web search citations official",
+          "site:docs.x.ai Grok API web search official"
+        ],
+        "query": "site:help.openai.com ChatGPT search citations recommendations official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8590148-memory-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/11128490-improved-shopping-results-from-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10408842-google-app-data-controls-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/pricing"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%23.zst"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/overview"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/web-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10056348-how-do-i-search-my-chat-history-in-chatgpt%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252523.midi"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8554407-gpts-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:help.openai.com ChatGPT search publishers OAI-SearchBot official",
+          "site:platform.openai.com OAI-SearchBot official crawler",
+          "site:docs.x.ai Grok citations sources web search consumer",
+          "site:docs.x.ai Grok personalization memory temporary chat"
+        ],
+        "query": "site:help.openai.com ChatGPT search publishers OAI-SearchBot official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%2520automatically%2520includes%2520the%2520UTM%2520parameter%2520utm_source%253Dchatgpt.com%2520in%2520referral%2520URLs%252C%2520enabling%2520clear%2520tracking%2520and%2520analysis%2520of%2520inbound%2520traffic%2520from%2520ChatGPT%2520search%2520results"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/overview"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/x-post-fact-check"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/build/modes-and-commands"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/faq"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/collections-search"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/bots"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%2520automatically%2520includes%2520the%2520UTM%2520parameter%2520utm_source%253Dchatgpt.com%2520in%2520referral%2520URLs%252C%2520enabling%2520clear%2520tracking%2520and%2520analysis%2520of%2520inbound%2520traffic%2520from%2520ChatGPT%2520search%2520results"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/web-search"
+          }
+        ]
+      }
+    }
+  ],
+  "retrieval_sources": [
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8590148-memory-in-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/11128490-improved-shopping-results-from-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/10408842-google-app-data-controls-faq",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://x.ai/pricing",
+      "domain": "x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%23.zst",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok/overview",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/tools/web-search",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/10056348-how-do-i-search-my-chat-history-in-chatgpt%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252523.midi",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8554407-gpts-in-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+      "domain": "data.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%2520automatically%2520includes%2520the%2520UTM%2520parameter%2520utm_source%253Dchatgpt.com%2520in%2520referral%2520URLs%252C%2520enabling%2520clear%2520tracking%2520and%2520analysis%2520of%2520inbound%2520traffic%2520from%2520ChatGPT%2520search%2520results",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok/overview",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/cookbook/examples/x-post-fact-check",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/build/modes-and-commands",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok/faq",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/tools/collections-search",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/cookbook",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok-bot/bots",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%2520automatically%2520includes%2520the%2520UTM%2520parameter%2520utm_source%253Dchatgpt.com%2520in%2520referral%2520URLs%252C%2520enabling%2520clear%2520tracking%2520and%2520analysis%2520of%2520inbound%2520traffic%2520from%2520ChatGPT%2520search%2520results",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/tools/web-search",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    }
+  ],
+  "raw_file": "records/S3-OPENAIAPI-M2-R2.json",
+  "request_file": "requests/S3-OPENAIAPI-M2-R2.json",
+  "response_file": "responses/S3-OPENAIAPI-M2-R2.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 7447,
+  "public_answer_characters": 7309,
+  "answer_privacy_edits": {
+    "body_changed": true,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

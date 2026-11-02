@@ -1,0 +1,22 @@
+{
+  "model": "gpt-5.6-sol",
+  "reasoning": {
+    "effort": "medium"
+  },
+  "input": "As a bootstrapped SaaS builder, what checks should I perform before trusting reported ChatGPT and Grok visibility scores for my product?",
+  "tools": [
+    {
+      "type": "web_search",
+      "external_web_access": true,
+      "return_token_budget": "default"
+    }
+  ],
+  "tool_choice": "required",
+  "include": [
+    "web_search_call.action.sources"
+  ],
+  "max_output_tokens": 32768,
+  "max_tool_calls": 8,
+  "store": false,
+  "service_tier": "default"
+}

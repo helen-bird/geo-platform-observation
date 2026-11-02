@@ -1,0 +1,36 @@
+{
+  "id": "S3-CHATGPT-V1-R1",
+  "slot_id": "S3-CHATGPT-V1-R1",
+  "platform": "ChatGPT Search",
+  "prompt_id": "V1",
+  "intent": "V",
+  "wording": 1,
+  "repeat": 1,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+  "submitted_at": "2026-11-02T06:05:01.633Z",
+  "model_label": "GPT-5.6 Sol",
+  "reasoning_effort": "Medium",
+  "temporary": true,
+  "personalization": false,
+  "search_enabled_ui": true,
+  "search_observed": false,
+  "status": "technical_failure",
+  "body_complete": false,
+  "answer_text": "",
+  "answer_links": [],
+  "captured_at": "2026-11-02T06:05:30.178Z",
+  "notes": [
+    "First submission prioritized for capture preflight; actual order differs from planned order. No extra prompt or follow-up."
+  ],
+  "error": "cloudflare_challenge",
+  "raw_file": "records/S3-CHATGPT-V1-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 0,
+  "public_answer_characters": 0,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

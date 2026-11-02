@@ -1,0 +1,80 @@
+{
+  "id": "S3-GROK-M2-R3",
+  "slot_id": "S3-GROK-M2-R3",
+  "platform": "Grok",
+  "prompt_id": "M2",
+  "intent": "M",
+  "wording": 2,
+  "repeat": 3,
+  "prompt": "As a bootstrapped SaaS builder, what's a free, repeatable workflow for checking whether my product appears in ChatGPT and Grok recommendations?",
+  "submitted_at": "2026-11-02T06:45:00.609Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Here\u2019s a free, repeatable workflow that bootstrapped SaaS founders actually use to check whether ChatGPT and Grok recommend their product.\u206001net\n\nIt takes ~30\u201345 minutes once set up, then 20\u201340 minutes on a weekly or bi-weekly cadence. Total cost: $0.\n\n1. One-time setup (30\u201360 min)\n\nDefine 8\u201315 buyer prompts (the questions real prospects ask, not your brand name):\n\nCategory: \u201cbest [your category] for [audience/use case]\u201d\nAlternatives: \u201cbest alternatives to [top competitor]\u201d\nProblem: \u201ctools to [problem your product solves]\u201d\nComparison: \u201c[competitor] vs [other competitor]\u201d\nDirect (secondary): \u201cwhat is [your product]\u201d / \u201cis [your product] worth it\u201d\n\nCreate a simple Google Sheet with columns:\n\nDate | Prompt | Platform | Mentioned (Y/N) | Position (if listed) | Sentiment | Competitors named | Sources cited | Notes/quote\n\nRun free snapshot tools once for a baseline:\n\nranked.ai free checker \u2014 live answers from ChatGPT, Grok, Claude, Gemini, Perplexity, Llama (no signup). Paste one of your prompts + domain.\nSnoika brand checker \u2014 includes Grok; distinguishes \u201cknows you\u201d vs \u201crecommends you\u201d + community/trust signals.\nIndexly Grok Visibility Checker \u2014 free, no login, paste your URL.\nAhrefs AI Visibility Checker (brand name, no signup) for a broader ChatGPT-heavy view.\n2. Repeatable routine (weekly or every 2 weeks)\nClean sessions only\nChatGPT: Temporary chat or incognito + web search enabled.\nGrok: Fresh chat on grok.x.ai (or the X app). Grok pulls real-time web + X data, so results can shift faster.\nRun your core prompts (start with your top 5\u20138). Do each once or twice \u2014 answers are non-deterministic.\nLog results immediately in the sheet. Note exact wording when you appear and which competitors/sources win instead.\nOptional free automation layer\nSet up Mangools AI Search Watcher free plan (5 prompts, 1 monitor, weekly updates). It covers ChatGPT, Grok, Gemini, Claude, AI Overviews, and others. Perfect for a small recurring sample without manual work every week.\nMonthly deeper look\nRe-run the free snapshot tools, check \u201cyourbrand -site:yourdomain.com\u201d on Google for third-party mentions, and glance at G2/Capterra/Reddit/Product Hunt presence. Those sources heavily influence both ChatGPT and Grok recommendations.\u2060Amicited\nWhat the data usually shows\nRecommendation visibility is driven more by third-party mentions (reviews, Reddit, comparison listicles, community discussion) than by your own blog alone.\nChatGPT and Grok often cite different sources; tracking both is worthwhile.\nOne check is noisy. Trends over 4\u20138 weeks are what matter.\nQuick improvement loop (informed by the checks)\n\nWhen you\u2019re missing from answers, the usual high-leverage free/low-cost fixes are:\n\nHonest comparison / alternatives pages on your site\nMore genuine reviews on G2/Capterra\nUseful answers in relevant Reddit threads (disclose you\u2019re the founder)\nClear, structured product pages that answer buyer questions directly\n\nThis workflow stays free, stays repeatable, and gives you the same signal paid GEO tools charge for \u2014 just with a bit of discipline on the logging side. Start with the prompt list and the Google Sheet this week; the rest compounds from there.",
+  "answer_links": [
+    {
+      "domain": "www.01net.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u206001net",
+      "url": "https://www.01net.com/en/seo/ai-visibility-tools/how-to-track-brand-mentions/"
+    },
+    {
+      "domain": "www.ranked.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "ranked.ai free checker",
+      "url": "https://www.ranked.ai/free-tools/ai-visibility-checker"
+    },
+    {
+      "domain": "snoika.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "Snoika brand checker",
+      "url": "https://snoika.com/free-tools/brand-ai-visibility-checker"
+    },
+    {
+      "domain": "indexly.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "Indexly Grok Visibility Checker",
+      "url": "https://indexly.ai/grok-visibility-checker"
+    },
+    {
+      "domain": "mangools.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "Mangools AI Search Watcher free plan",
+      "url": "https://mangools.com/ai-search-watcher"
+    },
+    {
+      "domain": "www.amicited.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Amicited",
+      "url": "https://www.amicited.com/blog/how-ai-recommends-software-appearing-in-best-tool-lists/"
+    }
+  ],
+  "captured_at": "2026-11-02T06:46:38.810Z",
+  "source_panel_declared_hits": 75,
+  "source_inventory_scope": "Observed inline answer links; grouped citations expanded; source badge and retrieval activity are separate.",
+  "capture_method": "Complete rendered Grok article innerText; UI heading/duration and source badge removed. Exact inline hrefs extracted from scoped rendered article.",
+  "raw_file": "records/S3-GROK-M2-R3.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 3174,
+  "public_answer_characters": 3174,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

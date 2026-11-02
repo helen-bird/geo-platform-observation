@@ -1,0 +1,66 @@
+{
+  "id": "S3-GROK-V2-R3",
+  "slot_id": "S3-GROK-V2-R3",
+  "platform": "Grok",
+  "prompt_id": "V2",
+  "intent": "V",
+  "wording": 2,
+  "repeat": 3,
+  "prompt": "As a bootstrapped SaaS builder, what checks should I perform before trusting reported ChatGPT and Grok visibility scores for my product?",
+  "submitted_at": "2026-11-02T06:47:07.073Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Do not treat a reported ChatGPT or Grok \u201cvisibility score\u201d as a reliable, comparable number until you can verify the methodology, replicate key parts of it yourself, and separate the engines. There is no industry-standard score. Different tools use different formulas, prompt sets, engines, and weightings, and the underlying answers are noisy.\n\nA recent benchmark found that the same questions produced top-five shortlist overlap of only about 17% across different AI engines (versus ~43% when the same engine was asked again), and one brand could score high on Claude/Grok while being nearly invisible on ChatGPT.\u2060Markets.businessinsider\n\n1. Demand (or reconstruct) the methodology\n\nAsk for or find:\n\nExact prompt list (buyer-intent, unbranded queries are far more meaningful than \u201cwhat is [your brand]?\u201d)\nEngines, models, and whether web search was on\nFormula: simple mention rate (answers naming you \u00f7 total answers), position-weighted, sentiment-adjusted, or something else?\nSample size (number of answers, runs per prompt, date range)\nHow competitors were chosen\n\nA score is only comparable to itself under the same conditions. Changing the prompt set, engine mix, or time window changes the number even if nothing about your product changed.\u2060Brantial\n\n2. Replicate it yourself (the highest-ROI check for a bootstrapped builder)\n\nBuild 10\u201320 high-intent prompts your actual customers would ask:\n\n\u201cBest [your category] tools for [specific use case]\u201d\n\u201c[Problem] software for [team size / industry]\u201d\n\u201cAlternatives to [known competitor]\u201d\nComparison or \u201chow to choose\u201d questions\n\nThen:\n\nRun them in fresh ChatGPT and Grok sessions (new chats, memory cleared if possible, web search enabled).\nDo this across several days.\nRecord for each answer: Was your product named? In what position / prominence? Was your site cited? Sentiment/accuracy? Which competitors appeared?\n\nThis costs almost nothing and often reveals that the reported score does not match what a real user sees. Multiple runs matter because the same prompt can produce different shortlists (\u201cweather of the day\u201d effects of ~14 points are common).\u2060Getmint\n\n3. Separate ChatGPT and Grok results\n\nBlended scores hide important differences. ChatGPT and Grok draw from different sources and recommendation styles; Grok is more influenced by recent X/Twitter activity and engagement. A product can look strong on one and weak on the other. Always look at engine-level numbers, not just a composite.\u2060Presenc\n\n4. Check prompt relevance and bias\nDo the prompts reflect real buyer language and intent in your category?\nDo they favor well-known brands by design (broad category questions often do)?\nAre branded prompts mixed in (these inflate scores toward 100%)?\n\nPrefer unbranded, problem- or comparison-oriented prompts for meaningful measurement.\n\n5. Evaluate reliability and noise\nSmall samples swing wildly. Prefer hundreds of answers over time rather than a one-off snapshot.\nDay-to-day and run-to-run variance is normal. Look for trends over weeks, not single scores.\nNote whether the tool accounts for stochasticity with repeated queries.\n6. Look past the headline number\n\nUseful supporting signals (often more actionable than the score itself):\n\nCitation rate \u2014 does it link to your site or pages?\nPosition / prominence \u2014 first recommendation vs. a passing mention\nShare of voice versus specific competitors\nSentiment and accuracy of the description\nActual AI referral traffic in your analytics (GA4 or similar)\n\nMentions without citations or positive recommendations have limited value.\n\n7. Consider the source\nIs this from an independent benchmark with public methodology and data, or a tool vendor marketing its own product?\nCan you access raw answers or at least screenshots of key prompts?\nHow recent is the data? AI answers and models change.\nPractical notes for bootstrapped SaaS\n\nManual spot-checks on a focused prompt set are often enough to decide whether a reported score is directionally useful or mostly noise. Many early-stage products score low or zero on broad category prompts; that is common and not always a crisis if your niche prompts or direct traffic perform well.\n\nFocus next on the inputs that actually influence answers: clear entity presence, authoritative third-party mentions (reviews, docs, comparison content, communities), and (especially for Grok) relevant X activity. Track whether changes move the needle in your own repeated manual or low-cost automated checks rather than chasing a vendor\u2019s composite score.\n\nBottom line: Treat any reported visibility score as a hypothesis. Verify the prompts and calculation, re-run the important queries yourself on both ChatGPT and Grok over a few days, and judge the result by whether the answers would actually help a buyer discover and choose your product.",
+  "answer_links": [
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461"
+    },
+    {
+      "domain": "brantial.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Brantial",
+      "url": "https://brantial.ai/blog/what-is-an-ai-visibility-score-how-is-it-calculated/"
+    },
+    {
+      "domain": "www.getmint.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Getmint",
+      "url": "https://www.getmint.ai/blog/stop-reading-the-weather-how-to-measure-your-brand-s-visibility-in-chatgpt"
+    },
+    {
+      "domain": "presenc.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Presenc",
+      "url": "https://presenc.ai/compare/grok-vs-chatgpt-for-brands"
+    }
+  ],
+  "captured_at": "2026-11-02T06:49:02.867Z",
+  "source_panel_declared_hits": 35,
+  "source_inventory_scope": "Observed inline answer links; grouped citations expanded; source badge and retrieval activity are separate.",
+  "capture_method": "Complete rendered Grok article innerText; UI heading/duration and source badge removed. Exact inline hrefs extracted from scoped rendered article.",
+  "raw_file": "records/S3-GROK-V2-R3.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 4797,
+  "public_answer_characters": 4797,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

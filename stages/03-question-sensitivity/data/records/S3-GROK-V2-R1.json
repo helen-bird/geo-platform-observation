@@ -1,0 +1,92 @@
+{
+  "id": "S3-GROK-V2-R1",
+  "slot_id": "S3-GROK-V2-R1",
+  "platform": "Grok",
+  "prompt_id": "V2",
+  "intent": "V",
+  "wording": 2,
+  "repeat": 1,
+  "prompt": "As a bootstrapped SaaS builder, what checks should I perform before trusting reported ChatGPT and Grok visibility scores for my product?",
+  "submitted_at": "2026-11-02T06:18:15.333Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "**Treat reported ChatGPT and Grok visibility scores as directional hypotheses, not reliable facts, until you can independently verify them.** There is no standard \u201cAI visibility score.\u201d Tools use different formulas, denominators, prompt sets, sampling methods, models, and surfaces (API vs. consumer interface). The same brand can score anywhere from single digits to the high 60s on identical underlying answers depending on how the number is calculated.\n\n### 1. Demand full methodology details\nBefore trusting any number, get clear answers on:\n- Exact formula and weights (mention rate, share of voice, position/prominence, citations, sentiment, adversarial resistance, etc.).\n- Denominator (all answers vs. only answers that mention at least one brand).\n- The specific prompt set and how it was chosen (real buyer-intent questions vs. branded or generic ones).\n- Sampling: how many runs per prompt, which models/versions, web search on or off, date of collection, and whether it used the consumer web interface or an API.\n- Per-engine breakdowns rather than a single blended score.\n\nDifferent tools produce materially different scores from the same data. One test of identical ChatGPT answers produced scores ranging from ~8.5 to 67 across calculation methods for the same brand. A single blended number can also hide large engine differences (e.g., strong on Grok/Claude but near-zero on ChatGPT).\n\n### 2. Replicate the core results yourself\nThis is the highest-value check for a bootstrapped builder because it costs only time.\n\n- Extract or recreate the key prompts (category queries, \u201cbest X for Y,\u201d alternatives, comparisons, pricing, problem-solution questions relevant to your SaaS).\n- Run each prompt 3\u20135 times in the actual consumer interfaces your buyers use: ChatGPT with search/browsing enabled, and Grok.\n- Log consistently: whether your product is mentioned, its position, whether your domain is cited, accuracy of the description, and which competitors appear.\n- Compare your results to the reported score. Large mismatches indicate the score is measuring a different surface, prompt set, or calculation method than what real users experience.\n\nAI answers are stochastic. In one controlled study, the same engine asked the same questions again produced only ~43% top-five shortlist overlap; cross-engine overlap was far lower (~17%). A single run or small sample is noisy.\n\n### 3. Account for engine-specific behavior and surface mismatch\nChatGPT and Grok do not measure the same thing:\n- ChatGPT relies more on training data plus web retrieval (historically Bing-derived) and favors established third-party authority, directories, reviews, and consistent entity coverage.\n- Grok has native access to real-time X (Twitter) data and weights recent engagement heavily. Visibility can shift in hours based on X activity; traditional web authority matters less relatively.\n\nMany tools query APIs. These do not perfectly match consumer apps (different memory/context, personalization, exact retrieval, and prompt rewriting). Studies have shown large gaps between API-reported citations and what ChatGPT\u2019s consumer interface actually cites.\n\n### 4. Check relative standing, trends, and independent signals\n- Compare your score to the same tool\u2019s scores for direct competitors on the identical prompt set. Absolute numbers are less useful than relative position.\n- Prefer multi-week or multi-month trends over one-off snapshots. Short-term noise is high.\n- Cross-check with signals you control or can observe for free:\n  - GA4 referrals from chatgpt.com, grok-related domains, or similar.\n  - Google Search Console data on AI Overviews / AI Mode impressions (where available).\n  - Community and third-party presence (Reddit, review sites, GitHub, directories, X engagement)\u2014these heavily influence what the models say.\n  - Direct customer attribution (\u201cHow did you hear about us?\u201d).\n\n### 5. Evaluate the vendor and the score\u2019s practical value\nPrefer tools that publish methodology, raw answers, or scoring code, or that let you inspect the underlying responses. Be cautious of black-box scores that primarily support upsells for optimization services. Ask whether the score is a presence measure (based on actual answers) or a readiness/proxy measure (based on site signals). The latter does not directly measure what buyers see.\n\n### Practical low-cost protocol\nCreate a simple spreadsheet with 10\u201320 high-value buyer prompts. Run them weekly or bi-weekly on ChatGPT (search on) and Grok. Track mention rate, citation rate, position, accuracy, and share of voice versus 3\u20135 competitors. This gives you a grounded baseline you control and lets you validate any paid tool\u2019s numbers against reality.\n\nIn short: treat the reported scores as a starting hypothesis. Verify the methodology, replicate key prompts yourself on the consumer interfaces, separate ChatGPT from Grok results, and cross-check against traffic and community signals. That combination is far more reliable for a bootstrapped SaaS than any single vendor number.",
+  "answer_links": [
+    {
+      "text": "AI visibility score: what it is and how it's calculated | Visilay (Visilay)",
+      "observed_target": "visilay.com/blog/ai-visibility-score/",
+      "url": "https://visilay.com/blog/ai-visibility-score/",
+      "domain": "visilay.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display"
+    },
+    {
+      "text": "AI visibility score: what it is and how it's calculated | Visilay (Visilay)",
+      "observed_target": "visilay.com/blog/ai-visibility-score/",
+      "url": "https://visilay.com/blog/ai-visibility-score/",
+      "domain": "visilay.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display"
+    },
+    {
+      "text": "There Is No Single \u201cAI Visibility\u201d Score; Ask Four AIs, Get Four Shortlists | Markets Insider (Markets.businessinsider)",
+      "observed_target": "markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display"
+    },
+    {
+      "text": "There Is No Single \u201cAI Visibility\u201d Score; Ask Four AIs, Get Four Shortlists | Markets Insider (Markets.businessinsider)",
+      "observed_target": "markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display"
+    },
+    {
+      "text": "Grok Is Citing Brands Too: The Data Behind Its Citation Logic | Am I Cited (Amicited)",
+      "observed_target": "amicited.com/blog/grok-is-citing-brands-too/",
+      "url": "https://amicited.com/blog/grok-is-citing-brands-too/",
+      "domain": "amicited.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display"
+    },
+    {
+      "text": "Are AI Visibility Tools Accurate? What They Miss (2026) (Searchscope)",
+      "observed_target": "searchscope.com.au/ai-seo/how-accurate-are-ai-visibility-tools/",
+      "url": "https://searchscope.com.au/ai-seo/how-accurate-are-ai-visibility-tools/",
+      "domain": "searchscope.com.au",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display"
+    }
+  ],
+  "captured_at": "2026-11-02T06:23:03.851Z",
+  "source_panel_declared_hits": 45,
+  "source_inventory_scope": "Inline displayed links retained; expanded Visilay +1 contained Visilay and Markets Insider, both already listed.",
+  "capture_method": "Native complete rendered response corroborated against full Copy response in offline buffer.",
+  "search_evidence": "Expanded native activity shows web searches and browsed links. Badge count is not used as search evidence.",
+  "notes": [
+    "Actual search activity needs reopening; final badge alone does not establish search tool use.",
+    "Saved HTML-only export did not include the rendered answer DOM; it is not treated as a complete answer or citation capture.",
+    "URL display normalization may omit www; exact href not independently recovered. Observed target strings are retained."
+  ],
+  "raw_file": "records/S3-GROK-V2-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 5038,
+  "public_answer_characters": 5038,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

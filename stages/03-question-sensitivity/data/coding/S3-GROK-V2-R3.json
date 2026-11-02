@@ -1,0 +1,309 @@
+{
+  "id": "S3-GROK-V2-R3",
+  "source_record": "records/S3-GROK-V2-R3.json",
+  "coding_method": "Assistant review of complete 4,797-character rendered answer, four scoped exact DOM hrefs and existing browser snapshots/activity. No external webpage visits, research verification or independent human double-coding.",
+  "coding_scope": "Substantively named tools/services/surfaces; supplied targets remain separate. Supporting citation-label brands are not converted into substantive tool mentions or resource recommendations.",
+  "answer_type": {
+    "primary": "Score validation or audit checklist",
+    "secondary": [
+      "Manual measurement workflow",
+      "Conceptual explanation"
+    ],
+    "evidence": "Demand (or reconstruct) the methodology",
+    "rationale": "Seven sections prioritize methodology, replication, per-engine results, prompt bias, noise, supporting signals and provenance; no specific visibility-checker product is suggested."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "buyer-intent, unbranded queries are far more meaningful than \u201cwhat is [your brand]?\u201d"
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Note whether the tool accounts for stochasticity with repeated queries."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Run them in fresh ChatGPT and Grok sessions (new chats, memory cleared if possible, web search enabled)."
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Engines, models, and whether web search was on"
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "whether web search was on"
+    },
+    "search_mode_enablement_advice": {
+      "value": true,
+      "evidence": "web search enabled"
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": true,
+      "evidence": "Mentions without citations or positive recommendations have limited value."
+    },
+    "citation_and_mention_rates_separate": {
+      "value": true,
+      "evidence": "Citation rate \u2014 does it link to your site or pages?"
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Was your product named? In what position / prominence? Was your site cited?"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Can you access raw answers or at least screenshots of key prompts?"
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "simple mention rate (answers naming you \u00f7 total answers)"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": true,
+      "evidence": "Formula: simple mention rate (answers naming you \u00f7 total answers), position-weighted, sentiment-adjusted, or something else?"
+    },
+    "composite_score_caution": {
+      "value": true,
+      "evidence": "Always look at engine-level numbers, not just a composite."
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "Day-to-day and run-to-run variance is normal. Look for trends over weeks, not single scores."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Replicate it yourself (the highest-ROI check for a bootstrapped builder)"
+    },
+    "downstream_conversions": {
+      "value": false,
+      "evidence": null
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "Actual AI referral traffic in your analytics (GA4 or similar)"
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "GA4",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "unspecified",
+      "evidence": "Actual AI referral traffic in your analytics (GA4 or similar)",
+      "source_urls": [],
+      "notes": "A named example of a useful corroborating traffic signal; exact product cost and configuration are not stated."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X/Twitter; X activity",
+      "entity_type": "community_distribution_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "Focus next on the inputs that actually influence answers: clear entity presence, authoritative third-party mentions (reviews, docs, comparison content, communities), and (especially for Grok) relevant X activity.",
+      "source_urls": [],
+      "notes": "Advises relevant X activity as a content/community input, not a dedicated visibility-measurement tool. Claims of influence are unverified model output."
+    },
+    {
+      "entity": "Claude",
+      "observed_name": "Claude",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "one brand could score high on Claude/Grok while being nearly invisible on ChatGPT.",
+      "source_urls": [],
+      "notes": "Benchmark context only, not a suggestion to use Claude."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for repeated manual checks",
+      "evidence": "Run them in fresh ChatGPT and Grok sessions (new chats, memory cleared if possible, web search enabled).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied target platform; not treated as a new discovered tool."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for repeated manual checks",
+      "evidence": "Run them in fresh ChatGPT and Grok sessions (new chats, memory cleared if possible, web search enabled).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied target platform; not treated as a new discovered tool."
+    }
+  ],
+  "contextual_non_tool_entities": [],
+  "generic_methods": [
+    "Methodology, formula, model/search-state and sampling audit",
+    "Fixed high-intent unbranded buyer prompts",
+    "Multi-day fresh-session manual replication",
+    "Per-answer mention, position, own-site citation, sentiment/accuracy and competitor logging",
+    "Per-engine rather than blended scores",
+    "Prompt-bias and variance checks",
+    "Raw-answer/screenshot inspection",
+    "Referral analytics",
+    "Third-party coverage and clear entity/content signals"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Mention rate",
+      "definition_verbatim": "simple mention rate (answers naming you \u00f7 total answers)"
+    },
+    {
+      "label": "Citation rate",
+      "definition_verbatim": "Citation rate \u2014 does it link to your site or pages?"
+    },
+    {
+      "label": "Position / prominence",
+      "definition_verbatim": "Position / prominence \u2014 first recommendation vs. a passing mention"
+    },
+    {
+      "label": "Share of voice",
+      "definition_verbatim": "Share of voice versus specific competitors",
+      "notes": "Named without a formula."
+    }
+  ],
+  "answer_sources": [
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "Stock-news article supports a benchmark description. Classification is provisional; syndicated/promotional provenance and primary authorship are unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source/resource recommendation"
+    },
+    {
+      "domain": "brantial.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Brantial",
+      "url": "https://brantial.ai/blog/what-is-an-ai-visibility-score-how-is-it-calculated/",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "The branded score-calculation, measurement or platform-comparison blog path suggests explanatory/practitioner or commercial content; authorship and original empirical research are not established from the metadata.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source/resource recommendation"
+    },
+    {
+      "domain": "www.getmint.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Getmint",
+      "url": "https://www.getmint.ai/blog/stop-reading-the-weather-how-to-measure-your-brand-s-visibility-in-chatgpt",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "The branded score-calculation, measurement or platform-comparison blog path suggests explanatory/practitioner or commercial content; authorship and original empirical research are not established from the metadata.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source/resource recommendation"
+    },
+    {
+      "domain": "presenc.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Presenc",
+      "url": "https://presenc.ai/compare/grok-vs-chatgpt-for-brands",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "The branded score-calculation, measurement or platform-comparison blog path suggests explanatory/practitioner or commercial content; authorship and original empirical research are not established from the metadata.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source/resource recommendation"
+    }
+  ],
+  "cited_hostname_set": [
+    "markets.businessinsider.com",
+    "brantial.ai",
+    "www.getmint.ai",
+    "presenc.ai"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping retains exact DOM hrefs/hostnames; markets.businessinsider.com normalizes to businessinsider.com and www.getmint.ai to getmint.ai. No external public-suffix lookup used.",
+    "mapping": {
+      "markets.businessinsider.com": "businessinsider.com",
+      "brantial.ai": "brantial.ai",
+      "www.getmint.ai": "getmint.ai",
+      "presenc.ai": "presenc.ai"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 4797,
+    "observed_inline_link_occurrences": 4,
+    "unique_DOM_answer_URLs": 4,
+    "unique_cited_domains": 4,
+    "source_badge_hits": 35,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": true,
+    "citation_mapping_scope": "Four inline rendered-article hrefs, not a complete 35-hit retrieval inventory.",
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "complete_rendered_evidence_file": "[Private capture retained locally.]",
+    "captured_exact_query_labels": [
+      "\"visibility score\" ChatGPT OR Grok SaaS OR brand"
+    ],
+    "notes": [
+      "Activity contains a grouped two-search control, a separately displayed web query with 10 results, and three browsed-link controls. Exact query coverage is partial.",
+      "The 35-hit source badge is not a unique citation count.",
+      "Workspace-explored activity labels do not establish the underlying contents or their influence.",
+      "Benchmark overlap, near-14-point weather effects, brand-score differences, model/engine behavior and reliability claims remain unverified platform output."
+    ],
+    "original_capture_answer_characters": 4797,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 3,
+    "citation_true": 0,
+    "mention_true": 3,
+    "recommendation_true": 2,
+    "visibility_checker_recommendations": [],
+    "default_mentioned_tools": [
+      "Google Analytics 4",
+      "X",
+      "Claude"
+    ],
+    "default_recommended_tools": [
+      "Google Analytics 4",
+      "X"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "inline_link_occurrences": 4,
+    "unique_answer_URLs": 4,
+    "unique_cited_domains": 4
+  },
+  "coding_cautions": [
+    "GA4 is an analytics example and X is content/community advice; neither is a named visibility-scoring checker here.",
+    "The answer explicitly distinguishes mentions, citations and positive recommendations, but does not define a separate recommendation-rate formula.",
+    "The four cited publishers are not substantively recommended merely because their citation labels are rendered in the answer.",
+    "Avoid treating model-generated numerical claims as findings independently established by this experiment."
+  ],
+  "source_record_sha256": "d2c68a22a8e2c02bc0b8a60bbfa7f0a41ee1ba8ebb3664a1177d959d8c4f43fe"
+}

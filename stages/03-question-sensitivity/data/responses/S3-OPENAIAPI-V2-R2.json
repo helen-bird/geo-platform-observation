@@ -1,0 +1,285 @@
+{
+  "object": "response",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "created_at": 1793611924,
+  "completed_at": 1793611948,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 21174,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 4348
+    },
+    "output_tokens": 1960,
+    "output_tokens_details": {
+      "reasoning_tokens": 558
+    },
+    "total_tokens": 23134
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 2
+    }
+  },
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "service_tier": "default",
+  "store": false,
+  "max_output_tokens": 32768,
+  "max_tool_calls": 8,
+  "tool_choice": "required",
+  "tools": [
+    {
+      "type": "web_search",
+      "return_token_budget": "default",
+      "search_content_types": [
+        "text"
+      ],
+      "search_context_size": "medium",
+      "user_location": {
+        "type": "approximate",
+        "city": null,
+        "country": "US",
+        "region": null,
+        "timezone": null
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:help.openai.com ChatGPT search citations sources official",
+          "site:openai.com ChatGPT search official how search works citations",
+          "site:docs.x.ai Grok web search citations official",
+          "site:x.ai Grok search sources citations official"
+        ],
+        "query": "site:help.openai.com ChatGPT search citations sources official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8313428"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/11128490-improved-shopping-results-from-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://openai.com/academy/search-and-deep-research/"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results"
+          },
+          {
+            "type": "url",
+            "url": "https://openai.com/index/introducing-chatgpt-search/"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/20001203-offline-web-search-for-chatgpt-workspaces"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12911370-using-shopping-r"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10500283-deep-research-faq%3F.apk"
+          },
+          {
+            "type": "url",
+            "url": "https://cdn.openai.com/pdf/a-family-guide-to-help-teens-use-ai-responsibly.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://cdn.openai.com/pdf/a253471f-8260-40c6-a2cc-aa93fe9f142e/economic-research-chatgpt-usage-paper.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://cdn.openai.com/pdf/a253471f-8260-40c6-a2cc-aa93fe9f142e/economic-research-chatgpt-usage-paper.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:docs.x.ai web search tool Grok citations sources",
+          "site:docs.x.ai Grok search X posts web official documentation",
+          "site:x.ai/news Grok search web citations official",
+          "site:help.x.com Grok sources web search official"
+        ],
+        "query": "site:docs.x.ai web search tool Grok citations sources",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/x-post-fact-check"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/x-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.x.com/en/using-x/about-grok"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/build/settings"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/faq"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/news/grok-1212?TB_iframe=true&height=512.1&width=921.6"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/grok/use-cases/research-synthesis"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/files-and-results"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/pricing"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/grok?q=Tesla+ai+computer"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/troubleshooting"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-08-20-grok-4-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/x-post-fact-check"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results"
+          }
+        ]
+      }
+    },
+    {
+      "type": "message",
+      "role": "assistant",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+            },
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+            },
+            {
+              "type": "url_citation",
+              "title": "AI Fact-Checker: Check Posts on \ud835\udd4f with the Grok API | SpaceXSI Docs",
+              "url": "https://docs.x.ai/cookbook/examples/x-post-fact-check"
+            },
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+            },
+            {
+              "type": "url_citation",
+              "title": "Publishers and Developers - FAQ | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results"
+            }
+          ],
+          "logprobs": [],
+          "text": "Treat any \u201cAI visibility score\u201d as a **vendor-defined estimate**, not an official ChatGPT or Grok metric. Before paying for or acting on it, perform these checks:\n\n### 1. Demand an exact metric definition\n\nDetermine whether \u201cvisibility\u201d means:\n\n- Your product name appears anywhere\n- Your website is cited\n- You are included in a recommendation list\n- You rank in the top three\n- The answer describes you accurately and positively\n- Your product appears across a percentage of tested prompts\n\nAsk for the actual numerator, denominator, weighting formula, and treatment of \u201cnot sure\u201d or failed responses. A single composite score can otherwise hide meaningful differences between **mention, citation, recommendation, and preference**.\n\n### 2. Inspect the prompt set\n\nRequest the complete prompts\u2014not merely prompt categories. Check that they:\n\n- Reflect questions real prospects ask\n- Include non-branded, problem-aware queries\n- Cover alternatives, comparisons, and use cases\n- Represent your target geography and customer segment\n- Aren\u2019t artificially favorable to your product\n- Include both head terms and long-tail prompts\n\nAlso check who selected the prompts. A vendor-generated benchmark may measure visibility for its imagined market rather than yours.\n\n### 3. Confirm the exact test environment\n\nFor every run, require:\n\n- Platform: consumer app or API\n- Model/version\n- Search-enabled versus model-only mode\n- Standard, research, reasoning, or other mode\n- Date, time, country, language, and device context\n- Fresh chat versus an existing conversation\n- Memory, custom instructions, and personalization status\n- Logged-in versus logged-out account\n\nThis matters because ChatGPT can rewrite prompts into multiple search queries and may use approximate location or memory; Grok may decide whether to search the broader web, X, or neither. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n### 4. Require repeated samples\n\nOne run per prompt is not trustworthy. Ask for:\n\n- At least 5\u201310 independent runs per important prompt\n- New conversations for each run\n- Mention and citation frequency, not just a binary result\n- Confidence intervals or raw counts\n- Variance across days\n\nFor example, \u201cmentioned in 7 of 10 runs\u201d is substantially more useful than an opaque score of 72.\n\n### 5. Review the raw evidence\n\nThe report should let you inspect:\n\n- Full prompt\n- Full response\n- Timestamp\n- Citations and source URLs\n- Model and mode\n- Screenshots or, preferably, machine-readable run logs\n\nClick citations and verify that they actually support the claims. OpenAI explicitly warns that search results and citations can be incomplete, outdated, or incorrect. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\nFor Grok API-based testing, ask whether the provider retained the actual web/X search events and returned sources\u2014not merely links generated in the answer. xAI\u2019s documentation supports exposing search sources for this kind of verification. ([docs.x.ai](https://docs.x.ai/cookbook/examples/x-post-fact-check))\n\n### 6. Separate model knowledge from live-search visibility\n\nA product can appear because:\n\n1. It exists in model training data,\n2. The assistant found its website,\n3. The assistant found a third-party article,\n4. It appeared in an X post,\n5. The prompt effectively supplied the answer.\n\nThese are different acquisition channels and require different actions. Search visibility should be reported separately from non-search recall.\n\n### 7. Audit source quality\n\nCheck what sources are driving your visibility:\n\n- Your own site\n- Review platforms\n- Software directories\n- Affiliates\n- Reddit, forums, or X\n- Editorial comparisons\n- Outdated pages\n- Competitor-authored content\n\nA high score built on inaccurate listicles or old pricing pages may be a liability. Also verify that your site is technically accessible: ChatGPT search eligibility depends partly on permitting OAI-SearchBot, although inclusion and placement are not guaranteed. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n### 8. Check competitor normalization\n\nAsk:\n\n- Which competitors were included\u2014and why?\n- Is the score absolute or relative?\n- Does adding a competitor change your score?\n- Are large incumbents and niche alternatives weighted equally?\n- Are generic options such as spreadsheets or \u201cbuild it yourself\u201d included?\n\nA \u201c20% share of voice\u201d is meaningless without the complete comparison set.\n\n### 9. Test factual accuracy, not merely presence\n\nManually grade answers for:\n\n- Correct positioning\n- Current features and pricing\n- Appropriate customer fit\n- Correct category\n- Accurate pros and cons\n- Confusion with similarly named companies\n- Broken or irrelevant citations\n\nA confident but inaccurate recommendation should count negatively, not as successful visibility.\n\n### 10. Reproduce a sample independently\n\nBefore trusting the dashboard:\n\n1. Select 20\u201330 high-intent prompts.\n2. Run them yourself in fresh ChatGPT and Grok conversations.\n3. Record mentions, citations, rank, accuracy, and sentiment.\n4. Repeat on several days.\n5. Compare your results with the vendor\u2019s raw data.\n\nYou need not reproduce the precise composite score. You should be able to reproduce its **direction and major conclusions**.\n\n### 11. Look for business correlation\n\nCompare reported visibility changes with:\n\n- `utm_source=chatgpt.com` referrals\n- Grok/X referrals where identifiable\n- Branded-search growth\n- Signup surveys asking \u201cHow did you hear about us?\u201d\n- Demo or signup volume from AI-assistant users\n- Assisted conversions, not just last-click conversions\n\nVisibility without qualified traffic, accurate recommendations, or conversions is primarily a branding indicator\u2014not an ROI metric. ChatGPT adds referral tracking parameters to relevant outbound links, which can help with validation. ([help.openai.com](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results))\n\n### Minimum evidence I\u2019d accept\n\nFor a bootstrapped SaaS, I would not pay much for a score unless the provider supplies:\n\n- Complete prompt list\n- Metric formula\n- Model/mode/location details\n- Multiple runs per prompt\n- Raw responses and citations\n- Historical timestamps\n- Separate ChatGPT and Grok results\n- Mention, citation, rank, accuracy, and sentiment breakdowns\n- Exportable data\n- Results you can approximately reproduce\n\n**Practical rule:** Use the score to identify prompts and source gaps, not as a KPI by itself. Track a small first-party benchmark\u2014perhaps 25\u201350 commercially important prompts\u2014alongside referral and conversion data. That is usually more actionable for a bootstrapped company than a broad proprietary \u201cvisibility\u201d number."
+        }
+      ]
+    }
+  ],
+  "public_copy": true,
+  "publication_scope": "Allowlisted provider output: answer messages, returned citations/search actions and usage. Opaque IDs, original annotation positions, headers and reasoning trace items omitted."
+}

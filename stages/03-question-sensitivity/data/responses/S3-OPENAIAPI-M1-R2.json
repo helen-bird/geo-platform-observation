@@ -1,0 +1,175 @@
+{
+  "object": "response",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "created_at": 1793611600,
+  "completed_at": 1793611631,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 12997,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 4349
+    },
+    "output_tokens": 2588,
+    "output_tokens_details": {
+      "reasoning_tokens": 1098
+    },
+    "total_tokens": 15585
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 1
+    }
+  },
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "service_tier": "default",
+  "store": false,
+  "max_output_tokens": 32768,
+  "max_tool_calls": 8,
+  "tool_choice": "required",
+  "tools": [
+    {
+      "type": "web_search",
+      "return_token_budget": "default",
+      "search_content_types": [
+        "text"
+      ],
+      "search_context_size": "medium",
+      "user_location": {
+        "type": "approximate",
+        "city": null,
+        "country": "US",
+        "region": null,
+        "timezone": null
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:help.openai.com ChatGPT search sources citations personalization memory official",
+          "site:help.openai.com ChatGPT data controls memory temporary chat official",
+          "site:docs.x.ai Grok search citations personalization official",
+          "site:help.x.com Grok personalization search sources official"
+        ],
+        "query": "site:help.openai.com ChatGPT search sources citations personalization memory official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%3F.pls"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8590148-memory-faq%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525253F.avif"
+          },
+          {
+            "type": "url",
+            "url": "https://help.x.com/en/using-x/about-grok"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12574142-chatgpt-atlas-data-controls-and-privacy/"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8554407-gpts-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes%2523.eot"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.x.com/en/resources/recommender-systems/account-recommendations"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.x.com/en/using-x/about-grok"
+          }
+        ]
+      }
+    },
+    {
+      "type": "message",
+      "role": "assistant",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [
+            {
+              "type": "url_citation",
+              "title": "Data controls in ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt"
+            },
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+            },
+            {
+              "type": "url_citation",
+              "title": "About Grok | X Help Center",
+              "url": "https://help.x.com/en/using-x/about-grok"
+            }
+          ],
+          "logprobs": [],
+          "text": "You need to measure **two different things**:\n\n1. **AI visibility:** Does your product appear in relevant ChatGPT/Grok answers?\n2. **Business impact:** Are those answers producing visits, signups, or sales?\n\nYou can measure both manually for free, but don\u2019t treat a few prompts from your own account as representative. Both services can personalize answers, and both may search the web depending on the query. ChatGPT can use memories, location, and rewritten search queries; Grok can use X activity and interests for personalization. ([help.openai.com](https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt))\n\n## 1. Build a fixed \u201cbuyer prompt panel\u201d\n\nCreate 15\u201330 prompts reflecting how buyers actually describe their problem\u2014not prompts containing your brand.\n\nCover four categories:\n\n| Intent | Example |\n|---|---|\n| Category | \u201cWhat are the best invoicing tools for solo consultants?\u201d |\n| Problem | \u201cHow can I automate overdue invoice follow-ups?\u201d |\n| Requirements | \u201cRecommend an invoicing SaaS under $20/month with Stripe integration.\u201d |\n| Alternatives | \u201cWhat are simpler alternatives to QuickBooks for freelancers?\u201d |\n\nInclude buyer context such as company size, geography, budget, required integrations, and technical level.\n\nYour primary metric should be **unaided recommendation**: whether your product appears when you did not mention it.\n\nSeparately test **aided knowledge** with prompts such as:\n\n- \u201cWhat is `[Product]`?\u201d\n- \u201cCompare `[Product]` with `[Competitor]`.\u201d\n- \u201cWho should and shouldn\u2019t use `[Product]`?\u201d\n\nAided tests diagnose what the model knows; they do not measure discovery.\n\n## 2. Run a controlled audit\n\nFor each prompt:\n\n- Start a fresh conversation.\n- Use identical wording on both platforms.\n- Don\u2019t correct or guide the answer.\n- Save the complete response and cited sources.\n- Repeat each prompt three times on different days.\n- Record date, model/mode, whether web search occurred, location, and personalization state.\n\nFor ChatGPT, use **Temporary Chat with personalization disabled** where available. Also test two separate tracks:\n\n- **Default behavior**\n- **Explicit web search:** append \u201cSearch the web and cite current sources.\u201d\n\nThis distinction matters because answers without search rely more heavily on learned model knowledge, while searched answers draw from current web sources. OpenAI also cautions that citations and search results can be incomplete or incorrect, so inspect the actual cited pages. ([help.openai.com](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt))\n\nFor Grok, disable personalization where possible or use a clean testing account. Grok may search both public X posts and the broader web, and its answers can be personalized using account activity and interests. ([help.x.com](https://help.x.com/en/using-x/about-grok))\n\n## 3. Score every answer consistently\n\nUse a simple 0\u20133 score:\n\n- **0:** Not mentioned\n- **1:** Mentioned, but not recommended\n- **2:** Positively recommended or shortlisted\n- **3:** Top recommendation\n\nAdd separate columns for:\n\n- Position in the list\n- Description accurate? Yes/no\n- Correct target customer? Yes/no\n- Website linked or cited? Yes/no\n- Third-party source cited?\n- Competitors recommended\n- Any serious factual error\n\nThen calculate:\n\n```text\nMention rate = Runs mentioning you / Total runs\n\nRecommendation rate = Runs scoring 2 or 3 / Total runs\n\nTop-pick rate = Runs scoring 3 / Total runs\n\nCitation rate = Runs citing your site / Searched runs\n\nConsistency rate = Prompts where you appear in at least 2 of 3 runs / Total prompts\n```\n\nAlso calculate **competitor share of voice**:\n\n```text\nYour recommendation appearances /\nAll recommendation appearances across you and tracked competitors\n```\n\nThe consistency metric is especially important. Appearing once in nine runs is materially different from appearing eight times, even if someone posts the one successful screenshot.\n\n## 4. Use this spreadsheet structure\n\nOne row per run:\n\n```text\nDate\nPlatform\nModel/mode\nWeb search used?\nPersonalization off?\nPrompt ID\nExact prompt\nYour score: 0\u20133\nYour position\nAccurate description?\nYour site cited?\nOther source cited?\nCompetitors named\nAnswer URL/screenshot\nNotes\n```\n\nMaintain a separate prompt sheet with:\n\n```text\nPrompt ID\nIntent category\nBuyer persona\nBuying stage\nBusiness importance: 1\u20135\n```\n\nWeight your overall score by business importance. A recommendation for a high-converting \u201calternative to X\u201d query matters more than one for a broad informational query.\n\n## 5. Track actual AI-generated pipeline\n\nVisibility testing tells you what *can* happen. Attribution tells you whether buyers are experiencing it.\n\n### In analytics and server logs\n\nLook for referral traffic from domains associated with ChatGPT and Grok. However, treat referrer data as a lower bound: apps, redirects, and privacy controls may prevent the original source from being passed.\n\nTrack:\n\n- AI-referred sessions\n- Signup rate\n- Trial-to-paid rate\n- Revenue\n- Landing pages receiving AI traffic\n\n### On signup\n\nAdd a required or optional question:\n\n> How did you first hear about us?\n\nOptions:\n\n- ChatGPT\n- Grok\n- Another AI assistant\n- Google/search engine\n- Social media\n- Recommendation\n- Other\n\nIf they select an AI assistant, ask:\n\n> What were you asking it?\n\nThat answer is often more valuable than analytics because it gives you the real buyer prompt.\n\n### During customer conversations\n\nAsk:\n\n> What other products did the AI recommend, and why did you choose us?\n\nThis reveals whether you were merely mentioned or actually framed as the best fit.\n\n## 6. Use a sustainable solo-founder cadence\n\nA reasonable free process:\n\n### Weekly \u2014 20 minutes\n\n- Test your five highest-intent prompts once on each platform.\n- Review new AI-attributed signups.\n- Investigate any incorrect descriptions.\n\n### Monthly \u2014 60\u201390 minutes\n\n- Run the full 15\u201330 prompt panel.\n- Repeat important prompts three times.\n- Calculate mention, recommendation, top-pick, citation, and consistency rates.\n- Compare against the previous month.\n\nAvoid testing every day and reacting to individual changes. Models, search results, source selection, and wording vary; evaluate rolling monthly trends instead.\n\n## Your minimal dashboard\n\nTrack only these six numbers:\n\n1. High-intent recommendation rate\n2. Top-three placement rate\n3. Consistency rate\n4. Share of voice versus three competitors\n5. AI-attributed signups\n6. AI-attributed revenue\n\nYour most defensible statement will then be something like:\n\n> \u201cAcross 20 fixed buyer prompts and 120 controlled runs this month, we were recommended in 18% of ChatGPT answers and 11% of Grok answers. Five signups and one paid conversion self-attributed to those assistants.\u201d\n\nThat is far more meaningful than claiming you \u201crank in ChatGPT.\u201d There is no single universal ranking\u2014only recommendation rates under documented prompts, conditions, and dates."
+        }
+      ]
+    }
+  ],
+  "public_copy": true,
+  "publication_scope": "Allowlisted provider output: answer messages, returned citations/search actions and usage. Opaque IDs, original annotation positions, headers and reasoning trace items omitted."
+}

@@ -44,6 +44,11 @@ def main():
     }
     for name, value in texts:
         for label, pattern in forbidden.items():
+            # These two patterns identify the Stage 1 personal passages. Stage 3
+            # verbatim answers legitimately discuss generic account controls and
+            # source channels; its dedicated check rejects identifying data.
+            if name.startswith('stages/03-question-sensitivity/') and label in {'personal X context', 'excluded personal plans'}:
+                continue
             assert not re.search(pattern, value, re.I), (name, label)
     page = Page()
     page.feed((DIST / 'index.html').read_text())
@@ -77,6 +82,8 @@ def main():
             assert archive.read(name) == (DIST / name).read_bytes()
     import check_stage2_publication
     check_stage2_publication.main()
+    import check_stage3_publication
+    check_stage3_publication.main()
     print(json.dumps({'privacy_check': 'passed', 'language_check': 'passed', 'public_files': len(files), 'valid_links': len(page.links), 'expanded_details': len(page.details), 'main_answers': 12, 'historical_attempts': 10, 'captures': 37, 'statistics_match': True}))
 
 if __name__ == '__main__':

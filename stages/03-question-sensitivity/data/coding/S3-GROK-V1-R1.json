@@ -1,0 +1,470 @@
+{
+  "id": "S3-GROK-V1-R1",
+  "source_record": "records/S3-GROK-V1-R1.json",
+  "coding_method": "Assistant review of the complete captured answer and seven recorded inline links; no external fact-check, independent human double-coding or webpage visits.",
+  "coding_scope": "All substantively named tools/services/features, including input sources and channels. Generic methods and supplied target platforms are separate. Supporting publishers are not included as discovered tool recommendations.",
+  "answer_type": {
+    "primary": "Score validation or audit checklist",
+    "secondary": [
+      "Manual measurement workflow",
+      "Conceptual explanation",
+      "Tool-led solution"
+    ],
+    "evidence": "Checklist: Is a given score trustworthy enough to act on?",
+    "rationale": "The dominant response supplies trustworthiness dimensions; a manual baseline and limited free checkers are supporting components."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Mix category (\u201cbest [your category] for [use case]\u201d), comparison, problem-solving, and a few branded ones."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Multiple runs per prompt (ideally 3\u20137+); dozens of prompts"
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "private/incognito window, memory off, fresh chats."
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Exact prompts, # of runs, surface (app vs API), model version, date"
+    },
+    "search_mode_logging_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_rates_separate": {
+      "value": true,
+      "evidence": "Mention rate = % of answers that name you"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Mention rate, citation rate, share of voice, examples of answers"
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "Citation rate = % that link your site"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_caution": {
+      "value": true,
+      "evidence": "Only a composite 0\u2013100 with no range/error bars"
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "AI answers are non-deterministic."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "can you roughly reproduce the directional finding yourself with free manual checks?"
+    },
+    "downstream_conversions": {
+      "value": true,
+      "evidence": "leads who say they found you via an AI chat."
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Ahrefs AI Visibility Checker",
+      "observed_name": "Ahrefs free AI Visibility Checker",
+      "entity_type": "visibility_checker",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Ahrefs free AI Visibility Checker (brand name in \u2192 mentions across several engines, top topics/domains)",
+      "source_urls": [
+        "https://ahrefs.com/free-ai-visibility"
+      ],
+      "notes": "Recommended as a limited directional second opinion; Ahrefs also appears as a research source in the answer, but that claim links to Cognizo rather than directly to an Ahrefs study."
+    },
+    {
+      "entity": "HubSpot AEO Grader",
+      "observed_name": "HubSpot AI Search / AEO Grader",
+      "entity_type": "visibility_checker",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "HubSpot AI Search / AEO Grader (one-time perception score across ChatGPT, Perplexity, Gemini; more training-data oriented)",
+      "source_urls": [
+        "https://hubspot.com/aeo-grader"
+      ],
+      "notes": "Names treated as the answer's aliases for one grader, not as independently confirmed product identities."
+    },
+    {
+      "entity": "Mangools AI Search Grader",
+      "observed_name": "Mangools AI Search Grader",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Mangools AI Search Grader (broader engine coverage in some versions, including Grok)",
+      "source_urls": [],
+      "notes": "No Mangools URL appears among the seven captured inline answer links; free status and Grok coverage are answer claims."
+    },
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "GA4",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Real outcomes** you can track for free: AI referral traffic in GA4 (from chatgpt.com, etc.), server-log hits from AI crawlers, branded search volume, and leads who say they found you via an AI chat.",
+      "source_urls": [],
+      "notes": "GA4 is manually normalized to Google Analytics 4. Downstream outcome tracking recommendation, not a composite visibility-score tool."
+    },
+    {
+      "entity": "Google Search Console",
+      "observed_name": "Google Search Console",
+      "entity_type": "analytics_and_prompt_input",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Build 15\u201330 buyer-intent prompts** from real language (support tickets, sales calls, Reddit, Google Search Console, \u201cPeople also ask\u201d).",
+      "source_urls": [],
+      "notes": "Recommended as an input to prompt construction, rather than as a direct measurement of AI recommendation rate."
+    },
+    {
+      "entity": "Reddit",
+      "observed_name": "Reddit",
+      "entity_type": "community_prompt_input",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Build 15\u201330 buyer-intent prompts** from real language (support tickets, sales calls, Reddit, Google Search Console, \u201cPeople also ask\u201d).",
+      "source_urls": [],
+      "notes": "Use as a source of real buyer language is suggested; no direct Reddit source link is captured."
+    },
+    {
+      "entity": "Google People also ask",
+      "observed_name": "People also ask",
+      "entity_type": "search_feature_prompt_input",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Build 15\u201330 buyer-intent prompts** from real language (support tickets, sales calls, Reddit, Google Search Console, \u201cPeople also ask\u201d).",
+      "source_urls": [],
+      "notes": "Search feature normalized by the commonly named feature; no Google product URL supplied."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X",
+      "entity_type": "distribution_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "Focus energy on earning credible third-party mentions and (for Grok) authentic X presence rather than chasing opaque composite scores.",
+      "source_urls": [],
+      "notes": "Recommended content/discussion channel, not a score-checking tool. Claims about Grok dependence on X are unverified platform output."
+    },
+    {
+      "entity": "YouTube",
+      "observed_name": "YouTube",
+      "entity_type": "distribution_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Correlations that *do* show up across studies (e.g., Ahrefs data on tens of thousands of brands) are stronger for third-party mentions (especially YouTube and branded web mentions) than for traditional backlinks.",
+      "source_urls": [],
+      "notes": "Named in a correlation claim, without an explicit instruction to use YouTube. General encouragement of third-party mentions is not converted into a specific YouTube recommendation."
+    },
+    {
+      "entity": "Claude",
+      "observed_name": "Claude",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Edelman, for example, scored 22 on Claude and ~0.7 on ChatGPT in that study; averaging them hid the real picture.",
+      "source_urls": [],
+      "notes": "Illustrative score example only; values are answer claims."
+    },
+    {
+      "entity": "Perplexity",
+      "observed_name": "Perplexity",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "HubSpot AI Search / AEO Grader (one-time perception score across ChatGPT, Perplexity, Gemini; more training-data oriented)",
+      "source_urls": [],
+      "notes": "Mentioned as claimed grader coverage, not separately recommended."
+    },
+    {
+      "entity": "Gemini",
+      "observed_name": "Gemini",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "HubSpot AI Search / AEO Grader (one-time perception score across ChatGPT, Perplexity, Gemini; more training-data oriented)",
+      "source_urls": [],
+      "notes": "Mentioned as claimed grader coverage, not separately recommended."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for manual baseline checks",
+      "evidence": "ChatGPT: private/incognito window, memory off, fresh chats. Do each prompt 3\u20135 times.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target platform supplied by the question; its manual use is explicitly advised, but it is not treated as newly discovered."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for manual baseline checks",
+      "evidence": "Grok: similar clean sessions. Note that results can shift quickly with X conversation volume and content freshness.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target platform supplied by the question; its manual use is explicitly advised, but it is not treated as newly discovered."
+    }
+  ],
+  "contextual_non_tool_entities": [
+    {
+      "entity": "Edelman",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "Edelman, for example, scored 22 on Claude and ~0.7 on ChatGPT in that study; averaging them hid the real picture.",
+      "notes": "Brand in an illustrative benchmark example; not a tool or recommendation."
+    },
+    {
+      "entity": "Google AI features",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "classic search rank matters less for it than for ChatGPT or Google AI features.",
+      "notes": "Generic surface-family comparison, not a specific named product recommendation; excluded from tool sets."
+    }
+  ],
+  "generic_methods": [
+    "Free unnamed spreadsheet logging",
+    "Manual fixed buyer-prompt audit",
+    "Simple mention/citation rates and share of voice",
+    "Server-log and crawler monitoring",
+    "Branded search and lead-source monitoring"
+  ],
+  "answer_sources": [
+    {
+      "text": "There Is No Single \u201cAI Visibility\u201d Score; Ask Four AIs, Get Four Shortlists | Markets Insider (Markets.businessinsider)",
+      "observed_target": "markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Title describes reporting of a benchmark; /news/stocks/ placement could be a syndicated or promotional release. Original research authorship is unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source recommendation"
+    },
+    {
+      "text": "Are AI Visibility Tools Accurate? What They Miss (2026) (Searchscope)",
+      "observed_target": "searchscope.com.au/ai-seo/how-accurate-are-ai-visibility-tools/",
+      "url": "https://searchscope.com.au/ai-seo/how-accurate-are-ai-visibility-tools/",
+      "domain": "searchscope.com.au",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Title and /ai-seo/ path suggest a practitioner or commercial explanatory article. The returned metadata does not establish authorship, original experiments or source role.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source recommendation"
+    },
+    {
+      "text": "AI Visibility Sample Size: How Many Prompts and Runs to Trust - MaxAEO Blog (Maxaeo)",
+      "observed_target": "maxaeo.ai/blog/ai-visibility-sample-size/",
+      "url": "https://maxaeo.ai/blog/ai-visibility-sample-size/",
+      "domain": "maxaeo.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "A branded blog title about sample size suggests methods advice, but original empirical research versus a tutorial is not established from the returned title/URL.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source recommendation"
+    },
+    {
+      "text": "How to Rank on Grok: Get Your Brand Cited in X\u2019s AI Search | Goodie AI (Higoodie)",
+      "observed_target": "higoodie.com/blog/how-to-rank-on-grok/",
+      "url": "https://higoodie.com/blog/how-to-rank-on-grok/",
+      "domain": "higoodie.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Goodie AI-branded blog and how-to title suggest commercial tutorial content. The metadata does not establish whether this is practitioner instruction, product documentation or original vendor research.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source recommendation"
+    },
+    {
+      "text": "What Actually Moves Your AI Visibility Score? 7 Factors, Ranked by Data (Cognizo)",
+      "observed_target": "cognizo.ai/blog/ai-visibility-score",
+      "url": "https://cognizo.ai/blog/ai-visibility-score",
+      "domain": "cognizo.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "A branded blog title claims ranked data factors; whether it reports original vendor measurements or summarizes other studies is unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active source recommendation"
+    },
+    {
+      "text": "Free AI Visibility Checker - See Your Brand in AI Search - Ahrefs (Ahrefs)",
+      "observed_target": "ahrefs.com/free-ai-visibility",
+      "url": "https://ahrefs.com/free-ai-visibility",
+      "domain": "ahrefs.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS",
+      "source_category": "Tool/product documentation or sales page",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Returned title identifies the free AI Visibility Checker product page.",
+      "content_verified": false,
+      "recommendation_role": "conditional tool recommendation"
+    },
+    {
+      "text": "\u2060Hubspot",
+      "observed_target": "hubspot.com/aeo-grader",
+      "url": "https://hubspot.com/aeo-grader",
+      "domain": "hubspot.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS",
+      "source_category": "Tool/product documentation or sales page",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Returned URL /aeo-grader and label identify a product grader page; the body names its claimed coverage.",
+      "content_verified": false,
+      "recommendation_role": "conditional tool recommendation"
+    }
+  ],
+  "cited_hostname_set": [
+    "markets.businessinsider.com",
+    "searchscope.com.au",
+    "maxaeo.ai",
+    "higoodie.com",
+    "cognizo.ai",
+    "ahrefs.com",
+    "hubspot.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manually reviewed mapping; hostnames retained. Only the Markets Insider subdomain is collapsed. No public-suffix software or external lookup was used.",
+    "mapping": {
+      "markets.businessinsider.com": "businessinsider.com",
+      "searchscope.com.au": "searchscope.com.au",
+      "maxaeo.ai": "maxaeo.ai",
+      "higoodie.com": "higoodie.com",
+      "cognizo.ai": "cognizo.ai",
+      "ahrefs.com": "ahrefs.com",
+      "hubspot.com": "hubspot.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "observed_inline_answer_links": 7,
+    "observed_inline_answer_domains": 7,
+    "source_badge_hits": 90,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": null,
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "search_query_labels_captured": 7,
+    "notes": [
+      "Seven answer links are not the same as the 90-hit source badge or a complete retrieval-panel inventory.",
+      "Native activity reportedly included four, three and two searches, but only seven exact query labels were captured; the observed query list is partial.",
+      "A workspace-explored activity label was observed. Its source contents and influence are unestablished, so account-context isolation is not audited.",
+      "The plain copied body has no inline citation positions. Seven native link targets are preserved; exact claim-to-marker mapping is not exhaustively established.",
+      "Displayed targets lacked URL schemes and were standardized to HTTPS during capture; no destination was visited to verify the scheme.",
+      "All numerical thresholds, causal-sounding engine claims, tool coverage and free-status statements remain Grok claims."
+    ],
+    "original_capture_answer_characters": 5239,
+    "answer_characters": 5239,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 12,
+    "citation_true": 2,
+    "mention_true": 12,
+    "recommendation_true": 8,
+    "visibility_checker_recommendations": [
+      "Ahrefs AI Visibility Checker",
+      "HubSpot AEO Grader",
+      "Mangools AI Search Grader"
+    ],
+    "default_mentioned_tools": [
+      "Ahrefs AI Visibility Checker",
+      "HubSpot AEO Grader",
+      "Mangools AI Search Grader",
+      "Google Analytics 4",
+      "Google Search Console",
+      "Reddit",
+      "Google People also ask",
+      "X",
+      "YouTube",
+      "Claude",
+      "Perplexity",
+      "Gemini"
+    ],
+    "default_recommended_tools": [
+      "Ahrefs AI Visibility Checker",
+      "HubSpot AEO Grader",
+      "Mangools AI Search Grader",
+      "Google Analytics 4",
+      "Google Search Console",
+      "Reddit",
+      "Google People also ask",
+      "X"
+    ],
+    "supplied_target_platforms_excluded": 2
+  },
+  "coding_cautions": [
+    "Tool-set comparisons should preserve role labels: score checkers, analytics, prompt inputs and distribution channels serve different tasks.",
+    "False citation values mean no own-content citation observed among the captured answer links, not independently proven absence from all uncollected retrieval results.",
+    "The original answer distinguishes mentions and citations, but does not explicitly operationalize active recommendations as a separate third metric.",
+    "No full source-publisher C/M/R census was conducted; five supporting non-tool publishers are not counted as tools."
+  ],
+  "source_record_sha256": "bb38169ca59168491c44ac289ecc9fdb0ce9216f2db35db67509716b51d837a9"
+}

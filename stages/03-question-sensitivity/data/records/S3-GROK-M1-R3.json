@@ -1,0 +1,87 @@
+{
+  "id": "S3-GROK-M1-R3",
+  "slot_id": "S3-GROK-M1-R3",
+  "platform": "Grok",
+  "prompt_id": "M1",
+  "intent": "M",
+  "wording": 1,
+  "repeat": 3,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I reliably measure whether ChatGPT and Grok recommend my product to potential buyers?",
+  "submitted_at": "2026-11-02T06:49:23.031Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "You can measure this reliably for free with a fixed set of buyer-intent prompts, repeated manual tests on ChatGPT and Grok, and a simple spreadsheet. This is the standard low-cost approach used by solo founders and small teams for GEO (Generative Engine Optimization).\u2060Shmeer\n\nPaid AI visibility tools exist, but you do not need them for a usable signal.\n\n1. Build a fixed prompt set (15\u201330 prompts)\n\nCreate questions a real potential buyer would ask without naming your product. Keep the wording identical every time so you can compare results over weeks.\n\nInclude a mix of:\n\nCategory / \u201cbest of\u201d queries (\u201cbest [category] for [specific use case]\u201d, \u201ctop tools for [problem]\u201d)\nProblem-solving queries (\u201chow do I [problem your product solves]\u201d)\nComparison / alternative queries (\u201c[competitor] alternatives\u201d, \u201ccheapest [category] that does X\u201d)\nEvaluation queries (\u201cwhat to look for in a [category] tool\u201d)\n\nStart with 15\u201320 high-intent ones. Add more later if needed. These become your permanent test panel.\u2060Gomega\n\n2. Run them manually and log everything\n\nFor each prompt:\n\nRun it 3\u20135 times on ChatGPT and on Grok (answers vary a lot; single runs are noisy).\u2060Geoaura\nPrefer modes that can search the web when available, since product recommendations often rely on current information rather than pure training data.\nRecord in a Google Sheet (or any free spreadsheet):\nDate\tEngine\tPrompt\tMentioned? (Y/N)\tPosition in list\tCited your site?\tCompetitors mentioned\tSentiment / accuracy notes\tSources cited\n\nKey metrics to calculate from the log:\n\nMention rate \u2014 % of runs where your product appears at all\nShare of voice \u2014 your mentions vs. competitors\nAverage position \u2014 where you appear when mentioned\nCitation rate \u2014 how often your domain is linked or referenced as a source\nAccuracy / sentiment \u2014 whether the description is correct and positive\n\nDo this weekly or every two weeks. Look at trends, not any single answer. One-off results fluctuate heavily.\u2060Snezzi\n\n3. Use free one-time or limited tools for a baseline\nHubSpot AEO / AI Search Grader \u2014 free, no account required for the basic check. Enter your brand + category and it scores how ChatGPT, Perplexity, and Gemini characterize you (sentiment, presence, share of voice, etc.). Good for a quick snapshot.\u2060Hubspot\nMangools AI Search Watcher \u2014 free plan includes 5 prompts monitored weekly across multiple engines, including ChatGPT and Grok. Useful for a small recurring automated check while you do the rest manually.\nFree page-level GEO checkers (various sites) \u2014 these score how \u201ccitable\u201d a page is (structure, schema, crawler access, etc.). They do not replace prompt testing but help explain why you might or might not appear.\n4. Check actual traffic impact (lagging indicator)\n\nIn Google Analytics 4:\n\nGo to Reports \u2192 Acquisition \u2192 Traffic acquisition.\nLook for the AI Assistant channel (added in 2026) or filter by session source for chatgpt.com (and similar for other tools).\nNote: many AI visits arrive without a clear referrer and show as Direct. OpenAI has documented that ChatGPT can add utm_source=chatgpt.com to links.\u2060Goodatmarketing\n\nAlso check:\n\nGoogle Search Console for AI Overviews / AI Mode impressions (when relevant).\nBing Webmaster Tools AI Performance report for citations in Copilot/Bing AI.\n\nThis shows whether mentions are turning into visits, not just whether the models know you exist.\n\nPractical tips for a solo founder\nKeep the prompt list short enough that a full cycle takes 1\u20132 hours. Consistency beats volume.\nTest both ChatGPT and Grok the same way so you can compare engines.\nWhen you get mentioned, note how (brief list item, detailed recommendation, with link or without). That tells you what to improve.\nTechnical readiness still matters: make sure AI crawlers can reach your site, important content is in the HTML (not only behind JS), and key pages have clear structure + schema. Free GEO checkers flag the biggest blockers.\nExpect noise. The reliable signal is directional change over 4\u20138 weeks of consistent testing, not day-to-day jumps.\n\nThis method is what most practical GEO guides recommend when you have zero budget: fixed buyer prompts + repeated manual logging + free graders + GA4/Search Console for confirmation.\u2060Explaingeo\n\nStart with your 15\u201320 prompts this week, establish a baseline, then re-run on a schedule. You\u2019ll quickly see whether ChatGPT and Grok surface your product for real buyer questions and whether that improves as you update content or get more mentions elsewhere.",
+  "answer_links": [
+    {
+      "domain": "shmeer.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Shmeer",
+      "url": "https://shmeer.com/blog/how-to-measure-geo"
+    },
+    {
+      "domain": "www.gomega.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Gomega",
+      "url": "https://www.gomega.ai/blog/how-to-measure-geo-performance"
+    },
+    {
+      "domain": "geoaura.world",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Geoaura",
+      "url": "https://geoaura.world/blog/how-to-measure-geo-visibility"
+    },
+    {
+      "domain": "snezzi.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Snezzi",
+      "url": "https://snezzi.com/blog/how-to-measure-geo-visibility-complete-step-by-step-guide/"
+    },
+    {
+      "domain": "www.hubspot.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Hubspot",
+      "url": "https://www.hubspot.com/aeo-grader/generative-engine-optimization-tool"
+    },
+    {
+      "domain": "goodatmarketing.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Goodatmarketing",
+      "url": "https://goodatmarketing.com/how-to-track-chatgpt-traffic-in-google-analytics/"
+    },
+    {
+      "domain": "www.explaingeo.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Explaingeo",
+      "url": "https://www.explaingeo.com/free-geo-tools-for-small-businesses-get-ai-visibility-without-the-enterprise-price-tag/"
+    }
+  ],
+  "captured_at": "2026-11-02T06:51:00.297Z",
+  "source_panel_declared_hits": 65,
+  "source_inventory_scope": "Observed inline answer links; grouped citations expanded; source badge and retrieval activity are separate.",
+  "capture_method": "Complete rendered Grok article innerText; UI heading/duration and source badge removed. Exact inline hrefs extracted from scoped rendered article.",
+  "raw_file": "records/S3-GROK-M1-R3.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 4493,
+  "public_answer_characters": 4493,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

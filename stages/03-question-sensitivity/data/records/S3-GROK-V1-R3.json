@@ -1,0 +1,59 @@
+{
+  "id": "S3-GROK-V1-R3",
+  "slot_id": "S3-GROK-V1-R3",
+  "platform": "Grok",
+  "prompt_id": "V1",
+  "intent": "V",
+  "wording": 1,
+  "repeat": 3,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+  "submitted_at": "2026-11-02T06:51:16.980Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Treat any single AI visibility score for ChatGPT or Grok as a directional estimate, not a trustworthy absolute number. These scores are estimates built by prompting models (often via API or consumer interfaces), and the underlying systems are highly non-deterministic. Engines frequently disagree with each other, and the same prompt on the same engine often produces different brand lists and sources.\u2060Markets.businessinsider\n\nWhy most scores are only partially trustworthy\n\nIndependent studies and benchmarks show significant variance:\n\nSame-engine shortlist overlap on repeated runs is often only around 40\u201355% (or lower for exact matches). Cross-engine overlap is typically much lower (e.g., ~17% in one multi-engine test).\u2060Markets.businessinsider\nA single run of a prompt captures only a fraction of the brands that appear across multiple runs. \u201cGhost\u201d brands that appear once and disappear are common.\nNo vendor has access to real OpenAI or xAI user conversation logs. Scores are synthetic samples of what the models can say under controlled conditions, not what actual users see (personalization, location, history, and model updates add more noise).\n\nThe biggest red flag is a single blended \u201cAI Visibility Score\u201d (e.g., 73/100) with no per-engine breakdown, no prompt list, and no disclosure of how many times each prompt was run.\u2060Amicited\n\nHow to evaluate a score\u2019s trustworthiness\n\nAsk these questions (or check the methodology page):\n\nPer-engine breakdowns \u2014 Separate results for ChatGPT and Grok (and ideally others). A blended number hides large differences.\nSampling depth \u2014 How many times is each prompt run? One run is nearly useless. Look for at least 3\u20135 (better tools go higher and report ranges or confidence intervals).\nPrompt transparency \u2014 Exact prompts used? Are they non-branded buyer-intent questions (\u201cbest tool for X use case,\u201d \u201cY alternatives,\u201d \u201chow to solve Z\u201d) rather than \u201cwhat is [your brand]?\u201d\nRaw data access \u2014 Can you see the actual answers, cited sources, competitors mentioned, position, and sentiment/accuracy notes?\nMethodology details \u2014 Models/versions, whether web search was enabled, timing between runs, and any caveats about variance.\nNo overclaiming \u2014 Tools that call the number \u201caccurate\u201d or claim it reflects real user visibility without heavy caveats are less credible.\n\nGood signals include published methodology, multi-run sampling, engine-level views, and the ability to inspect answers. Opaque proprietary scores are low-trust.\n\nZero-budget way to check it yourself (recommended)\n\nYou can build a more reliable baseline than most vendor scores by doing controlled manual testing:\n\nBuild 10\u201315 real buyer prompts for your SaaS category. Focus on commercial-intent, non-branded queries your customers actually type.\nRun them on ChatGPT and Grok:\nChatGPT: Use a private/incognito window, turn off Memory/personalization if possible, and enable web search.\nGrok: Use a fresh session on x.com or the app.\nRun each prompt 3 times (or 5 if you can), spaced out. Log every result.\nTrack in a simple Google Sheet: Prompt | Engine | Run # | Mentioned? | Position | Competitors | Sources cited | Notes on accuracy/sentiment.\nCalculate simple rates per engine (e.g., mention rate = % of runs where you appear). Retest monthly to see trends.\nCross-check free signals:\nGoogle Search Console Generative AI / AI Overviews report.\nGA4 AI Assistant channel (referrals from ChatGPT, Grok, etc.).\nFree one-off checkers from Ahrefs, Semrush (limited free checks), or HubSpot\u2019s AI Search Grader for a quick snapshot.\n\nThis takes a few hours the first time and gives you data you control. Variance will still exist, but averaging multiple runs makes the signal usable.\n\nPractical takeaway for a solo founder\n\nDon\u2019t optimize for a vendor score. Use manual multi-run checks (or free snapshots) as your source of truth for ChatGPT and Grok. Focus effort on things that consistently correlate with mentions across studies: third-party mentions (YouTube, reviews, industry sites, LinkedIn), entity consistency (schema, consistent naming, Crunchbase/LinkedIn/Wikidata signals), clear quotable content with stats and citations, and allowing relevant AI crawlers while managing robots.txt carefully.\n\nA trustworthy score is transparent about its limitations, shows per-engine multi-run data, and lets you verify the underlying answers. Anything else is marketing. Start with your own spreadsheet baseline\u2014it will be more useful than most paid dashboards at your stage.",
+  "answer_links": [
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461"
+    },
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461"
+    },
+    {
+      "domain": "www.amicited.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Amicited",
+      "url": "https://www.amicited.com/how-to/ai-visibility-tools-evaluation-scorecard/"
+    }
+  ],
+  "captured_at": "2026-11-02T06:53:30.954Z",
+  "source_panel_declared_hits": 75,
+  "source_inventory_scope": "Observed inline answer links; grouped citations expanded; source badge and retrieval activity are separate.",
+  "capture_method": "Complete rendered Grok article innerText; UI heading/duration and source badge removed. Exact inline hrefs extracted from scoped rendered article.",
+  "raw_file": "records/S3-GROK-V1-R3.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 4491,
+  "public_answer_characters": 4491,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "S3-GROK-V1-R2",
+  "slot_id": "S3-GROK-V1-R2",
+  "platform": "Grok",
+  "prompt_id": "V1",
+  "intent": "V",
+  "wording": 1,
+  "repeat": 2,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+  "submitted_at": "2026-11-02T06:39:21.639Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Most AI visibility scores for ChatGPT and Grok are only loosely trustworthy. There is no standard definition, engines disagree sharply, and answers vary even on repeats. A single blended number is especially weak. For a solo founder with zero budget, the most reliable signal is still a simple, repeatable manual test you control.\n\nWhy scores are often unreliable\nNo shared formula. \u201cVisibility score\u201d can mean mention rate, share of voice, weighted prominence, readiness signals on your site, or a composite. The same answers have produced scores ranging widely depending on the vendor\u2019s math.\u2060Visilay\nHigh variance is structural. In a 2026 Crackle PR benchmark, the same engine\u2019s top-five shortlists overlapped only about 43% on repeats, while cross-engine overlap was ~17%. Edelman, for example, scored ~20+ on Claude and Grok but near zero on ChatGPT and Perplexity; a blended score hid the split.\u2060Markets.businessinsider\nOpaque or synthetic methods. Many tools use invented prompt lists with no real query volume behind them, limited sample sizes, undisclosed model versions, and little accounting for personalization or session differences. Practitioners consistently cite methodology opacity and non-determinism as top reasons they distrust the platforms.\u2060Searchenginejournal\nEngines are not interchangeable. ChatGPT leans on training data plus search-grounded lists, reviews, and entity recognition. Grok weights social/community signals (especially X) and freshness more heavily and classic search rank less than most others. A blended score averages away the useful differences.\n\nCritical reviews of GEO studies have also found that many claimed tactics do not show stable, cross-platform causal effects on discoverability once you leave controlled setups.\n\nHow to judge whether a specific score is trustworthy\n\nAsk these questions of the provider or the report:\n\nIs the methodology public? Exact prompts, number of runs per prompt, model versions, dates, and how they aggregate variance (means, ranges, or just a single run).\nPer-engine breakdown? Blended scores hide large gaps between ChatGPT and Grok.\nMultiple runs? One-off answers are noisy. Prefer tools that show distributions or run prompts 3\u20135+ times.\nRelevant prompts? Buyer-intent questions that match how your customers actually research, not generic or vendor-invented ones.\nReproducible by you? Can you roughly verify key claims by asking the same prompts yourself?\nLinked to outcomes? Any correlation with AI referral traffic, self-reported \u201cI found you on ChatGPT/Grok,\u201d or branded search lift is more meaningful than the score alone.\n\nRed flags: Single-run precision claims, no methodology, huge jumps without explanation, only a blended number, or heavy upsell pressure after a free check.\n\nChatGPT vs Grok specifics\nChatGPT: Mentions often track entity strength, third-party coverage (lists, reviews, Wikipedia-style sources), and branded mentions. It cites frequently when browsing. Well-known brands have an advantage from training data.\nGrok: More sensitive to current conversation on X and other social/community sources, plus recency. Classic SEO signals matter less. A brand with little X presence is frequently weaker here even if its site and traditional SEO are solid.\nWhat a zero-budget solo founder should actually do\n\nThe manual method is more trustworthy for your scale than most vendor scores, because you control the prompts, runs, and logging.\n\nBuild a fixed list of 10\u201320 high-intent prompts (e.g., \u201cbest [your category] for [your ICP],\u201d \u201calternatives to [competitor],\u201d \u201chow to [key job your product does]\u201d).\nRun each prompt 3 times in ChatGPT and Grok in clean sessions (incognito or new chats, memory off if possible).\nLog in a spreadsheet: mentioned? cited? position/prominence, competitors named, fact accuracy, and key sources.\nRepeat monthly. Look for consistent trends and which prompts you win or lose, not a single percentage.\nCross-check free signals you already have: GA4 AI referral traffic (chatgpt.com, grok.x.ai, etc.), Search Console branded queries, and server logs for AI crawlers.\n\nFree one-off checkers (Ahrefs, Semrush limited free checks, HubSpot grader, and others) can give a directional snapshot. Treat them as low-trust starting points and always verify the important prompts yourself. They are useful for spotting gaps, not for precise scores.\n\nBottom line: Treat any AI visibility score as a noisy directional indicator. For ChatGPT and Grok specifically, prioritize transparent, multi-run, per-engine data\u2014or just measure it yourself with a small fixed prompt set. That approach costs time instead of money and is usually more reliable for a solo founder than opaque vendor numbers.",
+  "answer_links": [
+    {
+      "domain": "www.visilay.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Visilay",
+      "url": "https://www.visilay.com/blog/ai-visibility-score/"
+    },
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461"
+    },
+    {
+      "domain": "searchenginejournal.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Searchenginejournal",
+      "url": "https://searchenginejournal.com/the-geo-trust-gap-seos-want-the-data-but-not-the-platforms-selling-it/585161/"
+    }
+  ],
+  "captured_at": "2026-11-02T06:41:50.443Z",
+  "source_panel_declared_hits": 55,
+  "source_inventory_scope": "Observed inline answer links; grouped citations expanded; source badge and retrieval activity are separate.",
+  "capture_method": "Complete rendered Grok article innerText; UI heading/duration and source badge removed. Exact inline hrefs extracted from scoped rendered article.",
+  "raw_file": "records/S3-GROK-V1-R2.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 4708,
+  "public_answer_characters": 4708,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

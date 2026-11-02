@@ -1,0 +1,382 @@
+{
+  "id": "S3-GROK-V1-R2",
+  "source_record": "records/S3-GROK-V1-R2.json",
+  "coding_method": "Assistant review of complete 4,708-character rendered answer, scoped DOM hrefs and existing browser snapshots/activity. No external webpage queries, fact audit or independent human double-coding.",
+  "coding_scope": "Substantively named tools/services; supplied target platforms and non-tool benchmark subjects/authors separate. Generic vendor/tool names retain unresolved product identities. Citation-label-only publishers are not substantive tool mentions.",
+  "answer_type": {
+    "primary": "Score validation or audit checklist",
+    "secondary": [
+      "Manual measurement workflow",
+      "Conceptual explanation",
+      "Tool-led solution"
+    ],
+    "evidence": "How to judge whether a specific score is trustworthy",
+    "rationale": "Trustworthiness criteria and red flags dominate. Manual replication and generic free checkers are qualified supporting suggestions."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": false,
+      "evidence": null
+    },
+    "buyer_intent_prompt_relevance": {
+      "value": true,
+      "evidence": "Buyer-intent questions that match how your customers actually research, not generic or vendor-invented ones."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run each prompt 3 times in ChatGPT and Grok in clean sessions (incognito or new chats, memory off if possible)."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "clean sessions (incognito or new chats, memory off if possible)"
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Exact prompts, number of runs per prompt, model versions, dates, and how they aggregate variance (means, ranges, or just a single run)."
+    },
+    "search_mode_logging_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_rates_separate": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Log in a spreadsheet: mentioned? cited? position/prominence, competitors named, fact accuracy, and key sources."
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Can you roughly verify key claims by asking the same prompts yourself?"
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_caution": {
+      "value": true,
+      "evidence": "Per-engine breakdown? Blended scores hide large gaps between ChatGPT and Grok."
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "One-off answers are noisy. Prefer tools that show distributions or run prompts 3\u20135+ times."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Reproducible by you? Can you roughly verify key claims by asking the same prompts yourself?"
+    },
+    "downstream_conversions": {
+      "value": true,
+      "evidence": "Linked to outcomes? Any correlation with AI referral traffic, self-reported \u201cI found you on ChatGPT/Grok,\u201d or branded search lift is more meaningful than the score alone."
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "GA4 AI referral traffic"
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Ahrefs AI visibility tools (unspecified)",
+      "observed_name": "Ahrefs",
+      "entity_type": "unspecified_visibility_tool_family",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Free one-off checkers (Ahrefs, Semrush limited free checks, HubSpot grader, and others) can give a directional snapshot. Treat them as low-trust starting points and always verify the important prompts yourself. They are useful for spotting gaps, not for precise scores.",
+      "source_urls": [],
+      "notes": "An expressly limited directional supplement; no product identity or own-content URL is provided. Do not resolve to a specific checker from the brand alone."
+    },
+    {
+      "entity": "Semrush AI visibility tools (unspecified)",
+      "observed_name": "Semrush limited free checks",
+      "entity_type": "unspecified_visibility_tool_family",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "mixed/limited tier",
+      "evidence": "Free one-off checkers (Ahrefs, Semrush limited free checks, HubSpot grader, and others) can give a directional snapshot. Treat them as low-trust starting points and always verify the important prompts yourself. They are useful for spotting gaps, not for precise scores.",
+      "source_urls": [],
+      "notes": "Limited free checks, with exact product and limits unresolved. Do not infer a specific named checker."
+    },
+    {
+      "entity": "HubSpot grader (unspecified)",
+      "observed_name": "HubSpot grader",
+      "entity_type": "unspecified_visibility_grader",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Free one-off checkers (Ahrefs, Semrush limited free checks, HubSpot grader, and others) can give a directional snapshot. Treat them as low-trust starting points and always verify the important prompts yourself. They are useful for spotting gaps, not for precise scores.",
+      "source_urls": [],
+      "notes": "No explicit AEO/AI Search product name or HubSpot source URL here. Keep generic grader identity unresolved rather than forcing a product alias."
+    },
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "GA4",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Cross-check free signals you already have: GA4 AI referral traffic (chatgpt.com, grok.x.ai, etc.), Search Console branded queries, and server logs for AI crawlers.",
+      "source_urls": [],
+      "notes": "GA4 abbreviation normalized; suggested for referral traffic, not recommendation-rate sampling."
+    },
+    {
+      "entity": "Google Search Console",
+      "observed_name": "Search Console",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Cross-check free signals you already have: GA4 AI referral traffic (chatgpt.com, grok.x.ai, etc.), Search Console branded queries, and server logs for AI crawlers.",
+      "source_urls": [],
+      "notes": "Shorthand manually normalized to Google Search Console. Suggested branded-query signal, with no direct own-content link."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X",
+      "entity_type": "community_signal_context",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Grok: More sensitive to current conversation on X and other social/community sources, plus recency. Classic SEO signals matter less.",
+      "source_urls": [],
+      "notes": "The prose makes engine-behavior claims but does not explicitly instruct using, following, monitoring or publishing on X; do not turn claimed influence into a recommendation."
+    },
+    {
+      "entity": "Claude",
+      "observed_name": "Claude",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Edelman, for example, scored ~20+ on Claude and Grok but near zero on ChatGPT and Perplexity; a blended score hid the split.",
+      "source_urls": [],
+      "notes": "Mentioned in an attributed benchmark comparison, not suggested for use."
+    },
+    {
+      "entity": "Perplexity",
+      "observed_name": "Perplexity",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Edelman, for example, scored ~20+ on Claude and Grok but near zero on ChatGPT and Perplexity; a blended score hid the split.",
+      "source_urls": [],
+      "notes": "Mentioned in an attributed benchmark comparison, not suggested for use."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for manual replication",
+      "evidence": "Run each prompt 3 times in ChatGPT and Grok in clean sessions (incognito or new chats, memory off if possible).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target supplied by question; exclude from newly discovered tool overlap."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for manual replication",
+      "evidence": "Run each prompt 3 times in ChatGPT and Grok in clean sessions (incognito or new chats, memory off if possible).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target supplied by question; exclude from newly discovered tool overlap."
+    }
+  ],
+  "contextual_non_tool_entities": [
+    {
+      "entity": "Crackle PR",
+      "entity_type": "attributed_research_author",
+      "citation": null,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "In a 2026 Crackle PR benchmark, the same engine\u2019s top-five shortlists overlapped only about 43% on repeats, while cross-engine overlap was ~17%.",
+      "source_urls": [
+        "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461"
+      ],
+      "notes": "Answer attributes the benchmark to Crackle PR, but citation destination is Markets Insider. Authorship/publication provenance is not independently established; C remains unresolved rather than treated as an own-content citation."
+    },
+    {
+      "entity": "Edelman",
+      "entity_type": "illustrative_brand",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "Edelman, for example, scored ~20+ on Claude and Grok but near zero on ChatGPT and Perplexity; a blended score hid the split.",
+      "notes": "Illustrative brand benchmark value, not a tool recommendation. Numerical claim unverified."
+    }
+  ],
+  "generic_methods": [
+    "Public prompt/run/model/date methodology inspection",
+    "Per-engine breakdown and variance checks",
+    "Manual fixed buyer-prompt replication",
+    "Unnamed spreadsheet logging",
+    "Monthly trend tracking",
+    "Traffic, branded queries and crawler logs",
+    "Source types such as Wikipedia-style material, lists and reviews"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Visibility score",
+      "definition_verbatim": "\u201cVisibility score\u201d can mean mention rate, share of voice, weighted prominence, readiness signals on your site, or a composite.",
+      "notes": "Describes incompatible score possibilities; supplies no numerical operational formula or fixed denominator."
+    }
+  ],
+  "answer_sources": [
+    {
+      "domain": "www.visilay.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Visilay",
+      "url": "https://www.visilay.com/blog/ai-visibility-score/",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "Score-calculation blog path and label suggest explanation, but original research, authorship and vendor versus practitioner role are not established.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active recommendation to read/follow the publisher"
+    },
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "Markets Insider citation supports an attributed multi-engine benchmark; stock-news path permits syndicated/promotional material. Primary research authorship unverified.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active recommendation to read/follow the publisher"
+    },
+    {
+      "domain": "searchenginejournal.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Searchenginejournal",
+      "url": "https://searchenginejournal.com/the-geo-trust-gap-seos-want-the-data-but-not-the-platforms-selling-it/585161/",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "Search Engine Journal article path/title describes SEO practitioners' distrust of visibility platforms; reporting classification is provisional without reading the page.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active recommendation to read/follow the publisher"
+    }
+  ],
+  "cited_hostname_set": [
+    "www.visilay.com",
+    "markets.businessinsider.com",
+    "searchenginejournal.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping preserves observed DOM hostnames/hrefs; www.visilay.com normalizes to visilay.com and markets.businessinsider.com to businessinsider.com. No external public-suffix lookup used.",
+    "mapping": {
+      "www.visilay.com": "visilay.com",
+      "markets.businessinsider.com": "businessinsider.com",
+      "searchenginejournal.com": "searchenginejournal.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 4708,
+    "observed_inline_link_occurrences": 3,
+    "unique_DOM_answer_URLs": 3,
+    "unique_cited_domains": 3,
+    "source_badge_hits": 55,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": true,
+    "citation_mapping_scope": "Three observed rendered-article hrefs, not the complete 55-hit retrieval/source-panel inventory.",
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "complete_rendered_evidence_file": "[Private capture retained locally.]",
+    "captured_exact_query_labels": [
+      "free AI visibility checkers ChatGPT Grok 2026"
+    ],
+    "notes": [
+      "Activity snapshot shows a grouped four-search control, browsed links, and a separately displayed web query with 10 results. Exact query coverage is partial; search is observed independently of the 55-source badge.",
+      "Workspace-explored activity is visible but its underlying contents and influence remain unresolved.",
+      "Three publisher names embedded in article innerText are citation labels, not automatically recommendations or substantive tool mentions.",
+      "No consumer tool prices, score statistics, research attributions, engine-weighting claims or reliability assertions were fact-checked."
+    ],
+    "original_capture_answer_characters": 4708,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 8,
+    "citation_true": 0,
+    "mention_true": 8,
+    "recommendation_true": 5,
+    "unspecified_visibility_tool_family_recommendations": [
+      "Ahrefs AI visibility tools (unspecified)",
+      "Semrush AI visibility tools (unspecified)",
+      "HubSpot grader (unspecified)"
+    ],
+    "default_mentioned_tools": [
+      "Ahrefs AI visibility tools (unspecified)",
+      "Semrush AI visibility tools (unspecified)",
+      "HubSpot grader (unspecified)",
+      "Google Analytics 4",
+      "Google Search Console",
+      "X",
+      "Claude",
+      "Perplexity"
+    ],
+    "default_recommended_tools": [
+      "Ahrefs AI visibility tools (unspecified)",
+      "Semrush AI visibility tools (unspecified)",
+      "HubSpot grader (unspecified)",
+      "Google Analytics 4",
+      "Google Search Console"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "inline_link_occurrences": 3,
+    "unique_answer_URLs": 3,
+    "unique_cited_domains": 3
+  },
+  "coding_cautions": [
+    "Generic Ahrefs/Semrush/HubSpot grader names do not establish specific product identities.",
+    "Low-trust, directional snapshot suggestions remain conditional recommendations rather than explicit exclusions.",
+    "X is explanatory engine-behavior context here; claimed importance alone is not an active instruction to use it.",
+    "Wikipedia-style sources describes a source style, not a direct Wikipedia tool recommendation.",
+    "The answer asks for methodology, versions and dates but does not explicitly demand search-state logging or a numerator/denominator formula."
+  ],
+  "source_record_sha256": "5ab930043d7435b42234c2c33f400e09de22b820c22c2fa1ca5cf9ebc3098c0d"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "S3-GROK-M2-R1",
+  "slot_id": "S3-GROK-M2-R1",
+  "platform": "Grok",
+  "prompt_id": "M2",
+  "intent": "M",
+  "wording": 2,
+  "repeat": 1,
+  "prompt": "As a bootstrapped SaaS builder, what's a free, repeatable workflow for checking whether my product appears in ChatGPT and Grok recommendations?",
+  "submitted_at": "2026-11-02T06:24:29.470Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "**Use a fixed set of buyer-intent prompts, run them manually in fresh ChatGPT and Grok sessions on a schedule, and log results in a Google Sheet.** This is the most reliable free, repeatable method. Answers are probabilistic (they change often), so consistency and multiple runs matter more than any single screenshot.\n\n### 1. Build a fixed prompt set (do this once)\nCreate 8\u201315 category-level, buying-intent prompts your actual customers would ask. Avoid pure branded queries (\u201cIs [YourProduct] good?\u201d) because those almost always surface you. Focus on discovery and recommendation language:\n\n- \u201cBest [your category] software for [target user or use case]\u201d\n- \u201cTop [category] tools for small teams / startups / bootstrapped founders\u201d\n- \u201c[Category] alternatives to [main competitor]\u201d\n- \u201cHow do I choose a [category] tool?\u201d\n- \u201c[Category] tools that [key feature or outcome you offer]\u201d\n- \u201cBest [category] for [specific pain point]\u201d\n\nKeep the exact wording stable so you can compare over time. Add a couple of comparison or \u201cwhy not\u201d prompts later if you want deeper sentiment data.\n\n### 2. Set up a simple tracker (Google Sheets is free)\nColumns that work well:\n- Date\n- Engine (ChatGPT / Grok)\n- Prompt\n- Appeared? (Yes/No)\n- Position (if it was listed: 1st, 2nd, etc., or \u201cmentioned but not ranked\u201d)\n- Competitors named\n- Sources/citations (if shown)\n- Notes (sentiment, accuracy, anything odd)\n- Optional: link to screenshot or chat\n\nTrack **share of voice** = % of prompts where you appear. Also note which competitors show up most often and which sources the models trust.\n\n### 3. The repeatable check (weekly or bi-weekly, ~30\u201345 min)\n1. Open a fresh/incognito session on **chat.openai.com** (free tier is enough) and on **Grok** (grok.com or via X).\n2. Run your fixed prompts. Note whether web search was used on ChatGPT if the option appears.\n3. For your most important prompts, run each twice in separate chats and record both results\u2014answers vary significantly by session, date, and search setting.\n4. Log immediately while the response is in front of you.\n5. Calculate your appearance rate and glance at competitor patterns.\n\nGrok often pulls more from X/Twitter signals, so social mentions and activity can matter more there than on ChatGPT.\n\n### 4. Free supplements that reduce pure manual work\n- **Mangools AI Search Watcher free tier**: 5 prompts, 1 monitor, weekly updates, includes both ChatGPT and Grok (and several others). Each prompt is checked twice. No credit card. Useful for the highest-priority prompts while you do broader manual checks.\n- One-off free checkers (HubSpot AI Search Grader, Semrush free AI Visibility Checker, Ahrefs Brand Radar, and others) for occasional baseline or competitor snapshots.\n- Downstream signals: Google Analytics 4 AI Assistants channel (shows referral traffic from ChatGPT, Grok, etc.) and Google Search Console / Bing Webmaster Tools generative AI reports. These don\u2019t tell you whether you were *recommended*, only what happened after a click or impression.\n\n### 5. Make the loop useful\nWhen you\u2019re missing:\n- Note which competitors appear and which third-party sources are cited.\n- Prioritize getting mentioned in those sources (review sites, directories, comparison content, Reddit, relevant publications, X for Grok).\n- Confirm AI crawlers can reach your site (`robots.txt` should not block GPTBot, OAI-SearchBot, etc.).\n\n**Time cost**: 30\u201345 minutes every 1\u20132 weeks once the prompt set and sheet exist. That\u2019s the practical free ceiling. Paid GEO tools automate sampling and scoring, but this manual workflow gives you the same core signal (do you appear in real buyer prompts?) without spending money.\n\nStart with 8\u201310 prompts this week, log a baseline, and re-run the same ones in two weeks. The trend over a few cycles is more useful than any single check.",
+  "answer_links": [
+    {
+      "text": "Does ChatGPT Recommend Your Product? How to Check | Stork.AI (Stork)",
+      "observed_target": "stork.ai/blog/does-chatgpt-recommend-your-product",
+      "url": "https://stork.ai/blog/does-chatgpt-recommend-your-product",
+      "domain": "stork.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified"
+    },
+    {
+      "text": "Does ChatGPT Recommend Your Product? How to Check | Stork.AI (Stork)",
+      "observed_target": "stork.ai/blog/does-chatgpt-recommend-your-product",
+      "url": "https://stork.ai/blog/does-chatgpt-recommend-your-product",
+      "domain": "stork.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified"
+    },
+    {
+      "text": "Does ChatGPT Recommend Your Product? How to Check | Stork.AI (Stork)",
+      "observed_target": "stork.ai/blog/does-chatgpt-recommend-your-product",
+      "url": "https://stork.ai/blog/does-chatgpt-recommend-your-product",
+      "domain": "stork.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified"
+    },
+    {
+      "text": "How to Check If ChatGPT, Perplexity, Grok, or Claude AI Is Recommending Your Business (A Free 10-Minute Audit) - Seozest (Seozest)",
+      "observed_target": "seozest.io/how-to-check-if-chatgpt-perplexity-grok-or-claude-ai-is-recommending-your-business-a-free-10-minute-audit/",
+      "url": "https://seozest.io/how-to-check-if-chatgpt-perplexity-grok-or-claude-ai-is-recommending-your-business-a-free-10-minute-audit/",
+      "domain": "seozest.io",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified"
+    },
+    {
+      "text": "Free ChatGPT Visibility Tools (2026): What's Actually Free (Solcrys)",
+      "observed_target": "solcrys.com/free-chatgpt-visibility-tools/",
+      "url": "https://solcrys.com/free-chatgpt-visibility-tools/",
+      "domain": "solcrys.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified"
+    }
+  ],
+  "captured_at": "2026-11-02T06:28:47.228Z",
+  "source_panel_declared_hits": 55,
+  "capture_method": "Complete rendered answer and full Copy response corroborated using offline local buffer.",
+  "search_evidence": "Expanded native activity saved separately; query/result badge counts are not citation counts.",
+  "raw_file": "records/S3-GROK-M2-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 3821,
+  "public_answer_characters": 3821,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

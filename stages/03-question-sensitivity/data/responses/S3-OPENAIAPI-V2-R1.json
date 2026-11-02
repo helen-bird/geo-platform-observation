@@ -1,0 +1,341 @@
+{
+  "object": "response",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "created_at": 1793611258,
+  "completed_at": 1793611287,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 19168,
+    "input_tokens_details": {
+      "cache_write_tokens": 32,
+      "cached_tokens": 4316
+    },
+    "output_tokens": 2115,
+    "output_tokens_details": {
+      "reasoning_tokens": 808
+    },
+    "total_tokens": 21283
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 2
+    }
+  },
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "service_tier": "default",
+  "store": false,
+  "max_output_tokens": 32768,
+  "max_tool_calls": 8,
+  "tool_choice": "required",
+  "tools": [
+    {
+      "type": "web_search",
+      "return_token_budget": "default",
+      "search_content_types": [
+        "text"
+      ],
+      "search_context_size": "medium",
+      "user_location": {
+        "type": "approximate",
+        "city": null,
+        "country": "US",
+        "region": null,
+        "timezone": null
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:help.openai.com ChatGPT search how search works citations official",
+          "site:docs.x.ai Grok web search citations official",
+          "site:platform.openai.com/docs models snapshots behavior official",
+          "LLM evaluation variance repeated prompts benchmark paper arxiv"
+        ],
+        "query": "site:help.openai.com ChatGPT search how search works citations official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%3F.pls"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2609.30074"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/11128490-improved-shopping-results-from-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2410.03492"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%2520automatically%2520includes%2520the%2520UTM%2520parameter%2520utm_source%253Dchatgpt.com%2520in%2520referral%2520URLs%252C%2520enabling%2520clear%2520tracking%2520and%2520analysis%2520of%2520inbound%2520traffic%2520from%2520ChatGPT%2520search%2520results"
+          },
+          {
+            "type": "url",
+            "url": "https://www.turing.ac.uk/sites/default/files/2025-11/towards_reproducible_llm_evaluation.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://aclweb.org/anthology/2024.acl-long.560.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10056348-finding-your-chats-projects-and-files-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2405.17202"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10984597-chatgpt-generated-links/"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2609.32547"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10500283-deep-research-faq/"
+          },
+          {
+            "type": "url",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12637745/"
+          },
+          {
+            "type": "url",
+            "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/28236482f64a72eec43706b6f3a6c511-Paper-Conference.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.paperpeel.com/paper/2610.30512"
+          },
+          {
+            "type": "url",
+            "url": "https://proceedings.nips.cc/paper_files/paper/2024/file/28236482f64a72eec43706b6f3a6c511-Paper-Conference.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Language_model_benchmark"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/LLM-as-a-Judge"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AIEval/comments/1s3835s/i_built_a_tool_for_deterministic_llm_evaluation/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/u_TheAIResearchCenter/comments/1v96o85/how_to_read_an_ai_evaluation_report_without_being/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/LLMDevs/comments/1qh7oxg/confused_about_llm_evaluation_approaches/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.livescience.com/technology/artificial-intelligence/being-mean-to-chatgpt-increases-its-accuracy-but-you-may-end-up-regretting-it-scientists-warn"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/u_TheAIResearchCenter/comments/1v9jww1/when_benchmark_scores_hide_the_conditions_that/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/LocalLLaMA/comments/1g5uksu"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/MachineLearning/comments/1w9llr4/measuring_llm_performance_drift_observations_and/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:docs.x.ai/docs/guides tools web search xAI Grok",
+          "site:docs.x.ai Grok search web X posts citations",
+          "site:x.ai/news Grok search web real-time information"
+        ],
+        "query": "site:docs.x.ai/docs/guides tools web search xAI Grok",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/x-post-fact-check"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/web-search"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/build/settings"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/progressive-tool-disclosure"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/computer-and-apps"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/tool-usage-details"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/legal/faq"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/overview"
+          },
+          {
+            "type": "url",
+            "url": "https://x.ai/news/grok-build-mode"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/advanced-usage"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/prompt-injection-defenses"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-08-20-grok-4-model-card.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2410.03492"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+          }
+        ]
+      }
+    },
+    {
+      "type": "message",
+      "role": "assistant",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+            },
+            {
+              "type": "url_citation",
+              "title": "Towards Reproducible LLM Evaluation: Quantifying Uncertainty in LLM Benchmark Scores",
+              "url": "https://arxiv.org/abs/2410.03492"
+            },
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+            },
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+            },
+            {
+              "type": "url_citation",
+              "title": "Best Practices Guide | SpaceXSI Docs",
+              "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+            },
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+            }
+          ],
+          "logprobs": [],
+          "text": "Treat any \u201cAI visibility score\u201d as a **vendor-defined estimate\u2014not an industry-standard metric**\u2014until you can audit how it was produced.\n\n## Checks to perform\n\n1. **Confirm exactly what was tested**\n   - ChatGPT standard chat, Search, shopping, or deep research?\n   - Grok on grok.com, X, or API?\n   - Which model, mode, subscription tier, device, and date?\n   - Were web search and, for Grok, X search enabled?\n\n   These surfaces are not interchangeable. ChatGPT may search automatically, rewrite queries, use approximate location, and incorporate memory; Grok can use both real-time web and X search. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n2. **Demand the actual prompt set**\n   Check whether prompts:\n   - Represent real customer questions\n   - Include unbranded discovery queries, not just your company name\n   - Cover alternatives, comparisons, use cases, and buying intent\n   - Use your target geography and language\n   - Were selected before results were observed\n\n   A score based on 20 favorable prompts can be less useful than one based on 200 poorly targeted prompts.\n\n3. **Check for repeated runs**\n   One response per prompt is inadequate. Ask for:\n   - Runs per prompt\n   - Number of distinct days tested\n   - Fresh chats versus continued conversations\n   - Variance or confidence intervals\n   - Prompt-level consistency\n\n   LLM evaluations can vary across repeated runs and small wording changes, so aggregate rankings without uncertainty can look more definitive than they are. ([arxiv.org](https://arxiv.org/abs/2410.03492))\n\n4. **Inspect the scoring formula**\n   Determine whether \u201cvisibility\u201d means:\n   - Merely mentioned\n   - Listed among alternatives\n   - Positively recommended\n   - Ranked in the top three\n   - Linked or cited\n   - Accurately described\n\n   Also inspect weights, denominators, competitor selection, and treatment of refusals or failed searches. A mention and a first-choice recommendation should not receive the same credit.\n\n5. **Require raw evidence**\n   For every scored result, the vendor should retain:\n   - Exact prompt\n   - Full response\n   - Timestamp\n   - Product/model/mode\n   - Search status\n   - Citations and destination URLs\n   - Screenshot or API output\n\n   OpenAI itself warns that search results and citations may be incomplete, outdated, or incorrect and recommends opening sources to verify support. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n6. **Verify citations separately from mentions**\n   Track at least three different metrics:\n   - **Mention share:** your product appears\n   - **Recommendation share:** it is actually suggested\n   - **Citation share:** your domain is used as a source\n\n   A model may mention your brand based on another site, cite your site without recommending you, or hallucinate product capabilities.\n\n7. **Audit entity matching**\n   Look for:\n   - Products with similar names\n   - Parent company versus product confusion\n   - Old product names or domains\n   - Misspellings and abbreviations\n   - Multiple products from your company being merged\n\n   Manually inspect a sample of both positive and negative matches.\n\n8. **Check personalization and geographic controls**\n   Results can change with location, saved memory, prior conversation, workspace sources, and account state. ChatGPT explicitly says location and memory may affect search-query rewriting. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n   Prefer clean sessions with memory disabled, no prior context, and explicitly recorded locales\u2014unless personalization is intentionally part of the test.\n\n9. **Check whether the vendor is measuring the consumer product**\n   API calls with custom system prompts, fixed temperatures, or manually enabled tools may not reproduce what prospects see in ChatGPT or Grok. Ask the vendor to explain any difference between its testing harness and the actual consumer interface.\n\n10. **Audit automated grading**\n    If another LLM decides whether your product was \u201crecommended,\u201d require:\n    - The grading rubric and judge model\n    - Human-labeled validation samples\n    - Agreement rates\n    - Manual review of ambiguous outputs\n    - Randomized ordering in competitor comparisons\n\n    xAI\u2019s own evaluation guidance warns that model judges can exhibit position bias, favor longer answers, and drift from human judgment. ([docs.x.ai](https://docs.x.ai/developers/model-capabilities/text/best-practices))\n\n11. **Check crawl and source availability**\n    Determine whether:\n    - Important pages are indexable\n    - Content is current and server-rendered/accessibly rendered\n    - Robots or CDN rules block relevant crawlers\n    - The model cites obsolete third-party pages instead of your canonical pages\n\n    OpenAI states that eligibility requires allowing OAI-Searchbot, but inclusion and placement are not guaranteed. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n12. **Compare scores with business evidence**\n    Cross-check reported improvement against:\n    - ChatGPT/Grok referral traffic\n    - AI-cited landing-page visits\n    - Branded search growth\n    - \u201cHow did you hear about us?\u201d responses\n    - Demo or signup attribution\n    - Actual citation URLs\n\n    Visibility without qualified traffic, accurate positioning, or conversions may have little commercial value.\n\n## A cheap independent audit\n\nBefore buying or trusting a platform:\n\n1. Select **20\u201330 commercially meaningful prompts**.\n2. Run each prompt **at least five times** in fresh sessions.\n3. Test on **two or three different days**.\n4. Record mention, recommendation position, sentiment, factual accuracy, citation, and cited domain separately.\n5. Compare your prompt-level results\u2014not merely the final average\u2014with the vendor\u2019s raw data.\n\n**Strongest trust signal:** the vendor lets you export prompts, raw responses, timestamps, model/mode metadata, citations, and its complete scoring formula.\n\n**Biggest red flag:** a precise score such as \u201c73/100 visibility\u201d with no raw outputs, repeated-run statistics, or explanation of what the 73 represents."
+        }
+      ]
+    }
+  ],
+  "public_copy": true,
+  "publication_scope": "Allowlisted provider output: answer messages, returned citations/search actions and usage. Opaque IDs, original annotation positions, headers and reasoning trace items omitted."
+}

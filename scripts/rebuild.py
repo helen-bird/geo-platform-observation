@@ -27,7 +27,8 @@ def main():
               '<p><a href="public-data.zip">Download Stage 1 public data</a> · '
               '<a href="data/publication-notes.json">Publication scope</a> · '
               '<a href="https://github.com/helen-bird/geo-platform-observation">Learning log and stage index</a> · '
-              '<a href="stages/02-post-discovery/">Stage 2: Post access and discovery</a></p></blockquote>')
+              '<a href="stages/02-post-discovery/">Stage 2: Post access and discovery</a> · '
+              '<a href="stages/03-question-sensitivity/">Stage 3: Question sensitivity</a></p></blockquote>')
     html = html.replace('</header>', '</header>' + notice, 1)
     html = re.sub(r'<title>.*?</title>', '<title>GEO Learning Log | Stage 1: ChatGPT and Grok</title>', html, count=1)
     metadata = (f'<link rel="canonical" href="{SITE_URL}">'

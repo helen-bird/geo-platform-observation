@@ -1,0 +1,248 @@
+{
+  "object": "response",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "created_at": 1793611375,
+  "completed_at": 1793611406,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 21303,
+    "input_tokens_details": {
+      "cache_write_tokens": 34,
+      "cached_tokens": 4316
+    },
+    "output_tokens": 2319,
+    "output_tokens_details": {
+      "reasoning_tokens": 963
+    },
+    "total_tokens": 23622
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 2
+    }
+  },
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "service_tier": "default",
+  "store": false,
+  "max_output_tokens": 32768,
+  "max_tool_calls": 8,
+  "tool_choice": "required",
+  "tools": [
+    {
+      "type": "web_search",
+      "return_token_budget": "default",
+      "search_content_types": [
+        "text"
+      ],
+      "search_context_size": "medium",
+      "user_location": {
+        "type": "approximate",
+        "city": null,
+        "country": "US",
+        "region": null,
+        "timezone": null
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:help.openai.com ChatGPT search citations official help",
+          "site:help.openai.com ChatGPT memory temporary chat official",
+          "site:help.x.com Grok search sources official",
+          "site:docs.x.ai Grok web search citations official"
+        ],
+        "query": "site:help.openai.com ChatGPT search citations official help",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8590148-memory-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8590148-memory-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%3F.pls"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/overview"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10056348-how-do-i-search-my-chat-history-in-chatgpt%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525253F.midi"
+          },
+          {
+            "type": "url",
+            "url": "https://help.x.com/en/using-x/about-grok"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8590148-memory-faq%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525253F.avif"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu%2525252525252523.iso"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/faq"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:help.openai.com \"Searching the web with ChatGPT\" free users official",
+          "site:help.openai.com ChatGPT search available free users official",
+          "site:docs.x.ai/grok temporary chat memory personalization Grok official",
+          "site:help.x.com Grok personalization chat history memory official"
+        ],
+        "query": "site:help.openai.com \"Searching the web with ChatGPT\" free users official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10056348-finding-your-chats-projects-and-files-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/overview"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/6783457-what-is-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/build/modes-and-commands"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.x.com/en/using-x/about-grok"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/skills-routines-and-automations"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/bots"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/build/settings"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.x.com/en/using-x/about-grok"
+          }
+        ]
+      }
+    },
+    {
+      "type": "message",
+      "role": "assistant",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+            },
+            {
+              "type": "url_citation",
+              "title": "Searching the web with ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+            },
+            {
+              "type": "url_citation",
+              "title": "Temporary chat in ChatGPT | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt"
+            },
+            {
+              "type": "url_citation",
+              "title": "About Grok | X Help Center",
+              "url": "https://help.x.com/en/using-x/about-grok"
+            }
+          ],
+          "logprobs": [],
+          "text": "## A free weekly \u201cAI recommendation audit\u201d\n\nUse the free versions of ChatGPT and Grok, a spreadsheet, and roughly 30 minutes per run. ChatGPT web search is available on the Free plan, while Grok is also free to start and can search both the web and public X posts. ([help.openai.com](https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt))\n\n### 1. Build a 10-prompt test set\n\nChoose prompts representing how buyers actually shop\u2014**without mentioning your product**.\n\n| Intent | Prompt template |\n|---|---|\n| Category | \u201cWhat are the best `[category]` tools for `[ICP]`?\u201d |\n| Problem | \u201cI need to `[job]` without `[pain]`. What tools should I consider?\u201d |\n| Constraints | \u201cRecommend five `[category]` tools for `[ICP]` under `$X/month`.\u201d |\n| Alternative | \u201cWhat are the best alternatives to `[market leader]` for `[use case]`?\u201d |\n| Shortlist | \u201cWhich tools should a `[role]` shortlist for `[outcome]`?\u201d |\n| Comparison | \u201cCompare the leading tools for `[job]`, including price, strengths and weaknesses.\u201d |\n\nCreate variants for your two or three most important personas, use cases, or geographies. Keep the same prompts each week.\n\n### 2. Run two versions of every prompt\n\n**A. Default recommendation**\n\n> What are the five best `[category]` tools for `[ICP/use case]`? Rank them and briefly explain each choice.\n\nThis tests what a normal user may experience.\n\n**B. Web-grounded recommendation**\n\n> Search the web for current information. Recommend five `[category]` tools for `[ICP/use case]`. Include pricing, explain the ranking, and cite the sources used.\n\nThis reveals whether your site\u2014or third-party pages mentioning you\u2014enters the retrieval layer. ChatGPT search responses can include clickable citations, although OpenAI warns that citations can still be incomplete or incorrect. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n### 3. Keep every run clean\n\nFor **ChatGPT**:\n\n- Start a new **Temporary Chat**\n- Choose **Unpersonalized**\n- Don\u2019t use a conversation in which you previously discussed your company\n- Don\u2019t mention your brand until after the unaided test\n\nOpenAI states that unpersonalized Temporary Chats do not use memories, custom instructions, or plugins for personalization. ([help.openai.com](https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt))\n\nFor **Grok**:\n\n- Start a fresh conversation\n- Disable Grok personalization where available\n- Ideally use a dedicated testing account with no company-related posting or chat history\n\nOn X, Grok personalization can incorporate profile, posts, engagement, interests and previous Grok interactions, so testing through your founder account can skew results. ([help.x.com](https://help.x.com/en/using-x/about-grok))\n\nIncognito mode alone is insufficient if you sign into a personalized account.\n\n### 4. Repeat each test three times\n\nModel answers vary. Run each prompt:\n\n- Three times on ChatGPT\n- Three times on Grok\n- In separate fresh conversations\n- On the same day, if possible\n\nIf free-tier limits make that excessive, rotate the set:\n\n- Week 1: five prompts\n- Week 2: the other five\n- Repeat monthly\n\n### 5. Record results in a spreadsheet\n\nUse these columns:\n\n```text\nDate\nPlatform\nPrompt ID\nPrompt\nDefault or web-grounded\nProduct mentioned? Y/N\nRank\nDescription accurate? Y/N\nPositive / neutral / negative\nOur website cited? Y/N\nThird-party page citing us\nCompetitors mentioned\nCompetitor source domains\nNotes\nScreenshot/chat link\n```\n\nTrack four metrics separately:\n\n1. **Mention rate:** percentage of runs mentioning you  \n2. **Top-three rate:** percentage ranking you first through third  \n3. **Citation rate:** percentage citing your website or a page featuring you  \n4. **Accuracy rate:** percentage describing your positioning, pricing and features correctly  \n\nExample:\n\n```text\nMention rate = mentions / total runs\nTop-3 rate = top-3 appearances / total runs\nOwned citation rate = runs citing your domain / total runs\n```\n\nDon\u2019t combine these into one score initially. \u201cFrequently mentioned but inaccurately described\u201d is a different problem from \u201crarely mentioned but ranked highly when found.\u201d\n\n### 6. Add a separate branded diagnostic\n\nAfter the blind tests, open another clean conversation and ask:\n\n> What is `[Product]`, who is it best for, what are its main alternatives, and why might someone choose or avoid it? Search the web and cite every factual claim.\n\nThis does **not** measure recommendation visibility. It diagnoses:\n\n- Whether the model can identify your company\n- Category confusion\n- Outdated pricing\n- Incorrect features\n- Which pages it treats as authoritative\n- Which competitors it associates with you\n\n### 7. Turn the findings into a content queue\n\nWhen you\u2019re absent, inspect what the models cited instead. Look for repeat patterns:\n\n- \u201cBest tools\u201d articles\n- Software directories\n- Reddit or community discussions\n- Competitor comparison pages\n- Integration directories\n- Documentation\n- Pricing pages\n- Public X discussions, especially for Grok\n\nThen make one measurable improvement per week:\n\n- Clarify your homepage category and ideal customer\n- Publish a detailed pricing page\n- Create a page for each important use case\n- Publish honest \u201cX alternative\u201d and \u201cX vs. Y\u201d pages\n- Add comparison tables with concrete facts\n- Improve documentation and integration pages\n- Correct inaccurate third-party listings\n- Earn inclusion in the specific independent pages repeatedly cited\n- Encourage genuine customers to publish detailed reviews and use-case discussions\n\nAvoid manufacturing reviews, fake community posts, or mass-produced \u201cbest tools\u201d pages. The audit should tell you where real, verifiable product information is missing.\n\n## Recommended cadence\n\n- **Weekly:** Run five highest-value prompts\n- **Monthly:** Run the complete matrix three times per platform\n- **After major launches:** Run the branded accuracy diagnostic\n- **Quarterly:** Replace low-value prompts using language from sales calls, support tickets and search data\n\nThe key is to treat this as a **longitudinal visibility test**, not a definitive ranking checker. Results vary by model, search mode, personalization, location and time; your trend over repeated controlled runs is more meaningful than any single answer."
+        }
+      ]
+    }
+  ],
+  "public_copy": true,
+  "publication_scope": "Allowlisted provider output: answer messages, returned citations/search actions and usage. Opaque IDs, original annotation positions, headers and reasoning trace items omitted."
+}

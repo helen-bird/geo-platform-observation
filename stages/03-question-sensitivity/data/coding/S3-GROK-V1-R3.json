@@ -1,0 +1,449 @@
+{
+  "id": "S3-GROK-V1-R3",
+  "source_record": "records/S3-GROK-V1-R3.json",
+  "coding_method": "Assistant review of complete 4,491-character rendered answer, three scoped DOM href occurrences and existing browser snapshots/activity; no external webpage visits, claims audit or independent human double-coding.",
+  "coding_scope": "Substantively named tools/services/features, with supplied targets and companies separate. Correlation examples and general content/identity strategies retain distinct roles from active tool recommendations. Citation-only publishers are not included as discovered tool mentions.",
+  "answer_type": {
+    "primary": "Score validation or audit checklist",
+    "secondary": [
+      "Manual measurement workflow",
+      "Conceptual explanation",
+      "Tool-led solution"
+    ],
+    "evidence": "How to evaluate a score\u2019s trustworthiness",
+    "rationale": "Transparency, sampling, per-engine reporting, underlying answers and limitations dominate; the zero-budget manual workflow and snapshots are supporting components."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Are they non-branded buyer-intent questions (\u201cbest tool for X use case,\u201d \u201cY alternatives,\u201d \u201chow to solve Z\u201d) rather than \u201cwhat is [your brand]?\u201d"
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run each prompt 3 times (or 5 if you can), spaced out. Log every result."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Grok: Use a fresh session on x.com or the app."
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Models/versions, whether web search was enabled, timing between runs, and any caveats about variance."
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "whether web search was enabled"
+    },
+    "search_mode_enablement_advice": {
+      "value": true,
+      "evidence": "enable web search"
+    },
+    "API_consumer_UI_distinction": {
+      "value": true,
+      "evidence": "often via API or consumer interfaces"
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_rates_separate": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Mentioned? | Position | Competitors | Sources cited"
+    },
+    "awareness_vs_recommendation_distinction": {
+      "value": false,
+      "evidence": null
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Can you see the actual answers, cited sources, competitors mentioned, position, and sentiment/accuracy notes?"
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "mention rate = % of runs where you appear"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_caution": {
+      "value": true,
+      "evidence": "Separate results for ChatGPT and Grok (and ideally others). A blended number hides large differences."
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "better tools go higher and report ranges or confidence intervals"
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "controlled manual testing"
+    },
+    "downstream_conversions": {
+      "value": false,
+      "evidence": null
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "GA4 AI Assistant channel (referrals from ChatGPT, Grok, etc.)."
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Sheets",
+      "observed_name": "Google Sheet",
+      "entity_type": "spreadsheet",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Track in a simple Google Sheet: Prompt | Engine | Run # | Mentioned? | Position | Competitors | Sources cited | Notes on accuracy/sentiment.",
+      "source_urls": [],
+      "notes": "Explicit zero-budget manual tracker; singular label normalized to service name."
+    },
+    {
+      "entity": "Google Search Console",
+      "observed_name": "Google Search Console",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Google Search Console Generative AI / AI Overviews report.",
+      "source_urls": [],
+      "notes": "Explicitly included among free corroborating signals. Claimed report availability/capabilities are not verified."
+    },
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "GA4",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "GA4 AI Assistant channel (referrals from ChatGPT, Grok, etc.).",
+      "source_urls": [],
+      "notes": "Explicit free-signal suggestion; channel availability/coverage unverified."
+    },
+    {
+      "entity": "Ahrefs AI visibility tools (unspecified)",
+      "observed_name": "Ahrefs",
+      "entity_type": "unspecified_visibility_tool_family",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Free one-off checkers from Ahrefs, Semrush (limited free checks), or HubSpot\u2019s AI Search Grader for a quick snapshot.",
+      "source_urls": [],
+      "notes": "Product identity unspecified. A snapshot is suggested, but no exact checker or own-content URL is given."
+    },
+    {
+      "entity": "Semrush AI visibility tools (unspecified)",
+      "observed_name": "Semrush (limited free checks)",
+      "entity_type": "unspecified_visibility_tool_family",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "mixed/limited tier",
+      "evidence": "Free one-off checkers from Ahrefs, Semrush (limited free checks), or HubSpot\u2019s AI Search Grader for a quick snapshot.",
+      "source_urls": [],
+      "notes": "Specific product and limits unresolved; do not infer a particular checker."
+    },
+    {
+      "entity": "HubSpot AI Search Grader",
+      "observed_name": "HubSpot\u2019s AI Search Grader",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Free one-off checkers from Ahrefs, Semrush (limited free checks), or HubSpot\u2019s AI Search Grader for a quick snapshot.",
+      "source_urls": [],
+      "notes": "Specific observed product label retained without forcing an additional AEO alias. No HubSpot citation appears."
+    },
+    {
+      "entity": "X",
+      "observed_name": "x.com",
+      "entity_type": "platform_access_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "unspecified",
+      "evidence": "Grok: Use a fresh session on x.com or the app.",
+      "source_urls": [],
+      "notes": "Explicit access option for the supplied Grok target, not content-publication advice. Prose site address is not a supporting citation."
+    },
+    {
+      "entity": "Google AI Overviews",
+      "observed_name": "AI Overviews",
+      "entity_type": "ai_search_surface",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Google Search Console Generative AI / AI Overviews report.",
+      "source_urls": [],
+      "notes": "Named as claimed report coverage, not a separate platform-use recommendation."
+    },
+    {
+      "entity": "YouTube",
+      "observed_name": "YouTube",
+      "entity_type": "content_source_example",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Focus effort on things that consistently correlate with mentions across studies: third-party mentions (YouTube, reviews, industry sites, LinkedIn), entity consistency (schema, consistent naming, Crunchbase/LinkedIn/Wikidata signals), clear quotable content with stats and citations, and allowing relevant AI crawlers while managing robots.txt carefully.",
+      "source_urls": [],
+      "notes": "Named parenthetically within a general correlation/content-and-entity-consistency strategy. No explicit instruction to adopt, use, read, follow or publish on this particular service; do not equate generic strategy encouragement with a specific tool recommendation."
+    },
+    {
+      "entity": "LinkedIn",
+      "observed_name": "LinkedIn",
+      "entity_type": "professional_profile_or_content_source_example",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Focus effort on things that consistently correlate with mentions across studies: third-party mentions (YouTube, reviews, industry sites, LinkedIn), entity consistency (schema, consistent naming, Crunchbase/LinkedIn/Wikidata signals), clear quotable content with stats and citations, and allowing relevant AI crawlers while managing robots.txt carefully.",
+      "source_urls": [],
+      "notes": "Named parenthetically within a general correlation/content-and-entity-consistency strategy. No explicit instruction to adopt, use, read, follow or publish on this particular service; do not equate generic strategy encouragement with a specific tool recommendation."
+    },
+    {
+      "entity": "Crunchbase",
+      "observed_name": "Crunchbase",
+      "entity_type": "entity_database_signal_example",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Focus effort on things that consistently correlate with mentions across studies: third-party mentions (YouTube, reviews, industry sites, LinkedIn), entity consistency (schema, consistent naming, Crunchbase/LinkedIn/Wikidata signals), clear quotable content with stats and citations, and allowing relevant AI crawlers while managing robots.txt carefully.",
+      "source_urls": [],
+      "notes": "Named parenthetically within a general correlation/content-and-entity-consistency strategy. No explicit instruction to adopt, use, read, follow or publish on this particular service; do not equate generic strategy encouragement with a specific tool recommendation."
+    },
+    {
+      "entity": "Wikidata",
+      "observed_name": "Wikidata",
+      "entity_type": "entity_database_signal_example",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Focus effort on things that consistently correlate with mentions across studies: third-party mentions (YouTube, reviews, industry sites, LinkedIn), entity consistency (schema, consistent naming, Crunchbase/LinkedIn/Wikidata signals), clear quotable content with stats and citations, and allowing relevant AI crawlers while managing robots.txt carefully.",
+      "source_urls": [],
+      "notes": "Named parenthetically within a general correlation/content-and-entity-consistency strategy. No explicit instruction to adopt, use, read, follow or publish on this particular service; do not equate generic strategy encouragement with a specific tool recommendation."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested manual repeated sampling",
+      "evidence": "ChatGPT: Use a private/incognito window, turn off Memory/personalization if possible, and enable web search.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied target, not a newly discovered tool."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested manual repeated sampling",
+      "evidence": "Grok: Use a fresh session on x.com or the app.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied target, not a newly discovered tool."
+    }
+  ],
+  "contextual_non_tool_entities": [
+    {
+      "entity": "OpenAI",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "No vendor has access to real OpenAI or xAI user conversation logs.",
+      "notes": "Company-level data-access claim, not a measurement-product recommendation; unverified platform output."
+    },
+    {
+      "entity": "xAI",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "No vendor has access to real OpenAI or xAI user conversation logs.",
+      "notes": "Company-level data-access claim, not a measurement-product recommendation; unverified platform output."
+    }
+  ],
+  "generic_methods": [
+    "Per-engine methodological transparency checks",
+    "Repeated spaced non-branded buyer-prompt sampling",
+    "Clean-session and personalization-reduction advice",
+    "Google Sheet per-run logging",
+    "Monthly mention-rate trend checks",
+    "Generic free-signal cross-checks",
+    "Third-party mentions and consistent entity signals",
+    "Quotable accurate content and crawler access management"
+  ],
+  "content_strategy_observations": [
+    {
+      "strategy": "Third-party mentions, consistent entity signals, quotable content and crawler access",
+      "recommended": true,
+      "evidence": "Focus effort on things that consistently correlate with mentions across studies: third-party mentions (YouTube, reviews, industry sites, LinkedIn), entity consistency (schema, consistent naming, Crunchbase/LinkedIn/Wikidata signals), clear quotable content with stats and citations, and allowing relevant AI crawlers while managing robots.txt carefully.",
+      "notes": "General strategy is explicitly encouraged; named services within parenthetical examples are not automatically recommendations to adopt those services."
+    }
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Mention rate",
+      "definition_verbatim": "mention rate = % of runs where you appear"
+    }
+  ],
+  "answer_sources": [
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "Benchmark-supporting Markets Insider stock-news URL; syndicated/promotional provenance and primary research authorship remain unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active recommendation to read/follow the publisher"
+    },
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "Benchmark-supporting Markets Insider stock-news URL; syndicated/promotional provenance and primary research authorship remain unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active recommendation to read/follow the publisher"
+    },
+    {
+      "domain": "www.amicited.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Amicited",
+      "url": "https://www.amicited.com/how-to/ai-visibility-tools-evaluation-scorecard/",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "Evaluation-scorecard how-to page suggests guidance. Authorship, vendor/product documentation versus practitioner guidance are not established by the available label and URL.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an active recommendation to read/follow the publisher"
+    }
+  ],
+  "cited_hostname_set": [
+    "markets.businessinsider.com",
+    "www.amicited.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping retains exact DOM hrefs/hosts; markets.businessinsider.com normalizes to businessinsider.com and www.amicited.com to amicited.com. No external public-suffix lookup used.",
+    "mapping": {
+      "markets.businessinsider.com": "businessinsider.com",
+      "www.amicited.com": "amicited.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 4491,
+    "observed_inline_link_occurrences": 3,
+    "unique_DOM_answer_URLs": 2,
+    "unique_cited_domains": 2,
+    "source_badge_hits": 75,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": true,
+    "citation_mapping_scope": "Three inline link occurrences collapse to two unique URL/domain sources. This is not a complete 75-hit retrieval inventory.",
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "captured_exact_query_labels": [],
+    "notes": [
+      "Recorded activity exposes grouped four-search and three-search controls. Exact query strings are not expanded in the supplied snapshot.",
+      "The Markets Insider URL appears twice; deduplicate it for source-set comparisons, retaining occurrence count separately.",
+      "The 75-source badge is not a count of unique inline citations.",
+      "Workspace-explored activity labels do not establish their underlying contents or influence.",
+      "Numerical overlap ranges, log-access claims, scores/reliability claims, free/signup features and report availability are unverified platform output."
+    ],
+    "original_capture_answer_characters": 4491,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 12,
+    "citation_true": 0,
+    "mention_true": 12,
+    "recommendation_true": 7,
+    "visibility_checker_recommendations": [
+      "HubSpot AI Search Grader"
+    ],
+    "unspecified_visibility_tool_family_recommendations": [
+      "Ahrefs AI visibility tools (unspecified)",
+      "Semrush AI visibility tools (unspecified)"
+    ],
+    "default_mentioned_tools": [
+      "Google Sheets",
+      "Google Search Console",
+      "Google Analytics 4",
+      "Ahrefs AI visibility tools (unspecified)",
+      "Semrush AI visibility tools (unspecified)",
+      "HubSpot AI Search Grader",
+      "X",
+      "Google AI Overviews",
+      "YouTube",
+      "LinkedIn",
+      "Crunchbase",
+      "Wikidata"
+    ],
+    "default_recommended_tools": [
+      "Google Sheets",
+      "Google Search Console",
+      "Google Analytics 4",
+      "Ahrefs AI visibility tools (unspecified)",
+      "Semrush AI visibility tools (unspecified)",
+      "HubSpot AI Search Grader",
+      "X"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "inline_link_occurrences": 3,
+    "unique_answer_URLs": 2,
+    "unique_cited_domains": 2
+  },
+  "coding_cautions": [
+    "Specific Ahrefs/Semrush product identities are unresolved. HubSpot's observed AI Search Grader label is retained without an extra product alias merge.",
+    "YouTube/LinkedIn/Crunchbase/Wikidata occur as examples in a general content/entity-consistency strategy, not service-specific use or publishing instructions.",
+    "X is explicitly suggested as a Grok access path, not as a content-distribution strategy in this record.",
+    "Mention and citation fields are logged, but active positive-recommendation judgment/rate is not separately operationalized.",
+    "The methodology checklist asks for model versions, search state and timing; it does not explicitly demand scoring weights or a full composite-score formula."
+  ],
+  "source_record_sha256": "07cfb20f524b45364686d5cc218fe6117160b59903c6e919ee064acfb6153fbc"
+}

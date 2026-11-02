@@ -1,0 +1,642 @@
+{
+  "id": "S3-OPENAIAPI-V1-R1",
+  "slot_id": "S3-CHATGPT-V1-R1",
+  "platform": "OpenAI API + web search",
+  "interface": "Responses API",
+  "prompt_id": "V1",
+  "intent": "V",
+  "wording": 1,
+  "repeat": 1,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+  "submitted_at": "2026-11-02T09:18:30.426126+00:00",
+  "model_label": "gpt-5.6-sol",
+  "requested_model": "gpt-5.6-sol",
+  "returned_model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "returned_reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "personalization": false,
+  "search_enabled_api": true,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "**Short answer:** don\u2019t trust the number itself. Trust it only when you can audit the prompts, settings, raw answers, and calculation behind it.\n\nGenerative answers vary even when the input is unchanged, so a single query\u2014or a mysterious 0\u2013100 score\u2014is not a reliable measurement. OpenAI\u2019s own evaluation guidance recommends task-specific tests, logging everything, continuous evaluation, and combining numerical metrics with human judgment. ([platform.openai.com](https://platform.openai.com/docs/guides/evaluation-best-practices))\n\n## An 8-point trust test\n\nGive the tool one point for each item:\n\n1. **Exact prompts are visible**  \n   You should see every query used. Most should be unbranded buyer questions, such as \u201cbest invoicing tool for freelancers,\u201d not questions containing your company name.\n\n2. **The prompt set stays fixed**  \n   If prompts change every scan, score changes may reflect different questions rather than improved visibility.\n\n3. **Raw answers are available**  \n   You should be able to inspect the full response, citations, timestamp, competitors mentioned, and your position\u2014not just a dashboard percentage.\n\n4. **The product surface is identified**  \n   \u201cChatGPT\u201d is insufficient. Was it the consumer app or API? Was search enabled? Was the session personalized? What location was used? ChatGPT can automatically search, rewrite queries, and use approximate location or memory, all of which can affect results. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n5. **Grok\u2019s retrieval mode is identified**  \n   The vendor should disclose whether Grok used no retrieval, web search, X search, or both. xAI documents these as separate tools, and current information is unavailable through its API models unless search tools are enabled. ([docs.x.ai](https://docs.x.ai/docs/guides/live-search))\n\n6. **Exact model/version and date are logged**  \n   Avoid results labeled merely \u201clatest.\u201d xAI\u2019s aliases can automatically migrate to newer versions, while dated model IDs are intended for consistent workflows. ([docs.x.ai](https://docs.x.ai/docs/models))\n\n7. **Prompts are run repeatedly**  \n   The report should show a denominator such as \u201cmentioned in 7 of 30 runs,\u201d not merely \u201c23% visibility.\u201d One run per prompt is a snapshot, not a dependable trend.\n\n8. **The formula is public and decomposable**  \n   You should separately see:\n   - Unprompted mention rate\n   - Citation rate\n   - Recommendation position\n   - Factual accuracy\n   - Competitor share of voice\n\n   A blended score should show its weights. Otherwise, a high score could hide zero citations or inaccurate descriptions.\n\n### Interpretation\n\n- **7\u20138 points:** trustworthy for tracking trends  \n- **5\u20136 points:** directional only  \n- **0\u20134 points:** primarily a marketing metric  \n\nEven an 8/8 score estimates visibility for its chosen prompt panel\u2014not visibility across all real ChatGPT or Grok users.\n\n## Free DIY validation\n\nCreate ten prompts based on actual buying situations:\n\n- Four category-discovery prompts\n- Three \u201calternatives to\u2026\u201d prompts\n- Two problem-to-solution prompts\n- One branded prompt for factual accuracy\n\nRun each prompt **three times in ChatGPT and three times in Grok**, using fresh, unpersonalized conversations where possible. That is 60 responses per monthly check.\n\nTrack this in a spreadsheet:\n\n| Date | Engine | Search mode | Prompt | Run | Mentioned? | Position | Own domain cited? | Other source cited? | Accurate? |\n|---|---|---|---|---:|---|---:|---|---|---|\n\nCalculate:\n\n```text\nUnprompted mention rate = unbranded runs mentioning you / unbranded runs\n\nCitation rate = runs citing your domain / total runs\n\nTop-3 rate = runs listing you among first 3 recommendations / total runs\n\nAccuracy rate = audited claims that are correct / claims audited\n```\n\nKeep ChatGPT and Grok separate. Their retrieval mechanisms and product surfaces differ, so averaging them can hide useful information.\n\n## How to spot-check a vendor\n\nAsk for five randomly selected observations, then rerun those prompts yourself with matching settings.\n\nYou should not expect identical wording. You should expect roughly similar:\n\n- Brand inclusion frequency\n- Competitors named\n- Sources cited\n- General recommendation position\n\nIf the vendor cannot provide the **prompt, raw answer, timestamp, model, search mode, and location/account context**, consider the score unverifiable.\n\n## Biggest red flags\n\n- \u201cProprietary methodology\u201d with no formula\n- One run per prompt\n- Prompts containing your brand mixed with unbranded prompts\n- API results presented as consumer-app visibility\n- No distinction between search-on and search-off answers\n- No raw responses or citations\n- Score changes without sample counts\n- Comparing your score across unrelated industries\n- Recommendations optimized to increase the vendor\u2019s own score\n- Claims that a small decimal movement proves an improvement\n\n**Bottom line:** with no budget, your fixed 10-prompt spreadsheet is more useful than a sophisticated opaque score. Track stable, auditable rates monthly and treat referral traffic, trials, and customer-reported discovery as the ultimate validation.",
+  "answer_links": [
+    {
+      "type": "url_citation",
+      "title": "Evaluation best practices | OpenAI API",
+      "url": "https://platform.openai.com/docs/guides/evaluation-best-practices",
+      "text": "Evaluation best practices | OpenAI API",
+      "domain": "platform.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Web Search | SpaceXSI Docs",
+      "url": "https://docs.x.ai/docs/guides/live-search",
+      "text": "Web Search | SpaceXSI Docs",
+      "domain": "docs.x.ai",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Grok Models & Pricing | SpaceXSI Docs",
+      "url": "https://docs.x.ai/docs/models",
+      "text": "Grok Models & Pricing | SpaceXSI Docs",
+      "domain": "docs.x.ai",
+      "kind": "API body url_citation annotation"
+    }
+  ],
+  "captured_at": "2026-11-02T09:19:27.136515+00:00",
+  "source_inventory_complete": true,
+  "transport_body_complete": true,
+  "refusals": [],
+  "response_status": "completed",
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 46785,
+    "input_tokens_details": {
+      "cache_write_tokens": 4349,
+      "cached_tokens": 0
+    },
+    "output_tokens": 2974,
+    "output_tokens_details": {
+      "reasoning_tokens": 1871
+    },
+    "total_tokens": 49759
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 2
+    }
+  },
+  "estimated_cost": {
+    "estimated_usd": 0.270969,
+    "token_cost_usd": 0.250969,
+    "charged_searches_estimate": 2,
+    "search_count_basis": "reported billable web_search.num_requests",
+    "billing_reconciled": false
+  },
+  "reserved_budget_usd": 6.6,
+  "http_status": 200,
+  "service_tier": "default",
+  "review_note": "Assistant read full returned body, checked coherent final paragraph, all four explicit Markdown source URLs match url_citation annotations, completed live-search actions and requested model/effort. No truncation or tool/output cap reached. Claims and the proposed 8-point scoring thresholds are collected output, not externally verified.",
+  "tool_limit_reached": false,
+  "body_review": {
+    "reviewed_at": "2026-11-02T09:20:55.760328+00:00",
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "annotation_and_explicit_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "search_calls": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:platform.openai.com/docs evaluations best practices reproducibility model outputs OpenAI",
+          "site:docs.x.ai Grok API models search citations system prompt reproducibility",
+          "site:openai.com index ChatGPT search citations how search works official",
+          "AI visibility score methodology ChatGPT Grok benchmark prompts citations official documentation"
+        ],
+        "query": "site:platform.openai.com/docs evaluations best practices reproducibility model outputs OpenAI",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu"
+          },
+          {
+            "type": "url",
+            "url": "https://llm-visibility-index.com/methodology/"
+          },
+          {
+            "type": "url",
+            "url": "https://citations.io/docs"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%3F.pls"
+          },
+          {
+            "type": "url",
+            "url": "https://openai.com/academy/search-and-deep-research/"
+          },
+          {
+            "type": "url",
+            "url": "https://visibilityradar.ai/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://www.generaldataworks.com/ai-visibility/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://www.temso.ai/rankings/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://www.theaivisibilityindex.ai/faq"
+          },
+          {
+            "type": "url",
+            "url": "https://recosignal.com/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://sofindable.com/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://getaisnapshot.com/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://getfoundonai.com/assets/attachments/AIVO_Methodology.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://cdn.openai.com/pdf/a-family-guide-to-help-teens-use-ai-responsibly.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://ittc.ku.edu/~fli/papers/2024_ccs-checkgpt-full.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://futureoflife.org/wp-content/uploads/2025/12/AI-Safety-Index-Report_131225_Full_Report_Digital.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://hai.stanford.edu/assets/files/hai_ai_index_report_2025.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.aigl.blog/content/files/2025/07/AI-Safety-Index-Summer-2025.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SEO_LLM/comments/1vho94t/reviewcomparison_sites_pitching_a_new_ai/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1xd9m3v/what_i_learned_trying_to_measure_ai_visibility/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SaaS/comments/1wro769/how_we_measure_ai_search_visibility_the_method/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SEO/comments/1wrvs14/how_do_you_verify_an_ai_visibility_tracker_is/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/digital_marketing/comments/1ule9bi/sat_through_6_ai_search_optimization_pitches_this/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SaaS/comments/1u2al4v/i_built_an_ai_visibility_tracker_ran_it_on_my_own/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1xbgclz/i_have_a_problem_with_ai_visibility_reports_that/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SEMrush/comments/1rdk0hi/how_to_conduct_an_ai_visibility_audit_in_2026/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/aeo/comments/1uuz0yd/new_research_is_the_data_from_your_ai_visibility/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/aeo/comments/1wn1399/how_can_i_find_the_ai_prompts_where_my_website_is/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1w4ecsw/ai_visibility_tracking_needs_a_model_changelog/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1xd99cf/how_do_you_measure_brand_visibility_in_ai_answers/"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2603.25220"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/1810.03993"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2505.18059"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:docs.x.ai/docs guides search Grok live search sources citations official",
+          "site:docs.x.ai/docs models Grok model versions official",
+          "site:platform.openai.com/docs/guides/evals evaluation best practices official OpenAI",
+          "site:help.openai.com ChatGPT search location personalization memory official"
+        ],
+        "query": "site:docs.x.ai/docs guides search Grok live search sources citations official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8590148-memory-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8142208-chatgpt-ios-and-android-app-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search//"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8590148-memory-faq%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525253F.avif"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10408842-google-app-data-controls-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8590148-memory-faq"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/7039943-how-openai-handles-data-in-consumer-services"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/collections-search"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/models"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "open_page",
+        "url": "https://docs.x.ai/docs/guides/live-search"
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "find_in_page",
+        "pattern": "Evaluate early and often",
+        "url": "https://platform.openai.com/docs/guides/evaluation-best-practices"
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "open_page",
+        "url": "https://docs.x.ai/developers/tools/x-search"
+      }
+    }
+  ],
+  "retrieval_sources": [
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://llm-visibility-index.com/methodology/",
+      "domain": "llm-visibility-index.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://citations.io/docs",
+      "domain": "citations.io",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth%3F.pls",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://openai.com/academy/search-and-deep-research/",
+      "domain": "openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://visibilityradar.ai/methodology",
+      "domain": "visibilityradar.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.generaldataworks.com/ai-visibility/methodology",
+      "domain": "www.generaldataworks.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.temso.ai/rankings/methodology",
+      "domain": "www.temso.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.theaivisibilityindex.ai/faq",
+      "domain": "www.theaivisibilityindex.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://recosignal.com/methodology",
+      "domain": "recosignal.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://sofindable.com/methodology",
+      "domain": "sofindable.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://getaisnapshot.com/methodology",
+      "domain": "getaisnapshot.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://getfoundonai.com/assets/attachments/AIVO_Methodology.pdf",
+      "domain": "getfoundonai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://cdn.openai.com/pdf/a-family-guide-to-help-teens-use-ai-responsibly.pdf",
+      "domain": "cdn.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ittc.ku.edu/~fli/papers/2024_ccs-checkgpt-full.pdf",
+      "domain": "ittc.ku.edu",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://futureoflife.org/wp-content/uploads/2025/12/AI-Safety-Index-Report_131225_Full_Report_Digital.pdf",
+      "domain": "futureoflife.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://hai.stanford.edu/assets/files/hai_ai_index_report_2025.pdf",
+      "domain": "hai.stanford.edu",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.aigl.blog/content/files/2025/07/AI-Safety-Index-Summer-2025.pdf",
+      "domain": "www.aigl.blog",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SEO_LLM/comments/1vho94t/reviewcomparison_sites_pitching_a_new_ai/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1xd9m3v/what_i_learned_trying_to_measure_ai_visibility/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SaaS/comments/1wro769/how_we_measure_ai_search_visibility_the_method/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SEO/comments/1wrvs14/how_do_you_verify_an_ai_visibility_tracker_is/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/digital_marketing/comments/1ule9bi/sat_through_6_ai_search_optimization_pitches_this/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SaaS/comments/1u2al4v/i_built_an_ai_visibility_tracker_ran_it_on_my_own/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1xbgclz/i_have_a_problem_with_ai_visibility_reports_that/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SEMrush/comments/1rdk0hi/how_to_conduct_an_ai_visibility_audit_in_2026/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/aeo/comments/1uuz0yd/new_research_is_the_data_from_your_ai_visibility/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/aeo/comments/1wn1399/how_can_i_find_the_ai_prompts_where_my_website_is/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1w4ecsw/ai_visibility_tracking_needs_a_model_changelog/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1xd99cf/how_do_you_measure_brand_visibility_in_ai_answers/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2603.25220",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/1810.03993",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2505.18059",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8590148-memory-in-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8142208-chatgpt-ios-and-android-app-faq",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search//",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8590148-memory-faq%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525253F.avif",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/10408842-google-app-data-controls-faq",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/10093903-chatgpt-search-for-enterprise-and-edu",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8590148-memory-faq",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/7039943-how-openai-handles-data-in-consumer-services",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/tools/collections-search",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/models",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    }
+  ],
+  "raw_file": "records/S3-OPENAIAPI-V1-R1.json",
+  "request_file": "requests/S3-OPENAIAPI-V1-R1.json",
+  "response_file": "responses/S3-OPENAIAPI-V1-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 5158,
+  "public_answer_characters": 5158,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

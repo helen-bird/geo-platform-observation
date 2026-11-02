@@ -1,0 +1,544 @@
+{
+  "id": "S3-GROK-M2-R3",
+  "source_record": "records/S3-GROK-M2-R3.json",
+  "coding_method": "Assistant review of complete 3,174-character rendered answer, six scoped DOM hrefs and existing activity capture. No external webpage visits, feature/pricing audit or independent human double-coding.",
+  "coding_scope": "Substantively named tools/services/surfaces with supplied target platforms separate. Product recommendations, monitoring channels, coverage mentions and source-only citation labels retain distinct roles.",
+  "answer_type": {
+    "primary": "Manual measurement workflow",
+    "secondary": [
+      "Tool-led solution"
+    ],
+    "evidence": "Here\u2019s a free, repeatable workflow that bootstrapped SaaS founders actually use to check whether ChatGPT and Grok recommend their product.",
+    "rationale": "Fixed prompts, a Google Sheet, repeated clean-session checks and a cadence form the core. Snapshot checkers and an optional monitor are actively suggested supplements."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Direct (secondary): \u201cwhat is [your product]\u201d / \u201cis [your product] worth it\u201d"
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Do each once or twice \u2014 answers are non-deterministic."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Clean sessions only"
+    },
+    "model_search_version_logging": {
+      "value": false,
+      "evidence": null
+    },
+    "search_mode_logging_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "search_mode_enablement_advice": {
+      "value": true,
+      "evidence": "ChatGPT: Temporary chat or incognito + web search enabled."
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_rates_separate": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Date | Prompt | Platform | Mentioned (Y/N) | Position (if listed) | Sentiment | Competitors named | Sources cited | Notes/quote"
+    },
+    "awareness_vs_recommendation_distinction": {
+      "value": true,
+      "evidence": "distinguishes \u201cknows you\u201d vs \u201crecommends you\u201d"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Note exact wording when you appear and which competitors/sources win instead."
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_caution": {
+      "value": false,
+      "evidence": null
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "One check is noisy. Trends over 4\u20138 weeks are what matter."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Log results immediately in the sheet."
+    },
+    "downstream_conversions": {
+      "value": false,
+      "evidence": null
+    },
+    "downstream_traffic_or_impressions": {
+      "value": false,
+      "evidence": null
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Sheets",
+      "observed_name": "Google Sheet",
+      "entity_type": "spreadsheet",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Create a simple Google Sheet with columns:",
+      "source_urls": [],
+      "notes": "Explicitly suggested tracker; no Google own-content citation."
+    },
+    {
+      "entity": "Ranked AI Visibility Checker",
+      "observed_name": "ranked.ai free checker",
+      "entity_type": "visibility_checker",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "ranked.ai free checker \u2014 live answers from ChatGPT, Grok, Claude, Gemini, Perplexity, Llama (no signup). Paste one of your prompts + domain.",
+      "source_urls": [
+        "https://www.ranked.ai/free-tools/ai-visibility-checker"
+      ],
+      "notes": "Imperative Run free snapshot tools once makes this an active suggestion. Name normalized using displayed ranked.ai label and observed product path; features/coverage/signup claims unverified."
+    },
+    {
+      "entity": "Snoika brand checker",
+      "observed_name": "Snoika brand checker",
+      "entity_type": "visibility_checker",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Snoika brand checker \u2014 includes Grok; distinguishes \u201cknows you\u201d vs \u201crecommends you\u201d + community/trust signals.",
+      "source_urls": [
+        "https://snoika.com/free-tools/brand-ai-visibility-checker"
+      ],
+      "notes": "Active snapshot suggestion with an own-domain product link. Capabilities not fact-checked."
+    },
+    {
+      "entity": "Indexly Grok Visibility Checker",
+      "observed_name": "Indexly Grok Visibility Checker",
+      "entity_type": "visibility_checker",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Indexly Grok Visibility Checker \u2014 free, no login, paste your URL.",
+      "source_urls": [
+        "https://indexly.ai/grok-visibility-checker"
+      ],
+      "notes": "Active snapshot suggestion with an own-domain product link. Free/no-login claims unverified."
+    },
+    {
+      "entity": "Ahrefs AI Visibility Checker",
+      "observed_name": "Ahrefs AI Visibility Checker",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Ahrefs AI Visibility Checker (brand name, no signup) for a broader ChatGPT-heavy view.",
+      "source_urls": [],
+      "notes": "Explicit snapshot recommendation, but no captured Ahrefs own-domain link. Exact pricing and coverage not verified."
+    },
+    {
+      "entity": "Mangools AI Search Watcher",
+      "observed_name": "Mangools AI Search Watcher free plan",
+      "entity_type": "visibility_monitor",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "mixed/limited tier",
+      "evidence": "Set up Mangools AI Search Watcher free plan (5 prompts, 1 monitor, weekly updates). It covers ChatGPT, Grok, Gemini, Claude, AI Overviews, and others.",
+      "source_urls": [
+        "https://mangools.com/ai-search-watcher"
+      ],
+      "notes": "Optional automation layer with claimed free-plan limits; own-domain product link is captured."
+    },
+    {
+      "entity": "Google Search",
+      "observed_name": "Google",
+      "entity_type": "search_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Re-run the free snapshot tools, check \u201cyourbrand -site:yourdomain.com\u201d on Google for third-party mentions, and glance at G2/Capterra/Reddit/Product Hunt presence.",
+      "source_urls": [],
+      "notes": "An explicit search query on Google is suggested for third-party mentions; normalize to Google Search without inferring additional Google products."
+    },
+    {
+      "entity": "G2",
+      "observed_name": "G2",
+      "entity_type": "review_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "More genuine reviews on G2/Capterra",
+      "source_urls": [],
+      "notes": "Explicit monitoring and review-improvement recommendation. Fees or review-service pricing are not established."
+    },
+    {
+      "entity": "Capterra",
+      "observed_name": "Capterra",
+      "entity_type": "review_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "More genuine reviews on G2/Capterra",
+      "source_urls": [],
+      "notes": "Explicit monitoring and review-improvement recommendation; no supporting own-content citation."
+    },
+    {
+      "entity": "Reddit",
+      "observed_name": "Reddit",
+      "entity_type": "community_distribution_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "Useful answers in relevant Reddit threads (disclose you\u2019re the founder)",
+      "source_urls": [],
+      "notes": "Explicit community participation recommendation, with disclosure instruction preserved. Also suggested as a presence-monitoring source."
+    },
+    {
+      "entity": "Product Hunt",
+      "observed_name": "Product Hunt",
+      "entity_type": "launch_community_corroborating_signal",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "Re-run the free snapshot tools, check \u201cyourbrand -site:yourdomain.com\u201d on Google for third-party mentions, and glance at G2/Capterra/Reddit/Product Hunt presence.",
+      "source_urls": [],
+      "notes": "Explicitly suggested presence monitoring; not a request to launch or publish on Product Hunt."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X app",
+      "entity_type": "platform_access_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "unspecified",
+      "evidence": "Grok: Fresh chat on grok.x.ai (or the X app).",
+      "source_urls": [],
+      "notes": "Optional way to access the supplied Grok platform; not a content-publication instruction."
+    },
+    {
+      "entity": "Claude",
+      "observed_name": "Claude",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "ranked.ai free checker \u2014 live answers from ChatGPT, Grok, Claude, Gemini, Perplexity, Llama (no signup). Paste one of your prompts + domain.",
+      "source_urls": [],
+      "notes": "Named in the checker's claimed engine coverage; not independently recommended as a platform to use. Coverage claim unverified."
+    },
+    {
+      "entity": "Gemini",
+      "observed_name": "Gemini",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "ranked.ai free checker \u2014 live answers from ChatGPT, Grok, Claude, Gemini, Perplexity, Llama (no signup). Paste one of your prompts + domain.",
+      "source_urls": [],
+      "notes": "Named in the checker's claimed engine coverage; not independently recommended as a platform to use. Coverage claim unverified."
+    },
+    {
+      "entity": "Perplexity",
+      "observed_name": "Perplexity",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "ranked.ai free checker \u2014 live answers from ChatGPT, Grok, Claude, Gemini, Perplexity, Llama (no signup). Paste one of your prompts + domain.",
+      "source_urls": [],
+      "notes": "Named in the checker's claimed engine coverage; not independently recommended as a platform to use. Coverage claim unverified."
+    },
+    {
+      "entity": "Llama",
+      "observed_name": "Llama",
+      "entity_type": "ai_model_family",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "ranked.ai free checker \u2014 live answers from ChatGPT, Grok, Claude, Gemini, Perplexity, Llama (no signup). Paste one of your prompts + domain.",
+      "source_urls": [],
+      "notes": "Named in the checker's claimed engine coverage; not independently recommended as a platform to use. Coverage claim unverified."
+    },
+    {
+      "entity": "Google AI Overviews",
+      "observed_name": "AI Overviews",
+      "entity_type": "ai_search_surface",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Set up Mangools AI Search Watcher free plan (5 prompts, 1 monitor, weekly updates). It covers ChatGPT, Grok, Gemini, Claude, AI Overviews, and others.",
+      "source_urls": [],
+      "notes": "Named in claimed monitor coverage, not independently recommended."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for clean repeated manual checks",
+      "evidence": "ChatGPT: Temporary chat or incognito + web search enabled.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target supplied in the question. Prose access URLs are not additional supporting citations."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for clean repeated manual checks",
+      "evidence": "Grok: Fresh chat on grok.x.ai (or the X app).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target supplied in the question. Prose access URLs are not additional supporting citations."
+    }
+  ],
+  "contextual_non_tool_entities": [],
+  "generic_methods": [
+    "Fixed category/alternative/problem/comparison buyer prompts",
+    "Secondary branded accuracy prompts",
+    "Per-run spreadsheet logging",
+    "Weekly/fortnightly manual sampling",
+    "Optional free recurring monitor",
+    "Monthly third-party-mention search and source presence monitoring",
+    "Comparison content, genuine reviews, disclosed community participation and structured pages"
+  ],
+  "metric_definitions_observed": [],
+  "answer_sources": [
+    {
+      "domain": "www.01net.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u206001net",
+      "url": "https://www.01net.com/en/seo/ai-visibility-tools/how-to-track-brand-mentions/",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "SEO/tools how-to article on a publication-style domain. Provisional classification from URL only; content and author not independently inspected.",
+      "content_verified": false,
+      "recommendation_role": "Introductory supporting citation, not a creator/resource recommendation"
+    },
+    {
+      "domain": "www.ranked.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "ranked.ai free checker",
+      "url": "https://www.ranked.ai/free-tools/ai-visibility-checker",
+      "source_category": "Tool/product documentation or sales page",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Displayed product recommendation links directly to the same-brand checker/monitor path; classification provisional without inspecting page content.",
+      "content_verified": false,
+      "recommendation_role": "Own-content link attached to an active/optional product recommendation"
+    },
+    {
+      "domain": "snoika.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "Snoika brand checker",
+      "url": "https://snoika.com/free-tools/brand-ai-visibility-checker",
+      "source_category": "Tool/product documentation or sales page",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Displayed product recommendation links directly to the same-brand checker/monitor path; classification provisional without inspecting page content.",
+      "content_verified": false,
+      "recommendation_role": "Own-content link attached to an active/optional product recommendation"
+    },
+    {
+      "domain": "indexly.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "Indexly Grok Visibility Checker",
+      "url": "https://indexly.ai/grok-visibility-checker",
+      "source_category": "Tool/product documentation or sales page",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Displayed product recommendation links directly to the same-brand checker/monitor path; classification provisional without inspecting page content.",
+      "content_verified": false,
+      "recommendation_role": "Own-content link attached to an active/optional product recommendation"
+    },
+    {
+      "domain": "mangools.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "Mangools AI Search Watcher free plan",
+      "url": "https://mangools.com/ai-search-watcher",
+      "source_category": "Tool/product documentation or sales page",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Displayed product recommendation links directly to the same-brand checker/monitor path; classification provisional without inspecting page content.",
+      "content_verified": false,
+      "recommendation_role": "Own-content link attached to an active/optional product recommendation"
+    },
+    {
+      "domain": "www.amicited.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Amicited",
+      "url": "https://www.amicited.com/blog/how-ai-recommends-software-appearing-in-best-tool-lists/",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Branded how-AI-recommends-software blog path suggests explanation/tutorial content. Original research, authorship and commercial role unresolved.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation about recommendation sources; no instruction to read/use the publisher"
+    }
+  ],
+  "cited_hostname_set": [
+    "www.01net.com",
+    "www.ranked.ai",
+    "snoika.com",
+    "indexly.ai",
+    "mangools.com",
+    "www.amicited.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual normalization removes leading www from 01net.com, ranked.ai and amicited.com; exact observed DOM hrefs/hostnames remain preserved. No external public-suffix lookup used.",
+    "mapping": {
+      "www.01net.com": "01net.com",
+      "www.ranked.ai": "ranked.ai",
+      "snoika.com": "snoika.com",
+      "indexly.ai": "indexly.ai",
+      "mangools.com": "mangools.com",
+      "www.amicited.com": "amicited.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 3174,
+    "observed_inline_link_occurrences": 6,
+    "unique_DOM_answer_URLs": 6,
+    "unique_cited_domains": 6,
+    "source_badge_hits": 75,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": true,
+    "citation_mapping_scope": "Six exact rendered-article hrefs; not all 75 retrieval hits.",
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "captured_exact_query_labels": [
+      "Mangools AI Search Watcher free plan Grok tracking"
+    ],
+    "notes": [
+      "Activity shows grouped searches of four and two plus a separate displayed web query with 10 results, with browsed-link controls. Exact query coverage is partial.",
+      "Introductory 01net and later Amicited strings are rendered citation labels, not substantive recommendations to use or follow creators.",
+      "The 75-source badge is not a unique inline citation count.",
+      "Workspace-explored activity labels do not establish their underlying contents or influence.",
+      "Claimed free tiers, signup requirements, engine coverage, times, reliability and relative source influence remain platform output, not verified facts."
+    ],
+    "original_capture_answer_characters": 3174,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 17,
+    "citation_true": 4,
+    "mention_true": 17,
+    "recommendation_true": 12,
+    "visibility_checker_recommendations": [
+      "Ranked AI Visibility Checker",
+      "Snoika brand checker",
+      "Indexly Grok Visibility Checker",
+      "Ahrefs AI Visibility Checker"
+    ],
+    "visibility_monitor_recommendations": [
+      "Mangools AI Search Watcher"
+    ],
+    "default_mentioned_tools": [
+      "Google Sheets",
+      "Ranked AI Visibility Checker",
+      "Snoika brand checker",
+      "Indexly Grok Visibility Checker",
+      "Ahrefs AI Visibility Checker",
+      "Mangools AI Search Watcher",
+      "Google Search",
+      "G2",
+      "Capterra",
+      "Reddit",
+      "Product Hunt",
+      "X",
+      "Claude",
+      "Gemini",
+      "Perplexity",
+      "Llama",
+      "Google AI Overviews"
+    ],
+    "default_recommended_tools": [
+      "Google Sheets",
+      "Ranked AI Visibility Checker",
+      "Snoika brand checker",
+      "Indexly Grok Visibility Checker",
+      "Ahrefs AI Visibility Checker",
+      "Mangools AI Search Watcher",
+      "Google Search",
+      "G2",
+      "Capterra",
+      "Reddit",
+      "Product Hunt",
+      "X"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "inline_link_occurrences": 6,
+    "unique_answer_URLs": 6,
+    "unique_cited_domains": 6
+  },
+  "coding_cautions": [
+    "Run free snapshot tools once is an active instruction for all four named checkers; their recommendations are not inferred merely from source labels.",
+    "Four own-domain product links support C=true for Ranked, Snoika, Indexly and Mangools. Ahrefs is recommended without an own-content href.",
+    "01net is a supporting citation label adjacent to the introduction, not a substantive creator recommendation.",
+    "Google search, review/community monitoring, community contribution and measurement software are distinct roles.",
+    "Model/version/search-state logging is not required by the listed columns, despite advice to enable ChatGPT search.",
+    "A claimed checker distinction between knowing and recommending a brand is recorded; the manual log itself does not explicitly define a separate active-recommendation field/rate."
+  ],
+  "source_record_sha256": "db0466824a279459237bdd1265a3626d5e499e032f127fbbde65bce31b6843dc"
+}

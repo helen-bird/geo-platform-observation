@@ -1,0 +1,509 @@
+{
+  "id": "S3-GROK-M1-R3",
+  "source_record": "records/S3-GROK-M1-R3.json",
+  "coding_method": "Assistant review of complete 4,493-character rendered body, seven exact scoped DOM hrefs and existing browser activity. No external webpage queries, factual audit or independent human double-coding.",
+  "coding_scope": "Substantively named tools/services/features with supplied target platforms and company attribution separate. Generic page-level checkers remain methods/tool categories; citation-label-only publishers are not added as tool recommendations.",
+  "answer_type": {
+    "primary": "Manual measurement workflow",
+    "secondary": [
+      "Tool-led solution",
+      "Conceptual explanation"
+    ],
+    "evidence": "fixed buyer prompts + repeated manual logging + free graders + GA4/Search Console for confirmation.",
+    "rationale": "Prompt panel, repeated manual logging, metrics and cadence form the core. Free graders/monitoring and lagging analytics supplement it."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Create questions a real potential buyer would ask without naming your product."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run it 3\u20135 times on ChatGPT and on Grok (answers vary a lot; single runs are noisy)."
+    },
+    "fresh_sessions": {
+      "value": false,
+      "evidence": null
+    },
+    "model_search_version_logging": {
+      "value": false,
+      "evidence": null
+    },
+    "search_mode_logging_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "search_mode_enablement_advice": {
+      "value": true,
+      "evidence": "Prefer modes that can search the web when available"
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": true,
+      "evidence": "When you get mentioned, note how (brief list item, detailed recommendation, with link or without)."
+    },
+    "citation_and_mention_rates_separate": {
+      "value": true,
+      "evidence": "Citation rate \u2014 how often your domain is linked or referenced as a source"
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Mentioned? (Y/N)\tPosition in list\tCited your site?"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "When you get mentioned, note how (brief list item, detailed recommendation, with link or without)."
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "Mention rate \u2014 % of runs where your product appears at all"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_caution": {
+      "value": false,
+      "evidence": null
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "Expect noise. The reliable signal is directional change over 4\u20138 weeks of consistent testing, not day-to-day jumps."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Run them manually and log everything"
+    },
+    "downstream_conversions": {
+      "value": false,
+      "evidence": null
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "This shows whether mentions are turning into visits, not just whether the models know you exist."
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Sheets",
+      "observed_name": "Google Sheet",
+      "entity_type": "spreadsheet",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Record in a Google Sheet (or any free spreadsheet):",
+      "source_urls": [],
+      "notes": "Explicit named spreadsheet with generic free alternatives; no own-domain citation."
+    },
+    {
+      "entity": "HubSpot AEO Grader",
+      "observed_name": "HubSpot AEO / AI Search Grader",
+      "entity_type": "visibility_checker",
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "HubSpot AEO / AI Search Grader \u2014 free, no account required for the basic check. Enter your brand + category and it scores how ChatGPT, Perplexity, and Gemini characterize you (sentiment, presence, share of voice, etc.). Good for a quick snapshot.",
+      "source_urls": [
+        "https://www.hubspot.com/aeo-grader/generative-engine-optimization-tool"
+      ],
+      "notes": "AEO/AI Search labels explicitly paired; recommended baseline snapshot with a captured own-domain product URL. Free/signup and engine-coverage claims remain unverified."
+    },
+    {
+      "entity": "Mangools AI Search Watcher",
+      "observed_name": "Mangools AI Search Watcher",
+      "entity_type": "visibility_monitor",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "mixed/limited tier",
+      "evidence": "Mangools AI Search Watcher \u2014 free plan includes 5 prompts monitored weekly across multiple engines, including ChatGPT and Grok. Useful for a small recurring automated check while you do the rest manually.",
+      "source_urls": [],
+      "notes": "Optional small recurring free-plan supplement. No Mangools own-domain inline href; plan limits/coverage unverified."
+    },
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "Google Analytics 4; GA4",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "In Google Analytics 4:\n\nGo to Reports \u2192 Acquisition \u2192 Traffic acquisition.",
+      "source_urls": [],
+      "notes": "Suggested downstream traffic indicator, not direct recommendation measurement. Captured Goodatmarketing link is third-party content, not an own-content Google citation."
+    },
+    {
+      "entity": "Google Search Console",
+      "observed_name": "Google Search Console; Search Console",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "unspecified",
+      "evidence": "Google Search Console for AI Overviews / AI Mode impressions (when relevant).",
+      "source_urls": [],
+      "notes": "Conditional analytics suggestion; reporting coverage not independently verified."
+    },
+    {
+      "entity": "Bing Webmaster Tools",
+      "observed_name": "Bing Webmaster Tools",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "Bing Webmaster Tools AI Performance report for citations in Copilot/Bing AI.",
+      "source_urls": [],
+      "notes": "Suggested downstream reporting context; report existence/coverage unverified."
+    },
+    {
+      "entity": "Perplexity",
+      "observed_name": "Perplexity",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "HubSpot AEO / AI Search Grader \u2014 free, no account required for the basic check. Enter your brand + category and it scores how ChatGPT, Perplexity, and Gemini characterize you (sentiment, presence, share of voice, etc.). Good for a quick snapshot.",
+      "source_urls": [],
+      "notes": "Named as grader coverage, not independently recommended as a platform to use."
+    },
+    {
+      "entity": "Gemini",
+      "observed_name": "Gemini",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "HubSpot AEO / AI Search Grader \u2014 free, no account required for the basic check. Enter your brand + category and it scores how ChatGPT, Perplexity, and Gemini characterize you (sentiment, presence, share of voice, etc.). Good for a quick snapshot.",
+      "source_urls": [],
+      "notes": "Named as grader coverage, not independently recommended as a platform to use."
+    },
+    {
+      "entity": "Google AI Overviews",
+      "observed_name": "AI Overviews",
+      "entity_type": "ai_search_surface",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Google Search Console for AI Overviews / AI Mode impressions (when relevant).",
+      "source_urls": [],
+      "notes": "Named as claimed GSC coverage, not independently recommended."
+    },
+    {
+      "entity": "Google AI Mode",
+      "observed_name": "AI Mode",
+      "entity_type": "ai_search_surface",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Google Search Console for AI Overviews / AI Mode impressions (when relevant).",
+      "source_urls": [],
+      "notes": "Named as claimed GSC coverage, not independently recommended."
+    },
+    {
+      "entity": "Microsoft Copilot",
+      "observed_name": "Copilot",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Bing Webmaster Tools AI Performance report for citations in Copilot/Bing AI.",
+      "source_urls": [],
+      "notes": "Named as reporting coverage. No extra Copilot/Bing AI alias equivalence is inferred."
+    },
+    {
+      "entity": "Bing AI (unspecified surface)",
+      "observed_name": "Bing AI",
+      "entity_type": "unspecified_ai_surface_family",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Bing Webmaster Tools AI Performance report for citations in Copilot/Bing AI.",
+      "source_urls": [],
+      "notes": "Named as reporting coverage. No extra Copilot/Bing AI alias equivalence is inferred."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for repeated manual sampling",
+      "evidence": "Run it 3\u20135 times on ChatGPT and on Grok (answers vary a lot; single runs are noisy).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target platform supplied by question, not a newly discovered tool."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for repeated manual sampling",
+      "evidence": "Run it 3\u20135 times on ChatGPT and on Grok (answers vary a lot; single runs are noisy).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Target platform supplied by question, not a newly discovered tool."
+    }
+  ],
+  "contextual_non_tool_entities": [
+    {
+      "entity": "OpenAI",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "OpenAI has documented that ChatGPT can add utm_source=chatgpt.com to links.",
+      "source_urls": [
+        "https://goodatmarketing.com/how-to-track-chatgpt-traffic-in-google-analytics/"
+      ],
+      "notes": "Company-level attribution in a tracking claim, with a third-party citation rather than a captured OpenAI document. Claim not verified; outside tool counts."
+    }
+  ],
+  "generic_methods": [
+    "Fixed unbranded buyer-intent prompt panel",
+    "Repeated manual checks on both engines",
+    "Named or generic free spreadsheet logging",
+    "Mention rate, competitor share of voice, position, citation rate and accuracy/sentiment summaries",
+    "Generic page-level GEO readiness checkers",
+    "Traffic/referral diagnostics",
+    "Crawler access, rendered HTML and structured-data checks"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Mention rate",
+      "definition_verbatim": "Mention rate \u2014 % of runs where your product appears at all"
+    },
+    {
+      "label": "Share of voice",
+      "definition_verbatim": "Share of voice \u2014 your mentions vs. competitors",
+      "notes": "No exact formula or denominator supplied."
+    },
+    {
+      "label": "Average position",
+      "definition_verbatim": "Average position \u2014 where you appear when mentioned"
+    },
+    {
+      "label": "Citation rate",
+      "definition_verbatim": "Citation rate \u2014 how often your domain is linked or referenced as a source"
+    },
+    {
+      "label": "Accuracy / sentiment",
+      "definition_verbatim": "Accuracy / sentiment \u2014 whether the description is correct and positive"
+    }
+  ],
+  "answer_sources": [
+    {
+      "domain": "shmeer.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Shmeer",
+      "url": "https://shmeer.com/blog/how-to-measure-geo",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Measurement, analytics how-to or free-tool guide path suggests practical explanatory content; authorship, first-person research, editorial and commercial roles are not independently established.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation; label-only publisher not actively recommended"
+    },
+    {
+      "domain": "www.gomega.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Gomega",
+      "url": "https://www.gomega.ai/blog/how-to-measure-geo-performance",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Measurement, analytics how-to or free-tool guide path suggests practical explanatory content; authorship, first-person research, editorial and commercial roles are not independently established.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation; label-only publisher not actively recommended"
+    },
+    {
+      "domain": "geoaura.world",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Geoaura",
+      "url": "https://geoaura.world/blog/how-to-measure-geo-visibility",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Measurement, analytics how-to or free-tool guide path suggests practical explanatory content; authorship, first-person research, editorial and commercial roles are not independently established.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation; label-only publisher not actively recommended"
+    },
+    {
+      "domain": "snezzi.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Snezzi",
+      "url": "https://snezzi.com/blog/how-to-measure-geo-visibility-complete-step-by-step-guide/",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Measurement, analytics how-to or free-tool guide path suggests practical explanatory content; authorship, first-person research, editorial and commercial roles are not independently established.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation; label-only publisher not actively recommended"
+    },
+    {
+      "domain": "www.hubspot.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Hubspot",
+      "url": "https://www.hubspot.com/aeo-grader/generative-engine-optimization-tool",
+      "source_category": "Tool/product documentation or sales page",
+      "candidate_category": null,
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Own-brand AEO-grader product path linked alongside an active snapshot recommendation.",
+      "content_verified": false,
+      "recommendation_role": "Own-content link to a conditional product recommendation"
+    },
+    {
+      "domain": "goodatmarketing.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Goodatmarketing",
+      "url": "https://goodatmarketing.com/how-to-track-chatgpt-traffic-in-google-analytics/",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Measurement, analytics how-to or free-tool guide path suggests practical explanatory content; authorship, first-person research, editorial and commercial roles are not independently established.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation; label-only publisher not actively recommended"
+    },
+    {
+      "domain": "www.explaingeo.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Explaingeo",
+      "url": "https://www.explaingeo.com/free-geo-tools-for-small-businesses-get-ai-visibility-without-the-enterprise-price-tag/",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_URL_and_answer_role_only",
+      "classification_evidence": "Measurement, analytics how-to or free-tool guide path suggests practical explanatory content; authorship, first-person research, editorial and commercial roles are not independently established.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation; label-only publisher not actively recommended"
+    }
+  ],
+  "cited_hostname_set": [
+    "shmeer.com",
+    "www.gomega.ai",
+    "geoaura.world",
+    "snezzi.com",
+    "www.hubspot.com",
+    "goodatmarketing.com",
+    "www.explaingeo.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual leading-www normalization retains exact DOM hrefs/hosts. No external public-suffix lookup used.",
+    "mapping": {
+      "shmeer.com": "shmeer.com",
+      "www.gomega.ai": "gomega.ai",
+      "geoaura.world": "geoaura.world",
+      "snezzi.com": "snezzi.com",
+      "www.hubspot.com": "hubspot.com",
+      "goodatmarketing.com": "goodatmarketing.com",
+      "www.explaingeo.com": "explaingeo.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 4493,
+    "observed_inline_link_occurrences": 7,
+    "unique_DOM_answer_URLs": 7,
+    "unique_cited_domains": 7,
+    "source_badge_hits": 65,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": true,
+    "citation_mapping_scope": "Seven inline hrefs from the complete rendered article, not an inventory of 65 retrieval hits.",
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "captured_exact_query_labels": [],
+    "notes": [
+      "Activity shows two grouped three-search controls. The expanded exact query strings were not captured.",
+      "Citation-label names for Shmeer, Gomega, Geoaura, Snezzi, Goodatmarketing and Explaingeo are supporting references, not substantive tool-use recommendations.",
+      "The HubSpot citation is attached to a substantive grader recommendation and qualifies as an own-content tool citation.",
+      "The 65-source badge is not a unique inline citation count.",
+      "Workspace-explored activity labels do not establish their contents or influence.",
+      "Prompt counts, time estimates, free/signup claims, analytics-report capabilities, tracking behavior and reliability assertions remain unverified model output."
+    ],
+    "original_capture_answer_characters": 4493,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 12,
+    "citation_true": 1,
+    "mention_true": 12,
+    "recommendation_true": 6,
+    "visibility_checker_recommendations": [
+      "HubSpot AEO Grader"
+    ],
+    "visibility_monitor_recommendations": [
+      "Mangools AI Search Watcher"
+    ],
+    "default_mentioned_tools": [
+      "Google Sheets",
+      "HubSpot AEO Grader",
+      "Mangools AI Search Watcher",
+      "Google Analytics 4",
+      "Google Search Console",
+      "Bing Webmaster Tools",
+      "Perplexity",
+      "Gemini",
+      "Google AI Overviews",
+      "Google AI Mode",
+      "Microsoft Copilot",
+      "Bing AI (unspecified surface)"
+    ],
+    "default_recommended_tools": [
+      "Google Sheets",
+      "HubSpot AEO Grader",
+      "Mangools AI Search Watcher",
+      "Google Analytics 4",
+      "Google Search Console",
+      "Bing Webmaster Tools"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "inline_link_occurrences": 7,
+    "unique_answer_URLs": 7,
+    "unique_cited_domains": 7
+  },
+  "coding_cautions": [
+    "Do not infer the X platform from the placeholder X in example prompts; this answer does not substantively mention the X service.",
+    "Generic page-level GEO checkers are suggested without named products; do not invent tool identities from supporting publishers.",
+    "Citation/mention/recommendation modes are discussed, but no active-recommendation-rate formula or binary recommendation log column is provided.",
+    "Model versions, search-state logging and fresh-session controls are not explicitly specified in the workflow; preferring web-search modes is narrower.",
+    "Analytics capabilities and channel/report availability are captured as advice, not verified product specifications."
+  ],
+  "source_record_sha256": "0f6d05bedcce562b567e19763bd4b6629e406b519bd19f8e7b014494f5e332cc"
+}

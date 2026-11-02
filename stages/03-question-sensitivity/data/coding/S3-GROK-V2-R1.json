@@ -1,0 +1,397 @@
+{
+  "id": "S3-GROK-V2-R1",
+  "source_record": "records/S3-GROK-V2-R1.json",
+  "coding_method": "Assistant review of complete copied answer and existing native UI/activity/citation-group captures. No external webpage access or fact verification; no independent human double-coding.",
+  "coding_scope": "Substantively named tools, services and AI surfaces. Generic methods and supplied platforms separate. Citation-only publishers excluded from default tool overlap.",
+  "answer_type": {
+    "primary": "Score validation or audit checklist",
+    "secondary": [
+      "Manual measurement workflow",
+      "Conceptual explanation"
+    ],
+    "evidence": "Demand full methodology details",
+    "rationale": "Five numbered audit/validation dimensions dominate; manual replication and corroborating analytics support the checks. No named AI visibility checker is recommended."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "The specific prompt set and how it was chosen (real buyer-intent questions vs. branded or generic ones)."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run each prompt 3\u20135 times in the actual consumer interfaces your buyers use: ChatGPT with search/browsing enabled, and Grok."
+    },
+    "fresh_sessions": {
+      "value": false,
+      "evidence": null
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Sampling: how many runs per prompt, which models/versions, web search on or off, date of collection, and whether it used the consumer web interface or an API."
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "web search on or off"
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_rates_separate": {
+      "value": true,
+      "evidence": "Track mention rate, citation rate, position, accuracy, and share of voice versus 3\u20135 competitors."
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Prefer tools that publish methodology, raw answers, or scoring code, or that let you inspect the underlying responses."
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "Denominator (all answers vs. only answers that mention at least one brand)."
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": true,
+      "evidence": "Exact formula and weights (mention rate, share of voice, position/prominence, citations, sentiment, adversarial resistance, etc.)."
+    },
+    "composite_score_caution": {
+      "value": true,
+      "evidence": "Per-engine breakdowns rather than a single blended score."
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "AI answers are stochastic."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Replicate the core results yourself"
+    },
+    "downstream_conversions": {
+      "value": true,
+      "evidence": "Direct customer attribution (\u201cHow did you hear about us?\u201d)."
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "GA4",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "GA4 referrals from chatgpt.com, grok-related domains, or similar.",
+      "source_urls": [],
+      "notes": "Explicitly suggested as a free corroborating traffic signal; manually normalized GA4 alias, not a composite visibility tool."
+    },
+    {
+      "entity": "Google Search Console",
+      "observed_name": "Google Search Console",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Google Search Console data on AI Overviews / AI Mode impressions (where available).",
+      "source_urls": [],
+      "notes": "The where-available qualification and claimed AI surface coverage are retained as platform output, not verified product capabilities."
+    },
+    {
+      "entity": "Reddit",
+      "observed_name": "Reddit",
+      "entity_type": "community_corroborating_signal",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Community and third-party presence (Reddit, review sites, GitHub, directories, X engagement)\u2014these heavily influence what the models say.",
+      "source_urls": [],
+      "notes": "The suggested action is checking existing third-party presence, not necessarily posting or adopting a new tool."
+    },
+    {
+      "entity": "GitHub",
+      "observed_name": "GitHub",
+      "entity_type": "developer_community_corroborating_signal",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Community and third-party presence (Reddit, review sites, GitHub, directories, X engagement)\u2014these heavily influence what the models say.",
+      "source_urls": [],
+      "notes": "Named as a corroborating presence signal; no GitHub source is cited and no publication action is requested."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X (Twitter); X engagement",
+      "entity_type": "community_corroborating_signal",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Community and third-party presence (Reddit, review sites, GitHub, directories, X engagement)\u2014these heavily influence what the models say.",
+      "source_urls": [],
+      "notes": "Twitter is explicitly treated as an alias for X. The recommendation concerns observing presence/engagement, not a directive to publish content."
+    },
+    {
+      "entity": "Claude",
+      "observed_name": "Claude",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "A single blended number can also hide large engine differences (e.g., strong on Grok/Claude but near-zero on ChatGPT).",
+      "source_urls": [],
+      "notes": "Illustrative engine difference, not a recommendation to use Claude."
+    },
+    {
+      "entity": "Bing",
+      "observed_name": "Bing-derived",
+      "entity_type": "search_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "ChatGPT relies more on training data plus web retrieval (historically Bing-derived) and favors established third-party authority, directories, reviews, and consistent entity coverage.",
+      "source_urls": [],
+      "notes": "Historical retrieval-source attribution, not a suggested tool. No Bing citation is captured."
+    },
+    {
+      "entity": "Google AI Overviews",
+      "observed_name": "AI Overviews",
+      "entity_type": "ai_search_surface",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Google Search Console data on AI Overviews / AI Mode impressions (where available).",
+      "source_urls": [],
+      "notes": "Mentioned as claimed analytics coverage. The recommendation is to cross-check GSC data, not independently to use this AI surface."
+    },
+    {
+      "entity": "Google AI Mode",
+      "observed_name": "AI Mode",
+      "entity_type": "ai_search_surface",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Google Search Console data on AI Overviews / AI Mode impressions (where available).",
+      "source_urls": [],
+      "notes": "Mentioned as claimed analytics coverage, not independently recommended."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for manual replication",
+      "evidence": "Run each prompt 3\u20135 times in the actual consumer interfaces your buyers use: ChatGPT with search/browsing enabled, and Grok.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Explicitly suggested for checks, but supplied in the question and excluded from discovered tool overlap by default."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for manual replication",
+      "evidence": "Run each prompt 3\u20135 times in the actual consumer interfaces your buyers use: ChatGPT with search/browsing enabled, and Grok.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Explicitly suggested for checks, but supplied in the question and excluded from discovered tool overlap by default."
+    }
+  ],
+  "contextual_non_tool_entities": [],
+  "generic_methods": [
+    "Unnamed spreadsheet with fixed buyer prompts",
+    "Competitor-relative comparisons within identical prompt sets",
+    "Weekly/biweekly repeated consumer-interface runs",
+    "Review sites and directories as corroborating presence signals",
+    "Direct customer attribution",
+    "Inspecting vendor methodology, underlying raw answers and score code"
+  ],
+  "answer_sources": [
+    {
+      "text": "AI visibility score: what it is and how it's calculated | Visilay (Visilay)",
+      "observed_target": "visilay.com/blog/ai-visibility-score/",
+      "url": "https://visilay.com/blog/ai-visibility-score/",
+      "domain": "visilay.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_title_URL_and_captured_UI_card_only",
+      "classification_evidence": "Title and expanded card describe an explanatory article about visibility-score formulas. Vendor documentation, practitioner tutorial or original vendor research is not established from the available metadata.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no active recommendation to use or follow the publisher"
+    },
+    {
+      "text": "AI visibility score: what it is and how it's calculated | Visilay (Visilay)",
+      "observed_target": "visilay.com/blog/ai-visibility-score/",
+      "url": "https://visilay.com/blog/ai-visibility-score/",
+      "domain": "visilay.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_title_URL_and_captured_UI_card_only",
+      "classification_evidence": "Title and expanded card describe an explanatory article about visibility-score formulas. Vendor documentation, practitioner tutorial or original vendor research is not established from the available metadata.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no active recommendation to use or follow the publisher"
+    },
+    {
+      "text": "There Is No Single \u201cAI Visibility\u201d Score; Ask Four AIs, Get Four Shortlists | Markets Insider (Markets.businessinsider)",
+      "observed_target": "markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_title_URL_and_captured_UI_card_only",
+      "classification_evidence": "Returned title reports a multi-engine shortlist study. The /news/stocks/ path also permits syndicated/promotional material; primary research authorship is unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no active recommendation to use or follow the publisher"
+    },
+    {
+      "text": "There Is No Single \u201cAI Visibility\u201d Score; Ask Four AIs, Get Four Shortlists | Markets Insider (Markets.businessinsider)",
+      "observed_target": "markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_title_URL_and_captured_UI_card_only",
+      "classification_evidence": "Returned title reports a multi-engine shortlist study. The /news/stocks/ path also permits syndicated/promotional material; primary research authorship is unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no active recommendation to use or follow the publisher"
+    },
+    {
+      "text": "Grok Is Citing Brands Too: The Data Behind Its Citation Logic | Am I Cited (Amicited)",
+      "observed_target": "amicited.com/blog/grok-is-citing-brands-too/",
+      "url": "https://amicited.com/blog/grok-is-citing-brands-too/",
+      "domain": "amicited.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_title_URL_and_captured_UI_card_only",
+      "classification_evidence": "A branded blog title claims data about Grok citation logic; original empirical study versus commercial explanatory content is unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no active recommendation to use or follow the publisher"
+    },
+    {
+      "text": "Are AI Visibility Tools Accurate? What They Miss (2026) (Searchscope)",
+      "observed_target": "searchscope.com.au/ai-seo/how-accurate-are-ai-visibility-tools/",
+      "url": "https://searchscope.com.au/ai-seo/how-accurate-are-ai-visibility-tools/",
+      "domain": "searchscope.com.au",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS; www may be omitted by display",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_returned_title_URL_and_captured_UI_card_only",
+      "classification_evidence": "Title and /ai-seo/ path suggest explanatory/practitioner or commercial content, without establishing author or original research.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no active recommendation to use or follow the publisher"
+    }
+  ],
+  "cited_hostname_set": [
+    "visilay.com",
+    "markets.businessinsider.com",
+    "amicited.com",
+    "searchscope.com.au"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping, retaining displayed hostnames. Market Insider hostname collapsed to businessinsider.com; searchscope.com.au retained. Leading www variants treated as same normalized domain, not as proof of exact href. No public-suffix software or external lookup used.",
+    "mapping": {
+      "visilay.com": "visilay.com",
+      "markets.businessinsider.com": "businessinsider.com",
+      "amicited.com": "amicited.com",
+      "searchscope.com.au": "searchscope.com.au"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "observed_inline_link_occurrences": 6,
+    "unique_standardized_answer_URLs": 4,
+    "unique_displayed_answer_domains": 4,
+    "source_badge_hits": 45,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": null,
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "citation_group_evidence_file": "[Private capture retained locally.]",
+    "native_browsed_link_domains": [
+      "markets.businessinsider.com",
+      "visilay.com",
+      "searchscope.com.au"
+    ],
+    "captured_exact_query_labels": [
+      "Grok AI visibility scoring how Grok differs from ChatGPT in brand mentions"
+    ],
+    "notes": [
+      "Visilay and Markets Insider each occur twice in the recorded inline list. Deduplicate for domain/URL set comparisons; retain six link occurrences separately.",
+      "Expanding Visilay +1 revealed Visilay and Markets Insider, both already recorded. This does not add two unique sources.",
+      "Captured displayed targets omit the scheme and may omit www. The standardized https URLs are not independently recovered exact hrefs. The citation-group capture separately displays https://www.visilay.com/blog/ai-visibility-score/. Domain comparison is robust to this leading-www difference; exact-URL equivalence beyond that is not asserted.",
+      "Native activity directly shows a grouped three-search control, a separate web-search query label and browsed-link controls. Actual search is observed independently of the 45-hit badge. Exact query-label coverage remains partial.",
+      "The raw notes retain an earlier statement that activity needed reopening; the later search_observed=true and explicit activity capture supersede that pending status without changing the historical note.",
+      "Workspace-explored activity is visible, but contents and influence are unestablished; isolation is not audited.",
+      "Saved HTML lacking the rendered answer DOM is not treated as an independent complete body/citation capture.",
+      "All research statistics, relative engine behavior, analytics capabilities and costs are platform claims, not verified facts."
+    ],
+    "original_capture_answer_characters": 5038,
+    "answer_characters": 5038,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 9,
+    "citation_true": 0,
+    "mention_true": 9,
+    "recommendation_true": 5,
+    "visibility_checker_recommendations": [],
+    "default_mentioned_tools": [
+      "Google Analytics 4",
+      "Google Search Console",
+      "Reddit",
+      "GitHub",
+      "X",
+      "Claude",
+      "Bing",
+      "Google AI Overviews",
+      "Google AI Mode"
+    ],
+    "default_recommended_tools": [
+      "Google Analytics 4",
+      "Google Search Console",
+      "Reddit",
+      "GitHub",
+      "X"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "inline_link_occurrences": 6,
+    "unique_answer_URLs": 4,
+    "unique_cited_domains": 4
+  },
+  "coding_cautions": [
+    "Recommended corroborating channels are counted separately by role from score-checking software; monitoring existing community presence is not a publication recommendation.",
+    "Google AI Overviews and AI Mode are contextual coverage mentions. Coding the GSC recommendation as a recommendation of every named covered surface would overcount tools.",
+    "Citation labels name Visilay, Markets Insider, Am I Cited and Searchscope, but the substantive prose does not name or recommend them. No complete source-publisher C/M/R census is added to default tool counts.",
+    "C=false means no own-content link observed in the captured answer links; missing full retrieval inventory is not automatically a missing citation.",
+    "The answer separates mention/citation metrics but does not explicitly operationalize active recommendation rate as a third metric."
+  ],
+  "source_record_sha256": "ebf90c9b23204aca70f144e04f49d2f992e8d50cbc06996002938e4dbae1f405"
+}

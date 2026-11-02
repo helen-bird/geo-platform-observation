@@ -1,0 +1,445 @@
+{
+  "id": "S3-OPENAIAPI-M1-R3",
+  "slot_id": "S3-CHATGPT-M1-R3",
+  "platform": "OpenAI API + web search",
+  "interface": "Responses API",
+  "prompt_id": "M1",
+  "intent": "M",
+  "wording": 1,
+  "repeat": 3,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I reliably measure whether ChatGPT and Grok recommend my product to potential buyers?",
+  "submitted_at": "2026-11-02T09:37:52.892373+00:00",
+  "model_label": "gpt-5.6-sol",
+  "requested_model": "gpt-5.6-sol",
+  "returned_model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "returned_reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "personalization": false,
+  "search_enabled_api": true,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "You can measure this with **a repeatable prompt panel plus referral/conversion tracking**. Don\u2019t treat one ChatGPT or Grok answer as a \u201cranking\u201d\u2014answers vary by personalization, location, search mode, and randomness. ChatGPT may use memory and approximate location; Grok may personalize from account activity and interests. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\n## 1. Create a buyer-intent prompt panel\n\nBuild 10\u201320 prompts from questions actual prospects ask. Include several intent types:\n\n| Intent | Example |\n|---|---|\n| Category discovery | \u201cWhat are the best tools for **[job]**?\u201d |\n| Comparison | \u201cAlternatives to **[competitor]** for **[persona]**?\u201d |\n| Requirements | \u201cI need **[feature]**, **[integration]**, and a budget under **[$X]**.\u201d |\n| Pain-driven | \u201cHow can a **[persona]** solve **[problem]** without **[constraint]**?\u201d |\n| Switching | \u201cShould I switch from **[competitor]** if I need **[differentiator]**?\u201d |\n| Shortlisting | \u201cRecommend three **[category]** tools for **[specific use case]**.\u201d |\n\nUse language buyers would naturally use. **Do not include your product\u2019s name** except in separate branded-accuracy tests.\n\nWeight each prompt:\n\n- **3:** high purchase intent\n- **2:** active research\n- **1:** broad discovery\n\n## 2. Run a controlled weekly test\n\nFor both ChatGPT and Grok:\n\n1. Start a new conversation.\n2. Disable memory/personalization where possible.\n3. Avoid custom instructions.\n4. Use the same prompt wording.\n5. Run each prompt **three times**, preferably on different days.\n6. Record the date, product/model, whether web search occurred, answer, and cited sources.\n\nThree repetitions matter because reasoning-model outputs aren\u2019t deterministic; xAI\u2019s own evaluation guidance says a single run can mislead and recommends reporting results across repeated runs. ([docs.x.ai](https://docs.x.ai/developers/model-capabilities/text/best-practices))\n\nIf 120 weekly queries is excessive, start with:\n\n- 10 prompts\n- 2 repetitions\n- 2 assistants\n\nThat is **40 answers per week**.\n\n## 3. Score the results objectively\n\nUse a free Google Sheet with these columns:\n\n```text\nDate\nAssistant\nPrompt ID\nBuyer segment\nIntent weight\nWeb search used?\nProduct mentioned?\nExplicitly recommended?\nRecommendation position\nLinked/cited?\nDescription accurate?\nRelevant landing page cited?\nCompetitors recommended\nAnswer URL or screenshot\n```\n\nScore each answer:\n\n- **0:** absent\n- **1:** mentioned, but not recommended\n- **2:** recommended as an option\n- **3:** top-three recommendation\n- **4:** primary recommendation\n- **\u22121:** mentioned inaccurately or negatively\n\nTrack these headline metrics:\n\n### Recommendation rate\n\n```text\nRuns explicitly recommending you \u00f7 total relevant runs\n```\n\n### Top-three share\n\n```text\nRuns placing you in the top three \u00f7 total relevant runs\n```\n\n### Citation rate\n\n```text\nRuns linking to your site \u00f7 total relevant runs\n```\n\n### Accuracy rate\n\n```text\nAccurate mentions \u00f7 all mentions\n```\n\n### Consistency rate\n\n```text\nPrompts where you appear in at least 2 of 3 runs \u00f7 total prompts\n```\n\nYour **consistency rate** is more useful than an isolated mention.\n\nFor an overall score, multiply each answer\u2019s 0\u20134 score by its prompt\u2019s intent weight. This prevents a vague educational query from counting as much as \u201cRecommend a product I can buy today.\u201d\n\n## 4. Separate \u201cmodel memory\u201d from current web visibility\n\nRun two versions of your most important prompts:\n\n1. **Normal:** \u201cRecommend tools for\u2026\u201d\n2. **Search-explicit:** \u201cSearch the web and recommend current tools for\u2026\u201d\n\nThis tells you whether:\n\n- The model already knows your product.\n- Current web sources make it discoverable.\n- Your product appears only when a specific page gets cited.\n\nChatGPT\u2019s web-search answers can include citations, but OpenAI warns that search results and citations can be incomplete, outdated, or incorrect. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\nRecord which third-party pages are cited. Often the actionable insight is not \u201cpublish more blog posts,\u201d but rather:\n\n> \u201cChatGPT repeatedly relies on three comparison pages, and none includes us.\u201d\n\n## 5. Track actual buyer exposure\n\nPrompt testing measures **recommendation availability**, not how many real buyers saw it. Add three free signals.\n\n### ChatGPT referral traffic\n\nIn GA4, Plausible, PostHog, or server logs, create a segment for:\n\n```text\nutm_source = chatgpt.com\n```\n\nOpenAI says ChatGPT automatically adds `utm_source=chatgpt.com` to referral URLs from search results. ([help.openai.com](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results))\n\nTrack:\n\n- Sessions\n- Signup rate\n- Trial-to-paid rate\n- Landing pages\n- Assisted conversions\n\n### Grok referral traffic\n\nCreate analytics filters for referrers containing:\n\n```text\ngrok.com\nx.com\n```\n\nTreat this as a **lower-bound signal**, not a complete count: links may be copied, referrer data may be stripped, and not every recommendation generates a click.\n\n### Self-reported attribution\n\nAdd this required or optional signup question:\n\n> How did you first hear about us?\n\nOptions:\n\n- Google/search engine\n- ChatGPT\n- Grok\n- Another AI assistant\n- Social media\n- Recommendation\n- Other\n\nAlso add an optional text field:\n\n> What did you ask or search for?\n\nThis is often your best source of new monitoring prompts.\n\n## 6. Use three levels of evidence\n\nReport results in this order:\n\n1. **Visibility:** Your controlled prompt panel recommends you.\n2. **Engagement:** Analytics shows visitors from ChatGPT/Grok.\n3. **Revenue:** Signups or customers attribute discovery to them.\n\nDon\u2019t claim that \u201cChatGPT sends buyers\u201d based solely on your own prompt tests. A reliable statement looks more like:\n\n> \u201cAcross 60 controlled high-intent runs, we were recommended 28% of the time, linked 12% of the time, and received five attributed trials.\u201d\n\n## Recommended no-budget cadence\n\n**Every week, 30\u201345 minutes:**\n\n- Run your ten highest-intent prompts twice.\n- Save outputs or screenshots.\n- Update recommendation, top-three, citation, and accuracy rates.\n- Check AI referral traffic.\n- Add new buyer wording from sales conversations.\n- Investigate pages ChatGPT and Grok cited instead of you.\n\n**Every month:**\n\n- Remove unrealistic prompts.\n- Add emerging competitors.\n- Compare the latest four-week average with the previous four weeks.\n- Review branded prompts for factual errors.\n\nAlso confirm that your site does not block `OAI-SearchBot`; OpenAI states this is necessary for eligibility in ChatGPT search, though inclusion and placement are not guaranteed. ([help.openai.com](https://help.openai.com/en/articles/9237897-chatgpt-search))\n\nThe practical goal isn\u2019t \u201cknow every answer every buyer receives\u201d\u2014that\u2019s impossible. It is to maintain a **stable, buyer-weighted sample that detects meaningful changes and connects them to traffic and revenue**.",
+  "answer_links": [
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Best Practices Guide | SpaceXSI Docs",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+      "text": "Best Practices Guide | SpaceXSI Docs",
+      "domain": "docs.x.ai",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Publishers and Developers - FAQ | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results",
+      "text": "Publishers and Developers - FAQ | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation"
+    }
+  ],
+  "captured_at": "2026-11-02T09:38:26.870696+00:00",
+  "source_inventory_complete": true,
+  "transport_body_complete": true,
+  "refusals": [],
+  "response_status": "completed",
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 21109,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 4349
+    },
+    "output_tokens": 2499,
+    "output_tokens_details": {
+      "reasoning_tokens": 933
+    },
+    "total_tokens": 23608
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 2
+    }
+  },
+  "estimated_cost": {
+    "estimated_usd": 0.1387596,
+    "token_cost_usd": 0.1187596,
+    "charged_searches_estimate": 2,
+    "search_count_basis": "reported billable web_search.num_requests",
+    "billing_reconciled": false
+  },
+  "reserved_budget_usd": 6.6,
+  "http_status": 200,
+  "service_tier": "default",
+  "review_note": "Read complete six-section weighted benchmark and referral workflow, weekly/monthly cadence and coherent final paragraph. Five citation occurrences match annotations; three unique returned URLs, correct model/effort and two searches, no caps. Google Sheet and named analytics options are explicit advice. The -1/0-4 rubric, intent weights and example performance are model-proposed, not validated or adopted as our experiment metric.",
+  "tool_limit_reached": false,
+  "body_review": {
+    "reviewed_at": "2026-11-02T09:39:03.953039+00:00",
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "annotation_and_explicit_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "search_calls": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:help.openai.com ChatGPT search citations websites official",
+          "site:help.openai.com publishers developers ChatGPT referral traffic OAI-SearchBot official",
+          "site:docs.x.ai Grok web search citations official",
+          "site:docs.x.ai Grok API search sources citations official"
+        ],
+        "query": "site:help.openai.com ChatGPT search citations websites official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/8313428"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/11128490-improved-shopping-results-from-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10984597-chatgpt-generated-links"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/20001423"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/x-post-fact-check"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/10056348-how-do-i-search-my-chat-history-in-chatgpt%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525253F.midi"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/tools/web-search"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/connectors"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:docs.x.ai citations web search Grok API sources official",
+          "site:help.x.com Grok citations website links official",
+          "site:docs.x.ai Grok web search sources domain filter official",
+          "site:docs.x.ai evaluation API Grok official"
+        ],
+        "query": "site:docs.x.ai citations web search Grok API sources official",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/cookbook/examples/reasoning-effort-evals"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/pricing"
+          },
+          {
+            "type": "url",
+            "url": "https://help.x.com/en/using-x/about-grok"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/faq/general"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/faq"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/overview"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/use-cases"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok-bot/inference-hooks"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/build/features/skills-plugins-marketplaces"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/grok/connectors"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/best-practices"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          },
+          {
+            "type": "url",
+            "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results"
+          }
+        ]
+      }
+    }
+  ],
+  "retrieval_sources": [
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/8313428",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/11128490-improved-shopping-results-from-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/10984597-chatgpt-generated-links",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/20001423",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/cookbook/examples/docs-to-cited-answers",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/cookbook/examples/x-post-fact-check",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/10056348-how-do-i-search-my-chat-history-in-chatgpt%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525253F.midi",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/tools/web-search",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok/connectors",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/cookbook/examples/reasoning-effort-evals",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/pricing",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.x.com/en/using-x/about-grok",
+      "domain": "help.x.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/faq/general",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok/faq",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok/overview",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok-bot/use-cases",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok-bot/inference-hooks",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/build/features/skills-plugins-marketplaces",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/grok/connectors",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/best-practices",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+      "domain": "docs.x.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results",
+      "domain": "help.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    }
+  ],
+  "raw_file": "records/S3-OPENAIAPI-M1-R3.json",
+  "request_file": "requests/S3-OPENAIAPI-M1-R3.json",
+  "response_file": "responses/S3-OPENAIAPI-M1-R3.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 7222,
+  "public_answer_characters": 7132,
+  "answer_privacy_edits": {
+    "body_changed": true,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

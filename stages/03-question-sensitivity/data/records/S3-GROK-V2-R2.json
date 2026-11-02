@@ -1,0 +1,73 @@
+{
+  "id": "S3-GROK-V2-R2",
+  "slot_id": "S3-GROK-V2-R2",
+  "platform": "Grok",
+  "prompt_id": "V2",
+  "intent": "V",
+  "wording": 2,
+  "repeat": 2,
+  "prompt": "As a bootstrapped SaaS builder, what checks should I perform before trusting reported ChatGPT and Grok visibility scores for my product?",
+  "submitted_at": "2026-11-02T06:42:16.030Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Treat reported ChatGPT and Grok visibility scores as directional signals with wide error bars, not precise measurements. They are useful for spotting trends and gaps, but many factors make single numbers misleading. For a bootstrapped SaaS builder, prioritize low-cost manual checks over paid dashboards until the data holds up under scrutiny.\n\nCore Problems with These Scores\n\nVisibility scores (typically a 0\u2013100 index or mention rate) measure how often or prominently your product appears in AI answers to tracked prompts. Common definitions include share of answers that name you, position-weighted mentions, or blends of presence + citation + sentiment.\u2060Aeotrack\n\nThey are unreliable for several documented reasons:\n\nHigh variance / non-determinism: The same prompt rarely produces the same brand list. SparkToro research (nearly 3,000 runs across ChatGPT, Claude, and Google AI) found less than a 1-in-100 chance of identical brand lists and roughly 1-in-1,000 for the same list in the same order. Top brands appear more consistently (e.g., 55\u201397% inclusion rates in some categories), but exact positions and shortlists fluctuate heavily.\u2060Sparktoro\nEngine disagreement: ChatGPT, Grok, Claude, and Perplexity often recommend different shortlists. One 2026 benchmark of B2B tech PR questions found only ~17% average top-five overlap across engines versus ~43% for repeated asks to the same engine. Blended scores can hide that you are strong on one and invisible on another.\u2060Markets.businessinsider\nAPI vs. consumer interface gaps: Many tools query APIs. These frequently differ from what users see in the ChatGPT or Grok web/app interfaces (search behavior, sources, brand sets, response length, location/personalization). Studies have reported brand or source overlaps as low as ~15\u201325% in some comparisons.\u2060Paprik\nPrompt and methodology dependence: Scores depend on the exact prompts (ideally unbranded buyer-intent questions), number of runs, models, whether web search is enabled, scoring formula (mention rate vs. position-weighted vs. proprietary), and whether raw answers are available. Formulas and weights vary widely across vendors.\u2060Loudface\n\nGrok additionally weights freshness and its own ecosystem (especially X/Twitter citations and social signals) more heavily than ChatGPT, which leans more on training data plus search and entity authority.\n\nPractical Checks Before Trusting a Score\n\nDo these in roughly this order. Most are free or low-effort.\n\nDemand (or review) the methodology\nAsk the tool or agency: exact scoring formula, number of prompts and runs per prompt, models used, web search on/off, API vs. UI/scraping, date range, and whether scores are engine-specific or blended. Prefer tools that show raw answers, citations, and per-engine breakdowns. Opaque or frequently retroactively adjusted scores are red flags.\nSeparate ChatGPT and Grok (and ignore pure blends)\nGet engine-specific numbers. A strong blended score can mask weakness on the platform your buyers actually use most (ChatGPT currently has far higher usage share).\nManually verify on the real interfaces\nUse fresh, logged-out sessions (or clear memory/history).\nEnable web search/research mode.\nTest 8\u201315 realistic, unbranded buyer prompts relevant to your SaaS (e.g., \u201cbest [category] tools for [ICP/use case]\u201d, \u201c[competitor] alternatives\u201d, \u201chow to [solve problem your product addresses]\u201d, comparison or feature-specific questions). Avoid only branded queries like \u201cWhat is [your product]?\u201d.\nRun each key prompt 3\u20135 times and note: mention (yes/no), position if listed, citation of your domain, accuracy of description, sentiment, and which competitors appear.\nRecord date, exact prompt, and model if visible.\nCompare your notes to the reported score. Large discrepancies mean the tool\u2019s setup does not match real user experience.\nCheck prompt relevance and coverage\nConfirm the tracked prompts match how your actual buyers research and evaluate tools. Synthetic or keyword-derived prompts can inflate or deflate scores. Also note prompt coverage\u2014how many of your important buyer questions you appear in at all.\nDistinguish mentions, citations, position, and accuracy\nA mention without a citation or with incorrect facts is weaker. Hallucinations about features, pricing, or positioning are common; flag them. Position in a shortlist matters more than a passing mention. Sentiment scoring is often noisy\u2014spot-check the actual language.\nLook at sources and Grok-specific signals\nReview which domains or posts the engines cite. For Grok, check recent activity and mentions on X, as it prioritizes that ecosystem. For ChatGPT, entity strength, third-party coverage (reviews, listicles, Reddit, YouTube, etc.), and content quality/freshness matter more.\nAssess sample size and trends over absolutes\nSingle runs or tiny prompt sets are mostly noise. Prefer tools that average many runs and show ranges or trends. Track relative movement (your share vs. key competitors) more than any absolute number. Correlate with any AI referral traffic in GA4 or similar if available.\nCross-check free or lightweight options\nManually as above, or try limited free tiers/audits from tools that publish methodology. Free checks give a baseline without commitment.\nBottom Line for a Bootstrapped Builder\n\nUse scores for relative trends, competitor gaps, and prioritizing content or third-party mentions (YouTube, branded web mentions, and community sources often correlate more strongly with visibility than traditional backlinks alone). Do not treat a single number as truth or as a direct proxy for pipeline. Start with manual UI checks on your most important prompts; only invest in paid tracking once those match the reported data and the methodology is transparent. Focus effort on building corroborating signals (clear product descriptions, third-party coverage, structured content, and presence where the engines source information) rather than optimizing for any one dashboard.",
+  "answer_links": [
+    {
+      "domain": "www.aeotrack.io",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Aeotrack",
+      "url": "https://www.aeotrack.io/methodology"
+    },
+    {
+      "domain": "sparktoro.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Sparktoro",
+      "url": "https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/"
+    },
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461"
+    },
+    {
+      "domain": "paprik.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Paprik",
+      "url": "https://paprik.ai/blog/accurate-api-based-ai-visibility-tracking-chatgpt-ui"
+    },
+    {
+      "domain": "www.loudface.co",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Loudface",
+      "url": "https://www.loudface.co/blog/what-is-ai-visibility"
+    }
+  ],
+  "captured_at": "2026-11-02T06:44:14.483Z",
+  "source_panel_declared_hits": 75,
+  "source_inventory_scope": "Observed inline answer links; grouped citations expanded; source badge and retrieval activity are separate.",
+  "capture_method": "Complete rendered Grok article innerText; UI heading/duration and source badge removed. Exact inline hrefs extracted from scoped rendered article.",
+  "raw_file": "records/S3-GROK-V2-R2.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 5960,
+  "public_answer_characters": 5960,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

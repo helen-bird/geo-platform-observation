@@ -1,0 +1,40 @@
+{
+  "id": "S3-GROK-M1-R2",
+  "slot_id": "S3-GROK-M1-R2",
+  "platform": "Grok",
+  "prompt_id": "M1",
+  "intent": "M",
+  "wording": 1,
+  "repeat": 2,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I reliably measure whether ChatGPT and Grok recommend my product to potential buyers?",
+  "submitted_at": "2026-11-02T06:34:46.219Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "There is no official \u201chow often we recommend you\u201d dashboard from OpenAI or xAI. Measurement is sampling-based. For a solo founder with zero GEO budget, the most reliable approach is a disciplined manual process plus free snapshot tools and outcome signals.\n\n1. Systematic Manual Sampling (Your Core Reliable Method)\n\nThis is the gold standard at zero cost. Answers vary between runs, so treat it like A/B testing.\n\nWrite 10\u201315 real buyer prompts (never put your brand name in them). Examples:\n\u201cBest [category] for a solo founder / small team on a budget\u201d\n\u201c[Competitor] alternatives\u201d\n\u201cHow do I solve [specific pain your product fixes]\u201d\n\u201cTop [category] tools in 2026 for [use case]\u201d\nComparison or feature-specific versions\nTest cleanly:\nUse temporary/incognito chats or log out.\nFresh chat for every prompt.\nEnable search/browse where available (especially ChatGPT).\nRun each prompt 3\u20135 times on both ChatGPT and Grok.\nLog everything in a Google Sheet:\nDate, prompt, engine\nMentioned? (Y/N)\nPosition (1st, listed, etc.)\nSources cited\nCompetitors named\nReason given\nCalculate a simple visibility rate: percentage of runs where you appear. Track average position and which sources keep appearing.\n\nRe-run the same prompt set monthly (or weekly for your top 5). Consistency matters more than volume.\n\n2. Free Snapshot Tools for Quick Baselines\n\nUse these for a fast first look or quarterly check, not as your only ongoing method:\n\nHubSpot AI Search / AEO Grader \u2014 Free, no (or minimal) account required. Runs prompts across ChatGPT, Perplexity, and Gemini and scores visibility, sentiment, and share of voice.\nGetMentioned free AI visibility report \u2014 No signup. Runs real buyer-style prompts and shows visibility score, competitors, and cited sources.\nMangools AI Search Watcher (free plan) \u2014 5 prompts, weekly updates, covers ChatGPT, Grok, Gemini, Claude, AI Overviews, and others. Useful for light ongoing tracking.\nAthenaHQ Essential \u2014 Free credits (around 300) across several major engines for prompt analysis and source insights.\nLimited free checks from Semrush or Ahrefs AI visibility tools when available.\n\nThese give you a structured starting point without payment.\n\n3. Outcome Signals (Often More Actionable Than Mentions)\n\nMentions only matter if they drive awareness or signups.\n\nGA4 referrals: Create a custom channel group for AI assistants. Look for traffic from chatgpt.com, openai.com, grok.x.ai, x.ai, perplexity.ai, etc. Note that not all AI sessions pass a clean referrer.\nGoogle Search Console: Check generative AI / AI Overview impressions if available for your property.\nBing Webmaster Tools: AI performance and citation reports (more relevant to Copilot, but useful context).\nCustomer survey: On signup or in onboarding, ask \u201cHow did you first hear about us?\u201d and include ChatGPT, Grok, \u201cAI recommendation,\u201d or \u201cAI search.\u201d This is the cleanest free signal of real impact.\nPractical Tips for Reliability\nFocus on non-branded discovery prompts. Branded queries only tell you the model knows you exist.\nPrioritize cited sources. For SaaS, third-party pages (comparison listicles, review sites, Reddit threads, competitor pages) often drive recommendations more than your own site. Knowing the sources is more useful than the mention rate alone.\nExpect high variance. One run means almost nothing; patterns across many runs matter.\nGrok leans more on social, X, YouTube, and community content than ChatGPT, so track those surfaces too if Grok is important.\nRe-test after you publish new comparison content, get mentioned on key third-party pages, or improve structured data \u2014 then measure the delta.\nMinimal Weekly/Monthly Workflow\nMaintain your fixed prompt list.\nRun the key prompts manually (or use a free tool\u2019s 5-prompt limit).\nUpdate the sheet.\nGlance at GA4 AI referrals and any \u201cAI\u201d mentions in customer surveys.\nNote which sources keep appearing and whether you can influence them.\n\nThis gives you a consistent, zero-budget measurement system that is more reliable than one-off checks or expensive tools. Start with the manual baseline this week \u2014 it takes 1\u20132 hours and tells you immediately where you stand.",
+  "answer_links": [],
+  "captured_at": "2026-11-02T06:36:20.281Z",
+  "source_panel_declared_hits": 85,
+  "source_inventory_scope": "Observed inline answer links; grouped citations expanded; source badge and retrieval activity are separate.",
+  "capture_method": "Complete rendered Grok article innerText; UI heading/duration and source badge removed. Exact inline hrefs extracted from scoped rendered article.",
+  "notes": [
+    "Complete answer has no observable inline citation anchors despite an 85-source badge. Badge entries are not assigned as answer citations."
+  ],
+  "raw_file": "records/S3-GROK-M1-R2.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 4135,
+  "public_answer_characters": 4135,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

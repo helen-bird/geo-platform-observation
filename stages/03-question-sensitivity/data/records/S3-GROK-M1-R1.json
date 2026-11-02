@@ -1,0 +1,69 @@
+{
+  "id": "S3-GROK-M1-R1",
+  "slot_id": "S3-GROK-M1-R1",
+  "platform": "Grok",
+  "prompt_id": "M1",
+  "intent": "M",
+  "wording": 1,
+  "repeat": 1,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I reliably measure whether ChatGPT and Grok recommend my product to potential buyers?",
+  "submitted_at": "2026-11-02T06:29:21.318Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "The most reliable no-budget method is a fixed set of buyer-intent prompts that you run regularly on ChatGPT and Grok, logging results in a simple spreadsheet. This is the standard approach recommended across GEO (Generative Engine Optimization) measurement guides for solo founders and small teams. Paid trackers exist, but manual testing with consistency gives you actionable data without cost.\u2060Shmeer\u2060Gomega\n\n1. Build a fixed prompt set (your \u201ckeyword list\u201d)\n\nCreate 10\u201320 unbranded questions that a real potential buyer would ask before choosing a tool in your category. Keep the wording identical every time so changes reflect real shifts, not prompt variation.\n\nInclude a mix of:\n\nCategory / \u201cbest of\u201d queries (\u201cbest [category] tools for [use case]\u201d)\nProblem-solving queries (\u201chow to [solve specific problem]\u201d)\nComparison or alternative queries (\u201calternatives to [competitor]\u201d)\nUse-case specific queries\n\nExamples of structure (adapt to your SaaS):\n\n\u201cWhat are the best [category] tools for [specific use case]?\u201d\n\u201cWhich [category] software helps with [problem] for small teams?\u201d\n\u201cTop tools for [job to be done]\u201d\n2. Run them consistently and log results\n\nQuery the exact same prompts on:\n\nChatGPT (chatgpt.com, preferably with web search/browsing enabled for more current results)\nGrok (grok.com or via X)\n\nFrequency: Weekly or bi-weekly is practical for a solo founder. Monthly still works for trend tracking.\n\nLogging (spreadsheet columns):\n\nDate\nEngine (ChatGPT / Grok)\nPrompt\nMentioned? (Yes/No)\nPosition (e.g., 1st, 3rd, or not listed)\nRecommended? (Yes if positively suggested as a good option)\nSentiment (positive / neutral / negative)\nYour site cited as a source? (Yes/No + URL if present)\nCompetitors mentioned\nNotes (any quirks)\n\nKey metrics to calculate:\n\nMention rate = prompts where your product appears \u00f7 total prompts\nRecommendation rate = prompts where it is positively recommended \u00f7 total prompts\nShare of voice vs. top competitors\n\nRun each high-priority prompt 2\u20133 times per session if you want to smooth out AI non-determinism (answers vary). Trends over weeks/months matter more than any single run.\u2060Geoaura\n\nTips for reliability:\n\nUse a consistent browser setup (incognito or same account).\nNote the approximate date and whether web search was on.\nFocus first on commercial/high-intent prompts rather than pure informational ones.\n3. Complement with free lagging indicators\n\nManual testing shows whether recommendations happen. These show whether they drive any results:\n\nGoogle Analytics 4: Look for sessions with source chatgpt.com (OpenAI adds utm_source=chatgpt.com to many referral links) or the AI Assistant channel group. Track landing pages and conversions from those sessions. Note that not every recommendation produces a click, and tracking is imperfect (especially from mobile apps).\u2060Goodatmarketing\nGoogle Search Console: Check generative AI / AI Overviews performance reports if available for your property (impressions data).\nBing Webmaster Tools: AI Performance reports for Copilot-related signals.\n4. Free readiness checks (do these once or quarterly)\n\nThese don\u2019t measure ongoing recommendations, but they show whether your site is set up for AI systems to discover and cite it:\n\nHubSpot AEO / AI Search Grader (brand perception snapshot across models)\nMangools AI Search Grader\ngeo-tool.com free GEO check (crawler access, citability, structure)\nEnsure AI crawlers are not blocked in robots.txt, key pages have clear structure, and you have relevant structured data\nRealistic expectations for a solo founder\n\nA full monthly cycle of 15 prompts \u00d7 2 engines can take 30\u201390 minutes. Start with 8\u201310 high-intent prompts. The value comes from the gap list: prompts where competitors appear and you don\u2019t. Use those to guide content (answer the exact question clearly, add evidence/stats/quotes, get mentioned on third-party sites that AI systems already cite).\n\nThis method is the foundation used by almost every free/low-cost GEO guide. Paid tools mainly automate the same process at higher volume. Consistency with fixed prompts is what makes the measurement reliable enough to act on.",
+  "answer_links": [
+    {
+      "domain": "shmeer.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Shmeer",
+      "url": "https://shmeer.com/blog/how-to-measure-geo"
+    },
+    {
+      "domain": "www.gomega.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Gomega",
+      "url": "https://www.gomega.ai/blog/how-to-measure-geo-performance"
+    },
+    {
+      "domain": "geoaura.world",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Geoaura",
+      "url": "https://geoaura.world/blog/how-to-measure-geo-visibility"
+    },
+    {
+      "domain": "goodatmarketing.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Goodatmarketing",
+      "url": "https://goodatmarketing.com/how-to-track-chatgpt-traffic-in-google-analytics/"
+    }
+  ],
+  "captured_at": "2026-11-02T06:33:49.290Z",
+  "source_panel_declared_hits": 55,
+  "capture_method": "Rendered Grok article innerText through browser connection; UI heading, thought-duration label and source badge removed. Complete opening and concluding paragraph reviewed.",
+  "notes": [
+    "Browser DOM access became available during collection. Earlier native UI capture remains preserved.",
+    "Clipboard read through browser returned empty; rendered article supplied complete text. No question was resubmitted."
+  ],
+  "raw_file": "records/S3-GROK-M1-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 4126,
+  "public_answer_characters": 4126,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

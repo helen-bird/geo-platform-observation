@@ -1,0 +1,397 @@
+{
+  "id": "S3-GROK-V2-R2",
+  "source_record": "records/S3-GROK-V2-R2.json",
+  "coding_method": "Assistant review of complete 5,960-character rendered body, five captured DOM hrefs and existing browser snapshots/activity; no external webpage queries, research audit or independent human double-coding.",
+  "coding_scope": "Substantively named tools/services/surfaces, with supplied targets and the explicitly attributed research publisher separate. Citation-label-only brands are not added as substantive tool mentions. No cross-answer comparison is performed in this record.",
+  "answer_type": {
+    "primary": "Score validation or audit checklist",
+    "secondary": [
+      "Manual measurement workflow",
+      "Conceptual explanation"
+    ],
+    "evidence": "Practical Checks Before Trusting a Score",
+    "rationale": "Methodology, interface equivalence, repetition, interpretation and raw-answer checks dominate; manual consumer-interface validation is prioritized over dashboards. No specific visibility checker is actively recommended."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Avoid only branded queries like \u201cWhat is [your product]?\u201d."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run each key prompt 3\u20135 times and note: mention (yes/no), position if listed, citation of your domain, accuracy of description, sentiment, and which competitors appear."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Use fresh, logged-out sessions (or clear memory/history)."
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Ask the tool or agency: exact scoring formula, number of prompts and runs per prompt, models used, web search on/off, API vs. UI/scraping, date range, and whether scores are engine-specific or blended."
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "web search on/off"
+    },
+    "search_mode_enablement_advice": {
+      "value": true,
+      "evidence": "Enable web search/research mode."
+    },
+    "API_consumer_UI_distinction": {
+      "value": true,
+      "evidence": "API vs. consumer interface gaps: Many tools query APIs."
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_rates_separate": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Distinguish mentions, citations, position, and accuracy"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Prefer tools that show raw answers, citations, and per-engine breakdowns."
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "share of answers that name you"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": true,
+      "evidence": "exact scoring formula"
+    },
+    "composite_score_caution": {
+      "value": true,
+      "evidence": "Get engine-specific numbers."
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "Prefer tools that average many runs and show ranges or trends."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Manually verify on the real interfaces"
+    },
+    "downstream_conversions": {
+      "value": false,
+      "evidence": null
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "Correlate with any AI referral traffic in GA4 or similar if available."
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "GA4",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "unspecified",
+      "evidence": "Correlate with any AI referral traffic in GA4 or similar if available.",
+      "source_urls": [],
+      "notes": "Explicit optional outcome-signal recommendation. The surrounding checks are described as mostly free/low-effort, but this particular product's price is not stated."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X/Twitter",
+      "entity_type": "community_corroborating_signal",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "For Grok, check recent activity and mentions on X, as it prioritizes that ecosystem.",
+      "source_urls": [],
+      "notes": "Explicitly suggested monitoring/checking of X signals. Twitter and X are explicitly paired names; not an instruction to publish content or proof of weighting."
+    },
+    {
+      "entity": "Reddit",
+      "observed_name": "Reddit",
+      "entity_type": "community_source_type",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "For ChatGPT, entity strength, third-party coverage (reviews, listicles, Reddit, YouTube, etc.), and content quality/freshness matter more.",
+      "source_urls": [],
+      "notes": "Example in a claimed source/coverage relationship, not an explicit service-use or monitoring instruction."
+    },
+    {
+      "entity": "YouTube",
+      "observed_name": "YouTube",
+      "entity_type": "content_source_type",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "For ChatGPT, entity strength, third-party coverage (reviews, listicles, Reddit, YouTube, etc.), and content quality/freshness matter more.",
+      "source_urls": [],
+      "notes": "Also appears in a parenthetical correlation claim about third-party mentions. General advice to prioritize coverage is not converted into a specific instruction to adopt or publish on YouTube."
+    },
+    {
+      "entity": "Claude",
+      "observed_name": "Claude",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Engine disagreement: ChatGPT, Grok, Claude, and Perplexity often recommend different shortlists.",
+      "source_urls": [],
+      "notes": "Named in research/engine-comparison context, not separately recommended."
+    },
+    {
+      "entity": "Perplexity",
+      "observed_name": "Perplexity",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Engine disagreement: ChatGPT, Grok, Claude, and Perplexity often recommend different shortlists.",
+      "source_urls": [],
+      "notes": "Named in research/engine-comparison context, not separately recommended."
+    },
+    {
+      "entity": "Google AI (unspecified surface)",
+      "observed_name": "Google AI",
+      "entity_type": "unspecified_ai_surface_family",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "SparkToro research (nearly 3,000 runs across ChatGPT, Claude, and Google AI)",
+      "source_urls": [],
+      "notes": "The study description does not identify an exact Google AI product; preserve the unresolved surface identity."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested manual checks on the real consumer interface",
+      "evidence": "Start with manual UI checks on your most important prompts; only invest in paid tracking once those match the reported data and the methodology is transparent.",
+      "supporting_context": "Manually verify on the real interfaces",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "The task names both platforms and the workflow explicitly calls for their separate real-interface checks; they are not newly discovered tools."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested manual checks on the real consumer interface",
+      "evidence": "Start with manual UI checks on your most important prompts; only invest in paid tracking once those match the reported data and the methodology is transparent.",
+      "supporting_context": "Manually verify on the real interfaces",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "The task names both platforms and the workflow explicitly calls for their separate real-interface checks; they are not newly discovered tools."
+    }
+  ],
+  "research_entity_observations": [
+    {
+      "entity": "SparkToro",
+      "entity_type": "research_publisher",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "SparkToro research (nearly 3,000 runs across ChatGPT, Claude, and Google AI) found less than a 1-in-100 chance of identical brand lists and roughly 1-in-1,000 for the same list in the same order.",
+      "source_urls": [
+        "https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/"
+      ],
+      "excluded_from_default_tool_overlap": true,
+      "notes": "Explicit substantive research attribution with a same-brand blog citation. This codes citation/mention behavior, not independent verification of the study. No instruction to use, read or follow SparkToro."
+    }
+  ],
+  "contextual_non_tool_entities": [],
+  "generic_methods": [
+    "Formula, sample-size and per-engine methodology audit",
+    "Consumer-interface versus API setup matching",
+    "Repeated unbranded buyer-prompt checks",
+    "Per-run mention, position, own-domain citation, accuracy and competitor logging",
+    "Prompt coverage, trends and uncertainty checks",
+    "Reviewing source domains and posts",
+    "Generic free/lightweight tiers with transparent methods",
+    "Third-party coverage and accurate structured content"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Visibility score",
+      "definition_verbatim": "Visibility scores (typically a 0\u2013100 index or mention rate) measure how often or prominently your product appears in AI answers to tracked prompts."
+    },
+    {
+      "label": "Possible score definitions",
+      "definition_verbatim": "Common definitions include share of answers that name you, position-weighted mentions, or blends of presence + citation + sentiment.",
+      "notes": "A conceptual share-of-answers denominator is stated; no fixed eligibility rule or complete operational numerator/denominator procedure is supplied."
+    },
+    {
+      "label": "Prompt coverage",
+      "definition_verbatim": "how many of your important buyer questions you appear in at all"
+    }
+  ],
+  "answer_sources": [
+    {
+      "domain": "www.aeotrack.io",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Aeotrack",
+      "url": "https://www.aeotrack.io/methodology",
+      "source_category": "Tool/product documentation or sales page",
+      "classification_status": "provisional_from_answer_attribution_and_returned_label_URL_only",
+      "classification_evidence": "Branded /methodology destination provisionally represents product/scoring documentation; content and ownership not independently inspected.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no explicit instruction to read/follow the source"
+    },
+    {
+      "domain": "sparktoro.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Sparktoro",
+      "url": "https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/",
+      "source_category": "Vendor research or case study",
+      "classification_status": "provisional_from_answer_attribution_and_returned_label_URL_only",
+      "classification_evidence": "Body explicitly attributes nearly 3,000-run research to SparkToro, with a same-brand new-research blog URL. Original-research/vendor classification is provisional; data, methods and commercial provenance were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no explicit instruction to read/follow the source"
+    },
+    {
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Markets.businessinsider",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "source_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_answer_attribution_and_returned_label_URL_only",
+      "classification_evidence": "Markets Insider stock-news URL supports a benchmark comparison; syndicated or promotional provenance remains possible and primary authorship unresolved.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no explicit instruction to read/follow the source"
+    },
+    {
+      "domain": "paprik.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Paprik",
+      "url": "https://paprik.ai/blog/accurate-api-based-ai-visibility-tracking-chatgpt-ui",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_answer_attribution_and_returned_label_URL_only",
+      "classification_evidence": "Branded blog path claims accurate API-based tracking against ChatGPT UI, but original measurement versus product explanation is unresolved from metadata.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no explicit instruction to read/follow the source"
+    },
+    {
+      "domain": "www.loudface.co",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Loudface",
+      "url": "https://www.loudface.co/blog/what-is-ai-visibility",
+      "source_category": "Other / unresolved",
+      "classification_status": "provisional_from_answer_attribution_and_returned_label_URL_only",
+      "classification_evidence": "What-is-ai-visibility blog path suggests explanatory content; practitioner, editorial and commercial roles remain unresolved without reading the page.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation; no explicit instruction to read/follow the source"
+    }
+  ],
+  "cited_hostname_set": [
+    "www.aeotrack.io",
+    "sparktoro.com",
+    "markets.businessinsider.com",
+    "paprik.ai",
+    "www.loudface.co"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping retains exact DOM hrefs/hostnames; leading www removed for aeotrack.io/loudface.co and Markets Insider collapsed to businessinsider.com. No external public-suffix lookup used.",
+    "mapping": {
+      "www.aeotrack.io": "aeotrack.io",
+      "sparktoro.com": "sparktoro.com",
+      "markets.businessinsider.com": "businessinsider.com",
+      "paprik.ai": "paprik.ai",
+      "www.loudface.co": "loudface.co"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 5960,
+    "observed_inline_link_occurrences": 5,
+    "unique_DOM_answer_URLs": 5,
+    "unique_cited_domains": 5,
+    "source_badge_hits": 75,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": true,
+    "citation_mapping_scope": "Five inline DOM hrefs from the complete rendered answer, not an inventory of all 75 retrieval hits.",
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "complete_rendered_evidence_file": "[Private capture retained locally.]",
+    "captured_exact_query_labels": [],
+    "notes": [
+      "Recorded activity contains grouped searches of two, three and two, plus browsed links. Query strings are not expanded in the supplied snapshot.",
+      "The 75-source badge is not a count of unique inline citations.",
+      "Workspace-explored activity labels are visible, but their underlying contents and influence remain unresolved.",
+      "Five source labels are included in innerText; label-only brands are not automatically substantive mentions or recommendations.",
+      "Research sample sizes, probabilities, overlap percentages, usage-share claims, product features and engine-weighting assertions are all platform output, not independently verified facts."
+    ],
+    "original_capture_answer_characters": 5960,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 7,
+    "citation_true": 0,
+    "mention_true": 7,
+    "recommendation_true": 2,
+    "visibility_checker_recommendations": [],
+    "default_mentioned_tools": [
+      "Google Analytics 4",
+      "X",
+      "Reddit",
+      "YouTube",
+      "Claude",
+      "Perplexity",
+      "Google AI (unspecified surface)"
+    ],
+    "default_recommended_tools": [
+      "Google Analytics 4",
+      "X"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "separate_research_publishers_cited_and_mentioned": 1,
+    "inline_link_occurrences": 5,
+    "unique_answer_URLs": 5,
+    "unique_cited_domains": 5
+  },
+  "coding_cautions": [
+    "GA4 is optional downstream analytics; X is explicitly recommended for checking recent activity, not automatically for publishing.",
+    "YouTube/Reddit are examples inside explanatory coverage/correlation claims. General advice to prioritize third-party coverage is not turned into a specific service-use recommendation.",
+    "Generic free tiers/audits are suggested without naming particular checker products; do not infer them from citation labels.",
+    "Google AI is an unspecified surface family in a research description, not a resolved Google product.",
+    "SparkToro is substantively named and cited as a research publisher but is not recommended, and is excluded from tool-only overlap.",
+    "The answer distinguishes mentions/citations/position/accuracy, but does not define an active-recommendation rate."
+  ],
+  "source_record_sha256": "cf795ff60ca9d552e39aeac8ecb76309104651b4d96c6f97f8946cb26a1dde71"
+}

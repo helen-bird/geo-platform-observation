@@ -1,0 +1,363 @@
+{
+  "id": "S3-OPENAIAPI-V1-R3",
+  "slot_id": "S3-CHATGPT-V1-R3",
+  "platform": "OpenAI API + web search",
+  "interface": "Responses API",
+  "source_record": "records/S3-OPENAIAPI-V1-R3.json",
+  "coding_method": "Assistant semantic review of complete finalized 4,519-character API answer, returned response, annotations and request metadata. No external queries, paid calls or independent human double-coding.",
+  "coding_scope": "The named X retrieval context is separate from supplied platforms and provider attributions. Generic spreadsheet or search-mode advice is not a branded tool recommendation. Source-title-only identities do not become tool mentions.",
+  "answer_type": {
+    "primary": "Score validation or audit checklist",
+    "secondary": [
+      "Manual measurement workflow",
+      "Conceptual explanation"
+    ],
+    "evidence": "A trustworthy score should pass these tests",
+    "rationale": "Seven trust tests, a small repeated spreadsheet audit and red flags form the answer. No named visibility checker or analytics tool is suggested."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Most are unbranded, such as \u201cbest invoicing software for solo consultants,\u201d rather than prompts containing your company name."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Look for at least **3 independent runs per prompt**, preferably spread across different days."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Fresh conversations, with memory/personalization controlled."
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "ChatGPT and Grok versions or product surfaces."
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "Web search on/off."
+    },
+    "API_consumer_UI_distinction": {
+      "value": true,
+      "evidence": "An API test without search is not a valid proxy for users asking a search-enabled consumer product."
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": true,
+      "evidence": "the percentage of responses where your SaaS is genuinely recommended, not merely mentioned"
+    },
+    "citation_and_mention_rates_separate": {
+      "value": true,
+      "evidence": "**Citation rate:** Did the answer cite your site?"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Every score should click through to:"
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "**Visibility rate = responses containing an unprompted, relevant mention \u00f7 total responses**"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": true,
+      "evidence": "Prompts, weights, and scoring rules should not quietly change between reports."
+    },
+    "composite_score_caution": {
+      "value": true,
+      "evidence": "Require per-engine results before any combined number."
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "The report should show variance or a range"
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Free validation process"
+    },
+    "downstream_conversions": {
+      "value": false,
+      "evidence": null
+    },
+    "visibility_revenue_non_equivalence": {
+      "value": true,
+      "evidence": "Equates mentions with traffic, trials, or revenue"
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "X",
+      "observed_name": "web/X search",
+      "entity_type": "search_source_context",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed as a retrieval-source context",
+      "free_budget_fit": "unspecified",
+      "evidence": "Grok\u2019s results differ depending on whether web/X search is enabled.",
+      "source_urls": [],
+      "notes": "X is named within retrieval-mode context, not as a service to adopt or publish on. No X/xAI own-content citation is present."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested direct manual validation",
+      "evidence": "Run it three times in fresh ChatGPT conversations.",
+      "source_urls": [
+        "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied target, not new tool discovery. Only ChatGPT has a first-party body citation."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested direct manual validation",
+      "evidence": "Run it three times in fresh Grok conversations.",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied target, not new tool discovery. Only ChatGPT has a first-party body citation."
+    }
+  ],
+  "source_publisher_observations": [
+    {
+      "entity": "OpenAI",
+      "entity_type": "platform_documentation_publisher",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "OpenAI explicitly recommends opening citations because search results can be incomplete, outdated, or incorrect.",
+      "source_urls": [
+        "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+      ],
+      "excluded_from_default_tool_overlap": true,
+      "notes": "Supporting documentation attribution, not an adoption recommendation."
+    },
+    {
+      "entity": "xAI",
+      "entity_type": "platform_provider_attribution",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "OpenAI and xAI both document that search changes how current information and sources are retrieved.",
+      "source_urls": [],
+      "excluded_from_default_tool_overlap": true,
+      "notes": "Named in an attribution, but only OpenAI Help is cited. xAI retrieval results are not promoted to own-content body citations."
+    }
+  ],
+  "contextual_non_tool_entities": [],
+  "generic_methods": [
+    "Seven-question trust audit",
+    "Visible frozen buyer-prompt panel",
+    "Exact environment and model/search disclosures",
+    "Repeated fresh-session multi-day tests",
+    "Raw-evidence inspection",
+    "Per-engine rather than unexplained blended scores",
+    "Unnamed spreadsheet logging",
+    "Separate visibility and commercial-shortlist rates",
+    "Stable versioned methodology"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Visibility rate",
+      "definition_verbatim": "**Visibility rate = responses containing an unprompted, relevant mention \u00f7 total responses**"
+    },
+    {
+      "label": "Commercial shortlist rate",
+      "definition_verbatim": "the percentage of responses where your SaaS is genuinely recommended, not merely mentioned"
+    },
+    {
+      "label": "Citation rate",
+      "definition_verbatim": "**Citation rate:** Did the answer cite your site?"
+    }
+  ],
+  "illustrative_statistics": {
+    "example_observations": "5 of 10 runs",
+    "claimed_approximate_95_percent_interval": "24%\u201376%",
+    "is_empirical_result_of_this_experiment": false,
+    "method_verified": false,
+    "notes": "The answer gives a hypothetical interval illustration, without identifying its calculation method. It is retained as unverified generated advice, not sampled SaaS visibility data."
+  },
+  "answer_sources": [
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_official_help_hostname_title_and_answer_role",
+      "classification_evidence": "Official OpenAI Help article about ChatGPT search; page contents/support not independently verified.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation, not a newly recommended measurement product"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_official_help_hostname_title_and_answer_role",
+      "classification_evidence": "Official OpenAI Help article about ChatGPT search; page contents/support not independently verified.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation, not a newly recommended measurement product"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_official_help_hostname_title_and_answer_role",
+      "classification_evidence": "Official OpenAI Help article about ChatGPT search; page contents/support not independently verified.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation, not a newly recommended measurement product"
+    }
+  ],
+  "explicit_body_links": [
+    {
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown URL matching an annotation occurrence"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown URL matching an annotation occurrence"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown URL matching an annotation occurrence"
+    }
+  ],
+  "cited_hostname_set": [
+    "help.openai.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Manual official-help subdomain normalization help.openai.com to openai.com; exact tracking-bearing URL retained locally.",
+    "mapping": {
+      "help.openai.com": "openai.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 4465,
+    "transport_body_complete": true,
+    "response_status": "completed",
+    "incomplete_details": null,
+    "coherent_ending": true,
+    "url_citation_occurrences": 3,
+    "explicit_body_URL_occurrences": 3,
+    "unique_answer_URLs": 1,
+    "unique_cited_hostnames": 1,
+    "unique_normalized_cited_domains": 1,
+    "citation_mapping_complete": true,
+    "source_inventory_complete_for_answer_URLs": true,
+    "source_inventory_scope": "Three annotation/Markdown occurrences all cite the same OpenAI Help URL. Count one unique source; do not add retrieval URLs to the body-citation set.",
+    "retrieval_inventory_complete": false,
+    "search_observed": true,
+    "search_enabled_API": true,
+    "web_action_count": 3,
+    "search_action_count": 3,
+    "reported_billable_search_requests": 3,
+    "requested_model": "gpt-5.6-sol",
+    "returned_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "medium",
+    "returned_reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "model_and_effort_match": true,
+    "request_file": "requests/S3-OPENAIAPI-V1-R3.json",
+    "response_file": "responses/S3-OPENAIAPI-V1-R3.json",
+    "request_context_check": {
+      "exact_registered_prompt": true,
+      "store": false,
+      "tool_choice": "required"
+    },
+    "notes": [
+      "Three completed search actions and three reported billable requests; no cap observed.",
+      "Only OpenAI Help is cited even though the prose attributes documentation to both OpenAI and xAI.",
+      "The interval example and suggested run counts are not independently verified statistical requirements.",
+      "This is an API + web-search answer, not a consumer ChatGPT Search observation."
+    ],
+    "original_capture_answer_characters": 4519,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "cost_and_limits_review": {
+    "estimated_cost": {
+      "estimated_usd": 0.1291956,
+      "token_cost_usd": 0.09919560000000001,
+      "charged_searches_estimate": 3,
+      "search_count_basis": "reported billable web_search.num_requests",
+      "billing_reconciled": false
+    },
+    "usage": {
+      "input_tokens": 19633,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 4349
+      },
+      "output_tokens": 1816,
+      "output_tokens_details": {
+        "reasoning_tokens": 872
+      },
+      "total_tokens": 21449
+    },
+    "max_tool_calls": 8,
+    "observed_web_actions": 3,
+    "max_output_tokens": 32768,
+    "observed_output_tokens": 1816,
+    "tool_limit_reached": false,
+    "output_limit_reached": false,
+    "authorized_total_budget_USD": 10.0,
+    "concerns": [
+      "No observed tool/output cap reached. Estimated US$0.1291956 is not reconciled billing; cumulative cost tracking remains required."
+    ]
+  },
+  "summary": {
+    "substantive_tools_services_features": 1,
+    "citation_true": 0,
+    "mention_true": 1,
+    "recommendation_true": 0,
+    "visibility_checker_recommendations": [],
+    "default_mentioned_tools": [
+      "X"
+    ],
+    "default_recommended_tools": [],
+    "supplied_target_platforms_excluded": 2,
+    "source_publishers_excluded_from_tool_overlap": 2,
+    "inline_link_occurrences": 3,
+    "unique_answer_URLs": 1,
+    "unique_cited_hostnames": 1,
+    "unique_cited_domains": 1
+  },
+  "coding_cautions": [
+    "X appears as a search-source context, not an active platform or publication recommendation.",
+    "Provider attributions are not adopted tools; xAI has no own-content body citation here.",
+    "No branded spreadsheet or monitoring software is named.",
+    "Hypothetical sample counts and intervals are not empirical results collected in this experiment."
+  ],
+  "source_record_sha256": "f7c12d37e813018011fec637d2f6a05204829d1c413d3db1a1de8e36144c4ac2"
+}

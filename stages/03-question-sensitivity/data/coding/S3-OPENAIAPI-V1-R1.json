@@ -1,0 +1,416 @@
+{
+  "id": "S3-OPENAIAPI-V1-R1",
+  "slot_id": "S3-CHATGPT-V1-R1",
+  "platform": "OpenAI API + web search",
+  "interface": "Responses API",
+  "source_record": "records/S3-OPENAIAPI-V1-R1.json",
+  "coding_method": "Assistant semantic review of the full finalized API answer, raw response, annotations and request/response metadata. No external webpage queries, paid calls or independent human double-coding.",
+  "coding_scope": "Named API retrieval features, supplied targets and documentation publishers are separate. No branded spreadsheet or visibility checker is inferred from generic workflow advice.",
+  "answer_type": {
+    "primary": "Score validation or audit checklist",
+    "secondary": [
+      "Manual measurement workflow",
+      "Conceptual explanation"
+    ],
+    "evidence": "An 8-point trust test",
+    "rationale": "Trustworthiness criteria, raw evidence and reproducibility dominate; a free generic spreadsheet workflow supports the checklist."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "One branded prompt for factual accuracy"
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run each prompt **three times in ChatGPT and three times in Grok**, using fresh, unpersonalized conversations where possible."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "using fresh, unpersonalized conversations where possible"
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Exact model/version and date are logged"
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "Search mode | Prompt | Run"
+    },
+    "API_consumer_UI_distinction": {
+      "value": true,
+      "evidence": "Was it the consumer app or API?"
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": true,
+      "evidence": "Top-3 rate = runs listing you among first 3 recommendations / total runs"
+    },
+    "citation_and_mention_rates_separate": {
+      "value": true,
+      "evidence": "Citation rate = runs citing your domain / total runs"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "You should be able to inspect the full response, citations, timestamp, competitors mentioned, and your position"
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "Unprompted mention rate = unbranded runs mentioning you / unbranded runs"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": true,
+      "evidence": "A blended score should show its weights."
+    },
+    "composite_score_caution": {
+      "value": true,
+      "evidence": "A blended score should show its weights. Otherwise, a high score could hide zero citations or inaccurate descriptions."
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "One run per prompt is a snapshot, not a dependable trend."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Ask for five randomly selected observations, then rerun those prompts yourself with matching settings."
+    },
+    "downstream_conversions": {
+      "value": true,
+      "evidence": "treat referral traffic, trials, and customer-reported discovery as the ultimate validation."
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "xAI Web Search",
+      "observed_name": "web search",
+      "entity_type": "API_retrieval_tool",
+      "publisher_owner": "xAI",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed as a methodology disclosure requirement",
+      "free_budget_fit": "unspecified",
+      "evidence": "The vendor should disclose whether Grok used no retrieval, web search, X search, or both. xAI documents these as separate tools, and current information is unavailable through its API models unless search tools are enabled.",
+      "source_urls": [
+        "https://docs.x.ai/docs/guides/live-search"
+      ],
+      "notes": "Named as an xAI API retrieval mode to disclose, not recommended for adoption. Same-provider documentation supports the claim; content/API capability claims are not independently verified."
+    },
+    {
+      "entity": "xAI X Search",
+      "observed_name": "X search",
+      "entity_type": "API_retrieval_tool",
+      "publisher_owner": "xAI",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed as a methodology disclosure requirement",
+      "free_budget_fit": "unspecified",
+      "evidence": "The vendor should disclose whether Grok used no retrieval, web search, X search, or both. xAI documents these as separate tools, and current information is unavailable through its API models unless search tools are enabled.",
+      "source_urls": [
+        "https://docs.x.ai/docs/guides/live-search"
+      ],
+      "notes": "Named as an xAI API retrieval mode to disclose, not recommended for adoption. Same-provider documentation supports the claim; content/API capability claims are not independently verified."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for direct manual validation",
+      "evidence": "Run each prompt **three times in ChatGPT and three times in Grok**, using fresh, unpersonalized conversations where possible.",
+      "source_urls": [
+        "https://platform.openai.com/docs/guides/evaluation-best-practices",
+        "https://help.openai.com/en/articles/9237897-chatgpt-search"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied platform; documentation is first-party to its provider. API collection of this answer is not the consumer platform being advised about."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for direct manual validation",
+      "evidence": "Run each prompt **three times in ChatGPT and three times in Grok**, using fresh, unpersonalized conversations where possible.",
+      "source_urls": [
+        "https://docs.x.ai/docs/guides/live-search",
+        "https://docs.x.ai/docs/models"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied platform; documentation is first-party to its provider. API collection of this answer is not the consumer platform being advised about."
+    }
+  ],
+  "source_publisher_observations": [
+    {
+      "entity": "OpenAI",
+      "entity_type": "platform_documentation_publisher",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "OpenAI\u2019s own evaluation guidance recommends task-specific tests, logging everything, continuous evaluation, and combining numerical metrics with human judgment.",
+      "source_urls": [
+        "https://platform.openai.com/docs/guides/evaluation-best-practices",
+        "https://help.openai.com/en/articles/9237897-chatgpt-search"
+      ],
+      "excluded_from_default_tool_overlap": true,
+      "notes": "Source attribution, not an active recommendation to use or follow OpenAI as a newly discovered tool."
+    },
+    {
+      "entity": "xAI",
+      "entity_type": "platform_documentation_publisher",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "xAI documents these as separate tools",
+      "source_urls": [
+        "https://docs.x.ai/docs/guides/live-search",
+        "https://docs.x.ai/docs/models"
+      ],
+      "excluded_from_default_tool_overlap": true,
+      "notes": "Substantive documentation attribution, separate from named retrieval-tool features."
+    }
+  ],
+  "contextual_non_tool_entities": [],
+  "generic_methods": [
+    "Eight-point audit checklist",
+    "Fixed ten-prompt buyer panel with separate branded accuracy prompt",
+    "Sixty repeated monthly consumer-interface responses",
+    "Unnamed spreadsheet logging",
+    "Separate per-engine mention, own-domain citation, top-three and accuracy rates",
+    "Five-observation vendor spot check"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Unprompted mention rate",
+      "definition_verbatim": "Unprompted mention rate = unbranded runs mentioning you / unbranded runs"
+    },
+    {
+      "label": "Citation rate",
+      "definition_verbatim": "Citation rate = runs citing your domain / total runs"
+    },
+    {
+      "label": "Top-3 rate",
+      "definition_verbatim": "Top-3 rate = runs listing you among first 3 recommendations / total runs"
+    },
+    {
+      "label": "Accuracy rate",
+      "definition_verbatim": "Accuracy rate = audited claims that are correct / claims audited"
+    }
+  ],
+  "model_proposed_scoring_rule": {
+    "name": "8-point trust test",
+    "points_per_check": 1,
+    "thresholds": {
+      "7-8": "trustworthy for tracking trends",
+      "5-6": "directional only",
+      "0-4": "primarily a marketing metric"
+    },
+    "empirically_validated": false,
+    "notes": "These point weights and cutoffs are generated advice, not externally established experimental findings or a validated scoring instrument."
+  },
+  "answer_sources": [
+    {
+      "type": "url_citation",
+      "title": "Evaluation best practices | OpenAI API",
+      "url": "https://platform.openai.com/docs/guides/evaluation-best-practices",
+      "text": "Evaluation best practices | OpenAI API",
+      "domain": "platform.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "Returned source title and official platform documentation/help hostname identify provider documentation; page contents and claims were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation for methodology or platform behavior, not a recommendation to adopt a vendor tool"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "Returned source title and official platform documentation/help hostname identify provider documentation; page contents and claims were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation for methodology or platform behavior, not a recommendation to adopt a vendor tool"
+    },
+    {
+      "type": "url_citation",
+      "title": "Web Search | SpaceXSI Docs",
+      "url": "https://docs.x.ai/docs/guides/live-search",
+      "text": "Web Search | SpaceXSI Docs",
+      "domain": "docs.x.ai",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "Returned source title and official platform documentation/help hostname identify provider documentation; page contents and claims were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation for methodology or platform behavior, not a recommendation to adopt a vendor tool"
+    },
+    {
+      "type": "url_citation",
+      "title": "Grok Models & Pricing | SpaceXSI Docs",
+      "url": "https://docs.x.ai/docs/models",
+      "text": "Grok Models & Pricing | SpaceXSI Docs",
+      "domain": "docs.x.ai",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "Returned source title and official platform documentation/help hostname identify provider documentation; page contents and claims were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting citation for methodology or platform behavior, not a recommendation to adopt a vendor tool"
+    }
+  ],
+  "explicit_body_links": [
+    {
+      "url": "https://platform.openai.com/docs/guides/evaluation-best-practices",
+      "domain": "platform.openai.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://docs.x.ai/docs/guides/live-search",
+      "domain": "docs.x.ai",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://docs.x.ai/docs/models",
+      "domain": "docs.x.ai",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    }
+  ],
+  "cited_hostname_set": [
+    "platform.openai.com",
+    "help.openai.com",
+    "docs.x.ai"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Manual documented mapping of official provider subdomains to openai.com and x.ai; exact annotations and hostnames retained. No external suffix lookup.",
+    "mapping": {
+      "platform.openai.com": "openai.com",
+      "help.openai.com": "openai.com",
+      "docs.x.ai": "x.ai"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 5158,
+    "transport_body_complete": true,
+    "response_status": "completed",
+    "incomplete_details": null,
+    "coherent_ending": true,
+    "url_citation_occurrences": 4,
+    "explicit_body_URL_occurrences": 4,
+    "unique_answer_URLs": 4,
+    "unique_cited_hostnames": 3,
+    "unique_normalized_cited_domains": 2,
+    "citation_mapping_complete": true,
+    "source_inventory_scope": "Four answer url_citation annotations and the same four explicit Markdown URLs; duplicates across representations count once. Retrieval sources remain distinct and do not expand the answer-citation set.",
+    "source_inventory_complete_for_answer_URLs": true,
+    "retrieval_inventory_complete": false,
+    "search_observed": true,
+    "search_enabled_API": true,
+    "web_action_count": 5,
+    "search_action_count": 2,
+    "reported_billable_search_requests": 2,
+    "requested_model": "gpt-5.6-sol",
+    "returned_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "medium",
+    "returned_reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "model_and_effort_match": true,
+    "request_file": "requests/S3-OPENAIAPI-V1-R1.json",
+    "response_file": "responses/S3-OPENAIAPI-V1-R1.json",
+    "request_context_check": {
+      "exact_registered_prompt": true,
+      "store": false,
+      "tool_choice": "required"
+    },
+    "notes": [
+      "Five completed web actions comprise two searches, two opens and one find. Reported billable requests are two, not five.",
+      "API output and citation annotations are not consumer ChatGPT Search UI observations.",
+      "Model/effort fields are returned API metadata, not an audit of internal execution.",
+      "Four official-document source claims and all score thresholds remain unverified platform output."
+    ],
+    "original_capture_answer_characters": 5158,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "cost_and_limits_review": {
+    "estimated_cost": {
+      "estimated_usd": 0.270969,
+      "token_cost_usd": 0.250969,
+      "charged_searches_estimate": 2,
+      "search_count_basis": "reported billable web_search.num_requests",
+      "billing_reconciled": false
+    },
+    "usage": {
+      "input_tokens": 46785,
+      "input_tokens_details": {
+        "cache_write_tokens": 4349,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2974,
+      "output_tokens_details": {
+        "reasoning_tokens": 1871
+      },
+      "total_tokens": 49759
+    },
+    "max_tool_calls": 8,
+    "observed_web_actions": 5,
+    "max_output_tokens": 32768,
+    "observed_output_tokens": 2974,
+    "tool_limit_reached": false,
+    "output_limit_reached": false,
+    "budget_currency": "USD",
+    "authorized_total_budget": 10.0,
+    "concerns": [
+      "No observed tool/output cap was reached. Cost is an estimate, not reconciled billing; later request costs must still be tracked cumulatively within US$10."
+    ]
+  },
+  "summary": {
+    "substantive_tools_services_features": 2,
+    "citation_true": 2,
+    "mention_true": 2,
+    "recommendation_true": 0,
+    "visibility_checker_recommendations": [],
+    "default_mentioned_tools": [
+      "xAI Web Search",
+      "xAI X Search"
+    ],
+    "default_recommended_tools": [],
+    "supplied_target_platforms_excluded": 2,
+    "source_publishers_excluded_from_tool_overlap": 2,
+    "inline_link_occurrences": 4,
+    "unique_answer_URLs": 4,
+    "unique_cited_hostnames": 3,
+    "unique_cited_domains": 2
+  },
+  "coding_cautions": [
+    "Named xAI web/X retrieval tools are methodology context, not adoption recommendations.",
+    "Source-provider documentation citations do not by themselves recommend those providers.",
+    "Generic spreadsheet advice is not a Google Sheets recommendation.",
+    "The answer is from OpenAI API + web search; comparisons against Grok additionally change the collection surface.",
+    "Eight-point scoring thresholds are unvalidated generated advice."
+  ],
+  "source_record_sha256": "bad2d230e6167869c86baeca140b4efb8351a18e226db023b79799cb578daccf"
+}

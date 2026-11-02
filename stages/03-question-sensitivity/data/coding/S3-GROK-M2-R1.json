@@ -1,0 +1,454 @@
+{
+  "id": "S3-GROK-M2-R1",
+  "source_record": "records/S3-GROK-M2-R1.json",
+  "coding_method": "Assistant review of complete captured body, matching 3,821-character copy and existing native complete-rendered/activity evidence. No external webpage queries or fact verification; no independent human double-coding.",
+  "coding_scope": "Substantively named measurement tools, analytics services and distribution channels. Generic methods, supplied target platforms, citation-only publishers and crawler compatibility entities are separate.",
+  "answer_type": {
+    "primary": "Manual measurement workflow",
+    "secondary": [
+      "Tool-led solution"
+    ],
+    "evidence": "Use a fixed set of buyer-intent prompts, run them manually in fresh ChatGPT and Grok sessions on a schedule, and log results in a Google Sheet.",
+    "rationale": "The main structure gives prompt selection, spreadsheet logging, scheduled repeated checks and a feedback loop. Named free tools are supplements."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Avoid pure branded queries (\u201cIs [YourProduct] good?\u201d) because those almost always surface you."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "For your most important prompts, run each twice in separate chats and record both results\u2014answers vary significantly by session, date, and search setting."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Open a fresh/incognito session"
+    },
+    "model_search_version_logging": {
+      "value": false,
+      "evidence": null
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "Note whether web search was used on ChatGPT if the option appears."
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_rates_separate": {
+      "value": false,
+      "evidence": null
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Optional: link to screenshot or chat"
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "share of voice** = % of prompts where you appear."
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_caution": {
+      "value": false,
+      "evidence": null
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "Answers are probabilistic (they change often)"
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Log immediately while the response is in front of you."
+    },
+    "downstream_conversions": {
+      "value": false,
+      "evidence": null
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "These don\u2019t tell you whether you were *recommended*, only what happened after a click or impression."
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Sheets",
+      "observed_name": "Google Sheet; Google Sheets",
+      "entity_type": "spreadsheet",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Set up a simple tracker (Google Sheets is free)",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "Explicitly recommended for tracking; singular and plural labels refer to the same spreadsheet service."
+    },
+    {
+      "entity": "Mangools AI Search Watcher",
+      "observed_name": "Mangools AI Search Watcher free tier",
+      "entity_type": "visibility_monitor",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional supplement",
+      "free_budget_fit": "stated free",
+      "evidence": "Mangools AI Search Watcher free tier**: 5 prompts, 1 monitor, weekly updates, includes both ChatGPT and Grok (and several others). Each prompt is checked twice. No credit card. Useful for the highest-priority prompts while you do broader manual checks.",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "Keep Watcher distinct from the Mangools AI Search Grader named in V1. Claimed limits, coverage, billing requirements and check frequency are not independently verified."
+    },
+    {
+      "entity": "HubSpot AEO Grader",
+      "observed_name": "HubSpot AI Search Grader",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional supplement",
+      "free_budget_fit": "stated free",
+      "evidence": "One-off free checkers (HubSpot AI Search Grader, Semrush free AI Visibility Checker, Ahrefs Brand Radar, and others) for occasional baseline or competitor snapshots.",
+      "source_urls": [],
+      "canonicalization_status": "provisional_cross_answer_alias_requires_review",
+      "notes": "Provisional alias to the HubSpot AI Search / AEO Grader named in V1. This answer supplies no HubSpot product URL; review alias identity before final aggregation."
+    },
+    {
+      "entity": "Semrush AI Visibility Checker",
+      "observed_name": "Semrush free AI Visibility Checker",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional supplement",
+      "free_budget_fit": "stated free",
+      "evidence": "One-off free checkers (HubSpot AI Search Grader, Semrush free AI Visibility Checker, Ahrefs Brand Radar, and others) for occasional baseline or competitor snapshots.",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "An occasional baseline/competitor supplement; free status is a platform claim."
+    },
+    {
+      "entity": "Ahrefs Brand Radar",
+      "observed_name": "Ahrefs Brand Radar",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional supplement",
+      "free_budget_fit": "stated free",
+      "evidence": "One-off free checkers (HubSpot AI Search Grader, Semrush free AI Visibility Checker, Ahrefs Brand Radar, and others) for occasional baseline or competitor snapshots.",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "Keep Brand Radar distinct from the Ahrefs AI Visibility Checker named in V1 unless a later documented alias review establishes equivalence. No Ahrefs link appears here."
+    },
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "Google Analytics 4 AI Assistants channel",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Downstream signals: Google Analytics 4 AI Assistants channel (shows referral traffic from ChatGPT, Grok, etc.) and Google Search Console / Bing Webmaster Tools generative AI reports. These don\u2019t tell you whether you were *recommended*, only what happened after a click or impression.",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "The answer names a channel within GA4; normalize to the parent service with the observed feature retained. Claimed channel existence/capabilities are unverified."
+    },
+    {
+      "entity": "Google Search Console",
+      "observed_name": "Google Search Console",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Downstream signals: Google Analytics 4 AI Assistants channel (shows referral traffic from ChatGPT, Grok, etc.) and Google Search Console / Bing Webmaster Tools generative AI reports. These don\u2019t tell you whether you were *recommended*, only what happened after a click or impression.",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "Suggested downstream signal, explicitly qualified as not a direct recommendation measurement. Claimed generative-AI reporting capability remains unverified."
+    },
+    {
+      "entity": "Bing Webmaster Tools",
+      "observed_name": "Bing Webmaster Tools generative AI reports",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Downstream signals: Google Analytics 4 AI Assistants channel (shows referral traffic from ChatGPT, Grok, etc.) and Google Search Console / Bing Webmaster Tools generative AI reports. These don\u2019t tell you whether you were *recommended*, only what happened after a click or impression.",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "Suggested downstream signal, not a direct AI-recommendation check; product reporting claim not verified."
+    },
+    {
+      "entity": "Reddit",
+      "observed_name": "Reddit",
+      "entity_type": "community_distribution_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "Prioritize getting mentioned in those sources (review sites, directories, comparison content, Reddit, relevant publications, X for Grok).",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "Suggested target for earning third-party mentions. This action differs from using Reddit as buyer-language input or merely observing presence."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X/Twitter; X for Grok",
+      "entity_type": "community_distribution_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "unspecified",
+      "evidence": "Prioritize getting mentioned in those sources (review sites, directories, comparison content, Reddit, relevant publications, X for Grok).",
+      "source_urls": [],
+      "canonicalization_status": "exact_name_or_documented_abbreviation",
+      "notes": "Twitter and X explicitly treated as aliases. Suggested third-party mention channel; causal claims about Grok sensitivity are platform output."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "observed_name": "ChatGPT; chat.openai.com",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for direct manual checks",
+      "evidence": "Open a fresh/incognito session on **chat.openai.com** (free tier is enough) and on **Grok** (grok.com or via X).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Supplied target platform; textual consumer-site addresses are not treated as inline supporting citations or newly discovered tools."
+    },
+    {
+      "entity": "Grok",
+      "observed_name": "Grok; grok.com",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for direct manual checks",
+      "evidence": "Open a fresh/incognito session on **chat.openai.com** (free tier is enough) and on **Grok** (grok.com or via X).",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Supplied target platform; textual consumer-site addresses are not treated as inline supporting citations or newly discovered tools."
+    }
+  ],
+  "operational_entities": [
+    {
+      "entity": "GPTBot",
+      "entity_type": "crawler_agent",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommended_action": "Do not block crawler access",
+      "evidence": "Confirm AI crawlers can reach your site (`robots.txt` should not block GPTBot, OAI-SearchBot, etc.).",
+      "excluded_from_default_tool_overlap": true,
+      "notes": "Crawler compatibility instruction, not a recommendation to adopt this crawler as a measurement tool. The safety or applicability of this instruction was not independently assessed."
+    },
+    {
+      "entity": "OAI-SearchBot",
+      "entity_type": "crawler_agent",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommended_action": "Do not block crawler access",
+      "evidence": "Confirm AI crawlers can reach your site (`robots.txt` should not block GPTBot, OAI-SearchBot, etc.).",
+      "excluded_from_default_tool_overlap": true,
+      "notes": "Crawler compatibility instruction, not a recommendation to adopt this crawler as a measurement tool. The safety or applicability of this instruction was not independently assessed."
+    }
+  ],
+  "contextual_non_tool_entities": [],
+  "generic_methods": [
+    "Fixed unbranded buyer-intent prompt set",
+    "Manual repeated checks on a weekly/biweekly schedule",
+    "Spreadsheet logging of appearances, positions, competitors and citations",
+    "Appearance-rate and competitor-pattern summaries",
+    "Earning third-party mentions in cited sources",
+    "AI crawler and robots.txt access checks"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "share of voice",
+      "definition_verbatim": "share of voice** = % of prompts where you appear.",
+      "notes": "Retain the answer's definition rather than harmonizing it silently with competitor-relative share-of-voice definitions from other answers. It operationalizes prompt-level appearance here."
+    }
+  ],
+  "answer_sources": [
+    {
+      "text": "Does ChatGPT Recommend Your Product? How to Check | Stork.AI (Stork)",
+      "observed_target": "stork.ai/blog/does-chatgpt-recommend-your-product",
+      "url": "https://stork.ai/blog/does-chatgpt-recommend-your-product",
+      "domain": "stork.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Returned how-to title and blog path suggest a practical tutorial; commercial publisher, authorship and first-person procedure are not established by metadata alone.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an explicit recommendation to read or use the publisher"
+    },
+    {
+      "text": "Does ChatGPT Recommend Your Product? How to Check | Stork.AI (Stork)",
+      "observed_target": "stork.ai/blog/does-chatgpt-recommend-your-product",
+      "url": "https://stork.ai/blog/does-chatgpt-recommend-your-product",
+      "domain": "stork.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Returned how-to title and blog path suggest a practical tutorial; commercial publisher, authorship and first-person procedure are not established by metadata alone.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an explicit recommendation to read or use the publisher"
+    },
+    {
+      "text": "Does ChatGPT Recommend Your Product? How to Check | Stork.AI (Stork)",
+      "observed_target": "stork.ai/blog/does-chatgpt-recommend-your-product",
+      "url": "https://stork.ai/blog/does-chatgpt-recommend-your-product",
+      "domain": "stork.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Returned how-to title and blog path suggest a practical tutorial; commercial publisher, authorship and first-person procedure are not established by metadata alone.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an explicit recommendation to read or use the publisher"
+    },
+    {
+      "text": "How to Check If ChatGPT, Perplexity, Grok, or Claude AI Is Recommending Your Business (A Free 10-Minute Audit) - Seozest (Seozest)",
+      "observed_target": "seozest.io/how-to-check-if-chatgpt-perplexity-grok-or-claude-ai-is-recommending-your-business-a-free-10-minute-audit/",
+      "url": "https://seozest.io/how-to-check-if-chatgpt-perplexity-grok-or-claude-ai-is-recommending-your-business-a-free-10-minute-audit/",
+      "domain": "seozest.io",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Returned title describes a free 10-minute audit tutorial. It does not establish an original experiment or the author's practitioner status.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an explicit recommendation to read or use the publisher"
+    },
+    {
+      "text": "Free ChatGPT Visibility Tools (2026): What's Actually Free (Solcrys)",
+      "observed_target": "solcrys.com/free-chatgpt-visibility-tools/",
+      "url": "https://solcrys.com/free-chatgpt-visibility-tools/",
+      "domain": "solcrys.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target display; HTTPS standardized, www may be omitted by UI; exact href unverified",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Editorial or industry reporting",
+      "classification_status": "provisional_from_returned_title_and_URL_only",
+      "classification_evidence": "Returned title compares tools claimed to be free. The metadata does not establish primary product documentation versus editorial/practitioner advice.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not an explicit recommendation to read or use the publisher"
+    }
+  ],
+  "cited_hostname_set": [
+    "stork.ai",
+    "seozest.io",
+    "solcrys.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping retains the three displayed base domains. Display-standardized URL schemes and any omitted www are not treated as independently recovered exact hrefs; no external public-suffix lookup used.",
+    "mapping": {
+      "stork.ai": "stork.ai",
+      "seozest.io": "seozest.io",
+      "solcrys.com": "solcrys.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 3821,
+    "copy_file_matches_record": true,
+    "observed_inline_link_occurrences": 5,
+    "unique_standardized_answer_URLs": 3,
+    "unique_displayed_answer_domains": 3,
+    "source_badge_hits": 55,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": null,
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "complete_rendered_evidence_file": "[Private capture retained locally.]",
+    "captured_exact_query_labels": [],
+    "notes": [
+      "Earlier accessibility snapshots were partial, but later complete native rendering and matching full copied body corroborate the coherent final ending. Do not score a historical partial view as the current answer body.",
+      "Three Stork link occurrences collapse to one URL/domain. Five captured inline occurrences yield three unique URLs/domains, not five independent sources.",
+      "Native activity exposes grouped three-search and two-search controls and a browsed-link control. Exact query strings were not expanded in the supplied activity capture.",
+      "The 55-hit source badge is not a citation count or a complete retrieval inventory.",
+      "Workspace-explored activity is visible; its underlying contents and influence are unresolved.",
+      "Captured URL targets omit scheme and may omit www; HTTPS standardization does not independently establish exact hrefs.",
+      "Free tiers, engine coverage, feature names, crawler advice, time estimates and claims of reliability remain model output, not independently verified facts."
+    ],
+    "original_capture_answer_characters": 3821,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 10,
+    "citation_true": 0,
+    "mention_true": 10,
+    "recommendation_true": 10,
+    "visibility_checker_recommendations": [
+      "HubSpot AEO Grader",
+      "Semrush AI Visibility Checker",
+      "Ahrefs Brand Radar"
+    ],
+    "visibility_monitor_recommendations": [
+      "Mangools AI Search Watcher"
+    ],
+    "default_mentioned_tools": [
+      "Google Sheets",
+      "Mangools AI Search Watcher",
+      "HubSpot AEO Grader",
+      "Semrush AI Visibility Checker",
+      "Ahrefs Brand Radar",
+      "Google Analytics 4",
+      "Google Search Console",
+      "Bing Webmaster Tools",
+      "Reddit",
+      "X"
+    ],
+    "default_recommended_tools": [
+      "Google Sheets",
+      "Mangools AI Search Watcher",
+      "HubSpot AEO Grader",
+      "Semrush AI Visibility Checker",
+      "Ahrefs Brand Radar",
+      "Google Analytics 4",
+      "Google Search Console",
+      "Bing Webmaster Tools",
+      "Reddit",
+      "X"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "crawler_compatibility_entities_excluded": 2,
+    "inline_link_occurrences": 5,
+    "unique_answer_URLs": 3,
+    "unique_cited_domains": 3
+  },
+  "coding_cautions": [
+    "Review the provisional HubSpot AI Search Grader / AEO Grader alias before cross-answer aggregation. Mangools Watcher versus Grader and Ahrefs Brand Radar versus AI Visibility Checker remain separate products.",
+    "Distribution-channel recommendations are not equivalent to measurement-tool recommendations; retain role labels.",
+    "The answer records appearances and citations but does not calculate citation rate or operationalize active recommendation rate separately.",
+    "Model/version logging is not explicitly requested by this answer; logging the engine/date and search use is narrower.",
+    "GA4/GSC/Bing reporting claims and the term share of voice must remain as observed advice, not validated tool capabilities or harmonized metric definitions.",
+    "No source-publisher census is folded into the tool counts; no own-content tool citations appear among captured inline links."
+  ],
+  "source_record_sha256": "fc5be176f0ac0580c15eac091471ba40f170f1ea9353a85bd82c86f3af932f75"
+}

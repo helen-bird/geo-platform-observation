@@ -1,0 +1,62 @@
+{
+  "id": "S3-GROK-M2-R2",
+  "slot_id": "S3-GROK-M2-R2",
+  "platform": "Grok",
+  "prompt_id": "M2",
+  "intent": "M",
+  "wording": 2,
+  "repeat": 2,
+  "prompt": "As a bootstrapped SaaS builder, what's a free, repeatable workflow for checking whether my product appears in ChatGPT and Grok recommendations?",
+  "submitted_at": "2026-11-02T06:37:26.314Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "A free, repeatable workflow is a fixed set of buyer-intent prompts + manual sampling in fresh sessions + a simple spreadsheet. This is the standard DIY approach used by bootstrapped founders and small teams for ChatGPT and Grok (and other engines). Paid trackers exist, but they are unnecessary for a baseline and trend view.\n\n1. Build a fixed prompt set (do this once)\n\nCreate 8\u201315 prompts that real buyers would type before they know your brand name. Freeze the exact wording so you can compare over time.\n\nCore types:\n\nCategory discovery: \u201cWhat\u2019s the best [your category] for [specific use case / company size / audience]?\u201d\nAlternatives: \u201cBest alternatives to [leading competitor]\u201d\nComparisons: \u201c[Competitor A] vs [Competitor B] for [use case]\u201d\nProblem / job-to-be-done: \u201cHow do I [the outcome your product delivers] without [common pain]?\u201d\n\nPull language from customer calls, support tickets, Google\u2019s \u201cPeople also ask,\u201d Reddit, or your own Search Console queries. Avoid pure branded questions (\u201cIs [your product] good?\u201d) for discovery checks\u2014they inflate results. Keep branded prompts only for accuracy checks (pricing, features, downsides).\n\n2. Run the checks cleanly\n\nChatGPT (chatgpt.com):\n\nUse a Temporary Chat and choose the unpersonalized option (or log out / use a private window). This reduces memory and personalization bias.\nPrefer sessions with web search enabled when available.\nRun each prompt 2\u20133 times in fresh chats.\n\nGrok (grok.com or via X):\n\nStart a fresh conversation each time.\nGrok draws heavily from X posts in addition to the web, so its recommendations can differ from ChatGPT.\nSame 2\u20133 runs per prompt.\n\nFor every answer, note:\n\nDid your product appear? (Y/N)\nPosition / order if it was in a list\nCompetitors named\nSources cited (especially useful)\nBrief framing (how it described you or why it preferred someone else)\n3. Log it in a spreadsheet\n\nOne row per run. Columns that matter:\n\n| Date | Engine | Prompt | Mentioned (Y/N) | Position | Competitors | Citations | Notes |\n\nAt the end of each cycle, calculate simple metrics:\n\nMention rate (how often you appear on unbranded prompts)\nShare of voice vs the 2\u20133 competitors that keep showing up\nCitation rate (how often your site or a trusted third-party page about you is linked)\n\nA Google Sheet or Notion table is enough. No special tools required.\n\n4. Cadence\nRun a full baseline now.\nRepeat monthly (or every 2 weeks on your 5\u20136 highest-priority prompts).\nExtra spot-checks after major content launches, new reviews (G2/Capterra/etc.), or big X activity.\n\nTime cost is typically 20\u201340 minutes per cycle once the prompts are set. Answers are non-deterministic\u2014the same prompt can produce different shortlists across sessions, models, and dates\u2014so the trend across multiple runs matters more than any single screenshot.\n\nPractical notes for bootstrapped SaaS\nFree one-shot checkers (Ahrefs Brand Radar free preview, various \u201cAI visibility\u201d free tools) can give a quick extra data point, but they don\u2019t replace your controlled, repeated prompt set.\nEnsure your site is crawlable (don\u2019t block major AI crawlers in robots.txt).\nFor Grok specifically, an authentic presence on X helps because of its heavier weighting of X content.\nThis measures whether you appear in recommendations. Improving it usually means earning consistent third-party coverage (listicles, reviews, comparisons) plus clear, accurate pages on your own site\u2014not paid placements (OpenAI has stated product results are not ads).\n\nThis workflow is free, fully under your control, and gives a clear before/after view of whether ChatGPT and Grok are recommending your product. Start with the prompt list and a spreadsheet this week; the rest is just consistent sampling.",
+  "answer_links": [],
+  "captured_at": "2026-11-02T06:38:35.514Z",
+  "source_panel_declared_hits": 65,
+  "source_inventory_scope": "Observed inline answer links; grouped citations expanded; source badge and retrieval activity are separate.",
+  "capture_method": "Complete rendered Grok article innerText; UI heading/duration and source badge removed. Exact inline hrefs extracted from scoped rendered article.",
+  "search_query_labels": [
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcfree method to check if product appears in ChatGPT recommendations15",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edchow to monitor SaaS product visibility in Grok and ChatGPT AI search10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcrepeatable workflow AI SEO for bootstrapped SaaS ChatGPT Grok10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\"ChatGPT\" \"appears in\" OR \"mentioned in\" recommendations SaaS free tool OR method10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcGrok AI recommendations how to check product visibility free10",
+    "\\u5df2\\u641c\\u7d22\\u7f51\\u7edcChatGPT temporary chat OR private for AI visibility check10"
+  ],
+  "notes": [
+    "Source panel groups results by web-search query; 65 is the sum of reported result hits, not unique answer citations. Complete body has no inline citation anchors."
+  ],
+  "retrieval_sources": [
+    {
+      "domain": "www.stork.ai",
+      "kind": "Browsed link in search-activity panel; not an inline answer citation",
+      "text": "stork.ai/blog/does-chatgpt-recommend-your-product",
+      "url": "https://www.stork.ai/blog/does-chatgpt-recommend-your-product"
+    },
+    {
+      "domain": "arahi.ai",
+      "kind": "Browsed link in search-activity panel; not an inline answer citation",
+      "text": "arahi.ai/blog/how-to-check-brand-visibility-in-chatgpt",
+      "url": "https://arahi.ai/blog/how-to-check-brand-visibility-in-chatgpt"
+    }
+  ],
+  "raw_file": "records/S3-GROK-M2-R2.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 3717,
+  "public_answer_characters": 3717,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

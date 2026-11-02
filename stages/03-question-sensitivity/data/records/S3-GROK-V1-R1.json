@@ -1,0 +1,109 @@
+{
+  "id": "S3-GROK-V1-R1",
+  "slot_id": "S3-GROK-V1-R1",
+  "platform": "Grok",
+  "prompt_id": "V1",
+  "intent": "V",
+  "wording": 1,
+  "repeat": 1,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+  "submitted_at": "2026-11-02T06:14:01.029Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_mode": "Expert native retrieval; no independent force-search toggle observed",
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "**Most AI visibility scores are only directionally useful at best.** Treat any single number (especially a blended \u201cChatGPT + Grok\u201d score) as a rough snapshot, not a trustworthy KPI you can manage to. As a solo SaaS founder with no GEO budget, the practical test is simple: can you roughly reproduce the directional finding yourself with free manual checks? If not, the score is marketing more than measurement.\n\n### Why these scores are noisy\nAI answers are non-deterministic. The same prompt on the same engine often produces different brands, rankings, and citations. One 2026 benchmark found average top-five shortlist overlap of about 43% when the *same* engine answered the same questions again, and only ~17% *across* engines. Edelman, for example, scored 22 on Claude and ~0.7 on ChatGPT in that study; averaging them hid the real picture.\n\nAdditional reliability problems:\n- Many tools query provider APIs, which differ from the consumer apps people actually use (no memory, different system prompts, different retrieval). One test showed only ~25% top-five overlap between paid ChatGPT and the API.\n- Prompt sets are usually synthetic or auto-generated, not real buyer queries.\n- Single-run or tiny-sample scores are mostly noise. Research on sample sizes shows you need dozens of distinct prompts and multiple runs per prompt before the margin of error becomes useful.\n- Engines weight different signals. Grok leans heavily on live social/X presence, community citations, and freshness; classic search rank matters less for it than for ChatGPT or Google AI features.\n\nCorrelations that *do* show up across studies (e.g., Ahrefs data on tens of thousands of brands) are stronger for third-party mentions (especially YouTube and branded web mentions) than for traditional backlinks.\n\n### Checklist: Is a given score trustworthy enough to act on?\n| Signal | More trustworthy | Less trustworthy |\n|--------|------------------|------------------|\n| **Scope** | Separate scores for ChatGPT and Grok (and others) | One blended number |\n| **Transparency** | Exact prompts, # of runs, surface (app vs API), model version, date | Opaque \u201cAI score\u201d with no methodology |\n| **Sampling** | Multiple runs per prompt (ideally 3\u20137+); dozens of prompts | Single run or handful of prompts |\n| **Output** | Mention rate, citation rate, share of voice, examples of answers | Only a composite 0\u2013100 with no range/error bars |\n| **Reproducibility** | You can test similar buyer prompts yourself and get the same direction | Claims precise rankings or revenue impact you can\u2019t verify |\n| **Incentives** | Neutral or clear methodology | Vendor\u2019s main product is \u201cfix your low score\u201d |\n\nIf the tool can\u2019t answer \u201cwhat prompts, how many times, on which surface?\u201d in plain language, discount it heavily.\n\n### Free way to get a usable baseline yourself (no budget)\n1. **Build 15\u201330 buyer-intent prompts** from real language (support tickets, sales calls, Reddit, Google Search Console, \u201cPeople also ask\u201d). Mix category (\u201cbest [your category] for [use case]\u201d), comparison, problem-solving, and a few branded ones. Keep the set fixed.\n\n2. **Run them manually**:\n   - ChatGPT: private/incognito window, memory off, fresh chats. Do each prompt 3\u20135 times.\n   - Grok: similar clean sessions. Note that results can shift quickly with X conversation volume and content freshness.\n   - Log in a free spreadsheet: mentioned? position in any list? your domain cited? competitors named? sentiment/accuracy of the description?\n\n3. **Calculate simple metrics**:\n   - Mention rate = % of answers that name you\n   - Citation rate = % that link your site\n   - Share of voice vs the 2\u20133 competitors that appear most often\n\n4. **Cross-check with free one-shot tools** for a second opinion (they are limited but useful for direction):\n   - Ahrefs free AI Visibility Checker (brand name in \u2192 mentions across several engines, top topics/domains)\n   - HubSpot AI Search / AEO Grader (one-time perception score across ChatGPT, Perplexity, Gemini; more training-data oriented)\n   - Mangools AI Search Grader (broader engine coverage in some versions, including Grok)\n\nRe-run your manual set monthly. Small week-to-week swings are normal noise; look for sustained directional changes.\n\n### What actually matters more than the score\n- **Third-party mentions** and clear, factual, citable content (stats, quotes, dated claims). Your own site is a minority of what engines cite.\n- **For Grok specifically**: genuine activity and discussion on X plus fresh, answer-first pages. Weak X presence is a structural handicap on Grok regardless of traditional SEO strength.\n- **Real outcomes** you can track for free: AI referral traffic in GA4 (from chatgpt.com, etc.), server-log hits from AI crawlers, branded search volume, and leads who say they found you via an AI chat.\n\n**Bottom line**: Use any commercial AI visibility score only as a directional hint. The trustworthy version for a solo founder is the one you generate yourself with a fixed set of real buyer prompts, multiple runs, and simple mention/citation rates on ChatGPT and Grok separately. Focus energy on earning credible third-party mentions and (for Grok) authentic X presence rather than chasing opaque composite scores.",
+  "answer_links": [
+    {
+      "text": "There Is No Single \u201cAI Visibility\u201d Score; Ask Four AIs, Get Four Shortlists | Markets Insider (Markets.businessinsider)",
+      "observed_target": "markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "domain": "markets.businessinsider.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS"
+    },
+    {
+      "text": "Are AI Visibility Tools Accurate? What They Miss (2026) (Searchscope)",
+      "observed_target": "searchscope.com.au/ai-seo/how-accurate-are-ai-visibility-tools/",
+      "url": "https://searchscope.com.au/ai-seo/how-accurate-are-ai-visibility-tools/",
+      "domain": "searchscope.com.au",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS"
+    },
+    {
+      "text": "AI Visibility Sample Size: How Many Prompts and Runs to Trust - MaxAEO Blog (Maxaeo)",
+      "observed_target": "maxaeo.ai/blog/ai-visibility-sample-size/",
+      "url": "https://maxaeo.ai/blog/ai-visibility-sample-size/",
+      "domain": "maxaeo.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS"
+    },
+    {
+      "text": "How to Rank on Grok: Get Your Brand Cited in X\u2019s AI Search | Goodie AI (Higoodie)",
+      "observed_target": "higoodie.com/blog/how-to-rank-on-grok/",
+      "url": "https://higoodie.com/blog/how-to-rank-on-grok/",
+      "domain": "higoodie.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS"
+    },
+    {
+      "text": "What Actually Moves Your AI Visibility Score? 7 Factors, Ranked by Data (Cognizo)",
+      "observed_target": "cognizo.ai/blog/ai-visibility-score",
+      "url": "https://cognizo.ai/blog/ai-visibility-score",
+      "domain": "cognizo.ai",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS"
+    },
+    {
+      "text": "Free AI Visibility Checker - See Your Brand in AI Search - Ahrefs (Ahrefs)",
+      "observed_target": "ahrefs.com/free-ai-visibility",
+      "url": "https://ahrefs.com/free-ai-visibility",
+      "domain": "ahrefs.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS"
+    },
+    {
+      "text": "\u2060Hubspot",
+      "observed_target": "hubspot.com/aeo-grader",
+      "url": "https://hubspot.com/aeo-grader",
+      "domain": "hubspot.com",
+      "kind": "Inline answer link",
+      "provenance": "Native accessibility target; displayed targets omit scheme, standardized to HTTPS"
+    }
+  ],
+  "captured_at": "2026-11-02T06:17:11.262Z",
+  "source_panel_declared_hits": 90,
+  "source_inventory_scope": "Seven inline links recorded separately from source badge of 90 hits; source-panel inventory not yet collected.",
+  "capture_method": "Native complete rendered answer plus Copy response pasted into offline buffer; coherent opening and final conclusion corroborated.",
+  "search_query_labels": [
+    "AI visibility score GEO ChatGPT Grok trustworthiness",
+    "\"AI visibility\" OR \"GEO score\" OR \"generative engine optimization\" tools methodology",
+    "how to measure brand visibility in ChatGPT Grok free methods",
+    "critiques AI SEO GEO visibility tools accuracy",
+    "Ahrefs free AI Visibility Checker OR HubSpot AEO Grader OR Mangools AI Search Grader",
+    "Grok AI visibility factors OR how Grok cites brands",
+    "\"AI visibility\" OR GEO \"sample size\" OR \"number of runs\" OR variance reliability"
+  ],
+  "search_evidence": "Native activity displays web searches in groups 4, 3, then 2; only seven exact query labels expanded so far. Workspace-explored activity label also observed; its role not established.",
+  "notes": [
+    "External numerical claims and tool pricing/coverage are model output, not independently fact-checked.",
+    "Copy text and rendered answer correspond; inline reference links preserved separately."
+  ],
+  "raw_file": "records/S3-GROK-V1-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 5239,
+  "public_answer_characters": 5239,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

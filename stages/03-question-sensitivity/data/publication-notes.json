@@ -1,0 +1,26 @@
+{
+  "edition": "Redacted public edition",
+  "published_on": "2026-11-02",
+  "preserved": [
+    "24 complete selected answers and exact registered prompts",
+    "All 27 prompt submissions, including three historical ChatGPT UI failures/partial captures",
+    "All 24 assistant semantic coding records, source categories, C/M/R judgments and methodological limits",
+    "Model labels, timing, actual returned search actions/queries/sources, citations and token/tool usage",
+    "Twelve allowlisted API requests and response copies, cost estimates and non-generation setup history"
+  ],
+  "removed": [
+    "Private conversation/share URLs, opaque provider request/response/search-call identifiers and internal operation references",
+    "Original screenshots, DOM/HTML, native dumps, browser/account interface details and unrelated navigation",
+    "Local filesystem/capture paths, credential setup details, collector/key-entry software, headers and reasoning-trace output items",
+    "Original account preference values; restoration completion remains visible",
+    "Tracking, session/client/routing and signed-access parameters in actual source URLs; original annotation position indexes"
+  ],
+  "transcript_policy": "Original answer wording preserved apart from necessary privacy edits and actual URL tracking removal. Analytics parameter examples outside URLs remain. Every record states whether its public body changed. The incomplete A3 prefix remains incomplete and excluded from absence-based analysis.",
+  "source_precision": "Original native target-display precision limits on three Grok answers remain. Retrieval sources/search-hit badges are not automatically body citations.",
+  "citation_positions": "Original start/end/output/content indexes omitted because redaction changes text and output-item locations. Annotated URLs and their roles remain; public record hashes and body lengths are recalculated.",
+  "signed_URLs": "Returned retrieval URLs can contain signed-cloud or session parameters. These parameters are removed, preserving the host/path and non-sensitive query data. Unsigned copies may not be directly fetchable; original signed URLs remain private. No destination repair or independent URL-content verification is claimed.",
+  "condition_notice": "OpenAI API + web search, not consumer ChatGPT Search. These results do not represent ChatGPT web app performance.",
+  "external_claims": "Source categories are provisional. Prices, tool capabilities, generated scoring rubrics, illustrative dashboards and cited study claims in answers were not independently audited.",
+  "evidence_boundary": "Only public copies are transformed. Complete private originals and all original failed captures remain unchanged locally.",
+  "language_policy": "Documentation and annotations are English; captured non-English UI tokens are represented with literal Unicode escapes."
+}

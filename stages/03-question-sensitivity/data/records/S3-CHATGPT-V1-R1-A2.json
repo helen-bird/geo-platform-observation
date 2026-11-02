@@ -1,0 +1,100 @@
+{
+  "id": "S3-CHATGPT-V1-R1-A2",
+  "slot_id": "S3-CHATGPT-V1-R1",
+  "platform": "ChatGPT Search",
+  "prompt_id": "V1",
+  "intent": "V",
+  "wording": 1,
+  "repeat": 1,
+  "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+  "submitted_at": "2026-11-02T06:09:35.703Z",
+  "model_label": "GPT-5.6 Sol",
+  "reasoning_effort": "Medium",
+  "temporary": true,
+  "personalization": false,
+  "search_enabled_ui": true,
+  "search_observed": true,
+  "status": "capture_incomplete",
+  "body_complete": false,
+  "answer_text": "",
+  "answer_links": [],
+  "captured_at": "2026-11-02T06:14:27.928Z",
+  "source_inventory_complete": false,
+  "source_panel_scope": "Five source-panel entries recovered through visible UI; body citation matching unresolved. Not a complete answer.",
+  "notes": [
+    "Authorized supplement; original Cloudflare failure retained. Same prompt/model/reasoning/search settings; no follow-up."
+  ],
+  "error": "Answer completed but rendered body and Copy expose only reply-loading error",
+  "copy_result": "Unable to load this reply (UI original: \\u65e0\\u6cd5\\u52a0\\u8f7d\\u6b64\\u56de\\u590d)",
+  "attempt_number": 2,
+  "replacement_for": "S3-CHATGPT-V1-R1",
+  "recovery_history": [
+    {
+      "method": "Native Chrome accessibility tree",
+      "status": "reply_loading_error"
+    },
+    {
+      "method": "Copy answer, paste into offline local buffer",
+      "status": "same_error_only"
+    },
+    {
+      "method": "Native read_thread for original temporary ID",
+      "status": "No readable thread found; no save or new prompt"
+    },
+    {
+      "recorded_at": "2026-11-02T08:34:00.263Z",
+      "method": "User manually viewed the same failed page",
+      "status": "same_reply_loading_error_confirmed"
+    },
+    {
+      "recorded_at": "2026-11-02T08:34:00.263Z",
+      "method": "Reload existing temporary conversation; no resubmission",
+      "status": "redirected_to_empty_temporary_homepage",
+      "url_after": "https://chatgpt.com/?temporary-chat=true"
+    }
+  ],
+  "searched_websites_reported": 12,
+  "thought_duration_ui": "44s",
+  "retrieval_sources": [
+    {
+      "domain": "miraqo.io",
+      "kind": "Source-panel entry; citation attribution unresolved because answer body unavailable",
+      "text": "Miraqo\nHow we measure AI Visibility \u2014 methodology\nTotal lines: 132",
+      "url": "https://miraqo.io/en/ai-visibility-methodology/"
+    },
+    {
+      "domain": "help.openai.com",
+      "kind": "Source-panel entry; citation attribution unresolved because answer body unavailable",
+      "text": "OpenAI Help Center\nSearching the web with ChatGPT\nTotal lines: 213",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+    },
+    {
+      "domain": "docs.x.ai",
+      "kind": "Source-panel entry; citation attribution unresolved because answer body unavailable",
+      "text": "SpaceXSI Docs\nWeb Search\nTotal lines: 550",
+      "url": "https://docs.x.ai/developers/tools/web-search"
+    },
+    {
+      "domain": "docs.x.ai",
+      "kind": "Source-panel entry; citation attribution unresolved because answer body unavailable",
+      "text": "SpaceXSI Docs\nCitations\nTotal lines: 699",
+      "url": "https://docs.x.ai/developers/tools/citations"
+    },
+    {
+      "domain": "getaisnapshot.com",
+      "kind": "Source-panel entry; citation attribution unresolved because answer body unavailable",
+      "text": "AI Visibility Snapshot\nMethodology: How We Measure AI Visibility\nTotal lines: 108",
+      "url": "https://getaisnapshot.com/methodology"
+    }
+  ],
+  "raw_file": "records/S3-CHATGPT-V1-R1-A2.json",
+  "public_copy": true,
+  "publication_scope": "Redacted transcript and observation record; private originals, account UI, opaque provider IDs and local captures are not published.",
+  "original_capture_answer_characters": 0,
+  "public_answer_characters": 0,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

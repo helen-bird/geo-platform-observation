@@ -1,0 +1,418 @@
+{
+  "id": "S3-GROK-M1-R1",
+  "source_record": "records/S3-GROK-M1-R1.json",
+  "coding_method": "Assistant review of the complete 4,126-character rendered answer, captured DOM hrefs and existing browser-activity evidence. No external webpage access, factual audit or independent human double-coding.",
+  "coding_scope": "Substantively named tools/services/features. Supplied ChatGPT/Grok platforms and non-tool company context are separate. Source-label publishers are not treated as substantive tool mentions or recommendations.",
+  "answer_type": {
+    "primary": "Manual measurement workflow",
+    "secondary": [
+      "Tool-led solution",
+      "Conceptual explanation"
+    ],
+    "evidence": "The most reliable no-budget method is a fixed set of buyer-intent prompts that you run regularly on ChatGPT and Grok, logging results in a simple spreadsheet.",
+    "rationale": "The dominant response gives a fixed buyer-prompt audit, logging fields and repeated checks. Analytics and readiness tools supplement it."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "Create 10\u201320 unbranded questions that a real potential buyer would ask before choosing a tool in your category."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run each high-priority prompt 2\u20133 times per session if you want to smooth out AI non-determinism (answers vary)."
+    },
+    "fresh_sessions": {
+      "value": false,
+      "evidence": null
+    },
+    "model_search_version_logging": {
+      "value": false,
+      "evidence": null
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "Note the approximate date and whether web search was on."
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": true,
+      "evidence": "Recommended? (Yes if positively suggested as a good option)"
+    },
+    "citation_and_mention_rates_separate": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Your site cited as a source? (Yes/No + URL if present)"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Notes (any quirks)"
+    },
+    "raw_answer_archiving_explicit": {
+      "value": false,
+      "evidence": null
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "Mention rate = prompts where your product appears \u00f7 total prompts"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": false,
+      "evidence": null
+    },
+    "composite_score_caution": {
+      "value": false,
+      "evidence": null
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "smooth out AI non-determinism (answers vary)"
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "logging results in a simple spreadsheet"
+    },
+    "downstream_conversions": {
+      "value": true,
+      "evidence": "Track landing pages and conversions from those sessions."
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "Manual testing shows whether recommendations happen. These show whether they drive any results:"
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "Google Analytics 4; AI Assistant channel group",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Google Analytics 4: Look for sessions with source chatgpt.com (OpenAI adds utm_source=chatgpt.com to many referral links) or the AI Assistant channel group. Track landing pages and conversions from those sessions.",
+      "source_urls": [],
+      "notes": "Analytics service recommendation, supported here by a third-party Goodatmarketing source rather than an own-content citation. Channel and tracking claims are not verified."
+    },
+    {
+      "entity": "Google Search Console",
+      "observed_name": "Google Search Console",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Google Search Console: Check generative AI / AI Overviews performance reports if available for your property (impressions data).",
+      "source_urls": [],
+      "notes": "Retain if-available qualification. Claimed reporting capabilities are platform output; this is not a recommendation-rate measurement."
+    },
+    {
+      "entity": "Bing Webmaster Tools",
+      "observed_name": "Bing Webmaster Tools",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Bing Webmaster Tools: AI Performance reports for Copilot-related signals.",
+      "source_urls": [],
+      "notes": "Suggested lagging indicator; no own-content source link. Reporting capability unverified."
+    },
+    {
+      "entity": "HubSpot AEO Grader",
+      "observed_name": "HubSpot AEO / AI Search Grader",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "HubSpot AEO / AI Search Grader (brand perception snapshot across models)",
+      "source_urls": [],
+      "notes": "The answer explicitly pairs AEO and AI Search labels. Normalize to HubSpot AEO Grader with observed wording retained; presented as a readiness check, not an ongoing recommendation measure."
+    },
+    {
+      "entity": "Mangools AI Search Grader",
+      "observed_name": "Mangools AI Search Grader",
+      "entity_type": "visibility_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "Mangools AI Search Grader",
+      "source_urls": [],
+      "notes": "Readiness supplement. Keep distinct from Mangools AI Search Watcher in M2; no Mangools URL is captured."
+    },
+    {
+      "entity": "geo-tool.com GEO check",
+      "observed_name": "geo-tool.com free GEO check",
+      "entity_type": "readiness_checker",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "stated free",
+      "evidence": "geo-tool.com free GEO check (crawler access, citability, structure)",
+      "source_urls": [],
+      "notes": "Bare service/domain named in prose, not a captured inline href. The advice concerns readiness rather than ongoing recommendations."
+    },
+    {
+      "entity": "X",
+      "observed_name": "X",
+      "entity_type": "platform_access_channel",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional",
+      "free_budget_fit": "unspecified",
+      "evidence": "Grok (grok.com or via X)",
+      "source_urls": [],
+      "notes": "An optional way to access the supplied Grok platform. Unlike other answers, this is not an explicit content-distribution recommendation. Preserve the access-channel role when comparing tool lists."
+    },
+    {
+      "entity": "Google AI Overviews",
+      "observed_name": "AI Overviews",
+      "entity_type": "ai_search_surface",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Google Search Console: Check generative AI / AI Overviews performance reports if available for your property (impressions data).",
+      "source_urls": [],
+      "notes": "Named as claimed GSC reporting coverage, not separately recommended as a tool."
+    },
+    {
+      "entity": "Microsoft Copilot",
+      "observed_name": "Copilot",
+      "entity_type": "ai_platform",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "recommendation_stance": "discussed",
+      "free_budget_fit": "unspecified",
+      "evidence": "Bing Webmaster Tools: AI Performance reports for Copilot-related signals.",
+      "source_urls": [],
+      "notes": "Named as reporting coverage, not separately recommended."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for manual repeated measurement",
+      "evidence": "ChatGPT (chatgpt.com, preferably with web search/browsing enabled for more current results)",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Supplied target platform, excluded from discovered-tool overlaps. Textual site addresses are not additional supporting citations."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for manual repeated measurement",
+      "evidence": "Grok (grok.com or via X)",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Supplied target platform, excluded from discovered-tool overlaps. Textual site addresses are not additional supporting citations."
+    }
+  ],
+  "contextual_non_tool_entities": [
+    {
+      "entity": "OpenAI",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "OpenAI adds utm_source=chatgpt.com to many referral links",
+      "notes": "Company attribution inside a tracking claim, not a named new tool recommendation; the claim is unverified."
+    }
+  ],
+  "generic_methods": [
+    "Fixed unbranded buyer-intent prompt set",
+    "Unnamed spreadsheet for mention/recommendation/citation fields",
+    "Repeated high-priority prompts and longitudinal tracking",
+    "Competitor gap-list analysis",
+    "Crawler access and robots.txt checks",
+    "Relevant structured data",
+    "Content and third-party mention improvement"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Mention rate",
+      "definition_verbatim": "Mention rate = prompts where your product appears \u00f7 total prompts"
+    },
+    {
+      "label": "Recommendation rate",
+      "definition_verbatim": "Recommendation rate = prompts where it is positively recommended \u00f7 total prompts"
+    },
+    {
+      "label": "Share of voice",
+      "definition_verbatim": "Share of voice vs. top competitors",
+      "notes": "Named without a formula. Do not substitute another answer's formula."
+    }
+  ],
+  "answer_sources": [
+    {
+      "domain": "shmeer.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Shmeer",
+      "url": "https://shmeer.com/blog/how-to-measure-geo",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "The how-to/measurement blog path suggests tutorial content. Authorship, practitioner status, first-party research and commercial provenance are not established from the captured label and href alone.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not a substantive recommendation to use/follow Shmeer"
+    },
+    {
+      "domain": "www.gomega.ai",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Gomega",
+      "url": "https://www.gomega.ai/blog/how-to-measure-geo-performance",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "The how-to/measurement blog path suggests tutorial content. Authorship, practitioner status, first-party research and commercial provenance are not established from the captured label and href alone.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not a substantive recommendation to use/follow Gomega"
+    },
+    {
+      "domain": "geoaura.world",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Geoaura",
+      "url": "https://geoaura.world/blog/how-to-measure-geo-visibility",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "The how-to/measurement blog path suggests tutorial content. Authorship, practitioner status, first-party research and commercial provenance are not established from the captured label and href alone.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not a substantive recommendation to use/follow Geoaura"
+    },
+    {
+      "domain": "goodatmarketing.com",
+      "kind": "Inline answer link",
+      "provenance": "Rendered DOM href",
+      "text": "\u2060Goodatmarketing",
+      "url": "https://goodatmarketing.com/how-to-track-chatgpt-traffic-in-google-analytics/",
+      "source_category": "Other / unresolved",
+      "candidate_category": "Practitioner tutorial or experiment",
+      "classification_status": "provisional_from_returned_label_and_URL_only",
+      "classification_evidence": "The how-to/measurement blog path suggests tutorial content. Authorship, practitioner status, first-party research and commercial provenance are not established from the captured label and href alone.",
+      "content_verified": false,
+      "recommendation_role": "supporting citation, not a substantive recommendation to use/follow Goodatmarketing"
+    }
+  ],
+  "cited_hostname_set": [
+    "shmeer.com",
+    "www.gomega.ai",
+    "geoaura.world",
+    "goodatmarketing.com"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping; remove leading www from www.gomega.ai for normalized-domain comparison and retain the exact observed hostname/href. Other displayed hosts are base domains; no external public-suffix lookup used.",
+    "mapping": {
+      "shmeer.com": "shmeer.com",
+      "www.gomega.ai": "gomega.ai",
+      "geoaura.world": "geoaura.world",
+      "goodatmarketing.com": "goodatmarketing.com"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 4126,
+    "observed_inline_link_occurrences": 4,
+    "unique_DOM_answer_URLs": 4,
+    "unique_cited_domains": 4,
+    "source_badge_hits": 55,
+    "retrieval_inventory_complete": false,
+    "citation_mapping_complete": true,
+    "citation_mapping_scope": "Four inline links captured as DOM hrefs from the complete rendered article; not the full 55-hit retrieval inventory.",
+    "search_observed": true,
+    "search_enabled_UI": null,
+    "activity_evidence_file": "[Private capture retained locally.]",
+    "DOM_evidence_file": "[Private capture retained locally.]",
+    "captured_exact_query_labels": [],
+    "notes": [
+      "Browser DOM capture became available in the same Chrome account during recovery of this existing answer; no new question was submitted.",
+      "Complete opening and concluding paragraph were reviewed. The empty browser clipboard read is a capture event, not an empty answer.",
+      "Four inline hrefs include both Shmeer and Gomega in the introductory citation group. Source-label names remain embedded in innerText; they do not establish substantive tool recommendations.",
+      "Native/browser activity contains grouped three-search and two-search controls. Exact query strings are not present in the supplied expanded activity snapshot.",
+      "Workspace-explored controls are visible, but their underlying contents and influence are unresolved.",
+      "Exact DOM href provenance applies to this record. It does not retroactively resolve omitted schemes/www in earlier native accessibility captures.",
+      "All reliability claims, sample-frequency advice, free-tool status, feature coverage, crawler and tracking claims remain platform output rather than independently verified facts.",
+      "Evidence-reference correction: the original -dom.json global-selector capture contains the user prompt, not the answer. Body evidence is the complete rendered-text file; the browser-activity DOM snapshot corroborates the article and all four hrefs. The failed capture is preserved and is non-supporting."
+    ],
+    "rendered_body_evidence_file": "[Private capture retained locally.]",
+    "non_supporting_capture_files": [
+      {
+        "status": "failed_global_selector_capture",
+        "reason": "Captured the user prompt rather than the assistant answer. Original retained, but it does not support answer completeness or the citation href inventory."
+      }
+    ],
+    "original_capture_answer_characters": 4126,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "summary": {
+    "substantive_tools_services_features": 9,
+    "citation_true": 0,
+    "mention_true": 9,
+    "recommendation_true": 7,
+    "visibility_checker_recommendations": [
+      "HubSpot AEO Grader",
+      "Mangools AI Search Grader"
+    ],
+    "readiness_checker_recommendations": [
+      "geo-tool.com GEO check"
+    ],
+    "default_mentioned_tools": [
+      "Google Analytics 4",
+      "Google Search Console",
+      "Bing Webmaster Tools",
+      "HubSpot AEO Grader",
+      "Mangools AI Search Grader",
+      "geo-tool.com GEO check",
+      "X",
+      "Google AI Overviews",
+      "Microsoft Copilot"
+    ],
+    "default_recommended_tools": [
+      "Google Analytics 4",
+      "Google Search Console",
+      "Bing Webmaster Tools",
+      "HubSpot AEO Grader",
+      "Mangools AI Search Grader",
+      "geo-tool.com GEO check",
+      "X"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "inline_link_occurrences": 4,
+    "unique_answer_URLs": 4,
+    "unique_cited_domains": 4
+  },
+  "coding_cautions": [
+    "No Google Sheets product is named: keep the generic spreadsheet method separate rather than inferring a branded tool.",
+    "X is an optional platform-access channel here, not a content-publication recommendation. Its role differs from X recommendations in other responses.",
+    "No instruction explicitly requires a fresh chat for every prompt; consistent incognito or same-account setup is not equivalent to disabling memory or personalization.",
+    "The full mention/recommendation/citation distinction is present in the logging fields; citation rate itself is not defined.",
+    "Only date and search state logging are explicitly requested, not full model-version logging.",
+    "No supporting publisher census is included in tool-set counts; all four source categories remain provisional/unresolved without reading the destinations."
+  ],
+  "source_record_sha256": "e28d2f9f6f9f360f835cb96639e82611554f159d07738233456d1f5c6b527c63"
+}

@@ -1,0 +1,503 @@
+{
+  "id": "S3-OPENAIAPI-M1-R3",
+  "source_record": "records/S3-OPENAIAPI-M1-R3.json",
+  "coding_method": "Assistant review of the complete 7,222-character API answer, five citation annotations and matching explicit Markdown URLs. No outside webpage access, factual audit or independent human double-coding.",
+  "coding_scope": "Substantive named tracking/analytics tools; supplied platforms, provider attribution, survey examples and crawler operations remain separate. Named analytics options are active conditional suggestions; referral hostnames alone are not substantive X mentions.",
+  "answer_type": {
+    "primary": "Manual measurement workflow",
+    "secondary": [
+      "Conceptual explanation",
+      "Score validation or audit checklist"
+    ],
+    "evidence": "a repeatable prompt panel plus referral/conversion tracking",
+    "rationale": "Six sections and a no-budget cadence specify a buyer-weighted panel, repeated clean tests, spreadsheet rubric, ordinary/search lanes, referral attribution and revenue evidence."
+  },
+  "content_flags": {
+    "branded_and_unbranded_buyer_prompts": {
+      "value": true,
+      "evidence": "**Do not include your product\u2019s name** except in separate branded-accuracy tests."
+    },
+    "repeated_runs": {
+      "value": true,
+      "evidence": "Run each prompt **three times**, preferably on different days."
+    },
+    "fresh_sessions": {
+      "value": true,
+      "evidence": "Start a new conversation."
+    },
+    "model_search_version_logging": {
+      "value": true,
+      "evidence": "Record the date, product/model, whether web search occurred, answer, and cited sources."
+    },
+    "search_mode_logging_explicit": {
+      "value": true,
+      "evidence": "Web search used?"
+    },
+    "citations_mentions_recommendations_distinguished": {
+      "value": true,
+      "evidence": "**1:** mentioned, but not recommended"
+    },
+    "citation_and_mention_rates_separate": {
+      "value": false,
+      "evidence": null
+    },
+    "citation_and_mention_observations_separate": {
+      "value": true,
+      "evidence": "Explicitly recommended?"
+    },
+    "raw_answer_inspection": {
+      "value": true,
+      "evidence": "Description accurate?"
+    },
+    "raw_answer_archiving_explicit": {
+      "value": true,
+      "evidence": "Save outputs or screenshots."
+    },
+    "numerator_denominator_definition": {
+      "value": true,
+      "evidence": "Runs explicitly recommending you \u00f7 total relevant runs"
+    },
+    "composite_score_weighting_disclosed_or_checked": {
+      "value": true,
+      "evidence": "For an overall score, multiply each answer\u2019s 0\u20134 score by its prompt\u2019s intent weight."
+    },
+    "composite_score_caution": {
+      "value": false,
+      "evidence": null
+    },
+    "uncertainty_variance": {
+      "value": true,
+      "evidence": "answers vary by personalization, location, search mode, and randomness."
+    },
+    "human_checking": {
+      "value": true,
+      "evidence": "Review branded prompts for factual errors."
+    },
+    "downstream_conversions": {
+      "value": true,
+      "evidence": "Assisted conversions"
+    },
+    "downstream_traffic_or_impressions": {
+      "value": true,
+      "evidence": "Check AI referral traffic."
+    },
+    "paid_tool_dependence": {
+      "value": false,
+      "evidence": null
+    },
+    "branded_diagnostic_separated": {
+      "value": true,
+      "evidence": "**Do not include your product\u2019s name** except in separate branded-accuracy tests."
+    },
+    "visibility_vs_real_exposure_distinguished": {
+      "value": true,
+      "evidence": "Prompt testing measures **recommendation availability**, not how many real buyers saw it."
+    }
+  },
+  "entity_observations": [
+    {
+      "entity": "Google Sheets",
+      "observed_name": "Google Sheet",
+      "entity_type": "spreadsheet",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested",
+      "free_budget_fit": "stated free",
+      "evidence": "Use a free Google Sheet with these columns:",
+      "source_urls": [],
+      "canonicalization_status": "documented_singular_product_alias",
+      "notes": "Singular Google Sheet normalized to Google Sheets. No Google-owned content is cited."
+    },
+    {
+      "entity": "Google Analytics 4",
+      "observed_name": "GA4",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional alternative for referral tracking",
+      "free_budget_fit": "unspecified",
+      "evidence": "In GA4, Plausible, PostHog, or server logs, create a segment for:",
+      "source_urls": [],
+      "canonicalization_status": "documented_exact_abbreviation",
+      "notes": "GA4 is normalized to Google Analytics 4. An active tool option for the advised referral segment; the section introduces free signals but does not state the individual tool's pricing. Supporting source is OpenAI-owned, not Google-owned."
+    },
+    {
+      "entity": "Plausible",
+      "observed_name": "Plausible",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional alternative for referral tracking",
+      "free_budget_fit": "unspecified",
+      "evidence": "In GA4, Plausible, PostHog, or server logs, create a segment for:",
+      "source_urls": [],
+      "canonicalization_status": "exact_name",
+      "notes": "Actively suggested as one of several analytics options. The individual product cost is not stated; no current-price or free-plan verification is made. No own-content citation."
+    },
+    {
+      "entity": "PostHog",
+      "observed_name": "PostHog",
+      "entity_type": "analytics",
+      "citation": false,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "conditional alternative for referral tracking",
+      "free_budget_fit": "unspecified",
+      "evidence": "In GA4, Plausible, PostHog, or server logs, create a segment for:",
+      "source_urls": [],
+      "canonicalization_status": "exact_name",
+      "notes": "Actively suggested as an alternative analytics tool. Individual pricing not stated despite the free-signals framing; no own-content citation or current-feature verification."
+    }
+  ],
+  "supplied_entities": [
+    {
+      "entity": "ChatGPT",
+      "supplied_in_prompt": true,
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for repeated manual benchmark tests",
+      "free_budget_fit": "stated free",
+      "evidence": "For both ChatGPT and Grok:",
+      "source_urls": [
+        "https://help.openai.com/en/articles/9237897-chatgpt-search",
+        "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied target platform. OpenAI/xAI documentation is cited; the API condition collecting this answer is separate from the consumer platforms the answer advises testing."
+    },
+    {
+      "entity": "Grok",
+      "supplied_in_prompt": true,
+      "citation": true,
+      "mention": true,
+      "recommendation": true,
+      "recommendation_stance": "suggested for repeated manual benchmark tests",
+      "free_budget_fit": "stated free",
+      "evidence": "For both ChatGPT and Grok:",
+      "source_urls": [
+        "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Question-supplied target platform. OpenAI/xAI documentation is cited; the API condition collecting this answer is separate from the consumer platforms the answer advises testing."
+    }
+  ],
+  "contextual_non_tool_entities": [
+    {
+      "entity": "OpenAI",
+      "entity_type": "provider_attribution",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "OpenAI says ChatGPT automatically adds `utm_source=chatgpt.com` to referral URLs from search results.",
+      "source_urls": [
+        "https://help.openai.com/en/articles/9237897-chatgpt-search",
+        "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Documentation publisher/provider attribution, not an additional discovered tool."
+    },
+    {
+      "entity": "xAI",
+      "entity_type": "provider_attribution",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "xAI\u2019s own evaluation guidance says a single run can mislead and recommends reporting results across repeated runs.",
+      "source_urls": [
+        "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+      ],
+      "excluded_from_default_overlap": true,
+      "notes": "Explicit source attribution, not a recommendation to adopt an xAI measurement product. Guidance claim unverified."
+    },
+    {
+      "entity": "Google",
+      "entity_type": "signup_attribution_option",
+      "citation": false,
+      "mention": true,
+      "recommendation": false,
+      "evidence": "Google/search engine",
+      "source_urls": [],
+      "excluded_from_default_overlap": true,
+      "notes": "Signup-survey option, not another recommended tool. Distinct from the explicitly named Google Sheets and GA4 records."
+    }
+  ],
+  "generic_methods": [
+    "Buyer-intent-weighted prompt panel",
+    "Controlled fresh-conversation repeated tests",
+    "Spreadsheet 0\u20134/-1 rubric with per-intent weights",
+    "Normal versus search-explicit lanes",
+    "Analytics referral segments and server logs",
+    "Signup self-report and qualitative attribution",
+    "Visibility/engagement/revenue evidence ladder",
+    "Weekly pulse and monthly benchmark revision"
+  ],
+  "metric_definitions_observed": [
+    {
+      "label": "Recommendation rate",
+      "definition_verbatim": "Runs explicitly recommending you \u00f7 total relevant runs"
+    },
+    {
+      "label": "Top-three share",
+      "definition_verbatim": "Runs placing you in the top three \u00f7 total relevant runs"
+    },
+    {
+      "label": "Citation rate",
+      "definition_verbatim": "Runs linking to your site \u00f7 total relevant runs",
+      "notes": "Denominator is all relevant runs in this answer, not restricted to web-search runs as in some other answers. Preserve the difference."
+    },
+    {
+      "label": "Accuracy rate",
+      "definition_verbatim": "Accurate mentions \u00f7 all mentions"
+    },
+    {
+      "label": "Consistency rate",
+      "definition_verbatim": "Prompts where you appear in at least 2 of 3 runs \u00f7 total prompts",
+      "notes": "Appearance-based definition does not explicitly require an active recommendation score."
+    },
+    {
+      "label": "Intent-weighted overall score",
+      "definition_verbatim": "For an overall score, multiply each answer\u2019s 0\u20134 score by its prompt\u2019s intent weight.",
+      "notes": "Prompt weights are 3/2/1. Rubric also contains -1 for inaccurate/negative mentions; handling of that negative case and overall normalization are not specified. The proposed scale/weights are generated advice, not validated measurement choices."
+    }
+  ],
+  "answer_sources": [
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "OpenAI Help Center or official xAI documentation title/hostname identifies platform documentation; page content and advice correctness were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting provider documentation for controls, repetition, referral/crawler behavior, not another measurement-tool recommendation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Best Practices Guide | SpaceXSI Docs",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+      "text": "Best Practices Guide | SpaceXSI Docs",
+      "domain": "docs.x.ai",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "OpenAI Help Center or official xAI documentation title/hostname identifies platform documentation; page content and advice correctness were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting provider documentation for controls, repetition, referral/crawler behavior, not another measurement-tool recommendation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "OpenAI Help Center or official xAI documentation title/hostname identifies platform documentation; page content and advice correctness were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting provider documentation for controls, repetition, referral/crawler behavior, not another measurement-tool recommendation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Publishers and Developers - FAQ | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results",
+      "text": "Publishers and Developers - FAQ | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "OpenAI Help Center or official xAI documentation title/hostname identifies platform documentation; page content and advice correctness were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting provider documentation for controls, repetition, referral/crawler behavior, not another measurement-tool recommendation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Searching the web with ChatGPT | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "text": "Searching the web with ChatGPT | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "kind": "API body url_citation annotation",
+      "source_category": "Platform documentation",
+      "classification_status": "provisional_from_explicit_attribution_title_and_official_domain",
+      "classification_evidence": "OpenAI Help Center or official xAI documentation title/hostname identifies platform documentation; page content and advice correctness were not independently audited.",
+      "content_verified": false,
+      "recommendation_role": "Supporting provider documentation for controls, repetition, referral/crawler behavior, not another measurement-tool recommendation"
+    }
+  ],
+  "explicit_body_links": [
+    {
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+      "domain": "docs.x.ai",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq%23%3A~%3Atext%3DChatGPT%20automatically%20includes%20the%20UTM%20parameter%20utm_source%3Dchatgpt.com%20in%20referral%20URLs%2C%20enabling%20clear%20tracking%20and%20analysis%20of%20inbound%20traffic%20from%20ChatGPT%20search%20results",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+      "domain": "help.openai.com",
+      "kind": "Explicit Markdown body URL; same source as annotation"
+    }
+  ],
+  "cited_hostname_set": [
+    "help.openai.com",
+    "docs.x.ai"
+  ],
+  "registrable_domain_mapping": {
+    "method": "Explicit manual mapping of help.openai.com to openai.com and docs.x.ai to x.ai, retaining exact observed source URLs and hostnames. No external suffix lookup.",
+    "mapping": {
+      "help.openai.com": "openai.com",
+      "docs.x.ai": "x.ai"
+    }
+  },
+  "capture_scope": {
+    "body_complete": true,
+    "answer_characters": 7132,
+    "transport_body_complete": true,
+    "response_status": "completed",
+    "incomplete_details": null,
+    "coherent_ending": true,
+    "url_citation_occurrences": 5,
+    "explicit_body_URL_occurrences": 5,
+    "unique_answer_URLs": 3,
+    "unique_cited_hostnames": 2,
+    "unique_normalized_cited_domains": 2,
+    "citation_mapping_complete": true,
+    "source_inventory_scope": "Five citation annotations match five Markdown source occurrences, deduplicating to three exact source URLs and two publisher domains. The ChatGPT-search URL recurs three times; retrieval results stay separate.",
+    "source_inventory_complete_for_answer_URLs": true,
+    "retrieval_inventory_complete": false,
+    "search_observed": true,
+    "search_enabled_API": true,
+    "web_action_count": 2,
+    "search_action_count": 2,
+    "reported_billable_search_requests": 2,
+    "requested_model": "gpt-5.6-sol",
+    "returned_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "medium",
+    "returned_reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "model_and_effort_match": true,
+    "request_file": "requests/S3-OPENAIAPI-M1-R3.json",
+    "response_file": "responses/S3-OPENAIAPI-M1-R3.json",
+    "request_context_check": {
+      "exact_registered_prompt": true,
+      "store": false,
+      "tool_choice": "required"
+    },
+    "notes": [
+      "Full six-section answer, weekly/monthly cadence and final paragraph read.",
+      "Three repeats of the same ChatGPT-search URL count as three occurrences but one unique URL. Annotation and Markdown representations are not ten citations.",
+      "Two actual search actions are distinct from query-array length, retrieved-result count and citation count.",
+      "Encoded FAQ URL retained exactly as returned; no destination validation or decoding-based URL merging.",
+      "No observed token/tool cap. All proposed scores, weights, tool/free-status claims and illustrative figures remain collected model output."
+    ],
+    "original_capture_answer_characters": 7222,
+    "public_copy_note": "Body length and source hash describe this redacted public record. Original citation position indexes are omitted; semantic judgments are retained."
+  },
+  "cost_and_limits_review": {
+    "estimated_cost": {
+      "estimated_usd": 0.1387596,
+      "token_cost_usd": 0.1187596,
+      "charged_searches_estimate": 2,
+      "search_count_basis": "reported billable web_search.num_requests",
+      "billing_reconciled": false
+    },
+    "usage": {
+      "input_tokens": 21109,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 4349
+      },
+      "output_tokens": 2499,
+      "output_tokens_details": {
+        "reasoning_tokens": 933
+      },
+      "total_tokens": 23608
+    },
+    "max_tool_calls": 8,
+    "observed_web_actions": 2,
+    "max_output_tokens": 32768,
+    "observed_output_tokens": 2499,
+    "tool_limit_reached": false,
+    "output_limit_reached": false,
+    "budget_currency": "USD",
+    "authorized_total_budget": 10.0,
+    "concerns": [
+      "No observed tool/output cap reached. Returned usage supports an estimated charge, not reconciled provider billing; total budget remains a cumulative collection constraint."
+    ]
+  },
+  "summary": {
+    "substantive_tools_services_features": 4,
+    "citation_true": 0,
+    "mention_true": 4,
+    "recommendation_true": 4,
+    "visibility_checker_recommendations": [],
+    "default_mentioned_tools": [
+      "Google Sheets",
+      "Google Analytics 4",
+      "Plausible",
+      "PostHog"
+    ],
+    "default_recommended_tools": [
+      "Google Sheets",
+      "Google Analytics 4",
+      "Plausible",
+      "PostHog"
+    ],
+    "supplied_target_platforms_excluded": 2,
+    "source_publishers_excluded_from_tool_overlap": 2,
+    "inline_link_occurrences": 5,
+    "unique_answer_URLs": 3,
+    "unique_cited_hostnames": 2,
+    "unique_cited_domains": 2
+  },
+  "coding_cautions": [
+    "Google Sheet and GA4 abbreviations are documented aliases; Plausible/PostHog are active conditional analytics recommendations with no own-content citation.",
+    "The 0\u20134 plus -1 rubric differs from the 0\u20133 scheme in other M answers; neither scheme nor the 3/2/1 weights is independently validated.",
+    "The overall-score instruction references 0\u20134 while the rubric also contains -1. Preserve that ambiguity rather than silently deciding negative-score handling.",
+    "Bare x.com referral-filter text does not establish a substantive X brand mention or publishing recommendation.",
+    "The final 60-run/28%/12%/five-trial statement is illustrative advice, not a result of this experiment.",
+    "Normal versus search-explicit lanes are suggested methodology, not independently verified separation of learned knowledge from retrieval.",
+    "Free-signal framing does not verify individual analytics-tool prices; attribution/crawler/source claims remain model output."
+  ],
+  "operational_entities": [
+    {
+      "entity": "OAI-SearchBot",
+      "entity_type": "crawler_agent",
+      "citation": true,
+      "mention": true,
+      "recommendation": false,
+      "recommended_action": "Do not block the search crawler; search eligibility does not guarantee placement.",
+      "evidence": "confirm that your site does not block `OAI-SearchBot`",
+      "source_urls": [
+        "https://help.openai.com/en/articles/9237897-chatgpt-search"
+      ],
+      "excluded_from_default_tool_overlap": true,
+      "notes": "Operational access advice, separated from measurement-tool recommendations; provider claim not independently checked."
+    }
+  ],
+  "source_record_sha256": "57765ec01f3cc71136e4e7db288d20a3f0092ce6f27a148163782db8610b2750"
+}

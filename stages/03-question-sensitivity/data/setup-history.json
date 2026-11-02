@@ -1,0 +1,39 @@
+[
+  {
+    "checked_at": "2026-11-02T09:08:12.968431+00:00",
+    "kind": "non-generation model-access preflight",
+    "requested_model": "gpt-5.6-sol",
+    "generation_submitted": false,
+    "accessible": false,
+    "error_type": "URLError",
+    "error_summary": "Python trust configuration could not validate the certificate chain; later resolved using the system trusted CA bundle with verification retained.",
+    "record_kind": "non_generation_model_access_check"
+  },
+  {
+    "checked_at": "2026-11-02T09:09:02.113368+00:00",
+    "kind": "non-generation model-access preflight",
+    "requested_model": "gpt-5.6-sol",
+    "generation_submitted": false,
+    "accessible": false,
+    "http_status": 401,
+    "error_code": "expired_secret_key",
+    "record_kind": "non_generation_model_access_check"
+  },
+  {
+    "checked_at": "2026-11-02T09:18:02.692171+00:00",
+    "kind": "non-generation model-access preflight",
+    "requested_model": "gpt-5.6-sol",
+    "returned_model": "gpt-5.6-sol",
+    "generation_submitted": false,
+    "accessible": true,
+    "http_status": 200,
+    "record_kind": "non_generation_model_access_check"
+  },
+  {
+    "record_kind": "historical_setup_status_snapshot",
+    "recorded_at": "2026-11-02T09:10:18.963426+00:00",
+    "status": "blocked_expired_api_key",
+    "formal_generation_submissions": 0,
+    "note": "Status snapshot after the earlier failed credential check, not an additional request. A later model-access check and all twelve API answers succeeded."
+  }
+]
