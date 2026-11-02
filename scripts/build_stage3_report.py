@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Build the redacted public Stage 3 page, findings, and data archive.
+"""Build the public Stage 3 reader report, technical appendix, findings, and archive.
 
 Usage: python3 scripts/build_stage3_report.py [--data-dir DIR]
-Outputs: stages/03-question-sensitivity/{index.html,findings.json,public-data.zip}.
+Outputs: stages/03-question-sensitivity/{index.html,technical-appendix.html,findings.json,public-data.zip}.
 
-Semantic judgments come only from coding/*.json. Complete bodies and a matching
+Semantic judgments come from coding/*.json and explicit review mappings.
+Complete bodies and a matching
 source-record digest are required. Missing/incomplete/uncoded answers never
 become empty discovery sets. No network access or additional model queries.
 """
 from __future__ import annotations
 
 import argparse
+import importlib.util
+import sys
 import hashlib
 import html
 from itertools import combinations
@@ -98,9 +101,9 @@ def local_link(path, root, label=None):
     value = str(path)
     if Path(value).is_absolute():
         raise ValueError('Public references must use repository-relative paths.')
-    target = public_path(STAGE / value if value in {'index.html','findings.json','public-data.zip'} else root / value)
+    target = public_path(STAGE / value if value in {'index.html','technical-appendix.html','findings.json','public-data.zip'} else root / value)
     href = quote(os.path.relpath(target, STAGE).replace(os.sep, '/'), safe='/.-_')
-    missing = ' <span class="muted">(missing public file)</span>' if not target.is_file() and value not in {'index.html','findings.json','public-data.zip'} else ''
+    missing = ' <span class="muted">(missing public file)</span>' if not target.is_file() and value not in {'index.html','technical-appendix.html','findings.json','public-data.zip'} else ''
     return f'<a href="{esc(href)}">{esc(label or path)}</a>{missing}'
 
 
@@ -445,7 +448,7 @@ def platform_summaries(runs,analyzed):
         primary_sets=[{s.get('source_category') or 'Other / unresolved' for s in r['_coding'].get('answer_sources',[])} for r in category_group]
         categories=sorted(set().union(*primary_sets)) if primary_sets else []
         summaries.append({'platform':platform,'eligible_coded_answers':len(coded),'entity_answer_rows':len(rows),'cmr':cmr,'cmr_combinations':combos,
-            'entity_scope':'Tool/service/feature/channel entity × answer rows; excludes supplied target platforms, generic methods and citation-only source publishers. C is own-content Citation, not every cited source.',
+            'entity_scope':'Conditional coded named tool/service/feature/channel entity × answer rows (not a general brand-mention rate); all inventory rows are mentions by selection; excludes supplied target platforms, generic methods and citation-only source publishers. C is own-content Citation, not every cited source.',
             'recommended_tool_inventory':rec,'empty_recommendation_sets':sum(analyzed[r['id']]['sets']['recommended_tools']==[] for r in group),
             'nonempty_recommendation_sets':sum(bool(analyzed[r['id']]['sets']['recommended_tools']) for r in group),
             'primary_source_category_prevalence':{category:{'numerator':sum(category in s for s in primary_sets),'denominator':len(primary_sets)} for category in categories},
@@ -516,7 +519,7 @@ def analyze(protocol, runs, attempts, root, issues, hashes):
                       if r['platform'] == cell['platform'] and r['prompt_id'] == cell['prompt_id'] and analyzed[r['id']]['coding_eligible']]
             flags[flag][cell['platform']+' / '+cell['prompt_id']] = {'numerator': sum(v is True for v in values), 'denominator': sum(v is True or v is False for v in values), 'unknown': sum(v is not True and v is not False for v in values)}
     return {'generated_at': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'schema_version': 2,
-        'scope': 'Descriptive partial observation; assistant semantic coding, no independent human double-coding or external fact-check.',
+        'scope': 'Descriptive observation; assistant semantic coding. Independent human review and bounded source checks are separately recorded in review support files.',
         'conditions': {'main_platforms': list(PLATFORMS), 'historical_slot_prefix': 'S3-CHATGPT-* position IDs are retained for continuity; current OpenAI attempts use the API condition.',
             'comparison_limit': 'OpenAI Responses API with web_search versus the Grok consumer interface. This is not a consumer ChatGPT Search comparison. Interface, collection timing and execution-path differences confound platform contrasts.',
             'model_identity_limit':'Requested and returned gpt-5.6-sol is an undated identifier. The actual backend/snapshot is not independently established; a fixed ID and medium effort do not prove a fixed backend or equivalence to consumer ChatGPT Search.'},
@@ -629,7 +632,7 @@ def coding_view(code, root):
 def answer_view(record, result, protocol, root, anchor):
     code = record.get('_coding', {})
     metadata = {k:v for k,v in record.items() if not k.startswith('_') and k not in {'answer_text','prompt','answer_links','sources','retrieval_sources','notes','search_queries','observed_composer_text','request_id','response_id','conversation_url'}}
-    summary = f'{record["id"]} · {record.get("platform", "Platform not recorded")} · {record.get("status","unknown")}'
+    summary = f'{record["id"]} · {platform_label(record.get("platform", "Platform not recorded"))} · {record.get("status","unknown")}'
     body = notes(record.get('notes'))
     if result:
         body += notes(result['exclusion_reasons'])
@@ -646,7 +649,7 @@ def answer_view(record, result, protocol, root, anchor):
     return detail(summary, body, anchor)
 
 
-def render(protocol, runs, attempts, findings, root):
+def render_full_record(protocol, runs, attempts, findings, root):
     counts, analyzed, cells = findings['counts'], findings['per_answer'], findings['cells']
     title = protocol.get('title', 'Stage 3: Sensitivity to question design')
     platform_counts = {p:sum(complete(r) for r in runs if r['platform']==p) for p in PLATFORMS}
@@ -664,12 +667,12 @@ def render(protocol, runs, attempts, findings, root):
         authored.append(f'<li><strong>{esc(finding.get("title",""))}</strong> {esc(finding.get("detail",""))} <a class="muted" href="#{anchor}">Evidence</a></li>')
         finding_evidence.append(detail(finding.get('title','Finding evidence'),'<p>'+' · '.join(refs)+'</p>',anchor))
     headline='<ul class="conclusions">'+''.join(authored)+'</ul>' if authored else notes('No authored findings have been recorded; the tables below contain the available descriptive analysis.')
-    coverage_note=notes(f'{counts["complete_selected_bodies"]}/24 selected bodies and {counts["eligible_coded_bodies"]}/24 assistant semantic coding records are complete/eligible. {OPENAI_PLATFORM}: {platform_counts[OPENAI_PLATFORM]}/12; Grok: {platform_counts["Grok"]}/12. Actual submissions: {counts["api_submissions"]} API + {counts["grok_consumer_submissions"]} Grok + {counts["historical_chatgpt_ui_submissions"]} historical ChatGPT UI = {counts["actual_submissions"]}. Historical failures: {counts["technical_failure_attempts"]} technical, {counts["incomplete_capture_attempts"]} incomplete capture. These are collection counts, not success rates.')
+    coverage_note=notes(f'{counts["complete_selected_bodies"]}/24 selected bodies and {counts["eligible_coded_bodies"]}/24 assistant semantic coding records are complete/eligible. {OPENAI_PLATFORM}: {platform_counts[OPENAI_PLATFORM]}/12; Grok Expert · consumer interface: {platform_counts["Grok"]}/12. Actual submissions: {counts["api_submissions"]} API + {counts["grok_consumer_submissions"]} Grok + {counts["historical_chatgpt_ui_submissions"]} historical ChatGPT UI = {counts["actual_submissions"]}. Historical failures: {counts["technical_failure_attempts"]} technical, {counts["incomplete_capture_attempts"]} incomplete capture. These are collection counts, not success rates.')
     snapshot_note=('Complete selected-body and coding snapshot; citation mapping still has its recorded coverage limits.' if counts['eligible_coded_bodies']==24 and counts['complete_selected_bodies']==24 else 'Partial collection/coding snapshot; unknown, incomplete and uncoded positions are not empty discovery sets.')
     coverage_rows = []
     for cell in cells:
         metrics=cell['metrics']
-        coverage_rows.append([esc(cell['platform']),esc(cell['prompt_id']),f'{cell["complete_bodies"]} / 3',f'{cell["coded_eligible"]} / 3',
+        coverage_rows.append([esc(platform_label(cell['platform'])),esc(cell['prompt_id']),f'{cell["complete_bodies"]} / 3',f'{cell["coded_eligible"]} / 3',
             f'{metrics["recommended_tools"]["eligible_denominator"]} / 3',f'{metrics["cited_domains"]["eligible_denominator"]} / 3',
             f'{metrics["observed_cited_domains"]["eligible_denominator"]} / 3',esc(show(cell['search_observed'])),esc(show(cell['answer_types']))])
     coverage = table(['Platform','Prompt','Complete bodies','Coded eligible','Tool sets','Mapped domains','Observed domains','Actual search · complete bodies only','Primary answer types'],coverage_rows)
@@ -680,7 +683,7 @@ def render(protocol, runs, attempts, findings, root):
             rows.append([esc(pair['left'].rsplit('-',1)[-1]+' ↔ '+pair['right'].rsplit('-',1)[-1]), jaccard(pair),
                 jaccard(metrics['cited_domains']['pairs'][index]),jaccard(metrics['observed_cited_domains']['pairs'][index])])
         summaries=table(['Set','Numeric-pair range / mean','Shared across all 3'],[[esc(METRICS[m]),esc(variation(metrics[m]['pair_summary'])),('Unavailable · requires all 3 eligible answers' if metrics[m]['shared_across_all_three'] is None else set_text(metrics[m]['shared_across_all_three']))] for m in ('recommended_tools','cited_domains','observed_cited_domains')])
-        repeat_sections.append(detail(f'{cell["prompt_id"]} · {cell["platform"]}',table(['Repeated answers','Recommended tools','Domains · complete mapping','Observed inline domains · qualified'],rows)+summaries))
+        repeat_sections.append(detail(f'{cell["prompt_id"]} · {platform_label(cell["platform"])}',table(['Repeated answers','Recommended tools','Domains · complete mapping','Observed inline domains · qualified'],rows)+summaries))
     wording=[]
     for contrast in findings['wording_contrasts']:
         parts=[]
@@ -690,27 +693,32 @@ def render(protocol, runs, attempts, findings, root):
                 + notes([f'{left} repeat context: '+variation(data['left']['pair_summary']),f'{right} repeat context: '+variation(data['right']['pair_summary'])])
                 + table(['Variant','Eligible answers','Union'],[[left,f'{data["left"]["eligible_denominator"]} / 3',set_text(data['left']['union'])],[right,f'{data["right"]["eligible_denominator"]} / 3',set_text(data['right']['union'])]])
                 + prevalence_table({left:data['left'],right:data['right']},[left,right])))
-        wording.append(detail(f'{contrast["platform"]} · {contrast["intent"]}1 versus {contrast["intent"]}2',''.join(parts)))
+        wording.append(detail(f'{platform_label(contrast["platform"])} · {contrast["intent"]}1 versus {contrast["intent"]}2',''.join(parts)))
     intent_sections=[]
     for item in findings['intent_contrasts']:
         parts=[]
         for metric in ('source_categories','recommended_tools'):
             data=item['metrics'][metric]
             parts.append(detail(METRICS[metric],'<p><strong>M pooled versus V pooled:</strong> '+jaccard(data['pooled_overlap'])+'</p>'+prevalence_table(data,['M1','M2','M','V1','V2','V'])))
-        intent_sections.append(detail(item['platform'],''.join(parts)))
+        intent_sections.append(detail(platform_label(item['platform']),''.join(parts)))
     flag_rows=[[esc(flag.replace('_',' '))]+[esc(ratio(values.get(c['platform']+' / '+c['prompt_id']))) for c in cells] for flag,values in findings['content_flags'].items()]
-    flags=table(['Returned-advice flag']+[c['platform']+' / '+c['prompt_id'] for c in cells],flag_rows)
+    flags=table(['Returned-advice flag']+[platform_label(c['platform'])+' / '+c['prompt_id'] for c in cells],flag_rows)
     cmr_rows=[];combo_rows=[];category_rows=[]
     for summary in findings['platform_summaries']:
-        cmr_rows.append([esc(summary['platform']),str(summary['entity_answer_rows'])]+[f'{summary["cmr"][key]["true"]} / {summary["cmr"][key]["known_denominator"]} ({summary["cmr"][key]["unresolved"]} unresolved)' for key in ('citation','mention','recommendation')]
+        cmr_rows.append([esc(platform_label(summary['platform'])),str(summary['entity_answer_rows'])]+[f'{summary["cmr"][key]["true"]} / {summary["cmr"][key]["known_denominator"]} ({summary["cmr"][key]["unresolved"]} unresolved)' for key in ('citation','mention','recommendation')]
             +[f'{summary["nonempty_recommendation_sets"]} / {summary["recommended_tool_inventory"]["eligible_denominator"]}',str(summary['empty_recommendation_sets'])])
-        combo_rows.append([esc(summary['platform'])]+[str(summary['cmr_combinations'][key]) for key in ('C','M','R','CM','CR','MR','CMR','None','Unresolved')])
+        combo_rows.append([esc(platform_label(summary['platform']))]+[str(summary['cmr_combinations'][key]) for key in ('C','M','R','CM','CR','MR','CMR','None','Unresolved')])
         for category,value in summary['primary_source_category_prevalence'].items():
-            category_rows.append([esc(summary['platform']),esc(category),esc(ratio(value))])
-    distributions=(notes('C/M/R counts use tool/service/feature/channel entity × answer rows, not every source publisher. Supplied ChatGPT/Grok targets, generic methods and citation-only publishers are excluded. Citation means the entity’s own content under the codebook. C, M and R overlap and must not be added as disjoint totals.')
+            category_rows.append([esc(platform_label(summary['platform'])),esc(category),esc(ratio(value))])
+    source_audit = findings.get('review_support',{}).get('source_audit',{})
+    source_cautions = source_audit.get('summary',{}).get('material_findings',[]) if isinstance(source_audit,dict) else []
+    distributions=(notes('C/M/R is conditional on coded named tool/service/feature/channel entity × answer rows. Every inventoried row is a mention by selection; M/rows is not a general brand-mention rate. This is not a count of every source publisher. Supplied ChatGPT/Grok targets, generic methods and citation-only publishers are excluded. Citation means the entity’s own content under the codebook. C, M and R overlap and must not be added as disjoint totals.')
         +table(['Interface','Entity × answer rows','C / known','M / known','R / known','Answers with named R set','Eligible empty R sets'],cmr_rows)
         +detail('Exact C/M/R combinations',table(['Interface','C only','M only','R only','C+M','C+R','M+R','C+M+R','None','Unresolved'],combo_rows))
-        +notes('Primary source-category prevalence below counts each category once per eligible observed-source answer. Categories overlap across sources. Provisional Other / unresolved is not evidence that a page is vendor research or that its contents were verified.')
+        +'<h3>Supplementary source composition</h3>'
+        +notes(source_cautions)
+        +(notes('Original source-category counts are retained. The later selective audit does not silently recode provisional classifications or establish independent editorial provenance for a commercial release.')+'<p>'+local_link('source-audit.json',root,'Read the selective source audit')+'</p>' if source_cautions else '')
+        +notes('Supplementary source composition: each category counts once per eligible observed-source answer. The first three Grok captures lack strict complete URL mapping; this observed sample does not establish an intrinsic platform preference. Categories overlap across sources. Provisional Other / unresolved is not evidence that a page is vendor research or that its contents were verified.')
         +table(['Interface','Primary source-page category','Answers / observed-source denominator'],category_rows))
     mapping_rows=[]
     for run in runs:
@@ -719,14 +727,14 @@ def render(protocol, runs, attempts, findings, root):
     position_rows=[]
     for run in runs:
         value=analyzed[run['id']]
-        position_rows.append([f'<a href="#{esc(run["id"])}">{esc(run["id"])}</a>',esc(run['platform']),esc(run.get('selected_attempt_id') or 'Unresolved'),esc(run.get('status')),esc(show(value['coding_eligible'])),
+        position_rows.append([f'<a href="#{esc(run["id"])}">{esc(run["id"])}</a>',esc(platform_label(run['platform'])),esc(run.get('selected_attempt_id') or 'Unresolved'),esc(run.get('status')),esc(show(value['coding_eligible'])),
             esc(model_summary(run)),
             esc(show(search_enabled(run))),esc(show(run.get('search_observed'))),esc(time_text(run.get('submitted_at'))),local_link(run.get('raw_file'),root)])
     selected_ids={r.get('selected_attempt_id'):r['id'] for r in runs if r.get('selected_attempt_id')}
     attempt_rows=[];history=[]
     for attempt in attempts:
         aid=attempt['id']; anchor=selected_ids.get(aid,'attempt-'+aid)
-        attempt_rows.append([f'<a href="#{esc(anchor)}">{esc(aid)}</a>',esc(attempt.get('slot_id')),esc(attempt.get('platform','Not recorded')),esc(attempt.get('interface','Not recorded')),esc(attempt.get('status')),esc('Selected evidence' if aid in selected_ids else 'Historical / not selected'),esc(time_text(attempt.get('submitted_at'))),local_link(attempt.get('raw_file'),root)])
+        attempt_rows.append([f'<a href="#{esc(anchor)}">{esc(aid)}</a>',esc(attempt.get('slot_id')),esc(platform_label(attempt.get('platform','Not recorded'))),esc(attempt.get('interface','Not recorded')),esc(attempt.get('status')),esc('Selected evidence' if aid in selected_ids else 'Historical / not selected'),esc(time_text(attempt.get('submitted_at'))),local_link(attempt.get('raw_file'),root)])
         if aid not in selected_ids:
             history.append(answer_view(attempt,None,protocol,root,anchor))
     api_rows=[]
@@ -771,21 +779,216 @@ def render(protocol, runs, attempts, findings, root):
         'A retrieval/source badge is not an answer-citation count. A complete answer with zero observable inline anchors can have many retrieval hits. Workspace-explored activity and visible personalization controls do not establish audited account isolation.',
         'Wording contrasts change registered phrase packages, not just synonyms: M1 asks to reliably measure with no GEO budget; M2 asks for a free, repeatable workflow as a bootstrapped builder. V1 explicitly says no GEO budget; V2 says bootstrapped. Budget and action cues differ. Interpret sensitivity to these full versions, not a pure lexical effect.',
         'M-versus-V changes the requested task. None of these contrasts supports GEO intervention effectiveness, tool-score validity, or stable platform recommendation probabilities. Generated 0–3 or −1/0–4 rubrics, weights, sample sizes and illustrative dashboard percentages are model advice, not this experiment’s validated measurement instrument. In particular, the M2-R2 recommendation-visibility numerator counts mentions in the returned advice; it is not substituted for our separate R coding.'])
-    nav=[('overview','Findings first'),('coverage','Collection and coding'),('repeats','Identical-prompt repeats'),('wording','Wording within intent'),('intents','M versus V'),('distributions','C/M/R and source mix'),('flags','Answer types and flags'),('api','API condition and cost'),('method','Method and limits'),('positions','24 planned positions'),('answers','Full answers and coding'),('attempts','Actual submissions'),('domains','Domain provenance'),('publication','Publication notes')]
+    nav=[('overview','Findings first'),('coverage','Collection and coding'),('repeats','Identical-prompt repeats'),('wording','Wording within intent'),('intents','M versus V'),('distributions','C/M/R among named entities'),('flags','Answer types and flags'),('api','API condition and cost'),('method','Method and limits'),('positions','24 planned positions'),('answers','Full answers and coding'),('attempts','Actual submissions'),('domains','Domain provenance'),('publication','Publication notes')]
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><style>{CSS}</style></head><body><div class="layout"><nav aria-label="Contents"><strong>GEO Learning Log</strong><p>Stage 3 · public research record<br>November 2, 2026</p><div class="links"><a href="https://github.com/helen-bird/geo-platform-observation">Repository / GEO Learning Log</a><a href="../../index.html">Stage 1 report</a><a href="../02-post-discovery/index.html">Stage 2 report</a><a href="public-data.zip">Download public data</a>{''.join(f'<a href="#{key}">{esc(label)}</a>' for key,label in nav)}</div></nav><main>
 <header class="hero" id="overview"><div class="eyebrow">8 cells · 24 planned positions · {counts['actual_submissions']} actual submissions</div><h1>{esc(title)}</h1><div style="border:3px solid #176a76;background:#eaf4f4;padding:16px 18px;border-radius:10px;margin:18px 0"><strong>OpenAI API + web search, not consumer ChatGPT Search. These results do not represent ChatGPT web app performance.</strong></div>{headline}<blockquote><p><strong>Interpretation limit:</strong> Three answers per prompt and interface. OpenAI Responses API web_search is not consumer ChatGPT Search; the API batch followed Grok, so interface and time are confounded. The undated gpt-5.6-sol ID does not establish an exact backend/snapshot.</p><p>{esc(snapshot_note)} Categories and external claims remain provisional; both-empty recommendation sets are N/A.</p></blockquote><div class="counts">{''.join(f'<div class="count"><strong>{number}</strong><span>{label}</span></div>' for number,label in [(24,'Planned positions'),(counts['actual_submissions'],'Actual submissions'),(counts['complete_selected_bodies'],'Complete selected bodies'),(counts['eligible_coded_bodies'],'Eligible coded bodies')])}</div></header>
 <section id="coverage"><h2>Collection and coding coverage</h2>{coverage_note}{coverage}{notes(findings['validation_issues'])}</section>
 <section id="repeats"><h2>1 · Identical-prompt repeat variation</h2>{notes(f'{available_tool_pairs}/24 planned tool-set pairs have numeric Jaccard values. Each cell has R1–R2, R1–R3, R2–R3. Both-empty sets are N/A, not 0% or 100%; sparse named-tool sets are not by themselves an instability finding. Missing pairs remain unavailable. The observed-domain column is a separate coverage-qualified view.')}{''.join(repeat_sections)}</section>
 <section id="wording"><h2>2 · Wording variants within the same intent</h2>{notes('M1 versus M2 and V1 versus V2 compare variant unions and per-answer prevalence. Inspect repeat variation alongside these contrasts. The variants change context as well as phrasing; small unequal eligible samples cannot isolate wording effects.')}{''.join(wording)}</section>
-<section id="intents"><h2>3 · Measurement intent versus validation intent</h2>{notes('Variant results appear separately before the pooled M and V columns. Each pooled intent has up to six eligible answers. Changing the requested task changes what an answer should contain; this comparison primarily describes categories and recommendation sets.')}{''.join(intent_sections)}</section>
-<section id="distributions"><h2>Citation, Mention, Recommendation, and source mix</h2>{distributions}</section>
+<section id="intents"><h2>3 · Measurement intent versus validation intent</h2>{notes('Variant results appear separately before the pooled M and V columns. Each pooled intent has up to six eligible answers. The answer-type split is expected task alignment, not evidence of a new retrieval mechanism. Changing the requested task changes what an answer should contain; this supplementary comparison describes categories and recommendation sets.')}{''.join(intent_sections)}</section>
+<section id="distributions"><h2>C/M/R among coded named entities</h2>{distributions}</section>
 <section id="flags"><h2>Answer types and returned-advice flags</h2>{notes('Primary answer-type counts are in the coverage table. Nonexclusive flags below describe returned advice, not verified best practices. Each cell displays true judgments / known judgments; missing flag coding is excluded.')}{flags}</section>
 <section id="api"><h2>API condition, request evidence, and estimated cost</h2>{api_collection_html}</section>
 <section id="method"><h2>Method, controls, and limits</h2>{methods}{detail('Evidence for the authored findings',''.join(finding_evidence))}{detail('Registered prompts',table(['Prompt','Original wording'],[[q,esc(protocol.get('prompts',{}).get(q,''))] for q in PROMPTS]))}{detail('Historical collection protocol, controls and amendments',notes('This archived protocol preserves authorization, setup and collection status as recorded at the time. The public release is a separately authorized redacted edition; historical restrictions do not describe the current publication status.')+pre({k:v for k,v in protocol.items() if k not in ('prompts','findings','preview_verification') and not k.startswith('_')}))}{detail('Historical analysis plan and amendments',notes('The collection plan is retained for provenance, including then-known limitations. Public-edition edits and review scope are documented in Publication notes.')+pre(plan))}</section>
 <section id="positions"><h2>24 planned response positions</h2>{notes('S3-CHATGPT-* is the retained position-ID prefix. Its current formal platform is OpenAI API + web search; S3-OPENAIAPI-* identifies new API submissions. Original prompt text still refers to ChatGPT and Grok, unchanged.')}{table(['Position','Formal platform','Selected attempt','Capture status','Coding eligible','Configured / requested / returned model and effort','Search enabled API / UI','Search observed','Submitted · UTC+8','Public record'],position_rows)}</section>
 <section id="answers"><h2>Full answers, returned links, and coding evidence</h2>{notes('All sections are expanded. Registered prompts and redacted public answer copies are shown with public evidence records. Personal context and tracking parameters may have been removed; original annotation character offsets are not claimed after these edits. No external claims are endorsed merely by reproducing a platform answer.')}{run_sections}</section>
 <section id="attempts"><h2>Every actual submission and retained failure</h2>{notes('The attempts ledger already includes selected submissions and historical ChatGPT consumer-UI diagnostics. Do not add it to the 24 planned positions. Recovery captures of an existing answer are not extra submissions. Technical and body-capture failures do not establish absence of tools or sources. Historical UI attempts keep their original platform label and are not API answers.')}{table(['Attempt','Position','Actual platform','Interface','Status','Selection','Submitted · UTC+8','Public record'],attempt_rows)}{''.join(history)}</section>
-<section id="domains"><h2>Hostname mapping and source provenance</h2>{table(['Answer','Public source URL','Recorded hostname','Analysis domain','Mapping basis','Precision / provenance'],mapping_rows)}{notes('URLs shown from native target displays retain their capture qualification; hostname normalization does not verify the original scheme or exact destination. Source URLs retain their recorded precision limits; the cited external claims were not independently fact-checked for this study.')}<p>{local_link('findings.json',root)} · {local_link('analysis-plan.md',root)} · {local_link('protocol.json',root)} · {local_link('runs.json',root)} · {local_link('attempts.json',root)}</p><p class="footer">Public redacted edition generated {esc(findings['generated_at'])}. Rebuilds do not make model queries or change accounts. See Publication notes for privacy edits and review scope.</p></section><section id="publication"><h2>Publication notes and downloads</h2><blockquote><p>This is the separately authorized public edition of Stage 3. Private credentials, account context, conversation links, opaque provider IDs and local-only captures are excluded. Citation URLs were cleaned of tracking parameters; annotation offsets are not guaranteed after public-copy edits. These edits preserve the study’s coded observations and declared limitations.</p></blockquote><p><a href="public-data.zip">Download public data and findings</a> · {local_link('publication-notes.json',root)} · {local_link('settings-summary.json',root)}</p>{detail('Publication notes',pre(protocol.get('_report_publication_notes')))}{detail('Public settings summary',pre(protocol.get('_report_settings_summary')))}</section></main></div></body></html>'''
+<section id="domains"><h2>Hostname mapping and source provenance</h2>{table(['Answer','Public source URL','Recorded hostname','Analysis domain','Mapping basis','Precision / provenance'],mapping_rows)}{notes('URLs shown from native target displays retain their capture qualification; hostname normalization does not verify the original scheme or exact destination. Source URLs retain their recorded precision limits. External checking is bounded by the source-audit record; unreviewed claims remain unverified.')}<p>{local_link('findings.json',root)} · {local_link('analysis-plan.md',root)} · {local_link('protocol.json',root)} · {local_link('runs.json',root)} · {local_link('attempts.json',root)}</p><p class="footer">Public redacted edition generated {esc(findings['generated_at'])}. Rebuilds do not make model queries or change accounts. See Publication notes for privacy edits and review scope.</p></section><section id="publication"><h2>Publication notes and downloads</h2><blockquote><p>This is the separately authorized public edition of Stage 3. Private credentials, account context, conversation links, opaque provider IDs and local-only captures are excluded. Citation URLs were cleaned of tracking parameters; annotation offsets are not guaranteed after public-copy edits. These edits preserve the study’s coded observations and declared limitations.</p></blockquote><p><a href="public-data.zip">Download public data and findings</a> · {local_link('publication-notes.json',root)} · {local_link('settings-summary.json',root)}</p>{detail('Publication notes',pre(protocol.get('_report_publication_notes')))}{detail('Public settings summary',pre(protocol.get('_report_settings_summary')))}</section></main></div></body></html>'''
+
+
+
+API_BOUNDARY = 'OpenAI API + web search, not consumer ChatGPT Search. These results do not represent ChatGPT web app performance.'
+READ_CSS = '''
+html{scrollbar-color:#7b9da5 #edf3f5}::selection{background:#b8dedf;color:#12383f}:focus-visible{outline:3px solid #176a76;outline-offset:4px}a:hover{text-decoration-thickness:2px}h1,h2,h3{text-wrap:balance}blockquote{border-left-width:1px}table,.bar-value{font-variant-numeric:tabular-nums}.reader{background:#fff}.reader main{max-width:1260px;padding:44px 5vw 80px}.reader section{border:0;border-radius:0;padding:0;margin:0 0 58px;background:transparent}.reader p,.reader li,.reader blockquote{max-width:72ch}.reader h1{max-width:24ch;margin-top:0}.reader h2{margin-bottom:18px}.reader h3{font-size:16px;margin:24px 0 10px}.reader .conclusions{font-size:17px;max-width:72ch}.reader .conclusions li{padding:6px 0 12px}.reader .boundary{margin:18px 0 24px;padding:14px 17px;border:1px solid #7bafb5;background:#eaf4f4;line-height:1.5}.reader .boundary strong{font-size:15px}.reader figure{margin:24px 0}.reader figcaption{font-size:14px;max-width:72ch;margin-bottom:20px}.chart-group{padding:15px 0 19px;border-top:1px solid #dce5e9}.chart-group h3{margin:0 0 10px}.chart-label{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:5px}.bar-row{margin:9px 0 13px}.bar-track{height:9px;background:#e8eff1;width:100%;max-width:720px}.bar-fill{height:100%;background:#176a76}.bar-fill.alternate{background:#607f88}.bar-fill.third{background:#a3b7bd}.bar-value{font-weight:650;white-space:nowrap}.chart-na{font-size:13px;padding:7px 0;color:#5e717c}.delta{font-size:13px;margin:8px 0 0}.figure-note{font-size:12px;color:#48636b}.reader .evidence-links{line-height:2}.appendix-intro{max-width:72ch}.appendix-intro h1{font-size:34px}.appendix-intro .summary-counts{font-size:14px}.appendix-review{margin-top:25px}.reader .table-scroll{margin:18px 0}.reader .footer{margin-top:45px}
+@media(max-width:650px){.reader main{padding:26px 20px 54px}.reader section{margin-bottom:42px}.reader h1{font-size:31px}.reader .conclusions{font-size:16px}.chart-label{display:block}.bar-value{display:block;margin-top:3px}.chart-group{padding-top:18px}.reader .boundary{padding:12px}.reader table{font-size:12px}.reader td,.reader th{padding:9px}.appendix-intro h1{font-size:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+'''
+
+
+def platform_label(value):
+    return 'Grok Expert · consumer interface' if value == 'Grok' else str(value)
+
+
+def integrate_review_analyses(protocol, runs, findings, root):
+    module_file = Path(__file__).resolve().with_name('analysis_extensions.py')
+    support = {}
+    for filename in ('entity-normalization.json','human-review.json','human-review.md','source-audit.json','review-response.md','prompt-bank.md'):
+        path = root / filename
+        if path.is_file():
+            findings['input_sha256'][filename] = digest(path)
+            if filename in ('human-review.json','source-audit.json'):
+                support[filename.removesuffix('.json').replace('-','_')] = read_json(path, findings['validation_issues'], {})
+    findings['review_support'] = support
+    if not module_file.is_file():
+        findings['review_analyses'] = {'analysis_status':'pending_analysis_module','validation_issues':['Review analysis module is not yet available.']}
+        return
+    spec = importlib.util.spec_from_file_location('stage3_review_extensions', module_file)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    findings['review_analyses'] = module.analyze_extensions(protocol, runs, findings['per_answer'], root)
+    findings['review_analysis_code_sha256'] = hashlib.sha256(module_file.read_bytes()).hexdigest()
+    findings['validation_issues'].extend(findings['review_analyses'].get('validation_issues',[]))
+
+
+def percent(value):
+    return 'N/A' if value is None else f'{value*100:.1f}%'
+
+
+def pair_mean(summary):
+    return summary.get('mean')
+
+
+def pair_count(summary):
+    return summary.get('numeric_pairs', summary.get('available_numeric_pairs', 0))
+
+
+def comparison_order(item):
+    return (0 if item.get('platform') == 'Grok' else 1, item.get('intent',''))
+
+
+def metric_bar(label, value, denominator, variant=''):
+    text = percent(value) + (' · ' + denominator if denominator else '')
+    if value is None:
+        return f'<div class="bar-row"><div class="chart-label"><span>{esc(label)}</span><span class="bar-value">{esc(text)}</span></div><div class="chart-na">No numeric overlap estimate; empty sets remain N/A.</div></div>'
+    width = max(0, min(100, value*100))
+    return f'<div class="bar-row"><div class="chart-label"><span>{esc(label)}</span><span class="bar-value">{esc(text)}</span></div><div class="bar-track" aria-hidden="true"><div class="bar-fill {variant}" style="width:{width:.5f}%"></div></div></div>'
+
+
+def overlap_text(value):
+    if not value or value.get('value') is None:
+        return 'N/A · both empty or unavailable'
+    return f'{value["intersection"]}/{value["union"]} · {percent(value["value"])}'
+
+
+def review_figures(findings):
+    ext = findings.get('review_analyses', {})
+    comparisons = sorted(ext.get('within_vs_cross', []), key=comparison_order)
+    groups = []
+    for item in comparisons:
+        within, cross = item.get('within', {}).get('summary', {}), item.get('cross', {}).get('summary', {})
+        bars = metric_bar('Identical wording · within variants', pair_mean(within), f'{pair_count(within)}/6 numeric pairs')
+        bars += metric_bar('Different wording · across variants', pair_mean(cross), f'{pair_count(cross)}/9 numeric pairs', 'alternate')
+        delta = item.get('delta_pp')
+        delta_label = 'N/A' if delta is None else f'{delta:+.1f} percentage points'
+        groups.append(f'<div class="chart-group" role="group" aria-label="{esc(platform_label(item.get("platform")))} {esc(item.get("intent"))}"><h3>{esc(platform_label(item.get("platform")))} · {esc(item.get("intent"))}</h3>{bars}<p class="delta">Across minus within: <strong>{esc(delta_label)}</strong></p></div>')
+    figure1 = '<figure aria-labelledby="pair-caption"><figcaption id="pair-caption">Mean pairwise Jaccard of recommended named-entity sets. Within-variant comparisons pool the three repeat pairs from each of two variants (6 planned pairs); across-variant comparisons use every 3 × 3 pair (9 planned pairs). M = measurement; V = validation. All bars share a 0–100% scale.</figcaption>' + (''.join(groups) or notes('Review comparisons are not yet available.')) + '</figure>'
+    contrasts = sorted(ext.get('entity_lenses', {}).get('wording_contrasts', []), key=comparison_order)
+    groups = []
+    for item in contrasts:
+        bars = []
+        for key, label, variant in [('strict','Strict named entities',''),('family','Explicit tool families','alternate'),('category','Broad functional categories','third')]:
+            view = item.get('views', {}).get(key, {})
+            value = view.get('pooled_overlap', {})
+            union = value.get('union')
+            ratio_label = f'{value.get("intersection")}/{union} intersection / union' if union else 'both-empty or unavailable'
+            bars.append(metric_bar(label, value.get('value'), ratio_label, variant))
+        groups.append(f'<div class="chart-group" role="group" aria-label="{esc(platform_label(item.get("platform")))} {esc(item.get("intent"))} normalization"><h3>{esc(platform_label(item.get("platform")))} · {esc(item.get("intent"))}1 versus {esc(item.get("intent"))}2</h3>{"".join(bars)}</div>')
+    figure2 = '<figure aria-labelledby="normalization-caption"><figcaption id="normalization-caption">Pooled-union Jaccard across wording variants under three explicit mappings. Each union pools up to three eligible answers. This figure uses union overlap; it is not the pairwise mean in the previous figure. All bars share a 0–100% scale.</figcaption>' + (''.join(groups) or notes('Entity normalization comparisons are not yet available.')) + '</figure>'
+    boundary = '<p class="figure-note">OpenAI API + web search results do not represent consumer ChatGPT Search. Environment and collection time differ.</p>'
+    return figure1 + boundary, figure2 + boundary
+
+
+def reader_findings(protocol, findings):
+    authored = protocol.get('reader_findings')
+    if isinstance(authored,list) and len(authored) >= 3:
+        return authored[:3]
+    ext = findings.get('review_analyses', {})
+    comparisons = [x for x in ext.get('within_vs_cross', []) if x.get('platform') == 'Grok']
+    comparisons.sort(key=lambda x:x.get('intent',''))
+    numbers = '; '.join(f'{x.get("intent")}: {percent(pair_mean(x.get("within",{}).get("summary",{})))} within variants and {percent(pair_mean(x.get("cross",{}).get("summary",{})))} across variants' for x in comparisons)
+    api_m = next((x for x in ext.get('entity_lenses',{}).get('wording_contrasts',[]) if x.get('platform') == OPENAI_PLATFORM and x.get('intent') == 'M'), {})
+    strict = api_m.get('views',{}).get('strict',{}).get('pooled_overlap',{})
+    family = api_m.get('views',{}).get('family',{}).get('pooled_overlap',{})
+    return [
+        {'title':'Compare wording variation with repeat variation using the same statistic.', 'detail':('Grok Expert · consumer interface — '+numbers+'.') if numbers else 'The post-hoc pairwise comparison is pending; no numerical conclusion is inferred.'},
+        {'title':'Entity normalization changes the apparent overlap.', 'detail':f'For OpenAI API + web search, the M1–M2 union changes from {overlap_text(strict)} under strict names to {overlap_text(family)} under tool families. Coarser grouping can raise overlap mechanically.'},
+        {'title':'These observations inform a prompt bank, not a platform ranking.', 'detail':'Three answers per wording and environment expose variation in named tools and generated measurement advice. They do not validate a GEO score or establish a causal wording or platform effect.'},
+    ]
+
+
+def review_status_text(findings, key):
+    data = findings.get('review_support',{}).get(key,{})
+    if isinstance(data,dict):
+        if key == 'source_audit' and isinstance(data.get('summary'),dict):
+            summary = data['summary']
+            count = summary.get('requested_source_URLs')
+            accessible = summary.get('exact_source_content_accessible')
+            unavailable = summary.get('exact_source_URL_unavailable')
+            if all(isinstance(x,int) for x in (count,accessible,unavailable)):
+                return f'{count} selected sources reviewed; {accessible} exact pages accessible; {unavailable} exact page unavailable'
+        value = data.get('status') or data.get('review_status') or data.get('audit_status')
+        if value:
+            return str(value).replace('_',' ')
+    return 'not recorded'
+
+
+def reader_report(protocol, runs, attempts, findings, root, public=False, legacy_ids=()):
+    figure1, figure2 = review_figures(findings)
+    key_findings = reader_findings(protocol,findings)
+    bullets = '<ul class="conclusions">' + ''.join(f'<li><strong>{esc(x.get("title",""))}</strong> {esc(x.get("detail",""))}</li>' for x in key_findings) + '</ul>'
+    nav = [('findings','Three findings'),('pairwise','Repeat and wording variation'),('normalization','Entity normalization'),('limits','What this cannot show'),('prompt-bank','Prompt-bank implications'),('methods','Methods'),('evidence','Technical appendix and data')]
+    extras = '<a href="https://github.com/helen-bird/geo-platform-observation">GEO Learning Log repository</a><a href="../../index.html">Stage 1</a><a href="../02-post-discovery/index.html">Stage 2</a>' if public else ''
+    links = ['<a href="technical-appendix.html">Read the full technical appendix</a>',local_link('findings.json',root)]
+    for name,label in [('entity-normalization.json','Entity normalization map'),('human-review.json','Human-review record'),('source-audit.json','Source-audit record'),('review-response.md','Review response'),('prompt-bank.md','Prompt-bank guide')]:
+        if (root/name).is_file(): links.append(local_link(name,root,label))
+    if public: links.append('<a href="public-data.zip">Download public data</a>')
+    human_status = review_status_text(findings,'human_review')
+    source_status = review_status_text(findings,'source_audit')
+    count = findings['counts']
+    cost = findings['api_cost_summary'].get('known_estimate_sum_usd')
+    reader_ids = {'findings','pairwise','normalization','limits','prompt-bank','methods','evidence'}
+    known_ids = sorted(set(legacy_ids) - reader_ids)
+    safe_ids = json.dumps(known_ids, ensure_ascii=True).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+    routing = '<script>(function(){const known=new Set(' + safe_ids + ');function route(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch(_){return;}if(known.has(id)){location.replace("technical-appendix.html#"+encodeURIComponent(id));}}route();window.addEventListener("hashchange",route);})();</script>'
+    prompts = table(['Intent','Variants'],[['Measurement (M)','M1 asks how to reliably measure whether ChatGPT and Grok recommend a product, with no GEO budget; M2 asks for a free, repeatable checking workflow as a bootstrapped builder.'],['Validation (V)','V1 asks how to tell whether an AI visibility score is trustworthy, with no GEO budget; V2 asks what checks a bootstrapped builder should perform before trusting reported visibility scores. Neither specifies that the score or tool itself is free.']])
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Question sensitivity · GEO Learning Log</title><style>{CSS}{READ_CSS}</style></head><body class="reader"><div class="layout"><nav aria-label="Contents"><strong>GEO Learning Log</strong><p>Stage 3 · November 2, 2026</p><div class="links">{extras}{''.join(f'<a href="#{k}">{esc(v)}</a>' for k,v in nav)}<a href="technical-appendix.html">Full technical appendix</a></div></nav><main>
+<section id="findings"><h1>GEO advice across question variants</h1><p class="lead">A small repeated-prompt study of GEO measurement and score-validation advice for independent SaaS builders.</p><blockquote class="boundary"><strong>{API_BOUNDARY}</strong></blockquote>{bullets}</section>
+<section id="pairwise"><h2>Repeat variation and wording variation</h2>{figure1}{notes('Post-hoc descriptive analysis. The same Jaccard metric is used on both sides; pairs share answers and are not independent observations. The difference is across minus within, in percentage points. Both-empty sets are N/A; incomplete or uncoded answers are not zero. No significance test or causal effect is claimed.')}</section>
+<section id="normalization"><h2>What counts as the same tool matters</h2>{figure2}{notes('The strict names are preserved. Family and category views use an explicit, reviewable mapping added after collection; they are sensitivity checks, not independent confirmation. Merging categories can mechanically increase overlap. Empty named-tool sets can still accompany substantive unbranded advice.')}</section>
+<section id="limits"><h2>What this cannot show</h2><ul><li><strong>No platform winner or GEO effectiveness result.</strong> Grok Expert · consumer interface and OpenAI API + web search differ in interface, retrieval, model identity and collection time; all API answers were collected after Grok.</li><li><strong>No pure wording effect.</strong> The variants also change budget and action cues. Three responses per exact prompt cannot establish stable recommendation probabilities.</li><li><strong>Review remains bounded.</strong> Human-review status: {esc(human_status)}. Coding is assistant semantic review; assistant audits are not independent human double-coding. Source-audit status: {esc(source_status)}. Only explicitly checked claims have external review evidence.</li><li><strong>Citation coverage differs.</strong> Three early Grok captures lack strict complete URL mapping. Source composition is supplementary and does not establish intrinsic platform preferences.</li></ul></section>
+<section id="prompt-bank"><h2>Implications for a GEO prompt bank</h2><ul><li>Keep measurement and score-validation intents separate, and preserve each exact wording version.</li><li>Repeat a fixed prompt before interpreting differences across variants; retain the answer, date, model/interface and search evidence.</li><li>Report strict entities alongside any family mapping. Keep Citation, Mention and Recommendation separate, and name the denominator.</li><li>Treat generated scores, weights and sampling rules as advice to evaluate, not validated measurement instruments.</li></ul><p>{local_link('prompt-bank.md',root,'Read the prompt-bank guide') if (root/'prompt-bank.md').is_file() else 'The prompt-bank guide is pending.'}</p></section>
+<section id="methods"><h2>Methods in brief</h2><p>{count['complete_selected_bodies']} selected complete answers: two environments × four prompts × three repeats. The ledger preserves {count['actual_submissions']} actual prompt submissions, including {count['historical_chatgpt_ui_submissions']} historical consumer ChatGPT UI failures or partial captures. Recorded API cost estimates total US${esc(cost)}; billing is not reconciled.</p>{prompts}<blockquote><p><strong>{API_BOUNDARY}</strong></p><p>The API requested and returned the undated identifier gpt-5.6-sol with medium effort. This does not independently establish a backend snapshot or equivalence to ChatGPT web. Grok used Expert in its consumer interface; its backend was not independently established.</p><p>The pairwise and normalization comparisons were added after the original analysis. Original pooled-union metrics remain in the appendix; they must not be compared directly with pairwise means as if they measured a causal effect.</p></blockquote><p><a href="technical-appendix.html#method">Full protocol, original prompts and analysis plan</a></p></section>
+<section id="evidence"><h2>Technical appendix and data</h2><p>The appendix retains every selected answer, all failures, coding evidence, original metrics, conditional C/M/R counts, source composition, and URL-versus-domain checks. All appendix sections open by default.</p><p class="evidence-links">{'<br>'.join(links)}</p><p class="footer">Generated {esc(findings['generated_at'])}. This report is descriptive; no new model queries are made during a rebuild.</p></section>
+</main></div><noscript><p><a href="technical-appendix.html">Open the technical appendix for original report anchors.</a></p></noscript>{routing}</body></html>'''
+
+
+def review_appendix(findings, root):
+    ext = findings.get('review_analyses',{})
+    sections = [notes('These analyses were added after collection in response to review. They preserve the original metrics and use explicit mappings, with no new model answers. Pairwise means and pooled-union overlap answer different questions and are not interchangeable.')]
+    pairs=[]
+    for item in ext.get('within_vs_cross',[]):
+        for kind in ('within','cross'):
+            for p in item.get(kind,{}).get('pairs',[]):
+                pairs.append([esc(platform_label(item.get('platform'))),esc(item.get('intent')),kind,esc(p.get('left')),esc(p.get('right')),esc(overlap_text(p))])
+    sections.append(detail('Same-metric within-versus-cross pairs',table(['Environment','Intent','Pair kind','Left','Right','Jaccard'],pairs)))
+    url_rows=[]
+    for item in ext.get('url_lens',{}).get('wording_contrasts',[]):
+        for name,metric in item.get('metrics',{}).items():
+            url_rows.append([esc(platform_label(item.get('platform'))),esc(item.get('intent')),esc(name),esc(overlap_text(metric.get('pooled_overlap',{}))),esc(show(metric.get('left',{}).get('eligible_denominator')))+' / 3',esc(show(metric.get('right',{}).get('eligible_denominator')))+' / 3'])
+    sections.append(detail('URL versus domain overlap · supplementary',notes('Domain equality does not establish page equality. URL tracking cleanup is documented in the analysis policy. Strict URL results retain the three early Grok capture exclusions; observed URL results remain coverage-qualified.')+table(['Environment','Intent','Source lens','Pooled-union Jaccard','Left eligible answers','Right eligible answers'],url_rows)))
+    sections.append(detail('Complete post-hoc analysis output and validation',pre(ext)))
+    support=findings.get('review_support',{})
+    for key,filename,title in [('human_review','human-review.json','Human-review status · assistant audit is not human verification'),('source_audit','source-audit.json','Bounded source audit · unreviewed claims remain unverified')]:
+        sections.append(detail(title,notes('Status: '+review_status_text(findings,key))+pre(support.get(key,{}))+('<p>'+local_link(filename,root)+'</p>' if (root/filename).is_file() else '')))
+    return '<section id="review-analyses" class="appendix-review"><h2>Post-hoc sensitivity analyses and review status</h2>'+''.join(sections)+'</section>'
+
+
+def technical_appendix(protocol,runs,attempts,findings,root,public=False):
+    full = render_full_record(protocol,runs,attempts,findings,root)
+    reader_name='index.html' if public else 'report.html'
+    counts=findings['counts']
+    header=f'<header class="hero appendix-intro" id="overview"><h1>Technical appendix</h1><p>Stage 3: question sensitivity in GEO advice. Original analyses and complete evidence records.</p><p><a href="{reader_name}">Return to the concise reader report</a></p>{notes(API_BOUNDARY)}<p class="summary-counts">{counts["complete_selected_bodies"]} selected complete answers · {counts["eligible_coded_bodies"]} eligible assistant coding records · {counts["actual_submissions"]} actual prompt submissions.</p></header>'
+    full=re.sub(r'<header class="hero" id="overview">.*?</header>',lambda _:header,full,count=1,flags=re.S)
+    full=full.replace('<style>'+CSS+'</style>','<style>'+CSS+READ_CSS+'</style>')
+    full=full.replace('<div class="links">','<div class="links"><a href="'+reader_name+'">Concise reader report</a><a href="#review-analyses">Post-hoc analyses and review</a>',1)
+    full=full.replace('>Findings first</a>','>Appendix overview</a>')
+    full=full.replace('<section id="method">',review_appendix(findings,root)+'<section id="method">',1)
+    full=full.replace('1 · Identical-prompt repeat variation','Original identical-prompt repeat analysis').replace('2 · Wording variants within the same intent','Original pooled-union wording analysis').replace('3 · Measurement intent versus validation intent','Task alignment and intent comparison · supplementary')
+    full=full.replace('No external link checking was performed.','External checks are limited to the source-audit record; other claims remain unverified.')
+    full=full.replace('Local research only. No query, submission, publication or account change is performed by this script. Browser visual preview remains unverified; this delivery uses offline data and link checks.','Private evidence edition. Rebuilding does not make model queries or change accounts; public-release verification is recorded separately.')
+    full=re.sub(r'<title>.*?</title>','<title>Technical appendix · GEO Learning Log Stage 3</title>',full,count=1)
+    return full
 
 
 def main():
@@ -800,10 +1003,14 @@ def main():
     findings['edition'] = 'Public redacted Stage 3 edition'
     findings['public_data_root'] = 'data/'
     findings['annotation_positions'] = 'Original annotation positions are not guaranteed after privacy and URL edits; omitted from public records.'
-    report = render(protocol, runs, attempts, findings, root)
+    integrate_review_analyses(protocol, runs, findings, root)
+    appendix = technical_appendix(protocol, runs, attempts, findings, root, public=True)
+    legacy_ids = [html.unescape(x) for x in re.findall(r'\bid="([^"]+)"', appendix)]
+    report = reader_report(protocol, runs, attempts, findings, root, public=True, legacy_ids=legacy_ids)
     STAGE.mkdir(parents=True, exist_ok=True)
     (STAGE / 'findings.json').write_text(json.dumps(findings, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (STAGE / 'index.html').write_text(report, encoding='utf-8')
+    (STAGE / 'technical-appendix.html').write_text(appendix, encoding='utf-8')
     with zipfile.ZipFile(STAGE / 'public-data.zip', 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in sorted(root.rglob('*')):
             if path.is_file():
@@ -812,7 +1019,7 @@ def main():
                     raise ValueError('Unexpected file type or symbolic link in public data archive.')
                 archive.write(path, 'data/' + str(path.relative_to(root)).replace(os.sep, '/'))
         archive.write(STAGE / 'findings.json', 'findings.json')
-    print(json.dumps({'counts': findings['counts'], 'validation_issues': issues, 'outputs': ['index.html','findings.json','public-data.zip']}))
+    print(json.dumps({'counts': findings['counts'], 'validation_issues': issues, 'outputs': ['index.html','technical-appendix.html','findings.json','public-data.zip']}))
 
 
 if __name__ == '__main__':

@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "analysis_revision": "peer-review revision",
+  "status": "post-hoc assistant-coded sensitivity map; not independent human validation",
+  "scope": "All 52 strict canonical entity names already present in the frozen coding inventory. Mapping changes analysis resolution, not the original C/M/R judgments or source transcripts.",
+  "rules": [
+    "Strict names and original coding remain the primary frozen inventory.",
+    "Family is an explicitly listed branded product-line sensitivity grouping, not a universal corporate-parent identity. Different services of a large provider remain separate (Google Analytics, Google Sheets, Google Search Console).",
+    "Family grouping does not establish equivalent products, versions, prices or capabilities; unspecified aliases remain unspecified in the strict lens.",
+    "Category grouping is deliberately coarse and can mechanically increase overlap. It is not evidence of greater recommendation stability.",
+    "Category-filtered analyses retain strict names and original per-answer recommendation decisions. Channel discussion is not automatically recommendation or publication advice.",
+    "Question-supplied targets, generic methods and source-publisher-only observations remain excluded by the original codebook."
+  ],
+  "categories": {
+    "geo_visibility_product": "Specialized GEO visibility or readiness offering",
+    "general_measurement_tool": "General measurement, analytics or recordkeeping tool",
+    "research_or_publication_channel": "Research, evidence, review or publication channel",
+    "other_ai_surface_or_feature": "Other AI surface, model or retrieval feature"
+  },
+  "entities": {
+    "Ahrefs AI Visibility Checker": {
+      "family": "Ahrefs AI visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Family lens groups Ahrefs-branded visibility offerings and the explicitly unspecified Ahrefs visibility family; distinct products remain separate in the strict lens."
+    },
+    "Ahrefs AI visibility tools (unspecified)": {
+      "family": "Ahrefs AI visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Family lens groups Ahrefs-branded visibility offerings and the explicitly unspecified Ahrefs visibility family; distinct products remain separate in the strict lens."
+    },
+    "Ahrefs Brand Radar": {
+      "family": "Ahrefs AI visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Family lens groups Ahrefs-branded visibility offerings and the explicitly unspecified Ahrefs visibility family; distinct products remain separate in the strict lens."
+    },
+    "AthenaHQ Essential": {
+      "family": "AthenaHQ visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Named GEO visibility/readiness offering as described in the answer. Category does not verify its measurement validity, price or capabilities."
+    },
+    "Bing": {
+      "family": "Bing",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "Bing AI (unspecified surface)": {
+      "family": "Bing AI (unspecified surface)",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Other named AI surface or model context; no additional product identity or recommendation is inferred."
+    },
+    "Bing Webmaster Tools": {
+      "family": "Bing Webmaster Tools",
+      "category": "general_measurement_tool",
+      "rationale": "General data collection, analytics, prompt-input or recordkeeping tool; not coded as a specialized GEO visibility product."
+    },
+    "Capterra": {
+      "family": "Capterra",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "ChatGPT Search": {
+      "family": "ChatGPT consumer features",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Distinct named consumer features grouped only at a broad family lens; supplied ChatGPT target exclusions still apply."
+    },
+    "ChatGPT deep research": {
+      "family": "ChatGPT consumer features",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Distinct named consumer features grouped only at a broad family lens; supplied ChatGPT target exclusions still apply."
+    },
+    "ChatGPT shopping": {
+      "family": "ChatGPT consumer features",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Distinct named consumer features grouped only at a broad family lens; supplied ChatGPT target exclusions still apply."
+    },
+    "Claude": {
+      "family": "Claude",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Other named AI surface or model context; no additional product identity or recommendation is inferred."
+    },
+    "Crunchbase": {
+      "family": "Crunchbase",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "G2": {
+      "family": "G2",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "Gemini": {
+      "family": "Gemini",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Other named AI surface or model context; no additional product identity or recommendation is inferred."
+    },
+    "GetMentioned free AI visibility report": {
+      "family": "GetMentioned visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Named GEO visibility/readiness offering as described in the answer. Category does not verify its measurement validity, price or capabilities."
+    },
+    "GitHub": {
+      "family": "GitHub",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "Google AI (unspecified surface)": {
+      "family": "Google AI search surfaces",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Alternative AI/search surfaces named for context; unspecified surface identity remains unresolved in strict coding."
+    },
+    "Google AI Mode": {
+      "family": "Google AI search surfaces",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Alternative AI/search surfaces named for context; unspecified surface identity remains unresolved in strict coding."
+    },
+    "Google AI Overviews": {
+      "family": "Google AI search surfaces",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Alternative AI/search surfaces named for context; unspecified surface identity remains unresolved in strict coding."
+    },
+    "Google Analytics": {
+      "family": "Google Analytics",
+      "category": "general_measurement_tool",
+      "rationale": "Version-unspecified Google Analytics and explicitly named GA4 share a product-family label only in the family sensitivity lens. Strict names remain distinct; no retroactive version inference."
+    },
+    "Google Analytics 4": {
+      "family": "Google Analytics",
+      "category": "general_measurement_tool",
+      "rationale": "Version-unspecified Google Analytics and explicitly named GA4 share a product-family label only in the family sensitivity lens. Strict names remain distinct; no retroactive version inference."
+    },
+    "Google People also ask": {
+      "family": "Google Search",
+      "category": "research_or_publication_channel",
+      "rationale": "Search service and its question-discovery feature share a research-input family in this sensitivity lens; strict names remain distinct."
+    },
+    "Google Search": {
+      "family": "Google Search",
+      "category": "research_or_publication_channel",
+      "rationale": "Search service and its question-discovery feature share a research-input family in this sensitivity lens; strict names remain distinct."
+    },
+    "Google Search Console": {
+      "family": "Google Search Console",
+      "category": "general_measurement_tool",
+      "rationale": "General data collection, analytics, prompt-input or recordkeeping tool; not coded as a specialized GEO visibility product."
+    },
+    "Google Sheets": {
+      "family": "Google Sheets",
+      "category": "general_measurement_tool",
+      "rationale": "General data collection, analytics, prompt-input or recordkeeping tool; not coded as a specialized GEO visibility product."
+    },
+    "Grok API": {
+      "family": "Grok API",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Other named AI surface or model context; no additional product identity or recommendation is inferred."
+    },
+    "HubSpot AEO Grader": {
+      "family": "HubSpot grader family",
+      "category": "geo_visibility_product",
+      "rationale": "Family lens groups grader labels under HubSpot; unspecified/versioned labels are not declared identical products."
+    },
+    "HubSpot AI Search Grader": {
+      "family": "HubSpot grader family",
+      "category": "geo_visibility_product",
+      "rationale": "Family lens groups grader labels under HubSpot; unspecified/versioned labels are not declared identical products."
+    },
+    "HubSpot grader (unspecified)": {
+      "family": "HubSpot grader family",
+      "category": "geo_visibility_product",
+      "rationale": "Family lens groups grader labels under HubSpot; unspecified/versioned labels are not declared identical products."
+    },
+    "Indexly Grok Visibility Checker": {
+      "family": "Indexly visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Named GEO visibility/readiness offering as described in the answer. Category does not verify its measurement validity, price or capabilities."
+    },
+    "LinkedIn": {
+      "family": "LinkedIn",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "Llama": {
+      "family": "Llama",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Other named AI surface or model context; no additional product identity or recommendation is inferred."
+    },
+    "Mangools AI Search Grader": {
+      "family": "Mangools AI search family",
+      "category": "geo_visibility_product",
+      "rationale": "Same visibility-related branded family for this sensitivity lens; grading and monitoring capabilities remain distinct in strict coding."
+    },
+    "Mangools AI Search Watcher": {
+      "family": "Mangools AI search family",
+      "category": "geo_visibility_product",
+      "rationale": "Same visibility-related branded family for this sensitivity lens; grading and monitoring capabilities remain distinct in strict coding."
+    },
+    "Microsoft Copilot": {
+      "family": "Microsoft Copilot",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Other named AI surface or model context; no additional product identity or recommendation is inferred."
+    },
+    "Notion": {
+      "family": "Notion",
+      "category": "general_measurement_tool",
+      "rationale": "General data collection, analytics, prompt-input or recordkeeping tool; not coded as a specialized GEO visibility product."
+    },
+    "Perplexity": {
+      "family": "Perplexity",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Other named AI surface or model context; no additional product identity or recommendation is inferred."
+    },
+    "Plausible": {
+      "family": "Plausible",
+      "category": "general_measurement_tool",
+      "rationale": "General data collection, analytics, prompt-input or recordkeeping tool; not coded as a specialized GEO visibility product."
+    },
+    "PostHog": {
+      "family": "PostHog",
+      "category": "general_measurement_tool",
+      "rationale": "General data collection, analytics, prompt-input or recordkeeping tool; not coded as a specialized GEO visibility product."
+    },
+    "Product Hunt": {
+      "family": "Product Hunt",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "Ranked AI Visibility Checker": {
+      "family": "Ranked visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Named GEO visibility/readiness offering as described in the answer. Category does not verify its measurement validity, price or capabilities."
+    },
+    "Reddit": {
+      "family": "Reddit",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "Semrush AI Visibility Checker": {
+      "family": "Semrush AI visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Family grouping only; a generic Semrush visibility name is not resolved to a specific paid/free product."
+    },
+    "Semrush AI visibility tools (unspecified)": {
+      "family": "Semrush AI visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Family grouping only; a generic Semrush visibility name is not resolved to a specific paid/free product."
+    },
+    "Snoika brand checker": {
+      "family": "Snoika visibility family",
+      "category": "geo_visibility_product",
+      "rationale": "Named GEO visibility/readiness offering as described in the answer. Category does not verify its measurement validity, price or capabilities."
+    },
+    "Wikidata": {
+      "family": "Wikidata",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "X": {
+      "family": "X",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "YouTube": {
+      "family": "YouTube",
+      "category": "research_or_publication_channel",
+      "rationale": "Search, review, community, evidence, distribution or research-input channel/context. Category is not itself a recommendation and does not imply publication advice."
+    },
+    "geo-tool.com GEO check": {
+      "family": "geo-tool.com GEO readiness family",
+      "category": "geo_visibility_product",
+      "rationale": "Named GEO visibility/readiness offering as described in the answer. Category does not verify its measurement validity, price or capabilities."
+    },
+    "xAI Web Search": {
+      "family": "xAI retrieval tools",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Separate retrieval tools grouped by their explicitly named provider only for sensitivity analysis; not inferred new adoption recommendations."
+    },
+    "xAI X Search": {
+      "family": "xAI retrieval tools",
+      "category": "other_ai_surface_or_feature",
+      "rationale": "Separate retrieval tools grouped by their explicitly named provider only for sensitivity analysis; not inferred new adoption recommendations."
+    }
+  }
+}

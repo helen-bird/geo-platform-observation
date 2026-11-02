@@ -90,25 +90,47 @@ def main():
     assert not f['validation_issues']and f['counts']['eligible_coded_bodies']==24
     assert f['counts']['historical_chatgpt_ui_submissions']==3
     for name,digest in f['input_sha256'].items():assert hashlib.sha256((DATA/name).read_bytes()).hexdigest()==digest,name
-    page=Page();document=(STAGE/'index.html').read_text();page.feed(document)
-    assert page.language=='en'and len(page.ids)==len(set(page.ids))and page.details and all(page.details)
-    assert 'These results do not represent ChatGPT web app performance.'in document
-    for href in page.links:
-        u=urlsplit(href)
-        if u.scheme or u.netloc:
-            assert u.scheme in{'https','http'};continue
-        target=(STAGE/unquote(u.path)).resolve()if u.path else STAGE/'index.html'
-        assert target.is_relative_to(ROOT),href
-        if target.is_dir():target=target/'index.html'
-        assert target.is_file(),href
-        if u.fragment and target==STAGE/'index.html':assert unquote(u.fragment)in page.ids,href
+    assert f['review_analysis_code_sha256']==hashlib.sha256((ROOT/'scripts/analysis_extensions.py').read_bytes()).hexdigest()
+    ext=f['review_analyses']; assert not ext['validation_issues']
+    for pair_group in ext['within_vs_cross']:
+        assert len(pair_group['within']['pairs'])==6 and len(pair_group['cross']['pairs'])==9
+        if pair_group['platform']=='Grok':
+            assert pair_group['within']['summary']['numeric_pairs']==6
+            assert pair_group['cross']['summary']['numeric_pairs']==9
+    api_m=next(x for x in ext['entity_lenses']['wording_contrasts']if x['platform']=='OpenAI API + web search'and x['intent']=='M')
+    strict=api_m['views']['strict']['pooled_overlap']; family=api_m['views']['family']['pooled_overlap']
+    assert (strict['intersection'],strict['union'])==(0,7)and(family['intersection'],family['union'])==(1,6)
+    human=load('human-review.json')
+    assert human['status']=='awaiting_independent_human_review'and human['human_completed_cases']==0
+    assert len(human['cases'])==8 and not human['independent_human_validation_completed']
+    audit=load('source-audit.json')
+    assert audit['summary']['requested_source_URLs']==6 and not audit['all_claims_verified']
+    pages={}
+    for name in ['index.html','technical-appendix.html']:
+        page=Page();document=(STAGE/name).read_text();page.feed(document);pages[name]=page
+        assert page.language=='en'and len(page.ids)==len(set(page.ids))and all(page.details)
+        assert 'These results do not represent ChatGPT web app performance.'in document
+    assert len((STAGE/'index.html').read_bytes())<100_000,'Reader should remain concise; raw evidence belongs in appendix'
+    assert len(pages['technical-appendix.html'].details)>300,'Full expanded evidence should remain available'
+    for name,page in pages.items():
+        for href in page.links:
+            u=urlsplit(href)
+            if u.scheme or u.netloc:
+                assert u.scheme in{'https','http'};continue
+            target=(STAGE/unquote(u.path)).resolve()if u.path else STAGE/name
+            assert target.is_relative_to(ROOT),href
+            if target.is_dir():target=target/'index.html'
+            assert target.is_file(),href
+            if u.fragment and target.parent==STAGE and target.name in pages:
+                assert unquote(u.fragment)in pages[target.name].ids,href
     expected={str(p.relative_to(STAGE))for p in DATA.rglob('*')if p.is_file()}|{'findings.json'}
     with zipfile.ZipFile(STAGE/'public-data.zip')as z:
         assert z.testzip()is None and set(z.namelist())==expected
         for name in z.namelist():assert z.read(name)==(STAGE/name).read_bytes()
     print(json.dumps({'stage':3,'selected_answers':24,'prompt_submissions':27,'historical_UI_failures_or_partial':3,
                       'API_answers':12,'Grok_answers':12,'coding_records':24,'setup_records_not_answers':4,
-                      'public_files':len(files),'expanded_sections':len(page.details),'report_links':len(page.links),
+                      'public_files':len(files),'expanded_appendix_sections':len(pages['technical-appendix.html'].details),
+                      'reader_bytes':(STAGE/'index.html').stat().st_size,'report_links':sum(len(page.links)for page in pages.values()),
                       'privacy_and_data_checks':'passed'}))
 
 

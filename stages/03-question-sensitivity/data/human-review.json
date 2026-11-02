@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_independent_human_review",
+  "human_completed_cases": 0,
+  "planned_cases": 8,
+  "independent_human_validation_completed": false,
+  "purpose": "Targeted spot-check of ambiguous judgments and headline-sensitive normalization; not a random accuracy sample.",
+  "selection_method": "Purposive selection of seven entity decisions and one metric-definition decision from six answers; selected after expert review. No claim of representative error rate or independence from existing public coding.",
+  "reviewer_instructions": [
+    "Read the full linked answer, not only the excerpt.",
+    "Use the original codebook: C=own content cited, M=substantive explicit naming, R=active suggestion for this task.",
+    "Do not infer a product version from a parent/family label. Classify product identity, role and recommendation separately.",
+    "Record your independent decision and reason before comparing with the published assistant coding where possible. The originals are publicly accessible, so this is not a guaranteed blinded study.",
+    "Do not put private contact details in this public form. A public reviewer name is optional and requires that person\u2019s consent.",
+    "No agreement score, human validation rate or corrected gold standard is computed until genuine human judgments exist."
+  ],
+  "cases": [
+    {
+      "case_id": "H01",
+      "answer_id": "S3-OPENAIAPI-M2-R2",
+      "review_type": "entity_CMR",
+      "entity_to_assess": "X",
+      "question": "A suggestion to include X-centric prompts: does this actively recommend using a channel for the task, or merely describe source coverage?",
+      "evidence_excerpt": "For Grok, include a few X-centric prompts because its search capabilities can use both real-time web and X information.",
+      "public_answer_record": "records/S3-OPENAIAPI-M2-R2.json",
+      "human_decision": {
+        "citation": null,
+        "mention": null,
+        "recommendation": null,
+        "strict_entity_label": null,
+        "category": null,
+        "rationale": null
+      },
+      "reviewed_by_independent_human": false,
+      "reviewed_at": null
+    },
+    {
+      "case_id": "H02",
+      "answer_id": "S3-OPENAIAPI-M2-R2",
+      "review_type": "entity_CMR",
+      "entity_to_assess": "Google Analytics",
+      "question": "The answer does not specify GA4. Review the strict name, conditional recommendation and whether any citation is the tool\u2019s own content.",
+      "evidence_excerpt": "making them identifiable in tools such as Google Analytics.",
+      "public_answer_record": "records/S3-OPENAIAPI-M2-R2.json",
+      "human_decision": {
+        "citation": null,
+        "mention": null,
+        "recommendation": null,
+        "strict_entity_label": null,
+        "category": null,
+        "rationale": null
+      },
+      "reviewed_by_independent_human": false,
+      "reviewed_at": null
+    },
+    {
+      "case_id": "H03",
+      "answer_id": "S3-OPENAIAPI-M1-R1",
+      "review_type": "entity_CMR",
+      "entity_to_assess": "Google Search Console",
+      "question": "Is sourcing buyer wording from Search Console an active measurement-support recommendation? Keep supporting tools distinct from specialized GEO products.",
+      "evidence_excerpt": "Search Console queries",
+      "public_answer_record": "records/S3-OPENAIAPI-M1-R1.json",
+      "human_decision": {
+        "citation": null,
+        "mention": null,
+        "recommendation": null,
+        "strict_entity_label": null,
+        "category": null,
+        "rationale": null
+      },
+      "reviewed_by_independent_human": false,
+      "reviewed_at": null
+    },
+    {
+      "case_id": "H04",
+      "answer_id": "S3-OPENAIAPI-M1-R3",
+      "review_type": "entity_CMR",
+      "entity_to_assess": "Google Analytics 4",
+      "question": "Review the explicitly named analytics option and distinguish recommendation from own-content citation.",
+      "evidence_excerpt": "In GA4, Plausible, PostHog, or server logs, create a segment for:",
+      "public_answer_record": "records/S3-OPENAIAPI-M1-R3.json",
+      "human_decision": {
+        "citation": null,
+        "mention": null,
+        "recommendation": null,
+        "strict_entity_label": null,
+        "category": null,
+        "rationale": null
+      },
+      "reviewed_by_independent_human": false,
+      "reviewed_at": null
+    },
+    {
+      "case_id": "H05",
+      "answer_id": "S3-OPENAIAPI-M2-R1",
+      "review_type": "entity_CMR",
+      "entity_to_assess": "Reddit",
+      "question": "Review whether a recurring cited-source pattern is an active tool/channel recommendation.",
+      "evidence_excerpt": "Reddit or community discussions",
+      "public_answer_record": "records/S3-OPENAIAPI-M2-R1.json",
+      "human_decision": {
+        "citation": null,
+        "mention": null,
+        "recommendation": null,
+        "strict_entity_label": null,
+        "category": null,
+        "rationale": null
+      },
+      "reviewed_by_independent_human": false,
+      "reviewed_at": null
+    },
+    {
+      "case_id": "H06",
+      "answer_id": "S3-GROK-V2-R1",
+      "review_type": "entity_CMR",
+      "entity_to_assess": "GitHub",
+      "question": "Review a corroborating developer/community signal: active suggestion, contextual mention, or neither?",
+      "evidence_excerpt": "Community and third-party presence (Reddit, review sites, GitHub, directories, X engagement)\u2014these heavily influence what the models say.",
+      "public_answer_record": "records/S3-GROK-V2-R1.json",
+      "human_decision": {
+        "citation": null,
+        "mention": null,
+        "recommendation": null,
+        "strict_entity_label": null,
+        "category": null,
+        "rationale": null
+      },
+      "reviewed_by_independent_human": false,
+      "reviewed_at": null
+    },
+    {
+      "case_id": "H07",
+      "answer_id": "S3-GROK-V1-R2",
+      "review_type": "entity_CMR",
+      "entity_to_assess": "HubSpot grader (unspecified)",
+      "question": "Review the unspecified product label without inferring an AEO/AI Search product identity. Family grouping is a separate sensitivity lens.",
+      "evidence_excerpt": "Free one-off checkers (Ahrefs, Semrush limited free checks, HubSpot grader, and others) can give a directional snapshot. Treat them as low-trust starting points and always verify the important prompts yourself. They are useful for spotting gaps, not for precise scores.",
+      "public_answer_record": "records/S3-GROK-V1-R2.json",
+      "human_decision": {
+        "citation": null,
+        "mention": null,
+        "recommendation": null,
+        "strict_entity_label": null,
+        "category": null,
+        "rationale": null
+      },
+      "reviewed_by_independent_human": false,
+      "reviewed_at": null
+    },
+    {
+      "case_id": "H08",
+      "answer_id": "S3-OPENAIAPI-M2-R2",
+      "review_type": "metric_definition",
+      "question": "Does the returned Recommendation visibility formula measure mention rate, recommendation rate, or an ambiguous combination? Is the answer internally consistent elsewhere?",
+      "evidence_excerpt": "### Recommendation visibility\n\n```text\nAnswers mentioning you \u00f7 total tested answers\n```",
+      "public_answer_record": "records/S3-OPENAIAPI-M2-R2.json",
+      "human_decision": {
+        "metric_interpretation": null,
+        "rationale": null
+      },
+      "reviewed_by_independent_human": false,
+      "reviewed_at": null
+    }
+  ]
+}

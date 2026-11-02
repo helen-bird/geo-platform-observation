@@ -366,6 +366,47 @@
     "external_claims_fact_checked": false,
     "additional_API_submissions_planned": false
   },
+  "reader_findings": [
+    {
+      "title": "Repeated questions still produced different details.",
+      "detail": "Grok\u2019s strict named-recommendation sets varied across the three repeats. OpenAI API M1 also changed its proposed scoring rubric from 0\u20133 in the first two runs to \u22121/0\u20134 in the third. Generated rubrics are advice, not validated measurement standards."
+    },
+    {
+      "title": "Matched comparisons describe lower cross-wording overlap in the Grok sample.",
+      "detail": "Using the same answer-pair Jaccard metric, M averaged 35.5% within wording versus 26.0% across wording; V averaged 45.5% versus 27.0%. Six within and nine cross pairs reuse six answers per intent. These descriptive post-hoc comparisons do not identify a causal wording effect."
+    },
+    {
+      "title": "The entity definition changes the headline overlap.",
+      "detail": "OpenAI API M1/M2 pooled overlap is 0/7 under strict names and 1/6 when Google Analytics and explicitly named GA4 are grouped at the declared family level. This is a sensitivity result, not a correction to the original strict labels; coarse categories can increase overlap mechanically."
+    }
+  ],
+  "analysis_revision": {
+    "id": "peer-review-revision-1",
+    "date": "2026-11-02",
+    "trigger": "User-supplied external review of the local report",
+    "new_queries_submitted": 0,
+    "original_response_and_strict_coding_preserved": true,
+    "post_hoc_additions": [
+      "Matched within/cross-wording answer-pair Jaccard",
+      "Explicit entity-family/category sensitivity and category-filtered strict sets",
+      "Declared-cleanup URL-level comparison alongside domain overlap",
+      "Targeted human-review packet, pending genuine human judgments",
+      "Limited six-source access/support spot-check",
+      "Concise reader and complete technical appendix",
+      "Prompt-bank implications and itemized review response"
+    ],
+    "interpretation": "No significance test or causal wording/platform claim. Original pooled-union summaries remain a separately named descriptive statistic.",
+    "status": "implemented_with_independent_human_review_pending",
+    "independent_human_completed_cases": 0,
+    "prepared_human_review_cases": 8,
+    "source_audit_selected_sources": 6,
+    "source_audit_original_urls_readable": 5,
+    "source_audit_original_urls_unavailable": 1,
+    "review_response": "review-response.md",
+    "human_review_packet": "human-review.md",
+    "queries_added": 0
+  },
+  "findings_role": "Original descriptive summaries retained as historical supplementary evidence. reader_findings is the revised concise summary; review_analyses contains explicitly post-hoc calculations.",
   "publication_date": "2026-11-02",
   "public_edition": {
     "edition": "Redacted public edition",

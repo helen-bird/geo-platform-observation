@@ -40,7 +40,9 @@ def main():
         'tracking parameter': r'[?&](?:(?:a?utm_)\w+|roistat_visit|_ga|_bhlid|fbclid|gclid)=',
         'personal X context': r'your (?:existing|own) X account|Given your focus on building GEO knowledge through original content on X|X engagement|publish on X|experiments on X|\u7528\u6237\u5728X\u4e0a\u7684\u80cc\u666f',
         'excluded personal plans': r'\bX account\b|illustrative publishing context|social-first content practice|personal background anonymized|platform anonymized|\u4e2a\u4eba\u53d1\u5e03\u80cc\u666f',
-        'credential': r'Bearer [A-Za-z0-9._-]{16,}|(?:access_token|refresh_token|source_repository_credential)\s*[":=]',
+        # Cleanup-policy arrays may name a token parameter without containing a
+        # credential. Require an assigned value, rather than a quoted key alone.
+        'credential': r'Bearer [A-Za-z0-9._-]{16,}|(?:access_token|refresh_token|source_repository_credential)["\x27]?\s*[:=]\s*["\x27]?[A-Za-z0-9._/-]{12,}',
     }
     for name, value in texts:
         for label, pattern in forbidden.items():

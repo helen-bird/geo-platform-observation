@@ -6,7 +6,8 @@
     "All 27 prompt submissions, including three historical ChatGPT UI failures/partial captures",
     "All 24 assistant semantic coding records, source categories, C/M/R judgments and methodological limits",
     "Model labels, timing, actual returned search actions/queries/sources, citations and token/tool usage",
-    "Twelve allowlisted API requests and response copies, cost estimates and non-generation setup history"
+    "Twelve allowlisted API requests and response copies, cost estimates and non-generation setup history",
+    "Post-hoc peer-review analyses, explicit normalization rules, pending human-review packet, limited source audit and Prompt Bank implications"
   ],
   "removed": [
     "Private conversation/share URLs, opaque provider request/response/search-call identifiers and internal operation references",
@@ -20,7 +21,7 @@
   "citation_positions": "Original start/end/output/content indexes omitted because redaction changes text and output-item locations. Annotated URLs and their roles remain; public record hashes and body lengths are recalculated.",
   "signed_URLs": "Returned retrieval URLs can contain signed-cloud or session parameters. These parameters are removed, preserving the host/path and non-sensitive query data. Unsigned copies may not be directly fetchable; original signed URLs remain private. No destination repair or independent URL-content verification is claimed.",
   "condition_notice": "OpenAI API + web search, not consumer ChatGPT Search. These results do not represent ChatGPT web app performance.",
-  "external_claims": "Source categories are provisional. Prices, tool capabilities, generated scoring rubrics, illustrative dashboards and cited study claims in answers were not independently audited.",
+  "external_claims": "A separately recorded six-source assistant spot-check assesses access and one selected claim per source. It does not audit the full corpus, commercial accuracy, prices, tool operation or generated scoring rubrics. Independent human coding review remains pending; original source categories are historical/provisional and selected qualifications are explicit in source-audit.json.",
   "evidence_boundary": "Only public copies are transformed. Complete private originals and all original failed captures remain unchanged locally.",
   "language_policy": "Documentation and annotations are English; captured non-English UI tokens are represented with literal Unicode escapes."
 }

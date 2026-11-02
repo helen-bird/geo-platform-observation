@@ -1,0 +1,238 @@
+{
+  "checked_on": "2026-11-02",
+  "timezone": "Asia/Shanghai",
+  "auditor": "assistant",
+  "independent_human_review": false,
+  "all_claims_verified": false,
+  "scope": {
+    "sample": "Six purposively selected captured source URLs, with one verbatim captured claim selected per source.",
+    "selection_is_representative": false,
+    "post_collection_review": true,
+    "method": "Read source pages and relevant sections through web retrieval. Follow the arXiv full text and, for one inaccessible cited URL, identify related primary-origin material. Separate URL access, claim support and source role.",
+    "not_tested": [
+      "The full source corpus",
+      "Commercial score accuracy or actual tool results",
+      "Free-plan operation, pricing or entitlement",
+      "The raw calculations or reproducibility of cited studies",
+      "GEO optimization effectiveness",
+      "Independent human agreement with assistant coding"
+    ],
+    "original_records_changed": false
+  },
+  "items": [
+    {
+      "id": "SA-01",
+      "source_url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "related_answer_ids": [
+        "S3-OPENAIAPI-M2-R1",
+        "S3-OPENAIAPI-M1-R1",
+        "S3-OPENAIAPI-M1-R2",
+        "S3-OPENAIAPI-V1-R2",
+        "S3-OPENAIAPI-M2-R3",
+        "S3-OPENAIAPI-V1-R3"
+      ],
+      "selected_claim_answer_id": "S3-OPENAIAPI-M1-R1",
+      "claim_excerpt": "For ChatGPT search eligibility, OpenAI specifically recommends allowing `OAI-SearchBot`; inclusion or placement is still not guaranteed.",
+      "checked_on": "2026-11-02",
+      "access": {
+        "status": "accessible",
+        "method": "Read public source with web retrieval open/find; no sign-in, product execution or paid API request.",
+        "http_status": null,
+        "evidence": "Readable official help article. The website-eligibility section states that the crawler and its published traffic must be allowed; the preceding sentence disclaims guaranteed placement."
+      },
+      "support": {
+        "verdict": "supported_selected_claim",
+        "rationale": "The eligibility advice and non-guarantee are present. This is documentation support for the selected claim, not a crawl test of a real product site or proof that allowing a bot increases recommendations."
+      },
+      "source_role": {
+        "original": "Platform documentation",
+        "reviewed": "Platform documentation",
+        "status": "verified",
+        "qualification": "Official OpenAI help; current text checked after collection. Other claims in the answer, including cross-platform behavior, were not checked."
+      },
+      "short_source_quote": "Placement is not guaranteed.",
+      "evidence_locator": "Make your website available in search results",
+      "live_generation_or_product_test_performed": false
+    },
+    {
+      "id": "SA-02",
+      "source_url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+      "related_answer_ids": [
+        "S3-OPENAIAPI-V2-R1",
+        "S3-OPENAIAPI-V2-R3",
+        "S3-OPENAIAPI-M1-R3"
+      ],
+      "selected_claim_answer_id": "S3-OPENAIAPI-V2-R1",
+      "claim_excerpt": "xAI\u2019s own evaluation guidance warns that model judges can exhibit position bias, favor longer answers, and drift from human judgment.",
+      "checked_on": "2026-11-02",
+      "access": {
+        "status": "accessible",
+        "method": "Read public source with web retrieval open/find; no sign-in, product execution or paid API request.",
+        "http_status": null,
+        "evidence": "Readable official best-practices page. Its grader table lists the three risks; the next paragraph recommends rubrics, randomized order and comparison with human labels."
+      },
+      "support": {
+        "verdict": "supported_selected_claim",
+        "rationale": "The selected warning is directly supported. It does not supply a measured error rate for this experiment or establish that assistant coding agrees with a person."
+      },
+      "source_role": {
+        "original": "Platform documentation",
+        "reviewed": "Platform documentation",
+        "status": "verified",
+        "qualification": "Provider guidance, not independent validation of Stage 3 coding. Genuine human review remains pending."
+      },
+      "short_source_quote": "Position bias, preference for longer answers, drift from human judgment",
+      "evidence_locator": "Evaluate Grok models / Design the eval",
+      "live_generation_or_product_test_performed": false
+    },
+    {
+      "id": "SA-03",
+      "source_url": "https://arxiv.org/abs/2410.03492",
+      "related_answer_ids": [
+        "S3-OPENAIAPI-V2-R1"
+      ],
+      "selected_claim_answer_id": "S3-OPENAIAPI-V2-R1",
+      "claim_excerpt": "LLM evaluations can vary across repeated runs and small wording changes, so aggregate rankings without uncertainty can look more definitive than they are.",
+      "checked_on": "2026-11-02",
+      "access": {
+        "status": "accessible",
+        "method": "Read public source with web retrieval open/find; no sign-in, product execution or paid API request.",
+        "http_status": null,
+        "evidence": "Abstract and full text were readable. Limitations excludes linguistic-variation analysis; experiments concern repeated spatial-reasoning tests."
+      },
+      "support": {
+        "verdict": "partially_supported",
+        "rationale": "Supports repeat uncertainty, not the wording-change clause: linguistic variation was explicitly untested. GEO metrics were not evaluated."
+      },
+      "source_role": {
+        "original": "Academic or independent methods research",
+        "reviewed": "Academic or independent methods research",
+        "status": "verified",
+        "qualification": "Original spatial-reasoning methods preprint; peer review and replication were not established."
+      },
+      "short_source_quote": "We have not looked at the impact of linguistic variation",
+      "evidence_locator": "Version 2, Conclusions and Limitations",
+      "readable_full_text_url": "https://arxiv.org/html/2410.03492v2",
+      "material_caution": "Partial sentence support; original coding remains unchanged."
+    },
+    {
+      "id": "SA-04",
+      "source_url": "https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/",
+      "related_answer_ids": [
+        "S3-GROK-V2-R2"
+      ],
+      "selected_claim_answer_id": "S3-GROK-V2-R2",
+      "claim_excerpt": "SparkToro research (nearly 3,000 runs across ChatGPT, Claude, and Google AI) found less than a 1-in-100 chance of identical brand lists and roughly 1-in-1,000 for the same list in the same order.",
+      "checked_on": "2026-11-02",
+      "access": {
+        "status": "accessible",
+        "method": "Read public source with web retrieval open/find; no sign-in, product execution or paid API request.",
+        "http_status": null,
+        "evidence": "Readable original research post. It reports 2,961 volunteer runs across three services, approximate list/order repetition statements, and a collaboration with Gumshoe."
+      },
+      "support": {
+        "verdict": "supported_as_reported_with_scope_limits",
+        "rationale": "The attributed study and approximations are present. The text gives a slightly different qualification for Claude, and Grok was not tested. Statistical calculations, raw responses and population-level probabilities were not independently reproduced."
+      },
+      "source_role": {
+        "original": "Vendor research or case study",
+        "reviewed": "Vendor research or case study",
+        "status": "verified",
+        "qualification": "Original commercial research collaboration with disclosed interests; not an independent audit of all visibility vendors or of Stage 3. This is support that the authors reported the results, not validation of universal rates."
+      },
+      "evidence_locator": "Experiment setup, list/order variability and stated limitations",
+      "commercial_provenance": "SparkToro study with a Gumshoe collaborator; interests disclosed in the article."
+    },
+    {
+      "id": "SA-05",
+      "source_url": "https://ahrefs.com/free-ai-visibility",
+      "related_answer_ids": [
+        "S3-GROK-V1-R1"
+      ],
+      "selected_claim_answer_id": "S3-GROK-V1-R1",
+      "claim_excerpt": "Ahrefs free AI Visibility Checker (brand name in \u2192 mentions across several engines, top topics/domains)",
+      "checked_on": "2026-11-02",
+      "access": {
+        "status": "accessible_after_redirect",
+        "method": "Read public source with web retrieval open/find; no sign-in, product execution or paid API request.",
+        "http_status": null,
+        "evidence": "The supplied path redirected to the Ahrefs AI Visibility Checker page. The readable vendor page describes brand-name input, multi-platform mentions, topics and cited domains."
+      },
+      "support": {
+        "verdict": "supported_vendor_description_only",
+        "rationale": "The named product and described report features are advertised. No query was submitted, no account or payment was used, and no score accuracy, plan entitlement or free-price claim was tested. The listed platforms do not establish Grok coverage."
+      },
+      "source_role": {
+        "original": "Tool/product documentation or sales page",
+        "reviewed": "Tool/product documentation or sales page",
+        "status": "verified",
+        "qualification": "First-party product description, not an independently validated measurement method. The captured recommendation remains an observed model recommendation."
+      },
+      "evidence_locator": "How to check your brand\u2019s AI visibility / What\u2019s in your report",
+      "resolved_url": "https://ahrefs.com/ai-visibility-checker",
+      "live_generation_or_product_test_performed": false
+    },
+    {
+      "id": "SA-06",
+      "source_url": "https://markets.businessinsider.com/news/stocks/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists-1036643461",
+      "related_answer_ids": [
+        "S3-GROK-V1-R1",
+        "S3-GROK-V2-R1",
+        "S3-GROK-V1-R2",
+        "S3-GROK-V2-R2",
+        "S3-GROK-V2-R3",
+        "S3-GROK-V1-R3"
+      ],
+      "selected_claim_answer_id": "S3-GROK-V1-R1",
+      "claim_excerpt": "One 2026 benchmark found average top-five shortlist overlap of about 43% when the *same* engine answered the same questions again, and only ~17% *across* engines.",
+      "checked_on": "2026-11-02",
+      "access": {
+        "status": "unavailable_via_retrieval_tool",
+        "method": "Read public source with web retrieval open/find; no sign-in, product execution or paid API request.",
+        "http_status": null,
+        "evidence": "The exact Markets URL returned a tool access error, without a verifiable HTTP status. A same-title originating Crackle PR release on GlobeNewswire and the agency\u2019s methodology page were readable."
+      },
+      "support": {
+        "verdict": "corroborated_by_origin_not_exact_cited_page",
+        "rationale": "The originating release reports the selected figures for a 500-answer, four-API B2B PR benchmark and defines overlap as Jaccard. This does not verify the inaccessible Markets copy, reproduce the calculations or generalize to consumer interfaces."
+      },
+      "source_role": {
+        "original": "Editorial or industry reporting",
+        "reviewed": "First-party agency research press release; exact Markets copy unavailable",
+        "status": "qualified",
+        "qualification": "The readable origin is a commercially interested agency\u2019s release, not independent editorial research. The original Markets category needs a qualification; exact syndication identity was not authenticated. No original category is silently overwritten."
+      },
+      "evidence_locator": "Originating release: experiment description and Scope and Limits; agency methodology: actual collection",
+      "related_primary_sources": [
+        {
+          "url": "https://www.globenewswire.com/fr/news-release/2026/10/20/3384392/0/en/there-is-no-single-ai-visibility-score-ask-four-ais-get-four-shortlists.html",
+          "role": "Originating release; labelled Source: Crackle PR",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.cracklepr.com/ai-visibility-index/methodology",
+          "role": "Original agency methodology",
+          "access_status": "accessible"
+        }
+      ],
+      "material_caution": "Do not treat the host name or a syndicated release as proof of independent editorial provenance. The inaccessible exact URL remains unverified."
+    }
+  ],
+  "summary": {
+    "requested_source_URLs": 6,
+    "exact_source_content_accessible": 5,
+    "exact_source_URL_unavailable": 1,
+    "support_verdict_counts": {
+      "supported_selected_claim": 2,
+      "partially_supported": 1,
+      "supported_as_reported_with_scope_limits": 1,
+      "supported_vendor_description_only": 1,
+      "corroborated_by_origin_not_exact_cited_page": 1
+    },
+    "material_findings": [
+      "The arXiv citation supports repeated-run uncertainty, but not the accompanying wording-change claim.",
+      "The inaccessible Markets citation has a readable commercial press-release origin. Keep exact-URL unavailability and editorial-provenance qualification visible."
+    ],
+    "interpretation": "A supported attribution or feature description is narrower than an independently verified empirical claim. These checks do not validate every source or replace actual human review."
+  }
+}
