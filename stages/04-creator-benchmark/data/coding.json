@@ -1,0 +1,1014 @@
+[
+  {
+    "run_id": "S4-GROK-Q2-R1",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q2-R1",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q2-R1",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R1",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R1",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R1",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [
+      "https://thegeolab.net/geo-brand-citation-index/"
+    ],
+    "evidence": [],
+    "note": "The GEO Lab URL appears in returned retrieval sources only. No full-body candidate mention/citation/recommendation; retrieval evidence is not promoted into C/M/R."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R1",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R1",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R1",
+    "candidate_id": "artur-ferreira",
+    "person_mention": true,
+    "asset_mentions": [
+      "The GEO Lab",
+      "GEO Field Manual",
+      "Pocket Guide"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": true,
+    "asset_recommendations": [
+      "The GEO Lab",
+      "GEO Field Manual",
+      "Pocket Guide"
+    ],
+    "own_content_urls": [
+      "https://thegeolab.net/ebooks/",
+      "https://thegeolab.net/field-manual/"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "The GEO Lab (Artur Ferreira at thegeolab.net)",
+      "Start with the GEO Lab\u2019s free Pocket Guide or Field Manual for a structured framework"
+    ],
+    "note": "Named creator and assets recommended with two direct content links. Model claims about original tests require independent source audit."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R1",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R1",
+    "candidate_id": "kevin-indig",
+    "person_mention": true,
+    "asset_mentions": [
+      "Growth Memo"
+    ],
+    "mention": true,
+    "citation": false,
+    "recommendation": true,
+    "person_recommendation": true,
+    "asset_recommendations": [
+      "Growth Memo"
+    ],
+    "own_content_urls": [],
+    "third_party_urls": [
+      "https://searchengineland.com/chatgpt-citations-content-study-469483"
+    ],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "Kevin Indig\u2019s Growth Memo \u2014 best independent analyst",
+      "If you value independence and original analysis most: follow Kevin Indig."
+    ],
+    "note": "Source audit confirms Danny Goodwin is the Search Engine Land author. This is third-party reporting about Kevin\u2019s research, not Kevin-owned/bylined body content. M/R remain true."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R1",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R1",
+    "candidate_id": "aleyda-solis",
+    "person_mention": true,
+    "asset_mentions": [
+      "LearningAIsearch.com",
+      "LearningSEO.io"
+    ],
+    "mention": true,
+    "citation": false,
+    "recommendation": true,
+    "person_recommendation": false,
+    "asset_recommendations": [
+      "LearningAIsearch.com"
+    ],
+    "own_content_urls": [],
+    "third_party_urls": [
+      "https://frankchiu.io/geo-course-recommendation/"
+    ],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "LearningAIsearch.com by Aleyda Solis",
+      "Work through The GEO Community /start path or LearningAIsearch.com roadmap."
+    ],
+    "note": "Recommended roadmap with personal attribution. Inline citation is third-party coverage, not own-content citation; LearningSEO.io appears incidentally as a related resource."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R1",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R1",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [
+      "The GEO Lab"
+    ],
+    "mention": true,
+    "citation": false,
+    "recommendation": true,
+    "person_recommendation": false,
+    "asset_recommendations": [
+      "The GEO Lab ebooks"
+    ],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "The GEO Lab (thegeolab.net/ebooks/): Multiple free ebooks",
+      "Download a couple of GEO Lab ebooks or checklists."
+    ],
+    "note": "Asset-only recommendation; no Artur name. A displayed plain-text URL references the ebooks page, but it is not an inline hyperlink in the strict primary C inventory; retain this separate textual-reference evidence.",
+    "textual_source_references": [
+      "https://thegeolab.net/ebooks/"
+    ]
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R1",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R1",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R1",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q2-R2",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q2-R2",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q2-R2",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R2",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R2",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R2",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R2",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R2",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R2",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R2",
+    "candidate_id": "aleyda-solis",
+    "person_mention": true,
+    "asset_mentions": [
+      "LearningAIsearch.com",
+      "LearningSEO.io",
+      "SEOFOMO"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": false,
+    "asset_recommendations": [
+      "LearningAIsearch.com",
+      "SEOFOMO"
+    ],
+    "own_content_urls": [
+      "https://learningaisearch.com/about/"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "LearningAIsearch.com by Aleyda Solis",
+      "practitioner blogs/newsletters ... Aleyda Solis\u2019s SEOFOMO",
+      "Follow LearningAIsearch.com roadmap"
+    ],
+    "note": "Aleyda named; own About-page citation confirms resource/author identity. LearningSEO.io is mentioned as a related resource, not the primary recommendation."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R2",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R2",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [
+      "The GEO Lab"
+    ],
+    "mention": true,
+    "citation": false,
+    "recommendation": true,
+    "person_recommendation": false,
+    "asset_recommendations": [
+      "The GEO Lab pocket guide"
+    ],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "The GEO Lab free ebooks/guides (thegeolab.net)",
+      "Follow LearningAIsearch.com roadmap and The GEO Lab pocket guide."
+    ],
+    "note": "Associated resource recommendation; Artur is not personally named. The plain domain is mentioned without an observable inline own-content hyperlink.",
+    "textual_source_references": [
+      "https://thegeolab.net/"
+    ]
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R2",
+    "candidate_id": "aleyda-solis",
+    "person_mention": true,
+    "asset_mentions": [
+      "LearningSEO.io"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": true,
+    "asset_recommendations": [
+      "LearningSEO.io"
+    ],
+    "own_content_urls": [
+      "https://learningseo.io/seo_roadmap/optimize-ai-search/"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "LearningSEO.io by Aleyda Sol\u00eds \u2014 best curated learning path",
+      "LearningSEO.io to map the subject."
+    ],
+    "note": "Post-collection audit of LearningSEO.io About independently confirms Aleyda as founder/curator. Count citation to the owned curated page; do not attribute external linked articles to her."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R2",
+    "candidate_id": "kevin-indig",
+    "person_mention": true,
+    "asset_mentions": [
+      "Growth Memo"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": true,
+    "asset_recommendations": [
+      "Growth Memo"
+    ],
+    "own_content_urls": [
+      "https://www.growth-memo.com/p/the-consensus-gap"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "Growth Memo by Kevin Indig \u2014 best for interpreting new evidence",
+      "Growth Memo\u2019s skepticism and measurement work"
+    ],
+    "note": "Explicit selected analyst and associated publication, with direct own-publication body link. Page claims are not validated by recommendation coding."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R2",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R2",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read the full answer; no explicit candidate/asset or identifiable own/bylined body citation observed. No independent human double coding."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R2",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read the full answer; no explicit candidate/asset or identifiable own/bylined body citation observed. No independent human double coding."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R2",
+    "candidate_id": "artur-ferreira",
+    "person_mention": true,
+    "asset_mentions": [
+      "The GEO Lab",
+      "GEO Field Manual"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": true,
+    "asset_recommendations": [
+      "GEO Field Manual"
+    ],
+    "own_content_urls": [
+      "https://thegeolab.net/field-manual/"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "The GEO Lab (Artur Ferreira)",
+      "This is among the most rigorous free, data-backed resources available."
+    ],
+    "note": "Strong affirmative recommendation with direct own-asset citation. Rigor and experimental-result claims are tested-answer claims, not validated by the coding."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R3",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read the full answer; no explicit candidate/asset or identifiable own/bylined body citation observed. No independent human double coding."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R3",
+    "candidate_id": "kevin-indig",
+    "person_mention": true,
+    "asset_mentions": [
+      "Growth Memo"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": true,
+    "asset_recommendations": [
+      "Growth Memo"
+    ],
+    "own_content_urls": [
+      "https://www.kevin-indig.com/talks/winners-losers-ai-search"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "Kevin Indig / Growth Memo",
+      "For a solo founder, I would subscribe to Growth Memo"
+    ],
+    "note": "Post-collection audit confirms the personal site and first-person talk transcript belong to Kevin. His aggregate research claims are not independently validated by this attribution."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q3-R3",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [
+      "The GEO Lab"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": false,
+    "asset_recommendations": [
+      "The GEO Lab experiment workbook"
+    ],
+    "own_content_urls": [
+      "https://thegeolab.net/geo-experiments/"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "The GEO Lab | Best emerging, builder-friendly resource",
+      "use The GEO Lab as an experiment workbook"
+    ],
+    "note": "Explicit associated-resource recommendation and direct body link; no personal name Artur Ferreira appears."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R3",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R3",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q2-R3",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R3",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R3",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q3-R3",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q2-R3",
+    "candidate_id": "aleyda-solis",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q2-R3",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q2-R3",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R3",
+    "candidate_id": "aleyda-solis",
+    "person_mention": true,
+    "asset_mentions": [
+      "Learning AI Search"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": false,
+    "asset_recommendations": [
+      "Learning AI Search"
+    ],
+    "own_content_urls": [
+      "https://learningaisearch.com/about/"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "Learning AI Search by Aleyda Solis",
+      "Best ongoing learning roadmap",
+      "use it as your continuously updated reference library."
+    ],
+    "note": "Asset explicitly recommended; personal name explicit but recommendation target is the roadmap. Own About page body hyperlink already established for this asset."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R3",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-OPENAIAPI-Q1-R3",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R3",
+    "candidate_id": "aleyda-solis",
+    "person_mention": true,
+    "asset_mentions": [
+      "LearningAIsearch.com",
+      "LearningSEO.io"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": false,
+    "asset_recommendations": [
+      "LearningAIsearch.com",
+      "LearningSEO.io"
+    ],
+    "own_content_urls": [
+      "https://learningaisearch.com/",
+      "https://learningaisearch.com/about/"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "LearningAIsearch.com (by Aleyda Solis)",
+      "Follow LearningAIsearch.com + The GEO Community",
+      "Cross-check with ... LearningSEO.io"
+    ],
+    "note": "Roadmap actively recommended and personally attributed; LearningSEO.io also suggested for fundamentals. Direct roadmap homepage and About hyperlinks in body."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R3",
+    "candidate_id": "kevin-indig",
+    "person_mention": false,
+    "asset_mentions": [],
+    "mention": false,
+    "citation": false,
+    "recommendation": false,
+    "person_recommendation": false,
+    "asset_recommendations": [],
+    "own_content_urls": [],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [],
+    "note": "Assistant read full answer: no explicit personal/associated-asset mention, recommendation, or identifiable own/bylined body citation observed. This is not an exhaustive authorship audit of every external page."
+  },
+  {
+    "run_id": "S4-GROK-Q1-R3",
+    "candidate_id": "artur-ferreira",
+    "person_mention": false,
+    "asset_mentions": [
+      "The GEO Lab",
+      "GEO Pocket Guide"
+    ],
+    "mention": true,
+    "citation": true,
+    "recommendation": true,
+    "person_recommendation": false,
+    "asset_recommendations": [
+      "The GEO Lab Free Ebooks",
+      "GEO Pocket Guide"
+    ],
+    "own_content_urls": [
+      "https://thegeolab.net/ebooks/"
+    ],
+    "third_party_urls": [],
+    "retrieval_only_urls": [],
+    "evidence": [
+      "The GEO Lab Free Ebooks",
+      "Download the GEO Lab Pocket Guide for a concise checklist."
+    ],
+    "note": "Asset recommendation with direct linked ebooks page; no Artur name in body. Unlike Q1 R1/R2, this run has an observable own-content hyperlink."
+  }
+]

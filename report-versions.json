@@ -9,9 +9,9 @@
       "experiment_dates": "2026-10-29 to 2026-10-30",
       "first_published": "2026-10-30",
       "first_publication_evidence": "Git commit ab0c22c, the first public report commit. No earlier hosting date is inferred.",
-      "last_revised": "2026-11-02",
-      "version": "1.1",
-      "revision_note": "Clarified mixed recommended entities, citation denominators and repeat-condition changes; added post-hoc entity types and a bounded source audit; split reader and expanded appendix. Original data and outcomes unchanged."
+      "last_revised": "2026-11-03",
+      "version": "1.2",
+      "revision_note": "Added the question-oriented Learning Hub and shared four-stage navigation. Earlier experiment outcomes, evidence, analyses and qualifications are unchanged."
     },
     {
       "stage": 2,
@@ -20,9 +20,9 @@
       "experiment_dates": "2026-10-31",
       "first_published": "2026-11-01",
       "first_publication_evidence": "Git commit 1b7e89e and the original public-edition record.",
-      "last_revised": "2026-11-02",
-      "version": "1.1",
-      "revision_note": "Clarified six selected cells versus ten submissions, search and manual-control evidence; separated post-publication X search observations; split reader and expanded appendix. Original A/B/C outcomes unchanged."
+      "last_revised": "2026-11-03",
+      "version": "1.2",
+      "revision_note": "Added the question-oriented Learning Hub and shared four-stage navigation. Earlier experiment outcomes, evidence, analyses and qualifications are unchanged."
     },
     {
       "stage": 3,
@@ -31,9 +31,20 @@
       "experiment_dates": "2026-11-02",
       "first_published": "2026-11-02",
       "first_publication_evidence": "Git commit f18647b.",
-      "last_revised": "2026-11-02",
-      "version": "1.2",
-      "revision_note": "Added the shared experiment navigation and explicit version metadata. The preceding peer-review analyses, API qualification and pending human-review status are unchanged."
+      "last_revised": "2026-11-03",
+      "version": "1.3",
+      "revision_note": "Added the question-oriented Learning Hub and shared four-stage navigation. Earlier experiment outcomes, evidence, analyses and qualifications are unchanged."
+    },
+    {
+      "stage": 4,
+      "title": "Creator Benchmark",
+      "path": "stages/04-creator-benchmark/index.html",
+      "experiment_dates": "2026-11-03",
+      "first_published": "2026-11-03",
+      "first_publication_evidence": "First redacted public edition, authorized November 3, 2026; the repository Git history records its release commit.",
+      "last_revised": "2026-11-03",
+      "version": "1.0",
+      "revision_note": "First redacted public edition after peer review: 18 complete answers, separate person and asset observations, question-level results, eight actual cited-page audits, full expanded evidence and preserved collection recovery. The OpenAI arm uses the Responses API with web search, not consumer ChatGPT Search."
     }
   ]
 }

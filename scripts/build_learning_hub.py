@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""Build the question-oriented public learning index, offline and without model calls."""
+from html import escape
+from html.parser import HTMLParser
+import json
+from pathlib import Path
+import posixpath
+import re
+import sys
+from urllib.parse import unquote, urlsplit
+
+ROOT = Path(__file__).resolve().parents[1]
+SITE = 'https://helen-bird.github.io/geo-platform-observation/'
+DATE = '2026-11-03'
+QUESTIONS = {
+    1: ('How do AI search engines choose sources?',
+        'Repeated GEO questions to ChatGPT Search and Grok show differences in recommended entities, cited sources and repeat overlap. Citation, mention and recommendation are separate observations.',
+        '12 selected answers; three questions, two consumer interfaces, two repeats. Model and timing changes limit repeat comparisons.'),
+    2: ("Why can’t AI find my public content?",
+        'Direct URL access, exact-quotation search and unbranded natural discovery test different retrieval tasks. A successful direct read does not imply successful natural discovery.',
+        'Six selected A/B/C answers; all ten submissions and technical/capture failures preserved. A qualified manual replacement and later native-search observations remain separate.'),
+    3: ('How reliable are GEO measurements?',
+        'Repeated and reworded questions explore how measurement advice, cited domains and recommended tools change. Matched comparisons and normalization sensitivity clarify the limits of one-shot scores.',
+        '24 selected answers; two intents, two wordings, two environments, three repeats. OpenAI Responses API + web search is not consumer ChatGPT Search.'),
+    4: ('Which independent GEO creators get recommended?',
+        'New answers test three historically selected creator families. Actual cited-page audits separate content organization, author attribution, evidence quality and untested practices.',
+        '18 selected answers, three candidate creators and eight cited-page audits. Question-level n=3 results are primary; personal-name visibility is separate from associated content assets.'),
+}
+CSS = '''
+:root{--ink:#182b36;--muted:#4f6873;--line:#dce5e9;--accent:#176a76;--soft:#eaf4f4}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px;scrollbar-color:#7b9da5 #edf3f5}body{margin:0;color:var(--ink);background:white;font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}::selection{background:#b8dedf;color:#12383f}a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}a:hover{text-decoration-thickness:2px}:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.layout{display:grid;grid-template-columns:235px minmax(0,1fr);min-height:100vh}nav{position:sticky;top:0;height:100vh;overflow:auto;background:#17343d;color:#edf7f7;padding:30px 22px}nav strong{display:block;font-size:19px;line-height:1.35;margin-bottom:18px}nav a{display:block;color:#e0eeee;text-decoration:none;padding:8px 0;font-size:14px}nav p{font-size:12px;color:#bed4db}.nav-group{border-top:1px solid #385660;margin-top:20px;padding-top:16px}main{min-width:0;max-width:1260px;padding:44px 5vw 80px}h1{font-size:clamp(30px,3vw,42px);line-height:1.17;letter-spacing:-.035em;margin:0 0 22px;max-width:24ch}h2{font-size:26px;line-height:1.3;margin:0 0 12px;max-width:30ch}h3{font-size:18px;margin:28px 0 12px}h1,h2,h3{text-wrap:balance}p,li,blockquote{max-width:72ch}p{margin:10px 0}.lead{font-size:18px}.author{font-size:14px;color:var(--muted);margin-bottom:24px}.lessons{margin-top:38px}.lesson{padding:30px 0 34px;border-top:1px solid var(--line)}.lesson-name{font-size:15px;font-weight:700;margin:0 0 7px}.links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px}.links a{font-size:15px;font-weight:650}blockquote{border-left:1px solid #7bafb5;background:var(--soft);margin:18px 0;padding:12px 17px;color:#385560;font-size:14px}blockquote p:first-child{margin-top:0}blockquote p:last-child{margin-bottom:0}.dates{font-size:13px;font-variant-numeric:tabular-nums}.afterword{border-top:1px solid var(--line);padding-top:28px;margin-top:20px}.footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;margin-top:34px}.skip{position:absolute;left:12px;top:-80px;background:white;padding:10px;z-index:5}.skip:focus{top:12px}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr)}nav{padding:25px 17px}main{padding:30px}}
+@media(max-width:650px){.layout{display:block}nav{position:static;height:auto;padding:18px 20px}nav strong{margin-bottom:10px;font-size:18px}.nav-links{display:flex;flex-wrap:wrap;gap:3px 18px}nav a{font-size:12px;padding:5px 0}nav .nav-group{margin-top:12px;padding-top:10px}nav p{margin:5px 0}main{padding:28px 20px 54px}h1{font-size:31px}h2{font-size:24px}.lead{font-size:16px}.lesson{padding:26px 0}.links{gap:9px 18px}.links a{font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{nav{display:none}.layout{display:block}main{max-width:none;padding:0}a{color:inherit}.lesson{break-inside:avoid}}
+'''
+
+
+def render():
+    reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
+    assert [r['stage'] for r in reports] == [1, 2, 3, 4]
+    relative = lambda path: posixpath.relpath(path, 'learning-hub')
+    anchors = ''.join('<a href="#lab-'+str(r['stage'])+'">#'+f'{r["stage"]:02d}'+' · '+escape(r['title'])+'</a>' for r in reports)
+    article = ''
+    for r in reports:
+        number = r['stage']
+        question, summary, boundary = QUESTIONS[number]
+        directory = posixpath.dirname(r['path'])
+        at = lambda name: relative(posixpath.join(directory, name))
+        article += '<article class="lesson" id="lab-'+str(number)+'"><p class="lesson-name">GEO Lab #'+f'{number:02d}'+' · '+escape(r['title'])+'</p><h2>'+escape(question)+'</h2><p>'+escape(summary)+'</p>'
+        article += '<blockquote><p>'+escape(boundary)+'</p><p class="dates"><strong>Author:</strong> Helen Bird · <strong>Experiment:</strong> '+escape(r['experiment_dates'])+'<br><strong>First public report:</strong> '+escape(r['first_published'])+' · <strong>Last revised:</strong> '+escape(r['last_revised'])+' · <strong>Version:</strong> '+escape(r['version'])+'</p></blockquote>'
+        article += '<div class="links"><a href="'+escape(relative(r['path']),quote=True)+'">Read report</a><a href="'+escape(at('public-data.zip'),quote=True)+'">Download public data</a><a href="'+escape(at('technical-appendix.html'),quote=True)+'">Read original evidence</a></div>'
+        if number == 1:
+            article += '<p><a href="https://x.com/bird_helen67403/status/2116080254523445676">Original GEO Lab #01 post</a></p>'
+        article += '</article>'
+    document = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Helen Bird · GEO Learning Hub</title><meta name="description" content="A question-oriented index of Helen Bird's ongoing GEO learning experiments, original public data, reports and limitations."><link rel="canonical" href="'''+SITE+'''learning-hub/"><style>'''+CSS+'''</style></head><body><a class="skip" href="#main">Skip to learning questions</a><div class="layout"><nav aria-label="Learning Hub contents"><strong>GEO Learning Log</strong><div class="nav-links"><a href="#main" aria-current="page">Learning Hub</a>'''+anchors+'''<a href="#use-evidence">Use the evidence</a></div><div class="nav-group"><a href="https://github.com/helen-bird/geo-platform-observation">Repository and data guide</a><a href="../report-versions.json">Report versions</a><a href="../CHANGELOG.md">Revision history</a></div><p>An ongoing learning record.</p></nav><main id="main"><h1>Helen Bird · GEO Learning Hub</h1><p class="lead">Start with a question. Follow the experiment, then inspect the original public evidence.</p><p class="author"><strong>Author:</strong> Helen Bird · <strong>Published:</strong> '''+DATE+''' · <strong>Updated:</strong> '''+DATE+'''</p><blockquote><p>These small exploratory experiments document what the tested systems returned under recorded conditions. They do not prove a GEO tactic works or establish stable visibility among real users.</p><p>This new index is a content-organization practice suggested by the creator audit. Whether it improves AI discovery or recommendations remains untested.</p></blockquote><div class="lessons">'''+article+'''</div><section class="afterword" id="use-evidence"><h2>Use the evidence</h2><ul><li><strong>Read by user intent.</strong> Results from different tasks should not be pooled into a universal recommendation score.</li><li><strong>Keep outcomes distinct.</strong> Page citation, content-brand recommendation, personal-name mention and personal recommendation are different observations.</li><li><strong>Check the collection interface.</strong> Labs #03 and #04 use OpenAI Responses API + web search. They do not represent consumer ChatGPT Search performance.</li></ul><p>Each report links a complete, expanded technical appendix and downloadable redacted data. Private originals and account evidence remain local. Use GitHub’s Copy permalink to cite a fixed revision, and include the answer or observation ID.</p><p>New questions and experiments will be added as learning continues. Earlier methods, corrections and limitations remain visible in the record.</p></section><p class="footer">Helen Bird · GEO Learning Log · <a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p></main></div></body></html>'''
+    return document
+
+
+class HubParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.ids = []
+        self.links = []
+        self.lessons = []
+        self.closed_sections = 0
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if 'id' in attrs:
+            self.ids.append(attrs['id'])
+        if tag == 'a' and 'href' in attrs:
+            self.links.append(attrs['href'])
+        if tag == 'article' and attrs.get('class') == 'lesson':
+            self.lessons.append(attrs.get('id'))
+        if tag == 'details' and 'open' not in attrs:
+            self.closed_sections += 1
+
+
+def check():
+    """Validate the generated public entry and its local destinations offline."""
+    destination = ROOT/'learning-hub/index.html'
+    document = destination.read_text()
+    parser = HubParser()
+    parser.feed(document)
+    errors = []
+    if parser.lessons != ['lab-1', 'lab-2', 'lab-3', 'lab-4']:
+        errors.append('Learning Hub must contain the four ordered lab entries')
+    if len(parser.ids) != len(set(parser.ids)):
+        errors.append('Learning Hub has duplicate section IDs')
+    if parser.closed_sections:
+        errors.append('Learning Hub has collapsed content')
+    if '<html lang="en">' not in document or re.search(r'[\u3400-\u9fff]', document):
+        errors.append('Learning Hub must be English')
+    for required in ['Helen Bird', 'Author:', 'Published:', 'Updated:',
+                     'not represent consumer ChatGPT Search', 'remains untested']:
+        if required not in document:
+            errors.append('Missing provenance or limitation: '+required)
+    local_links = 0
+    for href in parser.links:
+        url = urlsplit(href)
+        if url.scheme or url.netloc:
+            if url.scheme not in ('http', 'https'):
+                errors.append('Unexpected link protocol: '+href)
+            continue
+        local_links += 1
+        target = (destination.parent/unquote(url.path)).resolve() if url.path else destination
+        if target.is_dir():
+            target = target/'index.html'
+        if not target.is_relative_to(ROOT):
+            errors.append('Local link leaves the public repository: '+href)
+        elif not target.is_file():
+            errors.append('Missing local link destination: '+href)
+        elif url.fragment and target.suffix == '.html':
+            parsed_target = HubParser()
+            parsed_target.feed(target.read_text())
+            if unquote(url.fragment) not in parsed_target.ids:
+                errors.append('Missing local link fragment: '+href)
+    if errors:
+        raise AssertionError('\n'.join(errors))
+    return {'learning_hub':'learning-hub/index.html', 'entries':4,
+            'local_links_checked':local_links, 'status':'passed'}
+
+
+def main():
+    if '--check' in sys.argv[1:]:
+        print(json.dumps(check()))
+        return
+    destination = ROOT/'learning-hub/index.html'
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(render())
+    print(json.dumps({'learning_hub':str(destination.relative_to(ROOT)),'stages':4,'model_calls':0}))
+
+
+if __name__ == '__main__':
+    main()

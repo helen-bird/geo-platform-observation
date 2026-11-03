@@ -1,0 +1,127 @@
+{
+  "id": "S4-GROK-Q2-R1",
+  "slot_id": "S4-GROK-Q2-R1",
+  "platform": "Grok",
+  "interface": "Consumer web UI",
+  "prompt_id": "Q2",
+  "repeat": 1,
+  "prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "submitted_at": "2026-11-03T09:03:14.607Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_mode": "Expert native retrieval; no independent force-search toggle observed",
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "The most credible controlled experiments are academic benchmarks (especially the foundational Princeton/KDD 2024 GEO study), with supporting work from later papers, large-scale observational analyses, and some industry case studies. Evidence is stronger for increasing the share of text or prominence of already-retrieved content inside AI answers than for boosting organic retrieval, brand discovery, or cross-platform causal effects. A 2026 critical survey of ~45 studies concluded that GEO tactics reliably change how an already-retrieved page is cited/used, but no reviewed technique shows a stable, longitudinal, cross-platform causal effect on organic discoverability.\u2060Geoaura\n\n1. Princeton GEO Study (Foundational Peer-Reviewed Work)\n\nPaper: \u201cGEO: Generative Engine Optimization\u201d by Pranjal Aggarwal et al. (IIT Delhi, Princeton, etc.), presented at KDD 2024 (arXiv:2311.09735).\u2060arXiv\n\nDesign: GEO-bench with ~10,000 real-world-style queries across domains + relevant web sources. They tested nine content rewrite tactics on sources already in a fixed retrieval context (top results fed to a generative engine setup, also validated on Perplexity). Visibility was measured primarily as position-adjusted word count (share of the answer text attributable to the source, weighted by position) and a subjective impression metric.\nKey results (relative lifts on position-adjusted word count vs. baseline):\nQuotation/expert quotation addition: ~+41% (highest; e.g., 19.3 \u2192 27.2 in reported figures).\nStatistics addition: ~+33%.\nFluency optimization: ~+29%.\nCiting sources: ~+28%.\nOther style/language tweaks: smaller positive effects.\nKeyword stuffing: \u22128% (negative).\nGains were largest for lower-ranked sources (e.g., rank-5 sources saw ~100%+ lifts with citation/quotation/statistics methods; top-ranked sources sometimes lost share). Effects varied by domain. On Perplexity they saw up to ~37% gains on some metrics.\nCaveat: This measures absorption/visibility inside the answer once the source is already retrieved and in context. It does not test improving initial retrieval or discoverability. Later replications and critiques note the numbers are conditional on the fixed testbed and metric.\u2060Geoaura\n\nThis remains the most-cited rigorous experiment establishing that certain content edits (evidence-rich additions) can increase a source\u2019s presence in generated answers.\n\n2. Product Recommendation Manipulation Experiment\n\nPaper: \u201cManipulating Large Language Models to Increase Product Visibility\u201d by Aounon Kumar and Himabindu Lakkaraju (arXiv:2404.07981, 2024).\u2060arXiv\n\nDesign: Catalog of fictitious coffee machines. They added carefully crafted \u201cstrategic text sequences\u201d (STS) to product pages and measured changes in LLM top recommendations for two target products (one rarely appearing, one typically ranking second).\nResults: STS significantly raised the chance of both targets appearing as the top recommendation. This demonstrated that content on a product page can manipulatively increase LLM recommendation rates in a controlled setting.\nRelevance: Direct measurement of increased product recommendations via GEO-style content changes.\n3. C-SEO Bench (NeurIPS 2025 Datasets & Benchmarks)\n\nPaper: \u201cC-SEO Bench: Does Conversational SEO Work?\u201d by Haritz Puerto et al. (arXiv:2506.11097).\u2060arXiv\n\nDesign: Tested content rewrite methods (including several from the Princeton paper) plus traditional ranking approaches on question-answering and product-recommendation tasks across domains. Metric focused on citation rank in the output, with varying numbers of competing actors.\nResults: Most content-level C-SEO/GEO rewrites were largely ineffective or negative on citation ranking. Traditional SEO approaches that improve a source\u2019s ranking/position in the LLM\u2019s context were substantially more effective. Gains diminished as more actors adopted the same tactics (zero-sum/congested).\n\nThis challenges some of the earlier positive findings when the metric shifts from word-share to ranking under competition.\n\n4. Large-Scale Observational and Other Academic Work\nKumar et al. (arXiv:2606.20065, 2026): Analysis of 100,000+ prompt responses across 100+ brands. Established a clear brand-stature ladder (household names cited in ~73% of relevant answers, mid-market ~44%, niche ~11%). Ranked \u201cbest-of\u201d listicles were a top citation format (~21%). Provides a baseline more than a controlled tactic experiment.\u2060Geoaura\nUniversity of Toronto work (Chen, Koudas et al.): Multiple papers showing strong earned-media (third-party) bias over brand-owned content in AI search citations (often 6.5\u00d7 advantage for third-party platforms). A 2026 preprint (\u201cWhat Drives AI Citations?\u201d) on 158k+ answers found that page-level tactics (FAQ blocks, schema, summary boxes, etc.) showed little or no within-website association with citations once retrieval is controlled; retrieval itself explained far more variance. Brand names also influence rankings even with identical facts.\u2060Aivisibilityjournal\nSeer Interactive GEO Olympics Study (2026): 231,347+ LLM responses across 7 platforms over 52 days of Olympics data. Tested hypotheses on signals (entity authority, third-party validation, community discussion). Strong signal stacks produced ~7.8\u00d7 more AI mentions. Different sources drive listing vs. recommendation; platform-specific patterns (e.g., Reddit, editorial, official sites) were clear. Large-scale observational rather than pure controlled experiment.\u2060Seerinteractive\nOther: E-GEO e-commerce testbed; VoteGEO-Bench on electoral visibility; various GEO-Bench ranking-manipulation studies; Stacker/Scrunch earned-media distribution tests reporting large citation lifts from third-party placement.\nIndustry Experiments and Case Studies (Less Controlled, but Directional)\nSIXT (via Peec AI, 2026): Controlled experiment editing partner listings (not their own site) on high-traffic travel domains. Full-treatment domains saw ~320% increase in citation frequency (adjusted ~308%); control rose only ~12%. Also gains in visibility and share of voice.\u2060Peec\nSearch Engine Land experiments (2026): Multi-month and 30-day tests tracking commercial keywords across platforms. Reported upward trends in citations via PR, listicles, guest posts, and updates; one cold-start produced hundreds of appearances. One original conclusion did not fully hold on retest.\u2060Searchengineland\nOtterlyAI cold-start: New brand with zero authority reached competitive share of voice / rank ~7 via external mentions/directories in 14 days.\nAhrefs and others: Large correlation studies (e.g., 75k brands) linking unlinked brand mentions strongly to AI visibility (correlations ~0.65\u20130.71), stronger than raw backlinks.\nSome schema/JSON-LD and certain page-feature tests have returned null or mixed results in controlled designs.\n\nOverall takeaway from the evidence: Adding statistics, quotations, citations, and fluency improvements can increase a source\u2019s share and prominence inside AI answers when the content is already retrieved (Princeton results). Being retrieved in the first place (via relevance, third-party mentions, listicles, earned media, and model prior knowledge) appears more decisive for brand mentions and recommendations. Effects are platform- and domain-dependent, often stronger for lower-ranked or lesser-known brands, and can be zero-sum under competition. Keyword stuffing is consistently unhelpful. Most commercial claims of large, general \u201cGEO lifts\u201d exceed what the controlled experiments rigorously support.",
+  "answer_links": [
+    {
+      "domain": "geoaura.world",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Geoaura",
+      "title": "GEO Evidence Audit 2026: What 45 Studies Actually Prove | GeoAura (Geoaura)",
+      "url": "https://geoaura.world/blog/geo-evidence-audit-2026"
+    },
+    {
+      "domain": "arxiv.org",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060arXiv",
+      "title": "GEO: Generative Engine Optimization (arXiv)",
+      "url": "https://arxiv.org/abs/2311.09735"
+    },
+    {
+      "domain": "geoaura.world",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Geoaura",
+      "title": "The Princeton GEO Study: Benchmark & Findings Explained | GeoAura (Geoaura)",
+      "url": "https://geoaura.world/blog/princeton-geo-study-benchmark"
+    },
+    {
+      "domain": "arxiv.org",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060arXiv",
+      "title": "[2404.07981v1] Manipulating Large Language Models to Increase Product Visibility (arXiv)",
+      "url": "https://arxiv.org/abs/2404.07981v1"
+    },
+    {
+      "domain": "arxiv.org",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060arXiv",
+      "title": "[2506.11097] C-SEO Bench: Does Conversational SEO Work? (arXiv)",
+      "url": "https://arxiv.org/abs/2506.11097"
+    },
+    {
+      "domain": "geoaura.world",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Geoaura",
+      "title": "GEO Evidence Audit 2026: What 45 Studies Actually Prove | GeoAura (Geoaura)",
+      "url": "https://geoaura.world/blog/geo-evidence-audit-2026"
+    },
+    {
+      "domain": "aivisibilityjournal.com",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Aivisibilityjournal",
+      "title": "Preprint: retrieval, not FAQ or schema, tracked citations (Aivisibilityjournal)",
+      "url": "https://aivisibilityjournal.com/news/2026/10/preprint-retrieval-not-page-tactics-ai-citations/"
+    },
+    {
+      "domain": "www.seerinteractive.com",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Seerinteractive",
+      "title": "The GEO Olympics Study: What 231,347 LLM Responses Reveal About AI Brand Visibility (Seerinteractive)",
+      "url": "https://www.seerinteractive.com/insights/what-ai-thinks-about-your-brand-is-already-written"
+    },
+    {
+      "domain": "peec.ai",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Peec",
+      "title": "How SIXT increased AI citations of its partner listings by 320%  - Peec AI (Peec)",
+      "url": "https://peec.ai/blog/how-sixt-increased-ai-citations-of-its-partner-listings-by-320"
+    },
+    {
+      "domain": "searchengineland.com",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Searchengineland",
+      "title": "Two GEO experiments challenge conventional AI visibility advice (Searchengineland)",
+      "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
+    }
+  ],
+  "captured_at": "2026-11-03T09:05:28.392Z",
+  "source_panel_declared_hits": 65,
+  "source_inventory_scope": "All 10 observable inline citation occurrences captured; 65-source panel count is not a count of body citations. Whole source-panel inventory not asserted.",
+  "capture_method": "Read full rendered answer, extract native visible DOM text and inline hrefs; copy button returned empty browser clipboard and was not used as evidence of body completeness.",
+  "search_query_labels": [
+    "credible experiments measuring GEO tactics increase AI brand mentions recommendations",
+    "Generative Engine Optimization experiments studies AI mentions",
+    "\"GEO\" OR \"Generative Engine Optimization\" experiment OR study OR research brand mentions OR recommendations",
+    "SIXT GEO experiment 320% citations Peec AI"
+  ],
+  "search_evidence": "Native activity shows search groups of 3 and 2 plus SIXT query; only four exact query labels captured so far, raw activity snapshot preserved.",
+  "notes": [
+    "Initial real-time connection warning cleared without clicking Retry or resubmitting.",
+    "No candidate names/assets appear in full answer body."
+  ],
+  "body_review": {
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "inline_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "raw_file": "records/S4-GROK-Q2-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted original answer, body links, actual search activity and usage; private UI captures, conversations, provider identifiers and reasoning traces remain local.",
+  "original_capture_answer_characters": 7512,
+  "public_answer_characters": 7512,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  }
+}

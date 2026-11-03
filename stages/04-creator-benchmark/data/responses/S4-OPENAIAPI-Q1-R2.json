@@ -1,0 +1,607 @@
+{
+  "object": "response",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "created_at": 1793697283,
+  "completed_at": 1793697322,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 37509,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 4346
+    },
+    "output_tokens": 2602,
+    "output_tokens_details": {
+      "reasoning_tokens": 939
+    },
+    "total_tokens": 40111
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 4
+    }
+  },
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "service_tier": "default",
+  "store": false,
+  "max_output_tokens": 32768,
+  "max_tool_calls": 8,
+  "tool_choice": "required",
+  "tools": [
+    {
+      "type": "web_search",
+      "return_token_budget": "default",
+      "search_content_types": [
+        "text"
+      ],
+      "search_context_size": "medium",
+      "user_location": {
+        "type": "approximate",
+        "city": null,
+        "country": "US",
+        "region": null,
+        "timezone": null
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "2026 Generative Engine Optimization GEO free course guide resources",
+          "Generative Engine Optimization original paper arXiv GEO Princeton Georgia Tech Allen Institute",
+          "site:developers.google.com AI features website search guidance generative engine optimization",
+          "site:blogs.bing.com/webmaster AI search optimization guidance generative answers"
+        ],
+        "query": "2026 Generative Engine Optimization GEO free course guide resources",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/"
+          },
+          {
+            "type": "url",
+            "url": "https://geo.wiki/blog/geo-learning-resources"
+          },
+          {
+            "type": "url",
+            "url": "https://apollodigital.io/learn/geo/"
+          },
+          {
+            "type": "url",
+            "url": "https://learngeo.io/"
+          },
+          {
+            "type": "url",
+            "url": "https://georion.app/academy"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2311.09735"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content?hl=en"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2607.14035"
+          },
+          {
+            "type": "url",
+            "url": "https://tunnel-check.bavior.com/learn"
+          },
+          {
+            "type": "url",
+            "url": "https://www.finseo.ai/geo-course"
+          },
+          {
+            "type": "url",
+            "url": "https://mentionable.ai/en/blog/geo-courses-certifications"
+          },
+          {
+            "type": "url",
+            "url": "https://rankgeo.aawej.in/blog/introducing-geo-101-course"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2509.08919"
+          },
+          {
+            "type": "url",
+            "url": "https://www.coursera.org/learn/introduction-to-generative-engine-optimization-geo"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+          },
+          {
+            "type": "url",
+            "url": "https://aigeo.games/media/research/geo-generative-engine-optimization-archive.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2602.02961"
+          },
+          {
+            "type": "url",
+            "url": "https://openreview.net/pdf?id=K8EinVWtUB"
+          },
+          {
+            "type": "url",
+            "url": "https://gsdcdata.gsdcouncil.org/gsdc/pdf/Generative-Engine-Optimization-Exam-syllabus-updated-2026.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://gensearch360.com/wp-content/uploads/2025/08/GEO-Blueprint-Course-Curriculum-2025-08a.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://engage.talentfoot.com/hubfs/Hiring%20Manager%20Guides%20and%20eBooks/Generative%20Engine%20Optimization%20Webinar%20-%202025.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/u_Rank_Factory/comments/1ulj4wp/we_are_transitioning_from_seo_to_geo_generative/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/seogrowth/comments/1virkec/where_can_i_learn_seo_in_2026_everything_i_find/"
+          },
+          {
+            "type": "url",
+            "url": "https://de.wikipedia.org/wiki/Answer_Engine_Optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/MarketingMentor/comments/1n1s0qh"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/u_singularity-mkting/comments/1tbui0g/the_geo_course_buyers_guide_for_2026_how_to/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/i-tested-the-7-best-aeo-tools"
+          },
+          {
+            "type": "url",
+            "url": "https://www.axios.com/2026/07/16/geo-communications-marketing-strategy"
+          },
+          {
+            "type": "url",
+            "url": "https://pt.wikipedia.org/wiki/Generative_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SEO_for_AI/comments/1rvsrla/learning_geo_in_2026_looking_for_10_websites_to/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AI_SEO_Community/comments/1rvssgv/learning_geo_in_2026_looking_for_10_websites_to/"
+          },
+          {
+            "type": "url",
+            "url": "https://zh.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E5%BC%8F%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Search_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://ru.wikipedia.org/wiki/Generative_Engine_Optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/LLMO_SaaS/comments/1n6ge61/the_ultimate_guide_to_generative_engine/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.itpro.com/business/marketing-and-comms/will-a-generative-engine-optimization-manager-be-your-next-big-hire"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/Agentic_SEO/comments/1ng31uw/where_is_the_best_place_to_learn_about_generative/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1u7cgk4/i_dug_into_the_geo_research_so_you_dont_have_to/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/vibecodingcommunity/comments/1spy7hp/geo_generative_engine_optimization_explained_what/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GenEngineOptimization/comments/1rmdjve/generative_engine_optimization_fully_explained/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:ahrefs.com/academy AEO course AI search free",
+          "site:semrush.com/academy generative engine optimization course free",
+          "site:open.edu/openlearn generative engine optimization GEO free course",
+          "site:blogs.bing.com/webmaster AI Performance Bing Webmaster Tools citations official"
+        ],
+        "query": "site:ahrefs.com/academy AEO course AI search free",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/academy/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/academy/aeo-course"
+          },
+          {
+            "type": "url",
+            "url": "https://www.open.edu/openlearncreate/course/view.php?id=15505"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/academy/how-to-use-ahrefs"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/free"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.semrush.com/semrush-questions/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.semrush.com/academy/courses/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/academy/aeo-course/lesson-2-2"
+          },
+          {
+            "type": "url",
+            "url": "https://www.open.edu/openlearn/free-courses"
+          },
+          {
+            "type": "url",
+            "url": "https://static.semrush.com/kb/uploads/2024/08/28/semrush_overview_affiliate_guide.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://static.semrush.com/kb/uploads/2023/06/09/The%20Semrush%27s%20Ultimate%20Guide%20-%20How%20to%20Create%20Content%20that%20Converts.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://static.semrush.com/academy-assets/worksheets/seo-crash/lesson-1-worksheet.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://static.semrush.com/blog/uploads/files/08/af/08af4434126c8f34ea489d1c4e2a4f69/getting_started%E2%80%94the_essential_semrush_checklists_f3.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.open.edu/openlearn/83/7d/837d8c0f32b5dc6f8c2978037c04902ec89b1e35?response-content-disposition=attachment%3Bfilename%3D%22succeeding_in_a_digital_world_printable.pdf%22&response-content-type=application%2Fpdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.open.edu/openlearn/96/64/9664594b7145f8556b5cfeee5f93feb66742feca?response-content-disposition=inline%3Bfilename%3D%22OpenLearn+in+2022+FINAL.pdf%22&response-content-type=application%2Fpdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:developers.google.com/search/docs/fundamentals/ai-optimization-guide Google AI optimization guide no special schema llms.txt",
+          "site:blogs.bing.com/webmaster \"Optimizing Your Content for Inclusion in AI Search Answers\"",
+          "site:help.openai.com publishers developers OAI-SearchBot GPTBot robots.txt search citations",
+          "site:docs.perplexity.ai crawler robots.txt publishers PerplexityBot"
+        ],
+        "query": "site:developers.google.com/search/docs/fundamentals/ai-optimization-guide Google AI optimization guide no special schema llms.txt",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/blog/2026/05/a-new-resource-for-optimizing"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?version=published"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/updates?hl=en"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide?rd=1&visit_id=637969936858726125-1135290229"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs/fundamentals/get-started?rd=1&visit_id=639269408023221523-3647483270"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs/fundamentals/get-started-developers"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/certification/mws-study-guide.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/open-source/gsoc/resources/downloads/GSoC2025Presentation.pdf?hl=th"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/open-source/gsoc/resources/downloads/GSoC2024Presentation.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/open-source/gsoc/resources/downloads/GSoC2020Presentation.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:blogs.bing.com/webmaster \"Optimizing Your Content for Inclusion in AI Search Answers\" Bing",
+          "site:blogs.bing.com/webmaster inclusion AI search answers content structure citations",
+          "site:arxiv.org GEO benchmark generative engine optimization 2026 survey",
+          "site:classcentral.com report learn generative engine optimization 2026 free resources"
+        ],
+        "query": "site:blogs.bing.com/webmaster \"Optimizing Your Content for Inclusion in AI Search Answers\" Bing",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/subject/generative-engine-optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/report/best-geo-courses-marketers/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/course/openlearn-introduction-to-generative-engine-optimization-geo-479643"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2607.14035"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/course/youtube-what-s-geo-how-to-do-it-master-geo-before-your-competitors-full-webinar-471204"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2608.16824"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/webmaster/2025/7/Keeping-Content-Discoverable-with-Sitemaps-in-AI-Powered-Search/"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/webmaster/2025/10/Bing-Introduces-Support-for-the-data-nosnippet-HTML-Attribute/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/report/archives/page/40/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/report/best-generative-ai-courses/"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2605.29107"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2311.09735"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/academy/aeo-course"
+          },
+          {
+            "type": "url",
+            "url": "https://www.open.edu/openlearncreate/course/view.php?id=15505"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2311.09735"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2607.14035"
+          },
+          {
+            "type": "url",
+            "url": "https://help.openai.com/en/articles/12627856"
+          },
+          {
+            "type": "url",
+            "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/"
+          },
+          {
+            "type": "url",
+            "url": "https://apollodigital.io/learn/geo/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/"
+          },
+          {
+            "type": "url",
+            "url": "https://developers.google.com/search/docs"
+          }
+        ]
+      }
+    },
+    {
+      "type": "message",
+      "role": "assistant",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [
+            {
+              "type": "url_citation",
+              "title": "Google's Guide to Optimizing for Generative AI Features on Google Search | Google Search Central \u00a0|\u00a0 Documentation \u00a0|\u00a0 Google for Developers",
+              "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+            },
+            {
+              "type": "url_citation",
+              "title": "Answer Engine Optimization (AEO) Course",
+              "url": "https://ahrefs.com/academy/aeo-course"
+            },
+            {
+              "type": "url_citation",
+              "title": "OLCreate: PUB_9478_1.0 Introduction to Generative Engine Optimization (GEO)",
+              "url": "https://www.open.edu/openlearncreate/course/view.php?id=15505"
+            },
+            {
+              "type": "url_citation",
+              "title": "GEO: Generative Engine Optimization",
+              "url": "https://arxiv.org/abs/2311.09735"
+            },
+            {
+              "type": "url_citation",
+              "title": "Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)",
+              "url": "https://arxiv.org/abs/2607.14035"
+            },
+            {
+              "type": "url_citation",
+              "title": "Publishers and Developers - FAQ | OpenAI Help Center",
+              "url": "https://help.openai.com/en/articles/12627856"
+            },
+            {
+              "type": "url_citation",
+              "title": "Introducing AI Performance in Bing Webmaster Tools Public Preview",
+              "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/"
+            },
+            {
+              "type": "url_citation",
+              "title": "The Free GEO Course: Learn Generative Engine Optimization | Apollo Digital",
+              "url": "https://apollodigital.io/learn/geo/"
+            },
+            {
+              "type": "url_citation",
+              "title": "25 Resources to Learn Generative Engine Optimization in 2026 \u2014 Class Central",
+              "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/"
+            },
+            {
+              "type": "url_citation",
+              "title": "Documentation to Improve SEO | Google Search Central \u00a0|\u00a0 Google for Developers",
+              "url": "https://developers.google.com/search/docs"
+            },
+            {
+              "type": "url_citation",
+              "title": "Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)",
+              "url": "https://arxiv.org/abs/2607.14035"
+            }
+          ],
+          "logprobs": [],
+          "text": "## Best free GEO learning resources in 2026\n\n**As of November 3, 2026**, I\u2019d prioritize first-party platform guidance, followed by structured courses and then research papers. GEO is also called **AEO, AI SEO, LLMO,** or **AI-search optimization**, so search under those terms too.\n\n### 1. Google\u2019s guide to optimizing for generative AI features  \n**Best authoritative starting point**\n\nGoogle\u2019s official guide covers AI Overviews and AI Mode, including retrieval-augmented generation, query fan-out, technical eligibility, people-first content, structured data, multimedia, and measurement. Importantly, Google says conventional SEO remains foundational and warns against unsupported \u201cGEO hacks\u201d such as unnecessary content chunking, manufactured mentions, and relying on `llms.txt` for Google visibility. ([developers.google.com](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide))\n\n**Use it to learn:**\n\n- How generative search retrieves and grounds information\n- Why original, first-hand, non-commodity content matters\n- Technical crawlability and indexing requirements\n- Which popular GEO claims Google does\u2014or does not\u2014support\n\n### 2. Ahrefs\u2019 Answer Engine Optimization course  \n**Best free structured course**\n\nThis is my top course recommendation for marketers who already understand basic SEO. It contains **12 lessons across five modules, totaling about 1 hour 26 minutes**, requires no signup, and covers AI-search mechanics, prompt research, brand-gap analysis, citation-friendly content, brand mentions, technical AEO and measurement. ([ahrefs.com](https://ahrefs.com/academy/aeo-course))\n\n**Best for:** SEO professionals, content marketers, founders and brand managers.\n\n**Caveat:** It is produced by an SEO software company, so separate the generally applicable strategy from tool-specific workflows.\n\n### 3. OpenLearn: Introduction to Generative Engine Optimization  \n**Best for complete beginners\u2014and a free credential**\n\nThis one-hour Open University/OpenLearn course introduces GEO, source selection, AI trust signals, content formatting and the relationship between SEO and GEO. Enrollment and the completion statement are free. ([open.edu](https://www.open.edu/openlearncreate/course/view.php?id=15505))\n\n**Best for:** Someone who wants a short, nontechnical introduction before tackling deeper materials.\n\n### 4. The original \u201cGEO: Generative Engine Optimization\u201d paper  \n**Best for understanding where the field came from**\n\nThe foundational paper introduced the GEO terminology, visibility metrics and GEO-Bench framework. Read it to understand the experimental basis behind frequently repeated recommendations such as adding authoritative citations, statistics and quotations. ([arxiv.org](https://arxiv.org/abs/2311.09735))\n\n**Important limitation:** Don\u2019t treat its findings as universal ranking factors. The experiments examined particular engines and settings, and the field has changed considerably since the paper first appeared.\n\n### 5. \u201cOptimizing Visibility in Generative Engines: A Critical Survey, 2023\u20132026\u201d  \n**Best advanced and skeptical overview**\n\nThis 2026 survey reviews 45 studies and separates GEO into stages such as crawling, retrieval, reranking, citation, prominence and downstream behavior. Its central caution is valuable: evidence that already-retrieved content can influence citations does **not** establish a stable, cross-platform method for improving organic discoverability or business outcomes. ([arxiv.org](https://arxiv.org/abs/2607.14035))\n\n**Best for:** Advanced practitioners, researchers and anyone evaluating strong vendor claims.\n\n### 6. OpenAI\u2019s publisher and developer guidance  \n**Best ChatGPT-specific technical reference**\n\nOpenAI\u2019s official publisher FAQ explains how sites become eligible for ChatGPT search discovery. In particular, it distinguishes **OAI-SearchBot**, used for search discovery, from **GPTBot**, associated with potential model training. It also explains referral tracking and crawler controls. ([help.openai.com](https://help.openai.com/en/articles/12627856))\n\n**Use it to learn:**\n\n- How to check whether ChatGPT search can crawl your content\n- How search inclusion and training permissions differ\n- How to identify ChatGPT referral traffic\n- How accessibility and page structure affect agent interaction\n\n### 7. Bing Webmaster Tools\u2019 AI Performance resources  \n**Best free hands-on measurement resource**\n\nBing\u2019s AI Performance reporting shows citations, cited URLs, grounding-query samples and visibility trends across supported Microsoft AI experiences. Its 2026 additions include intent, topic and citation-share reporting, plus a Topics Portfolio beta that groups visibility and opportunity queries by subject. ([blogs.bing.com](https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/))\n\nThis is particularly useful because it moves GEO beyond manually typing prompts and recording anecdotal answers.\n\n**Best for learning:**\n\n- Citation-level measurement\n- Grounding-query analysis\n- Topic and competitor-gap discovery\n- How page clarity, evidence, freshness and structure affect citation patterns\n\n### 8. Apollo Digital\u2019s free GEO course  \n**Best practical, no-signup supplement**\n\nApollo Digital offers a free, browser-based course with seven lessons totaling roughly 100 minutes. It covers GEO foundations, ChatGPT citations, crawler access, content strategy and measurement, with templates and tools included. ([apollodigital.io](https://apollodigital.io/learn/geo/))\n\n**Caveat:** This is agency-produced material, not platform documentation. Validate its tactical recommendations against Google, OpenAI and Bing\u2019s first-party guidance.\n\n### 9. Class Central\u2019s 2026 GEO resource roundup  \n**Best directory for finding additional material**\n\nClass Central maintains a broad roundup of courses, manuals, blogs, videos, podcasts and newsletters related to GEO and AEO. It is useful for exploring the field after you complete the core resources above, although inclusion should not be interpreted as independent validation of every tactic. ([classcentral.com](https://www.classcentral.com/report/learn-generative-engine-optimization-geo/))\n\n---\n\n## Recommended learning order\n\n### If you have no SEO background\n\n1. Google\u2019s SEO Starter Guide  \n2. OpenLearn\u2019s GEO introduction  \n3. Google\u2019s generative-AI optimization guide  \n4. Ahrefs\u2019 AEO course  \n5. OpenAI and Bing\u2019s technical documentation  \n\nGoogle\u2019s SEO Starter Guide covers crawling, indexing, content organization and other fundamentals on which AI-search visibility still depends. ([developers.google.com](https://developers.google.com/search/docs))\n\n### If you already work in SEO or content marketing\n\n1. Google\u2019s generative-AI guide  \n2. Ahrefs\u2019 AEO course  \n3. OpenAI publisher guidance  \n4. Bing AI Performance  \n5. Original GEO paper  \n6. The 2026 critical survey  \n\n---\n\n## A simple free practice project\n\nLearning GEO is much more useful when attached to a real site:\n\n1. **Choose 20\u201330 audience questions** around one topic.\n2. **Record baseline answers** from ChatGPT search, Google AI Mode/Overviews, Bing Copilot and Perplexity.\n3. Track:\n   - Whether your brand is mentioned\n   - Whether your page is cited\n   - Which competitors and source types appear\n   - Whether the statements attributed to sources are accurate\n4. Improve one content cluster using:\n   - Original data or first-hand experience\n   - Clear authorship and sourcing\n   - Descriptive headings and concise definitions\n   - Crawlable text and sensible internal linking\n   - Accurate entity, product and business information\n5. Re-run tests several times using prompt variations.\n6. Compare AI referrals and citations with ordinary search traffic and conversions.\n\nAvoid judging success from a single prompt run. Generative answers vary, platforms rely on different source sets, and citation visibility does not necessarily translate into visits or revenue\u2014a limitation highlighted by the 2026 research survey. ([arxiv.org](https://arxiv.org/abs/2607.14035))\n\n**Shortest recommended curriculum:** OpenLearn \u2192 Ahrefs \u2192 Google guidance \u2192 OpenAI FAQ \u2192 Bing AI Performance \u2192 original paper and critical survey."
+        }
+      ]
+    }
+  ],
+  "public_copy": true,
+  "publication_scope": "Allowlisted provider output: answer messages, returned citations/search actions and usage. Opaque IDs, original annotation positions, headers and reasoning trace items omitted."
+}

@@ -1,0 +1,10 @@
+{
+  "registered_at": "2026-11-03T08:59:58.715391+00:00",
+  "submitted_answers_at_registration": 0,
+  "original_registration": "Private original protocol/config/planned-grid digests are retained locally. Privacy edits prevent the public copies from matching those original hashes.",
+  "public_copy_sha256": {
+    "protocol-registered.json": "9ce18c7022a3f95f4050640c1a2e3b96f5f1da1e34e5fb5ecbdeed6480ad49b4",
+    "api-config.json": "ebc9684e7792816d3595b7bed711e55d82b12da6c1e0c115656054569b5fadbb"
+  },
+  "public_copy_digest_scope": "Digests of exported copies, computed at publication; not a pre-submission timestamp or a public preregistration claim."
+}

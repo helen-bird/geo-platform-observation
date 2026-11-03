@@ -1,0 +1,64 @@
+{
+  "created_on": "2026-11-03",
+  "status": "post_collection_attribution_verified",
+  "candidates": [
+    {
+      "candidate_id": "aleyda-solis",
+      "personal_name_forms": [
+        "Aleyda Solis",
+        "Aleyda Sol\u00eds"
+      ],
+      "predeclared_assets": [
+        "Learning AI Search",
+        "LearningAIsearch.com",
+        "SEOFOMO",
+        "aleydasolis.com"
+      ],
+      "newly_observed_assets": [
+        {
+          "name": "LearningSEO.io",
+          "first_observed_in": "S4-OPENAIAPI-Q3-R2",
+          "status": "verified first-party owned/curated asset",
+          "verification_url": "https://learningseo.io/about/",
+          "verified_on": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "candidate_id": "kevin-indig",
+      "personal_name_forms": [
+        "Kevin Indig"
+      ],
+      "predeclared_assets": [
+        "Growth Memo"
+      ],
+      "newly_observed_assets": [
+        {
+          "name": "Kevin Indig personal site",
+          "domain": "www.kevin-indig.com",
+          "first_observed_in": "S4-OPENAIAPI-Q3-R3",
+          "status": "verified personal site and speaker attribution",
+          "verification_url": "https://www.kevin-indig.com/talks/winners-losers-ai-search"
+        }
+      ]
+    },
+    {
+      "candidate_id": "artur-ferreira",
+      "personal_name_forms": [
+        "Artur Ferreira"
+      ],
+      "predeclared_assets": [
+        "The GEO Lab",
+        "thegeolab.net"
+      ],
+      "newly_observed_assets": []
+    }
+  ],
+  "rules": [
+    "Semantic observational judgments, not a keyword classifier.",
+    "Personal names are not inferred from resource domains.",
+    "Keep exact original asset spelling and original returned URL; aliases are documented only for candidate-family grouping.",
+    "Confirmed own/bylined sources, third-party coverage and retrieval-only sources remain separate.",
+    "Primary C uses observed body citation hyperlinks; explicit plain-text URLs are retained separately and will be sensitivity-qualified rather than silently added to primary C."
+  ]
+}

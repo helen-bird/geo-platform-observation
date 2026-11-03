@@ -1,0 +1,520 @@
+{
+  "audited_on": "2026-11-03",
+  "access_method": "Assistant reading via public web retrieval; may reflect crawled representations, not historical snapshots. No raw datasets independently replicated.",
+  "selected_pages": [
+    {
+      "candidate_id": "artur-ferreira",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "reviewer": "assistant",
+      "independent_human_review": false,
+      "third_party_distribution": [],
+      "url": "https://thegeolab.net/field-manual/",
+      "title": "GEO Field Manual: The Complete Practitioner Guide",
+      "run_ids": [
+        "S4-GROK-Q3-R1",
+        "S4-GROK-Q3-R2"
+      ],
+      "selection_reason": "Own-site answer-body citation in two new Q3 answers; recheck the prior audit concern.",
+      "byline": "Copyright and author footer identify Artur Ferreira; Edition 1.2, August 2026.",
+      "evidence": [
+        "Edition note; Chapter 12, Platform/Results; Chapter Summary: Revision note acknowledges earlier transcription errors. Yet Chapter 12 still specifies 15 queries \u00d7 5 runs = 75 per version, alongside results 18/30 versus 11/30, z=1.81, p=.07, and later says significantly outperforms.",
+        "Chapter 12, Limitations: The reported test concerns one topic and Perplexity; it is not a ChatGPT\u2013Grok experiment."
+      ],
+      "content_strategy": "Comprehensive reference with chapter anchors, checklists, worked rewrites and experiment-log links.",
+      "internal_links": [
+        {
+          "url": "https://thegeolab.net/geo-experiments/",
+          "label": "Experiments companion"
+        },
+        {
+          "url": "https://thegeolab.net/ebooks/",
+          "label": "Library hub"
+        },
+        {
+          "url": "https://thegeolab.net/log/",
+          "label": "Live experiment log"
+        }
+      ],
+      "reusable": [
+        "Separate reference pages from experiment logs; publish version notes."
+      ],
+      "background_advantages": [
+        "Existing library and research infrastructure."
+      ],
+      "limitations": [
+        "The method/result denominator conflict remains unresolved in this page. p=.07 does not meet a conventional .05 threshold; the significance wording needs qualification. No raw-data replication or exact-page independent citation established."
+      ]
+    },
+    {
+      "candidate_id": "artur-ferreira",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "reviewer": "assistant",
+      "independent_human_review": false,
+      "third_party_distribution": [],
+      "url": "https://thegeolab.net/ebooks/",
+      "title": "Free GEO Ebooks & Guides | The GEO Lab",
+      "run_ids": [
+        "S4-GROK-Q3-R1",
+        "S4-GROK-Q1-R3"
+      ],
+      "selection_reason": "Library hub actually cited in both creator and free-learning questions.",
+      "byline": "About These Guides and author footer attribute the guides to Artur Ferreira.",
+      "evidence": [
+        "Available Ebooks; FAQ: A task-based library links fundamentals, framework, experiments, workbook and technical guides, then explains starting choices and update versions.",
+        "Print note; FAQ on price: The page describes browser-print PDF saving and also Gumroad zero-price checkout requiring email. Download/checkout was not tested."
+      ],
+      "content_strategy": "A discoverable hub turns individual guides into an explicit learning sequence with audience-specific entry points.",
+      "internal_links": [
+        {
+          "url": "https://thegeolab.net/field-manual/",
+          "label": "Field Manual"
+        },
+        {
+          "url": "https://thegeolab.net/geo-experiments/",
+          "label": "Experiments guide"
+        },
+        {
+          "url": "https://thegeolab.net/about/",
+          "label": "Author identity"
+        },
+        {
+          "url": "https://thegeolab.net/log/",
+          "label": "Research log"
+        }
+      ],
+      "reusable": [
+        "Create one public index with task labels, suggested reading order and authorship."
+      ],
+      "background_advantages": [
+        "An already-developed multi-guide catalog."
+      ],
+      "limitations": [
+        "This index supplies no new experimental sample. Its claimed proven framework is promotional characterization, not validation by this audit. Independent citations of this exact hub were not verified."
+      ]
+    },
+    {
+      "candidate_id": "artur-ferreira",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "reviewer": "assistant",
+      "independent_human_review": false,
+      "third_party_distribution": [],
+      "url": "https://thegeolab.net/geo-experiments/",
+      "title": "GEO Experiments: Design, Measure & Learn \u2014 2026 Edition",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R3"
+      ],
+      "selection_reason": "Own-site body citation returned by the API Q3 answer.",
+      "byline": "Embedded guide explicitly identifies Artur Ferreira and a 2026 edition.",
+      "evidence": [
+        "Live Data; How The GEO Lab Runs Experiments: Headline reports 330 queries across ChatGPT, Gemini and Perplexity; a separate results table links studies, including E001 (18/30 vs 11/30, p=.07) and a 480-query FAQ null result. These are different studies, not one combined sample.",
+        "Data Collection Template: Provides exact-query, date, engine, citation URL and quoted-passage fields; its example uses ten queries across three engines."
+      ],
+      "content_strategy": "Hypothesis-to-report workflow, ten test templates and a table linking conclusions to individual studies.",
+      "internal_links": [
+        {
+          "url": "https://thegeolab.net/ebooks/",
+          "label": "Library hub"
+        },
+        {
+          "url": "https://thegeolab.net/log/",
+          "label": "Underlying study log"
+        }
+      ],
+      "reusable": [
+        "Publish a blank measurement sheet and distinguish templates from completed results."
+      ],
+      "background_advantages": [
+        "Multiple existing studies and a proprietary Console."
+      ],
+      "limitations": [
+        "No Grok appears in the 330-query headline. Underlying datasets were not independently reanalysed. Independent citations of this exact guide were not verified."
+      ]
+    },
+    {
+      "candidate_id": "aleyda-solis",
+      "url": "https://learningaisearch.com/about/",
+      "title": "About LearningAIsearch.com",
+      "run_ids": [
+        "S4-GROK-Q1-R2",
+        "S4-GROK-Q1-R3",
+        "S4-OPENAIAPI-Q1-R3"
+      ],
+      "selection_reason": "Most recurrent own-content citation; tracking parameters collapsed for page selection only.",
+      "access_status": "Accessible public HTML, checked 2026-11-03",
+      "byline": "Site explicitly attributes creation and funding to Aleyda Solis.",
+      "evidence": [
+        "Explains a free curated roadmap and an editorial submission process; declares no advertising or paid inclusion. This is a policy statement, not an original GEO experiment."
+      ],
+      "content_strategy": "Explicit author identity and editorial policy connected to the learning roadmap.",
+      "internal_links": [
+        {
+          "url": "https://learningaisearch.com/",
+          "label": "Learning roadmap"
+        },
+        {
+          "url": "https://hub.seofomo.co/",
+          "label": "Newsletter destination"
+        }
+      ],
+      "third_party_distribution": [],
+      "reusable": [
+        "Publish clear authorship and resource-selection criteria."
+      ],
+      "background_advantages": [
+        "An established consultant funds ongoing curation; a beginner cannot assume equivalent reputation."
+      ],
+      "limitations": [
+        "A cited About page authenticates identity; it does not validate every linked guide or prove recommendation causation."
+      ]
+    },
+    {
+      "candidate_id": "aleyda-solis",
+      "url": "https://learningaisearch.com/",
+      "title": "The Free AI Search Optimization Roadmap",
+      "run_ids": [
+        "S4-GROK-Q1-R3"
+      ],
+      "selection_reason": "Actual homepage body hyperlink shows the learning asset itself, beyond the recurrent About page.",
+      "access_status": "Accessible public HTML, checked 2026-11-03",
+      "byline": "Curated by Aleyda Solis",
+      "evidence": [
+        "Version 4 is dated March 20, 2026. Topic navigation spans fundamentals, measurement, commerce and tools; a copyable checklist and FAQs support action. No controlled original experiment appears on this hub."
+      ],
+      "content_strategy": "A versioned hub links user questions to specialist pages and a practical checklist.",
+      "internal_links": [
+        {
+          "url": "https://learningaisearch.com/ai_roadmap/optimize-ai-search/ai-search-landscape/",
+          "label": "Landscape topic"
+        },
+        {
+          "url": "https://learningaisearch.com/ai_roadmap/measuring-ai-search/ai-traffic-measurement/",
+          "label": "Measurement topic"
+        }
+      ],
+      "third_party_distribution": [
+        {
+          "url": "https://frankchiu.io/geo-course-recommendation/",
+          "evidence": "Frank Chiu's course comparison names and links the roadmap. This page also supports Grok Q1 R1's recommendation through a third-party citation."
+        }
+      ],
+      "reusable": [
+        "Create a small question-based hub; link each lesson to evidence and a free checklist."
+      ],
+      "background_advantages": [
+        "Existing expert and newsletter connections are not reproduced by copying the layout."
+      ],
+      "limitations": [
+        "Curation depth depends on external resources. The visible revision date does not prove every item is current; this audit does not endorse all optimization advice."
+      ]
+    },
+    {
+      "candidate_id": "aleyda-solis",
+      "url": "https://learningseo.io/seo_roadmap/optimize-ai-search/",
+      "title": "Optimize for AI Search (GEO, AEO, LLMO)",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R2"
+      ],
+      "selection_reason": "A distinct body-cited asset whose creator attribution needed independent verification.",
+      "access_status": "Accessible public HTML, checked 2026-11-03",
+      "byline": "LearningSEO.io About page identifies Aleyda as its founder and curator; individual linked resources have their own authors.",
+      "evidence": [
+        "Six topic sections distinguish research, guides, official documentation and tools, naming individual authors. It curates evidence rather than presenting one unified original experiment."
+      ],
+      "content_strategy": "An AI-search section sits within a broader SEO learning system.",
+      "internal_links": [
+        {
+          "url": "https://learningseo.io/",
+          "label": "Wider learning roadmap"
+        },
+        {
+          "url": "https://learningseo.io/about/",
+          "label": "Ownership verification context; not a holdout citation"
+        }
+      ],
+      "third_party_distribution": [
+        {
+          "url": "https://www.womenintechseo.com/podcast/learning-seo/",
+          "evidence": "A podcast interviews Aleyda about creating LearningSEO.io and links to it. This is a distribution example, not evidence about the current AI page's search ranking."
+        }
+      ],
+      "reusable": [
+        "Label resource types and credit original authors; connect specialist pages to a central index."
+      ],
+      "background_advantages": [
+        "The interview describes SEO work beginning in 2007; that experience is self-reported background."
+      ],
+      "limitations": [
+        "LearningSEO.io was added to the asset registry after ownership verification. It remains distinct from LearningAIsearch.com."
+      ]
+    },
+    {
+      "candidate_id": "kevin-indig",
+      "url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "observed_body_url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "title": "The Consensus Gap",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R2"
+      ],
+      "selection_reason": "Only observed Growth Memo article URL; personal byline verified.",
+      "access_status": "Main analysis/methods readable; premium continuation gated.",
+      "byline": "Kevin Indig",
+      "evidence": [
+        "May 11, 2026. Reports Omnia data: 3.7 million citations; headline sample 20,000 prompts; three additional 5,000-prompt cohorts.",
+        "ChatGPT, Perplexity and AI Overviews; concurrent localized queries twice daily. No Grok.",
+        "Customer monitoring pool, Europe/Spain-heavy; regex intent/page grouping.",
+        "Observational citation-overlap analysis, not a content intervention."
+      ],
+      "content_strategy": "Research question, segmented results, practical definitions, methodology, premium continuation.",
+      "internal_links": [
+        {
+          "url": "https://library.growth-memo.com/premium",
+          "label": "Linked premium tools and archive"
+        }
+      ],
+      "third_party_distribution": [],
+      "reusable": [
+        "State denominators and engine settings.",
+        "Place limitations beside practical definitions."
+      ],
+      "background_advantages": [
+        "Partner dataset; established newsletter and paid archive."
+      ],
+      "limitations": [
+        "Premium continuation and underlying data not independently audited.",
+        "Page organization cannot explain why the test model cited it."
+      ]
+    },
+    {
+      "candidate_id": "kevin-indig",
+      "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "observed_body_url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "title": "Winners & Losers of the AI Disruption of Search",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R3"
+      ],
+      "selection_reason": "Observed personal-site body URL; ownership and first-person speaker attribution match Kevin.",
+      "access_status": "Executive summary and complete transcript readable; no publication date visible.",
+      "byline": "Kevin Indig personal site; first-person talk transcript.",
+      "evidence": [
+        "Summarizes 20 months of research, over one million answers and 100,000 citations.",
+        "Mentions a Product Hunt date-edit result without a page-level test denominator, control or raw data."
+      ],
+      "content_strategy": "Summary, takeaways, themed transcript, newsletter and social navigation.",
+      "internal_links": [
+        {
+          "url": "https://www.kevin-indig.com/talks",
+          "label": "Talks collection"
+        },
+        {
+          "url": "https://www.kevin-indig.com/about",
+          "label": "Author background"
+        },
+        {
+          "url": "https://www.growth-memo.com/",
+          "label": "Linked newsletter"
+        }
+      ],
+      "third_party_distribution": [],
+      "reusable": [
+        "Publish a searchable transcript alongside a talk.",
+        "Separate concise findings from supporting methods."
+      ],
+      "background_advantages": [
+        "Long SEO career and client/event access, self-reported."
+      ],
+      "limitations": [
+        "Research synthesis and opinion, not a reproducible experiment at this URL.",
+        "Source popularity and recommendation causation were not tested."
+      ]
+    }
+  ],
+  "shortfalls": [
+    "Artur: Independent third-party citations of the three exact selected pages were not verified within one focused search.",
+    "Artur: No original data replication, download/checkout, browser rendering, backlink inventory or creator business impact was measured.",
+    "Kevin: Two distinct own/bylined pages appeared in the new answer-body links. No third eligible page was added; the Danny Goodwin report and its linked original remain separately labeled context."
+  ],
+  "notes": [
+    "Kevin: The Search Engine Land article gives different broad corpus totals in its introduction and data section; it is not an independently reconciled dataset.",
+    "Eight distinct own/bylined pages were selected: three Artur, three Aleyda and two Kevin. A two-page sample meets the registered 2\u20133 range; lack of a third Kevin page is not a missing response.",
+    "Distribution searches were bounded and purposive; no backlink totals, reach or channel attribution were measured.",
+    "Selected creators have no matched un-recommended control group; these visible features do not explain selection causally.",
+    "Creator-specific audit files retain additional access and attribution notes. No underlying study dataset was independently replicated."
+  ],
+  "hypotheses": [
+    {
+      "practice": "A task-based hub may help users and retrieval systems locate the right experiment or practical guide.",
+      "evidence": "Observed content organization in the selected Artur pages.",
+      "next_test": "Compare a pre-registered, URL-free prompt bank before and after adding a hub; repeat observations and retain a control where feasible.",
+      "causal_status": "untested"
+    },
+    {
+      "practice": "Linking concise conclusions to versioned protocols, data and correction notes may improve inspectability.",
+      "evidence": "Observed content organization in the selected Artur pages.",
+      "next_test": "Measure retrieval, citation, explicit mention and recommendation separately after a controlled evidence-page change.",
+      "causal_status": "untested"
+    },
+    {
+      "practice": "A question-based learning index with clear authorship and free practical assets",
+      "evidence": "Observed roadmap, topic links and checklist; candidate was recommended in Q1 and Q3.",
+      "next_test": "Publish a small indexed collection, keep matched prompts and repeated baselines fixed, and compare discovery before and after over multiple dates.",
+      "causal_status": "Candidate hypothesis; no content intervention in this study."
+    },
+    {
+      "practice": "Publish a compact methods block.",
+      "evidence": "Consensus Gap states denominators and engine settings.",
+      "next_test": "Pre-register matched pages; vary the methods block; repeat blind prompts.",
+      "causal_status": "Candidate hypothesis only."
+    },
+    {
+      "practice": "Reuse research as a searchable transcript.",
+      "evidence": "The owned talk page connects to the newsletter.",
+      "next_test": "Track discovery of transcript and summary separately from citations.",
+      "causal_status": "Candidate hypothesis only."
+    }
+  ],
+  "distribution_evidence": [
+    {
+      "url": "https://www.linkedin.com/posts/arturgeo_people-keep-asking-me-the-same-question-activity-7487107869255999488-8_w-",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "classification": "author_owned_distribution_on_external_platform",
+      "evidence": "Author announces a recurring 14-experiment series, using measurement, tools, results and defensible conclusion as the post format. This is self-distribution, not independent endorsement.",
+      "independent_endorsement": false,
+      "exact_selected_page_citation_verified": false,
+      "candidate_id": "artur-ferreira"
+    },
+    {
+      "url": "https://synapsesocial.com/papers/6ac33d946931ac3d2d78d588",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "classification": "third_party_index_of_first_party_research",
+      "evidence": "Synapse lists a related paper by Artur Ferreira and Julio Ar\u00e9valo Piedra and links DOI 10.5281/zenodo.23122087. It republishes the authors\u2019 abstract; this verifies external indexing, not independent confirmation or a citation of the selected guides.",
+      "independent_endorsement": false,
+      "exact_selected_page_citation_verified": false,
+      "candidate_id": "artur-ferreira"
+    },
+    {
+      "url": "https://kusiai.es/research/",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_but_search_excerpt_not_corroborated",
+      "classification": "unverified_search_lead",
+      "evidence": "Search excerpt named Artur as a joint researcher; the opened page instead displayed Julio-focused material without that attribution. Excluded as corroborated independent distribution.",
+      "independent_endorsement": null,
+      "exact_selected_page_citation_verified": false,
+      "candidate_id": "artur-ferreira"
+    },
+    {
+      "url": "https://searchengineland.com/chatgpt-citations-content-study-469483",
+      "evidence": "Verified editorial coverage by Danny Goodwin links Kevin\u2019s research to its Growth Memo original. This documents distribution of another work, not either selected page.",
+      "underlying_original_url": "https://www.growth-memo.com/p/the-science-of-how-ai-pays-attention",
+      "supports": "Creator-level third-party research coverage",
+      "does_not_support": "Republication of the two selected pages or the cause of their AI selection.",
+      "candidate_id": "kevin-indig"
+    }
+  ],
+  "supporting_context": [
+    {
+      "url": "https://www.growth-memo.com/p/the-science-of-how-ai-pays-attention",
+      "role": "Original study linked from Search Engine Land; not a holdout body citation.",
+      "access_status": "Kevin byline, February 16, 2026 date and paid preview visible; full research unavailable.",
+      "limitation": "Do not treat this context page as a third selected or independently audited study.",
+      "candidate_id": "kevin-indig"
+    },
+    {
+      "url": "https://library.growth-memo.com/premium",
+      "role": "Linked topic/asset organization context; not holdout evidence.",
+      "evidence": "Searchable archive organized into decks, checklists, guides, prompts, frameworks and tools.",
+      "candidate_id": "kevin-indig"
+    },
+    {
+      "url": "https://www.kevin-indig.com/about",
+      "role": "Linked self-description; background context, not independent credential validation.",
+      "evidence": "Lists prior Shopify, G2 and Atlassian roles and professional speaking.",
+      "candidate_id": "kevin-indig"
+    }
+  ],
+  "attribution_resolution": [
+    {
+      "url": "https://learningseo.io/seo_roadmap/optimize-ai-search/",
+      "own_content": true,
+      "evidence_url": "https://learningseo.io/about/",
+      "note": "First-party About page independently confirms founder/curator identity. Count the owned curated page as C, not all external linked articles as Aleyda-authored work.",
+      "candidate_id": "aleyda-solis"
+    },
+    {
+      "url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "observed_body_url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R2"
+      ],
+      "classification": "confirmed_own_or_byline",
+      "strict_citation_suggestion": true,
+      "candidate_id": "kevin-indig"
+    },
+    {
+      "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R3"
+      ],
+      "classification": "confirmed_own_personal_site",
+      "strict_citation_suggestion": true,
+      "candidate_id": "kevin-indig"
+    },
+    {
+      "url": "https://searchengineland.com/chatgpt-citations-content-study-469483",
+      "observed_body_url": "https://searchengineland.com/chatgpt-citations-content-study-469483",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R1"
+      ],
+      "classification": "third_party_reporting",
+      "byline": "Danny Goodwin",
+      "published_on": "2026-02-18",
+      "strict_citation_suggestion": false,
+      "reason": "Reports Kevin\u2019s research; does not carry his byline. The cited article links to a different original Growth Memo study.",
+      "candidate_id": "kevin-indig"
+    }
+  ],
+  "provenance_notes": [
+    "All 18 holdout answers were already frozen before this source audit; no test prompt, model call or source recommendation was added.",
+    "Artur: The current manual explicitly acknowledges corrections, but a method/result mismatch and significance wording remain within the inspected edition. Preserve both observations together.",
+    "Artur: Page-level attribution is checked from author/footer material. Search ranking, backlink quantity, audience size and referral/conversion outcomes were not measured.",
+    "Aleyda: All three selected URLs were actual body hyperlinks. Frank Chiu and the podcast are external distribution evidence; their presence does not establish how either tested environment found Aleyda.",
+    "Tracking parameters are preserved in observed_body_url; audit URL omits tracking only.",
+    "Own-content citation, personal mention and recommendation are separate judgments. This file proposes citation attribution only and does not modify coding.",
+    "Kevin: Third-party distribution is creator-level evidence and is not assigned to either selected page\u2019s distribution array.",
+    "Kevin: The Search Engine Land article gives different broad corpus totals in its introduction and data section; it is not an independently reconciled dataset.",
+    "No underlying dataset was reproduced, no GEO intervention was performed, and no claim about long-term recommendation stability is supported.",
+    "Eight distinct own/bylined pages were selected: three Artur, three Aleyda and two Kevin. A two-page sample meets the registered 2\u20133 range; lack of a third Kevin page is not a missing response.",
+    "Distribution searches were bounded and purposive; no backlink totals, reach or channel attribution were measured.",
+    "Selected creators have no matched un-recommended control group; these visible features do not explain selection causally."
+  ],
+  "review_hypotheses": [
+    {
+      "observable_feature": "Aleyda: free learning routes, task-based topic links and a practical checklist.",
+      "hypothesis": "A question-based learning hub may help people and retrieval systems locate the relevant experiment.",
+      "next_test": "Create a small GEO Lab index with verified report/data links. Record a URL-free prompt baseline, then repeat fixed prompts on multiple dates; retain a comparison page where feasible.",
+      "causal_status": "Untested: the audit observed organization, not its effect on recommendations."
+    },
+    {
+      "observable_feature": "Kevin: explicit study methods and denominators; the same research is also available as a searchable talk transcript.",
+      "hypothesis": "Inspectable evidence and a second readable format may broaden useful entry points.",
+      "next_test": "Test one change at a time on matched pages: a compact methods block or a transcript. Keep prompt wording fixed and measure page retrieval and strict linked C separately from R.",
+      "causal_status": "Untested: existing reputation, audience and data partnerships remain confounds."
+    },
+    {
+      "observable_feature": "The GEO Lab: connected experiment pages, manuals, templates and revision notes.",
+      "hypothesis": "A linked experiment directory with transparent versions may help users reach the right evidence.",
+      "next_test": "Add cross-links and a standard protocol/data/correction template to a bounded page group. Compare repeated fixed prompts with a comparison group; preserve the pre-change versions.",
+      "causal_status": "Untested: useful structure does not resolve the manual\u2019s denominator and significance inconsistencies."
+    },
+    {
+      "observable_feature": "The GEO Lab\u2019s recommendations exceeded Artur\u2019s explicit name appearances; audited assets provide different levels of author attribution.",
+      "hypothesis": "Consistent author attribution across owned assets may improve recognition of Helen Bird as the creator.",
+      "next_test": "Record separate baselines for page C, GEO Lab content-brand R, Helen Bird name M and Helen Bird person R. Introduce one documented authorship change and repeat the same prompts with a comparison page.",
+      "causal_status": "Untested: asset recommendation and personal recognition are different outcomes; no identity intervention occurred here."
+    }
+  ]
+}

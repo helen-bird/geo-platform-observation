@@ -1,0 +1,172 @@
+{
+  "title": "GEO Lab #04: Historical creator selection, independent new samples and source audit",
+  "registered_at": "2026-11-03T08:59:58.715391+00:00",
+  "timezone": "Asia/Shanghai",
+  "status": "registered_before_first_submission",
+  "prompts": {
+    "Q1": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+    "Q2": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+    "Q3": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available."
+  },
+  "candidate_ids": [
+    "aleyda-solis",
+    "kevin-indig",
+    "artur-ferreira"
+  ],
+  "design": {
+    "questions": 3,
+    "environments": 2,
+    "repeats": 3,
+    "planned_answers": 18,
+    "unit": "One stateless API request or one new private Grok conversation; exactly one original prompt, no follow-ups.",
+    "seed": 20261103,
+    "planned_order": [
+      "S4-GROK-Q2-R1",
+      "S4-OPENAIAPI-Q2-R1",
+      "S4-GROK-Q3-R1",
+      "S4-OPENAIAPI-Q3-R1",
+      "S4-GROK-Q1-R1",
+      "S4-OPENAIAPI-Q1-R1",
+      "S4-GROK-Q2-R2",
+      "S4-OPENAIAPI-Q2-R2",
+      "S4-OPENAIAPI-Q1-R2",
+      "S4-GROK-Q1-R2",
+      "S4-GROK-Q3-R2",
+      "S4-OPENAIAPI-Q3-R2",
+      "S4-GROK-Q3-R3",
+      "S4-OPENAIAPI-Q3-R3",
+      "S4-OPENAIAPI-Q2-R3",
+      "S4-GROK-Q2-R3",
+      "S4-GROK-Q1-R3",
+      "S4-OPENAIAPI-Q1-R3"
+    ],
+    "order_policy": "Three repeat blocks; question and environment order shuffled. Actual order and deviations retained; any pending condition may be bypassed without changing a prompt.",
+    "no_candidate_names_in_prompts": true,
+    "minimum_same_environment_submission_interval_seconds": 180
+  },
+  "controls": {
+    "openai_api": {
+      "platform": "OpenAI API + web search",
+      "interface": "Responses API",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "search": "Native web_search; tool_choice required; live access; actual tool calls stored separately from citations.",
+      "context": "Exactly one original user prompt. No system/developer steering, history, previous_response_id, conversation ID, account identifiers or candidate names.",
+      "backend_snapshot": "Undated returned model identifier; underlying snapshot not independently verified."
+    },
+    "grok": {
+      "platform": "Grok",
+      "interface": "Consumer web UI",
+      "mode": "Expert",
+      "backend_model": "Not exposed unless UI provides it",
+      "reasoning_effort": "Not independently selectable",
+      "search": "Native retrieval; record actual controls, search queries and executed retrieval separately. No textual search instructions appended.",
+      "personalization": "X and conversation-history personalization disabled during collection; restoration completion is documented separately. Original preference values are omitted.",
+      "private_chats": true,
+      "preflight_status": "Expert and private chats verified; both experiment personalization switches OFF. Original account preference values omitted."
+    }
+  },
+  "authorization": {
+    "api_budget_usd": 10,
+    "api_model": "gpt-5.6-sol",
+    "api_effort": "medium",
+    "confirmed_on": "2026-11-03",
+    "extra_submissions": "Not authorized for this new stage; stop and ask if replacements beyond nine requests per environment are needed.",
+    "grok_personalization_change_and_restore": true,
+    "publication": "Redacted public edition authorized on 2026-11-03; private originals and account UI remain local."
+  },
+  "selection": {
+    "uses": "Frozen Stage1 observations, not new samples",
+    "historical_source": "../../../data/runs.json",
+    "limitation": "Historical selection is not independent proof of future visibility. Stage4 API differs from Stage1 consumer ChatGPT Search. Aleyda cross-platform counts come from different questions.",
+    "candidates": [
+      {
+        "id": "aleyda-solis",
+        "person": "Aleyda Solis",
+        "assets": [
+          "Learning AI Search",
+          "SEOFOMO",
+          "aleydasolis.com"
+        ],
+        "historical_recommendations": {
+          "ChatGPT Search Q3": 2,
+          "Grok Q1": 2
+        }
+      },
+      {
+        "id": "kevin-indig",
+        "person": "Kevin Indig",
+        "assets": [
+          "Growth Memo"
+        ],
+        "historical_recommendations": {
+          "ChatGPT Search Q3": 2
+        }
+      },
+      {
+        "id": "artur-ferreira",
+        "person": "Artur Ferreira",
+        "assets": [
+          "The GEO Lab",
+          "thegeolab.net"
+        ],
+        "historical_recommendations": {
+          "Grok Q1": 2,
+          "Grok Q3": 1
+        },
+        "historical_identity_note": "Q1 names the resource brand The GEO Lab without naming Artur; Q3 R1 explicitly names both."
+      }
+    ]
+  },
+  "coding": {
+    "unit": "Candidate family \u00d7 selected complete answer; retain exact text/name/URL evidence and separate person from associated assets.",
+    "person_mention": "Personal name explicitly appears in answer body; not inferred from a domain or asset.",
+    "asset_mention": "A predeclared or subsequently verified associated content asset explicitly appears in body; record exact name separately.",
+    "citation": "Observable answer-body citation links to confirmed own/bylined content. Third-party coverage is separate; retrieval-only sources and whole-panel anchors are not citations. Unknown attribution is null, not assumed.",
+    "recommendation": "Active suggestion to read/use/follow, or selected answer to the prompt; incidental, criticized or excluded mentions do not qualify. Person-level and asset-level recommendation targets retained.",
+    "family_rollup": "Transparent union across confirmed personal/asset observations, never relabeled as explicit person mention.",
+    "retrieval": "Separate evidence for searched/fetched sources, not automatically C/M/R.",
+    "method": "Assistant observational reading with quoted evidence; no independent human double coding claimed.",
+    "denominators": "Per question \u00d7 environment n=3, plus clearly labeled all-question pooled n=9; no stable probabilities inferred."
+  },
+  "source_audit": {
+    "order": "After new sample collection, prioritize Artur, then Aleyda, then Kevin.",
+    "selection": "2\u20133 distinct actual body-cited own/bylined content pages per creator, prioritized by recurrence then direct fit to prompt. Retain selection rationale.",
+    "shortfall_policy": "If fewer than two eligible pages appear, report the shortfall. Do not substitute uncited pages as holdout citations. Optional linked context pages must be explicitly separate from the cited-page sample.",
+    "dimensions": [
+      "User problem answered",
+      "Original evidence and methodological support",
+      "Explicit conclusions and executable steps",
+      "Internal links and topic organization",
+      "Observable third-party citations/reprints/distribution",
+      "Low-cost reusable practices versus reputation/audience/data advantages"
+    ],
+    "limitations": "Purposive descriptive audit, not proof of why AI recommends an author or a general content-quality ranking. Access failures and unsupported claims retained."
+  },
+  "completeness": {
+    "requirements": [
+      "Full coherent answer body independently read",
+      "Model/effort/mode and time recorded",
+      "Actual search activity evidenced",
+      "Body URLs distinguished from retrieval/source-panel URLs",
+      "All failed/partial submissions retained"
+    ],
+    "prefix_or_hasMore_false_not_sufficient": true
+  },
+  "limits": [
+    "18 answers provide short-term observations, not long-term stability.",
+    "Historical ChatGPT UI and current OpenAI API are different conditions; no pure longitudinal consumer-platform comparison.",
+    "No intervention or causal mechanism identification.",
+    "No business-conversion outcome measured.",
+    "Existing reputations, audiences and commercial resources are background advantages, not directly replicable strategies."
+  ],
+  "actual_order": [],
+  "public_copy": true,
+  "public_edition": {
+    "authorized_on": "2026-11-03",
+    "authorization": "User authorized redacted Stage 4 data/report publication to the existing public GitHub repository and GitHub Pages.",
+    "condition_notice": "OpenAI Responses API + native web search, not consumer ChatGPT Search. These results do not represent ChatGPT web app performance.",
+    "historical_scope": "Earlier local-only authorization text belongs to the original collection checkpoint; the dated public-release authorization supersedes it. Redacted registration copies are not byte-identical to private originals."
+  },
+  "registration_context": "Historical pre-submission design, redacted for publication; completion and restoration are in protocol.json. No private hash is relabeled as a redacted-file digest."
+}

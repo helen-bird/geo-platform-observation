@@ -1,0 +1,223 @@
+{
+  "candidate_id": "artur-ferreira",
+  "audit_date": "2026-11-03",
+  "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+  "scope": "Three purposively selected URLs actually cited in frozen Stage 4 answers; descriptive source audit, not a causal test or a whole-site quality rating.",
+  "access_method": "Web retrieval tool original-page reads; tool responses may use crawled representations, so this is not a direct browser/network or historical-snapshot verification.",
+  "selected_pages": [
+    {
+      "candidate_id": "artur-ferreira",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "reviewer": "assistant",
+      "independent_human_review": false,
+      "third_party_distribution": [],
+      "url": "https://thegeolab.net/field-manual/",
+      "title": "GEO Field Manual: The Complete Practitioner Guide",
+      "run_ids": [
+        "S4-GROK-Q3-R1",
+        "S4-GROK-Q3-R2"
+      ],
+      "selection_reason": "Own-site answer-body citation in two new Q3 answers; recheck the prior audit concern.",
+      "byline": "Copyright and author footer identify Artur Ferreira; Edition 1.2, August 2026.",
+      "evidence": [
+        {
+          "locator": "Edition note; Chapter 12, Platform/Results; Chapter Summary",
+          "observation": "Revision note acknowledges earlier transcription errors. Yet Chapter 12 still specifies 15 queries \u00d7 5 runs = 75 per version, alongside results 18/30 versus 11/30, z=1.81, p=.07, and later says significantly outperforms.",
+          "quote": "significantly outperforms"
+        },
+        {
+          "locator": "Chapter 12, Limitations",
+          "observation": "The reported test concerns one topic and Perplexity; it is not a ChatGPT\u2013Grok experiment."
+        }
+      ],
+      "content_strategy": "Comprehensive reference with chapter anchors, checklists, worked rewrites and experiment-log links.",
+      "internal_links": [
+        {
+          "url": "https://thegeolab.net/geo-experiments/",
+          "label": "Experiments companion"
+        },
+        {
+          "url": "https://thegeolab.net/ebooks/",
+          "label": "Library hub"
+        },
+        {
+          "url": "https://thegeolab.net/log/",
+          "label": "Live experiment log"
+        }
+      ],
+      "reusable": [
+        "Separate reference pages from experiment logs; publish version notes."
+      ],
+      "background_advantages": [
+        "Existing library and research infrastructure."
+      ],
+      "limitations": [
+        "The method/result denominator conflict remains unresolved in this page. p=.07 does not meet a conventional .05 threshold; the significance wording needs qualification. No raw-data replication or exact-page independent citation established."
+      ]
+    },
+    {
+      "candidate_id": "artur-ferreira",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "reviewer": "assistant",
+      "independent_human_review": false,
+      "third_party_distribution": [],
+      "url": "https://thegeolab.net/ebooks/",
+      "title": "Free GEO Ebooks & Guides | The GEO Lab",
+      "run_ids": [
+        "S4-GROK-Q3-R1",
+        "S4-GROK-Q1-R3"
+      ],
+      "selection_reason": "Library hub actually cited in both creator and free-learning questions.",
+      "byline": "About These Guides and author footer attribute the guides to Artur Ferreira.",
+      "evidence": [
+        {
+          "locator": "Available Ebooks; FAQ",
+          "observation": "A task-based library links fundamentals, framework, experiments, workbook and technical guides, then explains starting choices and update versions."
+        },
+        {
+          "locator": "Print note; FAQ on price",
+          "observation": "The page describes browser-print PDF saving and also Gumroad zero-price checkout requiring email. Download/checkout was not tested."
+        }
+      ],
+      "content_strategy": "A discoverable hub turns individual guides into an explicit learning sequence with audience-specific entry points.",
+      "internal_links": [
+        {
+          "url": "https://thegeolab.net/field-manual/",
+          "label": "Field Manual"
+        },
+        {
+          "url": "https://thegeolab.net/geo-experiments/",
+          "label": "Experiments guide"
+        },
+        {
+          "url": "https://thegeolab.net/about/",
+          "label": "Author identity"
+        },
+        {
+          "url": "https://thegeolab.net/log/",
+          "label": "Research log"
+        }
+      ],
+      "reusable": [
+        "Create one public index with task labels, suggested reading order and authorship."
+      ],
+      "background_advantages": [
+        "An already-developed multi-guide catalog."
+      ],
+      "limitations": [
+        "This index supplies no new experimental sample. Its claimed proven framework is promotional characterization, not validation by this audit. Independent citations of this exact hub were not verified."
+      ]
+    },
+    {
+      "candidate_id": "artur-ferreira",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "reviewer": "assistant",
+      "independent_human_review": false,
+      "third_party_distribution": [],
+      "url": "https://thegeolab.net/geo-experiments/",
+      "title": "GEO Experiments: Design, Measure & Learn \u2014 2026 Edition",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R3"
+      ],
+      "selection_reason": "Own-site body citation returned by the API Q3 answer.",
+      "byline": "Embedded guide explicitly identifies Artur Ferreira and a 2026 edition.",
+      "evidence": [
+        {
+          "locator": "Live Data; How The GEO Lab Runs Experiments",
+          "observation": "Headline reports 330 queries across ChatGPT, Gemini and Perplexity; a separate results table links studies, including E001 (18/30 vs 11/30, p=.07) and a 480-query FAQ null result. These are different studies, not one combined sample."
+        },
+        {
+          "locator": "Data Collection Template",
+          "observation": "Provides exact-query, date, engine, citation URL and quoted-passage fields; its example uses ten queries across three engines."
+        }
+      ],
+      "content_strategy": "Hypothesis-to-report workflow, ten test templates and a table linking conclusions to individual studies.",
+      "internal_links": [
+        {
+          "url": "https://thegeolab.net/ebooks/",
+          "label": "Library hub"
+        },
+        {
+          "url": "https://thegeolab.net/log/",
+          "label": "Underlying study log"
+        }
+      ],
+      "reusable": [
+        "Publish a blank measurement sheet and distinguish templates from completed results."
+      ],
+      "background_advantages": [
+        "Multiple existing studies and a proprietary Console."
+      ],
+      "limitations": [
+        "No Grok appears in the 330-query headline. Underlying datasets were not independently reanalysed. Independent citations of this exact guide were not verified."
+      ]
+    }
+  ],
+  "distribution_search": {
+    "queries": [
+      "\"The GEO Lab\" \"Artur Ferreira\" -site:thegeolab.net"
+    ],
+    "focused_search_count": 1,
+    "purpose": "Locate observable off-site distribution; no exhaustive backlink or audience audit."
+  },
+  "distribution_checks": [
+    {
+      "url": "https://www.linkedin.com/posts/arturgeo_people-keep-asking-me-the-same-question-activity-7487107869255999488-8_w-",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "classification": "author_owned_distribution_on_external_platform",
+      "evidence": "Author announces a recurring 14-experiment series, using measurement, tools, results and defensible conclusion as the post format. This is self-distribution, not independent endorsement.",
+      "independent_endorsement": false,
+      "exact_selected_page_citation_verified": false
+    },
+    {
+      "url": "https://synapsesocial.com/papers/6ac33d946931ac3d2d78d588",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_via_web_retrieval",
+      "classification": "third_party_index_of_first_party_research",
+      "evidence": "Synapse lists a related paper by Artur Ferreira and Julio Ar\u00e9valo Piedra and links DOI 10.5281/zenodo.23122087. It republishes the authors\u2019 abstract; this verifies external indexing, not independent confirmation or a citation of the selected guides.",
+      "independent_endorsement": false,
+      "exact_selected_page_citation_verified": false
+    },
+    {
+      "url": "https://kusiai.es/research/",
+      "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+      "access_status": "readable_but_search_excerpt_not_corroborated",
+      "classification": "unverified_search_lead",
+      "evidence": "Search excerpt named Artur as a joint researcher; the opened page instead displayed Julio-focused material without that attribution. Excluded as corroborated independent distribution.",
+      "independent_endorsement": null,
+      "exact_selected_page_citation_verified": false
+    }
+  ],
+  "background_source": {
+    "url": "https://thegeolab.net/about/",
+    "accessed_at": "2026-11-03T11:03:02.069675+00:00",
+    "classification": "first_party_biographical_claim",
+    "evidence": "Author reports over twenty years in SEO, a separate web-design business and existing tooling. These are background advantages and self-reports, not audited credentials or causes of AI recommendation."
+  },
+  "notes": [
+    "All 18 holdout answers were already frozen before this source audit; no test prompt, model call or source recommendation was added.",
+    "The current manual explicitly acknowledges corrections, but a method/result mismatch and significance wording remain within the inspected edition. Preserve both observations together.",
+    "Page-level attribution is checked from author/footer material. Search ranking, backlink quantity, audience size and referral/conversion outcomes were not measured."
+  ],
+  "hypotheses": [
+    {
+      "idea": "A task-based hub may help users and retrieval systems locate the right experiment or practical guide.",
+      "future_test": "Compare a pre-registered, URL-free prompt bank before and after adding a hub; repeat observations and retain a control where feasible.",
+      "causal_status": "untested"
+    },
+    {
+      "idea": "Linking concise conclusions to versioned protocols, data and correction notes may improve inspectability.",
+      "future_test": "Measure retrieval, citation, explicit mention and recommendation separately after a controlled evidence-page change.",
+      "causal_status": "untested"
+    }
+  ],
+  "shortfalls": [
+    "Independent third-party citations of the three exact selected pages were not verified within one focused search.",
+    "No original data replication, download/checkout, browser rendering, backlink inventory or creator business impact was measured.",
+    "These selected visible creators have no matched un-recommended control group; observed features cannot explain why an AI chose them."
+  ]
+}

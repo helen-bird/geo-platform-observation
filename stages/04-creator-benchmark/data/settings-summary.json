@@ -1,0 +1,10 @@
+{
+  "platform": "Grok",
+  "test_personalization_using_x": false,
+  "test_personalization_using_history": false,
+  "test_answer_count": 9,
+  "restoration_completed": true,
+  "restored_at": "2026-11-03T11:00:52.916645+00:00",
+  "original_preferences": "Omitted; restored to pre-test values.",
+  "evidence_scope": "Summary of observed controls. Original settings screenshots and account navigation remain private; not a backend-isolation audit."
+}

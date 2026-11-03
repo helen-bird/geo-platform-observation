@@ -1,0 +1,110 @@
+{
+  "id": "S4-GROK-Q3-R3",
+  "slot_id": "S4-GROK-Q3-R3",
+  "platform": "Grok",
+  "interface": "Consumer web UI",
+  "prompt_id": "Q3",
+  "repeat": 3,
+  "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_at": "2026-11-03T09:24:50.446Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_mode": "Expert native retrieval; no independent force-search toggle observed",
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Juan Camilo Auriti via GeoReady (geoready.dev) is one of the strongest matches, along with a few other practical publishers and free resources aimed at builders, solo founders, and independents. These stand out for being actionable (audits, checklists, step-by-step roadmaps, technical implementation), grounded in research (especially the foundational Princeton/KDD 2024 GEO study), and accessible without large teams or budgets.\n\nPrimary recommendation: GeoReady (Juan Camilo Auriti)\n\nGeoReady publishes a large library of practical, research-grounded guides on AI search visibility and Generative Engine Optimization. It focuses on technical and content signals that help models find, understand, and cite sites (crawler access, llms.txt, schema, citability, entity signals, etc.), without hype or ranking guarantees.\u2060Geoready\n\nWhy it fits independent builders:\n\nBuilt by a solo/independent founder (Juan Camilo Auriti, based in Italy) who started with an open-source GEO audit engine (GEO Optimizer, MIT-licensed Python CLI, installable via pip install geo-optimizer-skill). The hosted GeoReady platform sits on top of it for monitoring. Scoring is transparent and auditable\u2014weights, checks, and reasoning are public, with references to research papers.\u2060Geoready\nFree guides covering foundations (robots.txt/AI crawlers, llms.txt), citability, execution checklists, platform-specific notes (Webflow, Shopify, SaaS docs, etc.), measurement, and research explainers. Includes free audits/checkers.\nExplicitly research-oriented: draws on the Princeton GEO paper (Aggarwal et al., KDD 2024) and related work, plus the author's own testing and methodology (also documented in a technical book, AI Search Engineering).\nDesigned for people who want the system to make sense\u2014developers, indie builders, SaaS founders, freelancers\u2014rather than pure marketers or enterprises.\n\nThis combination of open tools + practical walkthroughs + research grounding is particularly useful for independents who prefer to audit and implement themselves.\n\nOther strong practical, data-backed options\nSam Shev\u2019s 90-day GEO roadmap (samshev.com): A phased, actionable plan (audit \u2192 content/authority \u2192 measurement) that directly cites the Princeton/KDD 2024 study\u2019s citation-lift numbers (e.g., quotation addition, statistics, fluency, inline citations) and includes schema checklists, KPIs, and \u201cAnswer Capsule\u201d content formats. Useful for early-stage or resource-constrained builders who want a structured timeline without theory overload.\u2060Samshev\nApollo Digital\u2019s free GEO course (apollodigital.io/learn/geo/): Roughly 7 short lessons (~100 minutes) covering foundations, technical access (crawlers/robots.txt), measurement (with free Google Sheets templates for audits and share-of-voice tracking), and tooling. No signup gate; designed to be runnable with free tools. Agency-backed but self-serve and practical for independents.\u2060Apollodigital\nDeveloper- and solo-founder-focused guides:\nDeveloper\u2019s guides (e.g., on DEV Community and similar pieces) emphasize technical implementation: schema, server-side rendering, robots.txt for AI crawlers, extractable content chunks, and measurement. These suit people who build their own sites.\nSolo-founder pieces (e.g., HeyCatch, RankRealizer-style guides) focus on low/no-budget tactics for pre-traction or indie products: answer-first structure, entity signals, and citability without heavy tooling.\nCommunity sources: Subreddits such as r/geoforbeginners and r/GenEngineOptimization contain practical checklists, \u201cwhat actually stuck\u201d workflows, and real experiments from independents (answer-first rewrites, tables for citability, prompt baselines, robots.txt/sitemap priorities). These are less polished but often highly practical and peer-tested.\nKey data backbone\n\nMost credible practical tutorials cite the 2024 KDD paper \u201cGEO: Generative Engine Optimization\u201d (Aggarwal, Murahari, et al.; arXiv:2311.09735). It tested content techniques on ~10,000 queries and found lifts from adding quotations, statistics, and cited sources (roughly in the 30\u201340% range on their position-adjusted visibility metric in controlled settings), with larger relative gains for lower-ranked sources, and negative or null results for keyword stuffing. Many guides treat this as the foundational evidence while layering on technical access, schema, entity work, and ongoing measurement. Note that results come from research setups (not necessarily live production engines in every case), so practitioners treat the numbers as directional.\u2060Aisyndicate\n\nIn short: Start with GeoReady\u2019s guides and free audit tools if you want research-grounded, builder-friendly, auditable resources from an independent maker. Pair them with a structured roadmap (Sam Shev) or free course (Apollo Digital) and the Princeton paper for the underlying data. Reddit communities add real-world independent experiments. The field is still evolving, so prioritize sources that show their methods, cite primary research, and focus on measurable signals over guarantees.",
+  "answer_links": [
+    {
+      "domain": "geoready.dev",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Geoready",
+      "title": "Guides \u2014 AI Search Visibility & GEO (Geoready)",
+      "url": "https://geoready.dev/guides/"
+    },
+    {
+      "domain": "geoready.dev",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Geoready",
+      "title": "About GeoReady \u2014 Built by Juan Camilo Auriti (Geoready)",
+      "url": "https://geoready.dev/about/"
+    },
+    {
+      "domain": "www.samshev.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Samshev",
+      "title": "How to Start GEO: A 90-Day Generative Engine Optimization Roadmap | Sam Shev \u2014 Fractional CMO (Samshev)",
+      "url": "https://www.samshev.com/blog/geo-90-day-roadmap"
+    },
+    {
+      "domain": "apollodigital.io",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Apollodigital",
+      "title": "The Free GEO Course: Learn Generative Engine Optimization | Apollo Digital (Apollodigital)",
+      "url": "https://apollodigital.io/learn/geo/"
+    },
+    {
+      "domain": "www.aisyndicate.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Aisyndicate",
+      "title": "What the Princeton GEO Study Found | AI Syndicate (Aisyndicate)",
+      "url": "https://www.aisyndicate.com/blog/what-the-geo-study-found/"
+    }
+  ],
+  "captured_at": "2026-11-03T09:25:59.654Z",
+  "source_panel_declared_hits": 65,
+  "source_inventory_scope": "All observable body inline URLs including expanded citation groups; source-panel hit count separate. Retrieval inventory may be partial.",
+  "capture_method": "Assistant read full native rendered answer; matching prompt checked; DOM body and expanded citation groups captured.",
+  "body_review": {
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "inline_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "retrieval_sources": [
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "geoready.dev/guides/",
+      "url": "https://geoready.dev/guides/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "mogerio.com/article/generative-engine-optimization-guide",
+      "url": "https://mogerio.com/article/generative-engine-optimization-guide"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "apollodigital.io/learn/geo/",
+      "url": "https://apollodigital.io/learn/geo/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "geoready.dev/about/",
+      "url": "https://geoready.dev/about/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "samshev.com/blog/geo-90-day-roadmap",
+      "url": "https://www.samshev.com/blog/geo-90-day-roadmap"
+    }
+  ],
+  "raw_file": "records/S4-GROK-Q3-R3.json",
+  "public_copy": true,
+  "publication_scope": "Redacted original answer, body links, actual search activity and usage; private UI captures, conversations, provider identifiers and reasoning traces remain local.",
+  "original_capture_answer_characters": 5049,
+  "public_answer_characters": 5049,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  },
+  "search_activity_text": "\\u5de5\\u4f5c\\u4e86 29s\n\\u6267\\u884c\\u4e86 3 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\npractical data-backed GEO tutorials independent builders\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nGenerative Engine Optimization tutorials for indie developers\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\n\"GEO\" \"Generative Engine Optimization\" tutorial OR guide site:reddit.com OR indiehackers OR \"independent\"\nIdentifying practical GEO tutorial sources\n\\u5df2\\u6d4f\\u89c8\ngeoready.dev/guides/\n\\u5df2\\u6d4f\\u89c8\nmogerio.com/article/generative-engine-optimization-guide\n\\u5df2\\u6d4f\\u89c8\napollodigital.io/learn/geo/\n\\u6267\\u884c\\u4e86 2 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nGeoReady.dev who runs OR about OR founder\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nPrinceton GEO study Aggarwal citation lift\n\\u5df2\\u6d4f\\u89c8\ngeoready.dev/about/\n\\u5df2\\u6d4f\\u89c8\nsamshev.com/blog/geo-90-day-roadmap\nVerifying specific GEO tutorial sources\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nApollo Digital GEO course independent OR solo OR founder OR builder\n10 \\u7ed3\\u679c\nCompiling GEO tutorial sources",
+  "remaining_citation_buttons": []
+}

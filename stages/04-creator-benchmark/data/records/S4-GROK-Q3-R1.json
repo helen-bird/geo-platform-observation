@@ -1,0 +1,107 @@
+{
+  "id": "S4-GROK-Q3-R1",
+  "slot_id": "S4-GROK-Q3-R1",
+  "platform": "Grok",
+  "interface": "Consumer web UI",
+  "prompt_id": "Q3",
+  "repeat": 1,
+  "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_at": "2026-11-03T09:06:15.777Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_mode": "Expert native retrieval; no independent force-search toggle observed",
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "The GEO Lab (Artur Ferreira at thegeolab.net), Cyberbard (Heng), HeyCatch, and practitioners like Sam Shev are among the strongest sources of practical, data-backed Generative Engine Optimization (GEO) tutorials aimed at independent builders (solo founders, indie hackers, freelancers, and small teams with limited budgets).\u2060Thegeolab\n\nGEO is the practice of structuring content so AI answer engines (ChatGPT, Perplexity, Google AI Overviews/Gemini, etc.) retrieve, extract, and cite it in generated responses rather than (or in addition to) traditional ranking.\n\nWhy These Stand Out\n\nThey focus on resource-constrained independents rather than enterprise teams. Content is actionable: 30/60/90-day roadmaps, checklists, audit processes, extractability templates, schema guidance, prompt baselines, and \u201canswer-first\u201d formats (short definitional openings, question-style headings, statistics/quotes with sources). They avoid pure theory or tool sales pitches.\n\nThey are data-backed primarily by the foundational peer-reviewed Princeton/IIT Delhi KDD 2024 paper (\u201cGEO: Generative Engine Optimization,\u201d Aggarwal et al., arXiv:2311.09735 / ACM SIGKDD 2024). That study tested nine content tactics on ~10,000 queries via GEO-bench and found roughly 30\u201340% relative visibility lifts (position-adjusted word count) from:\n\nQuotation addition (~+41%)\nStatistics addition (~+33%)\nFluency optimization (~+29%)\nCiting sources (~+28%)\n\nKeyword stuffing hurt performance. Relative gains were often larger for lower-ranked/smaller sites. Many guides also incorporate supporting industry data (Ahrefs, Muck Rack on earned media vs. owned, SparkToro, Pew on zero-click trends) or their own experiments.\u2060Jrkdm\n\nKey Publishers and What They Offer\nThe GEO Lab (Artur Ferreira) \u2014 thegeolab.net: The most comprehensive free library for practitioners. It includes the GEO Field Manual (full reference covering the five-layer GEO Stack: Retrieval Probability, Extractability, Entity Reinforcement, Structural Authority, System Memory), Pocket Guide, Experiments guide, Workbook, WordPress technical guide, and more. Practical elements include six-step audits, declarative/answer-first restructuring templates, hub-and-spoke architecture, scoring methods, experiment design principles, and appendices with checklists/schema. They run and document their own tests (e.g., declarative vs. narrative structure increasing citation rates). Free for personal and commercial use\u2014ideal depth for independent builders who want a working reference rather than marketing fluff.\u2060Thegeolab\nCyberbard (Heng, independent UK developer) \u2014 cyberbard.dev: Explicitly targeted \u201cGEO Guide for Indie Founders (2026)\u201d (YouTube video + detailed blog). Covers the shift from ranking contests to citation contests, zero-click data, the importance of earned media (citing Muck Rack figures around ~82% of AI citations from external sources), brand mentions vs. backlinks, front-loading strong claims (SparkToro-style data on early-page citations), and a practical 6-part GEO Flywheel (entity/JSON-LD setup, FAQ structure, content optimization, authority signals, schema, content matrix). Priority actions for solos include adding Organization schema (quick one-time win), FAQ schema, and securing one stable external mention channel. Heavily cites the Princeton study plus Ahrefs, Pew, and others. Includes a free testing tool.\u2060Cyberbard\nHeyCatch: Dedicated guide on GEO for solo founders at the pre-traction stage (no audience, backlinks, or budget required). Emphasizes structural choices: machine-readable schema (e.g., SoftwareApplication), extractable 40\u201360-word answer blocks under question headings, narrow topical depth over volume, cross-source consistency (Product Hunt, communities, etc.), and simple monitoring. Positions GEO as an architecture decision rather than a spending one.\u2060Heycatch\nSam Shev and similar practitioner roadmaps: 90-day phase-by-phase plans (audit \u2192 foundation/schema \u2192 GEO-native content in \u201cAnswer Capsule\u201d format with inline stats/quotes/FAQs \u2192 measurement). Explicitly incorporate Princeton citation-lift figures, schema checklists, and KPIs. Other useful ones include Growth Rocket\u2019s priority matrix for small teams, RankAI\u2019s founder playbook, and zero-budget startup guides (e.g., from Over the Top SEO).\nAdditional Context\n\nMany other agency or consultant blogs publish overlapping 90-day playbooks that also cite the Princeton paper and recommend prompt audits (20\u201350 buyer questions), answer-first structure, schema, and third-party signals. These are useful but less consistently free or indie-specific than the GEO Lab or Cyberbard materials.\n\nPrimary foundational source: Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., & Deshpande, A. (2024). GEO: Generative Engine Optimization. Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. arXiv:2311.09735 / DOI:10.1145/3637528.3671900.\u2060Tinyurl\n\nStart with the GEO Lab\u2019s free Pocket Guide or Field Manual for a structured framework, then layer Cyberbard or HeyCatch for indie-specific priorities and the Princeton paper for the underlying evidence. Tactics that consistently appear across the best sources\u2014direct answers up front, evidence (stats + quotes + citations), clean extractability, entity consistency, and measurement via prompt testing\u2014align with the available data.",
+  "answer_links": [
+    {
+      "domain": "thegeolab.net",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Thegeolab",
+      "title": "Free GEO Ebooks & Guides | The GEO Lab (Thegeolab)",
+      "url": "https://thegeolab.net/ebooks/"
+    },
+    {
+      "domain": "jrkdm.com",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Jrkdm",
+      "title": "What the Princeton GEO study found about getting your content cited in AI answers \u2014 JRK Digital Media (Jrkdm)",
+      "url": "https://jrkdm.com/insights/geo-research-princeton"
+    },
+    {
+      "domain": "thegeolab.net",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Thegeolab",
+      "title": "GEO Field Manual \u2014 Practical GEO Guide (Thegeolab)",
+      "url": "https://thegeolab.net/field-manual/"
+    },
+    {
+      "domain": "cyberbard.dev",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Cyberbard",
+      "title": "How New Websites Get Traffic from AI Search (GEO Guide) (Cyberbard)",
+      "url": "https://cyberbard.dev/blog/how-new-websites-get-traffic-from-ai-search"
+    },
+    {
+      "domain": "heycatch.ai",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Heycatch",
+      "title": "Generative Engine Optimization for Solo Founders | HeyCatch (Heycatch)",
+      "url": "https://heycatch.ai/blog/generative-engine-optimization-for-solo-founders"
+    },
+    {
+      "domain": "tinyurl.com",
+      "kind": "Grok answer-body inline citation",
+      "text": "\u2060Tinyurl",
+      "title": "GEO: Generative Engine Optimization\n      -  Princeton University (Tinyurl)",
+      "url": "https://tinyurl.com/y9ezuajm"
+    }
+  ],
+  "captured_at": "2026-11-03T09:08:31.284Z",
+  "source_panel_declared_hits": 75,
+  "source_inventory_scope": "All observable answer-body inline links captured; source-panel hit count kept separate. No claim of complete retrieval inventory.",
+  "capture_method": "Assistant read complete native rendered answer, extracted visible DOM text and inline citation hrefs; coherent ending verified.",
+  "search_evidence": "Expanded native work/search activity retained separately from answer text and citation links.",
+  "body_review": {
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "inline_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "retrieval_sources": [
+    {
+      "kind": "Native retrieval activity, not automatically body citation",
+      "text": "thegeolab.net/field-manual/",
+      "url": "https://thegeolab.net/field-manual/"
+    },
+    {
+      "kind": "Native retrieval activity, not automatically body citation",
+      "text": "cyberbard.dev/blog/how-new-websites-get-traffic-from-ai-search",
+      "url": "https://cyberbard.dev/blog/how-new-websites-get-traffic-from-ai-search"
+    },
+    {
+      "kind": "Native retrieval activity, not automatically body citation",
+      "text": "heycatch.ai/blog/generative-engine-optimization-for-solo-founders",
+      "url": "https://heycatch.ai/blog/generative-engine-optimization-for-solo-founders"
+    }
+  ],
+  "raw_file": "records/S4-GROK-Q3-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted original answer, body links, actual search activity and usage; private UI captures, conversations, provider identifiers and reasoning traces remain local.",
+  "original_capture_answer_characters": 5373,
+  "public_answer_characters": 5373,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  },
+  "search_activity_text": "\\u5de5\\u4f5c\\u4e86 38s\n\\u6267\\u884c\\u4e86 3 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\npractical data-backed GEO tutorials for independent builders\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nGenerative Engine Optimization tutorials indie hackers OR solo founders\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\n\"GEO\" OR \"Generative Engine Optimization\" tutorial OR guide OR course site:medium.com OR site:substack.com\nIdentifying GEO tutorial publishers\n\\u6267\\u884c\\u4e86 4 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nCyberbard GEO indie founders\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\n\"GEO Basics\" Fernando Paladini OR \"GEO Field Manual\" OR thegeolab.net\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nPrinceton GEO study Aggarwal KDD 2024 citation lift\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nbest GEO guides for solo founders OR indie hackers\nSynthesizing GEO tutorial sources\n\\u5df2\\u6d4f\\u89c8\nthegeolab.net/field-manual/\n\\u5df2\\u6d4f\\u89c8\ncyberbard.dev/blog/how-new-websites-get-traffic-from-ai-search\n\\u5df2\\u6d4f\\u89c8\nheycatch.ai/blog/generative-engine-optimization-for-solo-founders\nCompiling GEO tutorial recommendations"
+}

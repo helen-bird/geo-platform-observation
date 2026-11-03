@@ -1,0 +1,80 @@
+{
+  "reviewed_on": "2026-11-03",
+  "source": "../../../data/runs.json",
+  "denominator_per_question_environment": 2,
+  "counts_are_historical_not_holdout": true,
+  "strict_names": [
+    "Aleyda Solis (LearningAIsearch.com / SEOFOMO)",
+    "Kevin Indig (Growth Memo)",
+    "The GEO Lab"
+  ],
+  "rows": [
+    {
+      "candidate_id": "aleyda-solis",
+      "platform": "ChatGPT Search",
+      "prompt_id": "Q3",
+      "C": 2,
+      "M": 2,
+      "R": 2,
+      "run_ids": [
+        "C-Q3-R1",
+        "C-Q3-R2-A3"
+      ]
+    },
+    {
+      "candidate_id": "aleyda-solis",
+      "platform": "Grok",
+      "prompt_id": "Q1",
+      "C": 2,
+      "M": 2,
+      "R": 2,
+      "run_ids": [
+        "G-Q1-R1",
+        "G-Q1-R2"
+      ]
+    },
+    {
+      "candidate_id": "kevin-indig",
+      "platform": "ChatGPT Search",
+      "prompt_id": "Q3",
+      "C": 2,
+      "M": 2,
+      "R": 2,
+      "run_ids": [
+        "C-Q3-R1",
+        "C-Q3-R2-A3"
+      ]
+    },
+    {
+      "candidate_id": "artur-ferreira",
+      "platform": "Grok",
+      "prompt_id": "Q1",
+      "C": 2,
+      "M": 2,
+      "R": 2,
+      "run_ids": [
+        "G-Q1-R1",
+        "G-Q1-R2"
+      ],
+      "person_explicitly_named": false
+    },
+    {
+      "candidate_id": "artur-ferreira",
+      "platform": "Grok",
+      "prompt_id": "Q3",
+      "C": 1,
+      "M": 1,
+      "R": 1,
+      "run_ids": [
+        "G-Q3-R1"
+      ],
+      "person_explicitly_named": true
+    }
+  ],
+  "notes": [
+    "Historical The GEO Lab observations are resource-brand observations, not automatic personal-name mentions.",
+    "Historical extra retrieval-only The GEO Lab links in ChatGPT Q1 did not count as strict C/M/R.",
+    "Historical author attribution on two Semrush pages in a Kevin record remained unresolved; no new author validation inferred.",
+    "Stage2 ChatGPT C included Artur as cited and mentioned but excluded him from recommendations; Grok C listed related work with a direct-comparison limitation, without a stored equivalent entity coding row."
+  ]
+}

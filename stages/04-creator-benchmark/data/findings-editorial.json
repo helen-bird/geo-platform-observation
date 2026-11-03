@@ -1,0 +1,34 @@
+{
+  "findings": [
+    {
+      "title": "Recommendations depended on the user\u2019s question.",
+      "detail": "For Q1, Grok recommended Aleyda\u2019s resources and The GEO Lab in 3/3 answers each; the API recommended Aleyda\u2019s resources in 1/3. For Q3, the API recommended Kevin in 3/3, Aleyda or her resources in 1/3, and The GEO Lab in 1/3; Grok recommended Artur/The GEO Lab in 2/3. All three candidates had zero C/M/R in the six Q2 answers. These are counts of a person or a confirmed associated asset, not personal-name recommendations alone."
+    },
+    {
+      "title": "Content-brand exposure and personal exposure were different outcomes.",
+      "detail": "Across the mixed nine-answer positions per environment, Grok recommended The GEO Lab in 5/9 answers but named Artur in only 2/9; the API recommended the site in 1/9 without naming him. Explicit person recommendations were 2/9 and 0/9 respectively. These pooled counts describe this prompt bank, not a general recommendation probability."
+    },
+    {
+      "title": "Three repeats exposed changes hidden by the first two answers.",
+      "detail": "Grok\u2019s first two Q3 answers recommended Artur; its third recommended other creators. Kevin appeared in all three API Q3 answers. These are short-term counts within this run, not stable recommendation probabilities."
+    },
+    {
+      "title": "A strong AI endorsement did not establish research quality.",
+      "detail": "Grok described Artur\u2019s manual as rigorous, yet the inspected edition still mixes 75 runs per version with results using 30, and pairs p=.07 with significance wording. Its revision note acknowledges earlier transcription errors, but the chapter remains inconsistent. The useful content structure and unresolved evidence problem are both retained."
+    },
+    {
+      "title": "Recommendation and own-content citation were different outcomes.",
+      "detail": "Across 54 candidate-by-answer observations, 14 had M and R, but only 10 had a strict linked own/bylined C. Four recommendations lacked that specific citation type: two relied on third-party coverage, while two gave The GEO Lab as a plain-text address. Including the latter addresses would raise Artur\u2019s Grok C count from 3/9 to 5/9; the primary strict rule is retained. No C-only or M-only observation occurred among these three selected families."
+    },
+    {
+      "title": "The pages suggest practices to test, not proven causes of visibility.",
+      "detail": "Eight actual own/bylined pages show three approaches: Aleyda\u2019s curated learning routes, Kevin\u2019s data-led analysis and transcripts, and Artur\u2019s linked guides and experiment templates. Clear author identity, a question-based index, transparent methods and reusable worksheets are feasible candidates for Helen\u2019s next tests. Established audiences, experience and partner data remain background advantages."
+    }
+  ],
+  "limitations": [
+    "OpenAI API + native web search (gpt-5.6-sol, medium) is a different interface from consumer ChatGPT Search. The historical Stage 1 UI results cannot establish a pure longitudinal platform change.",
+    "Three of nine API answers reached the fixed eight-tool-call cap: all three Q2 repetitions. Their answer bodies are complete, but retrieval may have been constrained. Search controls and interfaces differ, so this is a comparison of the recorded environments rather than an isolated model preference.",
+    "Each question \u00d7 environment has only three repeats collected on one date. No un-recommended creator control group, content intervention, longitudinal stability or business conversion was tested.",
+    "C/M/R counts are assistant observational judgments, not independent human double coding. The audit checks selected pages and attribution; it does not verify every factual claim in all 18 model answers."
+  ]
+}

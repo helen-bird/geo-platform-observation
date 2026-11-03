@@ -1,0 +1,105 @@
+{
+  "id": "S4-GROK-Q3-R2",
+  "slot_id": "S4-GROK-Q3-R2",
+  "platform": "Grok",
+  "interface": "Consumer web UI",
+  "prompt_id": "Q3",
+  "repeat": 2,
+  "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_at": "2026-11-03T09:21:36.397Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_mode": "Expert native retrieval; no independent force-search toggle observed",
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "The GEO Lab (Artur Ferreira), HeyCatch, Averi.ai, Indie Hackers contributors, and various practitioners who build on the Princeton GEO study.\n\nThese sources publish practical, implementable GEO (Generative Engine Optimization) material aimed at independent builders, solo founders, and small teams. They emphasize DIY steps, low time/budget requirements, audits, content structure, schema, and measurement rather than enterprise agency processes.\n\nStrongest matches for independent builders\nThe GEO Lab (thegeolab.net), founded by Artur Ferreira (20+ years in SEO, based in Cambridge, UK). It publishes the free GEO Field Manual (a detailed practitioner reference covering the five-layer GEO Stack: Retrieval Probability, Extractability, Entity Reinforcement, Structural Authority, and System Memory). It includes diagnostic frameworks, section-level audits, rewrite templates, experiment logs, and a 30-day roadmap. The lab runs its own controlled experiments (e.g., declarative vs. narrative structure producing measurable citation-rate gaps on platforms like Perplexity) and shares methodology so others can replicate tests. This is among the most rigorous free, data-backed resources available.\u2060Thegeolab\nHeyCatch (heycatch.ai). Its guide \u201cGenerative Engine Optimization for Solo Founders\u201d targets pre-traction builders with no audience, backlinks, or budget. It focuses on structural choices (extractable 40\u201360-word answer blocks under question headings, schema such as SoftwareApplication, cross-source consistency on Product Hunt/Reddit/etc., and manual monitoring). It treats GEO as a content-architecture decision rather than a spend decision and references industry statistics on zero-click search and citation lifts.\u2060Heycatch\nAveri.ai. The \u201cFounder\u2019s 30-Day GEO Sprint: From Invisible to Cited\u201d is explicitly time-boxed for founders (roughly 2 hours/week, 8 hours total). It covers technical access (robots.txt for AI crawlers, schema), a baseline prompt audit, a small set of GEO-structured posts, review/profile signals, and re-measurement. A $0 version uses free tools (Search Console, GA4, manual prompts); an optional paid content engine reduces drafting time. It cites stats on citation likelihood by content age, length, structure, and third-party presence.\u2060Averi\nIndie Hackers and similar builder communities. Posts such as Jakub\u2019s \u201cGEO for Indie Founders: How AI Search Changes Your Distribution\u201d share experience from real MVPs: structuring landing pages as knowledge cards, writing honest comparison/listicle content, earning mentions across Dev.to/Medium/Reddit/etc., and adding schema. These are practical and grounded in observed AI mention patterns rather than pure theory.\u2060Indiehackers\n\nOther useful practical roadmaps (90-day plans, priority matrices for small teams, or solo-friendly checklists) come from writers such as Sam Shev, Contadu, Growth Rocket, PolyGrowth, and RankRealizer. Many YouTube videos and Medium posts also target indie/solo audiences.\n\nWhy these stand out\n\nThey are practical for independent builders because they prioritize:\n\nLow or zero cost and limited time (hours per week rather than dedicated teams).\nConcrete sequences: baseline prompt audits across ChatGPT/Perplexity/AI Overviews, extractability fixes (answer-first openings, question headings, self-contained chunks), schema, third-party mentions, and simple re-testing.\nMeasurement you can run yourself (manual prompt logs, Search Console, free or low-cost trackers).\n\nThey are data-backed primarily through the Princeton GEO study (Aggarwal et al., \u201cGEO: Generative Engine Optimization,\u201d KDD 2024 / arXiv:2311.09735). That paper introduced GEO-bench (~10,000 real queries) and tested content techniques, finding visibility lifts on the order of +41% for expert quotations, +33% for statistics, +28\u201329% for citing sources or fluency optimization, and a negative effect from keyword stuffing. Gains were often larger for lower-ranked pages. Nearly every serious practical tutorial cites these or related findings (or runs its own tests that align with them). Later analyses and replications exist, but the KDD paper remains the foundational controlled benchmark.\u2060Geoaura\n\nThe GEO Lab adds primary experimental data of its own, while the solo-focused guides layer on industry stats (AI referral shares, citation sources such as Reddit, content-age effects, etc.) and real implementation notes.\n\nKey free starting points: the GEO Field Manual at thegeolab.net, the HeyCatch solo-founder post, Averi\u2019s 30-day sprint, and the original Princeton paper (arXiv:2311.09735). Most of the 90-day roadmaps on other sites are also freely readable and point back to the same evidence base. Results still vary by niche, domain authority, and how consistently you measure and iterate\u2014GEO is relatively young and the underlying systems change.",
+  "answer_links": [
+    {
+      "domain": "thegeolab.net",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Thegeolab",
+      "title": "GEO Field Manual \u2014 Practical GEO Guide (Thegeolab)",
+      "url": "https://thegeolab.net/field-manual/"
+    },
+    {
+      "domain": "heycatch.ai",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Heycatch",
+      "title": "Generative Engine Optimization for Solo Founders | HeyCatch (Heycatch)",
+      "url": "https://heycatch.ai/blog/generative-engine-optimization-for-solo-founders"
+    },
+    {
+      "domain": "www.averi.ai",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Averi",
+      "title": "The Founder's 30-Day GEO Sprint: From Invisible to Cited (Averi)",
+      "url": "https://www.averi.ai/how-to/the-30-day-geo-sprint-from-invisible-to-ai-cited"
+    },
+    {
+      "domain": "www.indiehackers.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Indiehackers",
+      "title": "GEO for Indie Founders: How AI Search Changes Your Distribution - Indie Hackers (Indiehackers)",
+      "url": "https://www.indiehackers.com/post/geo-for-indie-founders-how-ai-search-changes-your-distribution-461a5b34ed"
+    },
+    {
+      "domain": "geoaura.world",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Geoaura",
+      "title": "The Princeton GEO Study: Benchmark & Findings Explained | GeoAura (Geoaura)",
+      "url": "https://geoaura.world/blog/princeton-geo-study-benchmark"
+    }
+  ],
+  "captured_at": "2026-11-03T09:22:39.266Z",
+  "source_panel_declared_hits": 105,
+  "source_inventory_scope": "All observable body inline URLs including expanded citation groups; source-panel hit count separate. Retrieval inventory may be partial.",
+  "capture_method": "Assistant read full native rendered answer; matching prompt checked; DOM body and expanded citation groups captured.",
+  "body_review": {
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "inline_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "retrieval_sources": [
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "thegeolab.net/field-manual/",
+      "url": "https://thegeolab.net/field-manual/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "heycatch.ai/blog/generative-engine-optimization-for-solo-founders",
+      "url": "https://heycatch.ai/blog/generative-engine-optimization-for-solo-founders"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "averi.ai/how-to/the-30-day-geo-sprint-from-invisible-to-ai-cited",
+      "url": "https://www.averi.ai/how-to/the-30-day-geo-sprint-from-invisible-to-ai-cited"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "indiehackers.com/post/geo-for-indie-founders-how-ai-search-changes-your-distribution-461a5b34ed",
+      "url": "https://www.indiehackers.com/post/geo-for-indie-founders-how-ai-search-changes-your-distribution-461a5b34ed"
+    }
+  ],
+  "raw_file": "records/S4-GROK-Q3-R2.json",
+  "public_copy": true,
+  "publication_scope": "Redacted original answer, body links, actual search activity and usage; private UI captures, conversations, provider identifiers and reasoning traces remain local.",
+  "original_capture_answer_characters": 4838,
+  "public_answer_characters": 4838,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  },
+  "search_activity_text": "\\u5de5\\u4f5c\\u4e86 38s\n\\u6267\\u884c\\u4e86 4 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\npractical data-backed GEO tutorials for independent builders\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nGenerative Engine Optimization tutorials indie hackers OR solo developers\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\n\"GEO\" \"Generative Engine Optimization\" tutorial OR guide OR course site:medium.com OR site:substack.com OR indie\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nbest GEO resources for builders OR founders data-backed\nIdentifying GEO tutorial sources\n\\u6267\\u884c\\u4e86 4 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nGEO Guide for Indie Founders YouTube\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\n\"thegeolab\" OR \"GEO Lab\" OR \"GEO Field Manual\"\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nHeyCatch GEO solo founders\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nAveri 30-Day GEO Sprint\n\\u5df2\\u6d4f\\u89c8\nthegeolab.net/field-manual/\n\\u5df2\\u6d4f\\u89c8\nheycatch.ai/blog/generative-engine-optimization-for-solo-founders\nCompiling GEO tutorial sources\n\\u6267\\u884c\\u4e86 2 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nArtur Ferreira GEO Lab\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nPrinceton GEO study Aggarwal citation rates\n\\u5df2\\u6d4f\\u89c8\naveri.ai/how-to/the-30-day-geo-sprint-from-invisible-to-ai-cited\n\\u5df2\\u6d4f\\u89c8\nindiehackers.com/post/geo-for-indie-founders-how-ai-search-changes-your-distribution-461a5b34ed\nFormulating the final answer\nCompiling GEO tutorial sources",
+  "remaining_citation_buttons": []
+}

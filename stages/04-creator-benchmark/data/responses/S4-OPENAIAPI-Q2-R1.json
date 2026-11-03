@@ -1,0 +1,682 @@
+{
+  "object": "response",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "created_at": 1793696512,
+  "completed_at": 1793696576,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 71987,
+    "input_tokens_details": {
+      "cache_write_tokens": 4340,
+      "cached_tokens": 0
+    },
+    "output_tokens": 3641,
+    "output_tokens_details": {
+      "reasoning_tokens": 1491
+    },
+    "total_tokens": 75628
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 3
+    }
+  },
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "service_tier": "default",
+  "store": false,
+  "max_output_tokens": 32768,
+  "max_tool_calls": 8,
+  "tool_choice": "required",
+  "tools": [
+    {
+      "type": "web_search",
+      "return_token_budget": "default",
+      "search_content_types": [
+        "text"
+      ],
+      "search_context_size": "medium",
+      "user_location": {
+        "type": "approximate",
+        "city": null,
+        "country": "US",
+        "region": null,
+        "timezone": null
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "generative engine optimization experiment brand mentions recommendations study",
+          "GEO tactics experiment AI brand visibility mentions study ChatGPT Perplexity",
+          "site:arxiv.org generative engine optimization brand mentions experiment",
+          "AI search optimization experiment brand recommendation LLM study"
+        ],
+        "query": "generative engine optimization experiment brand mentions recommendations study",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://www.axios.com/2026/10/28/ai-citation-source-geo"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/hubspot-aeo-review"
+          },
+          {
+            "type": "url",
+            "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
+          },
+          {
+            "type": "url",
+            "url": "https://presenc.ai/research/brand-visibility-in-ai-study"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2610.15033"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2606.28356"
+          },
+          {
+            "type": "url",
+            "url": "https://martech.org/what-gets-b2b-brands-cited-in-genai-answers/"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2509.08919"
+          },
+          {
+            "type": "url",
+            "url": "https://www.traillabs.ai/blog/geo-at-scale-brand-visibility"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2609.16304"
+          },
+          {
+            "type": "url",
+            "url": "https://otterly.ai/blog/from-zero-to-rank7-ai-search-in-14days/"
+          },
+          {
+            "type": "url",
+            "url": "https://doi.org/10.1145/3637528.3671900"
+          },
+          {
+            "type": "url",
+            "url": "https://www.marketscale.com/state-of-geo-ai-visibility"
+          },
+          {
+            "type": "url",
+            "url": "https://red-engage.com/blog/b2b-saas-ai-citation-benchmark-report-2026"
+          },
+          {
+            "type": "url",
+            "url": "https://www.generaldataworks.com/ai-visibility/methodology"
+          },
+          {
+            "type": "url",
+            "url": "https://nextgeoagency.com/en/geo-visibility-index"
+          },
+          {
+            "type": "url",
+            "url": "https://www.higeo.ai/reports"
+          },
+          {
+            "type": "url",
+            "url": "https://thegeolab.net/geo-brand-citation-index/"
+          },
+          {
+            "type": "url",
+            "url": "https://geometriqs.com/download/GenAI%20Global80%20Report%20-%20Geometriqs%20Nov%202025.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://aigeo.games/media/research/geo-citation-lab/adversarial-seo-for-llms.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://aixiv.science/pdf/aixiv.260215.000002"
+          },
+          {
+            "type": "url",
+            "url": "https://storage.ghost.io/c/6a/10/6a109410-b171-44e6-9589-5168e761531a/content/files/2026/02/Generative-Engine-Optimization.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://openreview.net/pdf?id=hkdqxN3c7t"
+          },
+          {
+            "type": "url",
+            "url": "https://sorelle.friedler.net/papers/LLMselfpromotion.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1ulhqto/i_tested_whether_ai_search_is_one_ranking_or/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1uis2co/some_findings_from_working_on_branded_ai/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GenEngineOptimization/comments/1vi4gr4/we_ran_18_purchase_questions_through_5_ai_engines/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1uqjxvv/we_tested_60_brands_across_4_ai_conversation/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GenEngineOptimization/comments/1ry1cqs/most_geo_tools_measure_visibility_not_outcome_6/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1tud9oa/i_tracked_500_ai_responses_61_of_brand_names_were/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_tips/comments/1x6kq2r/what_optimizing_our_product_for_geo_taught_us/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SEO/comments/1rj2mid/i_checked_if_chatgpt_recommends_my_brand_the/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1qszag3/geo_is_still_early_so_i_ran_the_same_question/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/aeo/comments/1wvmyq7/i_simulated_thousands_of_ai_visibility_tests/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/DigitalMarketing/comments/1soudqm/ab_testing_in_practice_thoughts_on_geo_generative/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AISearchOptimizers/comments/1vy9qwi/measuring_ai_visibility_when_is_a_brand_mention/"
+          },
+          {
+            "type": "url",
+            "url": "https://de.wikipedia.org/wiki/Answer_Engine_Optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Algorithmic_amplification"
+          },
+          {
+            "type": "url",
+            "url": "https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_g%C3%A9n%C3%A9ratifs"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Recommender_system"
+          },
+          {
+            "type": "url",
+            "url": "https://pt.wikipedia.org/wiki/Generative_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.theatlantic.com/technology/2026/06/google-search-ai-optimization/687495/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.axios.com/newsletters/axios-communicators-c880e9e0-9bdf-11f1-9602-2f20038b64b1"
+          },
+          {
+            "type": "url",
+            "url": "https://www.axios.com/2026/07/16/geo-communications-marketing-strategy"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/agentic-search-optimization-reshapes-brand-visibility-in-ai-search"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "open_page",
+        "url": "https://doi.org/10.1145/3637528.3671900"
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "find_in_page",
+        "pattern": "controlled experiment",
+        "url": "https://arxiv.org/abs/2610.15033"
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "arxiv GEO Generative Engine Optimization Aggarwal statistics quotation 40% visibility results",
+          "\"Manipulating large language models to increase product visibility\" 2404.07981",
+          "\"C-SEO bench\" conversational SEO work results",
+          "\"SAGEO arena\" generative engine optimization results"
+        ],
+        "query": "arxiv GEO Generative Engine Optimization Aggarwal statistics quotation 40% visibility results",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2311.09735"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2404.07981"
+          },
+          {
+            "type": "url",
+            "url": "https://doi.org/10.48550/arXiv.2602.12187"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2605.25517"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2606.28356"
+          },
+          {
+            "type": "url",
+            "url": "https://papers.neurips.cc/paper_files/paper/2025/file/27aa3aeff0f8460a7b43d30fa6c5c032-Paper-Datasets_and_Benchmarks_Track.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://aigeo.games/media/research/geo-citation-lab/sageo-arena-realistic-environment.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://lacuna.tiptreesystems.com/work/c-seo-bench-does-conversational-seo-work/wrk_365a1cfe9cc169e03fb437be55d6a007"
+          },
+          {
+            "type": "url",
+            "url": "https://github.com/omarmfouad25/geo-lab/blob/main/research/aggarwal-2023-findings.md"
+          },
+          {
+            "type": "url",
+            "url": "https://openreview.net/pdf/689c3c1ba2302941565ff0e1f09eee876bf07d90.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://aimslab.stanford.edu/measurement-db/cseo_bench"
+          },
+          {
+            "type": "url",
+            "url": "https://aigeo.games/media/research/geo-generative-engine-optimization-archive.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://visibility.partners/resources/generative-engine-optimization-framework"
+          },
+          {
+            "type": "url",
+            "url": "https://josephtimpson.com/insights/generative-engine-optimization-research"
+          },
+          {
+            "type": "url",
+            "url": "https://jpldigital.ca/blog/geo-tricks-measured/"
+          },
+          {
+            "type": "url",
+            "url": "https://geoready.dev/research/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.researchgate.net/publication/400742378_SAGEO_Arena_A_Realistic_Environment_for_Evaluating_Search-Augmented_Generative_Engine_Optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.alphaxiv.org/abs/2404.07981v2"
+          },
+          {
+            "type": "url",
+            "url": "https://vistrixlabs.agency/geo-paper-princeton-vs-replication/"
+          },
+          {
+            "type": "url",
+            "url": "https://geocoffin.novcog.us.com/the-lab-is-not-the-web"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/ComunidadSEO/comments/1vsu3l3/jorge_j_rolo_en_linkedin_optimizas_para_que_la_ia/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1u91gxc/i_traced_the_popular_geo_stats_back_to_the_actual/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AISEOforBeginners/comments/1rjnz1e/is_anyone_else_noticing_that_optimizing_body_text/"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Instant_answer"
+          },
+          {
+            "type": "url",
+            "url": "https://de.wikipedia.org/wiki/Answer_Engine_Optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://pt.wikipedia.org/wiki/Generative_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.itpro.com/business/marketing-and-comms/will-a-generative-engine-optimization-manager-be-your-next-big-hire"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_g%C3%A9n%C3%A9ratifs"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Search_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AISearchLab/comments/1ndy3cy/i_reviewed_19_research_papers_on_ai_search_and/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "\"brand visibility\" \"AI-generated\" recommendations experiment GEO tourism",
+          "site:arxiv.org GEO brand recommendation experiment live ChatGPT",
+          "site:searchengineland.com GEO experiment brand mentions listicle AI recommendations",
+          "site:semrush.com experiment AI brand mentions GEO"
+        ],
+        "query": "\"brand visibility\" \"AI-generated\" recommendations experiment GEO tourism",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
+          },
+          {
+            "type": "url",
+            "url": "https://martech.org/what-gets-b2b-brands-cited-in-genai-answers/"
+          },
+          {
+            "type": "url",
+            "url": "https://presenc.ai/research/brand-visibility-in-ai-study"
+          },
+          {
+            "type": "url",
+            "url": "https://searchengineland.com/fake-brand-ai-search-experiment-475947"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2610.24081"
+          },
+          {
+            "type": "url",
+            "url": "https://otterly.ai/blog/from-zero-to-rank7-ai-search-in-14days/"
+          },
+          {
+            "type": "url",
+            "url": "https://aisearch.similarweb.com/blog/what-is-geo/"
+          },
+          {
+            "type": "url",
+            "url": "https://searchengineland.com/3-geo-experiments-you-should-try-this-year-464967"
+          },
+          {
+            "type": "url",
+            "url": "https://searchengineland.com/paid-brand-mention-geo-481092"
+          },
+          {
+            "type": "url",
+            "url": "https://gumshoe.ai/resources/whitepapers/geo-is-not-seo-in-disguise/"
+          },
+          {
+            "type": "url",
+            "url": "https://revistaprismasocial.es/ps/article/download/5975/6461/31213"
+          },
+          {
+            "type": "url",
+            "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=10564657"
+          },
+          {
+            "type": "url",
+            "url": "https://aeloapp.io/en/knowledge/brand-visibility-in-ai/"
+          },
+          {
+            "type": "url",
+            "url": "https://searchengineland.com/co-mentions-ai-recommendation-gap-479829"
+          },
+          {
+            "type": "url",
+            "url": "https://wjarr.com/sites/default/files/fulltext_pdf/WJARR-2026-0152.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.britopian.com/wp-content/uploads/2025/04/Report-Brand-Visibility-and-Reputation-in-the-Age-of-AI-Driven-Search.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2306.03204"
+          },
+          {
+            "type": "url",
+            "url": "https://research.spbstu.ru/userfiles/files/doc/capgemini_reimagining_customer_experience_2026_%2896_pgs%29.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2310.09340"
+          },
+          {
+            "type": "url",
+            "url": "https://www.preprints.org/frontend/manuscript/6fd2fe067f67dafb3e719bb151ccc140/download_pub"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2401.03605"
+          },
+          {
+            "type": "url",
+            "url": "https://www.garage.co.jp/documents/pr/en/20260115_EN.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://pt.wikipedia.org/wiki/Generative_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/agentic-search-optimization-reshapes-brand-visibility-in-ai-search"
+          },
+          {
+            "type": "url",
+            "url": "https://www.techradar.com/pro/how-to-track-your-brands-visibility-in-ai-search-results"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GenEngineOptimization/comments/1o1jmyw/how_are_you_measuring_ai_visibility_in_2025_are/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/ContentMarketing/comments/1qw2i3q/seo_got_us_clicks_geo_will_decide_if_were_visible/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/DigitalMarketing/comments/1xcmqev/seo_professionals_are_you_actively_tracking_brand/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AISearchOptimizers/comments/1szjboi/does_ai_actually_favor_established_brands_or_are/"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "open_page",
+        "url": "https://arxiv.org/abs/2404.07981"
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "find_in_page",
+        "pattern": "price",
+        "url": "https://arxiv.org/abs/2605.25517"
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "open_page",
+        "url": "https://searchengineland.com/fake-brand-ai-search-experiment-475947"
+      }
+    },
+    {
+      "type": "message",
+      "role": "assistant",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [
+            {
+              "type": "url_citation",
+              "title": "Adversarial Search Engine Optimization for Large Language Models",
+              "url": "https://openreview.net/pdf?id=hkdqxN3c7t"
+            },
+            {
+              "type": "url_citation",
+              "title": "SafeGEO: Understanding Generative Engine Optimization Risks in Recommendation Agents",
+              "url": "https://arxiv.org/abs/2606.28356"
+            },
+            {
+              "type": "url_citation",
+              "title": "Manipulating Large Language Models to Increase Product Visibility",
+              "url": "https://arxiv.org/abs/2404.07981"
+            },
+            {
+              "type": "url_citation",
+              "title": "",
+              "url": "https://papers.neurips.cc/paper_files/paper/2025/file/27aa3aeff0f8460a7b43d30fa6c5c032-Paper-Datasets_and_Benchmarks_Track.pdf"
+            },
+            {
+              "type": "url_citation",
+              "title": "GEO: Generative Engine Optimization",
+              "url": "https://arxiv.org/abs/2311.09735"
+            },
+            {
+              "type": "url_citation",
+              "title": "What Gets Cited: Competitive GEO in AI Answer Engines",
+              "url": "https://arxiv.org/abs/2605.25517"
+            },
+            {
+              "type": "url_citation",
+              "title": "What Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization (GEO)",
+              "url": "https://arxiv.org/abs/2610.15033"
+            },
+            {
+              "type": "url_citation",
+              "title": "[2602.12187] SAGEO Arena: A Realistic Environment for Evaluating Search-Augmented Generative Engine Optimization",
+              "url": "https://doi.org/10.48550/arXiv.2602.12187"
+            },
+            {
+              "type": "url_citation",
+              "title": "Two GEO experiments challenge conventional AI visibility advice",
+              "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
+            },
+            {
+              "type": "url_citation",
+              "title": "GEO Experiment: #7 in ChatGPT in 14 Days | OtterlyAI",
+              "url": "https://otterly.ai/blog/from-zero-to-rank7-ai-search-in-14days/"
+            },
+            {
+              "type": "url_citation",
+              "title": "Can a fake brand win in AI search? New experiment says yes",
+              "url": "https://searchengineland.com/fake-brand-ai-search-experiment-475947"
+            },
+            {
+              "type": "url_citation",
+              "title": "",
+              "url": "https://papers.neurips.cc/paper_files/paper/2025/file/27aa3aeff0f8460a7b43d30fa6c5c032-Paper-Datasets_and_Benchmarks_Track.pdf"
+            },
+            {
+              "type": "url_citation",
+              "title": "What Gets Cited: Competitive GEO in AI Answer Engines",
+              "url": "https://arxiv.org/abs/2605.25517"
+            },
+            {
+              "type": "url_citation",
+              "title": "Two GEO experiments challenge conventional AI visibility advice",
+              "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
+            },
+            {
+              "type": "url_citation",
+              "title": "What Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization (GEO)",
+              "url": "https://arxiv.org/abs/2610.15033"
+            },
+            {
+              "type": "url_citation",
+              "title": "Adversarial Search Engine Optimization for Large Language Models",
+              "url": "https://openreview.net/pdf?id=hkdqxN3c7t"
+            }
+          ],
+          "logprobs": [],
+          "text": "## Short answer\n\n**Credible evidence exists, but it is narrower and more mixed than many GEO claims imply.** Controlled experiments show that retrieved content can influence AI recommendations\u2014especially through adversarial text. However, rigorous tests of ordinary \u201cwhite-hat\u201d tactics such as adding statistics, FAQs, schema, quotations, or polished formatting generally find **small, inconsistent, or sometimes negative effects on citation rank**. Real-world brand campaigns report sizable mention increases, but usually lack untreated controls and change several variables simultaneously.\n\n### Evidence hierarchy\n\n| Experiment | What was changed and measured | Main result | Evidentiary value |\n|---|---|---|---|\n| **Adversarial SEO for LLMs \u2014 ICLR 2025** | Researchers placed preference-manipulation instructions or misinformation in web content and tested production Bing Copilot, Perplexity and LLM search integrations. Measured whether a fictitious camera was recommended. | The fake camera\u2019s recommendation rate in Bing rose from **34.0% to 59.4%**, overtaking established cameras; the real product remained at 57.9%. | **Strong direct evidence**, including a deployed system\u2014but it tests black-hat prompt injection, not normal marketing. ([openreview.net](https://openreview.net/pdf?id=hkdqxN3c7t)) |\n| **SafeGEO \u2014 2026** | Controlled 600 recommendation cases and 22 types of GEO rewrites designed to make flawed products look better. | GEO attacks increased the probability that flawed targets entered the top-three recommendations by **up to 83.2 percentage points**. | **Strong, large controlled experiment**, but primarily a security/adversarial result using experimental recommendation agents. ([arxiv.org](https://arxiv.org/abs/2606.28356)) |\n| **Manipulating LLMs to Increase Product Visibility \u2014 2024** | Added algorithmically optimized \u201cstrategic text sequences\u201d to fictitious coffee-machine descriptions; evaluated recommendations over repeated LLM runs. | One initially invisible product became the top recommendation; with randomized product ordering, the basic sequence improved rank in roughly **40%** of evaluations, while robust optimization improved it further. | **Strong causal evidence in a simulated catalog**, but the tactic is adversarial and was not tested as a normal live-site edit. ([arxiv.org](https://arxiv.org/abs/2404.07981)) |\n| **C-SEO Bench \u2014 NeurIPS 2025** | Tested common white-hat content rewrites across product-recommendation and question-answering tasks, using citation position as the outcome. | Only **3 of 54** evaluated settings produced statistically significant ranking gains. Several tactics frequently reduced citation rank; retrieval/context position had a much larger effect than copy edits. | **One of the best reality checks** on ordinary GEO tactics. It suggests white-hat text optimization is unreliable unless it also improves retrieval. ([papers.neurips.cc](https://papers.neurips.cc/paper_files/paper/2025/file/27aa3aeff0f8460a7b43d30fa6c5c032-Paper-Datasets_and_Benchmarks_Track.pdf)) |\n| **Original GEO paper \u2014 KDD 2024** | Added quotations, statistics, citations, improved fluency and other edits to candidate source documents. Measured how prominently each source\u2019s content appeared in generated answers. | Quotations, statistics and source citations produced approximately **30\u201340% relative improvements** on a position-adjusted word-count metric; a Perplexity test reported up to 22% on that metric and 37% on a subjective visibility metric. Keyword stuffing performed poorly. | **Important but often overstated**: it measured source-content visibility, not whether a real brand was mentioned or recommended. Later work found that extra answer coverage does not necessarily improve citation rank. ([arxiv.org](https://arxiv.org/abs/2311.09735)) |\n| **What Gets Cited \u2014 2026** | Conducted **252,000 paired trials** across six LLMs. Two anonymized sources differed in exactly one content factor; the outcome was which source received the first citation. | Topical relevance, earlier context position, explicit pricing and recent dates had the strongest effects. Completeness and evidence helped somewhat; formatting-only changes showed little consistent value. | **Excellent factor-isolation study**, though it measures citations in a controlled two-document RAG setting\u2014not live brand mentions. ([arxiv.org](https://arxiv.org/abs/2605.25517)) |\n| **What Drives AI Citations \u2014 2026** | Compared more than 12,000 pages and used within-website analysis to reduce confounding. Measured citations from ChatGPT, Gemini and Perplexity. | Better semantic matching between the query and page paragraphs was associated with more citations. FAQs and schema appeared beneficial across different sites but had **no significant effect within the same site**, suggesting confounding by site quality or authority. | **Strong observational evidence** against simplistic claims about schema, FAQ blocks and summary boxes. It is not a randomized intervention. ([arxiv.org](https://arxiv.org/abs/2610.15033)) |\n| **SAGEO Arena \u2014 KDD 2026** | Evaluated GEO edits across a fuller pipeline containing retrieval, reranking and answer generation over a realistic web corpus. | Existing body-text GEO methods were often impractical and could **degrade retrieval or reranking**. Structural information could mitigate some losses, but optimization needed to be stage-specific. | **Strong benchmark evidence** that optimizing only for generation may make a page less likely to reach the model in the first place. ([doi.org](https://doi.org/10.48550/arXiv.2602.12187)) |\n\n## Real-world brand experiments\n\nThese measure actual mentions in commercial AI systems, but causal confidence is lower.\n\n### 1. Listicle, PR and third-party-placement campaigns\n\nTwo field experiments tracked 15 commercial prompts per brand across several AI platforms. One established brand eventually appeared for approximately 10\u201312 prompts, while a cold-start SaaS brand generated **298 appearances in 30 days** after beginning with no measured presence. Third-party listicles produced most citations, and a comparative owned article reportedly rose from four to 49 source mentions after recognized competitors were added. Across both campaigns, 775 citation events were recorded. ([searchengineland.com](https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342))\n\nThis is useful field evidence, but not a clean experiment:\n\n- Listicles, PR, guest posts, owned content and social activity changed together.\n- There was no untreated comparison brand or randomized placement.\n- Model updates, indexing and ordinary time trends could explain part of the movement.\n- It primarily measured appearances and citations, not whether the brand became the final recommendation.\n\n### 2. Fictional agency/off-page experiment\n\nA newly invented agency with a seven-page site received external listicle placements, directory listings, Reddit comments and LinkedIn content. Across nine prompts and six systems, it accumulated **90 mentions**, 10% share of voice and 12% prompt coverage after 14 days, ranking seventh among tracked brands. The result was concentrated in tightly matched, location-and-year-specific prompts. ([otterly.ai](https://otterly.ai/blog/from-zero-to-rank7-ai-search-in-14days/))\n\nThe experiment demonstrates that a new entity can be surfaced quickly, but it does **not isolate which off-page tactic caused the increase**, and the prompts were unusually exact matches for the manufactured content.\n\n### 3. Large fictional-brand publication experiment\n\nAnother project created a fictional brand and published material about it across a new website plus 11 supporting domains. It tracked 825 prompts and 15,835 answers during the first month. The systems learned and cited the brand quickly, but **96% of its visibility came from branded searches**; broad, non-branded discovery remained minimal. ([searchengineland.com](https://searchengineland.com/fake-brand-ai-search-experiment-475947))\n\nThat is valuable evidence that brands can shape answers to questions already containing their name. It is much weaker evidence that content volume will make an unknown brand appear in generic \u201cbest product\u201d recommendations.\n\n## What the evidence currently supports\n\n1. **Retrieval is probably the main bottleneck.** Being highly ranked among the material supplied to the model has a larger and more consistent effect than stylistic content rewrites. ([papers.neurips.cc](https://papers.neurips.cc/paper_files/paper/2025/file/27aa3aeff0f8460a7b43d30fa6c5c032-Paper-Datasets_and_Benchmarks_Track.pdf))\n\n2. **Relevant, complete and current information can influence citation selection.** Strong query alignment, explicit prices/specifications, evidence and recent dates have controlled experimental support. ([arxiv.org](https://arxiv.org/abs/2605.25517))\n\n3. **Third-party category and comparison pages are promising but not causally proven.** Multiple field campaigns report that placements on sources already cited by AI systems precede increased brand mentions, but those campaigns lack proper controls. ([searchengineland.com](https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342))\n\n4. **FAQ blocks, schema and formatting are not established mention generators.** Better-performing sites often use them, but within-site analyses and controlled experiments do not show dependable independent gains. ([arxiv.org](https://arxiv.org/abs/2610.15033))\n\n5. **Direct recommendation manipulation is demonstrably possible.** Unfortunately, the strongest effects come from adversarial text and prompt injection, not defensible white-hat optimization. ([openreview.net](https://openreview.net/pdf?id=hkdqxN3c7t))\n\n## Bottom line\n\nAs of **November 3, 2026**, there is credible experimental evidence that content can influence AI citations and recommendations. But there is **not yet strong, generalizable evidence that the standard commercial GEO playbook reliably increases non-branded recommendations in live AI systems**.\n\nThe most defensible current conclusion is:\n\n- **Improve retrieval eligibility and topical relevance first.**\n- Provide concrete, current, comparison-ready product information.\n- Seek placement in relevant sources the target engine already retrieves.\n- Treat brand-mention changes as tentative unless tested against stable control prompts or pages.\n- Measure **recommendation rate separately from mention rate and citation rate**\u2014they are not interchangeable outcomes."
+        }
+      ]
+    }
+  ],
+  "public_copy": true,
+  "publication_scope": "Allowlisted provider output: answer messages, returned citations/search actions and usage. Opaque IDs, original annotation positions, headers and reasoning trace items omitted."
+}

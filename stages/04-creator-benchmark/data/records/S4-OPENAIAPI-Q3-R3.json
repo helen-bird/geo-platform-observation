@@ -1,0 +1,1298 @@
+{
+  "id": "S4-OPENAIAPI-Q3-R3",
+  "slot_id": "S4-OPENAIAPI-Q3-R3",
+  "platform": "OpenAI API + web search",
+  "interface": "Responses API",
+  "prompt_id": "Q3",
+  "repeat": 3,
+  "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+  "submitted_at": "2026-11-03T09:21:22.060643+00:00",
+  "model_label": "gpt-5.6-sol",
+  "requested_model": "gpt-5.6-sol",
+  "returned_model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "returned_reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "personalization": false,
+  "search_enabled_api": true,
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Assuming **GEO means generative engine optimization**, these are the publishers I\u2019d recommend to independent builders:\n\n| Publisher | Best for | Why it\u2019s worth following |\n|---|---|---|\n| **Ahrefs Blog** | Best overall starting point | Publishes approachable tutorials backed by unusually large datasets. Recent work includes analyses of **1.4 million prompts** and **75,000 brands**, then translates the findings into concrete content, authority and measurement tactics. The caveat: Ahrefs naturally recommends its own tools, so separate the research from the product pitch. ([ahrefs.com](https://ahrefs.com/blog/why-chatgpt-cites-pages/)) |\n| **Kevin Indig / Growth Memo** | Best independent analysis | Indig combines original research with recommendations that founders can implement without an enterprise GEO program. His broader research draws on more than **1 million AI answers and 100,000 citations**; one citation-placement study analyzed 1.2 million answers and 18,012 verified citations. He is particularly useful for understanding content structure, trust and the relationship between traditional rankings and AI visibility. ([kevin-indig.com](https://www.kevin-indig.com/talks/winners-losers-ai-search)) |\n| **Seer Interactive** | Best transparent experiments | Seer publishes hypotheses, methodology, sample sizes and unexpected or negative results\u2014not just polished success stories. Its research includes a recency study covering **47,097 citations across ChatGPT, Gemini and Perplexity**, plus practical frameworks for testing GEO changes. Some recommendations are enterprise-oriented, but the experiments can usually be reproduced on a small site. ([seerinteractive.com](https://www.seerinteractive.com/insights/study-content-recencys-impact-on-ai-visibility-in-2026)) |\n| **iPullRank\u2019s AI Search Manual** | Best comprehensive handbook | A structured, free manual covering retrieval architecture, query fan-out, content production, measurement and analytics. It also includes prompt recipes, reporting frameworks and a citation-tracking spreadsheet, making it more operational than the average GEO overview. It is technical and agency-framed, so builders should use it selectively rather than reading everything first. ([ipullrank.com](https://ipullrank.com/ai-search-manual)) |\n| **The GEO Lab** | Best emerging, builder-friendly resource | Publishes controlled-experiment templates, measurement protocols and small-sample statistical guidance. Its experiment guide includes control/treatment design, proxy metrics and ten tests builders can run themselves. The downside is that it is newer and its datasets are much smaller\u2014one featured test uses 330 queries\u2014so corroborate conclusions with Ahrefs, Seer or primary research. ([thegeolab.net](https://thegeolab.net/geo-experiments/)) |\n| **The GEO Community** | Best for ongoing experiments and discussion | Explicitly targets builders, SEOs, marketers and engineers, emphasizing experiments, tools and metrics rather than generic definitions. It is useful for discovering current tests and hypotheses, but community findings should be treated as leads to verify, not settled evidence. ([thegeocommunity.com](https://thegeocommunity.com/)) |\n\n### My recommended reading order\n\n1. **Ahrefs** for clear, immediately usable tactics.  \n2. **Kevin Indig** for independent interpretation and strategic context.  \n3. **Seer Interactive** when you want methodologies you can reproduce.  \n4. **The GEO Lab** for designing your own experiments.  \n5. **iPullRank** when you need a deeper technical or measurement framework.\n\nKeep the original **GEO research paper** nearby as a reality check. It introduced GEO-Bench and reported visibility improvements of up to 40%, while also finding that results varied by domain\u2014an important warning against universal \u201cGEO checklists.\u201d ([arxiv.org](https://arxiv.org/abs/2311.09735))\n\n**Bottom line:** For a solo founder, I would subscribe to **Growth Memo**, regularly read **Ahrefs and Seer**, and use **The GEO Lab** as an experiment workbook. That combination offers independent analysis, larger observational datasets and tests you can actually run on your own site. Treat all GEO findings as directional: AI outputs are probabilistic, tracking tools generally rely on synthetic prompt sets, and correlation does not establish causation. ([ahrefs.com](https://ahrefs.com/blog/ai-visibility/?content_language=English))",
+  "answer_links": [
+    {
+      "type": "url_citation",
+      "title": "Why ChatGPT Cites One Page Over Another (Study of 1.4M Prompts)",
+      "url": "https://ahrefs.com/blog/why-chatgpt-cites-pages/",
+      "text": "Why ChatGPT Cites One Page Over Another (Study of 1.4M Prompts)",
+      "domain": "ahrefs.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Winners & Losers of the AI Disruption of Search | Kevin Indig",
+      "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "text": "Winners & Losers of the AI Disruption of Search | Kevin Indig",
+      "domain": "www.kevin-indig.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Study: Content Recency's Impact on AI Visibility in 2026",
+      "url": "https://www.seerinteractive.com/insights/study-content-recencys-impact-on-ai-visibility-in-2026",
+      "text": "Study: Content Recency's Impact on AI Visibility in 2026",
+      "domain": "www.seerinteractive.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "The AI Search Manual - iPullRank",
+      "url": "https://ipullrank.com/ai-search-manual",
+      "text": "The AI Search Manual - iPullRank",
+      "domain": "ipullrank.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "GEO Experiments \u2014 Design, Measure, Learn | The GEO Lab",
+      "url": "https://thegeolab.net/geo-experiments/",
+      "text": "GEO Experiments \u2014 Design, Measure, Learn | The GEO Lab",
+      "domain": "thegeolab.net",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "Learn Generative Engine Optimization Together | The GEO Community",
+      "url": "https://thegeocommunity.com/",
+      "text": "Learn Generative Engine Optimization Together | The GEO Community",
+      "domain": "thegeocommunity.com",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "GEO: Generative Engine Optimization",
+      "url": "https://arxiv.org/abs/2311.09735",
+      "text": "GEO: Generative Engine Optimization",
+      "domain": "arxiv.org",
+      "kind": "API body url_citation annotation"
+    },
+    {
+      "type": "url_citation",
+      "title": "The Complete AI Visibility Guide for SEOs, Marketers, and Site Owners",
+      "url": "https://ahrefs.com/blog/ai-visibility/?content_language=English",
+      "text": "The Complete AI Visibility Guide for SEOs, Marketers, and Site Owners",
+      "domain": "ahrefs.com",
+      "kind": "API body url_citation annotation"
+    }
+  ],
+  "captured_at": "2026-11-03T09:22:12.819077+00:00",
+  "source_inventory_complete": true,
+  "transport_body_complete": true,
+  "refusals": [],
+  "response_status": "completed",
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 47155,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 4340
+    },
+    "output_tokens": 2117,
+    "output_tokens_details": {
+      "reasoning_tokens": 1197
+    },
+    "total_tokens": 49272
+  },
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 4
+    }
+  },
+  "estimated_cost": {
+    "estimated_usd": 0.255336,
+    "token_cost_usd": 0.215336,
+    "charged_searches_estimate": 4,
+    "search_count_basis": "reported billable web_search.num_requests",
+    "billing_reconciled": false
+  },
+  "reserved_budget_usd": 6.6,
+  "http_status": 200,
+  "service_tier": "default",
+  "review_note": "Assistant read the full six-publisher table, recommended sequence and closing cautions. Coherent end; eight explicit URLs and citation annotations match. Kevin Indig/Growth Memo recommended with personal-site link; The GEO Lab recommended and cited as an asset without explicit Artur name. All authorship/support questions deferred to source audit.",
+  "tool_limit_reached": false,
+  "body_review": {
+    "reviewed_at": "2026-11-03T09:23:16.296731+00:00",
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "annotation_and_explicit_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "search_calls": [
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "practical data-backed GEO tutorials generative engine optimization independent builders",
+          "site:ahrefs.com/blog generative engine optimization AI overviews study",
+          "site:growth-memo.com generative engine optimization study tutorial",
+          "site:seerinteractive.com generative engine optimization study"
+        ],
+        "query": "practical data-backed GEO tutorials generative engine optimization independent builders",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
+          },
+          {
+            "type": "url",
+            "url": "https://guptadeepak.com/content/files/2026/02/Generative-Engine-Optimization.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/"
+          },
+          {
+            "type": "url",
+            "url": "https://thegeocommunity.com/"
+          },
+          {
+            "type": "url",
+            "url": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/01-foundations.md"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/geo-generative-engine-optimization/?afsrc=1"
+          },
+          {
+            "type": "url",
+            "url": "https://learngeo.io/"
+          },
+          {
+            "type": "url",
+            "url": "https://github.com/Cited-io/generative-engine-optimization-guide"
+          },
+          {
+            "type": "url",
+            "url": "https://www.igility.io/blog/what-is-geo"
+          },
+          {
+            "type": "url",
+            "url": "https://www.boostgeo.com/research/generative-engine-optimization.html"
+          },
+          {
+            "type": "url",
+            "url": "https://clickd.com/guides/what-is-geo"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/generative-engine-optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://geohandbook.io/"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2607.14035"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2311.09735"
+          },
+          {
+            "type": "url",
+            "url": "https://storage.ghost.io/c/6a/10/6a109410-b171-44e6-9589-5168e761531a/content/files/2026/02/Generative-Engine-Optimization.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://aigeo.games/media/research/generative-engine-optimization-how-to-dominate-ai-search.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://spakemedia.com/wp-content/uploads/2025/03/generative-engine-optimization-june-2024.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/wp-content/uploads/2025/06/AI-in-Content-Marketing-by-Ahrefs.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1x3vqs2/what_geo_training_do_you_recommend_beyond_seo/"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2606.28356"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2509.08919"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GenEngineOptimization/comments/1ve0mhi/what_are_the_most_effective_optimization_methods/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1wct0di/any_good_papers_or_blog_posts_to_understand_geo/"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/aeo/comments/1u227sc/been_building_in_geo_for_months_finally_putting/"
+          },
+          {
+            "type": "url",
+            "url": "https://zh.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E5%BC%8F%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Search_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/MarketingMentor/comments/1n1s0qh"
+          },
+          {
+            "type": "url",
+            "url": "https://www.itpro.com/business/marketing-and-comms/will-a-generative-engine-optimization-manager-be-your-next-big-hire"
+          },
+          {
+            "type": "url",
+            "url": "https://pt.wikipedia.org/wiki/Generative_engine_optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_g%C3%A9n%C3%A9ratifs"
+          },
+          {
+            "type": "url",
+            "url": "https://de.wikipedia.org/wiki/Generative_Engine_Optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GenerativeSEOstrategy/comments/1v412t9/is_anyone_actually_doing_geo_right_or_is_it_just/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1u85b53/what_does_a_geooptimized_content_actually_look/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AISEOforBeginners/comments/1wzauwu/the_exact_geo_framework_that_got_me_an/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AI_SEO_Community/comments/1rvssgv/learning_geo_in_2026_looking_for_10_websites_to/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/seogrowth/comments/1nygj59/what_are_best_toolstechniques_for_generative/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/u_Rank_Factory/comments/1ulj4wp/we_are_transitioning_from_seo_to_geo_generative/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GenerativeSEOstrategy/comments/1rz9qvc/what_works_and_what_doesnt_in_generative_engine/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:ahrefs.com/blog AI search visibility study ChatGPT citations Ahrefs data",
+          "site:seerinteractive.com insights GEO experiment AI search data citations",
+          "site:growth-memo.com AI search study ChatGPT citations 1.2 million answers",
+          "site:ipullrank.com AI Search Manual generative engine optimization practical"
+        ],
+        "query": "site:ahrefs.com/blog AI search visibility study ChatGPT citations Ahrefs data",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/why-chatgpt-cites-pages/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/chatgpt-google-citations/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/ai-visibility/?content_language=English"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/ai-traffic-study/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/how-stable-are-ai-citations/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/how-to-measure-ai-search-visibility/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/chat-gpt-traffic/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/ai-brand-visibility-correlations/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/ai-visibility-index"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/how-to-rank-on-chatgpt/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/llm-visibility/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/faq/"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/wp-content/uploads/2025/06/AI-in-Content-Marketing-by-Ahrefs.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://ahrefs.com/blog/wp-content/uploads/2025/04/everything-your-boss-wants-to-know-about-ai-search.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "Seer Interactive GEO experiments AI search practical guide data",
+          "Kevin Indig 1.2 million ChatGPT answers AI search study",
+          "iPullRank AI Search Manual chapters measurement GEO",
+          "The GEO Community experiments tutorials builders GEO"
+        ],
+        "query": "Seer Interactive GEO experiments AI search practical guide data",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://ipullrank.com/ai-search-manual"
+          },
+          {
+            "type": "url",
+            "url": "https://thegeocommunity.com/"
+          },
+          {
+            "type": "url",
+            "url": "https://searchengineland.com/chatgpt-citations-content-study-469483"
+          },
+          {
+            "type": "url",
+            "url": "https://thegeolab.net/ebooks/"
+          },
+          {
+            "type": "url",
+            "url": "https://hendricks.ai/research"
+          },
+          {
+            "type": "url",
+            "url": "https://ipullrank.com/resources/webinars/ai-search-manual-webinar"
+          },
+          {
+            "type": "url",
+            "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search"
+          },
+          {
+            "type": "url",
+            "url": "https://thegeolab.net/geo-experiments/"
+          },
+          {
+            "type": "url",
+            "url": "https://doi.org/10.1145/3706599.3720123"
+          },
+          {
+            "type": "url",
+            "url": "https://otterly.ai/blog/geo-experiments/"
+          },
+          {
+            "type": "url",
+            "url": "https://ipullrank.com/ai-search-for-procurement"
+          },
+          {
+            "type": "url",
+            "url": "https://ipullrank.com/ai-search-manual-webinar"
+          },
+          {
+            "type": "url",
+            "url": "https://ppc.land/content/files/2026/01/from-discovery-to-influence-a-guide-to-aeo-and-geo.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://about.ads.microsoft.com/content/dam/sites/msa-about/global/common/content-lib/pdf/microsoft-advertising-ai-marketers-guide.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://www.polarisagency.com/wp-content/uploads/2026/03/GEO-AI-Search-Guide-2026-by-POLARIS.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2610.11932"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seaseekai.com/wp-content/uploads/2026/03/GEO_Optimization_Whitepaper_SeaSeekAI_2026Q1.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://cdn.openai.com/pdf/a253471f-8260-40c6-a2cc-aa93fe9f142e/economic-research-chatgpt-usage-paper.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://truthy.indiana.edu/research/white-papers/Annual%20Report%20-%202024.pdf"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2509.08919"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/GEO_optimization/comments/1x322f3/i_went_through_the_2026_studies_on_what_ai/"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2307.03826"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/ChatGPT"
+          },
+          {
+            "type": "url",
+            "url": "https://arxiv.org/abs/2604.07585"
+          },
+          {
+            "type": "url",
+            "url": "https://www.axios.com/2023/05/03/chat-based-search-citations-accuracy-research"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/SEMrush/comments/1vqutx9/ai_visibility_is_a_topiclevel_game_a_study_of/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.axios.com/newsletters/axios-communicators-7d6cc9e0-63d9-11f0-8adf-19d79be43450"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/AISEOforBeginners/comments/1ws77xy/two_thirds_of_what_googles_ai_overviews_cite/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.tomsguide.com/ai/chatbots-vs-google-how-the-two-approach-sourcing-information-is-hugely-different-according-to-a-new-study"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Instant_answer"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/DigitalMarketing/comments/1r9p9l9/ai_is_changing_how_content_gets_surfaced_and_cited/"
+          },
+          {
+            "type": "url",
+            "url": "https://www.tomsguide.com/ai/chatgpt/1-1-million-chatgpt-messages-analyzed-turns-out-were-mostly-just-asking-about-ourselves"
+          },
+          {
+            "type": "url",
+            "url": "https://apnews.com/article/c569cddf28f1f33b36c692428c2191d4"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/DigitalMarketing/comments/1it3685"
+          },
+          {
+            "type": "url",
+            "url": "https://zh.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E5%BC%8F%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/marketing/comments/1iupk09"
+          },
+          {
+            "type": "url",
+            "url": "https://www.reddit.com/r/promptingmagic/comments/1v83l2p/the_complete_geo_playbook_for_2026_why_your/"
+          },
+          {
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:kevin-indig.com 1.2 million AI answers 18012 citations ChatGPT",
+          "site:growth-memo.com ChatGPT citations 1.2 million answers content structure",
+          "site:seerinteractive.com \"generative engine optimization\" experiment",
+          "site:seerinteractive.com AI Overviews citations study"
+        ],
+        "query": "site:kevin-indig.com 1.2 million AI answers 18012 citations ChatGPT",
+        "sources": [
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/generative-engine-optimization"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/from-launchpad-to-seer-meet-the-interns-behind-our-ai-optimization-academy"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/study-ai-brand-visibility-and-content-recency?popup=false"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/geo-experiment-how-ai-highlighted-the-1-bad-review-we-got-in-24-years"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/strategies-to-battle-against-ai-visibility-case-studies-promising-your-c-level-clone"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update"
+          },
+          {
+            "type": "url",
+            "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/what-is-generative-engine-optimization-geo"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/news/seer-interactive-research-featured-in-inc.-analysis-of-ctr-and-ai-overviews?hs_amp=true"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-september-2025-update?office=6129"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/what-it-takes-to-rank-in-googles-ai-overviews-in-2026-is-not-what-you-think"
+          },
+          {
+            "type": "url",
+            "url": "https://www.seerinteractive.com/insights/study-content-recencys-impact-on-ai-visibility-in-2026"
+          },
+          {
+            "type": "url",
+            "url": "https://cdn.seerinteractive.com/hubfs/Q1%20Seer%20AI%20Webinar_%20The%20Factors%20That%20Influence%20AI%20Search%20Visibility.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {
+        "type": "open_page",
+        "url": "https://arxiv.org/abs/2311.09735"
+      }
+    }
+  ],
+  "retrieval_sources": [
+    {
+      "type": "url",
+      "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/",
+      "domain": "thegeocommunity.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://guptadeepak.com/content/files/2026/02/Generative-Engine-Optimization.pdf",
+      "domain": "guptadeepak.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.classcentral.com/report/learn-generative-engine-optimization-geo/",
+      "domain": "www.classcentral.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://thegeocommunity.com/",
+      "domain": "thegeocommunity.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://github.com/ferinazumaDEV/generative-engine-optimization-handbook/blob/main/docs/01-foundations.md",
+      "domain": "github.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/geo-generative-engine-optimization/?afsrc=1",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://learngeo.io/",
+      "domain": "learngeo.io",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://github.com/Cited-io/generative-engine-optimization-guide",
+      "domain": "github.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.igility.io/blog/what-is-geo",
+      "domain": "www.igility.io",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.boostgeo.com/research/generative-engine-optimization.html",
+      "domain": "www.boostgeo.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://clickd.com/guides/what-is-geo",
+      "domain": "clickd.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/generative-engine-optimization",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://geohandbook.io/",
+      "domain": "geohandbook.io",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2607.14035",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2311.09735",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://storage.ghost.io/c/6a/10/6a109410-b171-44e6-9589-5168e761531a/content/files/2026/02/Generative-Engine-Optimization.pdf",
+      "domain": "storage.ghost.io",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://aigeo.games/media/research/generative-engine-optimization-how-to-dominate-ai-search.pdf",
+      "domain": "aigeo.games",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://spakemedia.com/wp-content/uploads/2025/03/generative-engine-optimization-june-2024.pdf",
+      "domain": "spakemedia.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/wp-content/uploads/2025/06/AI-in-Content-Marketing-by-Ahrefs.pdf",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1x3vqs2/what_geo_training_do_you_recommend_beyond_seo/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2606.28356",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2509.08919",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GenEngineOptimization/comments/1ve0mhi/what_are_the_most_effective_optimization_methods/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1wct0di/any_good_papers_or_blog_posts_to_understand_geo/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization",
+      "domain": "en.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/aeo/comments/1u227sc/been_building_in_geo_for_months_finally_putting/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://zh.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E5%BC%8F%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96",
+      "domain": "zh.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://en.wikipedia.org/wiki/Search_engine_optimization",
+      "domain": "en.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/MarketingMentor/comments/1n1s0qh",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.itpro.com/business/marketing-and-comms/will-a-generative-engine-optimization-manager-be-your-next-big-hire",
+      "domain": "www.itpro.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://pt.wikipedia.org/wiki/Generative_engine_optimization",
+      "domain": "pt.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_g%C3%A9n%C3%A9ratifs",
+      "domain": "fr.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://de.wikipedia.org/wiki/Generative_Engine_Optimization",
+      "domain": "de.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GenerativeSEOstrategy/comments/1v412t9/is_anyone_actually_doing_geo_right_or_is_it_just/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1u85b53/what_does_a_geooptimized_content_actually_look/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/AISEOforBeginners/comments/1wzauwu/the_exact_geo_framework_that_got_me_an/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/AI_SEO_Community/comments/1rvssgv/learning_geo_in_2026_looking_for_10_websites_to/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/seogrowth/comments/1nygj59/what_are_best_toolstechniques_for_generative/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/u_Rank_Factory/comments/1ulj4wp/we_are_transitioning_from_seo_to_geo_generative/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GenerativeSEOstrategy/comments/1rz9qvc/what_works_and_what_doesnt_in_generative_engine/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/why-chatgpt-cites-pages/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/chatgpt-google-citations/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/ai-visibility/?content_language=English",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/ai-traffic-study/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/how-stable-are-ai-citations/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/how-to-measure-ai-search-visibility/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/chat-gpt-traffic/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/ai-brand-visibility-correlations/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/ai-visibility-index",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/how-to-rank-on-chatgpt/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/llm-visibility/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/faq/",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/wp-content/uploads/2025/06/AI-in-Content-Marketing-by-Ahrefs.pdf",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ahrefs.com/blog/wp-content/uploads/2025/04/everything-your-boss-wants-to-know-about-ai-search.pdf",
+      "domain": "ahrefs.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ipullrank.com/ai-search-manual",
+      "domain": "ipullrank.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://thegeocommunity.com/",
+      "domain": "thegeocommunity.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://searchengineland.com/chatgpt-citations-content-study-469483",
+      "domain": "searchengineland.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://thegeolab.net/ebooks/",
+      "domain": "thegeolab.net",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://hendricks.ai/research",
+      "domain": "hendricks.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ipullrank.com/resources/webinars/ai-search-manual-webinar",
+      "domain": "ipullrank.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "domain": "www.kevin-indig.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://thegeolab.net/geo-experiments/",
+      "domain": "thegeolab.net",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://doi.org/10.1145/3706599.3720123",
+      "domain": "doi.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://otterly.ai/blog/geo-experiments/",
+      "domain": "otterly.ai",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ipullrank.com/ai-search-for-procurement",
+      "domain": "ipullrank.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ipullrank.com/ai-search-manual-webinar",
+      "domain": "ipullrank.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://ppc.land/content/files/2026/01/from-discovery-to-influence-a-guide-to-aeo-and-geo.pdf",
+      "domain": "ppc.land",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://about.ads.microsoft.com/content/dam/sites/msa-about/global/common/content-lib/pdf/microsoft-advertising-ai-marketers-guide.pdf",
+      "domain": "about.ads.microsoft.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.polarisagency.com/wp-content/uploads/2026/03/GEO-AI-Search-Guide-2026-by-POLARIS.pdf",
+      "domain": "www.polarisagency.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2610.11932",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seaseekai.com/wp-content/uploads/2026/03/GEO_Optimization_Whitepaper_SeaSeekAI_2026Q1.pdf",
+      "domain": "www.seaseekai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://cdn.openai.com/pdf/a253471f-8260-40c6-a2cc-aa93fe9f142e/economic-research-chatgpt-usage-paper.pdf",
+      "domain": "cdn.openai.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://truthy.indiana.edu/research/white-papers/Annual%20Report%20-%202024.pdf",
+      "domain": "truthy.indiana.edu",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2509.08919",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/GEO_optimization/comments/1x322f3/i_went_through_the_2026_studies_on_what_ai/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2307.03826",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://en.wikipedia.org/wiki/ChatGPT",
+      "domain": "en.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://arxiv.org/abs/2604.07585",
+      "domain": "arxiv.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.axios.com/2023/05/03/chat-based-search-citations-accuracy-research",
+      "domain": "www.axios.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/SEMrush/comments/1vqutx9/ai_visibility_is_a_topiclevel_game_a_study_of/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.axios.com/newsletters/axios-communicators-7d6cc9e0-63d9-11f0-8adf-19d79be43450",
+      "domain": "www.axios.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/AISEOforBeginners/comments/1ws77xy/two_thirds_of_what_googles_ai_overviews_cite/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.tomsguide.com/ai/chatbots-vs-google-how-the-two-approach-sourcing-information-is-hugely-different-according-to-a-new-study",
+      "domain": "www.tomsguide.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://en.wikipedia.org/wiki/Instant_answer",
+      "domain": "en.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/DigitalMarketing/comments/1r9p9l9/ai_is_changing_how_content_gets_surfaced_and_cited/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.tomsguide.com/ai/chatgpt/1-1-million-chatgpt-messages-analyzed-turns-out-were-mostly-just-asking-about-ourselves",
+      "domain": "www.tomsguide.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://apnews.com/article/c569cddf28f1f33b36c692428c2191d4",
+      "domain": "apnews.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/DigitalMarketing/comments/1it3685",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://zh.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E5%BC%8F%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96",
+      "domain": "zh.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/marketing/comments/1iupk09",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.reddit.com/r/promptingmagic/comments/1v83l2p/the_complete_geo_playbook_for_2026_why_your/",
+      "domain": "www.reddit.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization",
+      "domain": "en.wikipedia.org",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/generative-engine-optimization",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/from-launchpad-to-seer-meet-the-interns-behind-our-ai-optimization-academy",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/study-ai-brand-visibility-and-content-recency?popup=false",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/geo-experiment-how-ai-highlighted-the-1-bad-review-we-got-in-24-years",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/strategies-to-battle-against-ai-visibility-case-studies-promising-your-c-level-clone",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "domain": "www.kevin-indig.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/what-is-generative-engine-optimization-geo",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/news/seer-interactive-research-featured-in-inc.-analysis-of-ctr-and-ai-overviews?hs_amp=true",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-september-2025-update?office=6129",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/what-it-takes-to-rank-in-googles-ai-overviews-in-2026-is-not-what-you-think",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://www.seerinteractive.com/insights/study-content-recencys-impact-on-ai-visibility-in-2026",
+      "domain": "www.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    },
+    {
+      "type": "url",
+      "url": "https://cdn.seerinteractive.com/hubfs/Q1%20Seer%20AI%20Webinar_%20The%20Factors%20That%20Influence%20AI%20Search%20Visibility.pdf",
+      "domain": "cdn.seerinteractive.com",
+      "kind": "retrieval source, not automatically a body citation"
+    }
+  ],
+  "raw_file": "records/S4-OPENAIAPI-Q3-R3.json",
+  "request_file": "requests/S4-OPENAIAPI-Q3-R3.json",
+  "response_file": "responses/S4-OPENAIAPI-Q3-R3.json",
+  "public_copy": true,
+  "publication_scope": "Redacted original answer, body links, actual search activity and usage; private UI captures, conversations, provider identifiers and reasoning traces remain local.",
+  "original_capture_answer_characters": 4502,
+  "public_answer_characters": 4417,
+  "answer_privacy_edits": {
+    "body_changed": true,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  },
+  "explicit_body_urls": [
+    "https://ahrefs.com/blog/why-chatgpt-cites-pages/",
+    "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+    "https://www.seerinteractive.com/insights/study-content-recencys-impact-on-ai-visibility-in-2026",
+    "https://ipullrank.com/ai-search-manual",
+    "https://thegeolab.net/geo-experiments/",
+    "https://thegeocommunity.com/",
+    "https://arxiv.org/abs/2311.09735",
+    "https://ahrefs.com/blog/ai-visibility/?content_language=English"
+  ],
+  "api_response_not_publicly_shared": true
+}

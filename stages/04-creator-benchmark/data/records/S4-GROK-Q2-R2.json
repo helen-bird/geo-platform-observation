@@ -1,0 +1,131 @@
+{
+  "id": "S4-GROK-Q2-R2",
+  "slot_id": "S4-GROK-Q2-R2",
+  "platform": "Grok",
+  "interface": "Consumer web UI",
+  "prompt_id": "Q2",
+  "repeat": 2,
+  "prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+  "submitted_at": "2026-11-03T09:14:58.699Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_mode": "Expert native retrieval; no independent force-search toggle observed",
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Credible experiments on GEO (Generative Engine Optimization) tactics and AI brand mentions/recommendations are limited but growing. The strongest evidence comes from controlled academic/lab studies on content features (when a source is already in context or retrieved) and a smaller number of industry tests with some controls. Pure observational correlations (e.g., brand mentions vs. visibility) are more common but weaker for causality.\n\n1. Foundational Controlled Study: Aggarwal et al. (KDD 2024)\n\nThe seminal paper \u201cGEO: Generative Engine Optimization\u201d (Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan, Deshpande; arXiv:2311.09735, accepted at KDD 2024) introduced the term and the first systematic benchmark.\u2060arXiv\n\nSetup: GEO-bench (~10,000 diverse queries across domains, with associated web sources). They tested a simulated generative engine (retrieval + LLM) and a real one (Perplexity.ai). Content was rewritten with 9 tactics via an LLM-based black-box optimizer.\nTactics tested: Quotation Addition, Statistics Addition, Cite Sources, Fluency Optimization, Authoritative tone, Easy-to-Understand, Unique Words, Technical Terms, and Keyword Stuffing (as a baseline).\nResults: Content-focused rewrites improved visibility metrics (e.g., position-adjusted word count and subjective impression scores) by up to ~40%. Quotation Addition was strongest (~+41\u201343% on the main metric from a ~19 baseline), followed by Statistics Addition and Cite Sources (~+25\u201333%). Keyword stuffing showed little or no benefit (or slight declines). Gains were larger for lower-ranked sources. Domain effects varied. Real-world Perplexity tests showed similar directional lifts (quotes/stats/citations helping, stuffing not).\u2060Jrkdm\n\nThis is the cleanest interventional evidence that specific on-page content enhancements (evidence-rich elements like quotes, stats, and citations) can increase a source\u2019s share of generated answers once it is retrieved/in context. It does not directly measure organic discovery or brand-level recommendation rates in the wild.\n\n2. Competitive Citation Drivers: Vishwakarma et al. (2026)\n\n\u201cWhat Gets Cited: Competitive GEO in AI Answer Engines\u201d (arXiv:2605.25517) used a highly controlled two-document RAG testbed.\u2060arXiv\n\nSetup: Exactly two candidate sources injected into model context across six LLMs; 252,000 trials with brand anonymization and counterbalanced order. Sources differed on one factor at a time (factorial design over 18 content factors).\nKey findings: Topical relevance and list/position were the strongest drivers of being cited first. Explicit price information and a recent timestamp helped consistently. Completeness and trust cues gave smaller gains. Formatting-only edits had little impact.\n\nThis isolates what makes one already-retrieved source preferred over another for citation.\n\n3. Null Result on Schema Markup: Synthetic-Brand RCT\n\nA 2026 Roskilde University (RUC) Master\u2019s thesis by Christopher Mads Hammerum Bouet ran a randomized controlled trial with eight synthetic low-authority running-shoe brands.\u2060Rucforsk.ruc\n\nSetup: Four brands received Schema.org markup; four identical controls did not. Mentions measured across prompts on Gemini 2.5 Flash with Google Search grounding.\nResult: No detectable effect on mention rate (effect size essentially zero; 95% CI roughly \u22122.7 to +2.5 percentage points). The authors concluded schema never reached the model because low-authority pages were not retrieved. This challenges industry claims of large schema lifts and suggests correlations are often confounded by authority/retrieval.\n\nRelated observational work (e.g., Chen & Koudas, University of Toronto preprint arXiv:2610.15033) finds that within-site, page features like FAQ blocks, schema, summary boxes, or speed explain very little citation variation (~2.8%) compared with whether the engine\u2019s own search retrieves the page (~32%). Brand parametric knowledge also drives many mentions without any supporting citation.\u2060arXiv\n\n4. Industry Experiments with Partial Controls\nOtterlyAI off-page cold-start (2026): Created a fictional zero-authority GEO agency (7 pages) and generated ~16 external mentions via directories, listicle placements, Reddit, and LinkedIn. Within 14 days it reached ~10% share of voice and rank ~#7 among competitors on tightly matched prompts (e.g., location + year-specific). Broader prompts showed near-zero results. Platforms differed (stronger on some, weaker on others). Directional evidence that targeted third-party mentions can bootstrap early visibility.\u2060Otterly\nOtterlyAI publication-date update (2026): Updated only the visible \u201clast updated\u201d date on 10 articles vs. 2 controls. Over 30 days, citations rose ~31.5% on treated articles while controls declined. Authors described it as directional; external commentary noted pre-existing upward trends and mixed engine results.\u2060Airanklab\nSearch Engine Land experiments (2026): Two structured tests (one multi-month for an existing brand, one 30-day cold-start for a SaaS agency) tracking 15 commercial-intent keywords across 4\u20136 platforms. Listicle placements on sources already cited by AIs, PR/guest posts, and related outreach produced measurable increases in appearances/citations (hundreds of events logged). One listicle-focused source drove the bulk of citations. Results varied by platform and keyword; authors noted that conventional advice did not always hold and that sources mentioning the brand mattered heavily.\u2060Searchengineland\nSupporting Observational Evidence\n\nLarge correlational analyses (Ahrefs ~75k brands) show unlinked brand web mentions correlating strongly with AI visibility (~0.65\u20130.71), often stronger than backlinks or Domain Rating. Seer Interactive\u2019s GEO Olympics study (~231k responses) linked stronger \u201csignal architecture\u201d (entity authority + third-party validation + community discussion) to ~7.8\u00d7 more mentions. Kumar et al. and others document a clear brand-stature ladder (household names appear far more often than niche ones). These are not interventional experiments.\n\nImportant Limitations Across the Field\n\nAI responses are highly stochastic\u2014many prompt\u2013engine pairs flip between mentioning a brand or not across repeated runs. Mentions and citations are distinct (brands are often named from training knowledge without citing a page). Retrieval is a major bottleneck; on-page tactics mainly matter after a page is found. Effects are platform- and query-specific. Many industry case studies lack strong controls or report absolute numbers that can be influenced by external trends. A 2026 critical survey of dozens of GEO studies concluded that evidence for stable, cross-platform causal effects on organic discoverability remains thin, while effects on already-retrieved content are clearer.\n\nBottom line: The most credible measured effects come from content quality enhancements (quotes, statistics, citations, relevance, freshness signals) in controlled retrieval settings (Princeton and competitive RAG studies) and from targeted third-party mentions in early industry tests. Schema alone has failed controlled tests on low-authority brands. Stronger longitudinal, multi-platform RCTs with proper controls are still relatively scarce.",
+  "answer_links": [
+    {
+      "domain": "arxiv.org",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060arXiv",
+      "title": "[2311.09735] GEO: Generative Engine Optimization (arXiv)",
+      "url": "https://arxiv.org/abs/2311.09735"
+    },
+    {
+      "domain": "jrkdm.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Jrkdm",
+      "title": "What the Princeton GEO study found about getting your content cited in AI answers \u2014 JRK Digital Media (Jrkdm)",
+      "url": "https://jrkdm.com/insights/geo-research-princeton"
+    },
+    {
+      "domain": "arxiv.org",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060arXiv",
+      "title": "[2605.25517] What Gets Cited: Competitive GEO in AI Answer Engines (arXiv)",
+      "url": "https://arxiv.org/abs/2605.25517"
+    },
+    {
+      "domain": "rucforsk.ruc.dk",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Rucforsk.ruc",
+      "title": null,
+      "url": "https://rucforsk.ruc.dk/ws/files/125024275/Bouet_Brand_Visibility_in_Generative_AI_Engines.pdf"
+    },
+    {
+      "domain": "arxiv.org",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060arXiv",
+      "title": "[2610.15033] What Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization (GEO) (arXiv)",
+      "url": "https://arxiv.org/abs/2610.15033"
+    },
+    {
+      "domain": "otterly.ai",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Otterly",
+      "title": "GEO Experiment: #7 in ChatGPT in 14 Days | OtterlyAI (Otterly)",
+      "url": "https://otterly.ai/blog/from-zero-to-rank7-ai-search-in-14days/"
+    },
+    {
+      "domain": "www.airanklab.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Airanklab",
+      "title": "How to Run a GEO Experiment That Proves Something | AI Rank Lab - Free SEO, AEO & GEO Analyzer (Airanklab)",
+      "url": "https://www.airanklab.com/fr/blog/geo-experiments-how-to-test"
+    },
+    {
+      "domain": "searchengineland.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Searchengineland",
+      "title": "Two GEO experiments challenge conventional AI visibility advice (Searchengineland)",
+      "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
+    }
+  ],
+  "captured_at": "2026-11-03T09:17:02.354Z",
+  "source_panel_declared_hits": 85,
+  "source_inventory_scope": "All observable body inline URLs including expanded citation groups; source-panel hit count separate. Retrieval inventory may be partial.",
+  "capture_method": "Assistant read full native rendered answer; matching prompt checked; DOM body and expanded citation groups captured.",
+  "body_review": {
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "inline_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "retrieval_sources": [
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
+      "url": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "arxiv.org/html/2311.09735",
+      "url": "https://arxiv.org/html/2311.09735"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "otterly.ai/blog/from-zero-to-rank7-ai-search-in-14days/",
+      "url": "https://otterly.ai/blog/from-zero-to-rank7-ai-search-in-14days/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "otterly.ai/blog/we-updated-only-the-publication-date-on-10-articles-ai-citations-rose-31-5/",
+      "url": "https://otterly.ai/blog/we-updated-only-the-publication-date-on-10-articles-ai-citations-rose-31-5/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "otterly.ai/blog/we-updated-only-the-publication-date-on-10-articles-ai-citations-rose-31-5/",
+      "url": "https://otterly.ai/blog/we-updated-only-the-publication-date-on-10-articles-ai-citations-rose-31-5/"
+    }
+  ],
+  "raw_file": "records/S4-GROK-Q2-R2.json",
+  "public_copy": true,
+  "publication_scope": "Redacted original answer, body links, actual search activity and usage; private UI captures, conversations, provider identifiers and reasoning traces remain local.",
+  "original_capture_answer_characters": 7223,
+  "public_answer_characters": 7223,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  },
+  "search_activity_text": "\\u5de5\\u4f5c\\u4e86 49s\n\\u6267\\u884c\\u4e86 3 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nGEO Generative Engine Optimization experiments brand mentions AI recommendations\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\n\"generative engine optimization\" OR GEO experiment OR study OR research brand mentions OR recommendations\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nGEO tactics increase AI brand mentions experiment OR test\nAnalyzing the Princeton GEO experiment\n\\u6267\\u884c\\u4e86 2 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nAggarwal et al GEO Generative Engine Optimization KDD 2024 paper\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nOtterlyAI GEO experiment publication date citations\n\\u5df2\\u6d4f\\u89c8\nsearchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\n\"What Gets Cited\" competitive GEO RAG experiment arxiv\n10 \\u7ed3\\u679c\n\\u5df2\\u6d4f\\u89c8\narxiv.org/html/2311.09735\n\\u5df2\\u6d4f\\u89c8\notterly.ai/blog/from-zero-to-rank7-ai-search-in-14days/\n\\u5df2\\u6d4f\\u89c8\notterly.ai/blog/we-updated-only-the-publication-date-on-10-articles-ai-citations-rose-31-5/\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nRUC synthetic brand schema markup GEO experiment Gemini RCT\n10 \\u7ed3\\u679c\nSynthesizing the experimental findings\n\\u5df2\\u6d4f\\u89c8\notterly.ai/blog/we-updated-only-the-publication-date-on-10-articles-ai-citations-rose-31-5/\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nSearch Engine Land GEO experiments challenge conventional AI visibility advice details\n10 \\u7ed3\\u679c\nSynthesizing experimental evidence on GEO tactics",
+  "remaining_citation_buttons": []
+}

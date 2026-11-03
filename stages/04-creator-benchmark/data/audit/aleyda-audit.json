@@ -1,0 +1,143 @@
+{
+  "audited_at": "2026-11-03",
+  "method": "Direct public-page reading after all 18 answers were collected. Linked context verifies ownership; it is not added as holdout evidence.",
+  "selected_pages": [
+    {
+      "candidate_id": "aleyda-solis",
+      "url": "https://learningaisearch.com/about/",
+      "title": "About LearningAIsearch.com",
+      "run_ids": [
+        "S4-GROK-Q1-R2",
+        "S4-GROK-Q1-R3",
+        "S4-OPENAIAPI-Q1-R3"
+      ],
+      "selection_reason": "Most recurrent own-content citation; tracking parameters collapsed for page selection only.",
+      "access_status": "Accessible public HTML, checked 2026-11-03",
+      "byline": "Site explicitly attributes creation and funding to Aleyda Solis.",
+      "evidence": [
+        "Explains a free curated roadmap and an editorial submission process; declares no advertising or paid inclusion. This is a policy statement, not an original GEO experiment."
+      ],
+      "content_strategy": "Explicit author identity and editorial policy connected to the learning roadmap.",
+      "internal_links": [
+        {
+          "url": "https://learningaisearch.com/",
+          "label": "Learning roadmap"
+        },
+        {
+          "url": "https://hub.seofomo.co/",
+          "label": "Newsletter destination"
+        }
+      ],
+      "third_party_distribution": [],
+      "reusable": [
+        "Publish clear authorship and resource-selection criteria."
+      ],
+      "background_advantages": [
+        "An established consultant funds ongoing curation; a beginner cannot assume equivalent reputation."
+      ],
+      "limitations": [
+        "A cited About page authenticates identity; it does not validate every linked guide or prove recommendation causation."
+      ]
+    },
+    {
+      "candidate_id": "aleyda-solis",
+      "url": "https://learningaisearch.com/",
+      "title": "The Free AI Search Optimization Roadmap",
+      "run_ids": [
+        "S4-GROK-Q1-R3"
+      ],
+      "selection_reason": "Actual homepage body hyperlink shows the learning asset itself, beyond the recurrent About page.",
+      "access_status": "Accessible public HTML, checked 2026-11-03",
+      "byline": "Curated by Aleyda Solis",
+      "evidence": [
+        "Version 4 is dated March 20, 2026. Topic navigation spans fundamentals, measurement, commerce and tools; a copyable checklist and FAQs support action. No controlled original experiment appears on this hub."
+      ],
+      "content_strategy": "A versioned hub links user questions to specialist pages and a practical checklist.",
+      "internal_links": [
+        {
+          "url": "https://learningaisearch.com/ai_roadmap/optimize-ai-search/ai-search-landscape/",
+          "label": "Landscape topic"
+        },
+        {
+          "url": "https://learningaisearch.com/ai_roadmap/measuring-ai-search/ai-traffic-measurement/",
+          "label": "Measurement topic"
+        }
+      ],
+      "third_party_distribution": [
+        {
+          "url": "https://frankchiu.io/geo-course-recommendation/",
+          "evidence": "Frank Chiu's course comparison names and links the roadmap. This page also supports Grok Q1 R1's recommendation through a third-party citation."
+        }
+      ],
+      "reusable": [
+        "Create a small question-based hub; link each lesson to evidence and a free checklist."
+      ],
+      "background_advantages": [
+        "Existing expert and newsletter connections are not reproduced by copying the layout."
+      ],
+      "limitations": [
+        "Curation depth depends on external resources. The visible revision date does not prove every item is current; this audit does not endorse all optimization advice."
+      ]
+    },
+    {
+      "candidate_id": "aleyda-solis",
+      "url": "https://learningseo.io/seo_roadmap/optimize-ai-search/",
+      "title": "Optimize for AI Search (GEO, AEO, LLMO)",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R2"
+      ],
+      "selection_reason": "A distinct body-cited asset whose creator attribution needed independent verification.",
+      "access_status": "Accessible public HTML, checked 2026-11-03",
+      "byline": "LearningSEO.io About page identifies Aleyda as its founder and curator; individual linked resources have their own authors.",
+      "evidence": [
+        "Six topic sections distinguish research, guides, official documentation and tools, naming individual authors. It curates evidence rather than presenting one unified original experiment."
+      ],
+      "content_strategy": "An AI-search section sits within a broader SEO learning system.",
+      "internal_links": [
+        {
+          "url": "https://learningseo.io/",
+          "label": "Wider learning roadmap"
+        },
+        {
+          "url": "https://learningseo.io/about/",
+          "label": "Ownership verification context; not a holdout citation"
+        }
+      ],
+      "third_party_distribution": [
+        {
+          "url": "https://www.womenintechseo.com/podcast/learning-seo/",
+          "evidence": "A podcast interviews Aleyda about creating LearningSEO.io and links to it. This is a distribution example, not evidence about the current AI page's search ranking."
+        }
+      ],
+      "reusable": [
+        "Label resource types and credit original authors; connect specialist pages to a central index."
+      ],
+      "background_advantages": [
+        "The interview describes SEO work beginning in 2007; that experience is self-reported background."
+      ],
+      "limitations": [
+        "LearningSEO.io was added to the asset registry after ownership verification. It remains distinct from LearningAIsearch.com."
+      ]
+    }
+  ],
+  "attribution_resolution": [
+    {
+      "url": "https://learningseo.io/seo_roadmap/optimize-ai-search/",
+      "own_content": true,
+      "evidence_url": "https://learningseo.io/about/",
+      "note": "First-party About page independently confirms founder/curator identity. Count the owned curated page as C, not all external linked articles as Aleyda-authored work."
+    }
+  ],
+  "notes": [
+    "All three selected URLs were actual body hyperlinks. Frank Chiu and the podcast are external distribution evidence; their presence does not establish how either tested environment found Aleyda."
+  ],
+  "shortfalls": [],
+  "hypotheses": [
+    {
+      "practice": "A question-based learning index with clear authorship and free practical assets",
+      "evidence": "Observed roadmap, topic links and checklist; candidate was recommended in Q1 and Q3.",
+      "next_test": "Publish a small indexed collection, keep matched prompts and repeated baselines fixed, and compare discovery before and after over multiple dates.",
+      "causal_status": "Candidate hypothesis; no content intervention in this study."
+    }
+  ]
+}

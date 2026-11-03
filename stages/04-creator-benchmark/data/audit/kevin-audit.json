@@ -1,0 +1,170 @@
+{
+  "candidate_id": "kevin-indig",
+  "checked_at": "2026-11-03T11:01:50Z",
+  "checked_timezone": "Asia/Shanghai",
+  "method": "Assistant read the returned original pages and followed their existing navigation/source links. No extra broad distribution search, paid access, model request or publication.",
+  "selected_pages": [
+    {
+      "candidate_id": "kevin-indig",
+      "url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "observed_body_url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "title": "The Consensus Gap",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R2"
+      ],
+      "selection_reason": "Only observed Growth Memo article URL; personal byline verified.",
+      "access_status": "Main analysis/methods readable; premium continuation gated.",
+      "byline": "Kevin Indig",
+      "evidence": [
+        "May 11, 2026. Reports Omnia data: 3.7 million citations; headline sample 20,000 prompts; three additional 5,000-prompt cohorts.",
+        "ChatGPT, Perplexity and AI Overviews; concurrent localized queries twice daily. No Grok.",
+        "Customer monitoring pool, Europe/Spain-heavy; regex intent/page grouping.",
+        "Observational citation-overlap analysis, not a content intervention."
+      ],
+      "content_strategy": "Research question, segmented results, practical definitions, methodology, premium continuation.",
+      "internal_links": [
+        {
+          "url": "https://library.growth-memo.com/premium",
+          "label": "Linked premium tools and archive"
+        }
+      ],
+      "third_party_distribution": [],
+      "reusable": [
+        "State denominators and engine settings.",
+        "Place limitations beside practical definitions."
+      ],
+      "background_advantages": [
+        "Partner dataset; established newsletter and paid archive."
+      ],
+      "limitations": [
+        "Premium continuation and underlying data not independently audited.",
+        "Page organization cannot explain why the test model cited it."
+      ]
+    },
+    {
+      "candidate_id": "kevin-indig",
+      "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "observed_body_url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "title": "Winners & Losers of the AI Disruption of Search",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R3"
+      ],
+      "selection_reason": "Observed personal-site body URL; ownership and first-person speaker attribution match Kevin.",
+      "access_status": "Executive summary and complete transcript readable; no publication date visible.",
+      "byline": "Kevin Indig personal site; first-person talk transcript.",
+      "evidence": [
+        "Summarizes 20 months of research, over one million answers and 100,000 citations.",
+        "Mentions a Product Hunt date-edit result without a page-level test denominator, control or raw data."
+      ],
+      "content_strategy": "Summary, takeaways, themed transcript, newsletter and social navigation.",
+      "internal_links": [
+        {
+          "url": "https://www.kevin-indig.com/talks",
+          "label": "Talks collection"
+        },
+        {
+          "url": "https://www.kevin-indig.com/about",
+          "label": "Author background"
+        },
+        {
+          "url": "https://www.growth-memo.com/",
+          "label": "Linked newsletter"
+        }
+      ],
+      "third_party_distribution": [],
+      "reusable": [
+        "Publish a searchable transcript alongside a talk.",
+        "Separate concise findings from supporting methods."
+      ],
+      "background_advantages": [
+        "Long SEO career and client/event access, self-reported."
+      ],
+      "limitations": [
+        "Research synthesis and opinion, not a reproducible experiment at this URL.",
+        "Source popularity and recommendation causation were not tested."
+      ]
+    }
+  ],
+  "attribution_resolution": [
+    {
+      "url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "observed_body_url": "https://www.growth-memo.com/p/the-consensus-gap",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R2"
+      ],
+      "classification": "confirmed_own_or_byline",
+      "strict_citation_suggestion": true
+    },
+    {
+      "url": "https://www.kevin-indig.com/talks/winners-losers-ai-search",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R3"
+      ],
+      "classification": "confirmed_own_personal_site",
+      "strict_citation_suggestion": true
+    },
+    {
+      "url": "https://searchengineland.com/chatgpt-citations-content-study-469483",
+      "observed_body_url": "https://searchengineland.com/chatgpt-citations-content-study-469483",
+      "run_ids": [
+        "S4-OPENAIAPI-Q3-R1"
+      ],
+      "classification": "third_party_reporting",
+      "byline": "Danny Goodwin",
+      "published_on": "2026-02-18",
+      "strict_citation_suggestion": false,
+      "reason": "Reports Kevin\u2019s research; does not carry his byline. The cited article links to a different original Growth Memo study."
+    }
+  ],
+  "third_party_distribution": [
+    {
+      "url": "https://searchengineland.com/chatgpt-citations-content-study-469483",
+      "evidence": "Verified editorial coverage by Danny Goodwin links Kevin\u2019s research to its Growth Memo original. This documents distribution of another work, not either selected page.",
+      "underlying_original_url": "https://www.growth-memo.com/p/the-science-of-how-ai-pays-attention",
+      "supports": "Creator-level third-party research coverage",
+      "does_not_support": "Republication of the two selected pages or the cause of their AI selection."
+    }
+  ],
+  "supporting_context": [
+    {
+      "url": "https://www.growth-memo.com/p/the-science-of-how-ai-pays-attention",
+      "role": "Original study linked from Search Engine Land; not a holdout body citation.",
+      "access_status": "Kevin byline, February 16, 2026 date and paid preview visible; full research unavailable.",
+      "limitation": "Do not treat this context page as a third selected or independently audited study."
+    },
+    {
+      "url": "https://library.growth-memo.com/premium",
+      "role": "Linked topic/asset organization context; not holdout evidence.",
+      "evidence": "Searchable archive organized into decks, checklists, guides, prompts, frameworks and tools."
+    },
+    {
+      "url": "https://www.kevin-indig.com/about",
+      "role": "Linked self-description; background context, not independent credential validation.",
+      "evidence": "Lists prior Shopify, G2 and Atlassian roles and professional speaking."
+    }
+  ],
+  "shortfalls": [
+    "Two distinct own/bylined pages appeared in the new answer-body links. No third eligible page was added; the Danny Goodwin report and its linked original remain separately labeled context."
+  ],
+  "hypotheses": [
+    {
+      "practice": "Publish a compact methods block.",
+      "evidence": "Consensus Gap states denominators and engine settings.",
+      "next_test": "Pre-register matched pages; vary the methods block; repeat blind prompts.",
+      "causal_status": "Candidate hypothesis only."
+    },
+    {
+      "practice": "Reuse research as a searchable transcript.",
+      "evidence": "The owned talk page connects to the newsletter.",
+      "next_test": "Track discovery of transcript and summary separately from citations.",
+      "causal_status": "Candidate hypothesis only."
+    }
+  ],
+  "notes": [
+    "Tracking parameters are preserved in observed_body_url; audit URL omits tracking only.",
+    "Own-content citation, personal mention and recommendation are separate judgments. This file proposes citation attribution only and does not modify coding.",
+    "Third-party distribution is creator-level evidence and is not assigned to either selected page\u2019s distribution array.",
+    "The Search Engine Land article gives different broad corpus totals in its introduction and data section; it is not an independently reconciled dataset.",
+    "No underlying dataset was reproduced, no GEO intervention was performed, and no claim about long-term recommendation stability is supported."
+  ]
+}

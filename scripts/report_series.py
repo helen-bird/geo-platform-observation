@@ -1,4 +1,4 @@
-"""Shared offline navigation and version notes for the three public reports."""
+"""Shared offline navigation and version notes for the public learning reports."""
 from html import escape
 import json
 from pathlib import Path
@@ -30,18 +30,21 @@ def finish_page(document, stage, kind='reader'):
         '<a href="'+escape(relative(r['path']),quote=True)+'"'+
         (' aria-current="'+('page' if kind=='reader' else 'step')+'"' if r['stage']==stage else '')+'>'+
         escape(f'#{r["stage"]:02d} · {r["title"]}')+'</a>' for r in reports)
-    series = '<div class="experiment-series" data-report-series="v1" aria-label="GEO Lab experiment series"><strong>GEO Lab experiments</strong>'+links+'</div>'
+    series = '<div class="experiment-series" data-report-series="v1" aria-label="GEO Lab experiment series"><strong>GEO Lab experiments</strong><a href="'+escape(relative('learning-hub/index.html'),quote=True)+'">Learning Hub · Start with a question</a>'+links+'</div>'
     match = re.search(r'<nav\b[^>]*>.*?</nav>',document,re.S)
     if not match:
         raise ValueError('Report has no navigation element')
     nav = match.group()
+    # The Stage 4 local reader has an earlier standalone series block. Replace
+    # it with the same versioned navigation used by every public report.
+    nav = re.sub(r'<div class="experiment-series"[^>]*>.*?</div>', '', nav, flags=re.S)
     # Remove superseded simple stage links only in the page's own navigation.
     nav = re.sub(r'<a\b[^>]*>Stage [123](?: report|: Question sensitivity)?</a>', '',nav)
     nav = re.sub(r'(<nav\b[^>]*>)',lambda m:m.group(1)+series,nav,count=1)
     nav = nav.replace('</nav>','<a href="#report-version">Report version</a></nav>')
     document = document[:match.start()] + nav + document[match.end():]
-    fields = [('Experiment date',selected['experiment_dates']),('First published',selected['first_published']),('Last revised',selected['last_revised']),('Version','v'+selected['version'])]
-    note = '<blockquote class="report-version" id="report-version"><p>'+' · '.join('<strong>'+escape(k)+':</strong> '+escape(v) for k,v in fields)+'</p><p>'+escape(selected['revision_note'])+'</p><p><a href="'+relative('report-versions.json')+'">Version metadata</a> · <a href="'+relative('CHANGELOG.md')+'">Revision history</a> · <a href="'+relative('reviews/2026-11-02-stages-01-02.md')+'">Cross-report review decisions</a></p></blockquote>'
+    fields = [('Author','Helen Bird'),('Experiment date',selected['experiment_dates']),('First published',selected['first_published']),('Last revised',selected['last_revised']),('Version','v'+selected['version'])]
+    note = '<blockquote class="report-version" id="report-version"><p>'+' · '.join('<strong>'+escape(k)+':</strong> '+escape(v) for k,v in fields)+'</p><p>'+escape(selected['revision_note'])+'</p><p><a href="'+relative('report-versions.json')+'">Version metadata</a> · <a href="'+relative('CHANGELOG.md')+'">Revision history</a> · <a href="'+relative('reviews/2026-11-02-stages-01-02.md')+'">Cross-report review decisions</a> · <a href="'+relative('reviews/2026-11-03-stage04.md')+'">Stage 4 review decisions</a></p></blockquote>'
     document = document.replace('</main>',note+'</main>',1)
     document = document.replace('</head>','<style>'+CSS+'</style></head>',1)
     return document

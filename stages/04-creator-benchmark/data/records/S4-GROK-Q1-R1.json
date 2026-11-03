@@ -1,0 +1,179 @@
+{
+  "id": "S4-GROK-Q1-R1",
+  "slot_id": "S4-GROK-Q1-R1",
+  "platform": "Grok",
+  "interface": "Consumer web UI",
+  "prompt_id": "Q1",
+  "repeat": 1,
+  "prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+  "submitted_at": "2026-11-03T09:09:45.495Z",
+  "model_label": "Exact backend version undisclosed",
+  "mode_label": "Expert",
+  "reasoning_effort": "Not independently selectable",
+  "private": true,
+  "personalize_using_x": false,
+  "personalize_using_history": false,
+  "search_enabled_ui": null,
+  "search_mode": "Expert native retrieval; no independent force-search toggle observed",
+  "search_observed": true,
+  "status": "completed",
+  "body_complete": true,
+  "answer_text": "Here are the strongest free resources for learning Generative Engine Optimization (GEO) in 2026, based on practitioner roundups, course comparisons, and active sources. GEO focuses on getting content cited, quoted, or recommended in AI-generated answers (ChatGPT, Perplexity, Google AI Overviews/AI Mode, Gemini, Claude, etc.).\u2060Stackmatix\u2060Rankprompt\n\n1. Foundational Research (Start Here)\nOriginal GEO paper: GEO: Generative Engine Optimization by Aggarwal et al. (Princeton, IIT Delhi, and others), arXiv:2311.09735, published at KDD 2024.\nThis is the primary source that coined the term. It tested optimization strategies (e.g., adding statistics, quotations, citations) across thousands of queries and showed meaningful visibility gains (roughly 30\u201340% on key metrics for evidence-based edits; keyword stuffing performed poorly). Free on arXiv. Follow-up comparative studies (e.g., arXiv:2509.08919) examine differences across engines.\u2060Thegeocommunity\u2060arXiv\n2. Best Free Structured Courses\n\nThese are short, practical, and updated for 2026:\n\nCourse\tDuration\tHighlights\tAccess Notes\nAhrefs Academy AEO Course\t~1h 26m (12 lessons)\tHow AI search works, platform differences, content creation, brand mentions, technical AEO, measurement. Strong on fundamentals.\tCompletely free, no signup required. https://ahrefs.com/academy/aeo-course\nApollo Digital Free GEO Course\t~100 minutes (7 lessons)\tFoundations \u2192 getting cited by ChatGPT \u2192 technical access (bots/robots.txt) \u2192 AI Visibility Audit \u2192 measurement (Share of Voice). Includes free Google Sheets templates.\tTruly free, no signup. https://apollodigital.io/learn/geo/\nRank Prompt GEO & AEO Course\t~90 minutes (20 lessons)\tInternal (on-site) vs External GEO, platform overviews (including Grok), auditing, content structuring, digital PR/authority, plus a section on selling GEO as a service. Templates & SOPs included.\t100% free, no card. https://rankprompt.com/geo-course/\nAISQ Growth GEO Academy\t5 short lessons\tPractical action plan, checklists, worksheets, 90-day calendar. Covers GEO + AEO.\tFree (account creation for lifetime access). https://aisq.com/learn-geo/\n\nOther solid free options with certificates or credentials include HubSpot Academy (AEO/AI marketing modules), Surfer Academy, and Semrush Academy AI Search Optimization.\u2060Rankprompt\u2060Apollodigital\n\n3. Curated Learning Paths & Communities\nThe GEO Community (thegeocommunity.com): One of the strongest free hubs in 2026. Features a structured /start learning path (role-based tracks for Strategist, Builder, Engineer), regularly updated practitioner blog (crawlability, schema, LLMs.txt, entity strategy, experiments), and documented tests. Often recommended as a better-organized alternative to many paid courses.\u2060Thegeocommunity\nLearningAIsearch.com by Aleyda Solis: Free, curated roadmap of reliable third-party guides covering fundamentals, measurement, technical, content, prompt research, ecommerce, and more. Continuously updated; no ads or paid placements. Complements her broader LearningSEO.io resource.\u2060Frankchiu\nClass Central: \u201c25 Resources to Learn Generative Engine Optimization in 2026\u201d roundup (courses, blogs, YouTube, guides). Good overview of the landscape.\n4. Free Ebooks, Guides & Official Docs\nThe GEO Lab (thegeolab.net/ebooks/): Multiple free ebooks (Gumroad $0 or direct reads), including the 2026 Pocket Guide, SEO-to-GEO Complete Framework, Experiments guide, Workbook, WordPress technical guide, Authority Playbook, and more. Built around their GEO Stack framework.\nGoogle Search Central documentation on AI Overviews, AI Mode, and structured data \u2014 authoritative baseline for Google\u2019s ecosystem.\nPractitioner blogs and guides (e.g., Neil Patel GEO content, Stackmatix free resources roundup, various agency deep-dives).\n5. Ongoing Learning\nYouTube channels with practical demos (Nathan Gotch, Exposure Ninja, SMA Marketing, Writesonic, etc.).\nCommunities: Relevant Reddit/Discord/Slack groups, LinkedIn discussions of real experiments, and practitioner newsletters.\nMeasurement basics: Google Search Console (now with generative AI performance reports in 2026) + GA4 + manual prompt tracking in spreadsheets.\nRecommended Learning Path (2026)\nRead the original arXiv paper (or a solid practitioner summary of it).\nComplete the Ahrefs AEO course (lowest friction) + one practical course (Apollo Digital or Rank Prompt).\nWork through The GEO Community /start path or LearningAIsearch.com roadmap.\nDownload a couple of GEO Lab ebooks or checklists.\nApply it: Run an AI visibility audit on a site you control, optimize a few pages, track citations/mentions over 4\u20138 weeks, and iterate.\n\nKey advice from 2026 sources: Prefer resources from active practitioners sharing real citation data over pure theory. Combine official docs, short courses, and communities. Hands-on measurement on your own site beats certificates. The field moves fast\u2014check recency (ideally updated within the last 6 months) and multi-engine coverage.\u2060Stackmatix\n\nMost of the above are free with no or minimal signup. Start with the paper + Ahrefs course if you want the quickest solid foundation.",
+  "answer_links": [
+    {
+      "domain": "www.stackmatix.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Stackmatix",
+      "title": "Free AEO and GEO Learning Resources in 2026 (Stackmatix)",
+      "url": "https://www.stackmatix.com/blog/free-aeo-geo-resources-2026"
+    },
+    {
+      "domain": "rankprompt.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Rankprompt",
+      "title": "Best GEO and AEO Courses in 2026: 11 Programs Compared | Rank Prompt (Rankprompt)",
+      "url": "https://rankprompt.com/best-geo-aeo-courses/"
+    },
+    {
+      "domain": "thegeocommunity.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Thegeocommunity",
+      "title": "Best GEO Resources, Courses & Tutorials [2026] (Thegeocommunity)",
+      "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
+    },
+    {
+      "domain": "arxiv.org",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060arXiv",
+      "title": "[2311.09735] GEO: Generative Engine Optimization (arXiv)",
+      "url": "https://arxiv.org/abs/2311.09735"
+    },
+    {
+      "domain": "ahrefs.com",
+      "kind": "Answer-body link/citation",
+      "text": "https://ahrefs.com/academy/aeo-course",
+      "title": null,
+      "url": "https://ahrefs.com/academy/aeo-course"
+    },
+    {
+      "domain": "apollodigital.io",
+      "kind": "Answer-body link/citation",
+      "text": "https://apollodigital.io/learn/geo/",
+      "title": null,
+      "url": "https://apollodigital.io/learn/geo/"
+    },
+    {
+      "domain": "rankprompt.com",
+      "kind": "Answer-body link/citation",
+      "text": "https://rankprompt.com/geo-course/",
+      "title": null,
+      "url": "https://rankprompt.com/geo-course/"
+    },
+    {
+      "domain": "aisq.com",
+      "kind": "Answer-body link/citation",
+      "text": "https://aisq.com/learn-geo/",
+      "title": null,
+      "url": "https://aisq.com/learn-geo/"
+    },
+    {
+      "domain": "rankprompt.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Rankprompt",
+      "title": "Best GEO and AEO Courses in 2026: 11 Programs Compared | Rank Prompt (Rankprompt)",
+      "url": "https://rankprompt.com/best-geo-aeo-courses/"
+    },
+    {
+      "domain": "apollodigital.io",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Apollodigital",
+      "title": "The Free GEO Course: Learn Generative Engine Optimization | Apollo Digital (Apollodigital)",
+      "url": "https://apollodigital.io/learn/geo/"
+    },
+    {
+      "domain": "thegeocommunity.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Thegeocommunity",
+      "title": "Best GEO Resources, Courses & Tutorials [2026] (Thegeocommunity)",
+      "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
+    },
+    {
+      "domain": "frankchiu.io",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Frankchiu",
+      "title": "2026 GEO \\u8ab2\\u7a0b\\u63a8\\u85a6\uff1a10 \\u5802 AI \\u641c\\u5c0b\\u512a\\u5316\\u8ab2\\u7a0b\\u8207\\u8cc7\\u6e90\\u6574\\u7406 (Frankchiu)",
+      "url": "https://frankchiu.io/geo-course-recommendation/"
+    },
+    {
+      "domain": "www.stackmatix.com",
+      "kind": "Answer-body link/citation",
+      "text": "\u2060Stackmatix",
+      "title": "Free AEO and GEO Learning Resources in 2026 (Stackmatix)",
+      "url": "https://www.stackmatix.com/blog/free-aeo-geo-resources-2026"
+    }
+  ],
+  "captured_at": "2026-11-03T09:13:35.054Z",
+  "source_panel_declared_hits": 65,
+  "source_inventory_scope": "All observable body inline URLs including expanded citation groups; source-panel hit count separate. Retrieval inventory may be partial.",
+  "capture_method": "Assistant read full native rendered answer; matching prompt checked; DOM body and expanded citation groups captured.",
+  "body_review": {
+    "reviewer": "assistant",
+    "complete_body_read": true,
+    "coherent_ending": true,
+    "inline_url_coverage_checked": true,
+    "external_claims_verified": false,
+    "independent_human_double_coding": false
+  },
+  "retrieval_sources": [
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "stackmatix.com/blog/free-aeo-geo-resources-2026",
+      "url": "https://www.stackmatix.com/blog/free-aeo-geo-resources-2026"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "classcentral.com/report/learn-generative-engine-optimization-geo/",
+      "url": "https://classcentral.com/report/learn-generative-engine-optimization-geo/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/",
+      "url": "https://thegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "apollodigital.io/learn/geo/",
+      "url": "https://apollodigital.io/learn/geo/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "rankprompt.com/geo-course/",
+      "url": "https://rankprompt.com/geo-course/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "aisq.com/learn-geo/",
+      "url": "https://aisq.com/learn-geo/"
+    },
+    {
+      "kind": "Retrieval activity, not body citation",
+      "text": "thegeolab.net/ebooks/",
+      "url": "https://thegeolab.net/ebooks/"
+    }
+  ],
+  "raw_file": "records/S4-GROK-Q1-R1.json",
+  "public_copy": true,
+  "publication_scope": "Redacted original answer, body links, actual search activity and usage; private UI captures, conversations, provider identifiers and reasoning traces remain local.",
+  "original_capture_answer_characters": 5110,
+  "public_answer_characters": 5110,
+  "answer_privacy_edits": {
+    "body_changed": false,
+    "policy": "Only actual URL tracking, signed/session URL parameters and necessary identifying information are removed; original wording, including analytics parameter examples outside URLs, remains.",
+    "annotation_positions": "Original position indexes omitted because URL/privacy edits can change character locations."
+  },
+  "search_activity_text": "\\u5de5\\u4f5c\\u4e86 43s\n\\u6267\\u884c\\u4e86 3 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nbest free resources to learn Generative Engine Optimization GEO 2026\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nGenerative Engine Optimization GEO free courses guides tutorials\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\n\"Generative Engine Optimization\" OR GEO free resources OR courses OR guides 2025 OR 2026\n\\u5df2\\u6d4f\\u89c8\nstackmatix.com/blog/free-aeo-geo-resources-2026\n\\u5df2\\u6d4f\\u89c8\nclasscentral.com/report/learn-generative-engine-optimization-geo/\n\\u5df2\\u6d4f\\u89c8\nthegeocommunity.com/generative-engine-optimization-resources-courses-tutorials/\n\\u5df2\\u6d4f\\u89c8\napollodigital.io/learn/geo/\n\\u5df2\\u6d4f\\u89c8\nrankprompt.com/geo-course/\n\\u5df2\\u6d4f\\u89c8\naisq.com/learn-geo/\n\\u6267\\u884c\\u4e86 2 \\u6b21\\u641c\\u7d22\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nAhrefs AEO Course free GEO\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\narXiv GEO Generative Engine Optimization paper Aggarwal\nCompiling free resources for learning GEO\n\\u5df2\\u641c\\u7d22\\u7f51\\u7edc\n\\u4e3a\nLearningAIsearch.com Aleyda Solis\n10 \\u7ed3\\u679c\n\\u5df2\\u6d4f\\u89c8\nthegeolab.net/ebooks/\nCompiling the final response",
+  "remaining_citation_buttons": [
+    "",
+    ""
+  ]
+}

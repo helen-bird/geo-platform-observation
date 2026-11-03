@@ -1,0 +1,26 @@
+{
+  "edition": "Redacted public edition",
+  "published_on": "2026-11-03",
+  "preserved": [
+    "18 complete selected answers and all 18 actual submissions",
+    "54 assistant candidate-by-answer judgments and eight actual own/bylined audited pages",
+    "Nine exact API requests, allowlisted response copies, model/search controls, timing, usage and cost estimates",
+    "Actual body URLs/domains, plain-text references, retrieval-only sources and native search activity in separate fields",
+    "Historical selection, frozen registration chronology, source-attribution decisions, bounded source audit and corrected local capture-association incident",
+    "The pre-request setup failure, retained as a non-generation event"
+  ],
+  "removed": [
+    "Private conversation/share links, opaque provider identifiers, original citation position indexes and reasoning-trace output items",
+    "Credentials, credential setup details, headers, local paths, account identifiers and unrelated navigation",
+    "Original account preference values, screenshots, DOM/HTML, native UI dumps and capture helper code",
+    "Tracking, session/client/routing and signed-access parameters in actual source URLs"
+  ],
+  "transcript_policy": "Original answer wording and semantic judgments are preserved apart from necessary privacy edits and actual URL tracking removal. Each answer records whether the public body differs and its redacted character count. Plain-text reference versus linked-citation roles are unchanged.",
+  "citation_positions": "Original annotation offsets and output-item indexes are omitted after redaction; actual source URLs and their observable roles remain. No destination repair or independent validation of every returned source is claimed.",
+  "signed_urls": "Signed/session parameters are removed while retaining host/path and non-sensitive query data. Unsigned copies may not be directly fetchable; private originals remain local.",
+  "condition_notice": "OpenAI API + web search, not consumer ChatGPT Search. These results do not represent ChatGPT web app performance.",
+  "search_limit": "Three of nine complete API answers reached the fixed eight-tool-call cap. Retrieval may be constrained; cross-environment source differences do not establish model preference.",
+  "evidence_boundary": "Raw private originals remain unchanged locally. Public hashes describe redacted copies and do not certify that they were publicly preregistered.",
+  "language_policy": "Public documentation is English. Captured non-English UI tokens are represented with literal Unicode escapes.",
+  "publication_scope": "GitHub and GitHub Pages only; no social post is created by this release."
+}

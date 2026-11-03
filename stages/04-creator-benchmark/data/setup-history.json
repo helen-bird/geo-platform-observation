@@ -1,0 +1,9 @@
+[
+  {
+    "record_kind": "local_pre_request_setup_failure",
+    "at": "2026-11-03T09:01:37.258218+00:00",
+    "request_submitted": false,
+    "credential_disclosed": false,
+    "summary": "Protected local credential access initially failed in restricted execution. Existing protected credential access then succeeded without changing or disclosing a credential. No model request or additional answer was submitted by this setup failure."
+  }
+]
