@@ -41,6 +41,8 @@ Important files include:
 - `inventory-used.json`: the exact manifest and source used by that run.
 - `sitemap-status.json`: anonymous HTTP/XML observation plus the private readonly Google processing response, if available.
 - `notification-ledger.json`: attempted, confirmed and uncertain alert delivery state.
+- `authorization-status.json`: latest OAuth refresh result, updated on recovery as well as failure; property permissions remain a separate API check.
+- `authorization-observations/`: immutable, credential-free authorization observations, including the prior failure when authorization recovers.
 
 Index status and lifecycle descriptions come from actual API fields. Missing `lastCrawlTime` alone does not prove a URL was never crawled. A pending sitemap or absent download timestamp does not prove processing failed. Actual Google index improvements do not establish ChatGPT or Grok discovery or recommendation gains.
 

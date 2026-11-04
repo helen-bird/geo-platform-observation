@@ -167,6 +167,21 @@ class WrapperTests(unittest.TestCase):
                 code=m.run(args)
             self.assertEqual(code,2);latest=m.read_json(state/'latest-index-status.json');self.assertEqual(latest['results'][0]['status'],'AUTH_REQUIRED');self.assertFalse(latest['run_complete']);self.assertFalse((state/'latest-successful-index-status.json').exists());self.assertNotIn('fake',printed.getvalue())
 
+    def test_recovered_auth_updates_latest_and_preserves_previous_failure(self):
+        import index_monitor
+        import google_search_console_auth as auth
+        with tempfile.TemporaryDirectory()as folder:
+            state=Path(folder)/'state';source=Path(folder)/'urls.json';source.write_text(json.dumps({'site_url':m.PROPERTY,'urls':[{'url':m.PROPERTY,'monitor':True}]}))
+            previous={'checked_at':'2026-11-04T10:00:00+00:00','status':'AUTH_REQUIRED','error':{'category':'AUTH_EXPIRED','http_status':401},'scope_required':'webmasters.readonly'}
+            m.write_json(state/'authorization-status.json',previous)
+            args=argparse.Namespace(output=str(state),inventory=str(source),refresh_inventory=False)
+            snapshot={'run_complete':True,'run_status':'SUCCESS','api_requests_attempted':1,'counts':{'INDEXED':1},'alerts':[]}
+            with patch.dict(os.environ,{'GITHUB_REPOSITORY':m.PRIVATE_REPOSITORY,'GITHUB_TOKEN':'fake'},clear=True),patch.object(m,'verify_private_repository'),patch.object(m,'private_state_path',return_value=(Path(folder),state)),patch.object(auth,'load_credentials_from_env',return_value={}),patch.object(auth,'refresh_access_token',return_value='not-a-real-access-token'),patch.object(m,'sitemap_observation',return_value={'accessible':True,'processing_error':None}),patch.object(index_monitor,'run_monitor',return_value=snapshot),patch.object(m,'deliver_alerts',return_value=[]),contextlib.redirect_stdout(io.StringIO())as printed:
+                self.assertEqual(m.run(args),0)
+            latest=m.read_json(state/'authorization-status.json');self.assertEqual(latest['status'],'AUTHORIZED');self.assertIsNone(latest['error'])
+            history=[m.read_json(p)for p in(state/'authorization-observations').glob('*.json')]
+            self.assertIn(previous,history);self.assertEqual(len(history),2);self.assertNotIn('not-a-real-access-token',printed.getvalue()+json.dumps(history))
+
     def test_empty_submission_lock_not_staged(self):
         with tempfile.TemporaryDirectory()as folder:
             root=Path(folder).resolve();state=root/'state';(state/'sitemap').mkdir(parents=True);(state/'sitemap/sitemap-submission.lock').write_bytes(b'');(state/'snapshot.json').write_text('{"status":"AUTH_REQUIRED"}')

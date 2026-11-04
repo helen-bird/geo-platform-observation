@@ -411,7 +411,15 @@ def _run_verified(args, env, repository, github_token, output, context):
     if token and env.get('GITHUB_ACTIONS')=='true':print('::add-mask::'+token)
     context['phase']='sitemap_observation'
     sitemap=sitemap_observation(token);write_json(output/'sitemap-status.json',sitemap)
-    if auth_error:write_json(output/'authorization-status.json',{'checked_at':utc_now(),'status':'AUTH_REQUIRED','error':auth_error,'scope_required':'webmasters.readonly'})
+    authorization={'checked_at':utc_now(),'status':'AUTH_REQUIRED'if auth_error else'AUTHORIZED','error':auth_error,'scope_required':'webmasters.readonly','meaning':'OAuth token refresh only; property access is checked separately by URL Inspection.'}
+    # Keep previous failures even when the latest authorization recovers.
+    previous_authorization=read_json(output/'authorization-status.json',{})
+    for observation in (previous_authorization,authorization):
+        if not observation:continue
+        digest=hashlib.sha256(json.dumps(observation,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+        history_path=output/'authorization-observations'/(digest+'.json')
+        if not history_path.exists():write_json(history_path,observation)
+    write_json(output/'authorization-status.json',authorization)
     from index_monitor import run_monitor
     context.update(phase='url_inspection_and_state',api_requests_attempted=None)
     snapshot=run_monitor(inventory_path,output,token_provider=lambda:token,sitemap_status=sitemap,private_runtime_verified=True)
