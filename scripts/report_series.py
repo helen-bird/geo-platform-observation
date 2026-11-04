@@ -1,9 +1,11 @@
 """Shared offline navigation and version notes for the public learning reports."""
-from html import escape
+from html import escape, unescape
 import json
 from pathlib import Path
 import posixpath
 import re
+from urllib.parse import urlsplit
+from site_metadata import finalize_page, relative_canonical
 
 ROOT = Path(__file__).resolve().parents[1]
 CSS = '''
@@ -27,10 +29,10 @@ def finish_page(document, stage, kind='reader'):
     directory = posixpath.dirname(selected['path']) or '.'
     relative = lambda path: posixpath.relpath(path, directory)
     links = ''.join(
-        '<a href="'+escape(relative(r['path']),quote=True)+'"'+
+        '<a href="'+escape(relative_canonical(r['path'],directory),quote=True)+'"'+
         (' aria-current="'+('page' if kind=='reader' else 'step')+'"' if r['stage']==stage else '')+'>'+
         escape(f'#{r["stage"]:02d} · {r["title"]}')+'</a>' for r in reports)
-    series = '<div class="experiment-series" data-report-series="v1" aria-label="GEO Lab experiment series"><strong>GEO Lab experiments</strong><a href="'+escape(relative('learning-hub/index.html'),quote=True)+'">Learning Hub · Start with a question</a>'+links+'</div>'
+    series = '<div class="experiment-series" data-report-series="v1" aria-label="GEO Lab experiment series"><strong>GEO Lab experiments</strong><a href="'+escape(relative_canonical('learning-hub/index.html',directory),quote=True)+'">Learning Hub · Start with a question</a>'+links+'<a href="'+escape(relative_canonical('evidence/index.html',directory),quote=True)+'">Evidence library · Individual answers</a></div>'
     match = re.search(r'<nav\b[^>]*>.*?</nav>',document,re.S)
     if not match:
         raise ValueError('Report has no navigation element')
@@ -42,9 +44,22 @@ def finish_page(document, stage, kind='reader'):
     nav = re.sub(r'<a\b[^>]*>Stage [123](?: report|: Question sensitivity)?</a>', '',nav)
     nav = re.sub(r'(<nav\b[^>]*>)',lambda m:m.group(1)+series,nav,count=1)
     nav = nav.replace('</nav>','<a href="#report-version">Report version</a></nav>')
+    known_readers = {r['path'] for r in reports} | {'learning-hub/index.html', 'evidence/index.html'}
+    def canonical_navigation(match):
+        value = unescape(match.group(1)); parsed = urlsplit(value)
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            return match.group()
+        target = posixpath.normpath(posixpath.join(directory, parsed.path))
+        if target not in known_readers:
+            return match.group()
+        href = relative_canonical(target, directory)
+        if parsed.fragment: href += '#'+parsed.fragment
+        return 'href="'+escape(href, quote=True)+'"'
+    nav = re.sub(r'href="([^"]*)"', canonical_navigation, nav)
     document = document[:match.start()] + nav + document[match.end():]
     fields = [('Author','Helen Bird'),('Experiment date',selected['experiment_dates']),('First published',selected['first_published']),('Last revised',selected['last_revised']),('Version','v'+selected['version'])]
-    note = '<blockquote class="report-version" id="report-version"><p>'+' · '.join('<strong>'+escape(k)+':</strong> '+escape(v) for k,v in fields)+'</p><p>'+escape(selected['revision_note'])+'</p><p><a href="'+relative('report-versions.json')+'">Version metadata</a> · <a href="'+relative('CHANGELOG.md')+'">Revision history</a> · <a href="'+relative('reviews/2026-11-02-stages-01-02.md')+'">Cross-report review decisions</a> · <a href="'+relative('reviews/2026-11-03-stage04.md')+'">Stage 4 review decisions</a></p></blockquote>'
+    note = '<blockquote class="report-version" id="report-version"><p>'+' · '.join('<strong>'+escape(k)+':</strong> '+escape(v) for k,v in fields)+'</p><p>'+escape(selected['revision_note'])+'</p><p><a href="'+relative('report-versions.json')+'">Version metadata</a> · <a href="'+relative('CHANGELOG.md')+'">Revision history</a> · <a href="'+relative('reviews/2026-11-02-stages-01-02.md')+'">Cross-report review decisions</a> · <a href="'+relative('reviews/2026-11-03-stage04.md')+'">Stage 4 review decisions</a> · <a href="'+relative('reviews/2026-11-04-technical-maintenance.md')+'">Technical maintenance</a></p></blockquote>'
     document = document.replace('</main>',note+'</main>',1)
     document = document.replace('</head>','<style>'+CSS+'</style></head>',1)
-    return document
+    page_path = selected['path'] if kind == 'reader' else posixpath.join(directory, 'technical-appendix.html')
+    return finalize_page(document, page_path, kind=kind, stage=stage)

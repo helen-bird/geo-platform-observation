@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import subprocess
 from urllib.parse import urlsplit, unquote
 import zipfile
 
@@ -26,10 +27,11 @@ class Page(HTMLParser):
             self.details.append('open' in attrs)
 
 def main():
+    assert not subprocess.check_output(['git', 'ls-files', '--', 'audits'], cwd=ROOT, text=True).strip(), 'Local audit evidence must not be tracked for publication'
     texts = []
-    files = [p for p in DIST.rglob('*') if p.is_file() and not {'.git', '__pycache__'}.intersection(p.relative_to(DIST).parts)]
+    files = [p for p in DIST.rglob('*') if p.is_file() and not {'.git', '__pycache__', 'audits'}.intersection(p.relative_to(DIST).parts)]
     for path in files:
-        if path.suffix in ('.html', '.json', '.txt', '.md', '.py'):
+        if path.suffix in ('.html', '.json', '.txt', '.md', '.py', '.xml'):
             value = path.read_text()
             assert not re.search(r'[\u3400-\u9fff]', value), ('Untranslated text', str(path.relative_to(DIST)))
             if path.suffix != '.py':
@@ -49,7 +51,7 @@ def main():
             # These two patterns identify the Stage 1 personal passages. Stage 3
             # verbatim answers legitimately discuss generic account controls and
             # source channels; its dedicated check rejects identifying data.
-            if name.startswith(('stages/03-question-sensitivity/', 'stages/04-creator-benchmark/')) and label in {'personal X context', 'excluded personal plans'}:
+            if name.startswith(('stages/03-question-sensitivity/', 'stages/04-creator-benchmark/', 'evidence/stage-03/', 'evidence/stage-04/')) and label in {'personal X context', 'excluded personal plans'}:
                 continue
             assert not re.search(pattern, value, re.I), (name, label)
     page_paths = [DIST / name for name in ['index.html','technical-appendix.html',
@@ -119,6 +121,12 @@ def main():
     check_stage4_publication.main()
     import build_learning_hub
     build_learning_hub.check()
+    import check_site_metadata
+    check_site_metadata.main()
+    import check_sitemap
+    check_sitemap.main()
+    import check_evidence_pages
+    check_evidence_pages.main()
     print(json.dumps({'privacy_check': 'passed', 'language_check': 'passed', 'public_files': len(files), 'report_pages':len(pages),'valid_links':sum(len(p.links) for p in pages.values()),'expanded_details':sum(len(p.details) for p in pages.values()), 'main_answers': 12, 'historical_attempts': 10, 'captures': 37, 'statistics_match': True,'source_audit_cases':10,'series_navigation_and_versions':'passed'}))
 
 if __name__ == '__main__':

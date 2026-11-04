@@ -4,3 +4,5 @@ __pycache__/
 .env
 .env.*
 *.tar.gz
+# Local audit evidence and acceptance captures are not publication inputs.
+audits/

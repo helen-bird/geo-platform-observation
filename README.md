@@ -26,3 +26,11 @@ New stages will be added as learning and experiments are completed. Each stage d
 Each reader leads with bounded findings; a separate complete appendix preserves expanded original evidence. Later source audits and user-reported follow-ups are explicitly separate from the experiment-date outcomes. The November 7 B/C retest is an unconfirmed review proposal, with no results or automation.
 
 The Learning Hub organizes existing material by user question; its effect on AI discovery, recommendation or conversions has not been measured. It is a candidate practice arising from the Stage 4 source audit, not an established GEO intervention result.
+
+## Evidence access and technical maintenance
+
+[Browse original answers](https://helen-bird.github.io/geo-platform-observation/evidence/) provides 60 individually addressable selected-response pages across the first four labs. Full expanded appendices, all historical attempts and original public datasets remain available. AI response text is preserved as generated output; Helen Bird curates the experiment record.
+
+The November 4 technical maintenance adds consistent canonical/description/social metadata, truthful author/series markup and a [small canonical sitemap](https://helen-bird.github.io/geo-platform-observation/sitemap.xml). These bundled changes have no measured effect on AI discovery or recommendations. Actual search-engine indexing, real crawler visits and AI candidate-library inclusion are not established by static validation. Host robots and training preferences were not changed.
+
+Build offline with `python3 scripts/build_site.py`. For presentation-only maintenance, use `--preserve-evidence`; it verifies that scientific data/results are unchanged and preserves existing evidence/download bytes. Run `python3 scripts/check_publication.py` to validate the public boundary and links. Local `audits/` evidence is ignored by Git and must not be included in a public release.

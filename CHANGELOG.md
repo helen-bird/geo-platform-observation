@@ -2,6 +2,14 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-04
+
+- **Technical maintenance:** standardized canonical URLs, distinct page descriptions and page-specific Open Graph metadata across all nine report/hub pages. Fixed the Stage 1 appendix and Stage 3 metadata omissions and the Stage 2 appendix social-preview mismatch.
+- **Author and series markup:** added truthful Person, Article/CollectionPage and breadcrumb relationships based on visible Helen Bird attribution and recorded dates. Original AI responses are archived as responses, not attributed to Helen Bird as their author.
+- **Evidence access:** added an HTML index and 60 individually addressable selected-answer pages, linked from the existing reports and hub. Original complete appendices remain expanded; raw evidence, coding, findings and download archives are unchanged.
+- **Discovery:** added a nine-URL canonical sitemap with recorded revision dates. Host-level robots and training preferences were not changed; no Search Console submission or actual-index claim is made.
+- **Interpretation:** these are bundled technical changes, not a single-variable GEO experiment. No AI discovery test or recommendation lift has been measured. Local audit evidence remains excluded from publication inputs.
+
 ## 2026-11-03
 
 - **Stage 4 v1.0:** first redacted public release of 18 complete new answers, 54 candidate-by-answer observations and eight actually cited own/bylined page audits. The OpenAI arm is Responses API + native web search and cannot represent consumer ChatGPT Search. Preserved all submissions and sanitized local capture-recovery history, without exposing private originals.
