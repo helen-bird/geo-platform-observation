@@ -116,7 +116,10 @@ class WatchdogTests(unittest.TestCase):
     def test_no_google_credential_or_endpoint_in_workflow_execution(self):
         client=Client([run(2),run(1)]);invoke(client)
         self.assertTrue(all(path.startswith('/repos/'+m.REPOSITORY)for _,path,_ in client.calls))
-        template=(Path(__file__).resolve().parents[1]/'templates/google-index-monitor-watchdog.yml').read_text()
+        root=Path(__file__).resolve().parents[1]
+        path=root/'templates/google-index-monitor-watchdog.yml'
+        if not path.exists():path=root/'.github/workflows/google-index-monitor-watchdog.yml'
+        template=path.read_text()
         self.assertNotIn('GOOGLE_',template);self.assertIn('contents: read',template);self.assertIn('actions: read',template);self.assertIn('issues: write',template);self.assertNotIn('contents: write',template);self.assertIn('ref: main',template)
 
 
