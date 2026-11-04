@@ -28,6 +28,10 @@ CSS = '''
 def read(path): return json.loads((ROOT/path).read_text())
 def digest(text): return hashlib.sha256(text.encode('utf-8')).hexdigest()
 def pretty(value): return value if isinstance(value, str) else json.dumps(value, ensure_ascii=True, indent=2)
+def verbatim(value):
+    # Preserve Markdown hard-break spaces/tabs as DOM text without adding
+    # trailing source-code whitespace to the generated HTML files.
+    return re.sub(r'[ \t]+(?=\r?$)', lambda m: ''.join('&#'+str(ord(c))+';'for c in m.group()), escape(value), flags=re.M)
 def href(path, target):
     try:
         from site_metadata import canonical_path
@@ -105,8 +109,8 @@ def render_record(e):
     complete='Selected complete public answer; capture and independent verification limits are preserved below.' if stage==1 else ('Recorded body complete' if r.get('body_complete') is True else 'Body completeness not established')
     pairs=[('Record ID',record_id),('Platform',r['platform']),('Question / condition',question),('Repeat',str(r.get('repeat','Single selected planned position'))),('Model label',model(r)),('Visible mode',r.get('mode_label','Not independently recorded')),('Reasoning',r.get('reasoning_effort','See model/mode evidence in the raw record')),('Submitted / first recorded time',submitted(r)),('Completeness',complete),('Search',search(r))]
     body+='<section id="conditions"><h2>Recorded conditions</h2><dl class="record-meta">'+''.join('<dt>'+escape(k)+'</dt><dd>'+escape(str(v))+'</dd>'for k,v in pairs)+'</dl></section>'
-    body+='<section id="prompt"><h2>Original prompt</h2><pre class="prompt" id="original-prompt">'+escape(r['prompt'])+'</pre><blockquote><p>The agreed prompt is reproduced exactly. Any recorded difference in the actual submitted text or search UI is retained in the raw record and full appendix.</p></blockquote></section>'
-    body+='<section id="answer"><h2>Original answer</h2><pre class="answer" id="original-answer">'+escape(r['answer_text'])+'</pre></section>'
+    body+='<section id="prompt"><h2>Original prompt</h2><pre class="prompt" id="original-prompt">'+verbatim(r['prompt'])+'</pre><blockquote><p>The agreed prompt is reproduced exactly. Any recorded difference in the actual submitted text or search UI is retained in the raw record and full appendix.</p></blockquote></section>'
+    body+='<section id="answer"><h2>Original answer</h2><pre class="answer" id="original-answer">'+verbatim(r['answer_text'])+'</pre></section>'
     body+='<section id="sources"><h2>Recorded sources</h2>'+render_sources(r)+'</section>'
     body+='<section id="provenance"><h2>Evidence and qualifications</h2><div class="links">'+link(path,e['raw'],'Read original public JSON')+link(path,e['report']+'technical-appendix.html','Read complete evidence and failures')+link(path,e['report']+'public-data.zip','Download public dataset')+'</div>'
     body+='<blockquote><p>This is the existing redacted public record. It has not been rewritten for this page. Earlier privacy edits and collection qualifications continue to apply. Editorial text is English; a few original captures retain non-English UI badges or source-panel date labels. An answer’s empirical claims are platform output, not verified findings of this archive.</p></blockquote>'
