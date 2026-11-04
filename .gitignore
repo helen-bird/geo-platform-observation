@@ -6,3 +6,6 @@ __pycache__/
 *.tar.gz
 # Local audit evidence and acceptance captures are not publication inputs.
 audits/
+client_secret*.json
+google-oauth-credentials.json
+*.oauth.json

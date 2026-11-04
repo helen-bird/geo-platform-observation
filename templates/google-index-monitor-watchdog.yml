@@ -1,0 +1,41 @@
+name: GEO Lab — Google Index Monitor Watchdog
+
+on:
+  workflow_run:
+    workflows: ['GEO Lab — Google Index Monitor']
+    types: [completed]
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+
+concurrency:
+  group: geo-google-index-monitor-watchdog
+  cancel-in-progress: false
+
+jobs:
+  watchdog:
+    if: >-
+      github.repository == 'helen-bird/geo-index-monitor' &&
+      github.event.repository.private == true &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      (github.event.workflow_run.event == 'schedule' || github.event.workflow_run.event == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out only the trusted private default branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Review consecutive main-workflow failures
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/index_monitor_watchdog.py
+        # Ubuntu's system Python is sufficient; no Google secret or state write.
+
+# If GitHub or the runner is unavailable, this workflow cannot guarantee notice.
+# Uncertain Issue POSTs are not blindly retried on later callbacks/reruns; owner
+# review may be required. This is a safety boundary, not exactly-once API support.

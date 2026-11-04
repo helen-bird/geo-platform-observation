@@ -1,0 +1,658 @@
+{
+  "schema_version": 1,
+  "site_url": "https://helen-bird.github.io/geo-platform-observation/",
+  "source_repository": "helen-bird/geo-platform-observation",
+  "inventory_policy": "Important authored reports, learning/evidence indexes and full technical appendices. Original response views remain crawlable but outside the initial editorial monitor. Verification/error assets excluded. Contains no Google index status or private API data.",
+  "urls": [
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/",
+      "source_file": "evidence/index.html",
+      "category": "primary_content",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Original research and learning-navigation entry"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/",
+      "source_file": "index.html",
+      "category": "primary_content",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Original research and learning-navigation entry"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/learning-hub/",
+      "source_file": "learning-hub/index.html",
+      "category": "primary_content",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Original research and learning-navigation entry"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/",
+      "source_file": "stages/02-post-discovery/index.html",
+      "category": "primary_content",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Original research and learning-navigation entry"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/technical-appendix.html",
+      "source_file": "stages/02-post-discovery/technical-appendix.html",
+      "category": "technical_appendix",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Independent original answer/method/failure/source archive"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/03-question-sensitivity/",
+      "source_file": "stages/03-question-sensitivity/index.html",
+      "category": "primary_content",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Original research and learning-navigation entry"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/03-question-sensitivity/technical-appendix.html",
+      "source_file": "stages/03-question-sensitivity/technical-appendix.html",
+      "category": "technical_appendix",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Independent original answer/method/failure/source archive"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/04-creator-benchmark/",
+      "source_file": "stages/04-creator-benchmark/index.html",
+      "category": "primary_content",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Original research and learning-navigation entry"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/04-creator-benchmark/technical-appendix.html",
+      "source_file": "stages/04-creator-benchmark/technical-appendix.html",
+      "category": "technical_appendix",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Independent original answer/method/failure/source archive"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/technical-appendix.html",
+      "source_file": "technical-appendix.html",
+      "category": "technical_appendix",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Independent original answer/method/failure/source archive"
+    }
+  ],
+  "excluded_urls": [
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/404.html",
+      "source_file": "404.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/C-Q1-R1-A2.html",
+      "source_file": "evidence/stage-01/C-Q1-R1-A2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/C-Q1-R2-A3.html",
+      "source_file": "evidence/stage-01/C-Q1-R2-A3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/C-Q2-R1-A4.html",
+      "source_file": "evidence/stage-01/C-Q2-R1-A4.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/C-Q2-R2-A3.html",
+      "source_file": "evidence/stage-01/C-Q2-R2-A3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/C-Q3-R1.html",
+      "source_file": "evidence/stage-01/C-Q3-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/C-Q3-R2-A3.html",
+      "source_file": "evidence/stage-01/C-Q3-R2-A3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/G-Q1-R1.html",
+      "source_file": "evidence/stage-01/G-Q1-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/G-Q1-R2.html",
+      "source_file": "evidence/stage-01/G-Q1-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/G-Q2-R1.html",
+      "source_file": "evidence/stage-01/G-Q2-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/G-Q2-R2.html",
+      "source_file": "evidence/stage-01/G-Q2-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/G-Q3-R1.html",
+      "source_file": "evidence/stage-01/G-Q3-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-01/G-Q3-R2.html",
+      "source_file": "evidence/stage-01/G-Q3-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-02/S2-CHATGPT-A.html",
+      "source_file": "evidence/stage-02/S2-CHATGPT-A.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-02/S2-CHATGPT-B.html",
+      "source_file": "evidence/stage-02/S2-CHATGPT-B.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-02/S2-CHATGPT-C.html",
+      "source_file": "evidence/stage-02/S2-CHATGPT-C.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-02/S2-GROK-A.html",
+      "source_file": "evidence/stage-02/S2-GROK-A.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-02/S2-GROK-B.html",
+      "source_file": "evidence/stage-02/S2-GROK-B.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-02/S2-GROK-C.html",
+      "source_file": "evidence/stage-02/S2-GROK-C.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-M1-R1.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-M1-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-M1-R2.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-M1-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-M1-R3.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-M1-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-M2-R1.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-M2-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-M2-R2.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-M2-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-M2-R3.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-M2-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-V1-R1.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-V1-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-V1-R2.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-V1-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-V1-R3.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-V1-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-V2-R1.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-V2-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-V2-R2.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-V2-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-CHATGPT-V2-R3.html",
+      "source_file": "evidence/stage-03/S3-CHATGPT-V2-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-M1-R1.html",
+      "source_file": "evidence/stage-03/S3-GROK-M1-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-M1-R2.html",
+      "source_file": "evidence/stage-03/S3-GROK-M1-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-M1-R3.html",
+      "source_file": "evidence/stage-03/S3-GROK-M1-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-M2-R1.html",
+      "source_file": "evidence/stage-03/S3-GROK-M2-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-M2-R2.html",
+      "source_file": "evidence/stage-03/S3-GROK-M2-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-M2-R3.html",
+      "source_file": "evidence/stage-03/S3-GROK-M2-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-V1-R1.html",
+      "source_file": "evidence/stage-03/S3-GROK-V1-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-V1-R2.html",
+      "source_file": "evidence/stage-03/S3-GROK-V1-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-V1-R3.html",
+      "source_file": "evidence/stage-03/S3-GROK-V1-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-V2-R1.html",
+      "source_file": "evidence/stage-03/S3-GROK-V2-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-V2-R2.html",
+      "source_file": "evidence/stage-03/S3-GROK-V2-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-03/S3-GROK-V2-R3.html",
+      "source_file": "evidence/stage-03/S3-GROK-V2-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q1-R1.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q1-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q1-R2.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q1-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q1-R3.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q1-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q2-R1.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q2-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q2-R2.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q2-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q2-R3.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q2-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q3-R1.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q3-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q3-R2.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q3-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-GROK-Q3-R3.html",
+      "source_file": "evidence/stage-04/S4-GROK-Q3-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q1-R1.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q1-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q1-R2.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q1-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q1-R3.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q1-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q2-R1.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q2-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q2-R2.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q2-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q2-R3.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q2-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q3-R1.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q3-R1.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q3-R2.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q3-R2.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/evidence/stage-04/S4-OPENAIAPI-Q3-R3.html",
+      "source_file": "evidence/stage-04/S4-OPENAIAPI-Q3-R3.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": true,
+      "decision_reason": "Supplemental individual response archive, kept crawlable but outside the initial editorial monitor"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/google60e1d42a52d92b33.html",
+      "source_file": "google60e1d42a52d92b33.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    }
+  ]
+}

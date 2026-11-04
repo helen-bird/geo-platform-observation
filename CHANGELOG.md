@@ -4,6 +4,9 @@ Dates use Asia/Shanghai. First-publication dates refer to this repository's publ
 
 ## 2026-11-04
 
+- **Google monitoring setup:** added a public intent-only canonical inventory and extended the sitemap to the evidence index (ten important routes). An immutable private pre-operation baseline precedes this change and any new Google submission.
+- **Private automation:** added reviewed official Search Console OAuth, URL Inspection and one-time Sitemaps clients, a private-repository Actions workflow template and bounded error/alert tests. Raw Google responses, manual request records and history remain private; OAuth secrets never enter Git. Configuration and tests alone do not establish live Google authorization or indexed-state observations.
+
 - **Technical maintenance:** standardized canonical URLs, distinct page descriptions and page-specific Open Graph metadata across all nine report/hub pages. Fixed the Stage 1 appendix and Stage 3 metadata omissions and the Stage 2 appendix social-preview mismatch.
 - **Author and series markup:** added truthful Person, Article/CollectionPage and breadcrumb relationships based on visible Helen Bird attribution and recorded dates. Original AI responses are archived as responses, not attributed to Helen Bird as their author.
 - **Evidence access:** added an HTML index and 60 individually addressable selected-answer pages, linked from the existing reports and hub. Original complete appendices remain expanded; raw evidence, coding, findings and download archives are unchanged.

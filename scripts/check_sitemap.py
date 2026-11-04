@@ -13,7 +13,7 @@ def main():
     root = tree.getroot()
     assert root.tag == namespace+'urlset', 'Wrong Sitemap XML namespace/root'
     nodes = root.findall(namespace+'url')
-    assert len(nodes) == len(expected) == 9
+    assert len(nodes) == len(expected)
     observed = []
     for node in nodes:
         locs = node.findall(namespace+'loc')
@@ -23,7 +23,7 @@ def main():
         assert loc and loc.startswith(builder.SITE)
         assert not urlsplit(loc).query and not urlsplit(loc).fragment
         observed.append({'loc': loc, 'lastmod': mods[0].text if mods else None})
-    assert len({r['loc'] for r in observed}) == 9
+    assert len({r['loc'] for r in observed}) == len(expected)
     assert observed == [{'loc': e['loc'], 'lastmod': e.get('lastmod')} for e in expected], 'Sitemap differs from recorded canonical routes/dates'
     for entry in expected:
         doc = builder.read_page(entry['path'])

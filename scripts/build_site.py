@@ -19,7 +19,7 @@ def main():
             folder=ROOT/stage
             protected.update({p:p.read_bytes()for p in (folder/'data').rglob('*')if p.is_file()})
             protected.update({folder/n:(folder/n).read_bytes()for n in ('findings.json','public-data.zip')if(folder/n).is_file()})
-    for name in ('rebuild.py','build_stage2_report.py','build_stage3_report.py','build_stage4_report.py','build_learning_hub.py','build_evidence_pages.py','build_sitemap.py'):
+    for name in ('rebuild.py','build_stage2_report.py','build_stage3_report.py','build_stage4_report.py','build_learning_hub.py','build_evidence_pages.py','build_index_inventory.py','build_sitemap.py'):
         subprocess.run([sys.executable,str(ROOT/'scripts'/name)],cwd=ROOT,check=True)
     if args.preserve_evidence:
         # Validate all newly computed results before restoring prior build timestamps.

@@ -34,3 +34,11 @@ The Learning Hub organizes existing material by user question; its effect on AI 
 The November 4 technical maintenance adds consistent canonical/description/social metadata, truthful author/series markup and a [small canonical sitemap](https://helen-bird.github.io/geo-platform-observation/sitemap.xml). These bundled changes have no measured effect on AI discovery or recommendations. Actual search-engine indexing, real crawler visits and AI candidate-library inclusion are not established by static validation. Host robots and training preferences were not changed.
 
 Build offline with `python3 scripts/build_site.py`. For presentation-only maintenance, use `--preserve-evidence`; it verifies that scientific data/results are unchanged and preserves existing evidence/download bytes. Run `python3 scripts/check_publication.py` to validate the public boundary and links. Local `audits/` evidence is ignored by Git and must not be included in a public release.
+
+## Google indexing monitoring
+
+The [canonical monitoring inventory](monitoring/google-index/urls.json) contains ten important editorial, navigation and full-appendix routes. Supplemental individual-answer archives remain crawlable but are not monitored individually in the initial configuration. The sitemap now includes the evidence index as well as the original nine report/hub routes.
+
+[Monitoring architecture and operation](docs/google-index-monitoring.md) · [Owner OAuth setup](docs/google-oauth-setup.md). The scheduled workflow runs in a separate private repository, not in this Pages site. Detailed Search Console responses, historical snapshots, manual inspection evidence and credentials are not publication inputs. This public repository contains code, a workflow template and safe URL intent only.
+
+URL Inspection queries Google's indexed-version state; it is not a live test and never requests indexing. Sitemap submission uses a separate one-time authorization and is not repeated by the weekly monitor. Ordinary-page indexing requests remain manual. Google index changes do not establish ChatGPT/Grok discovery or recommendation effects.

@@ -88,11 +88,21 @@ def entries():
     if len(dates) == 1:
         entry.update(lastmod=validated_date(next(iter(dates))), lastmod_source='Visible Learning Hub Updated field')
     result.insert(1, entry)
+    # The evidence index is a useful navigation page in the monitoring scope.
+    # Its response timestamps are not the page modification date: omit lastmod.
+    evidence_path = 'evidence/index.html'
+    read_page(evidence_path)
+    result.append({'path': evidence_path, 'loc': canonical_url(evidence_path)})
     urls = [e['loc'] for e in result]
-    if len(result) != 9 or len(set(urls)) != len(result):
-        raise ValueError('Expected nine unique existing report/hub routes')
+    expected_count = 2 * len(reports) + 2
+    if len(result) != expected_count or len(set(urls)) != len(result):
+        raise ValueError('Expected unique routes for each report, appendix and both navigation indexes')
     if any(not u.startswith(SITE) or urlsplit(u).query or urlsplit(u).fragment for u in urls):
         raise ValueError('Sitemap URLs must stay canonical and within the project')
+    manifest=ROOT/'monitoring/google-index/urls.json'
+    if manifest.exists():
+        intended={r['url']for r in json.loads(manifest.read_text())['urls']if r.get('sitemap_include')is True}
+        if intended!=set(urls):raise ValueError('Sitemap must match the reviewed canonical monitoring inventory')
     return result
 
 
