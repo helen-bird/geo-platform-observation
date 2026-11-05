@@ -21,7 +21,7 @@ PROPERTY = 'https://helen-bird.github.io/geo-platform-observation/'
 ORIGIN = 'https://helen-bird.github.io'
 ROBOTS_URL = ORIGIN + '/robots.txt'
 MONITOR_UA = 'GEO-Lab-Discoverability-Monitor/1.0'
-OAI_UA = 'Mozilla/5.0 (compatible; OAI-SearchBot/1.4; +https://openai.com/searchbot)'
+OAI_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.4; +https://openai.com/searchbot'
 MAX_BYTES = 2_000_000
 
 class ProbeError(RuntimeError):
