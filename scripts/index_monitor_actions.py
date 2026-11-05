@@ -226,7 +226,7 @@ def safe_event(event, known_urls):
             'Private GitHub Actions monitor run records'if'FAILURE'in kind else
             'Google URL Inspection API indexed-version response')
     if engine=='bing':
-        source='Official Bing Webmaster REST observation; index membership is separate from crawl data'
+        source=('Bing authorization configuration; no index query is implied'if'AUTH'in kind else'Official Bing Webmaster REST observation; index membership is separate from crawl data')
         next_step=('Complete or renew the approved Bing readonly OAuth grant.'if'AUTH'in kind else'Inspect the separate private Bing snapshot and official Bing URL Inspection Index card; do not infer ChatGPT indexing.')
     elif engine=='openai-search':
         source='Public host-root robots and HTTP access observations; declared UA requests are simulation'
