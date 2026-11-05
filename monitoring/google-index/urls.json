@@ -653,6 +653,24 @@
       "sitemap_include": false,
       "indexing_desired": false,
       "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/monitoring/google-index/",
+      "source_file": "monitoring/google-index/index.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/monitoring/google-index/privacy.html",
+      "source_file": "monitoring/google-index/privacy.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
     }
   ]
 }

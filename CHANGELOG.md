@@ -2,6 +2,10 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-05
+
+- **Monitor application disclosures:** published an owner-operated index-monitor homepage and privacy policy for Google OAuth configuration. Both pages use noindex and are excluded from the research sitemap and monitored URL set. This publication does not establish Production authorization or change experiment results.
+
 ## 2026-11-04
 
 - **Google monitoring setup:** added a public intent-only canonical inventory and extended the sitemap to the evidence index (ten important routes). An immutable private pre-operation baseline precedes this change and any new Google submission.

@@ -18,6 +18,10 @@ The private repository needs `contents: write` for durable state commits and `is
 
 The runner rejects other storage repositories and checks GitHub's `private` flag before it accesses Google credentials or writes state. The manifest must stay inside the exact Search Console property, with unique HTTPS URLs and explicit monitoring flags.
 
+## Application information
+
+The owner-operated utility is described on its [application homepage](../monitoring/google-index/index.html) and [privacy policy](../monitoring/google-index/privacy.html). These support pages use noindex and remain outside the research sitemap and monitored URL set. Publishing these disclosures does not itself establish Google OAuth Production status or durable authorization.
+
 ## Authorization
 
 Use the approved OAuth setup in [google-oauth-setup.md](google-oauth-setup.md). `GOOGLE_OAUTH_CREDENTIALS` in the private repository is an authorized-user credential with **exactly** `webmasters.readonly`. Its refresh token and client secret are never printed, passed in command-line arguments or committed. Access tokens are masked for Actions before use.
