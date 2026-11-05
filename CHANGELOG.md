@@ -4,6 +4,8 @@ Dates use Asia/Shanghai. First-publication dates refer to this repository's publ
 
 ## 2026-11-05
 
+- **Multi-engine monitoring:** added separate Bing Webmaster observations, OpenAI search crawl-eligibility probes and change-only IndexNow notifications under the existing private weekly workflow. The public IndexNow ownership file uses explicit project-scoped keyLocation. Existing Google data and one-time Sitemap ledger are preserved. Missing authorization or unverifiable index/crawl membership remains UNKNOWN; no AI-answer experiment was run.
+
 - **Monitor application disclosures:** published an owner-operated index-monitor homepage and privacy policy for Google OAuth configuration. Both pages use noindex and are excluded from the research sitemap and monitored URL set. This publication does not establish Production authorization or change experiment results.
 
 ## 2026-11-04

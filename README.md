@@ -42,3 +42,7 @@ The [canonical monitoring inventory](monitoring/google-index/urls.json) contains
 [Monitoring architecture and operation](docs/google-index-monitoring.md) · [Owner OAuth setup](docs/google-oauth-setup.md). The scheduled workflow runs in a separate private repository, not in this Pages site. Detailed Search Console responses, historical snapshots, manual inspection evidence and credentials are not publication inputs. This public repository contains code, a workflow template and safe URL intent only.
 
 URL Inspection queries Google's indexed-version state; it is not a live test and never requests indexing. Sitemap submission uses a separate one-time authorization and is not repeated by the weekly monitor. Ordinary-page indexing requests remain manual. Google index changes do not establish ChatGPT/Grok discovery or recommendation effects.
+
+## Multi-engine monitoring
+
+The private weekly monitor now separates Google indexing, Bing Webmaster discovery/crawl observations, and OpenAI search crawl eligibility. [Implementation and evidence boundaries](docs/multi-engine-discoverability.md) describe official authorization, the public IndexNow verification file, change-only notifications and UNKNOWN states. Search-engine indexing is not evidence of ChatGPT indexing or recommendations.

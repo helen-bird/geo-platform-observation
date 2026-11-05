@@ -2,7 +2,7 @@ name: GEO Lab — Google Index Monitor Watchdog
 
 on:
   workflow_run:
-    workflows: ['GEO Lab — Google Index Monitor']
+    workflows: ['GEO Lab — Multi-Engine Discoverability Monitor']
     types: [completed]
 
 permissions:

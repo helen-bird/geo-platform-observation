@@ -27,8 +27,8 @@ PROPERTY = 'https://helen-bird.github.io/geo-platform-observation/'
 SITEMAP = PROPERTY + 'sitemap.xml'
 PRIVATE_REPOSITORY = 'helen-bird/geo-index-monitor'
 PUBLIC_INVENTORY = 'https://raw.githubusercontent.com/helen-bird/geo-platform-observation/main/monitoring/google-index/urls.json'
-SAFE_STATUS = {'UNKNOWN','AUTH_REQUIRED','ERROR','INDEXED','NOT_INDEXED','DISCOVERED','CRAWLED','REMOVED','ADDED','MONITOR_FAILED','SITEMAP_ERROR'}
-INCIDENT_KINDS = {'AUTH_REQUIRED','AUTH_FAILURE','API_AUTH_FAILURE','AUTHORIZATION_FAILED','CONSECUTIVE_FAILURES','CONSECUTIVE_MONITOR_FAILURES','SITEMAP_PROBLEM','SITEMAP_CHECK_ERROR','WORKFLOW_FAILURE'}
+SAFE_STATUS = {'UNKNOWN','AUTH_REQUIRED','ERROR','INDEXED','NOT_INDEXED','DISCOVERED','CRAWLED','REMOVED','ADDED','MONITOR_FAILED','SITEMAP_ERROR','ALLOWED','BLOCKED'}
+INCIDENT_KINDS = {'AUTH_REQUIRED','AUTH_FAILURE','API_AUTH_FAILURE','AUTHORIZATION_FAILED','CONSECUTIVE_FAILURES','CONSECUTIVE_MONITOR_FAILURES','SITEMAP_PROBLEM','SITEMAP_CHECK_ERROR','WORKFLOW_FAILURE','INDEXNOW_PROBLEM'}
 
 
 def utc_now():
@@ -201,6 +201,8 @@ def sitemap_observation(token, *, requester=request):
 
 
 def safe_event(event, known_urls):
+    engine=event.get('engine','google')
+    if engine not in {'google','bing','openai-search','indexnow'}:raise RunnerError('INVALID_ALERT_ENGINE')
     url=event.get('url',PROPERTY)
     if url not in known_urls and url not in {PROPERTY,SITEMAP}:
         raise RunnerError('ALERT_URL_NOT_MONITORED')
@@ -214,7 +216,7 @@ def safe_event(event, known_urls):
     if not isinstance(checked,str)or not re.fullmatch(r'[0-9TZ:+.\-]{10,50}',checked):raise RunnerError('INVALID_ALERT_TIME')
     fingerprint=event.get('fingerprint')
     if not isinstance(fingerprint,str)or not re.fullmatch(r'[a-fA-F0-9]{16,64}',fingerprint):
-        fingerprint=hashlib.sha256(json.dumps([kind,url,before,after,checked],separators=(',',':')).encode()).hexdigest()
+        fingerprint=hashlib.sha256(json.dumps([engine,kind,url,before,after,checked],separators=(',',':')).encode()).hexdigest()
     # Deliberately replace arbitrary source/next_step text with controlled text.
     next_step=('Configure or renew the approved readonly Google OAuth authorization; then rerun this workflow.' if 'AUTH'in kind else
                'Check the public sitemap and its Search Console processing record; do not submit it repeatedly.' if 'SITEMAP'in kind else
@@ -223,7 +225,16 @@ def safe_event(event, known_urls):
             'Anonymous HTTP/XML and official Search Console Sitemaps GET'if'SITEMAP'in kind else
             'Private GitHub Actions monitor run records'if'FAILURE'in kind else
             'Google URL Inspection API indexed-version response')
-    return {'type':kind,'url':url,'before_status':before,'after_status':after,'checked_at':checked,'source':source,'next_step':next_step,'fingerprint':fingerprint.lower()}
+    if engine=='bing':
+        source='Official Bing Webmaster REST observation; index membership is separate from crawl data'
+        next_step=('Complete or renew the approved Bing readonly OAuth grant.'if'AUTH'in kind else'Inspect the separate private Bing snapshot and official Bing URL Inspection Index card; do not infer ChatGPT indexing.')
+    elif engine=='openai-search':
+        source='Public host-root robots and HTTP access observations; declared UA requests are simulation'
+        next_step='Review effective host-root robots, page directives and access errors. Real OpenAI crawling remains UNKNOWN without trusted logs.'
+    elif engine=='indexnow':
+        source='Official IndexNow receipt and deployed public verification file'
+        next_step='Review the private change ledger and verification file. Do not replay uncertain POSTs; receipt is not indexing.'
+    return {'engine':engine,'type':kind,'url':url,'before_status':before,'after_status':after,'checked_at':checked,'source':source,'next_step':next_step,'fingerprint':fingerprint.lower()}
 
 
 def issue_body(event):
@@ -471,7 +482,7 @@ def persist(args):
     verify_private_repository(repository,token)
     root,state=private_state_path(args.output,repository)
     if not state.exists():return 0
-    deny=re.compile(r'"(?:access_token|refresh_token|client_secret|private_key)"\s*:\s*"[^"\s]+"|Bearer\s+[A-Za-z0-9._-]{16,}|\bsk-[A-Za-z0-9_-]{16,}')
+    deny=re.compile(r'"(?:access_token|refresh_token|client_secret|private_key|apiKey|api_key|bing_api_key|bing_oauth_credentials|microsoft_client_secret)"\s*:\s*"[^"\s]+"|[?&]api[Kk]ey=[^&\s]+|Bearer\s+[A-Za-z0-9._-]{16,}|\bsk-[A-Za-z0-9_-]{16,}')
     for file in state.rglob('*'):
         if file.is_symlink()or not file.resolve().is_relative_to(state):raise RunnerError('UNSAFE_STATE_PATH')
         if file.is_file():

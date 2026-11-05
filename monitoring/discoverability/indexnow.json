@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "host": "helen-bird.github.io",
+  "key": "3e0d008493ea1f053686206f104ac98d",
+  "keyLocation": "https://helen-bird.github.io/geo-platform-observation/3e0d008493ea1f053686206f104ac98d.txt",
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "created_at": "2026-11-05T09:08:32.676759+00:00",
+  "key_is_public_ownership_verification_token": true,
+  "initialization_policy": "Baseline existing deployed content; notify only subsequent real changes",
+  "scope": "Reviewed indexing_desired canonical URLs within this project path"
+}

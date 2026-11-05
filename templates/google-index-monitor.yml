@@ -1,4 +1,4 @@
-name: GEO Lab — Google Index Monitor
+name: GEO Lab — Multi-Engine Discoverability Monitor
 
 on:
   workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
     # Fail closed if this template is accidentally installed in the public site.
     if: github.repository == 'helen-bird/geo-index-monitor' && github.event.repository.private == true
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - name: Check out the private monitor and durable state
         id: checkout
@@ -37,11 +37,18 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GOOGLE_OAUTH_CREDENTIALS: ${{ secrets.GOOGLE_OAUTH_CREDENTIALS }}
         run: python3 scripts/index_monitor_actions.py run --output state --inventory monitoring/google-index/urls.json --refresh-inventory
+      - name: Inspect Bing and OpenAI eligibility; notify real IndexNow changes
+        id: discoverability
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BING_OAUTH_CREDENTIALS: ${{ secrets.BING_OAUTH_CREDENTIALS }}
+        run: python3 scripts/discoverability_actions.py --output state
       - name: Persist private history even after an authorization or API failure
         if: always() && steps.checkout.outcome == 'success'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 scripts/index_monitor_actions.py persist --output state
       - name: Preserve a failing workflow result when inspection did not succeed
-        if: always() && steps.monitor.outcome != 'success'
+        if: always() && (steps.monitor.outcome != 'success' || steps.discoverability.outcome != 'success')
         run: exit 1

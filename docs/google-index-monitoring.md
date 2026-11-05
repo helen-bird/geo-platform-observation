@@ -65,3 +65,7 @@ The separate watchdog reads official Actions run history and can open a private 
 Unit tests use fake HTTP responses and simulated notification delivery. A successful operational or missing-auth run is not a successful live URL Inspection run. Only a completed authorized run with real returned API data satisfies the live monitoring requirement. OAuth setup, a first successful inspection and a successful Google sitemap submission must each have their own dated evidence.
 
 Official references: [GitHub schedule behavior](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule), [Google Sitemaps GET](https://developers.google.com/webmaster-tools/v1/sitemaps/get), and [Google URL Inspection](https://developers.google.com/webmaster-tools/v1/urlInspection.index/inspect). The checkout and setup-python actions are pinned to the official v4.2.2 and v5.6.0 commit SHAs rather than mutable tags.
+
+## Multi-engine extension
+
+The original Google core and frozen baseline are retained. Separate Bing/OpenAI/IndexNow steps are documented in [multi-engine-discoverability.md](multi-engine-discoverability.md). The stable workflow filename and weekly schedule are unchanged; only its display name and additional isolated checks are extended.

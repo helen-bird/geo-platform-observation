@@ -19,7 +19,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 REPOSITORY='helen-bird/geo-index-monitor'
-WORKFLOW='GEO Lab — Google Index Monitor'
+WORKFLOW='GEO Lab — Multi-Engine Discoverability Monitor'
 WORKFLOW_FILE='google-index-monitor.yml'
 FAILURES={'failure','timed_out','cancelled'}
 EVENTS={'schedule','workflow_dispatch'}

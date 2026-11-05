@@ -1,0 +1,49 @@
+# Multi-engine discoverability monitoring
+
+GEO Lab keeps three independent evidence paths: Google indexed-version observations, Bing Webmaster discovery/crawl observations, and OpenAI search crawl eligibility. None establishes ChatGPT indexing or recommendations. No AI answer experiment is part of this monitoring work.
+
+## Scope and private history
+
+The original ten-page Google monitor and frozen baseline remain in place. Bing and OpenAI checks use every reviewed `indexing_desired: true` canonical in the existing public inventory: ten important report/navigation/appendix pages plus sixty individually addressable response archives. The two noindex OAuth support pages and verification/error files are excluded. A scope difference must not be interpreted as an engine-performance comparison.
+
+All detailed records remain in the private `helen-bird/geo-index-monitor` repository, with Pages disabled. Google keeps its original root state files. Bing and OpenAI use `state/bing/` and `state/openai-search/`; each has an immutable first baseline, dated snapshots, CSV history, latest attempt and latest successful pointers. IndexNow uses a separate change ledger and receipts under `state/indexnow/`. The Chinese operational report is `state/discoverability/report.zh-CN.md`, not a public research result.
+
+The existing workflow file remains `google-index-monitor.yml`, with its display name changed to **GEO Lab — Multi-Engine Discoverability Monitor**. It runs every Monday at **10:17 Asia/Shanghai** (`17 2 * * 1`) and supports manual dispatch. GitHub may delay scheduled starts. Google and the extension are separate steps; failure in one does not skip the other. The existing private-state persistence and independent watchdog remain active.
+
+## Bing setup and limitations
+
+Use the official Bing Webmaster Tools interface. Prefer **Import from Google Search Console**, select only the GEO URL-prefix property, and review Google's actual consent before granting Bing access. The official import can verify the selected branch and import its Sitemap. A new account or API-access agreement must be accepted by the owner.
+
+For API automation, prefer a Bing OAuth client with the official `Webmaster.read` scope. The encrypted private Actions Secret is `BING_OAUTH_CREDENTIALS`, containing authorized-user fields `type`, `client_id`, `client_secret`, `refresh_token`, and `scopes`. Do not put these values in a repository, Issue, command argument or chat. The runtime refreshes against the official token endpoint, masks its ephemeral token, and restricts API calls to the fixed GEO property. Unexpected scope changes or refresh-token rotation require secure operator review.
+
+An API key is an alternative supported by Bing, but is account-wide and can cover all verified sites; it must not be represented as a readonly, site-only credential. The weekly workflow does not install that broader method by default.
+
+The official JSON REST methods used are `GetUserSites`, `GetUrlInfo`, and `GetFeeds`. The documented `GetUrlInfo` fields do not include an unambiguous index-membership verdict. `IsPage`, HTTP 200, document size and crawl times are not treated as proof of indexing. Thus even successful API observations retain `index_status: UNKNOWN`, alongside actual discovery/crawl fields. If membership is needed, record the official Bing **URL Inspection → Index** observation separately; the Live URL test is a different operation.
+
+The same canonical Sitemap URL is used by both engines. Google's successful one-time submission is never repeated by this extension. Bing's `GetFeeds` records registration, processing and last crawl separately. `submit_sitemap_once` checks whether the exact feed was already imported; only a missing feed plus a separately approved manage grant can cause one `SubmitFeed` POST. A persisted accepted or uncertain attempt prevents blind repetition. Missing authorization remains `AUTH_REQUIRED`, with index membership UNKNOWN.
+
+## IndexNow under GitHub Pages
+
+The ownership file is in the existing project directory, with its exact location recorded in [the public configuration](../monitoring/discoverability/indexnow.json). The file contains a public IndexNow verification token. This token is intentionally public and is entirely separate from private Bing OAuth or API credentials.
+
+Every notification specifies `host: helen-bird.github.io` and explicit `keyLocation` under `/geo-platform-observation/`. That location limits the accepted URL prefix to this project subtree. No host-root file, new domain, third-party indexing service or false schema is used.
+
+Initialization establishes current deployed content hashes and sends no old URLs. Subsequent actual additions and meaningful content changes require a deployed, canonical, indexable HTTP-200 page. A removal from the monitoring inventory is insufficient for deletion: the old URL must actually return 404 or 410. Pure stylesheet/class changes are excluded by semantic hashes; actual response hashes are retained as evidence. No report content is changed merely to exercise the endpoint.
+
+Before any IndexNow POST, the private change ledger is committed and pushed. If that durable write fails, no POST occurs. A single POST follows; HTTP 200 means received and 202 means ownership validation pending. Network/5xx uncertainty remains in the ledger and is not automatically retried. A successful receipt does not prove crawl or indexing. Unresolved deliveries remain visible even on subsequent unchanged runs.
+
+## OpenAI eligibility evidence
+
+Effective robots policy comes from `https://helen-bird.github.io/robots.txt`, not the project-path `robots.txt`. The monitor checks the host-root response, applicable `OAI-SearchBot` rules, page robots/noindex directives, response headers and public HTTP access. Root robots 4xx means unavailable under RFC 9309; unreachable/5xx remains UNKNOWN with a conservative disallow assumption.
+
+The second request declares the official OAI-SearchBot user-agent and is explicitly a simulation from our runner. It is not a real OpenAI crawler and cannot prove IP-based access. Genuine visits require trusted server/CDN logs and source-IP checks against OpenAI's published ranges. GitHub Pages does not provide such logs to this workflow; real crawl time and OpenAI index status remain UNKNOWN. `GPTBot` and `ChatGPT-User` are separate agents.
+
+## Official references
+
+- [Bing GSC import and verification](https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b)
+- [Bing OAuth](https://learn.microsoft.com/en-us/bingwebmaster/oauth2)
+- [Bing API reference](https://learn.microsoft.com/en-us/bingwebmaster/)
+- [Bing URL Inspection](https://www.bing.com/webmasters/help/URL-Inspection-55a30305)
+- [IndexNow protocol](https://www.indexnow.org/documentation) and [FAQ](https://www.indexnow.org/faq)
+- [OpenAI crawler documentation](https://developers.openai.com/api/docs/bots) and [published SearchBot IP ranges](https://openai.com/searchbot.json)
+- [RFC 9309 robots policy](https://www.rfc-editor.org/rfc/rfc9309.html)
