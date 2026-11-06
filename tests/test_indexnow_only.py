@@ -97,6 +97,18 @@ class IndexNowOnlyTests(unittest.TestCase):
                 summary,errors=m.execute_indexnow_only(out,expanded,indexnow_runner=lambda:{'status':'NO_CHANGES','post_performed':False,'url_count':0})
                 self.assertEqual(summary['google']['recorded_url_count'],10)
                 self.assertEqual(summary['google']['checked_at'],saved['checked_at'])
+    def test_current_receipt_and_corrective_submission_wording_preserve_old_baseline(self):
+        with tempfile.TemporaryDirectory()as folder:
+            out=Path(folder)
+            m.google.write_json(out/'latest-successful-index-status.json',{'checked_at':'2026-11-07T02:20:00Z','counts':{'INDEXED':5,'NOT_INDEXED':7},'results':[{}for _ in range(12)]})
+            summary,errors=m.execute_indexnow_only(out,INV,indexnow_runner=lambda:{'status':'KEY_VALIDATION_PENDING','post_performed':True,'url_count':11,'remote_engine_key_validation':'KEY_VALIDATION_PENDING'})
+            text=(out/'discoverability/report.zh-CN.md').read_text()
+            self.assertEqual(errors,[]);self.assertEqual(summary['google']['recorded_url_count'],12)
+            self.assertIn('KEY_VALIDATION_PENDING',text)
+            self.assertIn('HTTP 202',text)
+            self.assertIn('\u540e\u7eed\u4eba\u5de5\u7ea0\u6b63\u6027\u91cd\u63d0',text)
+            self.assertIn('\u539f\u59cb\u51bb\u7ed3\u57fa\u7ebf\u8986\u76d6 10 \u4e2a\u91cd\u8981\u9875\u9762',text)
+            self.assertNotIn('\u9996\u4e2a\u771f\u5b9e\u5185\u5bb9\u53d8\u5316\u901a\u77e5\u65f6\u624d\u4f1a\u53d6\u5f97\u670d\u52a1\u7aef\u63a5\u6536\u7ed3\u679c',text)
     def test_manual_workflow_has_no_search_credentials_or_repeat_schedule(self):
         root=Path(__file__).resolve().parents[1];path=root/'templates/indexnow-change-notify.yml'
         if not path.exists():path=root/'.github/workflows/indexnow-change-notify.yml'

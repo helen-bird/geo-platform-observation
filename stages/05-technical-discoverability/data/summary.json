@@ -89,6 +89,48 @@
       "observation": "The Google Search Console Sitemaps screen reported \"Could not read this sitemap\", with a displayed last-read date of November 4 and zero discovered pages.",
       "verified": "This is an independently recorded owner-console observation, separate from the API isPending=true response. No corrective resubmission had been made at this observation.",
       "limit": "The screen did not expose a specific HTTP or XML error. A successful API submission and a browser HTTP 200 do not establish a successful Google fetch."
+    },
+    {
+      "checked_at": "2026-11-06T12:57:21.739Z",
+      "observation": "One corrective Google Sitemap submission was accepted in the owner console after the genuine Lab #05 publication changed the verified Sitemap from 10 to 12 canonical URLs.",
+      "verified": "The success confirmation followed the submission started at 12:56:01 UTC. This was a separate corrective UI action, not a second initial API PUT or a recurring duplicate submission.",
+      "limit": "Acceptance does not establish that Google downloaded, processed or indexed the new pages. The earlier could-not-read observation remains in the record."
+    },
+    {
+      "checked_at": "2026-11-06T13:03:44.549018+00:00",
+      "observation": "The expanded Google indexed-version snapshot covered 12 important canonical URLs.",
+      "verified": "5 URLs were INDEXED and 7 were NOT_INDEXED. The two new editorial pages are part of this later twelve-URL scope, not the earlier ten-URL baseline.",
+      "limit": "These are official Google indexed-version observations at this time, not live tests, Bing outcomes or evidence of AI recommendations."
+    },
+    {
+      "checked_at": "2026-11-06T13:03:44.221335+00:00",
+      "observation": "The Google Sitemap API was read after the corrective UI submission.",
+      "verified": "isPending remained true, lastDownloaded was absent, and the returned error and warning counts were zero.",
+      "limit": "A successful submission is not confirmed processing. No new download time is inferred from the missing field."
+    },
+    {
+      "checked_at": "2026-11-06T13:05:02.774161+00:00",
+      "observation": "The later combined monitor queried all 72 current canonical content URLs in Bing with ten-second spacing.",
+      "verified": "72/72 URL queries succeeded; site access and the Sitemap read also succeeded. The feed remained registered with processing status Success.",
+      "limit": "All 72 Bing index-membership states remain UNKNOWN. This later success does not erase the earlier five-second throttled run or prove that spacing alone caused recovery."
+    },
+    {
+      "checked_at": "2026-11-06T13:17:48.178440+00:00",
+      "observation": "OpenAI search crawl-eligibility checks expanded to the 72 current canonical content URLs.",
+      "verified": "72 configuration-allowed results and 72 successful declared-user-agent simulated fetches were recorded.",
+      "limit": "Real OAI-SearchBot access and OpenAI index membership remain UNKNOWN; simulated access is not a verified crawler visit."
+    },
+    {
+      "checked_at": "2026-11-06T13:18:13.900470+00:00",
+      "observation": "The full combined monitoring workflow completed successfully and made one real IndexNow notification for 11 genuinely new or updated URLs.",
+      "verified": "The response was HTTP 202 / KEY_VALIDATION_PENDING. The notification, expanded snapshots and history were saved; no ChatGPT/Grok answer experiment was run.",
+      "limit": "HTTP 202 means key validation remains pending. Receipt acceptance is not crawling, indexing or AI recommendation evidence; unchanged URLs are not repeatedly submitted merely to obtain another status."
+    },
+    {
+      "checked_at": "2026-11-06T13:33:18.073Z",
+      "observation": "Between 2026-11-06T13:19:02.659Z and 2026-11-06T13:33:18.073Z, an owner-authorized assistant used the official Google Search Console interface to request indexing for seven pages.",
+      "verified": "A fresh indexed-version inspection before each request showed NOT_INDEXED. All seven requests received the interface acknowledgement that the URL had been accepted into the priority crawl queue.",
+      "limit": "Accepted indexing requests are not evidence that the pages were indexed. The 13:03 UTC snapshot of 5 INDEXED and 7 NOT_INDEXED predates these requests and is not backfilled; this follow-up claims no new post-request indexing result."
     }
   ]
 }
