@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_type": "technical_learning_record",
+  "author": "Helen Bird",
+  "first_published": "2026-11-06",
+  "last_revised": "2026-11-06",
+  "observation_period": "2026-11-04 to 2026-11-06",
+  "time_standard": "UTC for observations; Asia/Shanghai for editorial dates",
+  "ai_answer_experiments_run": false,
+  "publication_scope": "Reviewed aggregate observations and method notes only. Private raw Search Console/Bing responses, screenshots, account identifiers, private workflow links and credentials are excluded.",
+  "google": {
+    "checked_at": "2026-11-06T11:45:46.842406+00:00",
+    "scope_urls": 10,
+    "indexed": 5,
+    "not_indexed": 5,
+    "source": "official_google_url_inspection_api",
+    "sitemap": {
+      "submission_date": "2026-11-04",
+      "submission_http_status": 204,
+      "latest_read_at": "2026-11-06T11:45:46.667708+00:00",
+      "is_pending": true,
+      "last_downloaded": null
+    }
+  },
+  "bing": {
+    "successful_batch": {
+      "checked_at": "2026-11-06T09:26:16.359455+00:00",
+      "execution_environment": "GitHub Actions",
+      "url_queries": 70,
+      "queries_succeeded": 70,
+      "query_errors": 0,
+      "api_reads_including_site_and_sitemap": 72,
+      "configured_interval_seconds": 10,
+      "minimum_observed_response_gap_seconds": 10.213186,
+      "index_membership_unknown": 70,
+      "crawl_lifecycle_unknown": 70
+    },
+    "later_joint_attempt": {
+      "checked_at": "2026-11-06T11:46:50.389048+00:00",
+      "configured_interval_seconds": 5,
+      "planned_urls": 70,
+      "queries_succeeded": 11,
+      "query_errors": 1,
+      "unqueried_after_block": 58,
+      "provider_fault": "ThrottleHost",
+      "provider_error_code": 5,
+      "http_status": 400,
+      "overall_result": "QUOTA_EXCEEDED"
+    },
+    "sitemap": {
+      "last_confirmed_status": "Success",
+      "last_confirmed_url_count": 10,
+      "observation_note": "The successful batch read confirmed the previously imported feed. A later quota stop prevented a new feed read; this does not negate the earlier observation."
+    }
+  },
+  "openai_search": {
+    "checked_at": "2026-11-06T11:47:55.531296+00:00",
+    "scope_urls": 70,
+    "configuration_allowed": 70,
+    "declared_user_agent_fetch_succeeded": 70,
+    "real_crawler_visit": "UNKNOWN",
+    "openai_index": "UNKNOWN"
+  },
+  "indexnow": {
+    "checked_at": "2026-11-06T11:48:03.007423+00:00",
+    "scope_urls_before_publication": 70,
+    "status": "NO_CHANGES",
+    "post_count": 0,
+    "public_key_file_access": "HTTP_200_EXACT_MATCH",
+    "remote_engine_key_validation": "UNKNOWN_NO_NOTIFICATION_PERFORMED",
+    "publication_followup": "This genuine new learning record and its navigation changes may be notified only after deployment and validation. No receipt is claimed in this edition."
+  },
+  "monitoring": {
+    "weekly_schedule": "Monday 10:17 Asia/Shanghai",
+    "schedule_may_be_delayed": true,
+    "default_interval_status": "The observed joint run used five seconds. A proposed ten-second default is not represented as deployed in this snapshot.",
+    "history": "Original baselines and failed/skipped attempts are retained privately."
+  },
+  "limitations": [
+    "Query success is not an index-membership verdict.",
+    "Live HTTP access and a declared crawler user agent do not prove a real crawler visited.",
+    "No experiment in this lesson measured ChatGPT/Grok answers or recommendation lift.",
+    "The ten-second and five-second runs occurred at different times; interval alone cannot explain their different results.",
+    "This publication adds two editorial pages to the inventory. Those new pages are outside the earlier ten- and seventy-URL snapshots."
+  ],
+  "followups": [
+    {
+      "checked_at": "2026-11-06T11:59:17.427043+00:00",
+      "observation": "The Google Search Console Sitemaps screen reported \"Could not read this sitemap\", with a displayed last-read date of November 4 and zero discovered pages.",
+      "verified": "This is an independently recorded owner-console observation, separate from the API isPending=true response. No corrective resubmission had been made at this observation.",
+      "limit": "The screen did not expose a specific HTTP or XML error. A successful API submission and a browser HTTP 200 do not establish a successful Google fetch."
+    }
+  ]
+}

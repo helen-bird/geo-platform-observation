@@ -1,0 +1,42 @@
+name: GEO Lab — IndexNow Real Change Notification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: geo-google-index-monitor
+  cancel-in-progress: false
+
+jobs:
+  notify_changes:
+    if: github.repository == 'helen-bird/geo-index-monitor' && github.event.repository.private == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out private durable history
+        id: checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Use Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Verify deployed real changes and notify once
+        id: indexnow
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/discoverability_actions.py --output state --indexnow-only
+      - name: Persist all receipts, errors and uncertainty
+        if: always() && steps.checkout.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/index_monitor_actions.py persist --output state
+      - name: Preserve failure when notification is incomplete
+        if: always() && steps.indexnow.outcome != 'success'
+        run: exit 1

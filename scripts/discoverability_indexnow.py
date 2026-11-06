@@ -105,8 +105,11 @@ def plan_changes(inventory, observations, previous_state=None, config=None, *, c
         previous[url] = {'body_sha256': None, 'revision': revision, 'checked_at': observed.get('checked_at', when), 'deleted': True}
     # Track first-seen manifest membership even if an initial fetch failed.
     previous_members = set(state.get('known_desired_urls', []))
+    # Freeze initial manifest membership: a later genuinely new page whose
+    # first deployment check failed must still notify when it becomes live.
+    initial_members = set(state.setdefault('initial_baseline_urls', sorted(set(desired) if previous_state is None else previous_members or previous_observed_urls)))
     if previous_state is not None:
-        changes = [c for c in changes if not (c['kind'] == 'ADDED' and c['url'] in previous_members and c['url'] not in previous_observed_urls)]
+        changes = [c for c in changes if not (c['kind'] == 'ADDED' and c['url'] in initial_members and c['url'] not in previous_observed_urls)]
     for change in changes:
         # Coalesce only notifications that have never been attempted. An
         # uncertain delivery remains immutable and prevents blind replay.

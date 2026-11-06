@@ -57,14 +57,15 @@ def main():
     page_paths = [DIST / name for name in ['index.html','technical-appendix.html',
         'stages/02-post-discovery/index.html','stages/02-post-discovery/technical-appendix.html',
         'stages/03-question-sensitivity/index.html','stages/03-question-sensitivity/technical-appendix.html',
-        'stages/04-creator-benchmark/index.html','stages/04-creator-benchmark/technical-appendix.html']]
+        'stages/04-creator-benchmark/index.html','stages/04-creator-benchmark/technical-appendix.html',
+        'stages/05-technical-discoverability/index.html','stages/05-technical-discoverability/technical-appendix.html']]
     pages = {}
     for path in page_paths:
         page = Page(); document = path.read_text(); page.feed(document); pages[path.resolve()] = page
         assert page.language == 'en', 'Report language must be English'
         assert all(page.details), 'All evidence details must remain expanded'
         assert 'data-report-series="v1"' in document and 'id="report-version"' in document
-        assert all(label in document for label in ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity','#04 · Creator Benchmark'])
+        assert all(label in document for label in ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity','#04 · Creator Benchmark','#05 · Technical Discoverability'])
         if path.name == 'index.html':
             assert path.stat().st_size < 100_000, 'Keep full evidence in the appendix'
     assert len(pages[(DIST/'technical-appendix.html').resolve()].details) >= 150
@@ -101,7 +102,7 @@ def main():
         for platform in case['selected_for_platforms']:
             assert any(r['platform']==platform and r['question_id']=='Q3' and any(o['entity']==case['entity'] and o.get('recommendation') is True for o in r['observations']) for r in runs)
     versions = load('report-versions.json')['reports']
-    assert len(versions) == 4 and {r['stage'] for r in versions} == {1,2,3,4}
+    assert len(versions) == 5 and {r['stage'] for r in versions} == {1,2,3,4,5}
     assert all(r['first_published'] <= r['last_revised'] for r in versions)
     follow = load('stages/02-post-discovery/data/post-publication-checks.json')
     assert follow['original_six_cell_outcomes_unchanged'] is True
@@ -119,6 +120,8 @@ def main():
     check_stage3_publication.main()
     import check_stage4_publication
     check_stage4_publication.main()
+    import check_stage5_publication
+    check_stage5_publication.main()
     import build_learning_hub
     build_learning_hub.check()
     import check_site_metadata

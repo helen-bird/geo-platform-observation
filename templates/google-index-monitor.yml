@@ -46,7 +46,7 @@ jobs:
           BING_AUTH_METHOD: ${{ vars.BING_AUTH_METHOD || 'oauth' }}
           BING_OAUTH_CREDENTIALS: ${{ secrets.BING_OAUTH_CREDENTIALS }}
           BING_API_KEY: ${{ secrets.BING_API_KEY }}
-        run: python3 scripts/discoverability_actions.py --output state
+        run: python3 scripts/discoverability_actions.py --output state --bing-request-interval 10
       - name: Persist private history even after an authorization or API failure
         if: always() && steps.checkout.outcome == 'success'
         env:

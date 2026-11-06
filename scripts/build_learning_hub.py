@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://helen-bird.github.io/geo-platform-observation/'
 DATE = '2026-11-03'
-UPDATED = '2026-11-04'
+UPDATED = '2026-11-06'
 QUESTIONS = {
     1: ('How do AI search engines choose sources?',
         'Repeated GEO questions to ChatGPT Search and Grok show differences in recommended entities, cited sources and repeat overlap. Citation, mention and recommendation are separate observations.',
@@ -23,6 +23,9 @@ QUESTIONS = {
     3: ('How reliable are GEO measurements?',
         'Repeated and reworded questions explore how measurement advice, cited domains and recommended tools change. Matched comparisons and normalization sensitivity clarify the limits of one-shot scores.',
         '24 selected answers; two intents, two wordings, two environments, three repeats. OpenAI Responses API + web search is not consumer ChatGPT Search.'),
+    5: ('What can technical checks prove about discoverability?',
+        'A technical learning record separates Google indexing, Bing information queries, OpenAI crawl eligibility and IndexNow notifications. Successful access or API queries do not establish AI recommendations.',
+        'Reviewed aggregates only: no new AI-answer experiment. Private raw engine/account evidence is excluded; the earlier snapshots cover 10 or 70 URLs, before these new pages were published.'),
     4: ('Which independent GEO creators get recommended?',
         'New answers test three historically selected creator families. Actual cited-page audits separate content organization, author attribution, evidence quality and untested practices.',
         '18 selected answers, three candidate creators and eight cited-page audits. Question-level n=3 results are primary; personal-name visibility is separate from associated content assets.'),
@@ -37,7 +40,7 @@ CSS = '''
 
 def render():
     reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
-    assert [r['stage'] for r in reports] == [1, 2, 3, 4]
+    assert [r['stage'] for r in reports] == [1, 2, 3, 4, 5]
     def relative(path):
         value = posixpath.relpath(path, 'learning-hub')
         if value == '../index.html': return '../'
@@ -50,12 +53,12 @@ def render():
         directory = posixpath.dirname(r['path'])
         at = lambda name: relative(posixpath.join(directory, name))
         article += '<article class="lesson" id="lab-'+str(number)+'"><p class="lesson-name">GEO Lab #'+f'{number:02d}'+' · '+escape(r['title'])+'</p><h2>'+escape(question)+'</h2><p>'+escape(summary)+'</p>'
-        article += '<blockquote><p>'+escape(boundary)+'</p><p class="dates"><strong>Author:</strong> Helen Bird · <strong>Experiment:</strong> '+escape(r['experiment_dates'])+'<br><strong>First public report:</strong> '+escape(r['first_published'])+' · <strong>Last revised:</strong> '+escape(r['last_revised'])+' · <strong>Version:</strong> '+escape(r['version'])+'</p></blockquote>'
-        article += '<div class="links"><a href="'+escape(relative(r['path']),quote=True)+'">Read report</a><a href="'+escape(at('public-data.zip'),quote=True)+'">Download public data</a><a href="'+escape(at('technical-appendix.html'),quote=True)+'">Read original evidence</a></div>'
+        article += '<blockquote><p>'+escape(boundary)+'</p><p class="dates"><strong>Author:</strong> Helen Bird · <strong>'+('Observations' if number==5 else 'Experiment')+':</strong> '+escape(r['experiment_dates'])+'<br><strong>First public report:</strong> '+escape(r['first_published'])+' · <strong>Last revised:</strong> '+escape(r['last_revised'])+' · <strong>Version:</strong> '+escape(r['version'])+'</p></blockquote>'
+        article += '<div class="links"><a href="'+escape(relative(r['path']),quote=True)+'">Read '+('learning record' if number==5 else 'report')+'</a><a href="'+escape(at('public-data.zip'),quote=True)+'">Download '+('public summary' if number==5 else 'public data')+'</a><a href="'+escape(at('technical-appendix.html'),quote=True)+'">'+('Methods and source notes' if number==5 else 'Read original evidence')+'</a></div>'
         if number == 1:
             article += '<p><a href="https://x.com/bird_helen67403/status/2116080254523445676">Original GEO Lab #01 post</a></p>'
         article += '</article>'
-    document = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Helen Bird · GEO Learning Hub</title><meta name="description" content="A question-oriented index of Helen Bird's ongoing GEO learning experiments, original public data, reports and limitations."><link rel="canonical" href="'''+SITE+'''learning-hub/"><style>'''+CSS+'''</style></head><body><a class="skip" href="#main">Skip to learning questions</a><div class="layout"><nav aria-label="Learning Hub contents"><strong>GEO Learning Log</strong><div class="nav-links"><a href="#main" aria-current="page">Learning Hub</a>'''+anchors+'''<a href="#use-evidence">Use the evidence</a></div><div class="nav-group"><a href="https://github.com/helen-bird/geo-platform-observation">Repository and data guide</a><a href="../report-versions.json">Report versions</a><a href="../CHANGELOG.md">Revision history</a></div><p>An ongoing learning record.</p></nav><main id="main"><h1>Helen Bird · GEO Learning Hub</h1><p class="lead">Start with a question. Follow the experiment, then inspect the original public evidence.</p><p class="author"><strong>Author:</strong> Helen Bird · <strong>Published:</strong> '''+DATE+''' · <strong>Updated:</strong> '''+DATE+'''</p><blockquote><p>These small exploratory experiments document what the tested systems returned under recorded conditions. They do not prove a GEO tactic works or establish stable visibility among real users.</p><p>This new index is a content-organization practice suggested by the creator audit. Whether it improves AI discovery or recommendations remains untested.</p></blockquote><div class="lessons">'''+article+'''</div><section class="afterword" id="use-evidence"><h2>Use the evidence</h2><ul><li><strong>Read by user intent.</strong> Results from different tasks should not be pooled into a universal recommendation score.</li><li><strong>Keep outcomes distinct.</strong> Page citation, content-brand recommendation, personal-name mention and personal recommendation are different observations.</li><li><strong>Check the collection interface.</strong> Labs #03 and #04 use OpenAI Responses API + web search. They do not represent consumer ChatGPT Search performance.</li></ul><p>Each report links a complete, expanded technical appendix and downloadable redacted data. Private originals and account evidence remain local. Use GitHub’s Copy permalink to cite a fixed revision, and include the answer or observation ID.</p><p>New questions and experiments will be added as learning continues. Earlier methods, corrections and limitations remain visible in the record.</p></section><p class="footer">Helen Bird · GEO Learning Log · <a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p></main></div></body></html>'''
+    document = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Helen Bird · GEO Learning Hub</title><meta name="description" content="A question-oriented index of Helen Bird's ongoing GEO learning experiments, original public data, reports and limitations."><link rel="canonical" href="'''+SITE+'''learning-hub/"><style>'''+CSS+'''</style></head><body><a class="skip" href="#main">Skip to learning questions</a><div class="layout"><nav aria-label="Learning Hub contents"><strong>GEO Learning Log</strong><div class="nav-links"><a href="#main" aria-current="page">Learning Hub</a>'''+anchors+'''<a href="#use-evidence">Use the evidence</a></div><div class="nav-group"><a href="https://github.com/helen-bird/geo-platform-observation">Repository and data guide</a><a href="../report-versions.json">Report versions</a><a href="../CHANGELOG.md">Revision history</a></div><p>An ongoing learning record.</p></nav><main id="main"><h1>Helen Bird · GEO Learning Hub</h1><p class="lead">Start with a question. Follow the experiment, then inspect the original public evidence.</p><p class="author"><strong>Author:</strong> Helen Bird · <strong>Published:</strong> '''+DATE+''' · <strong>Updated:</strong> '''+DATE+'''</p><blockquote><p>These small exploratory experiments and technical learning records document what the tested systems returned under recorded conditions. They do not prove a GEO tactic works or establish stable visibility among real users.</p><p>This new index is a content-organization practice suggested by the creator audit. Whether it improves AI discovery or recommendations remains untested.</p></blockquote><div class="lessons">'''+article+'''</div><section class="afterword" id="use-evidence"><h2>Use the evidence</h2><ul><li><strong>Read by user intent.</strong> Results from different tasks should not be pooled into a universal recommendation score.</li><li><strong>Keep outcomes distinct.</strong> Page citation, content-brand recommendation, personal-name mention and personal recommendation are different observations.</li><li><strong>Check the collection interface.</strong> Labs #03 and #04 use OpenAI Responses API + web search. They do not represent consumer ChatGPT Search performance.</li></ul><p>Each report links an expanded methods/evidence appendix and downloadable public data. Lab #05 publishes reviewed aggregates rather than raw engine/account responses. Private originals and account evidence remain outside this public repository. Use GitHub’s Copy permalink to cite a fixed revision, and include the answer or observation ID.</p><p>New questions and experiments will be added as learning continues. Earlier methods, corrections and limitations remain visible in the record.</p></section><p class="footer">Helen Bird · GEO Learning Log · <a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p></main></div></body></html>'''
     document = document.replace('<strong>Updated:</strong> '+DATE, '<strong>Updated:</strong> '+UPDATED)
     document = document.replace('<a href="../report-versions.json">Report versions</a>', '<a href="../evidence/">Browse original answers</a><a href="../report-versions.json">Report versions</a>')
     document = document.replace('<a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p>', '<a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a> · <a href="../sitemap.xml">Sitemap</a></p>')
@@ -90,8 +93,8 @@ def check():
     parser = HubParser()
     parser.feed(document)
     errors = []
-    if parser.lessons != ['lab-1', 'lab-2', 'lab-3', 'lab-4']:
-        errors.append('Learning Hub must contain the four ordered lab entries')
+    if parser.lessons != ['lab-1', 'lab-2', 'lab-3', 'lab-4', 'lab-5']:
+        errors.append('Learning Hub must contain the five ordered lab entries')
     if len(parser.ids) != len(set(parser.ids)):
         errors.append('Learning Hub has duplicate section IDs')
     if parser.closed_sections:
@@ -124,7 +127,7 @@ def check():
                 errors.append('Missing local link fragment: '+href)
     if errors:
         raise AssertionError('\n'.join(errors))
-    return {'learning_hub':'learning-hub/index.html', 'entries':4,
+    return {'learning_hub':'learning-hub/index.html', 'entries':5,
             'local_links_checked':local_links, 'status':'passed'}
 
 
@@ -135,7 +138,7 @@ def main():
     destination = ROOT/'learning-hub/index.html'
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(render())
-    print(json.dumps({'learning_hub':str(destination.relative_to(ROOT)),'stages':4,'model_calls':0}))
+    print(json.dumps({'learning_hub':str(destination.relative_to(ROOT)),'stages':5,'model_calls':0}))
 
 
 if __name__ == '__main__':

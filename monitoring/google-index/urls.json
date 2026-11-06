@@ -86,6 +86,24 @@
       "decision_reason": "Independent original answer/method/failure/source archive"
     },
     {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/05-technical-discoverability/",
+      "source_file": "stages/05-technical-discoverability/index.html",
+      "category": "primary_content",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Original research and learning-navigation entry"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/05-technical-discoverability/technical-appendix.html",
+      "source_file": "stages/05-technical-discoverability/technical-appendix.html",
+      "category": "technical_appendix",
+      "monitor": true,
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Independent original answer/method/failure/source archive"
+    },
+    {
       "url": "https://helen-bird.github.io/geo-platform-observation/technical-appendix.html",
       "source_file": "technical-appendix.html",
       "category": "technical_appendix",

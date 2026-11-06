@@ -95,7 +95,8 @@ def main():
         person = nodes[PERSON_ID]
         assert person == {'@type': 'Person', '@id': PERSON_ID, 'name': 'Helen Bird', 'url': canonical_url(HUB_PATH)}
         assert nodes[SITE_ID]['@type'] == 'WebSite' and nodes[SERIES_ID]['@type'] == 'CreativeWorkSeries'
-        assert len(nodes[SERIES_ID]['hasPart']) == 4
+        expected_series = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') != 'technical_learning_record']
+        assert nodes[SERIES_ID]['hasPart'] == [{'@id': canonical_url(r['path'])+'#article'} for r in expected_series]
         breadcrumbs = [node for node in graph if node['@type'] == 'BreadcrumbList']
         assert len(breadcrumbs) == 1
         trail = breadcrumbs[0]['itemListElement']
@@ -129,7 +130,7 @@ def main():
     assert len(descriptions) == len(set(descriptions)), 'Descriptions must distinguish individual pages'
     assert len(titles) == len(set(titles)), 'Page titles must be unique'
     assert len(canonical_values) == len(set(canonical_values))
-    print(json.dumps({'status':'passed','generated_pages':len(targets),'core_pages':9,'canonical_description_OG_consistency':True,'local_schema_syntax_identity_dates_breadcrumbs':'passed','original_body_fixture_unchanged':True,'effect_and_indexing_verified':False}))
+    print(json.dumps({'status':'passed','generated_pages':len(targets),'core_pages':2*len(reports)+1,'canonical_description_OG_consistency':True,'local_schema_syntax_identity_dates_breadcrumbs':'passed','original_body_fixture_unchanged':True,'effect_and_indexing_verified':False}))
 
 
 if __name__ == '__main__':

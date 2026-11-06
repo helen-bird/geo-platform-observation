@@ -1,0 +1,18 @@
+{
+  "edition": "1.0",
+  "public_content": [
+    "Reviewed aggregate API observations",
+    "Technical workflow and failure-handling description",
+    "Official source links",
+    "Explicit unknowns and limitations"
+  ],
+  "excluded": [
+    "Raw Search Console and Bing responses",
+    "Credentials and account/verification identifiers",
+    "Private workflow/Issue URLs",
+    "Private screenshots and local paths",
+    "Unverified indexing or AI recommendation claims"
+  ],
+  "frozen_experiment_data_changed": false,
+  "lab05_is_ai_answer_experiment": false
+}

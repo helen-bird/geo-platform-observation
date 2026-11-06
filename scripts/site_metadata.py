@@ -27,7 +27,9 @@ DESCRIPTIONS = {
     'stages/03-question-sensitivity/technical-appendix.html': 'GEO Lab 03 evidence: 24 selected answers, 27 submissions, API/search controls, citations, coding and normalization checks. API results do not represent ChatGPT web.',
     'stages/04-creator-benchmark/index.html': 'GEO Lab 04 compares three creator families in 18 OpenAI API web-search and Grok Expert answers, separating personal names from content brands. No causal GEO claim.',
     'stages/04-creator-benchmark/technical-appendix.html': 'GEO Lab 04 evidence: 18 original answers, 54 creator-by-answer judgments, exact source URLs, search activity, eight cited-page audits and preserved recovery records.',
-    HUB_PATH: "Helen Bird's question-oriented GEO Learning Hub connects four experiments with their reports, original public data, complete evidence and limitations.",
+    'stages/05-technical-discoverability/index.html': 'GEO Lab 05 separates Google indexing, Bing URL information, OpenAI crawl eligibility and IndexNow notifications using reviewed technical observations, not AI-answer experiments.',
+    'stages/05-technical-discoverability/technical-appendix.html': 'GEO Lab 05 methods, aggregate observation timeline, official sources and publication boundaries. Private raw search-engine/account evidence is excluded.',
+    HUB_PATH: "Helen Bird's GEO Learning Hub connects four AI-answer experiments and a technical learning record with their methods, public data, evidence boundaries and limitations.",
 }
 
 
@@ -121,7 +123,11 @@ def _structured(path, kind, stage, title, description):
     url = canonical_url(path)
     person = {'@type': 'Person', '@id': PERSON_ID, 'name': 'Helen Bird', 'url': canonical_url(HUB_PATH)}
     website = {'@type': 'WebSite', '@id': SITE_ID, 'name': 'GEO Learning Log', 'url': SITE, 'publisher': {'@id': PERSON_ID}, 'inLanguage': 'en'}
-    series = {'@type': 'CreativeWorkSeries', '@id': SERIES_ID, 'name': 'GEO Lab', 'url': canonical_url(HUB_PATH), 'author': {'@id': PERSON_ID}, 'isPartOf': {'@id': SITE_ID}, 'hasPart': [{'@id': canonical_url(r['path'])+'#article'} for r in reports]}
+    # Original AI-answer archives retain their original experiment-series parts.
+    # hasPart is not an exhaustive catalog; technical learning records belong
+    # in the hub/report graph without rewriting unchanged answer archives.
+    series_reports = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') != 'technical_learning_record']
+    series = {'@type': 'CreativeWorkSeries', '@id': SERIES_ID, 'name': 'GEO Lab', 'url': canonical_url(HUB_PATH), 'author': {'@id': PERSON_ID}, 'isPartOf': {'@id': SITE_ID}, 'hasPart': [{'@id': canonical_url(r['path'])+'#article'} for r in series_reports]}
     is_own_article = kind in {'reader', 'appendix'} and selected is not None
     page_type = 'CollectionPage' if kind in {'hub', 'evidence-index'} else ('Article' if is_own_article else 'WebPage')
     page_id = url + ('#article' if is_own_article else '#webpage')

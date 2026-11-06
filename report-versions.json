@@ -1,6 +1,6 @@
 {
   "date_timezone": "Asia/Shanghai",
-  "scope": "Report presentation and analysis revisions. Original experiment records retain their own dates and provenance.",
+  "scope": "Learning-report presentation, analysis and technical-observation revisions. Original experiment records retain their own dates and provenance.",
   "reports": [
     {
       "stage": 1,
@@ -9,9 +9,9 @@
       "experiment_dates": "2026-10-29 to 2026-10-30",
       "first_published": "2026-10-30",
       "first_publication_evidence": "Git commit ab0c22c, the first public report commit. No earlier hosting date is inferred.",
-      "last_revised": "2026-11-04",
-      "version": "1.3",
-      "revision_note": "Technical maintenance: consistent canonical URLs, page-specific descriptions and social metadata, truthful author/series markup, and links to individual original-answer pages. Original answers, coding, data downloads and research outcomes are unchanged. This bundled update has no measured AI visibility effect."
+      "last_revised": "2026-11-06",
+      "version": "1.4",
+      "revision_note": "Technical maintenance: consistent canonical URLs, page-specific descriptions and social metadata, truthful author/series markup, and links to individual original-answer pages. Original answers, coding, data downloads and research outcomes are unchanged. This bundled update has no measured AI visibility effect. November 6 navigation update: linked the new technical learning record; original experiment data and findings remain unchanged."
     },
     {
       "stage": 2,
@@ -20,9 +20,9 @@
       "experiment_dates": "2026-10-31",
       "first_published": "2026-11-01",
       "first_publication_evidence": "Git commit 1b7e89e and the original public-edition record.",
-      "last_revised": "2026-11-04",
-      "version": "1.3",
-      "revision_note": "Technical maintenance: consistent canonical URLs, page-specific descriptions and social metadata, truthful author/series markup, and links to individual original-answer pages. Original answers, coding, data downloads and research outcomes are unchanged. This bundled update has no measured AI visibility effect."
+      "last_revised": "2026-11-06",
+      "version": "1.4",
+      "revision_note": "Technical maintenance: consistent canonical URLs, page-specific descriptions and social metadata, truthful author/series markup, and links to individual original-answer pages. Original answers, coding, data downloads and research outcomes are unchanged. This bundled update has no measured AI visibility effect. November 6 navigation update: linked the new technical learning record; original experiment data and findings remain unchanged."
     },
     {
       "stage": 3,
@@ -31,9 +31,9 @@
       "experiment_dates": "2026-11-02",
       "first_published": "2026-11-02",
       "first_publication_evidence": "Git commit f18647b.",
-      "last_revised": "2026-11-04",
-      "version": "1.4",
-      "revision_note": "Technical maintenance: consistent canonical URLs, page-specific descriptions and social metadata, truthful author/series markup, and links to individual original-answer pages. Original answers, coding, data downloads and research outcomes are unchanged. This bundled update has no measured AI visibility effect."
+      "last_revised": "2026-11-06",
+      "version": "1.5",
+      "revision_note": "Technical maintenance: consistent canonical URLs, page-specific descriptions and social metadata, truthful author/series markup, and links to individual original-answer pages. Original answers, coding, data downloads and research outcomes are unchanged. This bundled update has no measured AI visibility effect. November 6 navigation update: linked the new technical learning record; original experiment data and findings remain unchanged."
     },
     {
       "stage": 4,
@@ -42,9 +42,21 @@
       "experiment_dates": "2026-11-03",
       "first_published": "2026-11-03",
       "first_publication_evidence": "First redacted public edition, authorized November 3, 2026; the repository Git history records its release commit.",
-      "last_revised": "2026-11-04",
-      "version": "1.1",
-      "revision_note": "Technical maintenance: consistent canonical URLs, page-specific descriptions and social metadata, truthful author/series markup, and links to individual original-answer pages. Original answers, coding, data downloads and research outcomes are unchanged. This bundled update has no measured AI visibility effect."
+      "last_revised": "2026-11-06",
+      "version": "1.2",
+      "revision_note": "Technical maintenance: consistent canonical URLs, page-specific descriptions and social metadata, truthful author/series markup, and links to individual original-answer pages. Original answers, coding, data downloads and research outcomes are unchanged. This bundled update has no measured AI visibility effect. November 6 navigation update: linked the new technical learning record; original experiment data and findings remain unchanged."
+    },
+    {
+      "stage": 5,
+      "title": "Technical Discoverability",
+      "path": "stages/05-technical-discoverability/index.html",
+      "record_type": "technical_learning_record",
+      "experiment_dates": "2026-11-04 to 2026-11-06 (technical observations; no AI-answer experiment)",
+      "first_published": "2026-11-06",
+      "first_publication_evidence": "First reviewed public learning edition; the repository Git history records deployment.",
+      "last_revised": "2026-11-06",
+      "version": "1.0",
+      "revision_note": "First public technical learning record. Only reviewed aggregates and methods are public; private raw engine/account evidence remains private. Query success, indexing and AI recommendations remain separate."
     }
   ]
 }
