@@ -1,0 +1,44 @@
+name: GEO Lab — Bing Index Recheck
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: geo-google-index-monitor
+  cancel-in-progress: false
+
+jobs:
+  recheck:
+    if: github.repository == 'helen-bird/geo-index-monitor' && github.event.repository.private == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out the private monitor and durable state
+        id: checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Use Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Recheck Bing with ten-second serial spacing
+        id: bing
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BING_AUTH_METHOD: api_key
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+        run: python3 scripts/discoverability_actions.py --output state --bing-only --bing-request-interval 10
+      - name: Preserve every successful, failed and unqueried slot
+        if: always() && steps.checkout.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/index_monitor_actions.py persist --output state
+      - name: Preserve a failing result for an incomplete Bing batch
+        if: always() && steps.bing.outcome != 'success'
+        run: exit 1

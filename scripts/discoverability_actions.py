@@ -49,6 +49,20 @@ def persist_snapshot(folder, snapshot, *, complete):
 def safe_failure(engine, entries, category):
     return {'engine':engine,'checked_at':now(),'run_status':'ERROR','run_complete':False,'error':category,'results':[{'url':r['url'],'index_status':'UNKNOWN','configuration_status':'UNKNOWN','query_status':'ERROR','error':category}for r in entries]}
 
+def full_bing_batch(snapshot):
+    """A persisted GitHub query success is distinct from index membership."""
+    rows=snapshot.get('results',[]);planned=snapshot.get('planned_urls',[])
+    urls=[r.get('url')for r in rows]
+    return (snapshot.get('engine')=='bing'and snapshot.get('execution_environment')=='github_actions'
+            and bool(snapshot.get('snapshot_id'))and snapshot.get('run_complete')is True
+            and snapshot.get('url_queries_complete')is True and bool(planned)
+            and len(planned)==len(set(planned))and len(urls)==len(set(urls))
+            and set(urls)==set(planned)and snapshot.get('queries_succeeded')==len(planned)
+            and snapshot.get('site_access_observation',{}).get('query_status')=='SUCCESS'
+            and snapshot.get('sitemap_observation',{}).get('query_success')is True
+            and all(r.get('query_success')is True and r.get('query_status')=='SUCCESS'
+                    and bool(r.get('api_attempts'))for r in rows))
+
 def change_events(current, previous):
     events=[];engine=current['engine'];prior={r['url']:r for r in(previous or{}).get('results',[])}
     if current.get('run_status')=='AUTH_REQUIRED':
@@ -95,7 +109,7 @@ def report(output, inventory, bing, openai, receipt):
     google_sitemap=google.read_json(output/'sitemap-status.json',{})
     rows=openai.get('results',[]);allowed=sum(r.get('configuration_status')=='ALLOWED'for r in rows);blocked=sum(r.get('configuration_status')=='BLOCKED'for r in rows);sim=sum(r.get('ua_simulation',{}).get('status')=='FETCH_SUCCEEDED'for r in rows)
     summary={'checked_at':now(),'google':{'checked_at':google_snapshot.get('checked_at'),'counts':google_snapshot.get('counts',{}),'source':'official_url_inspection_api','scope':'existing ten important pages'},'bing':{'checked_at':bing['checked_at'],'counts':bing.get('counts',{'UNKNOWN':len(bing['results'])}),'query_status':bing.get('run_status'),'scope':'all reviewed indexing_desired canonicals','membership':'UNKNOWN unless explicit independent official evidence','authentication_method':bing.get('configured_authentication_method',bing.get('authentication',{}).get('method')),'credential_readonly_scoped':bing.get('authentication',{}).get('readonly_scoped'),'program_write_enabled':False,'execution_environment':bing.get('execution_environment','UNKNOWN'),'weekly_automation_evidence':'CURRENT_SNAPSHOT_IS_GITHUB_ACTIONS'if bing.get('execution_environment')=='github_actions'else'NOT_ESTABLISHED_BY_THIS_SNAPSHOT'},'openai_search':{'checked_at':openai['checked_at'],'configuration_allowed':allowed,'configuration_blocked':blocked,'configuration_unknown':len(rows)-allowed-blocked,'ua_simulation_succeeded':sim,'real_crawl':'UNKNOWN','openai_index':'UNKNOWN'},'indexnow':{k:v for k,v in receipt.items()if k!='state'},'ai_answer_experiments_run':False}
-    summary['bing'].update({'run_complete':bing.get('run_complete'),'planned_url_count':len(bing['results']),'queries_succeeded':bing.get('queries_succeeded'),'urls_not_queried_after_block':bing.get('urls_not_queried_after_block'),'request_interval_seconds':bing.get('request_interval_seconds'),'batch_stop':{key:bing.get('batch_stop',{}).get(key)for key in ('operation','query_status','error','checked_at')}if bing.get('batch_stop')else None})
+    summary['bing'].update({'full_batch_passed':full_bing_batch(bing),'run_complete':bing.get('run_complete'),'planned_url_count':len(bing['results']),'queries_succeeded':bing.get('queries_succeeded'),'urls_not_queried_after_block':bing.get('urls_not_queried_after_block'),'request_interval_seconds':bing.get('request_interval_seconds'),'batch_stop':{key:bing.get('batch_stop',{}).get(key)for key in ('operation','query_status','error','checked_at')}if bing.get('batch_stop')else None})
     summary['google_sitemap']={'checked_at':google_sitemap.get('checked_at'),'query_status':google_sitemap.get('google_status','UNKNOWN'),'isPending':google_sitemap.get('google_response',{}).get('isPending'),'lastDownloaded':google_sitemap.get('google_response',{}).get('lastDownloaded')}
     summary['bing_sitemap']={k:bing.get('sitemap_observation',{}).get(k)for k in('checked_at','query_status','registered','processing_status','submitted_time','last_crawl_time')}
     folder=output/'discoverability'
@@ -113,6 +127,10 @@ def report(output, inventory, bing, openai, receipt):
     text+='\nBing \u5b9e\u9645\u6210\u529f\u67e5\u8be2 URL \u6570\uff1a{success} / {planned}\uff1b\u56e0\u5148\u524d\u9650\u6d41\u6216\u6388\u6743\u963b\u65ad\u800c\u672a\u67e5\u8be2\uff1a{skipped}\uff1b\u5b9e\u9645\u8bf7\u6c42\u95f4\u9694\uff1a{pace} \u79d2\u3002\u672a\u67e5\u8be2\u4f4d\u7f6e\u4ecd\u4fdd\u7559 UNKNOWN \u548c\u96f6\u6b21\u8bf7\u6c42\uff0c\u4e0d\u5192\u5145 API \u67e5\u8be2\u7ed3\u679c\u3002\n'.format(success=summary['bing']['queries_succeeded'],planned=summary['bing']['planned_url_count'],skipped=summary['bing']['urls_not_queried_after_block'],pace=summary['bing']['request_interval_seconds'])
     if summary['bing']['batch_stop']:
         text+='\n> Bing \u5df2\u51fa\u73b0\u9650\u6d41\u3001\u6388\u6743\uff0f\u6743\u9650\u963b\u65ad\uff0c\u6216\u9700\u8981\u5ef6\u540e\u91cd\u8bd5\u7684\u670d\u52a1\u7aef\u7b49\u5f85\u8981\u6c42\uff1b\u5f53\u524d\u6279\u6b21\u5df2\u505c\u6b62\uff0c\u4e0d\u7ee7\u7eed\u9010 URL \u8bf7\u6c42\u3001\u4e0d\u81ea\u52a8\u6362\u51ed\u8bc1\u6216\u73af\u5883\u3002\u9996\u6b21\u963b\u65ad\u8bc1\u636e\u5355\u72ec\u4fdd\u5b58\uff1b\u82e5\u6ca1\u6709 Retry-After\uff0c\u4e0d\u63a8\u65ad\u6062\u590d\u65f6\u95f4\u3002\n'
+    if bing.get('run_scope')=='bing_only_recheck':
+        summary['monitor_scope']='bing_only_recheck';summary['other_dimensions_rechecked']=False
+        summary['indexnow']['carried_forward_from_previous_observation']=True
+        text+='\n> \u672c\u6b21\u4ec5\u8865\u67e5 Bing\u3002\u4e0a\u65b9 Google\u3001OpenAI \u548c IndexNow \u4e3a\u6cbf\u7528\u7684\u5386\u53f2\u89c2\u5bdf\uff0c\u5404\u81ea\u4fdd\u7559\u539f\u68c0\u67e5\u65f6\u95f4\uff1b\u672c\u6b21\u6ca1\u6709\u5bf9\u5b83\u4eec\u6267\u884c\u65b0\u7684\u5b9e\u65f6\u68c0\u67e5\u6216\u63d0\u4ea4\u3002\n'
     summary['report_snapshot']=persist_report(folder,text,summary)
     google.write_json(folder/'latest-summary.json',summary)
     return summary
@@ -155,7 +173,7 @@ def execute(output, inventory, config, *, bing_probe=None, openai_probe=None, in
     summary=report(output,inventory,results['bing'],results['openai-search'],receipt)
     return summary,run_errors
 
-def bing_monitor_probe(entries):
+def bing_monitor_probe(entries, *, request_interval=5):
     """Select one approved credential source; never silently fall back.
 
     API keys are account-wide, not readonly-scoped. This runner always creates
@@ -163,7 +181,7 @@ def bing_monitor_probe(entries):
     inspect_urls omits unrelated sites returned by GetUserSites.
     """
     mode=os.environ.get('BING_AUTH_METHOD','oauth')
-    error=None;client=BingClient(allow_write=False)
+    error=None;client=BingClient(allow_write=False,request_interval=request_interval)
     try:
         if mode=='api_key':
             key=os.environ.get('BING_API_KEY')
@@ -171,34 +189,123 @@ def bing_monitor_probe(entries):
             if len(key)>4096 or key!=key.strip() or any(ord(c)<32 or ord(c)==127 for c in key):
                 raise BingAuthError('INVALID_API_KEY_SECRET')
             if os.environ.get('GITHUB_ACTIONS')=='true':print('::add-mask::'+key.replace('%','%25'))
-            client=BingClient(api_key=key,allow_write=False)
+            client=BingClient(api_key=key,allow_write=False,request_interval=request_interval)
         elif mode=='oauth':
             access=refresh_bing_oauth()
             if access and os.environ.get('GITHUB_ACTIONS')=='true':print('::add-mask::'+access)
-            client=BingClient(access_token=access,allow_write=False)
+            client=BingClient(access_token=access,allow_write=False,request_interval=request_interval)
         else:raise BingAuthError('UNSUPPORTED_BING_AUTH_METHOD')
     except BingAuthError as exc:error={'category':exc.code,'http_status':exc.status}
     snapshot=inspect_urls(entries,client=client)
+    snapshot['planned_urls']=[entry['url']for entry in entries]
+    snapshot['github_run_id']=os.environ.get('GITHUB_RUN_ID')if os.environ.get('GITHUB_ACTIONS')=='true'else None
+    snapshot['github_run_attempt']=os.environ.get('GITHUB_RUN_ATTEMPT')if os.environ.get('GITHUB_ACTIONS')=='true'else None
     snapshot['execution_environment']='github_actions'if os.environ.get('GITHUB_ACTIONS')=='true'else'local_process'
     snapshot['configured_authentication_method']=mode if mode in {'oauth','api_key'} else 'INVALID'
     snapshot['program_access']={'property':PROPERTY,'allowed_api_operations':['GetUserSites','GetUrlInfo','GetFeeds'],'write_enabled':False,'unrelated_sites_persisted':False}
     if error:snapshot['authorization_error']=error
     return snapshot
 
+def execute_bing_only(output, inventory, *, bing_probe, notify=None):
+    """Read Bing only; carry other engines' prior observations without probing."""
+    entries=reviewed_urls(inventory);folder=output/'bing'
+    previous=google.read_json(folder/'latest-successful.json',{})
+    try:value=bing_probe()
+    except Exception as exc:value=safe_failure('bing',entries,getattr(exc,'code','UNEXPECTED_PROBE_FAILURE'))
+    value['run_scope']='bing_only_recheck';complete=value.get('run_complete')is True
+    value=persist_snapshot(folder,value,complete=complete)
+    events=change_events(value,previous);errors=[]if complete else['bing']
+    if notify:
+        try:notify(folder,events,entries,value)
+        except Exception:
+            errors.append('bing-notification')
+            google.write_json(output/'discoverability'/'operator-failures'/(snapshot_id({'checked_at':now(),'error':'BING_NOTIFICATION_FAILURE'})+'.json'),{'checked_at':now(),'error':'BING_NOTIFICATION_FAILURE','raw_error_omitted':True})
+    openai=google.read_json(output/'openai-search'/'latest.json',{'checked_at':None,'results':[]})
+    receipt=google.read_json(output/'indexnow'/'latest-receipt.json',{'status':'UNKNOWN','post_performed':False,'url_count':0})
+    summary=report(output,inventory,value,openai,receipt)
+    result={'checked_at':now(),'scope':'bing_only_recheck','snapshot_id':value['snapshot_id'],
+            'planned_url_count':len(entries),'full_batch_passed':full_bing_batch(value),
+            'errors':errors,'other_dimensions_rechecked':False,'indexing_requested':False}
+    google.write_json(folder/'recheck-receipts'/(value['snapshot_id']+'.json'),result)
+    return summary,errors
+
+def bing_completion_event(snapshot):
+    if not full_bing_batch(snapshot):raise ValueError('COMPLETE_BING_EVIDENCE_REQUIRED')
+    kind='BING_FIRST_COMPLETE_BATCH'
+    return {'engine':'bing','type':kind,'url':PROPERTY,'before_status':'UNKNOWN',
+            'status':'MONITOR_COMPLETE','checked_at':snapshot['checked_at'],
+            'fingerprint':hashlib.sha256(json.dumps(['bing',kind,PROPERTY],separators=(',',':')).encode()).hexdigest()}
+
+def notify_bing_completion(output, repository, token, *, event=None,
+                           client=google.github_json, runner=subprocess.run,
+                           deliver=google.deliver_alerts):
+    """Notify only after official run success and a committed matching snapshot."""
+    if repository!=google.PRIVATE_REPOSITORY or not token:raise ValueError('APPROVED_PRIVATE_REPOSITORY_REQUIRED')
+    if event is None:event=json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
+    trigger=event.get('workflow_run',{});run_id=trigger.get('id')
+    names={'GEO Lab \u2014 Multi-Engine Discoverability Monitor':'google-index-monitor.yml',
+           'GEO Lab \u2014 Bing Index Recheck':'bing-index-recheck.yml'}
+    name=trigger.get('name')
+    if name not in names or type(run_id)is not int or run_id<=0:
+        raise ValueError('UNAPPROVED_COMPLETION_TRIGGER')
+    workflow=client('GET','/repos/'+repository+'/actions/workflows/'+names[name],token)
+    actual=client('GET','/repos/'+repository+'/actions/runs/'+str(run_id),token)
+    if (actual.get('id')!=run_id or type(workflow.get('id'))is not int or workflow.get('name')!=name
+        or actual.get('status')!='completed'or actual.get('conclusion')!='success'
+        or actual.get('name')!=name or actual.get('workflow_id')!=workflow.get('id')
+        or workflow.get('path')!='.github/workflows/'+names[name]
+        or actual.get('head_branch')!='main'or actual.get('event')not in{'schedule','workflow_dispatch'}
+        or actual.get('head_repository',{}).get('full_name')!=repository
+        or actual.get('head_repository',{}).get('private')is not True):
+        return {'status':'NO_APPROVED_SUCCESSFUL_RUN','notification_created':False}
+    folder=output/'bing';candidates=[]
+    for evidence in (folder/'snapshots').glob('*.json'):
+        value=google.read_json(evidence,{})
+        if (str(value.get('github_run_id'))==str(run_id)
+            and str(value.get('github_run_attempt'))==str(actual.get('run_attempt',1))
+            and full_bing_batch(value)):candidates.append((evidence,value))
+    if not candidates:return {'status':'NO_COMPLETE_BING_BATCH','notification_created':False}
+    if len(candidates)!=1:raise ValueError('AMBIGUOUS_BING_COMPLETION_EVIDENCE')
+    evidence,value=candidates[0]
+    relative=str(evidence.resolve().relative_to(Path.cwd()))
+    for command in [['git','ls-files','--error-unmatch','--',relative],['git','diff','--exit-code','HEAD','--',relative]]:
+        if runner(command,capture_output=True,text=True).returncode:
+            raise ValueError('BING_COMPLETION_EVIDENCE_NOT_COMMITTED')
+    completion=bing_completion_event(value)
+    pending=google.merge_outbox(folder,[completion])
+    selected=[item for item in pending if item.get('type')=='BING_FIRST_COMPLETE_BATCH']
+    delivered=deliver(selected,folder,repository,token,{PROPERTY})
+    ledger=google.read_json(folder/'notification-ledger.json',{})
+    confirmed=ledger.get('events',{}).get(completion['fingerprint'],{}).get('status')=='CONFIRMED'
+    return {'status':'COMPLETE_BING_BATCH_NOTIFICATION_RECONCILED'if confirmed else'BING_NOTIFICATION_UNCONFIRMED','snapshot_id':value['snapshot_id'],
+            'successful_workflow_run':run_id,'notification_created':bool(delivered),'notification_confirmed':confirmed,'index_membership_claimed':False}
+
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',default='state');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',default='state');scope=parser.add_mutually_exclusive_group();scope.add_argument('--bing-only',action='store_true');scope.add_argument('--notify-bing-complete',action='store_true');parser.add_argument('--bing-request-interval',type=int,choices=range(5,61),default=5);args=parser.parse_args()
     repository=os.environ.get('GITHUB_REPOSITORY','');token=os.environ.get('GITHUB_TOKEN','')
     google.verify_private_repository(repository,token);_,output=google.private_state_path(args.output,repository)
+    if args.notify_bing_complete:
+        result=notify_bing_completion(output,repository,token)
+        print(json.dumps(result));return 4 if result.get('notification_confirmed')is False else 0
     inputs={}
     try:inventory=json.loads(google.request(google.PUBLIC_INVENTORY)['body']);inputs['inventory_source']=google.PUBLIC_INVENTORY
     except Exception:
         inventory=json.loads(Path('monitoring/google-index/urls.json').read_text());inputs['inventory_source']='CHECKED_OUT_FALLBACK_REMOTE_REFRESH_FAILED'
     google.validate_inventory(inventory);entries=reviewed_urls(inventory)
+    def notify(folder,events,entries,value):
+        pending=google.merge_outbox(folder,events)
+        google.deliver_alerts(pending,folder,repository,token,{r['url']for r in entries})
+        google.clear_recovered_incidents(folder,{'run_complete':value.get('run_complete',False),'run_status':'SUCCESS'},{'accessible':True,'processing_error':False}if value.get('sitemap_observation',{}).get('query_success')and not events else {})
+    if args.bing_only:
+        google.write_json(output/'discoverability'/'inventory.json',{'loaded_at':now(),**inputs,'inventory':inventory})
+        summary,errors=execute_bing_only(output,inventory,bing_probe=lambda:bing_monitor_probe(entries,request_interval=args.bing_request_interval),notify=notify)
+        print(json.dumps({'bing_only_status':'PARTIAL_FAILURE'if errors else'SUCCESS','incomplete_dimensions':errors,'private_state_saved':True,'other_dimensions_rechecked':False,'full_batch_passed':summary['bing']['full_batch_passed']}))
+        return 3 if errors else 0
     try:config=validate_config(json.loads(google.request(CONFIG_URL)['body']));inputs['config_source']=CONFIG_URL
     except Exception:
         config=validate_config(json.loads(Path('monitoring/discoverability/indexnow.json').read_text()));inputs['config_source']='CHECKED_OUT_FALLBACK_REMOTE_REFRESH_FAILED'
     google.write_json(output/'discoverability'/'inventory.json',{'loaded_at':now(),**inputs,'inventory':inventory});google.write_json(output/'indexnow'/'config-used.json',config)
-    def bing_probe():return bing_monitor_probe(entries)
+    def bing_probe():return bing_monitor_probe(entries,request_interval=args.bing_request_interval)
     def indexnow_runner():
         path=output/'indexnow'/'change-ledger.json';old=google.read_json(path,None)
         observations=observe_content(inventory,removed_urls=(old or{}).get('observed',{}));plan=plan_changes(inventory,observations,previous_state=old,config=config)
@@ -224,9 +331,6 @@ def main():
         receipt['remote_engine_key_validation']='KEY_VALIDATION_PENDING'if receipt.get('status')=='KEY_VALIDATION_PENDING'else'RECEIPT_ACCEPTED'if receipt.get('status')=='RECEIVED'else'UNKNOWN_NO_NOTIFICATION_PERFORMED'
         google.write_json(output/'indexnow'/'receipts'/(snapshot_id({'checked_at':now(),'receipt':receipt})+'.json'),receipt)
         return receipt
-    def notify(folder,events,entries,value):
-        pending=google.merge_outbox(folder,events);google.deliver_alerts(pending,folder,repository,token,{r['url']for r in entries})
-        google.clear_recovered_incidents(folder,{'run_complete':value.get('run_complete',False),'run_status':'SUCCESS'},{'accessible':True,'processing_error':False}if value.get('sitemap_observation',{}).get('query_success')and not events else {})
     _,errors=execute(output,inventory,config,bing_probe=bing_probe,openai_probe=lambda:probe_openai(inventory),indexnow_runner=indexnow_runner,notify=notify)
     print(json.dumps({'multi_engine_status':'PARTIAL_FAILURE'if errors else'SUCCESS','incomplete_dimensions':errors,'private_state_saved':True,'ai_answer_experiments_run':False}))
     return 3 if errors else 0

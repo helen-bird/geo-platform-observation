@@ -1,0 +1,43 @@
+name: GEO Lab — Bing Complete Batch Notification
+
+on:
+  workflow_run:
+    workflows: ['GEO Lab — Multi-Engine Discoverability Monitor', 'GEO Lab — Bing Index Recheck']
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: read
+  issues: write
+
+concurrency:
+  group: geo-google-index-monitor
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    if: >-
+      github.repository == 'helen-bird/geo-index-monitor' &&
+      github.event.repository.private == true &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      (github.event.workflow_run.event == 'schedule' || github.event.workflow_run.event == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out committed evidence from the trusted default branch
+        id: checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Verify completed success and reconcile one full-batch notification
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/discoverability_actions.py --output state --notify-bing-complete
+      - name: Persist notification reconciliation even after delivery errors
+        if: always() && steps.checkout.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/index_monitor_actions.py persist --output state

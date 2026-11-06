@@ -27,7 +27,7 @@ PROPERTY = 'https://helen-bird.github.io/geo-platform-observation/'
 SITEMAP = PROPERTY + 'sitemap.xml'
 PRIVATE_REPOSITORY = 'helen-bird/geo-index-monitor'
 PUBLIC_INVENTORY = 'https://raw.githubusercontent.com/helen-bird/geo-platform-observation/main/monitoring/google-index/urls.json'
-SAFE_STATUS = {'UNKNOWN','AUTH_REQUIRED','ERROR','INDEXED','NOT_INDEXED','DISCOVERED','CRAWLED','REMOVED','ADDED','MONITOR_FAILED','SITEMAP_ERROR','ALLOWED','BLOCKED'}
+SAFE_STATUS = {'MONITOR_COMPLETE','UNKNOWN','AUTH_REQUIRED','ERROR','INDEXED','NOT_INDEXED','DISCOVERED','CRAWLED','REMOVED','ADDED','MONITOR_FAILED','SITEMAP_ERROR','ALLOWED','BLOCKED'}
 INCIDENT_KINDS = {'AUTH_REQUIRED','AUTH_FAILURE','API_AUTH_FAILURE','AUTHORIZATION_FAILED','CONSECUTIVE_FAILURES','CONSECUTIVE_MONITOR_FAILURES','SITEMAP_PROBLEM','SITEMAP_CHECK_ERROR','WORKFLOW_FAILURE','INDEXNOW_PROBLEM'}
 
 
@@ -227,7 +227,10 @@ def safe_event(event, known_urls):
             'Google URL Inspection API indexed-version response')
     if engine=='bing':
         source=('Bing authorization configuration; no index query is implied'if'AUTH'in kind else'Official Bing Webmaster REST observation; index membership is separate from crawl data')
-        next_step=('Complete or renew the approved Bing readonly OAuth grant.'if'AUTH'in kind else'Inspect the separate private Bing snapshot and official Bing URL Inspection Index card; do not infer ChatGPT indexing.')
+        next_step=('Check or renew the selected owner-approved Bing authentication method; do not silently switch credential types.'if'AUTH'in kind else'Inspect the separate private Bing snapshot and official Bing URL Inspection Index card; do not infer ChatGPT indexing.')
+        if kind=='BING_FIRST_COMPLETE_BATCH':
+            source='Persisted GitHub Actions Bing snapshot: every planned canonical URL query, site access and Sitemap read succeeded; this is not an indexing verdict'
+            next_step='@helen-bird The complete Bing query batch has passed. Review the private snapshot and history. Query success does not mean any URL is indexed or discoverable in ChatGPT.'
     elif engine=='openai-search':
         source='Public host-root robots and HTTP access observations; declared UA requests are simulation'
         next_step='Review effective host-root robots, page directives and access errors. Real OpenAI crawling remains UNKNOWN without trusted logs.'
