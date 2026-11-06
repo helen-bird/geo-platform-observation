@@ -316,6 +316,39 @@ class RenderedReportHistoryTests(unittest.TestCase):
         self.assertIn('API \u67e5\u8be2\u4e0e\u4eba\u5de5\u5bfc\u5165\u8bc1\u636e\u5206\u5f00\u8bb0\u5f55',text)
         self.assertTrue((self.folder/summary['report_snapshot']).is_file())
 
+    def test_legacy_snapshot_environment_not_inferred_from_report_process(self):
+        with patch.dict(m.os.environ,{'GITHUB_ACTIONS':'true'},clear=True):
+            summary=self.generate()
+        self.assertEqual(summary['bing']['execution_environment'],'UNKNOWN')
+        self.assertEqual(summary['bing']['weekly_automation_evidence'],'NOT_ESTABLISHED_BY_THIS_SNAPSHOT')
+        self.assertIn('UNKNOWN',(self.folder/'report.zh-CN.md').read_text())
+
+    def test_local_oneoff_report_cannot_establish_weekly_actions_success(self):
+        bing=bing_snapshot();bing['execution_environment']='owner_macOS_oneoff'
+        summary=self.generate(bing)
+        self.assertEqual(summary['bing']['execution_environment'],'owner_macOS_oneoff')
+        self.assertEqual(summary['bing']['weekly_automation_evidence'],'NOT_ESTABLISHED_BY_THIS_SNAPSHOT')
+        text=(self.folder/'report.zh-CN.md').read_text()
+        self.assertIn('owner_macOS_oneoff',text)
+        self.assertIn('\u672c\u673a\u4e00\u6b21\u6027\u57fa\u7ebf\u4e0d\u4ee3\u8868 GitHub \u6bcf\u5468\u76d1\u6d4b\u5df2\u6210\u529f',text)
+        self.assertIn('\u90e8\u5206\u5931\u8d25\u8bb0\u5f55\u7ee7\u7eed\u5355\u72ec\u4fdd\u7559',text)
+
+    def test_quota_partial_report_keeps_skipped_slots_and_first_stop_reason(self):
+        bing=bing_snapshot(query='QUOTA_EXCEEDED',complete=False,urls=(U,V,W))
+        bing.update({'queries_succeeded':1,'urls_not_queried_after_block':1,'request_interval_seconds':5,
+                     'batch_stop':{'operation':'GetUrlInfo','query_status':'QUOTA_EXCEEDED','error':{'category':'QUOTA_EXCEEDED','http_status':400,'provider_error_code':5},'raw_response':{'ErrorCode':5,'Message':'ThrottleHost'},'checked_at':T1}})
+        summary=self.generate(bing)
+        self.assertFalse(summary['bing']['run_complete'])
+        self.assertEqual(summary['bing']['queries_succeeded'],1)
+        self.assertEqual(summary['bing']['planned_url_count'],3)
+        self.assertEqual(summary['bing']['urls_not_queried_after_block'],1)
+        self.assertEqual(summary['bing']['batch_stop']['error']['provider_error_code'],5)
+        self.assertNotIn('raw_response',summary['bing']['batch_stop'])
+        text=(self.folder/'report.zh-CN.md').read_text()
+        self.assertIn('1 / 3',text)
+        self.assertIn('\u5f53\u524d\u6279\u6b21\u5df2\u505c\u6b62',text)
+        self.assertIn('Retry-After',text)
+
     def test_preexisting_manual_appendices_and_generated_reports_are_preserved(self):
         previous='Historical report\n\nOwner-confirmed import and failed OAuth notes.\n'
         (self.folder/'report.zh-CN.md').write_text(previous)
@@ -362,6 +395,13 @@ class BingAuthenticationSelectionTests(unittest.TestCase):
         with patch.dict(m.os.environ,env,clear=True),patch.object(m,'BingClient',side_effect=construct),patch.object(m,'refresh_bing_oauth',return_value='synthetic-oauth')as refresh:
             result=m.bing_monitor_probe([{'url':U}])
         return result,calls,clients,refresh
+
+    def test_probe_records_actual_collection_environment(self):
+        for env,expected in (({'BING_AUTH_METHOD':'api_key','BING_API_KEY':'synthetic-key'},'local_process'),
+                             ({'BING_AUTH_METHOD':'api_key','BING_API_KEY':'synthetic-key','GITHUB_ACTIONS':'true'},'github_actions')):
+            with self.subTest(expected=expected),patch('builtins.print'):
+                result,*_=self.probe(env)
+            self.assertEqual(result['execution_environment'],expected)
 
     def test_default_oauth_ignores_present_api_key(self):
         result,calls,clients,refresh=self.probe({'BING_API_KEY':'synthetic-broader-key'})

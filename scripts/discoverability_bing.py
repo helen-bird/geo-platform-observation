@@ -7,6 +7,7 @@ never submits ordinary URLs. SubmitFeed is a separate, explicitly called helper.
 
 Official references:
 https://learn.microsoft.com/en-us/bingwebmaster/oauth2
+https://learn.microsoft.com/en-us/dotnet/api/microsoft.bing.webmaster.api.interfaces.apierrorcode
 https://learn.microsoft.com/en-us/dotnet/api/microsoft.bing.webmaster.api.interfaces.iwebmasterapi.geturlinfo
 https://learn.microsoft.com/en-us/dotnet/api/microsoft.bing.webmaster.api.interfaces.iwebmasterapi.getfeeds
 https://learn.microsoft.com/en-us/dotnet/api/microsoft.bing.webmaster.api.interfaces.iwebmasterapi.submitfeed
@@ -221,14 +222,19 @@ class BingClient:
     API keys are account-wide credentials and are never described as readonly.
     """
     def __init__(self, access_token=None, api_key=None, *, scope=READ_SCOPE,
-                 allow_write=False, requester=None, sleep=time.sleep):
+                 allow_write=False, requester=None, sleep=None, request_interval=5):
         if access_token and api_key:
             raise ValueError('SELECT_ONE_BING_AUTHENTICATION_METHOD')
         if scope not in {READ_SCOPE, MANAGE_SCOPE, 'webmaster.read', 'webmaster.manage'}:
             raise ValueError('UNEXPECTED_BING_SCOPE')
+        if not isinstance(request_interval, (int, float)) or isinstance(request_interval, bool) or not 5 <= request_interval <= 60:
+            raise ValueError('BING_REQUEST_INTERVAL_MUST_BE_5_TO_60_SECONDS')
         self._access_token, self._api_key = access_token, api_key
         self.scope, self.allow_write = scope, allow_write
-        self.requester, self.sleep = requester or default_requester, sleep
+        self.requester, self.sleep = requester or default_requester, sleep or time.sleep
+        self.request_interval = request_interval
+        self._request_attempted = False
+        self.batch_stop = None
 
     @property
     def authenticated(self):
@@ -274,6 +280,10 @@ class BingClient:
             return {'ok': False, 'query_status': 'AUTH_REQUIRED', 'error': {'category': 'AUTH_REQUIRED'}, 'attempts': [], 'raw_response': None}
         if method == 'POST' and (not self.allow_write or (self._access_token and self.scope.lower() != MANAGE_SCOPE.lower())):
             return {'ok': False, 'query_status': 'PERMISSION_DENIED', 'error': {'category': 'WRITE_AUTHORIZATION_REQUIRED'}, 'attempts': [], 'raw_response': None}
+        if self.batch_stop:
+            skipped = 'NOT_QUERIED_QUOTA_BLOCKED' if self.batch_stop['query_status'] == 'QUOTA_EXCEEDED' else 'NOT_QUERIED_RETRY_DEFERRED' if self.batch_stop['error'].get('retry_deferred') else 'NOT_QUERIED_AUTH_BLOCKED'
+            return {'ok': False, 'query_status': skipped, 'error': {'category': skipped, 'blocking_operation': self.batch_stop['operation']},
+                    'attempts': [], 'raw_response': None}
         params = dict(params or {})
         base = OAUTH_BASE if self._access_token else API_KEY_BASE
         query = dict(params) if method == 'GET' else {}
@@ -288,6 +298,9 @@ class BingClient:
             headers['Content-Type'] = 'application/json; charset=utf-8'
         attempts = []
         for attempt in range(1, (3 if method == 'GET' else 1) + 1):
+            if self._request_attempted:
+                self.sleep(self.request_interval)
+            self._request_attempted = True
             try:
                 status, response_headers, payload = self.requester(method, url, headers, body, 30)
             except (HTTPError, URLError, TimeoutError, OSError, ValueError):
@@ -296,11 +309,27 @@ class BingClient:
                     self.sleep(2 ** (attempt - 1)); continue
                 return {'ok': False, 'query_status': 'ERROR', 'error': {'category': 'NETWORK_OR_INVALID_RESPONSE'}, 'attempts': attempts, 'raw_response': None, 'delivery_uncertain': method == 'POST'}
             attempts.append({'operation': operation, 'method': method, 'attempt': attempt, 'checked_at': utc_now(), 'http_status': status})
-            if status == 429 or 500 <= status < 600:
-                if method == 'GET' and attempt < 3:
-                    retry = response_headers.get('Retry-After', '')
-                    self.sleep(min(30, int(retry)) if str(retry).isdigit() else 2 ** (attempt - 1)); continue
-                category = 'QUOTA_EXCEEDED' if status == 429 else 'SERVER_ERROR'
+            retry_after = next((value for name, value in response_headers.items() if str(name).lower() == 'retry-after'), None)
+            raw = unwrap(payload)
+            provider_code = raw.get('ErrorCode') if isinstance(raw, dict) else None
+            defer_server_retry = False
+            if str(provider_code) in {'4', '5'} or status == 429:
+                category = 'QUOTA_EXCEEDED'
+            elif str(provider_code) == '3':
+                category = 'AUTH_REQUIRED'
+            elif str(provider_code) in {'6', '13', '14'}:
+                category = 'PERMISSION_DENIED'
+            elif str(provider_code) == '2':
+                category = 'API_FAULT'
+            elif 500 <= status < 600:
+                retry = '' if retry_after is None else retry_after
+                allowed_retry = not retry or (str(retry).isdigit() and int(retry) <= 30)
+                if method == 'GET' and attempt < 3 and allowed_retry:
+                    self.sleep(int(retry) if str(retry).isdigit() else 2 ** (attempt - 1)); continue
+                # Never shorten a provider wait or guess an HTTP-date expiry.
+                # Defer the rest of this batch too: another URL is the same host.
+                defer_server_retry = bool(retry) and not allowed_retry
+                category = 'SERVER_ERROR'
             elif status == 401:
                 category = 'AUTH_REQUIRED'
             elif status == 403:
@@ -313,9 +342,21 @@ class BingClient:
                 category = 'API_FAULT'
             else:
                 return {'ok': True, 'query_status': 'SUCCESS', 'http_status': status, 'payload': self._safe(payload), 'raw_response': self._safe(payload), 'attempts': attempts}
-            return {'ok': False, 'query_status': category if category in {'AUTH_REQUIRED', 'PERMISSION_DENIED', 'QUOTA_EXCEEDED'} else 'ERROR',
-                    'error': {'category': category, 'http_status': status}, 'raw_response': self._safe(payload), 'attempts': attempts,
-                    'delivery_uncertain': method == 'POST' and (status >= 500 or category == 'INVALID_API_RESPONSE')}
+            error = {'category': category, 'http_status': status}
+            if provider_code is not None:
+                error['provider_error_code'] = self._safe(provider_code)
+            if retry_after is not None:
+                error['retry_after'] = self._safe(str(retry_after)[:200])
+            if defer_server_retry:
+                error['retry_deferred'] = True
+            result = {'ok': False, 'query_status': category if category in {'AUTH_REQUIRED', 'PERMISSION_DENIED', 'QUOTA_EXCEEDED'} else 'ERROR',
+                      'error': error, 'raw_response': self._safe(payload), 'attempts': attempts,
+                      'delivery_uncertain': method == 'POST' and (status >= 500 or category == 'INVALID_API_RESPONSE')}
+            if category in {'QUOTA_EXCEEDED', 'AUTH_REQUIRED', 'PERMISSION_DENIED'} or defer_server_retry:
+                self.batch_stop = {'operation': operation, 'query_status': result['query_status'], 'error': error,
+                                   'raw_response': result['raw_response'], 'attempts': attempts,
+                                   'checked_at': attempts[-1]['checked_at']}
+            return result
 
     def get_user_sites(self):
         response = self._call('GetUserSites')
@@ -385,7 +426,7 @@ def inspect_urls(entries, client=None, checked_at=None):
     rows = []
     for url in urls:
         response = client.get_url_info(url)
-        row = {'engine': 'bing', 'source': 'official_bing_get_url_info_api' if response['attempts'] else 'not_queried_auth_required',
+        row = {'engine': 'bing', 'source': 'official_bing_get_url_info_api' if response['attempts'] else 'not_queried_quota_blocked' if response['query_status'] == 'NOT_QUERIED_QUOTA_BLOCKED' else 'not_queried_auth_blocked' if response['query_status'] == 'NOT_QUERIED_AUTH_BLOCKED' else 'not_queried_retry_deferred' if response['query_status'] == 'NOT_QUERIED_RETRY_DEFERRED' else 'not_queried_auth_required',
                'url': url, 'checked_at': utc_now() if checked_at is None else stamp,
                'query_success': response['ok'], 'query_status': response['query_status'], 'error': response.get('error'),
                'raw_response': response.get('raw_response'), 'api_attempts': response['attempts']}
@@ -393,7 +434,8 @@ def inspect_urls(entries, client=None, checked_at=None):
         rows.append(row)
     sitemap = sitemap_observation(client, stamp)
     complete = all(r['query_success'] for r in rows) and sites['ok'] and sitemap['query_success']
-    auth_failed = not client.authenticated or any(r['query_status'] == 'AUTH_REQUIRED' for r in rows)
+    auth_failed = not client.authenticated or sites['query_status'] == 'AUTH_REQUIRED' or sitemap['query_status'] == 'AUTH_REQUIRED' or any(r['query_status'] == 'AUTH_REQUIRED' for r in rows)
+    quota_failed = bool(client.batch_stop and client.batch_stop['query_status'] == 'QUOTA_EXCEEDED')
     return {'engine': 'bing', 'schema_version': 1, 'checked_at': stamp, 'property': PROPERTY,
             'source': 'official_bing_webmaster_rest_api', 'authentication': client.authentication,
             'site_access_observation': property_site_observation(sites),
@@ -403,7 +445,9 @@ def inspect_urls(entries, client=None, checked_at=None):
             'api_requests_attempted': len(sites['attempts']) + sum(len(r['api_attempts']) for r in rows) + len(sitemap['attempts']),
             'run_complete': complete,
             'url_queries_complete': all(r['query_success'] for r in rows),
-            'run_status': 'SUCCESS_WITH_UNKNOWN_MEMBERSHIP' if complete else 'AUTH_REQUIRED' if auth_failed else 'PARTIAL_FAILURE',
+            'run_status': 'SUCCESS_WITH_UNKNOWN_MEMBERSHIP' if complete else 'QUOTA_EXCEEDED' if quota_failed else 'AUTH_REQUIRED' if auth_failed else 'PARTIAL_FAILURE',
+            'batch_stop': client.batch_stop, 'request_interval_seconds': client.request_interval,
+            'urls_not_queried_after_block': sum(r['query_status'].startswith('NOT_QUERIED_') for r in rows),
             'sitemap_observation': sitemap,
             'indexing_requested': False, 'live_test_performed': False,
             'membership_note': 'The documented GetUrlInfo API has no definitive index-membership field. Actual returned crawl evidence is retained independently.'}

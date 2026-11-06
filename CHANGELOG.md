@@ -4,6 +4,8 @@ Dates use Asia/Shanghai. First-publication dates refer to this repository's publ
 
 ## 2026-11-06
 
+- **Bing fault handling:** retain sanitized terminal provider faults, distinguish HTTP-400 throttling from indexing evidence, pace serial requests, and stop remaining batch calls after a quota or access block. All planned URL slots remain explicit, including unqueried UNKNOWN results. Runtime provenance separates local baseline collection from GitHub weekly validation.
+
 - **Explicit Bing API key mode:** added owner-approved account-wide API key authentication as an explicit private-workflow opt-in. The program remains fixed to GEO read operations, with no credential-method fallback. Both local OAuth callback registration attempts were rejected; their failure records remain private. Credentials and raw monitoring data are excluded from the public site.
 
 - **Bing authorization setup:** added an owner-completed readonly OAuth helper with private client inputs, exact loopback/state validation, separate native Keychain storage and encrypted private Actions Secret installation. Synthetic checks do not establish provider callback compatibility or actual API authorization. Original experiment data and Google baselines are unchanged.

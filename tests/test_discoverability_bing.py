@@ -14,6 +14,16 @@ spec.loader.exec_module(m)
 STAMP = '2026-11-05T08:00:00+00:00'
 
 
+def setUpModule():
+    global no_real_sleep
+    no_real_sleep = patch.object(m.time, 'sleep', lambda _: None)
+    no_real_sleep.start()
+
+
+def tearDownModule():
+    no_real_sleep.stop()
+
+
 class Transport:
     def __init__(self, responses):
         self.responses = list(responses)
@@ -121,7 +131,7 @@ class ClientTests(unittest.TestCase):
         transport=Transport([(400,{},payload)])
         result=m.BingClient(api_key=secret,requester=transport).get_url_info(m.PROPERTY)
         self.assertFalse(result['ok']);self.assertEqual(result['query_status'],'ERROR')
-        self.assertEqual(result['error'],{'category':'HTTP_ERROR','http_status':400})
+        self.assertEqual(result['error'],{'category':'HTTP_ERROR','http_status':400,'provider_error_code':42})
         self.assertEqual(result['raw_response']['ErrorCode'],42)
         self.assertIn('Unknown URL',result['raw_response']['ErrorMessage'])
         self.assertEqual(result['raw_response']['nested']['request'],'https://ssl.bing.com/api?siteUrl=geo&url=answer')
@@ -159,13 +169,140 @@ class ClientTests(unittest.TestCase):
         self.assertFalse(snapshot['run_complete'])
         self.assertEqual(snapshot['run_status'],'PARTIAL_FAILURE')
 
-    def test_429_retry_is_bounded_and_delay_clamped(self):
+    def test_429_stops_without_immediate_retry_and_preserves_retry_after(self):
         sleeps = []
-        transport = Transport([(429, {'Retry-After': '9999'}, {})]*3)
-        result = m.BingClient('token', requester=transport, sleep=sleeps.append).get_feeds()
+        transport = Transport([(429, {'Retry-After': '9999'}, {})])
+        client=m.BingClient('token', requester=transport, sleep=sleeps.append)
+        result = client.get_feeds()
         self.assertEqual(result['query_status'], 'QUOTA_EXCEEDED')
-        self.assertEqual(sleeps, [30, 30])
-        self.assertEqual(len(transport.calls), 3)
+        self.assertEqual(result['error']['retry_after'],'9999')
+        self.assertEqual(sleeps, [])
+        self.assertEqual(len(transport.calls), 1)
+        self.assertEqual(client.get_url_info(m.PROPERTY)['query_status'],'NOT_QUERIED_QUOTA_BLOCKED')
+        self.assertEqual(len(transport.calls),1)
+
+    def test_provider_throttle_stops_batch_but_preserves_all_seventy_slots(self):
+        for code in (4,5):
+            with self.subTest(code=code):
+                payload={'ErrorCode':code,'Message':'ERROR!!! '+('ThrottleUser'if code==4 else'ThrottleHost')}
+                transport=Transport([ok([{'Url':m.PROPERTY}]),ok({'IsPage':True}),(400,{},payload)])
+                sleeps=[]
+                client=m.BingClient(api_key='synthetic-key',requester=transport,sleep=sleeps.append)
+                urls=[m.PROPERTY]+[m.PROPERTY+'evidence/'+str(i)+'.html'for i in range(69)]
+                result=m.inspect_urls(urls,client,STAMP)
+                self.assertEqual(len(result['results']),70)
+                self.assertEqual(result['queries_succeeded'],1)
+                self.assertEqual(result['api_requests_attempted'],3)
+                self.assertEqual(result['urls_not_queried_after_block'],68)
+                self.assertEqual(result['batch_stop']['raw_response'],payload)
+                self.assertEqual(result['batch_stop']['operation'],'GetUrlInfo')
+                self.assertEqual(result['run_status'],'QUOTA_EXCEEDED')
+                self.assertFalse(result['run_complete'])
+                self.assertEqual(result['counts'],{'INDEXED':0,'NOT_INDEXED':0,'UNKNOWN':70})
+                self.assertEqual(result['results'][1]['query_status'],'QUOTA_EXCEEDED')
+                for row in result['results'][2:]:
+                    self.assertEqual(row['query_status'],'NOT_QUERIED_QUOTA_BLOCKED')
+                    self.assertEqual(row['api_attempts'],[])
+                    self.assertFalse(row['query_success'])
+                    self.assertIsNone(row['raw_response'])
+                self.assertEqual(result['sitemap_observation']['query_status'],'NOT_QUERIED_QUOTA_BLOCKED')
+                self.assertEqual(sleeps,[5,5])
+                self.assertEqual(len(transport.calls),3)
+                self.assertNotIn('retry_after',result['batch_stop']['error'])
+
+    def test_get_user_sites_throttle_prevents_all_url_and_feed_requests(self):
+        payload={'ErrorCode':5,'Message':'ERROR!!! ThrottleHost'}
+        transport=Transport([(200,{},payload)])
+        snapshot=m.inspect_urls([m.PROPERTY,m.PROPERTY+'evidence/answer.html'],m.BingClient(api_key='synthetic-key',requester=transport),STAMP)
+        self.assertEqual(snapshot['run_status'],'QUOTA_EXCEEDED')
+        self.assertEqual(snapshot['api_requests_attempted'],1)
+        self.assertEqual(snapshot['batch_stop']['operation'],'GetUserSites')
+        self.assertEqual(snapshot['batch_stop']['raw_response'],payload)
+        self.assertEqual(snapshot['urls_not_queried_after_block'],2)
+        self.assertEqual(snapshot['sitemap_observation']['attempts'],[])
+        self.assertEqual(len(transport.calls),1)
+
+    def test_get_feeds_throttle_remains_failed_and_records_actual_final_response(self):
+        payload={'ErrorCode':4,'Message':'ERROR!!! ThrottleUser'}
+        transport=Transport([ok([{'Url':m.PROPERTY}]),ok({}),(400,{'Retry-After':'120'},payload)])
+        snapshot=m.inspect_urls([m.PROPERTY],m.BingClient(api_key='synthetic-key',requester=transport),STAMP)
+        self.assertEqual(snapshot['run_status'],'QUOTA_EXCEEDED')
+        self.assertFalse(snapshot['run_complete'])
+        self.assertEqual(snapshot['queries_succeeded'],1)
+        self.assertEqual(snapshot['batch_stop']['operation'],'GetFeeds')
+        self.assertEqual(snapshot['batch_stop']['error']['retry_after'],'120')
+        self.assertEqual(snapshot['sitemap_observation']['raw_response'],payload)
+        self.assertEqual(len(transport.calls),3)
+
+    def test_official_auth_and_permission_fault_codes_stop_duplicate_requests(self):
+        for code,status in ((3,'AUTH_REQUIRED'),(6,'PERMISSION_DENIED'),(13,'PERMISSION_DENIED'),(14,'PERMISSION_DENIED')):
+            with self.subTest(code=code):
+                payload={'ErrorCode':code,'Message':'provider fault'}
+                transport=Transport([(400,{},payload)])
+                snapshot=m.inspect_urls([m.PROPERTY,m.PROPERTY+'evidence/answer.html'],m.BingClient(api_key='synthetic-key',requester=transport),STAMP)
+                self.assertEqual(snapshot['batch_stop']['query_status'],status)
+                self.assertEqual(snapshot['run_status'],'AUTH_REQUIRED'if code==3 else'PARTIAL_FAILURE')
+                self.assertEqual(snapshot['api_requests_attempted'],1)
+                self.assertTrue(all(row['query_status']=='NOT_QUERIED_AUTH_BLOCKED'for row in snapshot['results']))
+                self.assertEqual(len(transport.calls),1)
+
+    def test_unknown_error_two_is_not_retried_or_reclassified(self):
+        payload={'ErrorCode':2,'Message':'ERROR!!! UnknownError'}
+        transport=Transport([ok([{'Url':m.PROPERTY}]),(400,{},payload),ok({}),ok([])])
+        snapshot=m.inspect_urls([m.PROPERTY,m.PROPERTY+'evidence/answer.html'],m.BingClient(api_key='synthetic-key',requester=transport),STAMP)
+        self.assertEqual(snapshot['results'][0]['query_status'],'ERROR')
+        self.assertEqual(snapshot['results'][0]['raw_response'],payload)
+        self.assertEqual(len(snapshot['results'][0]['api_attempts']),1)
+        self.assertIsNone(snapshot['batch_stop'])
+        self.assertEqual(snapshot['run_status'],'PARTIAL_FAILURE')
+        self.assertEqual(len(transport.calls),4)
+
+    def test_serial_pacing_applies_to_all_actual_requests_and_cannot_be_disabled(self):
+        sleeps=[]
+        client=m.BingClient(api_key='synthetic-key',requester=Transport([ok([{'Url':m.PROPERTY}]),ok({}),ok([])]),sleep=sleeps.append)
+        snapshot=m.inspect_urls([m.PROPERTY],client,STAMP)
+        self.assertEqual(sleeps,[5,5])
+        self.assertEqual(snapshot['request_interval_seconds'],5)
+        for interval in (0,1,4.9,61,True,'5',float('nan')):
+            with self.assertRaisesRegex(ValueError,'BING_REQUEST_INTERVAL'):
+                m.BingClient(api_key='synthetic-key',request_interval=interval)
+
+    def test_long_or_date_server_retry_after_defers_remaining_batch_without_early_retry(self):
+        for retry in ('120','Fri, 06 Nov 2026 18:00:00 GMT'):
+            with self.subTest(retry=retry):
+                sleeps=[]
+                transport=Transport([ok([{'Url':m.PROPERTY}]),(503,{'Retry-After':retry},{'message':'busy'})])
+                snapshot=m.inspect_urls([m.PROPERTY,m.PROPERTY+'evidence/answer.html'],m.BingClient(api_key='synthetic-key',requester=transport,sleep=sleeps.append),STAMP)
+                self.assertEqual(len(transport.calls),2)
+                self.assertEqual(sleeps,[5])
+                self.assertEqual(snapshot['batch_stop']['error']['category'],'SERVER_ERROR')
+                self.assertEqual(snapshot['batch_stop']['error']['retry_after'],retry)
+                self.assertTrue(snapshot['batch_stop']['error']['retry_deferred'])
+                self.assertEqual(snapshot['results'][1]['query_status'],'NOT_QUERIED_RETRY_DEFERRED')
+                self.assertEqual(snapshot['results'][1]['api_attempts'],[])
+                self.assertEqual(snapshot['sitemap_observation']['attempts'],[])
+                self.assertEqual(snapshot['run_status'],'PARTIAL_FAILURE')
+
+    def test_lowercase_retry_after_is_honored_without_early_or_later_host_request(self):
+        sleeps=[]
+        transport=Transport([ok([{'Url':m.PROPERTY}]),(503,{'retry-after':'120'},{'message':'busy'})])
+        snapshot=m.inspect_urls([m.PROPERTY,m.PROPERTY+'evidence/answer.html'],m.BingClient(api_key='synthetic-key',requester=transport,sleep=sleeps.append),STAMP)
+        self.assertEqual(len(transport.calls),2)
+        self.assertEqual(sleeps,[5])
+        self.assertEqual(snapshot['batch_stop']['error']['retry_after'],'120')
+        self.assertTrue(snapshot['batch_stop']['error']['retry_deferred'])
+        self.assertEqual(snapshot['results'][1]['query_status'],'NOT_QUERIED_RETRY_DEFERRED')
+        self.assertEqual(snapshot['sitemap_observation']['attempts'],[])
+        self.assertFalse(snapshot['run_complete'])
+
+    def test_unknown_error_two_is_not_retried_even_with_server_http_status(self):
+        payload={'ErrorCode':2,'Message':'ERROR!!! UnknownError'}
+        transport=Transport([(503,{},payload)])
+        result=m.BingClient(api_key='synthetic-key',requester=transport).get_url_info(m.PROPERTY)
+        self.assertEqual(result['query_status'],'ERROR')
+        self.assertEqual(result['error']['category'],'API_FAULT')
+        self.assertEqual(result['raw_response'],payload)
+        self.assertEqual(len(transport.calls),1)
 
     def test_transient_server_and_network_retry_without_raw_error(self):
         transport = Transport([URLError('private-token-in-url'), (503, {}, {}), ok([])])
