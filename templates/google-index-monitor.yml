@@ -42,7 +42,10 @@ jobs:
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          # Explicit opt-in; a present API key never changes the OAuth default.
+          BING_AUTH_METHOD: ${{ vars.BING_AUTH_METHOD || 'oauth' }}
           BING_OAUTH_CREDENTIALS: ${{ secrets.BING_OAUTH_CREDENTIALS }}
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
         run: python3 scripts/discoverability_actions.py --output state
       - name: Persist private history even after an authorization or API failure
         if: always() && steps.checkout.outcome == 'success'

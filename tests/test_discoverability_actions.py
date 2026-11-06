@@ -297,4 +297,140 @@ class SafeEngineEventTests(unittest.TestCase):
         b=m.google.safe_event(dict(common,engine='google'),{U})
         self.assertNotEqual(a['fingerprint'],b['fingerprint'])
 
+class RenderedReportHistoryTests(unittest.TestCase):
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name)
+        self.folder=self.root/'discoverability';self.folder.mkdir()
+    def tearDown(self):self.temp.cleanup()
+    def generate(self, bing=None, **receipt_values):
+        with patch.object(m,'now',return_value=T2):
+            return m.report(self.root,inventory(),bing or bing_snapshot(),openai_snapshot(),receipt(**receipt_values))
+
+    def test_successful_feed_report_does_not_claim_registration_unconfirmed(self):
+        bing=bing_snapshot()
+        bing['sitemap_observation']={'checked_at':T1,'query_status':'SUCCESS','query_success':True,'registered':True,'processing_status':'Success'}
+        summary=self.generate(bing)
+        text=(self.folder/'report.zh-CN.md').read_text()
+        self.assertIn('registered=True',text)
+        self.assertNotIn('\u7f3a\u6388\u6743\u65f6\u5c1a\u672a\u786e\u8ba4\u6ce8\u518c',text)
+        self.assertIn('API \u67e5\u8be2\u4e0e\u4eba\u5de5\u5bfc\u5165\u8bc1\u636e\u5206\u5f00\u8bb0\u5f55',text)
+        self.assertTrue((self.folder/summary['report_snapshot']).is_file())
+
+    def test_preexisting_manual_appendices_and_generated_reports_are_preserved(self):
+        previous='Historical report\n\nOwner-confirmed import and failed OAuth notes.\n'
+        (self.folder/'report.zh-CN.md').write_text(previous)
+        first=self.generate()
+        first_path=self.folder/first['report_snapshot'];first_bytes=first_path.read_bytes()
+        second=self.generate(status='NO_CHANGES')
+        self.assertEqual(first_path.read_bytes(),first_bytes)
+        reports=list((self.folder/'report-snapshots').glob('*.zh-CN.md'))
+        self.assertEqual(len(reports),3)
+        preserved=next(path for path in reports if path.name.startswith('preserved-at-'))
+        self.assertEqual(preserved.read_text(),previous)
+        metadata=json.loads(preserved.with_name(preserved.name.replace('.zh-CN.md','.json')).read_text())
+        self.assertEqual(metadata['preserved_at'],T2)
+        self.assertIsNone(metadata['original_generation_time'])
+        self.generate(status='NO_CHANGES')
+        self.assertEqual(len(list((self.folder/'report-snapshots').glob('*.zh-CN.md'))),3)
+        self.assertEqual((self.folder/'report.zh-CN.md').read_bytes(),(self.folder/second['report_snapshot']).read_bytes())
+
+    def test_immutable_metadata_collision_fails_without_overwriting(self):
+        summary={'checked_at':T2,'counts':{'UNKNOWN':1}}
+        m.persist_report(self.folder,'Exact report',summary)
+        original={p.name:p.read_bytes()for p in(self.folder/'report-snapshots').iterdir()}
+        with self.assertRaisesRegex(ValueError,'REPORT_SNAPSHOT_ALREADY_EXISTS'):
+            m.persist_report(self.folder,'Exact report',dict(summary,counts={'UNKNOWN':2}))
+        self.assertEqual({p.name:p.read_bytes()for p in(self.folder/'report-snapshots').iterdir()},original)
+        self.assertEqual((self.folder/'report.zh-CN.md').read_text(),'Exact report')
+
+
+class BingAuthenticationSelectionTests(unittest.TestCase):
+    def probe(self, env, response=None):
+        from urllib.parse import urlsplit
+        from discoverability_bing import BingClient
+        calls=[];clients=[]
+        def transport(method,url,headers,body,timeout):
+            calls.append((method,url,headers,body))
+            operation=urlsplit(url).path.rsplit('/',1)[-1]
+            payload=({'d':[{'Url':P},{'Url':'https://private.example/'}]} if operation=='GetUserSites'
+                     else {'d':[{'Url':P+'sitemap.xml','Status':'Success'}]} if operation=='GetFeeds'
+                     else {'d':{'Url':U,'LastCrawledDate':'2026-11-06T08:00:00Z'}})
+            return response or (200,{},payload)
+        def construct(*args,**kwargs):
+            client=BingClient(*args,**kwargs,requester=transport,sleep=lambda _:None)
+            clients.append(client);return client
+        with patch.dict(m.os.environ,env,clear=True),patch.object(m,'BingClient',side_effect=construct),patch.object(m,'refresh_bing_oauth',return_value='synthetic-oauth')as refresh:
+            result=m.bing_monitor_probe([{'url':U}])
+        return result,calls,clients,refresh
+
+    def test_default_oauth_ignores_present_api_key(self):
+        result,calls,clients,refresh=self.probe({'BING_API_KEY':'synthetic-broader-key'})
+        refresh.assert_called_once_with()
+        self.assertEqual(result['configured_authentication_method'],'oauth')
+        self.assertEqual(result['authentication']['method'],'oauth_bearer')
+        self.assertTrue(all('apikey='not in call[1] for call in calls))
+
+    def test_explicit_api_key_only_reads_fixed_geo_and_filters_other_sites(self):
+        from urllib.parse import urlsplit,parse_qs
+        key='synthetic-bing-key'
+        result,calls,clients,refresh=self.probe({'BING_AUTH_METHOD':'api_key','BING_API_KEY':key})
+        refresh.assert_not_called()
+        self.assertEqual(result['run_status'],'SUCCESS_WITH_UNKNOWN_MEMBERSHIP')
+        self.assertEqual(result['configured_authentication_method'],'api_key')
+        self.assertFalse(result['authentication']['readonly_scoped'])
+        self.assertFalse(result['program_access']['write_enabled'])
+        self.assertEqual({urlsplit(call[1]).path.rsplit('/',1)[-1]for call in calls},{'GetUserSites','GetUrlInfo','GetFeeds'})
+        for method,url,headers,body in calls:
+            self.assertEqual(method,'GET');self.assertIsNone(body)
+            self.assertEqual(urlsplit(url).netloc,'ssl.bing.com')
+            query=parse_qs(urlsplit(url).query)
+            self.assertEqual(query['apikey'],[key])
+            if 'siteUrl'in query:self.assertEqual(query['siteUrl'],[P])
+            if 'url'in query:self.assertEqual(query['url'],[U])
+        self.assertNotIn('private.example',json.dumps(result))
+        self.assertNotIn(key,json.dumps(result))
+        self.assertTrue(all(client.allow_write is False for client in clients))
+        count=len(calls)
+        self.assertEqual(clients[-1].submit_feed()['error']['category'],'WRITE_AUTHORIZATION_REQUIRED')
+        self.assertEqual(len(calls),count)
+
+    def test_missing_selected_api_key_does_not_fall_back_to_oauth(self):
+        result,calls,clients,refresh=self.probe({'BING_AUTH_METHOD':'api_key','BING_OAUTH_CREDENTIALS':'present-but-unselected'})
+        refresh.assert_not_called();self.assertEqual(calls,[])
+        self.assertEqual(result['run_status'],'AUTH_REQUIRED')
+        self.assertEqual(result['authorization_error']['category'],'AUTH_REQUIRED')
+
+    def test_invalid_api_key_is_safe_and_never_used(self):
+        secret='synthetic-secret\n::injected'
+        result,calls,clients,refresh=self.probe({'BING_AUTH_METHOD':'api_key','BING_API_KEY':secret})
+        refresh.assert_not_called();self.assertEqual(calls,[])
+        self.assertEqual(result['authorization_error']['category'],'INVALID_API_KEY_SECRET')
+        self.assertNotIn('synthetic-secret',json.dumps(result))
+
+    def test_invalid_auth_mode_is_safe_and_never_falls_back(self):
+        result,calls,clients,refresh=self.probe({'BING_AUTH_METHOD':'private-untrusted-value','BING_API_KEY':'synthetic-key'})
+        refresh.assert_not_called();self.assertEqual(calls,[])
+        self.assertEqual(result['configured_authentication_method'],'INVALID')
+        self.assertEqual(result['authorization_error']['category'],'UNSUPPORTED_BING_AUTH_METHOD')
+        self.assertNotIn('private-untrusted-value',json.dumps(result))
+
+    def test_rejected_api_key_never_exposes_provider_text_or_falls_back(self):
+        key='synthetic-rejected-key'
+        result,calls,clients,refresh=self.probe({'BING_AUTH_METHOD':'api_key','BING_API_KEY':key},response=(403,{}, {'ErrorMessage':key,'apiKey':key}))
+        refresh.assert_not_called()
+        self.assertFalse(result['run_complete'])
+        self.assertNotIn(key,json.dumps(result))
+        self.assertTrue(all(row['index_status']=='UNKNOWN'for row in result['results']))
+
+    def test_foreign_url_is_rejected_before_any_api_request(self):
+        from discoverability_bing import BingClient
+        calls=[]
+        def construct(*args,**kwargs):
+            return BingClient(*args,**kwargs,requester=lambda *args:calls.append(args))
+        with patch.dict(m.os.environ,{'BING_AUTH_METHOD':'api_key','BING_API_KEY':'synthetic-key'},clear=True),patch.object(m,'BingClient',side_effect=construct):
+            with self.assertRaisesRegex(ValueError,'URL_OUTSIDE_APPROVED_PROPERTY'):
+                m.bing_monitor_probe([{'url':'https://other.example/'}])
+        self.assertEqual(calls,[])
+
+
 if __name__=='__main__':unittest.main()
