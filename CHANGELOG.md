@@ -2,6 +2,10 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-06
+
+- **Bing authorization setup:** added an owner-completed readonly OAuth helper with private client inputs, exact loopback/state validation, separate native Keychain storage and encrypted private Actions Secret installation. Synthetic checks do not establish provider callback compatibility or actual API authorization. Original experiment data and Google baselines are unchanged.
+
 ## 2026-11-05
 
 - **Multi-engine monitoring:** added separate Bing Webmaster observations, OpenAI search crawl-eligibility probes and change-only IndexNow notifications under the existing private weekly workflow. The public IndexNow ownership file uses explicit project-scoped keyLocation. Existing Google data and one-time Sitemap ledger are preserved. Missing authorization or unverifiable index/crawl membership remains UNKNOWN; no AI-answer experiment was run.

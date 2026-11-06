@@ -16,6 +16,18 @@ Use the official Bing Webmaster Tools interface. Prefer **Import from Google Sea
 
 For API automation, prefer a Bing OAuth client with the official `Webmaster.read` scope. The encrypted private Actions Secret is `BING_OAUTH_CREDENTIALS`, containing authorized-user fields `type`, `client_id`, `client_secret`, `refresh_token`, and `scopes`. Do not put these values in a repository, Issue, command argument or chat. The runtime refreshes against the official token endpoint, masks its ephemeral token, and restricts API calls to the fixed GEO property. Unexpected scope changes or refresh-token rotation require secure operator review.
 
+The local [Bing authorization helper](../scripts/bing_webmaster_auth.py) accepts a private client JSON outside the public checkout, with file permissions 0600 and fields `client_id`, `client_secret`, and the exact registered `redirect_uri`. Its callback is restricted to `http://127.0.0.1:<registered-port>/oauth2callback`; it validates the callback Host and strong state before a single token exchange. Whether Bing accepts this loopback registration and returns state must be established by the actual owner-completed flow, not by synthetic tests. The helper fails closed rather than dropping those checks or assuming undocumented PKCE support.
+
+Run from the public checkout, using private paths outside it:
+
+```sh
+python3 scripts/bing_webmaster_auth.py authorize --client-file /path/to/private/bing-client.json --url-file /path/to/private/bing-consent-url.txt --timeout 900
+python3 scripts/bing_webmaster_auth.py check-monitor-credential
+python3 scripts/bing_webmaster_auth.py configure-github-secret --repository helen-bird/geo-index-monitor
+```
+
+The first command writes the consent URL only to the private file; open it in the owner's browser and have the owner review the readonly grant. It never prints authorization codes or token values. A successful grant is stored under the separate native Keychain service `geo-lab-bing-webmaster`; Secret installation uses stdin and verifies the exact private repository has Pages disabled. Google credentials remain unchanged. Do not claim API readiness until an actual authorized query succeeds.
+
 An API key is an alternative supported by Bing, but is account-wide and can cover all verified sites; it must not be represented as a readonly, site-only credential. The weekly workflow does not install that broader method by default.
 
 The official JSON REST methods used are `GetUserSites`, `GetUrlInfo`, and `GetFeeds`. The documented `GetUrlInfo` fields do not include an unambiguous index-membership verdict. `IsPage`, HTTP 200, document size and crawl times are not treated as proof of indexing. Thus even successful API observations retain `index_status: UNKNOWN`, alongside actual discovery/crawl fields. If membership is needed, record the official Bing **URL Inspection → Index** observation separately; the Live URL test is a different operation.
