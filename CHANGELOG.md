@@ -4,6 +4,8 @@ Dates use Asia/Shanghai. First-publication dates refer to this repository's publ
 
 ## 2026-11-06
 
+- **Lab #05 v1.1:** appended dated evidence for the expanded 12/72 URL monitor, successful combined run, 11 genuine IndexNow change notifications accepted with HTTP 202 (key validation pending), corrective Google Sitemap submission and seven acknowledged Google indexing requests. Initial counts and failed runs remain preserved; request acceptance does not establish indexing.
+
 - **Lab #05 v1.0:** published a technical learning record with reviewed aggregate observations, methods and explicit indexing/crawler evidence limits. Added two genuine editorial routes and a fifth Learning Hub entry; the original four AI experiments and 60 response archives are preserved. The Sitemap and monitored inventory grow to 12 editorial and 72 canonical routes after this publication.
 - **Monitoring completion work:** added an IndexNow-only validation path with deployment-gated change notifications and fixed delayed first-deployment handling. The owner approved ten-second Bing spacing for the existing weekly workflow; its Monday schedule is unchanged.
 
