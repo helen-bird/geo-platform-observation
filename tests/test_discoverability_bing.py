@@ -107,7 +107,57 @@ class ClientTests(unittest.TestCase):
             result = m.BingClient('token', requester=transport).get_user_sites()
             self.assertEqual(result['query_status'], category)
             self.assertEqual(len(transport.calls), 1)
-            self.assertNotIn('private-value', json.dumps(result))
+            self.assertEqual(result['raw_response'], {'error': 'private-value'})
+
+    def test_terminal_http_fault_preserves_diagnostics_with_credentials_removed(self):
+        secret='synthetic/key+secret'
+        payload={'ErrorCode':42,'ErrorMessage':'Unknown URL; credential '+secret,
+                 'apiKey':secret,'nested':{'client_secret':'never-retain',
+                 'request':'https://ssl.bing.com/api?siteUrl=geo&apiKey='+secret+'&url=answer',
+                 'first':'https://ssl.bing.com/api?apikey='+secret+'&url=answer',
+                 'only':'https://ssl.bing.com/api?apikey='+secret,
+                 'adjacent':'https://ssl.bing.com/api?apikey='+secret+'&apiKey='+secret+'&url=answer',
+                 'encoded':'synthetic%2Fkey%2Bsecret'}}
+        transport=Transport([(400,{},payload)])
+        result=m.BingClient(api_key=secret,requester=transport).get_url_info(m.PROPERTY)
+        self.assertFalse(result['ok']);self.assertEqual(result['query_status'],'ERROR')
+        self.assertEqual(result['error'],{'category':'HTTP_ERROR','http_status':400})
+        self.assertEqual(result['raw_response']['ErrorCode'],42)
+        self.assertIn('Unknown URL',result['raw_response']['ErrorMessage'])
+        self.assertEqual(result['raw_response']['nested']['request'],'https://ssl.bing.com/api?siteUrl=geo&url=answer')
+        self.assertEqual(result['raw_response']['nested']['first'],'https://ssl.bing.com/api?url=answer')
+        self.assertEqual(result['raw_response']['nested']['only'],'https://ssl.bing.com/api')
+        self.assertEqual(result['raw_response']['nested']['adjacent'],'https://ssl.bing.com/api?url=answer')
+        serialized=json.dumps(result)
+        for forbidden in (secret,'never-retain','synthetic%2Fkey%2Bsecret','apiKey=','apikey='):
+            self.assertNotIn(forbidden,serialized)
+        self.assertEqual(len(transport.calls),1)
+
+    def test_api_fault_with_success_http_remains_error_and_retains_safe_body(self):
+        secret='synthetic-bearer-token'
+        payload={'d':{'ErrorCode':7,'ErrorMessage':'URL unavailable; '+secret,
+                      'Authorization':'Bearer '+secret,'url':'https://example.test/?access_token='+secret}}
+        result=m.BingClient(secret,requester=Transport([(200,{},payload)])).get_url_info(m.PROPERTY)
+        self.assertFalse(result['ok']);self.assertEqual(result['query_status'],'ERROR')
+        self.assertEqual(result['error']['category'],'API_FAULT')
+        self.assertEqual(result['raw_response']['d']['ErrorCode'],7)
+        self.assertNotIn(secret,json.dumps(result))
+        self.assertNotIn('Authorization',result['raw_response']['d'])
+        self.assertNotIn('access_token=',json.dumps(result))
+        self.assertNotIn('payload',result)
+
+    def test_failed_url_body_never_becomes_index_or_crawl_evidence(self):
+        payload={'d':{'ErrorCode':9,'ErrorMessage':'not available','IsPage':True,'LastCrawledDate':STAMP}}
+        transport=Transport([ok([{'Url':m.PROPERTY}]),(400,{},payload),ok([])])
+        snapshot=m.inspect_urls([m.PROPERTY],m.BingClient(api_key='synthetic-key',requester=transport),STAMP)
+        row=snapshot['results'][0]
+        self.assertEqual(row['raw_response'],payload)
+        self.assertEqual(row['query_status'],'ERROR')
+        self.assertEqual(row['index_status'],'UNKNOWN')
+        self.assertEqual(row['lifecycle'],'UNKNOWN')
+        self.assertIsNone(row['last_crawl_time'])
+        self.assertFalse(snapshot['run_complete'])
+        self.assertEqual(snapshot['run_status'],'PARTIAL_FAILURE')
 
     def test_429_retry_is_bounded_and_delay_clamped(self):
         sleeps = []
@@ -129,7 +179,7 @@ class ClientTests(unittest.TestCase):
             transport = Transport([(200, {}, payload)])
             result = m.BingClient('token', requester=transport).get_url_info(m.PROPERTY)
             self.assertFalse(result['ok'])
-            self.assertNotIn('private', json.dumps(result))
+            self.assertEqual(result['raw_response'], payload)
 
     def test_read_observations_are_separate_and_never_submit(self):
         transport = Transport([ok([{'Url': m.PROPERTY}]), ok({'IsPage': True, 'LastCrawledDate': STAMP}), ok([feed()])])

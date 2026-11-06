@@ -22,7 +22,7 @@ import ssl
 import subprocess
 import time
 from urllib.error import HTTPError, URLError
-from urllib.parse import unquote, urlencode, urlsplit
+from urllib.parse import quote, quote_plus, unquote, urlencode, urlsplit
 from urllib.request import HTTPRedirectHandler, HTTPSHandler, Request, build_opener
 
 PROPERTY = 'https://helen-bird.github.io/geo-platform-observation/'
@@ -250,9 +250,18 @@ class BingClient:
         if isinstance(value, list):
             return [self._safe(v) for v in value]
         if isinstance(value, str):
+            # Provider faults may echo a full request URL. Remove credential
+            # query parameters entirely, not just their values: durable-state
+            # scanning rejects even a redacted apiKey query parameter.
+            pattern = r'([?&])(?:apikey|api_key|access_token|refresh_token|client_secret|authorization)=[^&\s"<>]*(&?)'
+            # Re-run for adjacent credential parameters whose separating '&'
+            # was consumed by the previous substitution.
+            while re.search(pattern, value, flags=re.I):
+                value = re.sub(pattern, lambda match: match.group(1) if match.group(2) else '', value, flags=re.I)
             for secret in (self._access_token, self._api_key):
                 if secret:
-                    value = value.replace(secret, '[REDACTED]')
+                    for encoded in {secret, quote(secret, safe=''), quote_plus(secret, safe='')}:
+                        value = value.replace(encoded, '[REDACTED]')
             return value
         return value
 
@@ -305,7 +314,7 @@ class BingClient:
             else:
                 return {'ok': True, 'query_status': 'SUCCESS', 'http_status': status, 'payload': self._safe(payload), 'raw_response': self._safe(payload), 'attempts': attempts}
             return {'ok': False, 'query_status': category if category in {'AUTH_REQUIRED', 'PERMISSION_DENIED', 'QUOTA_EXCEEDED'} else 'ERROR',
-                    'error': {'category': category, 'http_status': status}, 'raw_response': None, 'attempts': attempts,
+                    'error': {'category': category, 'http_status': status}, 'raw_response': self._safe(payload), 'attempts': attempts,
                     'delivery_uncertain': method == 'POST' and (status >= 500 or category == 'INVALID_API_RESPONSE')}
 
     def get_user_sites(self):
