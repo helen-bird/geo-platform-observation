@@ -54,18 +54,25 @@ def main():
             if name.startswith(('stages/03-question-sensitivity/', 'stages/04-creator-benchmark/', 'evidence/stage-03/', 'evidence/stage-04/')) and label in {'personal X context', 'excluded personal plans'}:
                 continue
             assert not re.search(pattern, value, re.I), (name, label)
+    interim = DIST / 'reviews/interim-review/historical-replication'
     page_paths = [DIST / name for name in ['index.html','technical-appendix.html',
         'stages/02-post-discovery/index.html','stages/02-post-discovery/technical-appendix.html',
         'stages/03-question-sensitivity/index.html','stages/03-question-sensitivity/technical-appendix.html',
         'stages/04-creator-benchmark/index.html','stages/04-creator-benchmark/technical-appendix.html',
         'stages/05-technical-discoverability/index.html','stages/05-technical-discoverability/technical-appendix.html']]
+    page_paths += [interim / name for name in ('index.html', 'technical-appendix.html')]
     pages = {}
     for path in page_paths:
         page = Page(); document = path.read_text(); page.feed(document); pages[path.resolve()] = page
         assert page.language == 'en', 'Report language must be English'
         assert all(page.details), 'All evidence details must remain expanded'
-        assert 'data-report-series="v1"' in document and 'id="report-version"' in document
-        assert all(label in document for label in ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity','#04 · Creator Benchmark','#05 · Technical Discoverability'])
+        if path.parent == interim:
+            assert 'GEO Lab Interim Review · Part 1' in document
+            if path.name == 'index.html':
+                assert {'hypotheses', 'validation', 'conclusions'} <= page.ids
+        else:
+            assert 'data-report-series="v1"' in document and 'id="report-version"' in document
+            assert all(label in document for label in ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity','#04 · Creator Benchmark','#05 · Technical Discoverability'])
         if path.name == 'index.html':
             assert path.stat().st_size < 100_000, 'Keep full evidence in the appendix'
     assert len(pages[(DIST/'technical-appendix.html').resolve()].details) >= 150
@@ -122,6 +129,8 @@ def main():
     check_stage4_publication.main()
     import check_stage5_publication
     check_stage5_publication.main()
+    import build_interim_review
+    build_interim_review.check()
     import build_learning_hub
     build_learning_hub.check()
     import check_site_metadata

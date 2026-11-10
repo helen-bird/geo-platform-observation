@@ -1,0 +1,93 @@
+{
+  "answers": 300,
+  "answers_with_visible_final_citation_domains": {
+    "GROK": 38,
+    "OPENAI": 132
+  },
+  "attempts": 310,
+  "discovery_success_out_of_15": {
+    "GROK": {
+      "A": 15,
+      "B": 0,
+      "C": 0
+    },
+    "OPENAI": {
+      "A": 0,
+      "B": 11,
+      "C": 0
+    }
+  },
+  "grok_q1_artur_name_mentions": 0,
+  "grok_q1_the_geo_lab_recommendations": 15,
+  "historical_answers": 60,
+  "q3_overlap": {
+    "full_intersection": 3,
+    "full_union": 65,
+    "matched_n2_below_25_pct": 105,
+    "matched_n2_median": 0.045454545454545456,
+    "matched_n2_subsets": 105,
+    "matched_n3_max": 0.15789473684210525
+  },
+  "rate_sensitivity": {
+    "artur_or_work_grok_q3": {
+      "first10_n3": {
+        "max": 1.0,
+        "min": 0.0,
+        "over_10_pp": 57,
+        "over_20_pp": 57,
+        "subsets": 120
+      },
+      "full_count": 4,
+      "full_n": 15,
+      "n10": {
+        "max": 0.4,
+        "min": 0.0,
+        "over_10_pp": 693,
+        "over_20_pp": 11,
+        "subsets": 3003
+      },
+      "n3": {
+        "max": 1.0,
+        "min": 0.0,
+        "over_10_pp": 235,
+        "over_20_pp": 235,
+        "subsets": 455
+      }
+    },
+    "exact_quote_openai": {
+      "first10_n3": {
+        "max": 1.0,
+        "min": 0.0,
+        "over_10_pp": 60,
+        "over_20_pp": 60,
+        "subsets": 120
+      },
+      "full_count": 11,
+      "full_n": 15,
+      "n10": {
+        "max": 1.0,
+        "min": 0.6,
+        "over_10_pp": 693,
+        "over_20_pp": 11,
+        "subsets": 3003
+      },
+      "n3": {
+        "max": 1.0,
+        "min": 0.0,
+        "over_10_pp": 235,
+        "over_20_pp": 235,
+        "subsets": 455
+      }
+    }
+  },
+  "submissions": 305,
+  "terminal_outcomes": {
+    "COMPLETED": 300,
+    "COMPLETE_MODE_DEVIATION": 1,
+    "CREDENTIAL_UNAVAILABLE_NOT_SENT": 1,
+    "PREPARATION_CLOSED_WITHOUT_SUBMISSION": 1,
+    "PRE_HTTP_CONNECT_NOT_SENT": 3,
+    "UNKNOWN_COST": 1,
+    "UNKNOWN_OUTCOME": 3
+  }
+}

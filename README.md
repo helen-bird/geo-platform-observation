@@ -20,6 +20,10 @@ New stages will be added as learning and experiments are completed. Each stage d
 
 > Stages 3 and 4 use the **Responses API with web search**, not the ChatGPT consumer website or app. Their OpenAI results cannot represent ChatGPT web/app performance. Each stage records its actual collection conditions and limits rather than treating different interfaces as equivalent.
 
+## Interim review
+
+**Part 1 · Historical replication and sample-size sensitivity** revisits Labs #01–#04 with 300 new answers. It records which findings recur and how results change when three or ten answers are kept. [GitHub experiment record](reviews/interim-review/historical-replication/) · [Public report](https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/) · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/technical-appendix.html) · [Redacted data](reviews/interim-review/historical-replication/public-data.zip)
+
 ## Revisions and evidence
 
 [Report versions](report-versions.json) · [Changelog](CHANGELOG.md) · [Stage 1 / Stage 2 review decisions](reviews/2026-11-02-stages-01-02.md) · [Stage 4 review decisions](reviews/2026-11-03-stage04.md)

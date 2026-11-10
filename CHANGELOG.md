@@ -2,6 +2,10 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-10
+
+- **Interim Review, Part 1 v1.0:** published the historical replication and sample-size analysis, with 300 redacted selected answers, all attempt outcomes, normalized measurements and twelve historical claim decisions. The five original learning records retain their numbering and data.
+
 ## 2026-11-06
 
 - **Lab #05 v1.1:** appended dated evidence for the expanded 12/72 URL monitor, successful combined run, 11 genuine IndexNow change notifications accepted with HTTP 202 (key validation pending), corrective Google Sitemap submission and seven acknowledged Google indexing requests. Initial counts and failed runs remain preserved; request acceptance does not establish indexing.

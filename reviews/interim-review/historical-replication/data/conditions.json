@@ -1,0 +1,208 @@
+[
+  {
+    "condition_id": "S6-Q1-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "01",
+      "04"
+    ],
+    "prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+    "target_valid_answers": 15,
+    "task_id": "Q1"
+  },
+  {
+    "condition_id": "S6-Q1-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "01",
+      "04"
+    ],
+    "prompt": "What are the best free resources to learn Generative Engine Optimization (GEO) in 2026? Include sources when available.",
+    "target_valid_answers": 15,
+    "task_id": "Q1"
+  },
+  {
+    "condition_id": "S6-Q2-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "01",
+      "04"
+    ],
+    "prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+    "target_valid_answers": 15,
+    "task_id": "Q2"
+  },
+  {
+    "condition_id": "S6-Q2-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "01",
+      "04"
+    ],
+    "prompt": "What credible experiments have measured whether GEO tactics increase AI brand mentions or recommendations? Include sources when available.",
+    "target_valid_answers": 15,
+    "task_id": "Q2"
+  },
+  {
+    "condition_id": "S6-Q3-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "01",
+      "04"
+    ],
+    "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+    "target_valid_answers": 15,
+    "task_id": "Q3"
+  },
+  {
+    "condition_id": "S6-Q3-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "01",
+      "04"
+    ],
+    "prompt": "Who publishes practical, data-backed GEO tutorials for independent builders? Explain why and include sources when available.",
+    "target_valid_answers": 15,
+    "task_id": "Q3"
+  },
+  {
+    "condition_id": "S6-A-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "02"
+    ],
+    "prompt": "Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+    "target_valid_answers": 15,
+    "task_id": "A"
+  },
+  {
+    "condition_id": "S6-A-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "02"
+    ],
+    "prompt": "Read this public X post: https://x.com/bird_helen67403/status/2116080254523445676\n\nSummarize two specific experimental findings from the post. Provide the original URL as a source. If you cannot access the actual post content, say so explicitly. Do not infer or invent findings.",
+    "target_valid_answers": 15,
+    "task_id": "A"
+  },
+  {
+    "condition_id": "S6-B-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "02"
+    ],
+    "prompt": "Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+    "target_valid_answers": 15,
+    "task_id": "B"
+  },
+  {
+    "condition_id": "S6-B-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "02"
+    ],
+    "prompt": "Search the web and X for the original public post containing this exact sentence:\n\n\"the two platforms shared only 2 of 20 unique recommended entities \u2014 about 10% overlap.\"\n\nReturn the original X post URL and author. Verify the link matches the quoted text. If you cannot find it, say so explicitly.",
+    "target_valid_answers": 15,
+    "task_id": "B"
+  },
+  {
+    "condition_id": "S6-C-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "02"
+    ],
+    "prompt": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+    "target_valid_answers": 15,
+    "task_id": "C"
+  },
+  {
+    "condition_id": "S6-C-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "02"
+    ],
+    "prompt": "Can you find independent builders who have published original experiments comparing GEO recommendations across ChatGPT Search and Grok?\n\nInclude direct links to their experiments, explain their methodology and sample sizes, and distinguish verified experiments from general opinions.",
+    "target_valid_answers": 15,
+    "task_id": "C"
+  },
+  {
+    "condition_id": "S6-M1-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "03"
+    ],
+    "prompt": "I'm a solo SaaS founder with no GEO budget. How can I reliably measure whether ChatGPT and Grok recommend my product to potential buyers?",
+    "target_valid_answers": 15,
+    "task_id": "M1"
+  },
+  {
+    "condition_id": "S6-M1-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "03"
+    ],
+    "prompt": "I'm a solo SaaS founder with no GEO budget. How can I reliably measure whether ChatGPT and Grok recommend my product to potential buyers?",
+    "target_valid_answers": 15,
+    "task_id": "M1"
+  },
+  {
+    "condition_id": "S6-M2-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "03"
+    ],
+    "prompt": "As a bootstrapped SaaS builder, what's a free, repeatable workflow for checking whether my product appears in ChatGPT and Grok recommendations?",
+    "target_valid_answers": 15,
+    "task_id": "M2"
+  },
+  {
+    "condition_id": "S6-M2-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "03"
+    ],
+    "prompt": "As a bootstrapped SaaS builder, what's a free, repeatable workflow for checking whether my product appears in ChatGPT and Grok recommendations?",
+    "target_valid_answers": 15,
+    "task_id": "M2"
+  },
+  {
+    "condition_id": "S6-V1-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "03"
+    ],
+    "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+    "target_valid_answers": 15,
+    "task_id": "V1"
+  },
+  {
+    "condition_id": "S6-V1-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "03"
+    ],
+    "prompt": "I'm a solo SaaS founder with no GEO budget. How can I tell whether an AI visibility score for ChatGPT and Grok is trustworthy?",
+    "target_valid_answers": 15,
+    "task_id": "V1"
+  },
+  {
+    "condition_id": "S6-V2-OPENAI",
+    "environment_id": "OPENAI",
+    "historical_lessons": [
+      "03"
+    ],
+    "prompt": "As a bootstrapped SaaS builder, what checks should I perform before trusting reported ChatGPT and Grok visibility scores for my product?",
+    "target_valid_answers": 15,
+    "task_id": "V2"
+  },
+  {
+    "condition_id": "S6-V2-GROK",
+    "environment_id": "GROK",
+    "historical_lessons": [
+      "03"
+    ],
+    "prompt": "As a bootstrapped SaaS builder, what checks should I perform before trusting reported ChatGPT and Grok visibility scores for my product?",
+    "target_valid_answers": 15,
+    "task_id": "V2"
+  }
+]

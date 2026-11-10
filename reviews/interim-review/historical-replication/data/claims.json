@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "H01-Q3-OVERLAP",
+    "observed_result": "105/105 matched n=2 subsets below 0.50 and 0.25. Full panel 3 shared of 65 units.",
+    "status": "SUPPORTED"
+  },
+  {
+    "claim_id": "H01-REPEAT-VARIATION",
+    "observed_result": "Every Q1\u2013Q3 condition had unequal evaluable recommendation sets. Q3 had 105/105 unequal pairs per environment. Citation-domain variation is recorded separately.",
+    "status": "OBSERVED"
+  },
+  {
+    "claim_id": "H01-CMR-SEPARATION",
+    "observed_result": "Typed discordant C/M/R patterns observed, including 42 citation-only API Q3 entity-answer rows out of 319.",
+    "status": "REPRODUCED"
+  },
+  {
+    "claim_id": "H02-DISCOVERY-GRADIENT",
+    "observed_result": "Grok A\u2212B and A\u2212C both +100 pp. API A\u2212B \u221273.3 pp and A\u2212C 0 pp. The API B matches used the public archive.",
+    "status": "MIXED"
+  },
+  {
+    "claim_id": "H02-ACCESS-NOT-DISCOVERY",
+    "observed_result": "Grok read the original in 15/15 A answers and did not find the original in 15/15 C answers. API had zero direct A successes.",
+    "status": "OBSERVED_IN_GROK"
+  },
+  {
+    "claim_id": "H03-REPEAT-VARIATION",
+    "observed_result": "Repeat tool lists differed in evaluable cells. OpenAI V2 has 15 known empty strict sets. Pairwise coverage and empty unions are tracked.",
+    "status": "OBSERVED_IN_EVALUABLE_CELLS"
+  },
+  {
+    "claim_id": "H03-WORDING-VS-NOISE",
+    "observed_result": "Strict complete-block D was positive in three contrasts, +2.6 to +20.1 pp. API V1 versus V2 is N/A. Historical signed D under this projection is unverified.",
+    "status": "HISTORICAL_DIRECTION_UNVERIFIED"
+  },
+  {
+    "claim_id": "H03-INTENT",
+    "observed_result": "Workflow dominated M in all 60 answers. Checklist dominated V in 59/60 answers.",
+    "status": "RETAINED"
+  },
+  {
+    "claim_id": "H03-SOURCE-MIX",
+    "observed_result": "Source categories, named tools and domain overlaps differed in the observable output. API 60/60 M/V answers and Grok 1/60 had final URLs. Grok search panels are separate.",
+    "status": "OBSERVED"
+  },
+  {
+    "claim_id": "H04-Q2-ABSENCE",
+    "observed_result": "All three candidate families had 0/15 for each of C/M/R in each Q2 environment. Wilson upper limit 20.4% per cell.",
+    "status": "REPRODUCED"
+  },
+  {
+    "claim_id": "H04-ASSET-PERSON-GAP",
+    "observed_result": "Grok Q1 recommended The GEO Lab in 15/15 with Artur named in 0/15. Q3 work-without-name cases were 1/15 API and 2/15 Grok.",
+    "status": "REPRODUCED"
+  },
+  {
+    "claim_id": "H04-QUESTION-DEPENDENCE",
+    "observed_result": "Question-specific recommendation rates differ. For example Kevin or Growth Memo occurred in 13/15 API Q3 answers and 0/15 in each of Q1 and Q2.",
+    "status": "OBSERVED"
+  }
+]
