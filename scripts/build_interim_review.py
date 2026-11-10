@@ -12,10 +12,11 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 from build_learning_hub import CSS
 from build_stage5_report import EXTRA, note, table
+from report_series import CSS as SERIES_CSS, INTERIM_READER, series_navigation
 from site_metadata import finalize_page
 
 ROOT = Path(__file__).resolve().parents[1]
-ROUTE = 'reviews/interim-review/historical-replication'
+ROUTE = str(Path(INTERIM_READER).parent)
 FOLDER = ROOT / ROUTE
 METADATA = json.loads((FOLDER / 'record.json').read_text())
 DATA = FOLDER / 'data'
@@ -110,13 +111,15 @@ def section(key, title, body):
 def page(filename, title, description, sections, utility):
     nav = ''.join(f'<a href="#{key}">{label}</a>' for key, label, _ in sections)
     content = ''.join(section(*part) for part in sections)
+    reports = json.loads((ROOT / 'report-versions.json').read_text())['reports']
+    series = series_navigation(reports, ROUTE, INTERIM_READER, 'reader' if filename == 'index.html' else 'appendix')
     text = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title>
-<meta name="description" content="{escape(description, quote=True)}"><style>{CSS}{EXTRA}
+<meta name="description" content="{escape(description, quote=True)}"><style>{CSS}{EXTRA}{SERIES_CSS}
 figure{{margin:20px 0}}figure img{{display:block;width:100%;max-width:980px;height:auto}}figcaption{{font-size:14px;color:var(--muted)}}
 </style></head><body><a class="skip" href="#main">Skip to the review</a><div class="layout">
-<nav aria-label="Interim review contents"><strong>GEO Lab Interim Review</strong><div class="nav-links">{nav}</div>
-<div class="nav-group"><a href="../../../learning-hub/">Learning Hub</a>{utility}<a href="public-data.zip">Download public data</a></div></nav>
+<nav aria-label="Interim review contents">{series}<strong>On this page</strong><div class="nav-links">{nav}</div>
+<div class="nav-group">{utility}<a href="public-data.zip">Download public data</a></div></nav>
 <main id="main"><p class="lesson-name">GEO Lab Interim Review · Part 1</p><h1>{escape(title)}</h1>
 <p class="author">Helen Bird · Published {METADATA['first_published']} · v{METADATA['version']}</p>
 {content}<p class="footer">Helen Bird · GEO Learning Log · <a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p></main></div></body></html>'''
@@ -128,7 +131,8 @@ def reader(summary):
     discovery = summary['discovery_success_out_of_15']
     rates = summary['rate_sensitivity']
     title = 'Which GEO findings held up after 300 new answers?'
-    assumptions = '''<ul><li><strong>Several historical findings would recur.</strong> These include low cross-platform recommendation overlap and recommendations of a work without a named author.</li>
+    assumptions = '''<p>An interim review is a checkpoint in the ongoing GEO Lab. Here we revisit earlier findings and use the evidence to shape the next experiments.</p>
+<ul><li><strong>Several historical findings would recur.</strong> These include low cross-platform recommendation overlap and recommendations of a work without a named author.</li>
 <li><strong>Three answers would give unstable estimates of some rates.</strong> We expected larger subsets to be less sensitive to which runs were included.</li></ul>'''
     method = '''<p>We reran ten original prompts from GEO Labs #01–#04 fifteen times per environment, for <strong>300 new answers</strong>. We compared them with 60 historical answers. The two environments were OpenAI Responses API with web search and Grok Expert in the web interface with web search.</p>
 <p>For each condition we checked all 455 ways to keep three answers and all 3,003 ways to keep ten. For cross-environment comparisons, we used the same scheduled block numbers on both sides.</p>'''

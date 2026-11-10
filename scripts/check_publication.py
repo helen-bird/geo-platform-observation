@@ -66,13 +66,17 @@ def main():
         page = Page(); document = path.read_text(); page.feed(document); pages[path.resolve()] = page
         assert page.language == 'en', 'Report language must be English'
         assert all(page.details), 'All evidence details must remain expanded'
+        assert 'data-report-series="v1"' in document
+        series_labels = ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity',
+                         '#04 · Creator Benchmark','#05 · Technical Discoverability','Interim Review · Part 1']
+        offsets = [document.index(label) for label in series_labels]
+        assert offsets == sorted(offsets), 'Keep the interim review after the five lab entries'
         if path.parent == interim:
             assert 'GEO Lab Interim Review · Part 1' in document
             if path.name == 'index.html':
                 assert {'hypotheses', 'validation', 'conclusions'} <= page.ids
         else:
-            assert 'data-report-series="v1"' in document and 'id="report-version"' in document
-            assert all(label in document for label in ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity','#04 · Creator Benchmark','#05 · Technical Discoverability'])
+            assert 'id="report-version"' in document
         if path.name == 'index.html':
             assert path.stat().st_size < 100_000, 'Keep full evidence in the appendix'
     assert len(pages[(DIST/'technical-appendix.html').resolve()].details) >= 150

@@ -8,6 +8,8 @@ from urllib.parse import urlsplit
 from site_metadata import finalize_page, relative_canonical
 
 ROOT = Path(__file__).resolve().parents[1]
+INTERIM_READER = 'reviews/interim-review/historical-replication/index.html'
+INTERIM_LABEL = 'Interim Review · Part 1'
 CSS = '''
 .experiment-series{grid-column:1/-1;margin:0 0 22px;padding:0 0 18px;border-bottom:1px solid currentColor}
 .experiment-series strong{font-size:15px;letter-spacing:0;margin:0 0 8px}
@@ -20,6 +22,19 @@ CSS = '''
 '''
 
 
+def series_navigation(reports, directory, selected_path, kind='reader'):
+    entries = [('learning-hub/index.html', 'Learning Hub · Start with a question')]
+    entries += [(r['path'], f'#{r["stage"]:02d} · {r["title"]}') for r in reports]
+    entries += [(INTERIM_READER, INTERIM_LABEL), ('evidence/index.html', 'Evidence library · Individual answers')]
+    active = 'page' if kind == 'reader' else 'step'
+    links = ''.join(
+        '<a href="'+escape(relative_canonical(path, directory), quote=True)+'"'+
+        (f' aria-current="{active}"' if path == selected_path else '')+'>'+escape(label)+'</a>'
+        for path, label in entries
+    )
+    return '<div class="experiment-series" data-report-series="v1" aria-label="GEO Lab learning series"><strong>GEO Lab learning records</strong>'+links+'</div>'
+
+
 def finish_page(document, stage, kind='reader'):
     """Add a series selector and a provenance note, without editing answer text."""
     if 'data-report-series="v1"' in document:
@@ -28,11 +43,7 @@ def finish_page(document, stage, kind='reader'):
     selected = next(r for r in reports if r['stage'] == stage)
     directory = posixpath.dirname(selected['path']) or '.'
     relative = lambda path: posixpath.relpath(path, directory)
-    links = ''.join(
-        '<a href="'+escape(relative_canonical(r['path'],directory),quote=True)+'"'+
-        (' aria-current="'+('page' if kind=='reader' else 'step')+'"' if r['stage']==stage else '')+'>'+
-        escape(f'#{r["stage"]:02d} · {r["title"]}')+'</a>' for r in reports)
-    series = '<div class="experiment-series" data-report-series="v1" aria-label="GEO Lab learning series"><strong>GEO Lab learning records</strong><a href="'+escape(relative_canonical('learning-hub/index.html',directory),quote=True)+'">Learning Hub · Start with a question</a>'+links+'<a href="'+escape(relative_canonical('evidence/index.html',directory),quote=True)+'">Evidence library · Individual answers</a></div>'
+    series = series_navigation(reports, directory, selected['path'], kind)
     match = re.search(r'<nav\b[^>]*>.*?</nav>',document,re.S)
     if not match:
         raise ValueError('Report has no navigation element')

@@ -6,23 +6,20 @@ An ongoing record of experiments, resource reviews, and lessons from learning Ge
 
 Maintained by **Helen Bird**. The hub was published on **November 3, 2026**; each entry records the original experiment, first-publication and last-revision dates.
 
-## Stages
+## Learning records
 
-| Stage | Learning focus | Materials |
+| Record | Learning focus | Materials |
 | --- | --- | --- |
 | Stage 1 | Repeated queries to ChatGPT Search and Grok to explore the differences between Citation, Mention, and Recommendation | [Learning notes and data guide](stages/01-platform-observation.md) · [Concise report](https://helen-bird.github.io/geo-platform-observation/) · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/technical-appendix.html) |
 | Stage 2 | Test whether an original public experiment post can be accessed by URL, found by an exact excerpt, or discovered through an unbranded question | [Learning notes and data guide](stages/02-post-discovery.md) · [Concise report](https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/) · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/technical-appendix.html) |
 | Stage 3 | Explore repeated prompts and wording sensitivity in Grok Expert consumer sessions and OpenAI API web search; peer-review revision adds matched comparisons and normalization sensitivity | [Learning notes and data guide](stages/03-question-sensitivity.md) · [Concise report](https://helen-bird.github.io/geo-platform-observation/stages/03-question-sensitivity/) · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/stages/03-question-sensitivity/technical-appendix.html) |
 | Stage 4 | Test historically selected creator families using new answers; distinguish personal names from associated content brands and audit actual cited pages | [Learning notes and data guide](stages/04-creator-benchmark.md) · [Concise report](https://helen-bird.github.io/geo-platform-observation/stages/04-creator-benchmark/) · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/stages/04-creator-benchmark/technical-appendix.html) |
 | Stage 5 | Separate technical access, search-engine indexing and AI discovery; preserve reviewed indexing/crawl summaries and operational failures | [Learning record](https://helen-bird.github.io/geo-platform-observation/stages/05-technical-discoverability/) · [Methods and source notes](https://helen-bird.github.io/geo-platform-observation/stages/05-technical-discoverability/technical-appendix.html) · [Public aggregate data](stages/05-technical-discoverability/data/summary.json) |
+| Interim Review · Part 1 | Revisit Labs #01–#04 with 300 new answers and measure how results vary when three or ten answers are kept | [GitHub experiment record](reviews/interim-review/historical-replication/) · [Public report](https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/) · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/technical-appendix.html) · [Redacted data](reviews/interim-review/historical-replication/public-data.zip) |
 
 New stages will be added as learning and experiments are completed. Each stage documents its findings, data, reproduction commands, and publication scope. Stage 1's report remains at the main website address; later stages have their own reports and data directories. File history preserves subsequent corrections.
 
 > Stages 3 and 4 use the **Responses API with web search**, not the ChatGPT consumer website or app. Their OpenAI results cannot represent ChatGPT web/app performance. Each stage records its actual collection conditions and limits rather than treating different interfaces as equivalent.
-
-## Interim review
-
-**Part 1 · Historical replication and sample-size sensitivity** revisits Labs #01–#04 with 300 new answers. It records which findings recur and how results change when three or ten answers are kept. [GitHub experiment record](reviews/interim-review/historical-replication/) · [Public report](https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/) · [Technical appendix](https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/technical-appendix.html) · [Redacted data](reviews/interim-review/historical-replication/public-data.zip)
 
 ## Revisions and evidence
 
