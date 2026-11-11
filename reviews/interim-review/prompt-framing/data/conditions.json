@@ -1,0 +1,84 @@
+{
+  "prompts": {
+    "discovery-resource": {
+      "frame": "discovery",
+      "target": "resource",
+      "prompt": "Which GEO resources provide practical, data-backed tutorials for independent builders? Explain why and cite sources when available.",
+      "sha256": "ddb7f08798a76e2d732ce3d531a2721f10d9b7ef298f8481cac8dae63e6fe7e2"
+    },
+    "discovery-creator": {
+      "frame": "discovery",
+      "target": "creator",
+      "prompt": "Which independent creators publish practical, data-backed GEO tutorials for independent builders? Explain why and cite sources when available.",
+      "sha256": "53017ad6808b469465b9b2bf14137271ef6c0d44b563a1b2f4ceb6d1325fe12e"
+    },
+    "recommendation-resource": {
+      "frame": "recommendation",
+      "target": "resource",
+      "prompt": "Which resources offering practical, data-backed GEO tutorials would you recommend to independent builders? Explain why and cite sources when available.",
+      "sha256": "a721be4a4632098253fb80910ce1881b159754c9c38245c0ef3b0737c8220860"
+    },
+    "recommendation-creator": {
+      "frame": "recommendation",
+      "target": "creator",
+      "prompt": "Which independent creators publishing practical, data-backed GEO tutorials would you recommend to independent builders? Explain why and cite sources when available.",
+      "sha256": "91309d6ff5a8bcefb2ad5d394df417ff2394a82244da5d9608d5811c1b1c504e"
+    },
+    "evidence-resource": {
+      "frame": "evidence",
+      "target": "resource",
+      "prompt": "Which GEO resources publish original, reproducible experiments useful to independent builders? Explain why and cite sources when available.",
+      "sha256": "6fcbfd79f4ee5133266b87446ac31a9281f4044e0500e3f33ebaa78ff6f3fb21"
+    },
+    "evidence-creator": {
+      "frame": "evidence",
+      "target": "creator",
+      "prompt": "Which independent creators publish original, reproducible GEO experiments useful to independent builders? Explain why and cite sources when available.",
+      "sha256": "1ec4ab7d51402c2893070a707aea04fd42c57b13c1c1b93067a2200880157003"
+    }
+  },
+  "environments": {
+    "chatgpt-web": {
+      "interface": "ChatGPT consumer web",
+      "required": "Fresh session with explicit native web search. Record the visible model, reasoning selection and personalization mode before dispatch.",
+      "availability": "COMPOSER_PREFLIGHT_PASSED",
+      "ui_model": "GPT-5.6 Sol",
+      "ui_reasoning": "Medium",
+      "session": "Fresh temporary chat (personalization disabled by interface)",
+      "search": "Explicit native web search chip",
+      "preflight_at": "2026-11-10T15:23:07.048225+00:00",
+      "backend_equivalence_to_api": "UNVERIFIED"
+    },
+    "grok-web": {
+      "interface": "Grok consumer web",
+      "model_label": "Expert",
+      "required": "Fresh ordinary conversation, explicit native web search, X and history personalization disabled and restored after collection.",
+      "availability": "COMPOSER_PREFLIGHT_PASSED_FIRST_BODY_CAPTURED"
+    }
+  },
+  "block_seed": 20261110,
+  "planned_valid_answers": 120,
+  "collection_result": {
+    "started_at_utc": "2026-11-10T15:23:18.981000+00:00",
+    "last_body_captured_at_utc": "2026-11-10T19:13:39.503000+00:00",
+    "complete_by_environment": {
+      "chatgpt-web": 60,
+      "grok-web": 60
+    },
+    "submitted": 120,
+    "unreadable_reply_count": 0,
+    "complete_per_prompt_per_environment": 10,
+    "paired_submission_order_reversals": 24,
+    "grok_observed_minimum_submission_interval_seconds": 181.059,
+    "chatgpt_observed_labels": [
+      "5.6 Medium",
+      "5.6 \\u4e2d"
+    ],
+    "grok_settings_restored_and_verified_at_utc": "2026-11-10T19:14:56.578Z",
+    "capture_notes": {
+      "chatgpt": "Explicit native search verified before dispatch. Captured visible body links and available activity. Grouped citation popovers were not expanded. UI activity coverage varies.",
+      "grok": "Captured body links, expanded search activity and visible source panel separately. Source panel items do not by themselves establish final citations."
+    }
+  },
+  "baseline_answers_used_for_context_only": 300
+}

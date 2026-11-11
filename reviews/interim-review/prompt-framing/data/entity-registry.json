@@ -1,0 +1,695 @@
+{
+  "resources": [
+    {
+      "name": "The GEO Lab",
+      "kind": "resource_site",
+      "aliases": [
+        "Artur Ferreira's The GEO Lab",
+        "The GEO Lab (Artur Ferreira)",
+        "The GEO Lab (thegeolab.net)"
+      ],
+      "authors": [
+        "Artur Ferreira"
+      ],
+      "source": "https://thegeolab.net/about/",
+      "relationship": "Named founder and publisher of the research platform",
+      "family": "The GEO Lab (Artur Ferreira)"
+    },
+    {
+      "name": "The GEO Log",
+      "kind": "resource_site",
+      "aliases": [
+        "The GEO Lab's GEO Log",
+        "The GEO Lab: The GEO Log",
+        "The GEO Lab research log",
+        "The GEO Lab Log"
+      ],
+      "authors": [
+        "Artur Ferreira"
+      ],
+      "source": "https://thegeolab.net/log/",
+      "relationship": "Named publisher of the log",
+      "family": "The GEO Lab (Artur Ferreira)"
+    },
+    {
+      "name": "The GEO Lab: GEO Field Manual",
+      "kind": "work",
+      "aliases": [
+        "GEO Field Manual",
+        "The GEO Field Manual",
+        "The GEO Lab Field Manual",
+        "GEO Field Manual (Artur Ferreira)",
+        "The GEO Lab's GEO Field Manual"
+      ],
+      "authors": [
+        "Artur Ferreira"
+      ],
+      "source": "https://thegeolab.net/ebooks/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "The GEO Lab (Artur Ferreira)"
+    },
+    {
+      "name": "The GEO Lab: GEO Experiments",
+      "kind": "work",
+      "aliases": [
+        "GEO Experiments \u2014 Design, Measure, Learn",
+        "GEO Experiments (The GEO Lab)",
+        "GEO Experiments by Artur Ferreira",
+        "The GEO Lab: GEO Experiments \u2014 Design, Measure, Learn"
+      ],
+      "authors": [
+        "Artur Ferreira"
+      ],
+      "source": "https://thegeolab.net/geo-experiments/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "The GEO Lab (Artur Ferreira)"
+    },
+    {
+      "name": "The GEO Lab Library",
+      "kind": "resource_site",
+      "aliases": [
+        "The GEO Lab ebooks and guides",
+        "The GEO Lab ebooks",
+        "The GEO Lab free ebooks"
+      ],
+      "authors": [
+        "Artur Ferreira"
+      ],
+      "source": "https://thegeolab.net/ebooks/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "The GEO Lab (Artur Ferreira)"
+    },
+    {
+      "name": "Helen Bird's GEO Learning Hub",
+      "kind": "resource_site",
+      "aliases": [
+        "Helen Bird GEO Learning Hub",
+        "GEO Learning Hub",
+        "GEO Learning Hub (Helen Bird)",
+        "Helen Bird\u2019s GEO Learning Hub",
+        "Helen Bird's GEO Lab / GEO Learning Hub"
+      ],
+      "authors": [
+        "Helen Bird"
+      ],
+      "source": "https://helen-bird.github.io/geo-platform-observation/learning-hub/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "GEO Lab (Helen Bird)"
+    },
+    {
+      "name": "Helen Bird's GEO Lab",
+      "kind": "resource_site",
+      "aliases": [
+        "Helen Bird's GEO Learning Log",
+        "Helen Bird's GEO Lab series",
+        "Helen Bird GEO Lab",
+        "Helen Bird's GEO Platform Observation",
+        "GEO Learning Log",
+        "GEO Lab (Helen Bird)",
+        "Helen Bird's GEO experiment archive"
+      ],
+      "authors": [
+        "Helen Bird"
+      ],
+      "source": "https://helen-bird.github.io/geo-platform-observation/learning-hub/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "GEO Lab (Helen Bird)"
+    },
+    {
+      "name": "Growth Memo",
+      "kind": "resource_site",
+      "aliases": [
+        "The Growth Memo",
+        "Kevin Indig's Growth Memo",
+        "Growth Memo (Kevin Indig)",
+        "Growth Memo newsletter"
+      ],
+      "authors": [
+        "Kevin Indig"
+      ],
+      "source": "https://www.growth-memo.com/about",
+      "relationship": "Named newsletter creator, not sole author of every issue",
+      "family": "Growth Memo"
+    },
+    {
+      "name": "Learning AI Search",
+      "kind": "resource_site",
+      "aliases": [
+        "LearningAIsearch.com",
+        "Learning AI Search by Aleyda Solis",
+        "Learning AI Search (Aleyda Solis)",
+        "Learning AI Search roadmap",
+        "LearningAISearch"
+      ],
+      "authors": [
+        "Aleyda Solis"
+      ],
+      "source": "https://learningaisearch.com/about/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Aleyda Solis content"
+    },
+    {
+      "name": "Aleyda Solis's AI Search Optimization Framework & Checklist",
+      "kind": "work",
+      "aliases": [
+        "AI Search Optimization Framework & Checklist",
+        "Aleyda Solis AI Search Optimization Checklist",
+        "AI Search Optimization Checklist"
+      ],
+      "authors": [
+        "Aleyda Solis"
+      ],
+      "source": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Aleyda Solis content"
+    },
+    {
+      "name": "Aleyda Solis's website",
+      "kind": "resource_site",
+      "aliases": [
+        "aleydasolis.com",
+        "Aleyda Solis AI Search resources"
+      ],
+      "authors": [
+        "Aleyda Solis"
+      ],
+      "source": "https://www.aleydasolis.com/en/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Aleyda Solis content"
+    },
+    {
+      "name": "GEO: Generative Engine Optimization (KDD 2024)",
+      "kind": "work",
+      "aliases": [
+        "GEO: Generative Engine Optimization",
+        "Princeton GEO paper",
+        "Princeton GEO research paper",
+        "Princeton GEO Research",
+        "GEO (Aggarwal et al.)",
+        "Aggarwal et al. GEO paper",
+        "Original Princeton GEO paper",
+        "Princeton/IIT Delhi GEO paper",
+        "GEO: Generative Engine Optimization (KDD paper)"
+      ],
+      "authors": [
+        "Pranjal Aggarwal",
+        "Vishvak Murahari",
+        "Tanmay Rajpurohit",
+        "Ashwin Kalyan",
+        "Karthik Narasimhan",
+        "Ameet Deshpande"
+      ],
+      "source": "https://arxiv.org/abs/2311.09735",
+      "relationship": "byline or named creator of the recommended resource"
+    },
+    {
+      "name": "Don't Measure Once: Measuring Visibility in AI Search",
+      "kind": "work",
+      "aliases": [
+        "Don't Measure Once",
+        "Don't Measure Once: Measuring Visibility in AI Search (GEO)",
+        "Don't Measure Once (arXiv:2604.07585)"
+      ],
+      "authors": [
+        "Julius Schulte",
+        "Malte Bleeker",
+        "Philipp Kaufmann"
+      ],
+      "source": "https://arxiv.org/abs/2604.07585",
+      "relationship": "byline or named creator of the recommended resource"
+    },
+    {
+      "name": "What Drives AI Citations?",
+      "kind": "work",
+      "aliases": [
+        "What Drives AI Citations",
+        "What Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization",
+        "What Drives AI Citations? (Chen and Koudas)"
+      ],
+      "authors": [
+        "Mahe Chen",
+        "Nick Koudas"
+      ],
+      "source": "https://arxiv.org/abs/2610.15033",
+      "relationship": "byline or named creator of the recommended resource"
+    },
+    {
+      "name": "Sam Shev's 90-Day GEO Roadmap",
+      "kind": "work",
+      "aliases": [
+        "Sam Shev 90-Day GEO Roadmap",
+        "Sam Shev's 90-day roadmap",
+        "Sam Shev\u2019s GEO Roadmap",
+        "90-Day GEO Roadmap (Sam Shev)",
+        "How to Start GEO: A 90-Day Generative Engine Optimization Roadmap"
+      ],
+      "authors": [
+        "Sam Shev"
+      ],
+      "source": "https://www.samshev.com/blog/geo-90-day-roadmap",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Sam Shev GEO resources"
+    },
+    {
+      "name": "Refine: GEO for Solo Founders",
+      "kind": "work",
+      "aliases": [
+        "Refine AI GEO for Solo Founders",
+        "GEO for Solo Founders (Refine AI)",
+        "GEO for Solo Founders (Refine)",
+        "Refine AI's GEO for Solo Founders",
+        "Refine AI: GEO for Solo Founders",
+        "GEO for Solo Founders: A One-Person AI Visibility Playbook",
+        "Refine GEO for Solo Founders playbook",
+        "Refine AI Solo Founder GEO Playbook"
+      ],
+      "authors": [
+        "Robin Pautigny"
+      ],
+      "source": "https://getrefine.ai/blog/geo-for-solo-founders-ai-visibility-playbook",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Refine AI"
+    },
+    {
+      "name": "Ryan Shojae's 90-day GEO experiment",
+      "kind": "work",
+      "aliases": [
+        "Ryan Shojae: 90-day GEO experiment",
+        "Ryan Shojae's 90-day citation experiment",
+        "GEO Experiment: I Tracked My AI Citation Rate For 90 Days",
+        "Ryan Shojae 90-day GEO experiment",
+        "Ryan Shojae 90-Day AI Citation Experiment"
+      ],
+      "authors": [
+        "Ryan Shojae"
+      ],
+      "source": "https://ryanshojae.com/geo-experiment-i-tracked-my-ai-citation-rate/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Ryan Shojae GEO research"
+    },
+    {
+      "name": "Ryan Shojae's GEO experiments",
+      "kind": "resource_site",
+      "aliases": [
+        "Ryan Shojae's GEO resources",
+        "Ryan Shojae's website",
+        "RyanShojae.com",
+        "Ryan Shojae GEO research"
+      ],
+      "authors": [
+        "Ryan Shojae"
+      ],
+      "source": "https://ryanshojae.com/about-ryan-shojae/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Ryan Shojae GEO research"
+    },
+    {
+      "name": "Two GEO Experiments Challenge Conventional AI Visibility Advice",
+      "kind": "work",
+      "aliases": [
+        "Zeeshan Yaseen's two GEO experiments",
+        "Zeeshan Yaseen GEO experiments",
+        "Zeeshan Yaseen's GEO experiments"
+      ],
+      "authors": [
+        "Zeeshan Yaseen"
+      ],
+      "source": "https://searchengineland.com/geo-experiments-challenge-conventional-ai-visibility-advice-488342",
+      "relationship": "byline or named creator of the recommended resource"
+    },
+    {
+      "name": "Metehan.ai",
+      "kind": "resource_site",
+      "aliases": [
+        "Metehan Yesilyurt's site",
+        "Metehan Yesilyurt's metehan.ai",
+        "Metehan Yesilyurt's website",
+        "Metehan Yesilyurt's research"
+      ],
+      "authors": [
+        "Metehan Yesilyurt"
+      ],
+      "source": "https://metehan.ai/about/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Metehan Yesilyurt GEO research"
+    },
+    {
+      "name": "Metehan Yesilyurt's GEO/SEO newsletter",
+      "kind": "work",
+      "aliases": [
+        "Metehan Yesilyurt's Substack",
+        "Metehan Yesilyurt Substack",
+        "MetehanAI Substack"
+      ],
+      "authors": [
+        "Metehan Yesilyurt"
+      ],
+      "source": "https://metehanai.substack.com/p/my-geo-experiment-escaped-the-sandbox",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Metehan Yesilyurt GEO research"
+    },
+    {
+      "name": "My GEO Experiment Escaped the Sandbox",
+      "kind": "work",
+      "aliases": [
+        "Metehan Yesilyurt's StatGlobe experiment",
+        "Metehan Yesilyurt\u2019s GEO experiment (StatGlobe)",
+        "Metehan Yesilyurt's GEO experiment (StatGlobe)",
+        "StatGlobe GEO experiment",
+        "Metehan Yesilyurt's GEO experiment"
+      ],
+      "authors": [
+        "Metehan Yesilyurt"
+      ],
+      "source": "https://metehanai.substack.com/p/my-geo-experiment-escaped-the-sandbox",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "Metehan Yesilyurt GEO research"
+    },
+    {
+      "name": "Jourdan Rombough's GEO Field Guide",
+      "kind": "work",
+      "aliases": [
+        "Optimization Theory Ultimate GEO Field Guide",
+        "Ultimate GEO Field Guide",
+        "Ultimate GEO Field Guide for SEO Experts",
+        "Optimization Theory GEO Field Guide"
+      ],
+      "authors": [
+        "Jourdan Rombough"
+      ],
+      "source": "https://optimizationtheory.com/ultimate-geo-field-guide-for-seo-experts/",
+      "relationship": "byline or named creator of the recommended resource"
+    },
+    {
+      "name": "GEOLab (yaojingang)",
+      "kind": "resource_site",
+      "aliases": [
+        "yaojingang/GEOLab",
+        "Yao Jingang's GEOLab",
+        "GEOLab (yaojingang/GEOLab)",
+        "Yao Jingang / GEOLab",
+        "GEOLab (Yao Jingang)"
+      ],
+      "authors": [
+        "Yao Jingang"
+      ],
+      "source": "https://github.com/yaojingang/GEOLab",
+      "relationship": "Repository creator identity. Included papers have separately listed authors."
+    },
+    {
+      "name": "GeoReady",
+      "kind": "resource_site",
+      "aliases": [
+        "GeoReady.dev",
+        "GeoReady web audit"
+      ],
+      "authors": [
+        "Juan Camilo Auriti"
+      ],
+      "source": "https://geoready.dev/about/",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "GeoReady / Auriti Labs"
+    },
+    {
+      "name": "GEO Optimizer CLI",
+      "kind": "work",
+      "aliases": [
+        "GEO Optimizer",
+        "GEO Optimizer (CLI)",
+        "GEO Optimizer (Auriti Labs)",
+        "Auriti Labs GEO Optimizer",
+        "Auriti Labs GEO Optimizer CLI"
+      ],
+      "authors": [
+        "Juan Camilo Auriti"
+      ],
+      "source": "https://github.com/Auriti-Labs/geo-optimizer-skill",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "GeoReady / Auriti Labs"
+    },
+    {
+      "name": "GeoReady GEO Readiness Manual",
+      "kind": "work",
+      "aliases": [
+        "GEO Readiness Manual",
+        "GeoReady's GEO Readiness Manual",
+        "GEO Readiness Manual (GeoReady)"
+      ],
+      "authors": [
+        "Juan Camilo Auriti"
+      ],
+      "source": "https://github.com/Auriti-Labs/geo-optimizer-skill/blob/main/README.md",
+      "relationship": "byline or named creator of the recommended resource",
+      "family": "GeoReady / Auriti Labs"
+    },
+    {
+      "name": "The GEO Community",
+      "kind": "resource_site",
+      "aliases": [
+        "GEO Community",
+        "The GEO Community /start",
+        "The GEO Community Builder track",
+        "The GEO Community learning tracks",
+        "The GEO Community Builder Track"
+      ],
+      "family": "The GEO Community"
+    },
+    {
+      "name": "GeoExperiment.com",
+      "kind": "resource_site",
+      "aliases": [
+        "GeoExperiment",
+        "GeoExperiment.com live experiment",
+        "GeoExperiment.com live log",
+        "GeoExperiment live citation log",
+        "GeoExperiment.com experiment log",
+        "GeoExperiment Live LLM Citation Experiment Log"
+      ]
+    },
+    {
+      "name": "GeoAura: 9 Proven GEO Optimization Strategies",
+      "kind": "work",
+      "aliases": [
+        "GeoAura's 9 Proven GEO Optimization Strategies",
+        "GeoAura 9 Proven GEO Optimization Strategies",
+        "9 Proven GEO Optimization Strategies (With Quantified Data)",
+        "GeoAura's quantified GEO strategies",
+        "GeoAura quantified strategy guide",
+        "GeoAura 9 Proven GEO Strategies"
+      ],
+      "family": "GeoAura"
+    },
+    {
+      "name": "Apollo Digital GEO Course",
+      "kind": "work",
+      "aliases": [
+        "Apollo Digital free GEO course",
+        "Apollo Digital's Free GEO Course",
+        "Apollo Digital Free GEO Course",
+        "Apollo Digital\u2019s free GEO course"
+      ]
+    },
+    {
+      "name": "Open Queries practical GEO guide",
+      "kind": "work",
+      "aliases": [
+        "Open Queries: A Practical Guide to GEO",
+        "Open Queries GEO guide",
+        "Generative engine optimization (GEO): a practical guide",
+        "Open Queries \u2014 Generative Engine Optimization"
+      ]
+    },
+    {
+      "name": "Google Search Central generative AI optimization guide",
+      "kind": "work",
+      "aliases": [
+        "Google Search Central AI Optimization Guide",
+        "Google Search Central: Optimizing Your Website for Generative AI Features",
+        "Google Search Central's generative AI guide",
+        "Optimizing Your Website for Generative AI Features",
+        "Google Search Central AI features guidance",
+        "Google Search Central: AI features and your website",
+        "Google Search Central"
+      ],
+      "alias_scope": "The bare name in this dataset denotes the generative AI features guidance described in the answer, including Discovery B04."
+    },
+    {
+      "name": "AI Rank Lab",
+      "kind": "resource_site",
+      "aliases": [
+        "AI Rank Lab research",
+        "AI Rank Lab research and case studies"
+      ]
+    },
+    {
+      "name": "SEMPITE Research",
+      "kind": "resource_site",
+      "aliases": [
+        "SEMPITE research library",
+        "SEMPITE's AI Visibility Index research"
+      ]
+    },
+    {
+      "name": "Bing Webmaster Tools AI Performance",
+      "kind": "work",
+      "aliases": [
+        "Bing AI Performance",
+        "Bing Webmaster Tools: AI Performance",
+        "Bing Webmaster Tools AI Performance Report"
+      ]
+    },
+    {
+      "name": "Google Search Console Generative AI Performance Report",
+      "kind": "work",
+      "aliases": [
+        "Google Search Console AI Performance",
+        "Google Search Console generative AI report"
+      ]
+    },
+    {
+      "name": "Optimizing Visibility in Generative Engines: A Critical Survey",
+      "kind": "work",
+      "aliases": [
+        "Critical survey of GEO (Olivier Martinez)"
+      ],
+      "authors": [
+        "Olivier Martinez"
+      ],
+      "source": "https://arxiv.org/abs/2607.14035"
+    },
+    {
+      "name": "C-SEO Bench",
+      "kind": "work",
+      "aliases": [],
+      "authors": [
+        "Haritz Puerto",
+        "Martin Gubri",
+        "Tommaso Green",
+        "Seong Joon Oh",
+        "Sangdoo Yun"
+      ],
+      "source": "https://arxiv.org/abs/2506.11097"
+    },
+    {
+      "name": "AutoGEO",
+      "kind": "work",
+      "aliases": [],
+      "authors": [
+        "Yujiang Wu",
+        "Shanshan Zhong",
+        "Yubin Kim",
+        "Chenyan Xiong"
+      ],
+      "source": "https://arxiv.org/abs/2510.11438"
+    },
+    {
+      "name": "SAGEO Arena",
+      "kind": "work",
+      "aliases": [],
+      "authors": [
+        "Sunghwan Kim",
+        "Wooseok Jeong",
+        "Serin Kim",
+        "Sangam Lee",
+        "Dongha Lee"
+      ],
+      "source": "https://arxiv.org/abs/2602.12187"
+    },
+    {
+      "name": "The GEO Lab Experiment 001",
+      "kind": "work",
+      "aliases": [],
+      "authors": [
+        "Artur Ferreira"
+      ],
+      "source": "https://thegeolab.net/experiment-001-declarative-vs-narrative-structure/",
+      "family": "The GEO Lab (Artur Ferreira)"
+    },
+    {
+      "name": "GEO_public (Stephanie Jarmak)",
+      "kind": "work",
+      "aliases": [
+        "Stephanie Jarmak GEO measurement project",
+        "Stephanie Jarmak's GEO evaluation framework"
+      ],
+      "authors": [
+        "Stephanie Jarmak"
+      ],
+      "source": "https://github.com/sjarmak/GEO_public"
+    },
+    {
+      "name": "Second Wind",
+      "kind": "resource_site",
+      "aliases": [],
+      "authors": [
+        "Marty Coleman"
+      ],
+      "source": "https://secondwind.cloud/intelligence/what-ai-systems-ranking-each-other-reveals-about-geo"
+    },
+    {
+      "name": "SEOFOMO",
+      "kind": "work",
+      "aliases": [],
+      "authors": [
+        "Aleyda Solis"
+      ],
+      "source": "https://seofomo.co/",
+      "family": "Aleyda Solis content"
+    },
+    {
+      "name": "Building AI Visibility from Zero",
+      "kind": "work",
+      "aliases": [],
+      "authors": [
+        "Sunil Pratap Singh"
+      ],
+      "source": "https://sunilpratapsingh.com/case-studies/geo/personal-brand-india"
+    }
+  ],
+  "people": [
+    {
+      "name": "Aleyda Solis",
+      "aliases": [
+        "Aleyda Sol\u00eds"
+      ]
+    },
+    {
+      "name": "Metehan Yesilyurt",
+      "aliases": [
+        "Metehan Ye\u015filyurt"
+      ]
+    },
+    {
+      "name": "Yao Jingang",
+      "aliases": [
+        "yaojingang",
+        "Jingang Yao"
+      ],
+      "source": "https://github.com/yaojingang/GEOLab"
+    },
+    {
+      "name": "Artur Ferreira",
+      "aliases": []
+    },
+    {
+      "name": "Juan Camilo Auriti",
+      "aliases": [
+        "Juan Auriti",
+        "JuanAuriti"
+      ]
+    },
+    {
+      "name": "Jacob Gerrish",
+      "aliases": [
+        "Jacob Ezra Gerrish"
+      ]
+    },
+    {
+      "name": "Jakub (jakubinit)",
+      "aliases": [
+        "jakubinit",
+        "Jakub / Inithouse"
+      ]
+    }
+  ]
+}

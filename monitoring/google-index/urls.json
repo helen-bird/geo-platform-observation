@@ -689,6 +689,42 @@
       "sitemap_include": false,
       "indexing_desired": false,
       "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/",
+      "source_file": "reviews/interim-review/historical-replication/index.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/technical-appendix.html",
+      "source_file": "reviews/interim-review/historical-replication/technical-appendix.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/prompt-framing/",
+      "source_file": "reviews/interim-review/prompt-framing/index.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/prompt-framing/technical-appendix.html",
+      "source_file": "reviews/interim-review/prompt-framing/technical-appendix.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
     }
   ]
 }

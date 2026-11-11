@@ -9,12 +9,12 @@ import re
 import sys
 from urllib.parse import unquote, urlsplit
 
-from report_series import INTERIM_LABEL, INTERIM_READER
+from report_series import INTERIM_LABEL, INTERIM_PART2_LABEL, INTERIM_PART2_READER, INTERIM_READER
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://helen-bird.github.io/geo-platform-observation/'
 DATE = '2026-11-03'
-UPDATED = '2026-11-10'
+UPDATED = '2026-11-11'
 QUESTIONS = {
     1: ('How do AI search engines choose sources?',
         'Repeated GEO questions to ChatGPT Search and Grok show differences in recommended entities, cited sources and repeat overlap. Citation, mention and recommendation are separate observations.',
@@ -66,6 +66,11 @@ def render():
                 '<h2>Which findings held up after more runs?</h2><p>A checkpoint in the ongoing GEO Lab. Part 1 revisits ten original prompts with 300 new answers and shows what changes when three or ten runs are kept.</p>'
                 '<div class="links"><a href="'+review+'">Read the interim review</a><a href="'+review+'technical-appendix.html">Methods and evidence</a>'
                 '<a href="'+review+'public-data.zip">Download public data</a></div></article>')
+    part2 = relative(INTERIM_PART2_READER)
+    article += ('<article class="lesson" id="interim-review-part-2"><p class="lesson-name">GEO Lab '+escape(INTERIM_PART2_LABEL)+'</p>'
+                '<h2>How does question framing change recommendations?</h2><p>Six questions and 120 web-search answers track how resource and creator prompts change recommendations, source lists and author naming.</p>'
+                '<div class="links"><a href="'+part2+'">Read the report</a><a href="'+part2+'technical-appendix.html">Methods and evidence</a>'
+                '<a href="'+part2+'public-data.zip">Download public data</a></div></article>')
     document = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Helen Bird · GEO Learning Hub</title><meta name="description" content="A question-oriented index of Helen Bird's ongoing GEO learning experiments, original public data, reports and limitations."><link rel="canonical" href="'''+SITE+'''learning-hub/"><style>'''+CSS+'''</style></head><body><a class="skip" href="#main">Skip to learning questions</a><div class="layout"><nav aria-label="Learning Hub contents"><strong>GEO Learning Log</strong><div class="nav-links"><a href="#main" aria-current="page">Learning Hub</a>'''+anchors+'''<a href="#use-evidence">Use the evidence</a></div><div class="nav-group"><a href="https://github.com/helen-bird/geo-platform-observation">Repository and data guide</a><a href="../report-versions.json">Report versions</a><a href="../CHANGELOG.md">Revision history</a></div><p>An ongoing learning record.</p></nav><main id="main"><h1>Helen Bird · GEO Learning Hub</h1><p class="lead">Start with a question. Follow the experiment, then inspect the original public evidence.</p><p class="author"><strong>Author:</strong> Helen Bird · <strong>Published:</strong> '''+DATE+''' · <strong>Updated:</strong> '''+DATE+'''</p><blockquote><p>These small exploratory experiments and technical learning records document what the tested systems returned under recorded conditions. They do not prove a GEO tactic works or establish stable visibility among real users.</p><p>This new index is a content-organization practice suggested by the creator audit. Whether it improves AI discovery or recommendations remains untested.</p></blockquote><div class="lessons">'''+article+'''</div><section class="afterword" id="use-evidence"><h2>Use the evidence</h2><ul><li><strong>Read by user intent.</strong> Results from different tasks should not be pooled into a universal recommendation score.</li><li><strong>Keep outcomes distinct.</strong> Page citation, content-brand recommendation, personal-name mention and personal recommendation are different observations.</li><li><strong>Check the collection interface.</strong> Labs #03 and #04 use OpenAI Responses API + web search. They do not represent consumer ChatGPT Search performance.</li></ul><p>Each report links an expanded methods/evidence appendix and downloadable public data. Lab #05 publishes reviewed aggregates rather than raw engine/account responses. Private originals and account evidence remain outside this public repository. Use GitHub’s Copy permalink to cite a fixed revision, and include the answer or observation ID.</p><p>New questions and experiments will be added as learning continues. Earlier methods, corrections and limitations remain visible in the record.</p></section><p class="footer">Helen Bird · GEO Learning Log · <a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p></main></div></body></html>'''
     document = document.replace('<strong>Updated:</strong> '+DATE, '<strong>Updated:</strong> '+UPDATED)
     document = document.replace('<a href="../report-versions.json">Report versions</a>', '<a href="../evidence/">Browse original answers</a><a href="../report-versions.json">Report versions</a>')
@@ -101,7 +106,7 @@ def check():
     parser = HubParser()
     parser.feed(document)
     errors = []
-    if parser.lessons != ['lab-1', 'lab-2', 'lab-3', 'lab-4', 'lab-5', 'interim-review']:
+    if parser.lessons != ['lab-1', 'lab-2', 'lab-3', 'lab-4', 'lab-5', 'interim-review', 'interim-review-part-2']:
         errors.append('Learning Hub must list the interim review after the five ordered labs')
     if len(parser.ids) != len(set(parser.ids)):
         errors.append('Learning Hub has duplicate section IDs')

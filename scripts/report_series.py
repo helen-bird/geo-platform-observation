@@ -10,6 +10,8 @@ from site_metadata import finalize_page, relative_canonical
 ROOT = Path(__file__).resolve().parents[1]
 INTERIM_READER = 'reviews/interim-review/historical-replication/index.html'
 INTERIM_LABEL = 'Interim Review · Part 1'
+INTERIM_PART2_READER = 'reviews/interim-review/prompt-framing/index.html'
+INTERIM_PART2_LABEL = 'Interim Review · Part 2'
 CSS = '''
 .experiment-series{grid-column:1/-1;margin:0 0 22px;padding:0 0 18px;border-bottom:1px solid currentColor}
 .experiment-series strong{font-size:15px;letter-spacing:0;margin:0 0 8px}
@@ -25,7 +27,8 @@ CSS = '''
 def series_navigation(reports, directory, selected_path, kind='reader'):
     entries = [('learning-hub/index.html', 'Learning Hub · Start with a question')]
     entries += [(r['path'], f'#{r["stage"]:02d} · {r["title"]}') for r in reports]
-    entries += [(INTERIM_READER, INTERIM_LABEL), ('evidence/index.html', 'Evidence library · Individual answers')]
+    entries += [(INTERIM_READER, INTERIM_LABEL), (INTERIM_PART2_READER, INTERIM_PART2_LABEL),
+                ('evidence/index.html', 'Evidence library · Individual answers')]
     active = 'page' if kind == 'reader' else 'step'
     links = ''.join(
         '<a href="'+escape(relative_canonical(path, directory), quote=True)+'"'+

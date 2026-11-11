@@ -55,12 +55,14 @@ def main():
                 continue
             assert not re.search(pattern, value, re.I), (name, label)
     interim = DIST / 'reviews/interim-review/historical-replication'
+    interim_part2 = DIST / 'reviews/interim-review/prompt-framing'
     page_paths = [DIST / name for name in ['index.html','technical-appendix.html',
         'stages/02-post-discovery/index.html','stages/02-post-discovery/technical-appendix.html',
         'stages/03-question-sensitivity/index.html','stages/03-question-sensitivity/technical-appendix.html',
         'stages/04-creator-benchmark/index.html','stages/04-creator-benchmark/technical-appendix.html',
         'stages/05-technical-discoverability/index.html','stages/05-technical-discoverability/technical-appendix.html']]
-    page_paths += [interim / name for name in ('index.html', 'technical-appendix.html')]
+    page_paths += [folder / name for folder in (interim, interim_part2)
+                   for name in ('index.html', 'technical-appendix.html')]
     pages = {}
     for path in page_paths:
         page = Page(); document = path.read_text(); page.feed(document); pages[path.resolve()] = page
@@ -68,11 +70,13 @@ def main():
         assert all(page.details), 'All evidence details must remain expanded'
         assert 'data-report-series="v1"' in document
         series_labels = ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity',
-                         '#04 · Creator Benchmark','#05 · Technical Discoverability','Interim Review · Part 1']
+                         '#04 · Creator Benchmark','#05 · Technical Discoverability','Interim Review · Part 1',
+                         'Interim Review · Part 2']
         offsets = [document.index(label) for label in series_labels]
         assert offsets == sorted(offsets), 'Keep the interim review after the five lab entries'
-        if path.parent == interim:
-            assert 'GEO Lab Interim Review · Part 1' in document
+        if path.parent in (interim, interim_part2):
+            part = 1 if path.parent == interim else 2
+            assert f'GEO Lab Interim Review · Part {part}' in document
             if path.name == 'index.html':
                 assert {'hypotheses', 'validation', 'conclusions'} <= page.ids
         else:
@@ -135,6 +139,8 @@ def main():
     check_stage5_publication.main()
     import build_interim_review
     build_interim_review.check()
+    import build_prompt_framing
+    build_prompt_framing.check()
     import build_learning_hub
     build_learning_hub.check()
     import check_site_metadata

@@ -108,11 +108,11 @@ def section(key, title, body):
     return f'<section id="{key}"><h2>{title}</h2>{body}</section>'
 
 
-def page(filename, title, description, sections, utility):
+def page(filename, title, description, sections, utility, *, route=ROUTE, metadata=METADATA):
     nav = ''.join(f'<a href="#{key}">{label}</a>' for key, label, _ in sections)
     content = ''.join(section(*part) for part in sections)
     reports = json.loads((ROOT / 'report-versions.json').read_text())['reports']
-    series = series_navigation(reports, ROUTE, INTERIM_READER, 'reader' if filename == 'index.html' else 'appendix')
+    series = series_navigation(reports, route, f'{route}/index.html', 'reader' if filename == 'index.html' else 'appendix')
     text = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title>
 <meta name="description" content="{escape(description, quote=True)}"><style>{CSS}{EXTRA}{SERIES_CSS}
@@ -120,10 +120,10 @@ figure{{margin:20px 0}}figure img{{display:block;width:100%;max-width:980px;heig
 </style></head><body><a class="skip" href="#main">Skip to the review</a><div class="layout">
 <nav aria-label="Interim review contents">{series}<strong>On this page</strong><div class="nav-links">{nav}</div>
 <div class="nav-group">{utility}<a href="public-data.zip">Download public data</a></div></nav>
-<main id="main"><p class="lesson-name">GEO Lab Interim Review · Part 1</p><h1>{escape(title)}</h1>
-<p class="author">Helen Bird · Published {METADATA['first_published']} · v{METADATA['version']}</p>
+<main id="main"><p class="lesson-name">GEO Lab Interim Review · Part {metadata['part']}</p><h1>{escape(title)}</h1>
+<p class="author">Helen Bird · Published {metadata['first_published']} · v{metadata['version']}</p>
 {content}<p class="footer">Helen Bird · GEO Learning Log · <a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p></main></div></body></html>'''
-    return finalize_page(text, f'{ROUTE}/{filename}', kind='reader')
+    return finalize_page(text, f'{route}/{filename}', kind='reader')
 
 
 def reader(summary):
