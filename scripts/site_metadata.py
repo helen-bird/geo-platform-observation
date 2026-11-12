@@ -29,7 +29,7 @@ DESCRIPTIONS = {
     'stages/04-creator-benchmark/technical-appendix.html': 'GEO Lab 04 evidence: 18 original answers, 54 creator-by-answer judgments, exact source URLs, search activity, eight cited-page audits and preserved recovery records.',
     'stages/05-technical-discoverability/index.html': 'GEO Lab 05 separates Google indexing, Bing URL information, OpenAI crawl eligibility and IndexNow notifications using reviewed technical observations, not AI-answer experiments.',
     'stages/05-technical-discoverability/technical-appendix.html': 'GEO Lab 05 methods, aggregate observation timeline, official sources and publication boundaries. Private raw search-engine/account evidence is excluded.',
-    HUB_PATH: "Helen Bird's GEO Learning Hub connects four AI-answer experiments and a technical learning record with their methods, public data, evidence boundaries and limitations.",
+    HUB_PATH: "Helen Bird's GEO Learning Hub collects AI search experiments, technical observations and a research review, with methods, sources and evidence limitations.",
 }
 
 
@@ -103,6 +103,11 @@ def _strip_replaced_metadata(head):
     return re.sub(r'<script\b(?=[^>]*\bid=["\']geo-site-structured-data["\'])[^>]*>.*?</script>', '', head, flags=re.I | re.S)
 
 
+def appendix_path(report):
+    """Use the legacy appendix route unless the record specifies otherwise."""
+    return report.get('appendix', posixpath.join(posixpath.dirname(report['path']), 'technical-appendix.html'))
+
+
 def _reports():
     return json.loads((ROOT/'report-versions.json').read_text())['reports']
 
@@ -124,9 +129,9 @@ def _structured(path, kind, stage, title, description):
     person = {'@type': 'Person', '@id': PERSON_ID, 'name': 'Helen Bird', 'url': canonical_url(HUB_PATH)}
     website = {'@type': 'WebSite', '@id': SITE_ID, 'name': 'GEO Learning Log', 'url': SITE, 'publisher': {'@id': PERSON_ID}, 'inLanguage': 'en'}
     # Original AI-answer archives retain their original experiment-series parts.
-    # hasPart is not an exhaustive catalog; technical learning records belong
+    # hasPart is not an exhaustive catalog; technical learning records and research reviews belong
     # in the hub/report graph without rewriting unchanged answer archives.
-    series_reports = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') != 'technical_learning_record']
+    series_reports = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') not in {'technical_learning_record', 'research_review'}]
     series = {'@type': 'CreativeWorkSeries', '@id': SERIES_ID, 'name': 'GEO Lab', 'url': canonical_url(HUB_PATH), 'author': {'@id': PERSON_ID}, 'isPartOf': {'@id': SITE_ID}, 'hasPart': [{'@id': canonical_url(r['path'])+'#article'} for r in series_reports]}
     is_own_article = kind in {'reader', 'appendix'} and selected is not None
     page_type = 'CollectionPage' if kind in {'hub', 'evidence-index'} else ('Article' if is_own_article else 'WebPage')

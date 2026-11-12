@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GEO Lab #06: Content Optimization for AI Search — What Does the Evidence Say?</title>
+
+<style>
+:root {
+  --ink: #182b36;
+  --muted: #4f6873;
+  --line: #dce5e9;
+  --accent: #176a76;
+  --soft: #eaf4f4;
+  --deep: #17343d;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1.25rem; scrollbar-color: #7b9da5 #edf3f5; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font: 1.0625rem/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+::selection { background: #b8dedf; color: #12383f; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.skip { position: fixed; top: .75rem; left: .75rem; z-index: 1; background: #fff; padding: .6rem 1rem; }
+.skip:not(:focus) { clip-path: inset(50%); }
+.layout { display: grid; grid-template-columns: 16.5rem minmax(0, 1fr); min-height: 100vh; }
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: auto;
+  background: var(--deep);
+  color: #edf7f7;
+  padding: 1.7rem 1.35rem;
+}
+.sidebar a { display: block; color: #e0eeee; font-size: .8125rem; line-height: 1.4; padding: .36rem 0; text-decoration: none; }
+.sidebar a:hover, .sidebar a[aria-current] { color: #fff; text-decoration: underline; }
+.sidebar a[aria-current] { font-weight: 750; }
+.sidebar a:focus-visible { outline-color: #b8dedf; }
+.experiment-series { display: grid; }
+.experiment-series strong, .desktop-toc h2 { font-size: .9375rem; margin: 0 0 .5rem; }
+.desktop-toc { border-top: 1px solid #54727b; margin-top: 1.1rem; padding-top: 1.1rem; }
+.desktop-toc ul, .mobile-toc ul { margin: 0; padding: 0; list-style: none; }
+.mobile-toc { display: none; }
+main { container-type: inline-size; min-width: 0; width: 100%; max-width: 69rem; padding: 2.25rem clamp(1.75rem, 5vw, 5rem) 4.5rem; }
+.hero { border-bottom: 1px solid var(--line); padding-bottom: 1.6rem; }
+.back { display: inline-block; margin-bottom: 1.3rem; font-size: .875rem; font-weight: 650; }
+h1, h2, h3, h4 { line-height: 1.18; text-wrap: balance; }
+h1 { max-width: 25ch; font-size: clamp(2.2rem, 3.8vw, 3.5rem); letter-spacing: -.038em; margin: 0 0 1.1rem; }
+h2 { max-width: 36ch; font-size: clamp(1.65rem, 2.55vw, 2.25rem); letter-spacing: -.028em; margin: 0 0 1rem; }
+h3 { max-width: 45ch; font-size: 1.36rem; letter-spacing: -.015em; margin: 2.2rem 0 .75rem; }
+h4 { font-size: 1.02rem; margin: 1.5rem 0 .5rem; }
+p, article li { max-width: 70ch; }
+p { margin: .8rem 0; }
+.lead { max-width: 58ch; font-size: clamp(1.0625rem, 1.6vw, 1.25rem); color: var(--muted); margin: 0 0 1rem; }
+.byline, footer { color: var(--muted); font-size: .875rem; }
+.byline { margin: 0; }
+.byline span { margin: 0 .25em; }
+.chapter { padding-top: 2.1rem; }
+.chapter + .chapter { margin-top: 2.65rem; border-top: 1px solid var(--line); }
+.findings {
+  max-width: 73ch;
+  background: var(--soft);
+  border-radius: .8rem;
+  padding: .2rem clamp(.9rem, 2.8vw, 1.6rem);
+  margin: 1.2rem 0;
+}
+.finding { position: relative; padding: 1rem 0 1rem 2.05rem; margin: 0; }
+.finding + .finding { border-top: 1px solid #c8dede; }
+.finding-number { position: absolute; left: 0; color: var(--accent); font-weight: 750; font-variant-numeric: tabular-nums; }
+.finding strong { display: block; margin-bottom: .15rem; }
+.limitation, blockquote { border-left: 1px solid #7bafb5; padding: .7rem 1rem; background: #f3f8f8; }
+blockquote { margin: .9rem 0; max-width: 70ch; }
+blockquote p { margin: 0; }
+.evidence-note { color: #294d57; }
+.table-hint { display: none; color: var(--muted); }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 1rem 0 1.3rem; border: 1px solid var(--line); border-radius: .65rem; }
+table { width: 100%; border-collapse: collapse; text-align: left; font: .925rem/1.5 system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+.table-wide table { min-width: 37rem; }
+th, td { vertical-align: top; padding: .65rem .85rem; border-bottom: 1px solid var(--line); }
+thead th { background: var(--soft); color: #274b56; }
+tbody th { font-weight: 650; }
+tbody tr:nth-child(even) { background: #f7fafa; }
+tbody tr:last-child > * { border-bottom: 0; }
+.numeric { text-align: right; white-space: nowrap; }
+.citation { font-size: .84em; font-weight: 650; white-space: nowrap; }
+.reference { padding: .65rem 0; margin: 0; border-bottom: 1px solid var(--line); }
+.reference:target { background: var(--soft); }
+footer { margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+
+@media (max-width: 62rem) {
+  .layout { grid-template-columns: 13rem minmax(0, 1fr); }
+  .sidebar { padding-inline: 1rem; }
+}
+@media (max-width: 46rem) {
+  body { font-size: 1rem; }
+  .layout { display: block; }
+  .sidebar { display: none; }
+  main { padding: 1.15rem 1.2rem 3rem; }
+  .back { margin-bottom: 1rem; }
+  .hero { padding-bottom: 1.2rem; }
+  .mobile-toc { display: block; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+  .mobile-toc h2 { margin: 0 0 .4rem; font-size: .875rem; }
+  .mobile-toc ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: .85rem; }
+  .mobile-toc a { display: block; font-size: .8125rem; line-height: 1.35; padding: .37rem 0; }
+  .chapter { padding-top: 1.6rem; }
+  .chapter + .chapter { margin-top: 2rem; }
+  th, td { padding: .55rem .6rem; }
+}
+@container (max-width: 37.125rem) {
+  .table-hint { display: block; }
+  .table-hint + .table-scroll { margin-top: .35rem; }
+}
+@media print {
+  .layout { display: block; }
+  .sidebar, .mobile-toc, .skip, .back, .table-hint { display: none; }
+  main { max-width: none; padding: 0; }
+  .table-wide table { min-width: 0; }
+  h2, h3, h4 { break-after: avoid; }
+  tr { break-inside: avoid; }
+}
+
+</style>
+<link rel="canonical" href="https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/"><meta name="description" content="Seven GEO studies reviewed for indie developers and solo founders. Compare evidence for content relevance, product facts, rewriting, and formatting in AI search."><meta name="author" content="Helen Bird"><meta property="og:type" content="article"><meta property="og:title" content="GEO Lab #06: Content Optimization for AI Search — What Does the Evidence Say?"><meta property="og:description" content="Seven GEO studies reviewed for indie developers and solo founders. Compare evidence for content relevance, product facts, rewriting, and formatting in AI search."><meta property="og:url" content="https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/"><script type="application/ld+json" id="geo-site-structured-data">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird","name":"Helen Bird","url":"https://helen-bird.github.io/geo-platform-observation/learning-hub/"},{"@type":"WebSite","@id":"https://helen-bird.github.io/geo-platform-observation/#website","name":"GEO Learning Log","url":"https://helen-bird.github.io/geo-platform-observation/","publisher":{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird"},"inLanguage":"en"},{"@type":"CreativeWorkSeries","@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#geo-lab","name":"GEO Lab","url":"https://helen-bird.github.io/geo-platform-observation/learning-hub/","author":{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird"},"isPartOf":{"@id":"https://helen-bird.github.io/geo-platform-observation/#website"},"hasPart":[{"@id":"https://helen-bird.github.io/geo-platform-observation/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/03-question-sensitivity/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/04-creator-benchmark/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/05-technical-discoverability/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/#article"}]},{"@type":"Article","@id":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/#article","url":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/","name":"GEO Lab #06: Content Optimization for AI Search \u2014 What Does the Evidence Say?","description":"Seven GEO studies reviewed for indie developers and solo founders. Compare evidence for content relevance, product facts, rewriting, and formatting in AI search.","inLanguage":"en","publisher":{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird"},"isPartOf":[{"@id":"https://helen-bird.github.io/geo-platform-observation/#website"},{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#geo-lab"}],"headline":"GEO Lab #06: Content Optimization for AI Search \u2014 What Does the Evidence Say?","author":{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird"},"mainEntityOfPage":{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/#webpage"},"datePublished":"2026-11-12","dateModified":"2026-11-12"},{"@type":"BreadcrumbList","@id":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"GEO Learning Log","item":"https://helen-bird.github.io/geo-platform-observation/"},{"@type":"ListItem","position":2,"name":"GEO Learning Hub","item":"https://helen-bird.github.io/geo-platform-observation/learning-hub/"},{"@type":"ListItem","position":3,"name":"GEO Lab #06: Content Optimization for AI Search \u2014 What Does the Evidence Say?","item":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/"}]},{"@type":"WebPage","@id":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/#webpage","url":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/","name":"GEO Lab #06: Content Optimization for AI Search \u2014 What Does the Evidence Say?","description":"Seven GEO studies reviewed for indie developers and solo founders. Compare evidence for content relevance, product facts, rewriting, and formatting in AI search.","inLanguage":"en","isPartOf":{"@id":"https://helen-bird.github.io/geo-platform-observation/#website"},"mainEntity":{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/#article"},"breadcrumb":{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/#breadcrumb"}}]}</script></head>
+<body id="top">
+<a class="skip" href="#main">Skip to the report</a>
+<div class="layout">
+<aside class="sidebar">
+<div class="experiment-series" data-report-series="v1" aria-label="GEO Lab learning series"><strong>GEO Lab learning records</strong><a href="../../learning-hub/">Learning Hub · Start with a question</a><a href="../../">#01 · AI Recommendations</a><a href="../02-post-discovery/">#02 · Content Discovery</a><a href="../03-question-sensitivity/">#03 · Prompt Sensitivity</a><a href="../04-creator-benchmark/">#04 · Creator Benchmark</a><a href="../05-technical-discoverability/">#05 · Technical Discoverability</a><a href="./" aria-current="page">#06 · Content Optimization for AI Search</a><a href="../../reviews/interim-review/historical-replication/">Interim Review · Part 1</a><a href="../../reviews/interim-review/prompt-framing/">Interim Review · Part 2</a><a href="../../evidence/">Evidence library · Individual answers</a></div>
+<nav aria-label="Report contents" class="desktop-toc">
+<h2>On this page</h2>
+<ul><li><a href="#summary">TL;DR</a></li>
+<li><a href="#how-to-read-the-evidence">How to interpret evidence</a></li>
+<li><a href="#positive-evidence">Tactics with positive evidence</a></li>
+<li><a href="#negative-results">Negative or inconclusive results</a></li>
+<li><a href="#unproven-tactics">Tactics with limited evidence</a></li>
+<li><a href="#real-world-experiments">Real-world experiments</a></li>
+<li><a href="#practical-plan">Practical optimization plan</a></li>
+<li><a href="#research-reliability">Research reliability</a></li>
+<li><a href="#recommendations">Final recommendations</a></li>
+<li><a href="#references">References and methodology</a></li></ul>
+</nav>
+</aside>
+<main id="main" tabindex="-1">
+<article id="article">
+<header class="hero">
+<a class="back" href="../../learning-hub/#lab-6">← GEO Learning Hub</a>
+<h1>GEO Lab #06: Content Optimization for AI Search — What Does the Evidence Say?</h1>
+<p class="lead">What works, what fails, and what remains unproven? An evidence review for indie developers and solo founders.</p>
+<p class="byline">Helen Bird <span aria-hidden="true">·</span> Research review · <time datetime="2026-11-12">November 12, 2026</time></p>
+</header>
+<nav class="mobile-toc" aria-label="Report contents">
+<h2>On this page</h2>
+<ul><li><a href="#summary">TL;DR</a></li>
+<li><a href="#how-to-read-the-evidence">How to interpret evidence</a></li>
+<li><a href="#positive-evidence">Tactics with positive evidence</a></li>
+<li><a href="#negative-results">Negative or inconclusive results</a></li>
+<li><a href="#unproven-tactics">Tactics with limited evidence</a></li>
+<li><a href="#real-world-experiments">Real-world experiments</a></li>
+<li><a href="#practical-plan">Practical optimization plan</a></li>
+<li><a href="#research-reliability">Research reliability</a></li>
+<li><a href="#recommendations">Final recommendations</a></li>
+<li><a href="#references">References and methodology</a></li></ul>
+</nav>
+<section class="chapter" id="summary" aria-labelledby="summary-title">
+<h2 id="summary-title">TL;DR — What should you actually do?</h2>
+<p>If you&#39;re an indie developer or solo founder, you probably don&#39;t have a dedicated SEO team. Every hour spent optimizing your website is an hour you could spend building your product.</p>
+<p>So which content optimization tactics are actually worth your time?</p>
+<p>We reviewed seven major GEO studies published between 2024 and 2026, covering controlled experiments, real AI citation data, end-to-end retrieval benchmarks, and a real-world website intervention.</p>
+<p>Three findings stand out:</p>
+<div class="findings">
+<p class="finding"><span class="finding-number">1.</span> <strong>Relevance and useful information have the strongest support.</strong> Content that closely matches a user&#39;s question, and provides concrete facts needed to answer it, performs better in controlled citation experiments and is associated with more citations in real AI search data.</p>
+<p class="finding"><span class="finding-number">2.</span> <strong>Popular formatting tricks have weak evidence.</strong> FAQ blocks, TL;DR boxes, structured data, and similar tactics have not demonstrated consistent independent improvements in real AI citations.</p>
+<p class="finding"><span class="finding-number">3.</span> <strong>Some GEO rewrites can backfire.</strong> Controlled experiments show that generic content rewrites can reduce retrieval performance, even when they were designed to improve the final AI answer.</p>
+</div>
+<p class="limitation">The biggest limitation: <strong>Very few studies establish that changing a live webpage causes a sustained increase in organic AI search visibility.</strong></p>
+<h3 id="evidence-at-a-glance">The evidence at a glance</h3>
+<small class="table-hint">Scroll across the table to see all columns.</small>
+<div class="table-scroll table-wide" tabindex="0" role="region" aria-label="Content optimization tactic / Evidence status / Worth trying?">
+<table>
+<colgroup><col style="width:37%"><col style="width:38%"><col style="width:25%"></colgroup>
+<thead><tr><th scope="col">Content optimization tactic</th><th scope="col">Evidence status</th><th scope="col">Worth trying?</th></tr></thead>
+<tbody><tr><th scope="row">Match content to real user questions</th><td>Supported by controlled and observational evidence</td><td>High priority</td></tr>
+<tr><th scope="row">Provide complete, concrete product information</th><td>Supported in controlled product-selection tasks</td><td>High priority</td></tr>
+<tr><th scope="row">Add relevant statistics and credible evidence</th><td>Positive results in some controlled experiments</td><td>Yes, when evidence is genuine</td></tr>
+<tr><th scope="row">Keep factual information up to date</th><td>Recency cues work in some controlled tests</td><td>Yes, when content actually changes</td></tr>
+<tr><th scope="row">Keyword stuffing</th><td>Negative results in tested environments</td><td>Avoid</td></tr>
+<tr><th scope="row">Generic GEO rewriting at scale</th><td>Often ineffective; sometimes harmful</td><td>Avoid blind application</td></tr>
+<tr><th scope="row">Formatting-only rewrites</th><td>No consistent citation advantage</td><td>Optimize for readability</td></tr>
+<tr><th scope="row">Fabricated statistics</th><td>Demonstrated factual reliability risk</td><td>Avoid</td></tr>
+<tr><th scope="row">Answer-first / TL;DR boxes</th><td>Independent AI visibility effect unproven</td><td>Optional</td></tr>
+<tr><th scope="row">FAQ sections</th><td>No stable within-site citation association</td><td>Add for real user needs</td></tr>
+<tr><th scope="row">Author pages and first-sentence attribution</th><td>Direct effect on AI naming unproven</td><td>Useful for identity clarity</td></tr>
+<tr><th scope="row">Tables, short chunks, separate answer pages</th><td>No proven universal advantage</td><td>Use when structurally appropriate</td></tr>
+<tr><th scope="row">Schema.org markup</th><td>Independent AI citation lift unproven</td><td>Follow standard SEO needs</td></tr></tbody>
+</table>
+</div>
+<p><em>“Supported” refers to the tested conditions, not guaranteed results on ChatGPT Search, Gemini, or other live platforms.</em></p>
+</section>
+<section class="chapter" id="how-to-read-the-evidence" aria-labelledby="how-to-read-the-evidence-title">
+<h2 id="how-to-read-the-evidence-title">1. How to interpret GEO evidence</h2>
+<p>Before examining individual tactics, we need to distinguish what researchers actually measure.</p>
+<p>A website can succeed or fail at several different stages:</p>
+<div class="table-scroll table-wide" tabindex="0" role="region" aria-label="Stage / What it means / Example metric">
+<table>
+<thead><tr><th scope="col">Stage</th><th scope="col">What it means</th><th scope="col">Example metric</th></tr></thead>
+<tbody><tr><th scope="row">Discovery</th><td>A search system finds the webpage</td><td>URL discovery status</td></tr>
+<tr><th scope="row">Retrieval</th><td>The webpage enters the search results or available context</td><td>Retrieval hit rate</td></tr>
+<tr><th scope="row">Citation</th><td>The AI includes the webpage as a cited source</td><td>Citation rate</td></tr>
+<tr><th scope="row">Mention</th><td>The AI names the product or creator</td><td>Mention rate</td></tr>
+<tr><th scope="row">Recommendation</th><td>The AI actively recommends the product</td><td>Recommendation rate</td></tr>
+<tr><th scope="row">Referral</th><td>A user clicks through to the website</td><td>AI referral sessions</td></tr></tbody>
+</table>
+</div>
+<p>These outcomes are related, but they are not interchangeable.</p>
+<p>For example, a study showing that a webpage contributes 40% more text to an AI answer does not establish that the webpage receives 40% more organic search traffic.</p>
+<h3 id="how-to-read-the-evidence-four-evidence-levels">Four evidence levels</h3>
+<p>This review uses four categories:</p>
+<p><strong>Controlled experimental support:</strong> Researchers changed a specific factor while holding other conditions relatively constant. This provides evidence of an effect in the tested environment.</p>
+<p><strong>Real-world observational support:</strong> A tactic or characteristic is associated with more citations in actual AI responses. Other differences between websites may still explain the association.</p>
+<p><strong>Negative or inconclusive experimental results:</strong> A tested tactic failed to improve the measured outcome, or produced worse results, under specific conditions.</p>
+<p><strong>Insufficient direct evidence:</strong> The tactic is widely discussed, but its claimed effect has not been established through a sufficiently relevant experiment.</p>
+<p>For every tactic, the key questions are: What was changed? What was measured? Which search stages were included? How well does the result transfer to a small product website?</p>
+</section>
+<section class="chapter" id="positive-evidence" aria-labelledby="positive-evidence-title">
+<h2 id="positive-evidence-title">2. Tactics with positive experimental evidence</h2>
+<h3 id="tactic-2-1">2.1 Match your content to the questions people actually ask</h3>
+<p class="evidence-note"><strong>Verdict: The most consistently supported content-level direction.</strong></p>
+<h4 id="tactic-2-1-what-does-the-evidence-show">What does the evidence show?</h4>
+<p>A 2026 study, <em>What Gets Cited</em>, performed 252,000 controlled trials across six language models and 18 content factors.</p>
+<p>Each trial compared two candidate sources differing in one factor. Topical relevance was one of the strongest determinants of which source received the first citation. <a class="citation" href="#ref-s3" aria-label="Reference S3">[S3]</a></p>
+<p>Another study, <em>What Drives AI Citations?</em>, analyzed 158,099 real AI answers containing 468,037 citations.</p>
+<p>When comparing pages within the same website, researchers found:</p>
+<div class="table-scroll " tabindex="0" role="region" aria-label="Page characteristic / Association with citations">
+<table class="two-columns">
+<thead><tr><th scope="col">Page characteristic</th><th scope="col">Association with citations</th></tr></thead>
+<tbody><tr><th scope="row">Best paragraph matches the query, +1 standard deviation</th><td class="numeric">+15.5%</td></tr>
+<tr><th scope="row">Title matches the query, +1 standard deviation</th><td class="numeric">+14.1%</td></tr></tbody>
+</table>
+</div>
+<p>These are observational estimates, with differences across platforms and page types. They do not predict the percentage improvement from rewriting any particular page. <a class="citation" href="#ref-s5" aria-label="Reference S5">[S5]</a></p>
+<h4 id="tactic-2-1-when-does-this-work">When does this work?</h4>
+<p>The controlled evidence applies when a model chooses between sources it has already received.</p>
+<p>The observational evidence applies to real citations from ChatGPT, Gemini, and Perplexity in the study&#39;s commercial-query datasets.</p>
+<p>Neither study proves that changing a page title or paragraph will independently cause the same increase in live search citations.</p>
+<p class="evidence-note"><strong>Evidence confidence:</strong> Stronger than most content GEO tactics for relevance as a factor; limited causal evidence for live website edits.</p>
+<h4 id="tactic-2-1-what-should-an-indie-developer-do">What should an indie developer do?</h4>
+<p>Start with the actual problem your user is trying to solve.</p>
+<p>For example, suppose you&#39;re building a time-tracking tool for freelancers.</p>
+<p>A generic page:</p>
+<blockquote>
+<p>Productivity Tool — Features and Benefits</p>
+</blockquote>
+<p>may communicate less useful information about the user&#39;s specific need than:</p>
+<blockquote>
+<p>How to Track Time Across Multiple Long-Term Freelance Projects</p>
+</blockquote>
+<p>The second page could explain the workflow, provide examples, show relevant features, and describe limitations.</p>
+<p>The important improvement is genuine task relevance and useful content. Replacing titles with question-shaped keywords alone has no guaranteed effect.</p>
+<h3 id="tactic-2-2">2.2 Provide complete, concrete product information</h3>
+<p class="evidence-note"><strong>Verdict: Supported in controlled product recommendation and comparison tasks.</strong></p>
+<h4 id="tactic-2-2-what-does-the-evidence-show">What does the evidence show?</h4>
+<p>The same 252,000-trial study found that explicit pricing information consistently influenced first-citation selection.</p>
+<p>Information completeness and some trust-related cues also produced smaller positive effects. <a class="citation" href="#ref-s3" aria-label="Reference S3">[S3]</a></p>
+<p>This is relevant because many AI search questions concern product decisions.</p>
+<p>A user might ask:</p>
+<ul>
+<li>Which free tools support project-based time tracking?</li>
+<li>How much does a particular SaaS cost?</li>
+<li>Does this app work offline?</li>
+<li>What are the differences between two competing products?</li>
+</ul>
+<p>A webpage that contains the necessary facts gives the model more information to use.</p>
+<h4 id="tactic-2-2-when-does-this-work">When does this work?</h4>
+<p>The evidence comes from controlled comparisons of already-provided candidate sources.</p>
+<p>Pricing effects are especially relevant to commercial and product-selection questions. The result cannot automatically be generalized to every article or research topic.</p>
+<p class="evidence-note"><strong>Evidence confidence:</strong> Relatively strong within the tested product-selection setting; limited evidence for organic search lift.</p>
+<h4 id="tactic-2-2-what-should-an-indie-developer-do">What should an indie developer do?</h4>
+<p>Make the following information easy to find when relevant:</p>
+<ul>
+<li>Who the product is for.</li>
+<li>What problem it solves.</li>
+<li>Core features and practical workflows.</li>
+<li>Pricing, free limits, and subscription conditions.</li>
+<li>Supported platforms and integrations.</li>
+<li>Known limitations.</li>
+<li>Meaningful differences from alternatives.</li>
+</ul>
+<p>Avoid exaggerated or unverifiable comparisons.</p>
+<p>These improvements can help human users make decisions regardless of their measurable GEO impact.</p>
+<h3 id="tactic-2-3">2.3 Add verifiable data, references, and relevant quotations</h3>
+<p class="evidence-note"><strong>Verdict: Positive controlled evidence exists, but results vary substantially across research environments.</strong></p>
+<h4 id="tactic-2-3-what-does-the-evidence-show">What does the evidence show?</h4>
+<p>The original <em>GEO: Generative Engine Optimization</em> paper (KDD 2024) evaluated several methods for rewriting source documents.</p>
+<p>Its controlled benchmark showed the following relative changes in Position-Adjusted Word Count:</p>
+<div class="table-scroll " tabindex="0" role="region" aria-label="Tactic / Relative change">
+<table class="two-columns">
+<thead><tr><th scope="col">Tactic</th><th scope="col">Relative change</th></tr></thead>
+<tbody><tr><th scope="row">Add relevant quotations</th><td class="numeric">+41.5%</td></tr>
+<tr><th scope="row">Add statistics</th><td class="numeric">+31.6%</td></tr>
+<tr><th scope="row">Improve language fluency</th><td class="numeric">+27.5%</td></tr>
+<tr><th scope="row">Cite credible sources</th><td class="numeric">+26.9%</td></tr></tbody>
+</table>
+</div>
+<p><a class="citation" href="#ref-s1" aria-label="Reference S1">[S1]</a></p>
+<p>These are changes in the study&#39;s source-exposure metric. They are not increases in organic citation rate, product recommendations, or traffic.</p>
+<p>The experiment used preselected sources and examined how their content contributed to generated answers.</p>
+<p>Later research, including C-SEO Bench and SAGEO Arena, found much weaker or negative results for several rewriting strategies under different evaluation conditions. <a class="citation" href="#ref-s2" aria-label="Reference S2">[S2]</a><a class="citation" href="#ref-s4" aria-label="Reference S4">[S4]</a></p>
+<h4 id="tactic-2-3-when-does-this-work">When does this work?</h4>
+<p>Evidence addition can influence answers when the modified source is already available to the model.</p>
+<p>The benefit is less predictable when the modified document must compete in an actual retrieval and ranking process.</p>
+<p>Results may also vary by topic. Statistics may be useful for research or performance comparisons, while direct quotations may be more relevant to interviews or historical accounts.</p>
+<p class="evidence-note"><strong>Evidence confidence:</strong> Moderate for specific fixed-source experiments; mixed for broader search visibility.</p>
+<h4 id="tactic-2-3-what-should-an-indie-developer-do">What should an indie developer do?</h4>
+<p>Publish information competitors cannot easily reproduce:</p>
+<ul>
+<li>Original benchmarks with clear methodology.</li>
+<li>Real performance tests.</li>
+<li>Documented user research.</li>
+<li>Product comparisons based on actual use.</li>
+<li>Case studies with explicit assumptions and limitations.</li>
+<li>Accurate statistics linked to their sources.</li>
+</ul>
+<p>A reproducible experiment with a modest result is more useful than a dramatic claim with no supporting evidence.</p>
+<h3 id="tactic-2-4">2.4 Maintain accurate and genuinely current information</h3>
+<p class="evidence-note"><strong>Verdict: Recency cues influence some controlled citation decisions.</strong></p>
+<p>The <em>What Gets Cited</em> study found that recent timestamps could increase the likelihood of receiving the first citation in its two-source comparisons. <a class="citation" href="#ref-s3" aria-label="Reference S3">[S3]</a></p>
+<p>However, the study measured model responses to date-related cues.</p>
+<p>It did not establish that regularly changing the displayed publication date improves organic AI search visibility.</p>
+<p class="evidence-note"><strong>Evidence confidence:</strong> Moderate for specific recency-cue experiments; weak for artificial content-refresh strategies.</p>
+<p><strong>Practical implication:</strong> Update pricing, feature availability, supported integrations, compatibility information, and other time-sensitive facts when they genuinely change.</p>
+<p>Use accurate publication and update dates. Artificially refreshing timestamps without meaningful changes has no established GEO benefit.</p>
+</section>
+<section class="chapter" id="negative-results" aria-labelledby="negative-results-title">
+<h2 id="negative-results-title">3. Tactics with negative or inconclusive experimental results</h2>
+<p>This section requires careful interpretation.</p>
+<p>A negative result in a specific benchmark does not prove that a technique will fail on every platform.</p>
+<p>However, these findings challenge claims that certain GEO practices are universally effective.</p>
+<h3 id="tactic-3-1">3.1 Keyword stuffing</h3>
+<p class="evidence-note"><strong>Verdict: Negative results in early GEO experiments.</strong></p>
+<p>The KDD 2024 GEO paper tested keyword stuffing as a source modification strategy.</p>
+<p>On its main benchmark, keyword stuffing performed worse than the unmodified baseline in the principal word-exposure metric.</p>
+<p>In its additional Perplexity fixed-file evaluation, the same technique produced approximately 10% lower Position-Adjusted Word Count than the baseline. <a class="citation" href="#ref-s1" aria-label="Reference S1">[S1]</a></p>
+<h4 id="tactic-3-1-when-does-this-conclusion-apply">When does this conclusion apply?</h4>
+<p>These results concern content inserted into controlled generative-answer settings.</p>
+<p>They do not imply that using accurate product terminology or relevant search phrases is harmful.</p>
+<p class="evidence-note"><strong>Evidence confidence:</strong> Moderate for the tested negative result.</p>
+<p><strong>Recommendation:</strong> Use the terminology your users naturally use. Avoid mechanical repetition of phrases such as “best AI productivity tool” throughout unrelated content.</p>
+<h3 id="tactic-3-2">3.2 Applying generic GEO rewriting templates across a website</h3>
+<p class="evidence-note"><strong>Verdict: Often ineffective in benchmarks, sometimes harmful to retrieval and citation.</strong></p>
+<h4 id="tactic-3-2-evidence-from-c-seo-bench">Evidence from C-SEO Bench</h4>
+<p><em>C-SEO Bench</em> (NeurIPS 2025) compared optimization approaches across question-answering and product recommendation tasks, multiple domains, and different competitive adoption scenarios.</p>
+<p>Many tested content rewriting methods failed to produce consistent improvements and sometimes reduced document rankings.</p>
+<p>The research also found that gains decreased when more competing documents adopted similar optimization methods. <a class="citation" href="#ref-s2" aria-label="Reference S2">[S2]</a></p>
+<h4 id="tactic-3-2-evidence-from-sageo-arena">Evidence from SAGEO Arena</h4>
+<p><em>SAGEO Arena</em> (KDD 2026) addressed a limitation of fixed-source experiments.</p>
+<p>It built a test environment with:</p>
+<ul>
+<li>171,003 documents.</li>
+<li>2,700 queries.</li>
+<li>Retrieval, reranking, and answer generation stages.</li>
+</ul>
+<p>The optimized documents were reintroduced into the search corpus before evaluation.</p>
+<p>In its principal experimental configuration, conventional body-text optimization methods had the following average relative changes:</p>
+<div class="table-scroll " tabindex="0" role="region" aria-label="Search stage / Average change">
+<table class="two-columns">
+<thead><tr><th scope="col">Search stage</th><th scope="col">Average change</th></tr></thead>
+<tbody><tr><th scope="row">First-stage retrieval hit rate</th><td class="numeric">−9%</td></tr>
+<tr><th scope="row">Reranking hit rate</th><td class="numeric">−16%</td></tr>
+<tr><th scope="row">Final citation rate</th><td class="numeric">−6%</td></tr></tbody>
+</table>
+</div>
+<p><a class="citation" href="#ref-s4" aria-label="Reference S4">[S4]</a></p>
+<p>The reported values are specific to the benchmark and its model configurations.</p>
+<p>Some structural optimization methods performed differently, and the paper does not establish that all content rewriting is harmful.</p>
+<h4 id="tactic-3-2-why-might-rewriting-backfire">Why might rewriting backfire?</h4>
+<p>A rewrite can increase the apparent usefulness of a document after retrieval while changing the features used to retrieve it.</p>
+<p>A page may become more attractive to the answer generator but less competitive in the preceding search stage.</p>
+<h4 id="tactic-3-2-when-does-this-conclusion-apply">When does this conclusion apply?</h4>
+<p>The negative results come from controlled tasks and a constructed end-to-end search system.</p>
+<p>They should not be interpreted as measured average losses across live ChatGPT Search websites.</p>
+<p class="evidence-note"><strong>Evidence confidence:</strong> Moderate to strong within the tested systems; generalization to commercial search remains uncertain.</p>
+<p><strong>Recommendation:</strong> Avoid site-wide automated rewriting solely to satisfy a generic GEO checklist. Prefer targeted changes that solve actual content deficiencies.</p>
+<h3 id="tactic-3-3">3.3 Formatting-only optimization</h3>
+<p class="evidence-note"><strong>Verdict: No consistent independent citation advantage has been established.</strong></p>
+<p>Common suggestions include:</p>
+<ul>
+<li>Turning paragraphs into bullet lists.</li>
+<li>Replacing prose with tables.</li>
+<li>Using shorter paragraphs.</li>
+<li>Adding more headings.</li>
+<li>Reformatting content without adding new information.</li>
+</ul>
+<p>The <em>What Gets Cited</em> study found relatively small or inconsistent effects from formatting-only changes in its controlled two-source experiments. <a class="citation" href="#ref-s3" aria-label="Reference S3">[S3]</a></p>
+<p>The real-world citation study likewise did not identify common formatting markers as consistently strong independent predictors once website-level differences were controlled. <a class="citation" href="#ref-s5" aria-label="Reference S5">[S5]</a></p>
+<h4 id="tactic-3-3-what-does-this-mean">What does this mean?</h4>
+<p>The evidence does not establish that these formats are universally ineffective.</p>
+<p>Formatting can improve human readability, accessibility, and usability. It may also matter for particular model architectures or tasks.</p>
+<p>The unsupported claim is that formatting alone reliably increases organic AI citations.</p>
+<p class="evidence-note"><strong>Evidence confidence:</strong> Moderate for the absence of a consistent effect in the studied settings; limited for universal conclusions.</p>
+<p><strong>Recommendation:</strong> Structure content according to what helps users understand it. Do not treat formatting changes as a guaranteed GEO intervention.</p>
+<h3 id="tactic-3-4">3.4 Adding invented statistics to appear authoritative</h3>
+<p class="evidence-note"><strong>Verdict: Demonstrated factual reliability risk.</strong></p>
+<p><em>LIVE-GEO</em> (October 2026) tested GEO rewrites published as real webpages.</p>
+<p>Its Statistics Addition strategy produced 80 rewritten product descriptions that were all flagged by the study&#39;s factual-consistency checker. <a class="citation" href="#ref-s7" aria-label="Reference S7">[S7]</a></p>
+<p>This indicates a substantial factual reliability problem in that particular generated set. A checker flag does not automatically establish that every number was independently proven false.</p>
+<p>The study did not establish a precise causal effect of inaccurate statistics on organic search visibility.</p>
+<p class="evidence-note"><strong>Evidence confidence:</strong> Strong evidence of problems detected in the tested outputs; unknown general impact on AI citation rates.</p>
+<p><strong>Recommendation:</strong> Never generate supporting numbers solely to improve GEO. Use actual measurements and disclose methods.</p>
+</section>
+<section class="chapter" id="unproven-tactics" aria-labelledby="unproven-tactics-title">
+<h2 id="unproven-tactics-title">4. Popular tactics that remain insufficiently validated</h2>
+<p>These tactics are common in GEO advice, but the evidence does not yet support strong claims about their independent effect on organic AI visibility.</p>
+<p>Some are still valuable for readers, search engines, or brand clarity.</p>
+<h3 id="tactic-4-1">4.1 Answer-first writing and TL;DR summary boxes</h3>
+<p><strong>Popular claim:</strong> Putting the answer at the top makes AI more likely to cite the page.</p>
+<p><strong>What evidence exists?</strong></p>
+<p>A real-world Glasp study included changes to titles and opening summaries, but these were implemented alongside other interventions, including URL canonicalization and new content based on observed demand. <a class="citation" href="#ref-s6" aria-label="Reference S6">[S6]</a></p>
+<p>The <em>What Drives AI Citations?</em> study found that summary boxes were associated with more citations across different websites. However, the association was not statistically stable when comparing pages within the same website. <a class="citation" href="#ref-s5" aria-label="Reference S5">[S5]</a></p>
+<p><strong>What remains unproven?</strong></p>
+<p>Whether independently introducing an Answer-first section on an existing webpage increases organic ChatGPT citation rate.</p>
+<p><strong>Worth trying?</strong> Yes, for long research articles, technical documentation, and complex tutorials when it improves reader comprehension.</p>
+<p class="evidence-note"><strong>GEO confidence:</strong> Low for an independent organic citation gain.</p>
+<h3 id="tactic-4-2">4.2 FAQ sections</h3>
+<p><strong>Popular claim:</strong> AI search favors question-and-answer formats.</p>
+<p><strong>What evidence exists?</strong></p>
+<p>In the 158,099-answer observational study:</p>
+<ul>
+<li>Across websites, FAQ markers were associated with 18.1% more citations.</li>
+<li>Within the same website, the estimate was −3.4% and did not demonstrate a stable significant gain. <a class="citation" href="#ref-s5" aria-label="Reference S5">[S5]</a></li>
+</ul>
+<p>The difference matters: websites containing FAQs may already be stronger publishers for other reasons.</p>
+<p><strong>What remains unproven?</strong></p>
+<p>That adding an FAQ block to an otherwise unchanged product page causes an increase in natural AI citations.</p>
+<p><strong>Worth trying?</strong> Yes, when customers genuinely ask recurring questions.</p>
+<p class="evidence-note"><strong>GEO confidence:</strong> Low for an independent citation benefit.</p>
+<h3 id="tactic-4-3">4.3 Author profiles, bylines, and identity signals</h3>
+<p><strong>Popular claim:</strong> Clear author information helps AI connect the work to its creator and mention the creator by name.</p>
+<p>Possible implementations include:</p>
+<ul>
+<li>A dedicated author page.</li>
+<li>A visible byline.</li>
+<li>Consistent author identity across articles.</li>
+<li>Links to verified social profiles.</li>
+<li>Naming the creator in the opening sentence.</li>
+</ul>
+<p><strong>What evidence exists?</strong></p>
+<p>The large observational citation study did not find a stable independent citation benefit from author information in within-website comparisons. <a class="citation" href="#ref-s5" aria-label="Reference S5">[S5]</a></p>
+<p>But citation of a webpage and naming its author are different outcomes.</p>
+<p>Existing evidence does not directly resolve whether these practices improve creator-name mentions after the creator&#39;s work is recommended.</p>
+<p><strong>Worth trying?</strong> Yes, if building a personal brand or research portfolio.</p>
+<p class="evidence-note"><strong>GEO confidence:</strong> Insufficient direct evidence for improved author naming.</p>
+<p>This remains a particularly relevant research gap for independent creators.</p>
+<h3 id="tactic-4-4">4.4 Tables, chunking, and short standalone pages</h3>
+<p><strong>Popular claim:</strong> AI prefers short, self-contained content chunks.</p>
+<p><strong>What evidence exists?</strong></p>
+<p>Formatting studies have not established a universally superior structure.</p>
+<p>Google&#39;s official guidance also advises website owners not to pursue unnecessary content chunking specifically for its AI search features. <a class="citation" href="#ref-s8" aria-label="Reference S8">[S8]</a></p>
+<p>There is no generally validated optimal paragraph length or page length for AI citation.</p>
+<p><strong>Worth trying?</strong> Use tables for genuine comparisons, sections for distinct topics, and standalone pages when they serve separate user needs.</p>
+<p class="evidence-note"><strong>GEO confidence:</strong> Low for a universal content-chunking advantage.</p>
+<h3 id="tactic-4-5">4.5 Schema.org and JSON-LD</h3>
+<p><strong>Popular claim:</strong> Structured data makes AI more likely to understand and recommend a webpage.</p>
+<p><strong>What evidence exists?</strong></p>
+<p>The 2026 observational citation study found no stable independent increase in within-site citations associated with Schema.org markup. <a class="citation" href="#ref-s5" aria-label="Reference S5">[S5]</a></p>
+<p>Google&#39;s official AI Search guidance does not require special generative-AI structured data. Existing supported structured data remains relevant to traditional Search features. <a class="citation" href="#ref-s8" aria-label="Reference S8">[S8]</a></p>
+<p><strong>Worth trying?</strong> Implement accurate, relevant structured data following the target platform&#39;s official requirements.</p>
+<p class="evidence-note"><strong>GEO confidence:</strong> Low for a separate AI citation lift.</p>
+<p><em>Scope note:</em> Schema.org belongs primarily to technical and machine-readable page information, rather than prose content optimization.</p>
+<h3 id="tactic-4-6">4.6 Artificial freshness and aggressive content republishing</h3>
+<p><strong>Popular claim:</strong> Updating dates and repeatedly republishing pages makes AI regard them as more relevant.</p>
+<p>Controlled experiments show that date cues can influence some citation decisions. <a class="citation" href="#ref-s3" aria-label="Reference S3">[S3]</a></p>
+<p>However, no reliable general causal benefit has been established for repeatedly updating timestamps without substantive content changes.</p>
+<p><strong>Worth trying?</strong> Maintain genuinely current product information. Avoid artificial update histories.</p>
+</section>
+<section class="chapter" id="real-world-experiments" aria-labelledby="real-world-experiments-title">
+<h2 id="real-world-experiments-title">5. What real-world GEO experiments tell us</h2>
+<p>Controlled studies help identify mechanisms. Real websites introduce additional challenges: crawling, indexing, competition, ranking, and platform changes.</p>
+<p>Two studies are especially useful for interpreting these limitations.</p>
+<h3 id="tactic-5-1">5.1 Glasp: Large traffic growth does not equal a large optimization effect</h3>
+<p>Glasp studied actual ChatGPT referral traffic to its website.</p>
+<p>Some pages received a group of AEO-related changes, while other pages on the same domain served as a contemporaneous comparison group.</p>
+<p>From January to May 2026:</p>
+<div class="table-scroll " tabindex="0" role="region" aria-label="Group / ChatGPT referral growth">
+<table class="two-columns">
+<thead><tr><th scope="col">Group</th><th scope="col">ChatGPT referral growth</th></tr></thead>
+<tbody><tr><th scope="row">Treated pages</th><td class="numeric">6.1×</td></tr>
+<tr><th scope="row">Untreated pages</th><td class="numeric">3.5×</td></tr></tbody>
+</table>
+</div>
+<p>The researchers&#39; interrupted time-series analysis estimated an intervention-aligned level change of approximately 1.82×.</p>
+<p>However, a conservative placebo-in-time test returned p = 0.16.</p>
+<p>The authors therefore characterized the result as suggestive rather than conclusive. <a class="citation" href="#ref-s6" aria-label="Reference S6">[S6]</a></p>
+<h4 id="tactic-5-1-what-can-we-learn">What can we learn?</h4>
+<p>First, AI platform growth can create substantial traffic increases even without webpage optimization.</p>
+<p>Second, a single before-and-after comparison can substantially overstate an intervention&#39;s effect.</p>
+<p>Third, because Glasp applied several changes together, the study cannot tell us which specific content tactic caused any incremental improvement.</p>
+<p>This study measures referral sessions, not simply whether AI answers cite a page.</p>
+<h3 id="tactic-5-2">5.2 LIVE-GEO: Real webpage effects remain sensitive to the evaluation setup</h3>
+<p>LIVE-GEO published product descriptions as real accessible webpages and tested several GEO rewriting strategies across AI products, including ChatGPT, Grok, and Gemini.</p>
+<p>The study covered 80 fictional brands across 18 product families. <a class="citation" href="#ref-s7" aria-label="Reference S7">[S7]</a></p>
+<p>Some rewriting strategies performed well in product ranking tasks. But rankings varied by platform, presentation order, and candidate setup.</p>
+<p>The critical limitation is that the experiments generally supplied candidate URLs or a catalogue page to the AI systems.</p>
+<p>The study therefore tests real webpage reading and selection under constrained candidate discovery.</p>
+<p>It does not fully represent an ordinary user asking an open-ended question without providing URLs.</p>
+<h4 id="tactic-5-2-what-can-we-learn">What can we learn?</h4>
+<p>A tactic that works when a model is given candidate webpages may have little measurable impact on whether those webpages appear in natural search results.</p>
+<p>Evaluation must account for the full route from discovery to retrieval to final recommendation.</p>
+</section>
+<section class="chapter" id="practical-plan" aria-labelledby="practical-plan-title">
+<h2 id="practical-plan-title">6. A practical content optimization plan for small product websites</h2>
+<p>Based on the evidence reviewed, here is a reasonable allocation of limited time.</p>
+<p>This is an evidence-informed recommendation, not a universally tested optimal workflow.</p>
+<div class="table-scroll table-wide" tabindex="0" role="region" aria-label="Priority / Action / Why">
+<table>
+<colgroup><col style="width:12%"><col style="width:46%"><col style="width:42%"></colgroup>
+<thead><tr><th scope="col">Priority</th><th scope="col">Action</th><th scope="col">Why</th></tr></thead>
+<tbody><tr><th scope="row">P0</th><td>Ensure each major page answers a real user question</td><td>Relevance has the most consistent supporting evidence</td></tr>
+<tr><th scope="row">P0</th><td>Publish accurate product facts, pricing, and limitations</td><td>Supported in controlled product decision tasks</td></tr>
+<tr><th scope="row">P1</th><td>Add original examples, benchmarks, and credible evidence</td><td>Positive but conditional experimental evidence</td></tr>
+<tr><th scope="row">P1</th><td>Maintain current and accurate information</td><td>Useful for users; some controlled recency evidence</td></tr>
+<tr><th scope="row">P2</th><td>Improve readability, headings, tables, and summaries</td><td>Strong usability rationale; independent GEO lift unproven</td></tr>
+<tr><th scope="row">P2</th><td>Add FAQs and author information when genuinely useful</td><td>Real user and identity value; GEO increment uncertain</td></tr>
+<tr><th scope="row">P3</th><td>Pursue specialized formats solely for AI visibility</td><td>Limited demonstrated incremental value</td></tr></tbody>
+</table>
+</div>
+<h3 id="practical-plan-diagnose-the-problem-before-changing-the-content">Diagnose the problem before changing the content</h3>
+<p><strong>If AI cannot find your page:</strong> Check technical access, actual indexing or discovery evidence, internal linking, and query relevance. Content formatting is unlikely to resolve every discovery problem.</p>
+<p><strong>If your page appears in search sources but is rarely cited:</strong> Examine whether it actually provides the requested information, distinctive facts, and supporting evidence.</p>
+<p><strong>If your product is cited but not named:</strong> Investigate whether the page clearly identifies the product and connects its features, claims, and identity. The effectiveness of particular identity tactics remains unproven.</p>
+<p><strong>If your product is mentioned but not recommended:</strong> Examine product suitability, competitive information, and user intent. Citation and recommendation require separate measurement.</p>
+<p><strong>If citations increase but conversions do not:</strong> Analyze referral quality, landing-page experience, and conversion behavior independently.</p>
+<p>These diagnoses are practical hypotheses; they should be tested against actual observations.</p>
+</section>
+<section class="chapter" id="research-reliability" aria-labelledby="research-reliability-title">
+<h2 id="research-reliability-title">7. How reliable is the research?</h2>
+<p>The seven core studies cover different stages of AI search. Their findings should be read together.</p>
+<div class="table-scroll table-wide" tabindex="0" role="region" aria-label="Study / Research method / What it establishes best / Main limitation">
+<table>
+<colgroup><col style="width:23%"><col style="width:26%"><col style="width:25%"><col style="width:26%"></colgroup>
+<thead><tr><th scope="col">Study</th><th scope="col">Research method</th><th scope="col">What it establishes best</th><th scope="col">Main limitation</th></tr></thead>
+<tbody><tr><th scope="row"><a class="citation" href="#ref-s1" aria-label="Reference S1">[S1]</a> GEO (2024)</th><td>Fixed-source controlled rewriting</td><td>Some content edits change generated source exposure</td><td>Does not test natural discovery</td></tr>
+<tr><th scope="row"><a class="citation" href="#ref-s2" aria-label="Reference S2">[S2]</a> C-SEO Bench (2025)</th><td>Multi-task, competitive benchmark</td><td>Generic rewrites often fail or lose effectiveness</td><td>Tested tasks and simulated conditions</td></tr>
+<tr><th scope="row"><a class="citation" href="#ref-s3" aria-label="Reference S3">[S3]</a> What Gets Cited (2026)</th><td>252,000 paired source trials</td><td>Factors affecting first-citation selection</td><td>Two sources are already provided</td></tr>
+<tr><th scope="row"><a class="citation" href="#ref-s4" aria-label="Reference S4">[S4]</a> SAGEO Arena (2026)</th><td>Constructed retrieval → reranking → generation pipeline</td><td>Some rewrites damage earlier search stages</td><td>Not a commercial live search engine</td></tr>
+<tr><th scope="row"><a class="citation" href="#ref-s5" aria-label="Reference S5">[S5]</a> What Drives AI Citations? (2026)</th><td>158,099 real AI answers, observational analysis</td><td>Real citation patterns and within-site relationships</td><td>Cannot directly establish edit-level causality</td></tr>
+<tr><th scope="row"><a class="citation" href="#ref-s6" aria-label="Reference S6">[S6]</a> Glasp Natural Experiment (2026)</th><td>Website logs and contemporaneous controls</td><td>Real referral changes amid platform growth</td><td>Bundled treatments and time confounding</td></tr>
+<tr><th scope="row"><a class="citation" href="#ref-s7" aria-label="Reference S7">[S7]</a> LIVE-GEO (2026)</th><td>Real webpages and deployed AI products</td><td>Sensitivity of content ranking under live reading</td><td>Candidate URLs supplied by researchers</td></tr></tbody>
+</table>
+</div>
+<h3 id="research-reliability-three-important-research-gaps">Three important research gaps</h3>
+<p><strong>1. Organic search discovery</strong></p>
+<p>Many controlled GEO experiments begin after a source has already been selected or provided.</p>
+<p>We still need better evidence that changing webpage content independently increases its chance of being found in natural AI searches.</p>
+<p><strong>2. Long-term, cross-platform effects</strong></p>
+<p>Models, retrieval providers, ranking algorithms, and citation policies change.</p>
+<p>A result observed in one model version or benchmark may not hold across ChatGPT, Gemini, Grok, and Perplexity over time.</p>
+<p><strong>3. Small-site generalization</strong></p>
+<p>A strategy that works on a well-established publisher may have very different results for a new SaaS website with little external recognition.</p>
+<p>The costs of obtaining reliable causal evidence are particularly high for independent developers with only a handful of pages.</p>
+</section>
+<section class="chapter" id="recommendations" aria-labelledby="recommendations-title">
+<h2 id="recommendations-title">8. Final recommendations</h2>
+<p>For indie developers and solo founders, the most defensible content GEO strategy today is to invest in information that is useful regardless of the search interface:</p>
+<p><strong>Understand the questions people ask. Answer them accurately. Provide concrete facts and original evidence. Keep the information current.</strong></p>
+<p>Treat formatting and identity enhancements as useful product-content decisions whose additional AI visibility benefits still require measurement.</p>
+<p>Avoid optimizing blindly for AI-specific templates, fabricated authority signals, or dramatic visibility claims unsupported by real search data.</p>
+<p>The research also suggests an important distinction:</p>
+<p><strong>What makes an already-retrieved document attractive to an AI model may differ from what makes the document discoverable in the first place.</strong></p>
+<p>That distinction explains why a tactic can succeed in a controlled GEO benchmark yet fail to improve visibility on a real website.</p>
+<h3 id="recommendations-the-bottom-line">The bottom line</h3>
+<p>There is experimental evidence that content changes affect AI citation behavior.</p>
+<p>There is much less convincing evidence that any single on-page content tactic reliably produces lasting increases in organic AI search visibility across platforms.</p>
+<p>For small teams, that uncertainty should influence both what they optimize and how much time they invest.</p>
+<p>The goal is to prioritize improvements with genuine informational value, measure observable outcomes, and remain skeptical of guaranteed GEO growth claims.</p>
+</section>
+<section class="chapter" id="references" aria-labelledby="references-title">
+<h2 id="references-title">References</h2>
+<h3 id="references-primary-research">Primary research</h3>
+<p class="reference" id="ref-s1"><strong>[S1]</strong> Aggarwal et al. (2024). <a href="https://arxiv.org/abs/2311.09735">GEO: Generative Engine Optimization</a>. ACM SIGKDD 2024.</p>
+<p class="reference" id="ref-s2"><strong>[S2]</strong> Puerto et al. (2025). <a href="https://arxiv.org/abs/2506.11097">C-SEO Bench: Does Conversational SEO Work?</a>. NeurIPS 2025, Datasets &amp; Benchmarks.</p>
+<p class="reference" id="ref-s3"><strong>[S3]</strong> Vishwakarma, Kumar &amp; Jamidar (2026). <a href="https://arxiv.org/abs/2605.25517">What Gets Cited: Competitive GEO in AI Answer Engines</a>.</p>
+<p class="reference" id="ref-s4"><strong>[S4]</strong> Kim et al. (2026). <a href="https://arxiv.org/abs/2602.12187">SAGEO Arena: A Realistic Environment for Evaluating Search-Augmented Generative Engine Optimization</a>. ACM SIGKDD 2026.</p>
+<p class="reference" id="ref-s5"><strong>[S5]</strong> Chen &amp; Koudas (2026). <a href="https://arxiv.org/abs/2610.15033">What Drives AI Citations? Content, Retrieval and Model Knowledge in Generative Engine Optimization (GEO)</a>. Preprint.</p>
+<p class="reference" id="ref-s6"><strong>[S6]</strong> Watanabe &amp; Nakayashiki (2026). <a href="https://arxiv.org/abs/2606.04362">Disentangling Answer Engine Optimization from Platform Growth: A Log-Based Natural Experiment on ChatGPT Referral Traffic</a>. Preprint.</p>
+<p class="reference" id="ref-s7"><strong>[S7]</strong> Kong et al. (2026). <a href="https://arxiv.org/abs/2611.01126">Do GEO Gains Survive the Live Web? Evaluating In-the-Wild Visibility Gains of Generative Engine Optimization via LIVE-GEO</a>. Preprint.</p>
+<h3 id="references-platform-guidance">Platform guidance</h3>
+<p class="reference" id="ref-s8"><strong>[S8]</strong> <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google Search Central — Optimizing Your Website for Generative AI Features</a>.</p>
+<h3 id="references-review-methodology-and-limitations">Review methodology and limitations</h3>
+<p>This is a focused narrative review, not a systematic meta-analysis.</p>
+<p>The studies were selected for their relevance to on-page content changes and AI visibility measurements. We distinguish peer-reviewed research, preprints, controlled experiments, observational evidence, and official platform documentation.</p>
+<p>The reviewed results do not establish universal effects for all models or industries. Newly published preprints require further independent replication.</p>
+<p>Related but distinct tactics—backlinks, third-party comparisons, brand authority, broad distribution, and technical indexing infrastructure—fall primarily outside the scope of this Content GEO review. They should be evaluated separately.</p>
+<p><strong>Research scope:</strong> On-page content relevance, factual completeness, evidence, rewriting, formatting, author information, and closely related content presentation tactics.</p>
+<p><strong>Intended readers:</strong> Indie developers, solo founders, and small product teams evaluating how to allocate limited effort to GEO.</p>
+</section>
+</article>
+<footer id="report-version">
+<p>GEO Lab #06 · Version 1.0 · Published and revised <time datetime="2026-11-12">2026-11-12</time></p>
+<p><a href="../../learning-hub/#lab-6">Learning Hub</a> · <a href="#top">Back to top</a></p>
+</footer>
+</main>
+</div>
+</body>
+</html>

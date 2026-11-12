@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
-from site_metadata import ROOT, SITE, HUB_PATH, PERSON_ID, SITE_ID, SERIES_ID, canonical_url, finalize_page
+from site_metadata import ROOT, SITE, HUB_PATH, PERSON_ID, SITE_ID, SERIES_ID, appendix_path, canonical_url, finalize_page
 
 
 class Metadata(HTMLParser):
@@ -71,7 +71,8 @@ def main():
     targets = [(HUB_PATH, 'hub', None)]
     for report in reports:
         targets.append((report['path'], 'reader', report))
-        targets.append((str(Path(report['path']).parent/'technical-appendix.html'), 'appendix', report))
+        if appendix := appendix_path(report):
+            targets.append((appendix, 'appendix', report))
     targets += [(p.relative_to(ROOT).as_posix(), 'evidence-index' if p.name == 'index.html' else 'evidence', None) for p in sorted((ROOT/'evidence').rglob('*.html'))]
     descriptions, titles, canonical_values = [], [], []
     for path, kind, report in targets:
@@ -95,7 +96,7 @@ def main():
         person = nodes[PERSON_ID]
         assert person == {'@type': 'Person', '@id': PERSON_ID, 'name': 'Helen Bird', 'url': canonical_url(HUB_PATH)}
         assert nodes[SITE_ID]['@type'] == 'WebSite' and nodes[SERIES_ID]['@type'] == 'CreativeWorkSeries'
-        expected_series = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') != 'technical_learning_record']
+        expected_series = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') not in {'technical_learning_record', 'research_review'}]
         assert nodes[SERIES_ID]['hasPart'] == [{'@id': canonical_url(r['path'])+'#article'} for r in expected_series]
         breadcrumbs = [node for node in graph if node['@type'] == 'BreadcrumbList']
         assert len(breadcrumbs) == 1
@@ -130,7 +131,7 @@ def main():
     assert len(descriptions) == len(set(descriptions)), 'Descriptions must distinguish individual pages'
     assert len(titles) == len(set(titles)), 'Page titles must be unique'
     assert len(canonical_values) == len(set(canonical_values))
-    print(json.dumps({'status':'passed','generated_pages':len(targets),'core_pages':2*len(reports)+1,'canonical_description_OG_consistency':True,'local_schema_syntax_identity_dates_breadcrumbs':'passed','original_body_fixture_unchanged':True,'effect_and_indexing_verified':False}))
+    print(json.dumps({'status':'passed','generated_pages':len(targets),'core_pages':1+len(reports)+sum(bool(appendix_path(r)) for r in reports),'canonical_description_OG_consistency':True,'local_schema_syntax_identity_dates_breadcrumbs':'passed','original_body_fixture_unchanged':True,'effect_and_indexing_verified':False}))
 
 
 if __name__ == '__main__':

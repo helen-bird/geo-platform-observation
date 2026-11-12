@@ -2,6 +2,10 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-12
+
+- **Lab #06 v1.0:** published the content optimization evidence review, with the full report, linked primary sources and review methodology. Added the report to the Learning Hub and sitemap.
+
 ## 2026-11-11
 
 - **Interim Review, Part 2 v1.0:** published the question-framing experiment with 120 redacted consumer web-search answers, reproducible statistics, and separate resource, person and source evidence. Added the second review to the Learning Hub and shared report navigation.

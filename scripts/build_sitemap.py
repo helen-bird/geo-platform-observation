@@ -8,7 +8,7 @@ from datetime import date
 from html.parser import HTMLParser
 import json
 from pathlib import Path
-import posixpath
+from site_metadata import appendix_path
 import re
 from urllib.parse import urljoin, urlsplit
 import xml.etree.ElementTree as ET
@@ -77,7 +77,7 @@ def entries():
         if not path.endswith('index.html'):
             raise ValueError('Unexpected report reader route: '+path)
         revision = validated_date(report['last_revised'])
-        for source in (path, posixpath.join(posixpath.dirname(path), 'technical-appendix.html')):
+        for source in filter(None, (path, appendix_path(report))):
             read_page(source)
             result.append({'path': source, 'loc': canonical_url(source), 'lastmod': revision,
                            'lastmod_source': 'report-versions.json: stage '+str(report['stage'])+' last_revised'})
@@ -94,14 +94,15 @@ def entries():
     read_page(evidence_path)
     result.append({'path': evidence_path, 'loc': canonical_url(evidence_path)})
     urls = [e['loc'] for e in result]
-    expected_count = 2 * len(reports) + 2
+    expected_count = len(reports) + sum(bool(appendix_path(r)) for r in reports) + 2
     if len(result) != expected_count or len(set(urls)) != len(result):
         raise ValueError('Expected unique routes for each report, appendix and both navigation indexes')
     if any(not u.startswith(SITE) or urlsplit(u).query or urlsplit(u).fragment for u in urls):
         raise ValueError('Sitemap URLs must stay canonical and within the project')
     manifest=ROOT/'monitoring/google-index/urls.json'
     if manifest.exists():
-        intended={r['url']for r in json.loads(manifest.read_text())['urls']if r.get('sitemap_include')is True}
+        inventory = json.loads(manifest.read_text())
+        intended = {row['url'] for row in inventory['urls'] + inventory['excluded_urls'] if row.get('sitemap_include') is True}
         if intended!=set(urls):raise ValueError('Sitemap must match the reviewed canonical monitoring inventory')
     return result
 
