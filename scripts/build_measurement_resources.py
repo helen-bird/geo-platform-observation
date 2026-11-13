@@ -4,6 +4,7 @@ import argparse
 from html import escape
 import json
 from pathlib import Path
+from urllib.parse import urlencode
 
 from build_learning_hub import CSS
 from site_metadata import canonical_url, finalize_page
@@ -17,6 +18,7 @@ VERSIONS = {
 REPO = 'https://github.com/helen-bird/geo-platform-observation'
 GUIDE = 'learning-hub/measurement/index.html'
 INDEX = 'learning-hub/review-evidence/index.html'
+RECORD = 'learning-hub/review-evidence/record.html'
 SHEET = 'ai-recommendation-measurement.xlsx'
 CASE = 'IR2-GROK-WEB-EVIDENCE-CREATOR-'
 EXTRA_CSS = '''
@@ -47,6 +49,10 @@ def permalink(route, file, line=None):
     return f'{REPO}/blob/{VERSIONS[route]}/{REVIEW}/{route}/data/{file}' + (f'#L{line}' if line else '')
 
 
+def record_url(route, key, section):
+    return 'record.html?' + urlencode({'review': route, 'id': key}) + '#' + section
+
+
 def example_data(part):
     route = 'prompt-framing'
     cfg = json.loads((ROOT/REVIEW/route/'data/conditions.json').read_text())
@@ -54,8 +60,8 @@ def example_data(part):
     for key in sorted(part['answers']):
         if not key.startswith(CASE):
             continue
-        line, answer = part['answers'][key]
-        m_line, m = part['measurements'][key]
+        _, answer = part['answers'][key]
+        _, m = part['measurements'][key]
         assert not answer['body_url_links'] and not answer['explicit_source_urls']
         assert m['search_activity_observed'] is True and answer['original_visible_source_panel_count']
         records.append({
@@ -63,8 +69,8 @@ def example_data(part):
             'mention': 'Yes' if 'Helen Bird' in m['people_named'] else 'No',
             'citation': 'Unknown',
             'recommendation': 'Yes' if 'Helen Bird' in m['people_recommended'] else 'No',
-            'answer': permalink(route, 'answers.jsonl', line),
-            'measurement': permalink(route, 'measurements.jsonl', m_line),
+            'answer': canonical_url(RECORD) + record_url(route, key, 'answer').removeprefix('record.html'),
+            'measurement': canonical_url(RECORD) + record_url(route, key, 'coding').removeprefix('record.html'),
             'panel_count': answer['original_visible_source_panel_count'],
         })
     assert (len(records), sum(x['mention']=='Yes' for x in records),
@@ -77,7 +83,7 @@ def shell(path, title, description, nav, body):
     document = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} · GEO Lab</title>
 <meta name="description" content="{escape(description, quote=True)}"><link rel="canonical" href="{canonical_url(path)}">
-<style>{CSS}{EXTRA_CSS}</style></head><body><a class="skip" href="#main">Skip to content</a>
+<style>{CSS}{EXTRA_CSS}</style>{'<meta name="robots" content="noindex">' if path == RECORD else ''}</head><body><a class="skip" href="#main">Skip to content</a>
 <div class="layout"><nav aria-label="Page contents"><strong>GEO Learning Log</strong><div class="nav-links">{links}</div></nav>
 <main id="main"><h1>{escape(title)}</h1>{body}<p class="footer">GEO Learning Log · <a href="../">Learning Hub</a> · <a href="{REPO}">Repository</a></p></main></div></body></html>'''
     return finalize_page(document, path, kind='evidence-index' if path == INDEX else 'guide')
@@ -118,10 +124,9 @@ def guide(example):
                   ('#change','Repeat after a change'),('#worked-example','Worked example')],body)
 
 
-def row_links(route, part, key):
-    answer_line, _ = part['answers'][key]
-    m_line, _ = part['measurements'][key]
-    return f'<a href="{permalink(route,"answers.jsonl",answer_line)}">Answer</a><a href="{permalink(route,"measurements.jsonl",m_line)}">Coding</a>'
+def row_links(route, key):
+    answer, coding = (escape(record_url(route,key,s), quote=True) for s in ('answer','coding'))
+    return f'<a href="{answer}">Answer</a><a href="{coding}">Coding</a>'
 
 
 def tables(route, part):
@@ -131,7 +136,7 @@ def tables(route, part):
         groups.setdefault(name, []).append(key)
     output = []
     for name, keys in groups.items():
-        rows = ''.join(f'<tr id="{escape(key, quote=True)}"><th scope="row">{escape(key)}</th><td>{row_links(route,part,key)}</td></tr>' for key in keys)
+        rows = ''.join(f'<tr id="{escape(key, quote=True)}"><th scope="row">{escape(key)}</th><td>{row_links(route,key)}</td></tr>' for key in keys)
         output.append(f'<details id="cell-{escape(name.replace(" · ", "-"),quote=True)}"><summary>{escape(name)} · {len(keys)} answers</summary><div class="table-wrap"><table><thead><tr><th scope="col">Answer ID</th><th scope="col">Fixed evidence</th></tr></thead><tbody>{rows}</tbody></table></div></details>')
     return ''.join(output)
 
@@ -152,7 +157,7 @@ def evidence(parts, example):
     counts = [sum(m['binary'][key] for m in records) for key in ('candidate_artur-ferreira_recommendation','candidate_artur-ferreira_person_mention')]
     assert (len(records),counts)==(15,[15,0])
     sample = 'S6-Q1-GROK-B01-A01'
-    rows = ''.join(f'<tr><th scope="row">{escape(x["slot"])}</th><td>{x["mention"]}</td><td>{x["citation"]}</td><td>{x["recommendation"]}</td><td>{row_links(p2,parts[p2],x["id"])}</td></tr>' for x in example['records'])
+    rows = ''.join(f'<tr><th scope="row">{escape(x["slot"])}</th><td>{x["mention"]}</td><td>{x["citation"]}</td><td>{x["recommendation"]}</td><td>{row_links(p2,x["id"])}</td></tr>' for x in example['records'])
     body = f'''
 <p class="lead">Follow a report result back to the original answer, its coding and the exact public version. The two reviews cover 420 selected responses.</p>
 <section class="step" id="reproduce"><h2>Recalculate a reported number</h2>
@@ -161,7 +166,7 @@ def evidence(parts, example):
 <pre><code>git switch --detach {VERSIONS[p1]}
 python3 scripts/build_interim_review.py
 PYTHONPATH=scripts python3 -c "import build_interim_review as review; review.check()"</code></pre>
-<p>Compare the report and <a href="{permalink(p1,'summary.json')}">saved summary</a>: of the 15 Grok answers to Q1, 15 recommended The GEO Lab and 0 explicitly named Artur Ferreira. For example, <a href="{permalink(p1,'answers.jsonl',first['answers'][sample][0])}">{sample}</a> shows the work; its <a href="{permalink(p1,'measurements.jsonl',first['measurements'][sample][0])}">coding row</a> records the separate author judgment. The result applies to this prompt and batch.</p>
+<p>Compare the report and <a href="{permalink(p1,'summary.json')}">saved summary</a>: of the 15 Grok answers to Q1, 15 recommended The GEO Lab and 0 explicitly named Artur Ferreira. For example, <a href="{escape(record_url(p1,sample,"answer"),quote=True)}">{sample}</a> shows the work; its <a href="{escape(record_url(p1,sample,"coding"),quote=True)}">coding row</a> records the separate author judgment. The result applies to this prompt and batch.</p>
 <h3>Part 2: the worked measurement baseline</h3>
 <pre><code>git switch --detach {VERSIONS[p2]}
 python3 scripts/build_prompt_framing.py
@@ -180,6 +185,63 @@ PYTHONPATH=scripts python3 -c "import build_prompt_framing as review; review.che
                   ('#part-1','Part 1 · Historical replication'),('#part-2','Part 2 · Question framing')],body)
 
 
+def reader():
+    sources = json.dumps({
+        route: f'{REPO}/blob/{sha}/{REVIEW}/{route}/data/'
+        for route, sha in VERSIONS.items()
+    })
+    body = """
+<p>Read the original public response and the corresponding published coding. Each section links to its fixed GitHub source file.</p>
+<noscript><p>JavaScript is needed to open an individual record here. The <a href="./">evidence index</a> links to the complete versioned datasets.</p></noscript>
+<p id="load-status" role="status"></p>
+<section id="answer" class="step"><h2>Original public answer</h2><p><a id="answer-source" hidden>Fixed answer file on GitHub</a></p><pre id="answer-text" hidden></pre></section>
+<section id="coding" class="step"><h2>Published coding</h2><p><a id="coding-source" hidden>Fixed coding file on GitHub</a></p><pre id="coding-text" hidden></pre></section>
+<script>
+const versions = """ + sources + r""";
+const params = new URLSearchParams(location.search);
+const review = params.get("review");
+const id = params.get("id");
+const status = document.getElementById("load-status");
+const kinds = [["answer","answers"],["coding","measurements"]];
+async function showRecord() {
+    if (!Object.hasOwn(versions, review) || !id || !/^[A-Z0-9-]+$/.test(id)) {
+        status.textContent = "Select a valid answer from the evidence index.";
+        return;
+    }
+    status.textContent = "Loading " + id + "…";
+    await Promise.all(kinds.map(async ([section,file]) => {
+        const name = file + ".jsonl";
+        const source = document.getElementById(section + "-source");
+        source.href = versions[review] + name;
+        source.hidden = false;
+        const response = await fetch("../../reviews/interim-review/" + review + "/data/" + name);
+        if (!response.ok) throw new Error("Archive unavailable");
+        const rows = (await response.text()).trimEnd().split(/\r?\n/);
+        for (let i = 0; i < rows.length; i++) {
+            const row = JSON.parse(rows[i]);
+            if (row.answer_id !== id) continue;
+            source.href += "#L" + (i+1);
+            const content = document.getElementById(section + "-text");
+            content.textContent = section === "answer" ? row.answer_text : JSON.stringify(row, null, 2);
+            content.hidden = false;
+            return;
+        }
+        throw new Error("Answer ID not found");
+    }));
+    status.textContent = "Answer ID: " + id;
+    if (location.hash === "#answer" || location.hash === "#coding") {
+        document.getElementById(location.hash.slice(1)).scrollIntoView();
+    }
+}
+showRecord().catch(() => {
+    status.textContent = "This record could not be loaded. Use the fixed GitHub files above or the evidence index.";
+});
+</script>"""
+    return shell(RECORD, 'Read a review answer',
+                 'Open an individual original GEO review answer and its published coding.',
+                 [('./','Evidence index'),('#answer','Original answer'),('#coding','Published coding')],body)
+
+
 def main():
     parser = argparse.ArgumentParser()
     group = parser.add_mutually_exclusive_group()
@@ -192,7 +254,7 @@ def main():
     if args.example_json:
         print(json.dumps(example))
         return
-    for path, html in ((GUIDE,guide(example)),(INDEX,evidence(parts,example))):
+    for path, html in ((GUIDE,guide(example)),(INDEX,evidence(parts,example)),(RECORD,reader())):
         target = ROOT/path
         if args.check:
             assert target.read_text() == html, f'Rebuild {path}'
