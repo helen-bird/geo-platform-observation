@@ -718,6 +718,15 @@
       "decision_reason": "Verification, error template or non-editorial support file"
     },
     {
+      "url": "https://helen-bird.github.io/geo-platform-observation/privacy.html",
+      "source_file": "privacy.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
       "url": "https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/historical-replication/",
       "source_file": "reviews/interim-review/historical-replication/index.html",
       "category": "excluded",

@@ -11,6 +11,7 @@ from pathlib import Path
 import posixpath
 import re
 from urllib.parse import urlsplit
+from site_analytics import decorate_head
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://helen-bird.github.io/geo-platform-observation/'
@@ -193,4 +194,4 @@ def finalize_page(document, path, kind='reader', stage=None):
     structured = json.dumps(_structured(path, kind, stage, title, description), ensure_ascii=True, separators=(',', ':')).replace('<', '\\u003c')
     metadata += '<script type="application/ld+json" id="geo-site-structured-data">'+structured+'</script>'
     start, end = match.span(1)
-    return document[:start] + head + metadata + document[end:]
+    return document[:start] + decorate_head(head + metadata, path) + document[end:]
