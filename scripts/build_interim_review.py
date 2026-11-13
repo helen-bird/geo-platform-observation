@@ -148,7 +148,7 @@ def reader(summary):
     conclusions += '<p><a href="technical-appendix.html">See all twelve historical claim decisions and the public evidence.</a></p>'
     return page('index.html', title, 'GEO Lab interim review of 300 new AI search answers, which historical findings held up, and what changes when only three or ten runs are kept.',
                 [('hypotheses', '1. What did we expect?', assumptions), ('validation', '2. How did we test it?', method), ('conclusions', '3. What did we find?', conclusions)],
-                '<a href="technical-appendix.html">Methods and evidence</a>')
+                '<a href="technical-appendix.html">Methods and evidence</a> <a href="../../../learning-hub/review-evidence/#part-1">Find original answers</a>')
 
 
 def appendix(summary):

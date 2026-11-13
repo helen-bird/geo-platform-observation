@@ -93,7 +93,7 @@ def reader(summary):
                   [('hypotheses', '1. What did we expect?', expectations),
                    ('validation', '2. How did we test it?', methods),
                    ('conclusions', '3. What did we find?', conclusions)],
-                  '<a href="technical-appendix.html">Methods and evidence</a>')
+                  '<a href="technical-appendix.html">Methods and evidence</a> <a href="../../../learning-hub/review-evidence/#part-2">Find original answers</a>')
 
 
 def appendix(summary):

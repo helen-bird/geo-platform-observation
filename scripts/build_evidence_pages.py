@@ -125,6 +125,7 @@ def render_record(e):
 def render_index(all_entries):
     path='evidence/index.html';nav=link(path,'learning-hub/','Learning Hub')+''.join('<a href="#stage-'+str(s)+'">GEO Lab #'+f'{s:02d}'+'</a>'for s in STAGES)
     body='<p>Read the 60 selected original responses individually, then return to each lab’s full evidence archive for all submissions, failures, coding and limitations.</p><blockquote><p>These smaller pages preserve the existing redacted prompt and answer text exactly. They introduce no new responses or empirical conclusions. Helen Bird curates the research record; the responses are AI-generated. Separate answer links, retrieval inventory and plain-text addresses retain their recorded roles.</p><p>Labs #03 and #04 use OpenAI Responses API + web search, which does not represent consumer ChatGPT Search. Model, timing and capture differences in earlier labs remain documented.</p></blockquote>'
+    body+='<p>'+link(path,'learning-hub/review-evidence/','Find original answers from the two interim reviews')+'</p>'
     for stage,(data,report,count,label) in STAGES.items():
         body+='<section id="stage-'+str(stage)+'"><h2>GEO Lab #'+f'{stage:02d}'+' · '+escape(label)+'</h2><div class="links">'+link(path,report,'Read lab report')+link(path,report+'technical-appendix.html','Read full evidence archive')+link(path,report+'public-data.zip','Download public data')+'</div>'
         for e in all_entries:

@@ -14,7 +14,7 @@ from report_series import INTERIM_LABEL, INTERIM_PART2_LABEL, INTERIM_PART2_READ
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://helen-bird.github.io/geo-platform-observation/'
 DATE = '2026-11-03'
-UPDATED = '2026-11-12'
+UPDATED = '2026-11-13'
 QUESTIONS = {
     1: ('How do AI search engines choose sources?',
         'Repeated GEO questions to ChatGPT Search and Grok show differences in recommended entities, cited sources and repeat overlap. Citation, mention and recommendation are separate observations.',
@@ -50,10 +50,14 @@ def render():
         value = posixpath.relpath(path, 'learning-hub')
         if value == '../index.html': return '../'
         return value[:-len('index.html')] if value.endswith('/index.html') else value
-    anchors = ''.join('<a href="#lab-'+str(r['stage'])+'">#'+f'{r["stage"]:02d}'+' · '+escape(r['title'])+'</a>' for r in reports)
+    anchors = '<a href="#measure-your-product">Measure AI recommendations</a>' + ''.join('<a href="#lab-'+str(r['stage'])+'">#'+f'{r["stage"]:02d}'+' · '+escape(r['title'])+'</a>' for r in reports)
     anchors += '<a href="#interim-review">'+escape(INTERIM_LABEL)+'</a>'
     anchors += '<a href="#interim-review-part-2">'+escape(INTERIM_PART2_LABEL)+'</a>'
-    article = ''
+    article = ('<section class="lesson" id="measure-your-product"><p class="lesson-name">Hands-on guide</p>'
+               '<h2>Does AI search recommend my product?</h2><p>Choose one buyer question, record a baseline, and repeat after a documented change.</p>'
+               '<div class="links"><a href="measurement/">Read the measurement guide</a>'
+               '<a href="measurement/ai-recommendation-measurement.xlsx" download>Download the Excel worksheet</a>'
+               '<a href="review-evidence/">Trace and recalculate review results</a></div></section>')
     for r in reports:
         number = r['stage']
         question, summary, boundary = QUESTIONS[number]
