@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GEO Lab #07 · What makes a creator worth recommending?</title>
+<style>
+:root{--ink:#182b36;--accent:#176a76;--line:#dce5e9;--soft:#edf6f6}
+*{box-sizing:border-box}body{margin:0;background:#f8fbfc;color:var(--ink);font:16px/1.65 system-ui,sans-serif}
+.layout{display:grid;grid-template-columns:245px minmax(0,1fr);min-height:100vh}
+nav{position:sticky;top:0;height:100vh;overflow:auto;background:#17343d;color:#e1eff0;padding:30px 20px}
+nav strong{display:block;font-size:19px;margin-bottom:6px}nav a{display:block;padding:7px 0;color:#e1eff0;font-size:14px}
+nav p{font-size:13px;margin:0 0 18px;color:#bfd9de}
+main{min-width:0;width:100%;max-width:1120px;padding:45px clamp(20px,4vw,60px) 65px;background:#fff}
+h1{font-size:clamp(32px,4.4vw,53px);line-height:1.12;letter-spacing:-.04em;max-width:21ch;margin:0 0 16px}
+h2{border-top:1px solid var(--line);padding-top:26px;margin:42px 0 15px;font-size:clamp(24px,3vw,32px);line-height:1.24;scroll-margin-top:12px}
+h3{font-size:21px;margin:30px 0 8px;line-height:1.35}p,li,blockquote{max-width:76ch}
+li{margin:7px 0}a{color:#125c68;text-underline-offset:3px;overflow-wrap:anywhere}
+a:focus-visible,[tabindex]:focus-visible{outline:3px solid #1f8997;outline-offset:3px}
+blockquote{border-left:3px solid #63a3ad;background:var(--soft);margin:20px 0;padding:10px 17px}
+blockquote p{margin:4px 0}.table-wrap{overflow:auto;margin:18px 0}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--soft)}td:first-child{font-weight:600}tbody tr:nth-child(even){background:#f7fafb}
+.contrast{margin:22px 0 0;padding:15px 19px;background:#f5f9fa;border:1px solid var(--line);border-radius:8px;max-width:710px}
+.contrast figcaption{font-weight:750;margin-bottom:12px}.contrast p{margin:12px 0 0;font-size:13px}
+.bar-row{display:grid;grid-template-columns:minmax(120px,1fr) minmax(65px,1.4fr) 3.5em;align-items:center;gap:11px;margin:9px 0;font-size:14px}
+.track{background:#d8e8eb;height:10px;border-radius:6px;overflow:hidden}.track span{height:100%;display:block;background:#176a76}
+code{background:var(--soft);padding:2px 4px;overflow-wrap:anywhere}
+.skip{position:absolute;left:10px;top:-100px;background:white;padding:8px;z-index:2}.skip:focus{top:10px}
+@media(max-width:780px){.layout{display:block}nav{position:static;height:auto;padding:16px 20px}nav .toc{display:flex;flex-wrap:wrap;gap:0 16px}main{padding-top:28px}h2{margin-top:32px}.table-wrap table{min-width:580px}}
+@media print{nav,.skip{display:none}.layout{display:block}main{padding:0;max-width:none}.table-wrap{overflow:visible}}
+</style><style>
+.experiment-series{grid-column:1/-1;margin:0 0 22px;padding:0 0 18px;border-bottom:1px solid currentColor}
+.experiment-series strong{font-size:15px;letter-spacing:0;margin:0 0 8px}
+.experiment-series a{display:block;font-size:13px;line-height:1.5;padding:7px 0;text-decoration:none}
+.experiment-series a[aria-current]{font-weight:750;text-decoration:underline;text-underline-offset:4px}
+.experiment-series a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.report-version{margin-top:38px;font-size:13px;line-height:1.65;border:1px solid #b9cdd1;background:#edf5f5;color:#243d46;padding:16px 18px;overflow-wrap:anywhere}
+.report-version p{margin:5px 0}.report-version a{color:#155b65}
+@media(max-width:650px){.experiment-series{margin-bottom:12px;padding-bottom:10px}.experiment-series strong{font-size:14px}.experiment-series a{display:inline-block;padding:6px 0;margin-right:14px;font-size:12px}.report-version{padding:12px}}
+</style><link rel="canonical" href="https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/"><meta name="description" content="An observational audit of 60 creator answers, a comparison of public evidence and a guide to improving what independent builders can control."><meta name="author" content="Helen Bird"><meta property="og:type" content="article"><meta property="og:title" content="GEO Lab #07 · What makes a creator worth recommending?"><meta property="og:description" content="An observational audit of 60 creator answers, a comparison of public evidence and a guide to improving what independent builders can control."><meta property="og:url" content="https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/"><script type="application/ld+json" id="geo-site-structured-data">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird","name":"Helen Bird","url":"https://helen-bird.github.io/geo-platform-observation/learning-hub/"},{"@type":"WebSite","@id":"https://helen-bird.github.io/geo-platform-observation/#website","name":"GEO Learning Log","url":"https://helen-bird.github.io/geo-platform-observation/","publisher":{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird"},"inLanguage":"en"},{"@type":"CreativeWorkSeries","@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#geo-lab","name":"GEO Lab","url":"https://helen-bird.github.io/geo-platform-observation/learning-hub/","author":{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird"},"isPartOf":{"@id":"https://helen-bird.github.io/geo-platform-observation/#website"},"hasPart":[{"@id":"https://helen-bird.github.io/geo-platform-observation/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/03-question-sensitivity/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/04-creator-benchmark/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/05-technical-discoverability/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/#article"},{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/#article"}]},{"@type":"Article","@id":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/#article","url":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/","name":"GEO Lab #07 \u00b7 What makes a creator worth recommending?","description":"An observational audit of 60 creator answers, a comparison of public evidence and a guide to improving what independent builders can control.","inLanguage":"en","publisher":{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird"},"isPartOf":[{"@id":"https://helen-bird.github.io/geo-platform-observation/#website"},{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#geo-lab"}],"headline":"GEO Lab #07 \u00b7 What makes a creator worth recommending?","author":{"@id":"https://helen-bird.github.io/geo-platform-observation/learning-hub/#helen-bird"},"mainEntityOfPage":{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/#webpage"},"datePublished":"2026-11-13","dateModified":"2026-11-13"},{"@type":"BreadcrumbList","@id":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"GEO Learning Log","item":"https://helen-bird.github.io/geo-platform-observation/"},{"@type":"ListItem","position":2,"name":"GEO Learning Hub","item":"https://helen-bird.github.io/geo-platform-observation/learning-hub/"},{"@type":"ListItem","position":3,"name":"GEO Lab #07 \u00b7 What makes a creator worth recommending?","item":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/"}]},{"@type":"WebPage","@id":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/#webpage","url":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/","name":"GEO Lab #07 \u00b7 What makes a creator worth recommending?","description":"An observational audit of 60 creator answers, a comparison of public evidence and a guide to improving what independent builders can control.","inLanguage":"en","isPartOf":{"@id":"https://helen-bird.github.io/geo-platform-observation/#website"},"mainEntity":{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/#article"},"breadcrumb":{"@id":"https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/#breadcrumb"}}]}</script></head><body><a class="skip" href="#main">Skip to report</a><div class="layout">
+<nav aria-label="Report contents"><div class="experiment-series" data-report-series="v1" aria-label="GEO Lab learning series"><strong>GEO Lab learning records</strong><a href="../../learning-hub/">Learning Hub · Start with a question</a><a href="../../">#01 · AI Recommendations</a><a href="../02-post-discovery/">#02 · Content Discovery</a><a href="../03-question-sensitivity/">#03 · Prompt Sensitivity</a><a href="../04-creator-benchmark/">#04 · Creator Benchmark</a><a href="../05-technical-discoverability/">#05 · Technical Discoverability</a><a href="../06-content-optimization/">#06 · Content Optimization for AI Search</a><a href="./" aria-current="page">#07 · Brand Authority</a><a href="../../reviews/interim-review/historical-replication/">Interim Review · Part 1</a><a href="../../reviews/interim-review/prompt-framing/">Interim Review · Part 2</a><a href="../../evidence/">Evidence library · Individual answers</a></div><strong>GEO Learning Log</strong><p>Lab #07 · Brand Authority</p><div class="toc"><a href="#what-we-found">What we found</a><a href="#1-how-we-tested">1. How we tested</a><a href="#2-who-was-recommended-and-for-what">2. Who was recommended, and for what?</a><a href="#3-what-reasons-did-the-answers-give">3. What reasons did the answers give?</a><a href="#4-what-the-comparison-actually-verified">4. What the comparison actually verified</a><a href="#5-from-the-gap-to-the-operating-decision">5. From the gap to the operating decision</a><a href="#6-what-we-actually-shipped">6. What we actually shipped</a><a href="#7-how-to-apply-this-to-your-own-brand">7. How to apply this to your own brand</a><a href="#8-data-reproduction-and-limits">8. Data, reproduction and limits</a></div><a href="#report-version">Report version</a></nav>
+<main id="main"><h1>GEO Lab #07 · What makes a creator worth recommending?</h1>
+<p><strong>Helen Bird · GEO Learning Log · 13 November 2026</strong></p>
+<p><em>An observational study of AI recommendations, a comparison of four creator brands, and a practical guide to closing the gaps you can control.</em></p>
+<h2 id="what-we-found">What we found</h2>
+<ul>
+<li><strong>Authority depends on the job the user is trying to do.</strong> In 60 historical answers, Helen Bird was recommended in <strong>10/20</strong> answers seeking original, reproducible experiments, versus <strong>3/40</strong> seeking practical tutorials across two prompts. Artur Ferreira was recommended in <strong>20/20</strong> experiment answers. Aleyda Solis and Kevin Indig each appeared in <strong>16/20</strong> answers that explicitly asked for tutorial creators to recommend. The same person can be a strong match for one job and a weak match for another.</li>
+<li><strong>The comparison exposed a specific gap we could close.</strong> GEO Lab already had original experiments, public evidence and scripts that reproduced published numbers. The missing asset was a path a solo builder could follow from a buyer question to a baseline, a recorded change and a follow-up. We built a <a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/measurement/">measurement guide</a>, an <a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/measurement/ai-recommendation-measurement.xlsx">Excel worksheet</a> and a real worked example. Then we made <a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/">420 archived responses</a> easier to inspect.</li>
+<li><strong>We verified the release. Recommendation lift is still unknown.</strong> The guide opens, the Excel file downloads and opens, and both review reports lead to individual answers and their coding. No post-release AI sample or independent reader usability test was run. The historical counts are a reference, not a purpose-built immediate pre-release baseline.</li>
+</ul>
+<blockquote>
+<p>In this report, <strong>brand authority</strong> means the strength of the public evidence for relying on a named creator or product for a particular job. We look for clear ownership, useful work, evidence that can be checked, and independent corroboration when it exists. We do not assign a universal authority score or treat recommendation frequency as a measure of research quality.</p>
+</blockquote>
+<figure class="contrast"><figcaption>Helen Bird: recommendations by task</figcaption><div class="bar-row"><strong>Practical tutorials</strong><div class="track" aria-hidden="true"><span style="width:7.5%"></span></div><b>3/40</b></div><div class="bar-row"><strong>Reproducible experiments</strong><div class="track" aria-hidden="true"><span style="width:50%"></span></div><b>10/20</b></div><p>ChatGPT and Grok pooled for this display. The two tutorial prompts each contributed 20 answers; the evidence prompt contributed 20.</p></figure>
+
+<h2 id="1-how-we-tested">1. How we tested</h2>
+<p>We reused the creator side of <a href="https://helen-bird.github.io/geo-platform-observation/reviews/interim-review/prompt-framing/">Interim Review Part 2</a>. There were <strong>three creator prompts × two consumer web interfaces × ten completed runs</strong>. The other 60 answers asked for resources, and the earlier 300-answer review was historical context. Neither enters the Lab #07 denominator. The source collection took place on November 10–11, 2026; Lab #07 recoded and audited it on November 13. No new answers were bought or collected.</p>
+<ul>
+<li><strong>Discovery:</strong> Which independent creators publish practical, data-backed GEO tutorials for independent builders? Explain why and cite sources when available.</li>
+<li><strong>Recommendation:</strong> Which independent creators publishing practical, data-backed GEO tutorials would you recommend to independent builders? Explain why and cite sources when available.</li>
+<li><strong>Evidence:</strong> Which independent creators publish original, reproducible GEO experiments useful to independent builders? Explain why and cite sources when available.</li>
+</ul>
+<p>Discovery and Recommendation both ask about tutorials; the second explicitly asks for suggestions. Evidence changes the user&#39;s task to finding original, reproducible experiments. It is useful to compare these tasks, but the resulting difference is not a pure wording effect.</p>
+<p>ChatGPT ran in fresh temporary web chats (GPT-5.6 Sol, Medium; captured label 5.6 Medium). Grok used fresh Expert web chats with X and conversation personalization disabled during collection. Native web search was explicitly enabled on all 60 submissions. Search activity was observable in <strong>25/30 ChatGPT</strong> and <strong>30/30 Grok</strong> captures. Lack of observed activity is unknown; it is not evidence that search was skipped. These are consumer web results, not API results.</p>
+<p><strong>From answer to measurement.</strong> Each answer was checked against its stored capture and block ID. We kept a row for every person in every answer, including negative outcomes. A name in a byline or a supporting paragraph counts as a <strong>mention</strong>. A person counts as <strong>recommended</strong> when the answer presents them as an option for the task. A recommended work, a correctly attributed work and a personal recommendation are distinct. We also kept answer citations, visible source-panel links and sources found later by the reviewer separate.</p>
+<p>We used the earlier creator benchmark to select Aleyda, Kevin and Artur, then compared Helen against them and checked alternatives in the answers that omitted her. The three cases show different ways of creating value. They were chosen because they had already been recommended, so they do not represent all creators or provide a sample of unseen successes.</p>
+<h2 id="2-who-was-recommended-and-for-what">2. Who was recommended, and for what?</h2>
+<p>Each cell shows <strong>person recommendations / person mentions</strong>. Each of the two counts is out of ten answers per cell, or 60 in the total column. One answer can recommend several people.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr>
+<th scope="col">Creator</th>
+<th scope="col">ChatGPT Discovery</th>
+<th scope="col">ChatGPT Recommendation</th>
+<th scope="col">ChatGPT Evidence</th>
+<th scope="col">Grok Discovery</th>
+<th scope="col">Grok Recommendation</th>
+<th scope="col">Grok Evidence</th>
+<th scope="col">All 60</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Aleyda Solis</td>
+<td>6 / 7</td>
+<td>10 / 10</td>
+<td>1 / 2</td>
+<td>3 / 3</td>
+<td>6 / 6</td>
+<td>0 / 0</td>
+<td>26 / 28</td>
+</tr>
+<tr>
+<td>Kevin Indig</td>
+<td>4 / 4</td>
+<td>10 / 10</td>
+<td>1 / 1</td>
+<td>5 / 5</td>
+<td>6 / 6</td>
+<td>0 / 0</td>
+<td>26 / 26</td>
+</tr>
+<tr>
+<td>Artur Ferreira</td>
+<td>7 / 7</td>
+<td>9 / 9</td>
+<td>10 / 10</td>
+<td>2 / 2</td>
+<td>2 / 2</td>
+<td>10 / 10</td>
+<td>40 / 40</td>
+</tr>
+<tr>
+<td>Helen Bird</td>
+<td>1 / 1</td>
+<td>2 / 2</td>
+<td>3 / 3</td>
+<td>0 / 1</td>
+<td>0 / 0</td>
+<td>7 / 8</td>
+<td>13 / 15</td>
+</tr>
+</tbody></table></div>
+<p><strong>The answer to “who is ahead?” changes with the question.</strong> On the explicit tutorial recommendation prompt, ChatGPT recommended Aleyda and Kevin in 10/10 answers each and Helen in 2/10; Grok recommended Aleyda and Kevin in 6/10 each and Helen in 0/10. On the evidence prompt, Helen reached 3/10 on ChatGPT and 7/10 on Grok, against Artur&#39;s 10/10 in both. Grok&#39;s tutorial discovery results point to other useful comparisons: Sam Shev was recommended 9/10 times, and Kevin Indig and Robin Pautigny 5/10 each. Inspect the people who answer your exact question well, rather than using the overall leader as the benchmark for every task.</p>
+<p><strong>The answer is rarely a winner-takes-all list.</strong> All ten evidence answers that recommended Helen also recommended Artur. Across all tasks, all 13 Helen recommendations co-occurred with Artur. This shows the answer had room for more than one creator. It gives no estimate of whether one creator affected the other&#39;s selection.</p>
+<p><strong>Discovery and recommendation are different observations.</strong> In three Grok tutorial answers, Helen&#39;s site appeared in the captured source panel and the answer did not recommend her. In the Grok evidence cell, the site appeared in 9/10 panels and she was recommended in 7/10. A panel entry shows what the interface exposed. It cannot tell us which page the system read or used. ChatGPT had no comparable captured panel; Grok had no identifiable final answer URLs in these 30 captures. Neither is a measured zero for the platform&#39;s actual citation or retrieval rate.</p>
+<p><a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B08-A01#answer">Inspect a Grok tutorial answer with a boundary judgment</a> · <a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B01-A01#answer">Inspect an evidence recommendation</a></p>
+<blockquote>
+<p>With ten answers per cell, rates are rough. Under a simple binomial model, the descriptive 95% Wilson interval for 7/10 is about 40%–89%; for 0/10 it reaches about 28%. Repeated model responses can be correlated. These intervals do not establish significance, long-term stability or the expected return from an edit.</p>
+</blockquote>
+<h2 id="3-what-reasons-did-the-answers-give">3. What reasons did the answers give?</h2>
+<p>We began with six categories: identity, experience, original evidence, sustained topic work, outside recognition and distribution. Reading a first answer from each cell suggested five more: actionable guidance, access, reproducibility, task fit and evidence judgment. We then applied one codebook to all 60 answers. The unit for the middle column is one recommended person in one answer. The right column deduplicates by answer. Categories overlap, and a single answer is not several independent observations.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr>
+<th scope="col">Reason given in the answer</th>
+<th scope="col">Recommendation rows</th>
+<th scope="col">Distinct answers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Original evidence</td>
+<td>230/294</td>
+<td>58/60</td>
+</tr>
+<tr>
+<td>Fit for a user or task</td>
+<td>216/294</td>
+<td>60/60</td>
+</tr>
+<tr>
+<td>Practical steps or tools</td>
+<td>156/294</td>
+<td>57/60</td>
+</tr>
+<tr>
+<td>Free or easy to access</td>
+<td>120/294</td>
+<td>56/60</td>
+</tr>
+<tr>
+<td>Evidence limits or disclosure</td>
+<td>120/294</td>
+<td>44/60</td>
+</tr>
+<tr>
+<td>Conditions for checking or repeating</td>
+<td>111/294</td>
+<td>45/60</td>
+</tr>
+<tr>
+<td>Sustained topical work</td>
+<td>48/294</td>
+<td>38/60</td>
+</tr>
+<tr>
+<td>Role or identity</td>
+<td>41/294</td>
+<td>24/60</td>
+</tr>
+<tr>
+<td>Specific experience</td>
+<td>38/294</td>
+<td>29/60</td>
+</tr>
+<tr>
+<td>External recognition claim</td>
+<td>20/294</td>
+<td>14/60</td>
+</tr>
+<tr>
+<td>Distribution or audience</td>
+<td>11/294</td>
+<td>10/60</td>
+</tr>
+</tbody></table></div>
+<p><strong>“I can do it,” “I can check it” and “I know where it stops” are different benefits.</strong> A checklist helps a reader act. Fixed prompts, inputs and code help a reader inspect or repeat a study. Failed runs, caveats and corrections help a reader decide how far to trust the conclusion. The reasons given for Helen support that last pair: all 13 recommendations referred to original work; 11 mentioned conditions for checking or repeating it, and 11 mentioned evidence judgment or disclosure. These are statements in the output. They are not a view into a platform&#39;s ranking mechanism.</p>
+<p><strong>A claim and its source are checked separately.</strong> A nearby answer URL is a lead. A panel is an inventory visible in the capture. A public page found during our audit can corroborate a claim today, but does not show that the historical model saw it. For instance, one ChatGPT answer linked Lab #04 near a statement about direct access and natural discovery; <a href="https://helen-bird.github.io/geo-platform-observation/stages/02-post-discovery/">Lab #02</a> is the clearer direct support. The same review found no confirmed license for a Grok claim suggesting MIT-style reuse. Accessible materials and permission to reuse them are separate.</p>
+<h2 id="4-what-the-comparison-actually-verified">4. What the comparison actually verified</h2>
+<p>We used the same checks on each creator: Who owns the work? What exactly can the reader do? Is the evidence original? Can the headline number be recalculated? Did a distinct party report, use or reproduce the work? Does the public source predate the historical answer? We checked a purposive set of consequential claims. “Supported” means the source supports the stated scope; it does not confer a general quality rating. “Partial” narrows a claim. “Unknown” preserves a missing fact.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr>
+<th scope="col">Creator</th>
+<th scope="col">Supported</th>
+<th scope="col">Partial</th>
+<th scope="col">Contradicted</th>
+<th scope="col">Unknown</th>
+<th scope="col">Subjective</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Aleyda Solis</td>
+<td>12</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Kevin Indig</td>
+<td>13</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Artur Ferreira</td>
+<td>8</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table></div>
+<p>These 52 claim groups cover the three focal benchmarks; the audit also examined three attribution or authorship leads involving other creators. A separate Helen audit split 13 recommendations into 27 claims: 21 supported, three partial, two subjective and one unknown. These were targeted checks, not accuracy estimates for all AI answers.</p>
+<h3>Aleyda Solis: the next action is obvious</h3>
+<p><a href="https://learningaisearch.com/about/">Learning AI Search</a> connects a named author to a curated learning path. Her <a href="https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/">AI search checklist and worksheet</a> turn the topic into ordered tasks and a reusable deliverable. The audited September edition had 12 steps; a Grok answer described ten. The mismatch matters when a reader tries to follow the instruction. Her <a href="https://www.aleydasolis.com/en/ai-search/saas-ai-search-optimization/">15-brand SaaS benchmark</a> also gives original analysis, using Semrush and Similarweb data. Readers can inspect the method and aggregates; the complete supplier inputs were not found in the reviewed public materials.</p>
+<p><strong>What to copy:</strong> Choose one reader, one decision and one finished output. Turn scattered explanations into steps and add a blank template plus a real completed example. You can do this without a commercial dataset or an established newsletter.</p>
+<h3>Kevin Indig: original data answers a decision question</h3>
+<p>Kevin and Amanda Johnson&#39;s <a href="https://searchengineland.com/why-most-original-data-never-gets-cited-481676">study of original data and AI citations</a> analyzed 301 pages already cited across 316 questions in seven verticals. Eight original-research pages accounted for 90 citations; 75 of those citations came from one benchmark cluster. That concentration changes the interpretation. The sample supports a comparison within pages already cited; it cannot tell a founder what happens to the citation probability of any webpage after they publish original data. Growth Memo&#39;s archive, collaborations and external coverage give the work multiple routes to readers. A partner&#39;s article, an independent report and an independent replication are different evidence.</p>
+<p><strong>What to copy:</strong> Start with a specific decision, publish the sample and denominator, and show how much of the result comes from one case. A small transparent study may be enough. Seek commercial data only when it can answer a question the smaller sample cannot, and explain which inputs readers can access.</p>
+<h3>Artur Ferreira: readers can follow the experiments and their revisions</h3>
+<p><a href="https://thegeolab.net/log/">The GEO Log</a> connects methods, experiments and revisions under a consistent byline. The <a href="https://zenodo.org/api/records/22230285">E026 archive</a> made a result checkable: we recounted 136/750 citations from the posted records. <a href="https://zenodo.org/api/records/22798718">Paper B&#39;s preregistration</a> predates the confirmation test; the <a href="https://zenodo.org/api/records/23122087">study package</a> documents zero target retrievals in 40 formal runs, so it cannot estimate attribution after retrieval. The <a href="https://zenodo.org/api/records/21539564">E001 correction</a> shows why a recognizable brand cannot replace checking the specific work: 18/30 versus 11/30 gives a 23.3-point descriptive gap and a two-sided two-proportion test near p=.07. The raw records are unavailable and older descriptions persisted in some materials during the audit.</p>
+<p><strong>What to copy:</strong> Freeze the question and measures before the first run. Assign record IDs, publish permitted inputs and negative results, and tie corrections to the specific edition. Keep the report, worksheet and source archive consistent when the interpretation changes.</p>
+<h3>Where GEO Lab already had a credible case</h3>
+<p>The project already had consistent attribution, a connected research series, repeated unbranded tests, redacted answers, failed attempts and reproducible summaries. This explains why there was something useful to audit when answers recommended Helen for experiments. It does <strong>not</strong> explain why any specific model selected her. Part 1 was publicly committed before collection, but actual retrieval was not established. Part 2, Lab #06 and the new worksheet came later and cannot explain those historical recommendations. Third-party adoption, independent replication and comparative audience size remain unconfirmed.</p>
+<h2 id="5-from-the-gap-to-the-operating-decision">5. From the gap to the operating decision</h2>
+<p>We used a table of 25 opportunities across 11 dimensions. It separates identity, experience, originality, continuity, outside recognition and distribution from actionable guidance, access, reproducibility, task fit and evidence judgment. For each opportunity we recorded the current proof, a comparable benchmark, the size of the gap, what the author controls, estimated effort, and an observable return. A small gap means an existing capability can be made easier to use; “80 to 90” is shorthand, not a measured score.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr>
+<th scope="col">Decision</th>
+<th scope="col">What we observed</th>
+<th scope="col">What a first action can earn</th>
+<th scope="col">What it cannot promise</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Do first: a missing deliverable we control</strong></td>
+<td>We had research and advice. Aleyda&#39;s worksheet and the <a href="https://www.samshev.com/blog/geo-90-day-roadmap">Sam Shev roadmap</a> and <a href="https://getrefine.ai/blog/geo-for-solo-founders-ai-visibility-playbook">Robin Pautigny solo-founder guide</a> gave readers a sequence they could use end to end.</td>
+<td>A reader gets a single workflow and a filled example rather than assembling one from several studies. First-pass estimate: 2–3 days for the package, using existing materials.</td>
+<td>No measured lift in recommendations or confirmed reader adoption.</td>
+</tr>
+<tr>
+<td><strong>Do next: make existing evidence easier to use</strong></td>
+<td>Both reviews already rebuilt offline, but a reader had to move across reports, appendices and large data files.</td>
+<td>A direct path from a report to a selected answer and its coding, plus a fixed reproduction command and expected count. First-pass estimate: half a day to a day.</td>
+<td>Easier verification does not turn the original study into an independently replicated experiment.</td>
+</tr>
+<tr>
+<td><strong>Investigate before investing</strong></td>
+<td>Source coverage differs by platform, current audience and independent recognition are unknown, and the site has no verified request-log evidence for this study.</td>
+<td>Verify the page state, audit stored queries, or ask a willing reader to reproduce one result. Record the evidence and its limits.</td>
+<td>Missing evidence does not establish a retrieval block or lack of reputation.</td>
+</tr>
+<tr>
+<td><strong>Build over time where the work calls for it</strong></td>
+<td>Larger datasets, controlled live-site interventions, sustained distribution and external validation have prerequisites we do not control.</td>
+<td>A real product case or an independent rerun can answer a new question; legitimate collaborations can expand data or reach.</td>
+<td>You cannot buy or claim independent validation by publishing your own work in more places.</td>
+</tr>
+</tbody></table></div>
+<p>The full assessment also helps avoid spending on gaps that do not yet constrain the chosen task:</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr>
+<th scope="col">Signal to check</th>
+<th scope="col">GEO Lab compared with the benchmarks</th>
+<th scope="col">How an operator should use the finding</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Identity, experience and continuity</td>
+<td>Authorship and a consistent GEO research series were already visible. Comparable career credentials were not established; the project has a shorter public history.</td>
+<td>Keep bylines and links consistent. Add verifiable experience when it helps the user judge the work.</td>
+</tr>
+<tr>
+<td>Original evidence and evidence judgment</td>
+<td>Repeated answer tests and failure disclosures were already available. Industry data, live business interventions and request logs are different kinds of evidence.</td>
+<td>Keep publishing bounded, checkable results. Add a dataset or instrumentation only when the next decision requires it.</td>
+</tr>
+<tr>
+<td>Guidance, access and audience fit</td>
+<td>Free reports answered research questions. The audited site lacked a complete beginner measurement workflow.</td>
+<td>Turn the strongest existing evidence into a task-specific asset. Test that a reader can complete the job.</td>
+</tr>
+<tr>
+<td>Reproduction</td>
+<td>Offline arithmetic already worked; a clear path to individual answers and fixed versions was missing. External reruns and publicly timestamped protocols remain less developed.</td>
+<td>Fix the path first. For a new study, prerecord the plan and invite an independent check.</td>
+</tr>
+<tr>
+<td>Outside recognition and distribution</td>
+<td>GitHub Pages, GitHub and an X publishing path existed. Relative reach and independent adoption were not verified.</td>
+<td>Gather real examples of readers using or scrutinizing the work. Record who they are, how they relate to the work, and what they actually checked.</td>
+</tr>
+</tbody></table></div>
+<p>The comparison justifies <strong>why to build the asset now</strong>: we could see the task people were asking about, the materials benchmark creators offered, and a specific missing deliverable. No evidence justified a numerical forecast for how many additional answers would recommend Helen. That would require a different study.</p>
+<h2 id="6-what-we-actually-shipped">6. What we actually shipped</h2>
+<p><strong>First, we assembled the measurement workflow.</strong> We linked the prompt-sensitivity lessons, technical discovery checks and content research into one guide. Each worksheet copy is for one fixed question, target and environment. Every attempt gets an ID. A retry shares a planned slot but gets a new attempt ID; only one complete answer can be selected. The workbook records the model, time zone, search evidence, answer, citation URLs, outcome codes and page changes. It computes Yes / (Yes + No), and shows unknowns and failures separately. A missing judgment never enters the denominator as a No.</p>
+<p><strong>Then we filled it with a real baseline.</strong> The Grok evidence cell has ten saved answers. Helen was mentioned in 8/10 and recommended in 7/10. Final target citation attribution is unknown for all ten, so the sheet leaves its rate empty. B01 is a recommendation; B07 is a background mention. The follow-up tabulation is blank because we did not collect those answers.</p>
+<p><strong>Finally, we made the evidence travel with the claim.</strong> The two reviews now link to a condition-by-condition index for 420 existing answers. A row opens the redacted original answer and its coding in one page, with the fixed GitHub source still visible. The report also shows where to find failed attempts. When live verification found that GitHub&#39;s large JSONL viewer did not reliably jump to the desired line, we added direct individual records on the website. No historical data or judgments were changed by that release.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr>
+<th scope="col">Verification</th>
+<th scope="col">Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/measurement/">Guide</a> and <a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/measurement/ai-recommendation-measurement.xlsx">worksheet</a></td>
+<td>Opened from the public Learning Hub; downloaded and inspected both worksheet tabs and the example counts. Duplicate selected slots, failed retries and unknown citations were checked before release.</td>
+</tr>
+<tr>
+<td><a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/#part-1">Part 1 evidence</a> and <a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/#part-2">Part 2 evidence</a></td>
+<td>Opened from both reports. One live sample per review was checked for both answer and coding, and all 840 answer/coding destinations were matched to record IDs in the archived releases.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/helen-bird/geo-platform-observation/commit/5842a87b7f18bf45dd755a73fda0687d5634b101">Public release</a> and <a href="https://github.com/helen-bird/geo-platform-observation/commit/092941ac33125b30a1b6d88845a8813e3b56263e">direct-record fix</a></td>
+<td>Released November 13, 2026. The two archived reviews also rebuilt offline: four files per version matched byte for byte, including data summaries, reports, appendices and data packages.</td>
+</tr>
+</tbody></table></div>
+<h2 id="7-how-to-apply-this-to-your-own-brand">7. How to apply this to your own brand</h2>
+<ol>
+<li><strong>Pick a job with a real user behind it.</strong> Pull one question from a buyer conversation or support thread. Write it in the user&#39;s words without your brand. For example, a backup SaaS might measure “Which backup tools let a small GitHub team restore one deleted repository?” A question about generic backup is a separate condition.</li>
+<li><strong>Record your baseline before changing pages.</strong> Save the exact question, environment and plan. Use fresh sessions and keep platform results separate. Ten valid runs per setup can give an initial reading. Increase repetitions and use several windows when the decision needs more precision. Save full answers, visible queries or sources, and failed attempts. Score mentions, citations and recommendations separately.</li>
+<li><strong>Audit actual alternatives.</strong> Pick two or three repeatedly recommended options on that question. Locate the work each answer is pointing to, then check the page and owner independently. For backup software, an actionable gap might be a restore walkthrough that identifies supported plans, demonstrates a real restoration and states limitations. A source panel with your domain but no recommendation is a lead to inspect; it does not tell you why the model omitted you.</li>
+<li><strong>Write one action with an acceptance test.</strong> Use: <em>User job → observed gap → comparison evidence → what I control → smallest change → immediate check → later metric</em>. Example: “Publish a single-repository restore guide, link it from the product&#39;s backup page and verify that another person can finish a test restore using it. Then measure whether the unbranded question starts returning that page or the product more often.” Do not copy claims your product cannot support.</li>
+<li><strong>Verify delivery, then watch outcomes.</strong> Record the old and new URLs, page versions, release time and concurrent changes. Check the public URL and document what search exposure you can actually see. Later, repeat the fixed prompt and settings across multiple windows, with a contemporaneous unchanged comparison when feasible. Keep URL exposure, source-panel appearance, citation, recommendation, referral and conversion separate. If you change several assets together, a before/after change belongs to the bundle and may also reflect changes in the platform or web.</li>
+</ol>
+<p>A useful diagnosis depends on which evidence is missing:</p>
+<ul>
+<li><strong>No suitable page exists:</strong> make the smallest asset that completes the user task. Start with a working example and a way to check the outcome.</li>
+<li><strong>A suitable page exists but you see no search evidence:</strong> check its public URL, technical eligibility and the queries you actually captured. Mark missing observations as unknown. A clean access check does not prove the engine retrieved it.</li>
+<li><strong>The page shows up, but the answer does not recommend you:</strong> compare the question and the actual recommended works. Check whether your page supplies the same decision-critical facts, steps and evidence. Change the material only when you can name the gap; the source panel alone does not identify the cause.</li>
+<li><strong>The answer recommends the work but does not name you:</strong> verify the ownership and byline on the underlying page. If attribution is weak, clarify it and track work recommendations and correct author attribution separately on the next batch.</li>
+</ul>
+<blockquote>
+<p>The next test for GEO Lab is practical: can an independent founder complete a valid baseline without help and explain the denominator? For AI outcomes, the next test is to establish prospective, repeated measurements on fixed tutorial and evidence questions, while preserving comparable untreated tasks. There was no matched immediate pre-release measurement for this launch. Our existing historical batch cannot isolate the effect of the guide or the evidence navigation.</p>
+</blockquote>
+<h2 id="8-data-reproduction-and-limits">8. Data, reproduction and limits</h2>
+<ul>
+<li><a href="https://github.com/helen-bird/geo-platform-observation/tree/becc6a61a0ea6fdc5047cdd1a77ced3e2efa27dc/reviews/interim-review/prompt-framing/data">Fixed historical dataset</a>: exact questions, redacted answers, original measurements and attempts. The original Part 2 used a slightly broader boundary for one Grok Discovery answer. Lab #07 treats that answer&#39;s positive supporting reference as a mention, not a recommendation. Including it would change Helen&#39;s total from 13 to 14 and tutorial result from 3/40 to 4/40. It does not change 10/20 for Evidence. Treating Grok Evidence B10 more strictly would reduce the latter to 9/20.</li>
+<li><a href="creator-coding.json">Lab #07 coding snapshot</a>, <a href="coding-rules.md">coding rules</a> and <a href="recount.py">recount script</a>: download both into the same directory and run <code>python3 recount.py</code>. This reproduces person counts and reason counts from the frozen review decisions; it does not independently recode the text. Every row contains an answer ID and a public record link. The <a href="https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/#reproduce">review evidence page</a> separately explains how to rebuild the two earlier reports.</li>
+<li>The dataset covers three English GEO creator questions and one collection window. We used purposive cases and targeted claim audits, with one primary coder per question and review of edge cases. There is no independently measured coder agreement. Missing source fields, changing webpages, unavailable internal retrieval and changing model behavior constrain inference. External recognition, audience size and commercial outcomes were not measured comparably across people.</li>
+</ul>
+<p><strong>Use the benchmark to find evidence you can build for a real user task. Use the follow-up to learn whether that change mattered.</strong></p>
+<blockquote class="report-version" id="report-version"><p><strong>Author:</strong> Helen Bird · <strong>Experiment date:</strong> Historical answers collected 2026-11-10 to 2026-11-11; reviewed 2026-11-13 · <strong>First published:</strong> 2026-11-13 · <strong>Last revised:</strong> 2026-11-13 · <strong>Version:</strong> v1.0</p><p>Observational reanalysis of 60 existing creator answers, source audits and verification of the guide and evidence rollout. No new AI answers or recommendation lift measured.</p><p><a href="../../report-versions.json">Version metadata</a> · <a href="../../CHANGELOG.md">Revision history</a> · <a href="../../reviews/2026-11-02-stages-01-02.md">Cross-report review decisions</a> · <a href="../../reviews/2026-11-03-stage04.md">Stage 4 review decisions</a> · <a href="../../reviews/2026-11-04-technical-maintenance.md">Technical maintenance</a></p></blockquote></main></div></body></html>

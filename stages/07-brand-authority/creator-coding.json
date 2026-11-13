@@ -1,0 +1,2753 @@
+{
+  "scope": "60 historical creator answers; Lab 07 reviewed coding",
+  "source_release": "https://github.com/helen-bird/geo-platform-observation/tree/becc6a61a0ea6fdc5047cdd1a77ced3e2efa27dc/reviews/interim-review/prompt-framing/data",
+  "prompts": {
+    "discovery-creator": "Which independent creators publish practical, data-backed GEO tutorials for independent builders? Explain why and cite sources when available.",
+    "recommendation-creator": "Which independent creators publishing practical, data-backed GEO tutorials would you recommend to independent builders? Explain why and cite sources when available.",
+    "evidence-creator": "Which independent creators publish original, reproducible GEO experiments useful to independent builders? Explain why and cite sources when available."
+  },
+  "answers": [
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B01-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B01-A01#answer",
+      "search_activity": "UNKNOWN",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Cyrus Shepard",
+        "Helen Bird",
+        "Kevin Indig",
+        "Mike King",
+        "Pranjal Aggarwal",
+        "Wil Reynolds"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Cyrus Shepard": [
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "EXPERTISE"
+        ],
+        "Mike King": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Wil Reynolds": [
+          "ORIGINAL_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B02-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B02-A01#answer",
+      "search_activity": "UNKNOWN",
+      "mentioned": [
+        "Giuseppe Finocchiaro",
+        "Pranjal Aggarwal",
+        "Ryan Shojae",
+        "Shalin Siriwardhana"
+      ],
+      "recommendations": {
+        "Giuseppe Finocchiaro": [
+          "PRACTICAL_GUIDANCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Shalin Siriwardhana": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B03-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B03-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Anne Shea",
+        "Jourdan Rombough",
+        "Mark Williams-Cook",
+        "Ryan Shojae",
+        "Sneha Mukherjee",
+        "Sunil Pratap Singh",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Anne Shea": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Jourdan Rombough": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Mark Williams-Cook": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY"
+        ],
+        "Sneha Mukherjee": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Sunil Pratap Singh": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B04-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B04-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Jourdan Rombough",
+        "Kevin Indig",
+        "Pranjal Aggarwal",
+        "Vishvak Murahari",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Jourdan Rombough": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B05-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B05-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Alexandre Gillon",
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Brodie Clark",
+        "Pranjal Aggarwal",
+        "Ryan Shojae",
+        "Vishvak Murahari"
+      ],
+      "recommendations": {
+        "Alexandre Gillon": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Brodie Clark": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B06-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B06-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Arron Young",
+        "Ellen Tuckett",
+        "Jourdan Rombough",
+        "Ryan Shojae",
+        "Sunil Pratap Singh",
+        "Thanh An"
+      ],
+      "recommendations": {
+        "Arron Young": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Ellen Tuckett": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Jourdan Rombough": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY"
+        ],
+        "Sunil Pratap Singh": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Thanh An": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT",
+          "EVIDENCE_JUDGMENT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B07-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B07-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Cassie Clark",
+        "Haoyang Pang",
+        "Joshua Opolko",
+        "Khalid Hamadeh",
+        "Ryan Shojae",
+        "Stephanie Jarmak"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Cassie Clark": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Haoyang Pang": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Joshua Opolko": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Khalid Hamadeh": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY"
+        ],
+        "Stephanie Jarmak": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B08-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B08-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Jarred Smith",
+        "Kevin Indig",
+        "Patrick O'Donnell",
+        "Rand Fishkin",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Jarred Smith": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "EXPERTISE",
+          "THIRD_PARTY_VALIDATION"
+        ],
+        "Rand Fishkin": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B09-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B09-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Jourdan Rombough",
+        "Kevin Indig",
+        "Pranjal Aggarwal",
+        "Stephanie Jarmak",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Jourdan Rombough": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Stephanie Jarmak": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B10-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-DISCOVERY-CREATOR-B10-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Emad Sharaki",
+        "Jakub (Indie Hackers contributor)",
+        "Jourdan Rombough",
+        "Ryan Shojae",
+        "Sunil Pratap Singh"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Emad Sharaki": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Jakub (Indie Hackers contributor)": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Jourdan Rombough": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Sunil Pratap Singh": [
+          "ORIGINAL_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B01-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B01-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Ameet Deshpande",
+        "Antonio Blago",
+        "Artur Ferreira",
+        "Ashwin Kalyan",
+        "Joel House",
+        "Karthik Narasimhan",
+        "Metehan Yesilyurt",
+        "Olivier Martinez",
+        "Pranjal Aggarwal",
+        "Ryan Shojae",
+        "Tanmay Rajpurohit",
+        "Vee Popat",
+        "Vishvak Murahari",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Antonio Blago": [
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Joel House": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Vee Popat": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B02-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B02-A01#answer",
+      "search_activity": "UNKNOWN",
+      "mentioned": [
+        "Artur Ferreira",
+        "Marty Coleman",
+        "Pranjal Aggarwal",
+        "Stephanie Jarmak",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Marty Coleman": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Stephanie Jarmak": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B03-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B03-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Bikash Roy",
+        "Joseph Timpson",
+        "Martin Loader",
+        "Marty Coleman",
+        "Stephanie Jarmak",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Bikash Roy": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Joseph Timpson": [
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Martin Loader": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Marty Coleman": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Stephanie Jarmak": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B04-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B04-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Lennart Vallo",
+        "Marty Coleman",
+        "Metehan Yesilyurt",
+        "Olivier Martinez",
+        "Rahul Vishwakarma",
+        "Ratnesh Jamidar",
+        "Shushant Kumar",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Lennart Vallo": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Marty Coleman": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B05-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B05-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Eitan Gorodetsky",
+        "Haoyang Pang",
+        "Lily Ray",
+        "Stefano Galloni",
+        "Zia Wasi"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Eitan Gorodetsky": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Haoyang Pang": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Lily Ray": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Stefano Galloni": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Zia Wasi": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B06-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B06-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Ameet Deshpande",
+        "Artur Ferreira",
+        "Ashwin Kalyan",
+        "Dan Petrovic",
+        "Karthik Narasimhan",
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Patrick O'Donnell",
+        "Pranjal Aggarwal",
+        "Rand Fishkin",
+        "Suganthan Mohanadasan",
+        "Tanmay Rajpurohit",
+        "Vishvak Murahari",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Dan Petrovic": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "THIRD_PARTY_VALIDATION",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Rand Fishkin": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Suganthan Mohanadasan": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B07-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B07-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Jacob Gerrish",
+        "Mahe Chen",
+        "Nick Koudas",
+        "Ryan Shojae",
+        "Stefano Galloni",
+        "Vee Popat",
+        "Zia Wasi"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Jacob Gerrish": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Mahe Chen": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Nick Koudas": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Stefano Galloni": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Vee Popat": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Zia Wasi": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B08-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B08-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Abhishek Iyer",
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Chris Green",
+        "Helen Bird",
+        "Marty Coleman",
+        "Ryan Shojae",
+        "Zeeshan Yaseen",
+        "Zia Wasi"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Chris Green": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Marty Coleman": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Zia Wasi": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B09-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B09-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Charles Cousyn",
+        "Helen Bird",
+        "Lennart Vallo",
+        "Marty Coleman",
+        "Nazareno Castro Bay",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE"
+        ],
+        "Charles Cousyn": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Lennart Vallo": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Marty Coleman": [
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Nazareno Castro Bay": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B10-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-EVIDENCE-CREATOR-B10-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Jacob Gerrish",
+        "Pranjal Aggarwal",
+        "Stephanie Jarmak",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Jacob Gerrish": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Stephanie Jarmak": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B01-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B01-A01#answer",
+      "search_activity": "UNKNOWN",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Helen Bird",
+        "Jeremy Osborn",
+        "Kevin Indig",
+        "Pranjal Aggarwal"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Jeremy Osborn": [
+          "PRACTICAL_GUIDANCE",
+          "EVIDENCE_JUDGMENT",
+          "ACCESSIBILITY"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B02-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B02-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Cyrus Shepard",
+        "Helen Bird",
+        "Kevin Indig",
+        "Mark Williams-Cook",
+        "Metehan Yesilyurt"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Cyrus Shepard": [
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Mark Williams-Cook": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B03-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B03-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Dan Petrovic",
+        "Kevin Indig",
+        "Pranjal Aggarwal",
+        "Sunil Pratap Singh"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Dan Petrovic": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "AUDIENCE_FIT"
+        ],
+        "Sunil Pratap Singh": [
+          "ORIGINAL_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B04-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B04-A01#answer",
+      "search_activity": "UNKNOWN",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Dan Petrovic",
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Mike King"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "TOPICAL_AUTHORITY",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Dan Petrovic": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B05-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B05-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Dan Petrovic",
+        "Jourdan Rombough",
+        "Kevin Indig",
+        "Pranjal Aggarwal",
+        "Stephanie Jarmak",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Dan Petrovic": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Jourdan Rombough": [
+          "PRACTICAL_GUIDANCE",
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Stephanie Jarmak": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B06-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B06-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Cyrus Shepard",
+        "Dan Petrovic",
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Pranjal Aggarwal"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Cyrus Shepard": [
+          "PRACTICAL_GUIDANCE",
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Dan Petrovic": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "TOPICAL_AUTHORITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B07-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B07-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Dan Petrovic",
+        "Jourdan Rombough",
+        "Kevin Indig",
+        "Mark Williams-Cook",
+        "Pranjal Aggarwal",
+        "Suganthan Mohanadasan",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "THIRD_PARTY_VALIDATION",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Dan Petrovic": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Jourdan Rombough": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "AUDIENCE_FIT"
+        ],
+        "Mark Williams-Cook": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Suganthan Mohanadasan": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B08-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B08-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Anne Shea",
+        "Artur Ferreira",
+        "Joshua Yio",
+        "Kevin Indig",
+        "Zia Wasi"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Anne Shea": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "TOPICAL_AUTHORITY",
+          "AUDIENCE_FIT"
+        ],
+        "Joshua Yio": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Zia Wasi": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B09-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B09-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Artur Ferreira",
+        "Dan Petrovic",
+        "Josh Blyskal",
+        "Kevin Indig",
+        "Pranjal Aggarwal",
+        "Zia Wasi"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "TOPICAL_AUTHORITY",
+          "AUDIENCE_FIT"
+        ],
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Dan Petrovic": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Josh Blyskal": [
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Kevin Indig": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Zia Wasi": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B10-A01",
+      "environment": "chatgpt-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-CHATGPT-WEB-RECOMMENDATION-CREATOR-B10-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Brodie Clark",
+        "Kevin Indig",
+        "Rohit Singh",
+        "Ryan Shojae"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Brodie Clark": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE"
+        ],
+        "Rohit Singh": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Ryan Shojae": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B01-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B01-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Jakub (Indie Hackers contributor)",
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Pranjal Aggarwal",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "EXPERTISE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT",
+          "THIRD_PARTY_VALIDATION"
+        ],
+        "Kevin Indig": [
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT",
+          "THIRD_PARTY_VALIDATION"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "THIRD_PARTY_VALIDATION"
+        ],
+        "Sam Shev": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B02-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B02-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Dhang Hang",
+        "Jakub (Indie Hackers contributor)",
+        "Kevin Indig",
+        "Nathan Gotch",
+        "Pranjal Aggarwal",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Dhang Hang": [
+          "IDENTITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "AUDIENCE_FIT"
+        ],
+        "Nathan Gotch": [
+          "EXPERTISE",
+          "TOPICAL_AUTHORITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT",
+          "DISTRIBUTION"
+        ],
+        "Sam Shev": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B03-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B03-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Pranjal Aggarwal",
+        "Rohit Singh",
+        "Sam Shev",
+        "Vasco (Vasco's SEO Tips)",
+        "Vladyslava Sirychenko"
+      ],
+      "recommendations": {
+        "Rohit Singh": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Sam Shev": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Vasco (Vasco's SEO Tips)": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT",
+          "ACCESSIBILITY"
+        ],
+        "Vladyslava Sirychenko": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B04-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B04-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Dhang Hang",
+        "Pranjal Aggarwal",
+        "Robin Pautigny",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Dhang Hang": [
+          "IDENTITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Robin Pautigny": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Sam Shev": [
+          "IDENTITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B05-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B05-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Ayush Chaturvedi",
+        "Pranjal Aggarwal",
+        "Robin Pautigny",
+        "Sam Shev",
+        "Zach Chmael"
+      ],
+      "recommendations": {
+        "Ayush Chaturvedi": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Robin Pautigny": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Sam Shev": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Zach Chmael": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B06-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B06-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Avinash Vagh",
+        "Michael Semer",
+        "Nathan Gotch",
+        "Pranjal Aggarwal",
+        "Robin Pautigny",
+        "Rohit Singh",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Avinash Vagh": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Michael Semer": [
+          "PRACTICAL_GUIDANCE"
+        ],
+        "Nathan Gotch": [
+          "EXPERTISE",
+          "DISTRIBUTION",
+          "PRACTICAL_GUIDANCE"
+        ],
+        "Robin Pautigny": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Rohit Singh": [
+          "PRACTICAL_GUIDANCE",
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Sam Shev": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT",
+          "ORIGINAL_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B07-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B07-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Heng (Cyberbard)",
+        "Kevin Indig",
+        "Pranjal Aggarwal",
+        "Robin Pautigny",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Heng (Cyberbard)": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT",
+          "ACCESSIBILITY"
+        ],
+        "Robin Pautigny": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Sam Shev": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B08-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B08-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Metehan Yesilyurt",
+        "Pranjal Aggarwal",
+        "Rohit Singh",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Sam Shev": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B09-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B09-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Helena Liu",
+        "Kevin Indig",
+        "Nathan Gotch",
+        "Pranjal Aggarwal",
+        "Robin Pautigny",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT",
+          "TOPICAL_AUTHORITY"
+        ],
+        "Helena Liu": [
+          "DISTRIBUTION",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Nathan Gotch": [
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "DISTRIBUTION",
+          "AUDIENCE_FIT"
+        ],
+        "Robin Pautigny": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Sam Shev": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-DISCOVERY-CREATOR-B10-A01",
+      "environment": "grok-web",
+      "prompt_id": "discovery-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-DISCOVERY-CREATOR-B10-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Chris M. Walker",
+        "Jakub (Indie Hackers contributor)",
+        "Kevin Indig",
+        "Pranjal Aggarwal",
+        "Robin Pautigny"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "EXPERTISE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT",
+          "THIRD_PARTY_VALIDATION"
+        ],
+        "Chris M. Walker": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Jakub (Indie Hackers contributor)": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "DISTRIBUTION",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B01-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B01-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Pranjal Aggarwal",
+        "Yao Jingang"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Yao Jingang": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B02-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B02-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Juan Camilo Auriti",
+        "Metehan Yesilyurt"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Juan Camilo Auriti": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B03-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B03-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Juan Camilo Auriti",
+        "Pranjal Aggarwal",
+        "Yao Jingang"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Juan Camilo Auriti": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Yao Jingang": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B04-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B04-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Marin T. Kael",
+        "Metehan Yesilyurt",
+        "Pranjal Aggarwal",
+        "Yao Jingang"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Marin T. Kael": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Yao Jingang": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B05-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B05-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Metehan Yesilyurt"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B06-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B06-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Josef Trauner",
+        "Klaus-M. Schremser",
+        "Pranjal Aggarwal",
+        "Thomas Peham",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B07-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B07-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Pranjal Aggarwal",
+        "Yao Jingang"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Yao Jingang": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B08-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B08-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "James Huang",
+        "Pranjal Aggarwal"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B09-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B09-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Metehan Yesilyurt",
+        "Pranjal Aggarwal",
+        "Yao Jingang",
+        "Zeeshan Yaseen"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT",
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Yao Jingang": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Zeeshan Yaseen": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-EVIDENCE-CREATOR-B10-A01",
+      "environment": "grok-web",
+      "prompt_id": "evidence-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-EVIDENCE-CREATOR-B10-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Helen Bird",
+        "Pranjal Aggarwal",
+        "Yao Jingang"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Helen Bird": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Yao Jingang": [
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B01-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B01-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Pranjal Aggarwal",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Kevin Indig": [
+          "IDENTITY",
+          "EXPERTISE",
+          "DISTRIBUTION",
+          "TOPICAL_AUTHORITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Sam Shev": [
+          "IDENTITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B02-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B02-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Alex_Echo",
+        "Artur Ferreira",
+        "Jakub (jakubinit)",
+        "Pranjal Aggarwal",
+        "Rand Fishkin",
+        "Ross Hudgens",
+        "William Wang"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "ACCESSIBILITY",
+          "REPRODUCIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Jakub (jakubinit)": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Ross Hudgens": [
+          "EXPERTISE",
+          "PRACTICAL_GUIDANCE",
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "AUDIENCE_FIT"
+        ],
+        "William Wang": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B03-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B03-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Jakub (jakubinit)",
+        "Pranjal Aggarwal",
+        "Rohit Singh",
+        "Sam Shev"
+      ],
+      "recommendations": {
+        "Jakub (jakubinit)": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT",
+          "ACCESSIBILITY"
+        ],
+        "Sam Shev": [
+          "IDENTITY",
+          "EXPERTISE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B04-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B04-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Dan Petrovic",
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Mike King",
+        "Pranjal Aggarwal",
+        "Tomek Rudzki"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "IDENTITY",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "IDENTITY",
+          "EXPERTISE",
+          "DISTRIBUTION",
+          "TOPICAL_AUTHORITY",
+          "THIRD_PARTY_VALIDATION",
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B05-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B05-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Nathan Gotch",
+        "Pranjal Aggarwal"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "TOPICAL_AUTHORITY",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Nathan Gotch": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "ORIGINAL_EVIDENCE",
+          "DISTRIBUTION",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B06-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B06-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Chris Long",
+        "Dan Petrovic",
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Pranjal Aggarwal"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "EXPERTISE",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "TOPICAL_AUTHORITY",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "DISTRIBUTION",
+          "TOPICAL_AUTHORITY",
+          "THIRD_PARTY_VALIDATION",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "ACCESSIBILITY",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B07-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B07-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Kevin Indig",
+        "Michael Semer",
+        "Mike King",
+        "Pranjal Aggarwal",
+        "Robin Pautigny"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "THIRD_PARTY_VALIDATION",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "THIRD_PARTY_VALIDATION",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY"
+        ],
+        "Michael Semer": [
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Robin Pautigny": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B08-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B08-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Dan Petrovic",
+        "Edward Sturm",
+        "Jakub (jakubinit)",
+        "Kevin Indig",
+        "Metehan Yesilyurt",
+        "Mike King",
+        "Pranjal Aggarwal",
+        "Tim Dini"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "EXPERTISE",
+          "TOPICAL_AUTHORITY",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Dan Petrovic": [
+          "ACCESSIBILITY"
+        ],
+        "Edward Sturm": [
+          "EVIDENCE_JUDGMENT"
+        ],
+        "Jakub (jakubinit)": [
+          "IDENTITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Kevin Indig": [
+          "IDENTITY",
+          "EXPERTISE",
+          "DISTRIBUTION",
+          "TOPICAL_AUTHORITY",
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "THIRD_PARTY_VALIDATION",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Metehan Yesilyurt": [
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Mike King": [
+          "EXPERTISE"
+        ],
+        "Tim Dini": [
+          "IDENTITY",
+          "EXPERTISE",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B09-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B09-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Artur Ferreira",
+        "Nathan Gotch",
+        "Pranjal Aggarwal",
+        "Robin Pautigny",
+        "Rohit Singh"
+      ],
+      "recommendations": {
+        "Artur Ferreira": [
+          "EXPERTISE",
+          "ORIGINAL_EVIDENCE",
+          "REPRODUCIBILITY",
+          "EVIDENCE_JUDGMENT",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Nathan Gotch": [
+          "EXPERTISE",
+          "PRACTICAL_GUIDANCE",
+          "ACCESSIBILITY",
+          "ORIGINAL_EVIDENCE",
+          "AUDIENCE_FIT"
+        ],
+        "Robin Pautigny": [
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Rohit Singh": [
+          "IDENTITY",
+          "ORIGINAL_EVIDENCE",
+          "TOPICAL_AUTHORITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    },
+    {
+      "answer_id": "IR2-GROK-WEB-RECOMMENDATION-CREATOR-B10-A01",
+      "environment": "grok-web",
+      "prompt_id": "recommendation-creator",
+      "public_answer": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html?review=prompt-framing&id=IR2-GROK-WEB-RECOMMENDATION-CREATOR-B10-A01#answer",
+      "search_activity": "OBSERVED",
+      "mentioned": [
+        "Aleyda Solis",
+        "Jakub (jakubinit)",
+        "Lily Ray",
+        "Nathan Gotch",
+        "Pranjal Aggarwal",
+        "Robin Pautigny"
+      ],
+      "recommendations": {
+        "Aleyda Solis": [
+          "EXPERTISE",
+          "TOPICAL_AUTHORITY",
+          "ORIGINAL_EVIDENCE",
+          "ACCESSIBILITY",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ],
+        "Lily Ray": [
+          "ORIGINAL_EVIDENCE",
+          "EVIDENCE_JUDGMENT",
+          "AUDIENCE_FIT"
+        ],
+        "Nathan Gotch": [
+          "DISTRIBUTION",
+          "ORIGINAL_EVIDENCE",
+          "PRACTICAL_GUIDANCE",
+          "AUDIENCE_FIT"
+        ]
+      }
+    }
+  ]
+}

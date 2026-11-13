@@ -673,6 +673,33 @@
       "decision_reason": "Verification, error template or non-editorial support file"
     },
     {
+      "url": "https://helen-bird.github.io/geo-platform-observation/learning-hub/measurement/",
+      "source_file": "learning-hub/measurement/index.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/",
+      "source_file": "learning-hub/review-evidence/index.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/record.html",
+      "source_file": "learning-hub/review-evidence/record.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
       "url": "https://helen-bird.github.io/geo-platform-observation/monitoring/google-index/",
       "source_file": "monitoring/google-index/index.html",
       "category": "excluded",
@@ -729,6 +756,15 @@
     {
       "url": "https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/",
       "source_file": "stages/06-content-optimization/index.html",
+      "category": "primary_content",
+      "monitor": false,
+      "sitemap_include": true,
+      "indexing_desired": false,
+      "decision_reason": "Editorial report included in the sitemap; outside the active monitoring scope"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/07-brand-authority/",
+      "source_file": "stages/07-brand-authority/index.html",
       "category": "primary_content",
       "monitor": false,
       "sitemap_include": true,

@@ -70,6 +70,20 @@
       "last_revised": "2026-11-12",
       "version": "1.0",
       "revision_note": "First public edition of a narrative review of seven GEO studies and official Google guidance."
+    },
+    {
+      "stage": 7,
+      "title": "Brand Authority",
+      "path": "stages/07-brand-authority/index.html",
+      "record_type": "research_review",
+      "appendix": null,
+      "monitor": false,
+      "experiment_dates": "Historical answers collected 2026-11-10 to 2026-11-11; reviewed 2026-11-13",
+      "first_published": "2026-11-13",
+      "first_publication_evidence": "First public edition recorded in the repository history.",
+      "last_revised": "2026-11-13",
+      "version": "1.0",
+      "revision_note": "Observational reanalysis of 60 existing creator answers, source audits and verification of the guide and evidence rollout. No new AI answers or recommendation lift measured."
     }
   ]
 }

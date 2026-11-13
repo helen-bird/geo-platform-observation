@@ -2,6 +2,10 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-13
+
+- **Lab #07 v1.0:** published the Brand Authority study and its reviewed 60-answer coding, rules and recount script. It documents the measurement guide, workbook and individual evidence release. No post-release recommendation lift was measured.
+
 ## 2026-11-12
 
 - **Lab #06 v1.0:** published the content optimization evidence review, with the full report, linked primary sources and review methodology. Added the report to the Learning Hub and sitemap.
