@@ -1,4 +1,4 @@
-/* Basic editorial page views. The Google tag is loaded only after a visitor opts in. */
+/* Editorial analytics. Load the Google tag only after a visitor opts in. */
 (() => {
   const id = document.currentScript?.dataset.measurementId;
   const page = new URL(window.location.href);
@@ -9,6 +9,8 @@
   const blocked = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
   const key = 'geo-analytics-preference-v1';
   const disabled = 'ga-disable-' + id;
+  const distributionCampaign = 'geo_lab_08_distribution';
+  const distributionLinks = new Set(['seo_llm_1wp32i3', 'websiteseo_1xts2lu', 'aeo_1xnzat4']);
   let choice;
   try { choice = localStorage.getItem(key); } catch { /* Browser blocks storage. */ }
   let loaded = false;
@@ -23,7 +25,17 @@
     const location = new URL(page.pathname.replace(/\/index\.html$/, '/'), page.origin);
     const qa = page.searchParams.get('geo_test') === '1';
     const source = page.searchParams.get('utm_source')?.toLowerCase();
-    if (qa) {
+    const campaign = page.searchParams.get('utm_campaign');
+    const content = page.searchParams.get('utm_content');
+    const distribution = location.pathname === project + 'learning-hub/measurement/' &&
+      source === 'reddit' && page.searchParams.get('utm_medium') === 'comment' &&
+      campaign === distributionCampaign && distributionLinks.has(content);
+    if (distribution) {
+      location.searchParams.set('utm_source', 'reddit');
+      location.searchParams.set('utm_medium', 'comment');
+      location.searchParams.set('utm_campaign', qa ? distributionCampaign + '_qa' : distributionCampaign);
+      location.searchParams.set('utm_content', content);
+    } else if (qa) {
       location.searchParams.set('utm_source', 'geo-qa');
       location.searchParams.set('utm_medium', 'test');
       location.searchParams.set('utm_campaign', 'analytics-setup');
@@ -31,8 +43,6 @@
       location.searchParams.set('utm_source', source);
       location.searchParams.set('utm_medium', source === 'x' ? 'social' : 'referral');
       if (source === 'x') {
-        const campaign = page.searchParams.get('utm_campaign');
-        const content = page.searchParams.get('utm_content');
         if (/^geo-lab-[0-9]{2}$/.test(campaign || '')) location.searchParams.set('utm_campaign', campaign);
         if (/^(original|reply|quote)(-[0-9]{1,3})?$/.test(content || '')) location.searchParams.set('utm_content', content);
       }
@@ -51,10 +61,16 @@
     gtag('config', id, {
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
-      cookie_prefix: 'geolab',
+      // Each of the three QA links starts with a separate GA client/session cookie.
+      cookie_prefix: qa && distribution ? 'geolab_qa_' + content : 'geolab',
       cookie_path: project,
       page_location: location.href,
       page_referrer: referrer,
+      // gtag's supported campaign fields explicitly match the sanitized URL.
+      ...(distribution ? {
+        campaign_source: 'reddit', campaign_medium: 'comment',
+        campaign_name: location.searchParams.get('utm_campaign'), campaign_content: content
+      } : {}),
       ...(qa ? {debug_mode: true} : {})
     });
     const script = document.createElement('script');
@@ -80,7 +96,7 @@
       window[disabled] = true;
       for (const cookie of document.cookie.split(';')) {
         const name = cookie.split('=')[0].trim();
-        if (/^geolab_ga(?:_[A-Z0-9]+)?$/.test(name)) {
+        if (/^geolab(?:_qa_[a-z0-9_]+)?_ga(?:_[A-Z0-9]+)?$/.test(name)) {
           document.cookie = name + '=; Max-Age=0; Path=' + project + '; Secure; SameSite=Lax';
           document.cookie = name + '=; Max-Age=0; Path=' + project + '; Domain=' + page.hostname + '; Secure; SameSite=Lax';
         }
