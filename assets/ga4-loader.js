@@ -55,10 +55,9 @@
 
     window.dataLayer = window.dataLayer || [];
     function gtag() { window.dataLayer.push(arguments); }
-    gtag('js', new Date());
     gtag('consent', 'default', {analytics_storage: 'granted', ad_storage: 'denied',
       ad_user_data: 'denied', ad_personalization: 'denied'});
-    gtag('config', id, {
+    const settings = {
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       // Each of the three QA links starts with a separate GA client/session cookie.
@@ -72,7 +71,13 @@
         campaign_name: location.searchParams.get('utm_campaign'), campaign_content: content
       } : {}),
       ...(qa ? {debug_mode: true} : {})
-    });
+    };
+    // The connected Google tag can initialize on the js event, before config.
+    // Seed the same settings first so that its initial hit also uses our consent,
+    // sanitized URL, campaign and QA cookie/debug settings.
+    gtag('set', settings);
+    gtag('js', new Date());
+    gtag('config', id, settings);
     const script = document.createElement('script');
     script.async = true;
     script.referrerPolicy = 'origin';

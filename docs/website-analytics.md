@@ -8,6 +8,8 @@ Use the existing web stream for `https://helen-bird.github.io/geo-platform-obser
 
 The tag is limited to editorial report pages, the Learning Hub and the measurement guide. It loads Google Analytics only after the visitor opts in and respects browser Global Privacy Control and Do Not Track settings. The site explains this on the [analytics privacy page](../privacy.html). It supplies only the page path, recognized campaign parameters and the referring origin to GA4's page-view configuration. Do not put a person's name, account ID or email address in an attribution tag.
 
+Queue consent and the shared settings before the tag's initialization event, then apply those same settings to the stream configuration. This also covers a connected Google tag that initializes before processing the stream-specific configuration. Verify the actual outgoing URL and campaign fields; the presence of a script element or a configuration command alone is not proof that the settings reached an event.
+
 ## Links and reporting
 
 For the Lab #07 post, set source to `x`, medium to `social`, campaign to `geo-lab-07`, and content to `original` using the corresponding UTM parameters. Use `reply` or `quote` for the corresponding placement. Preserve the canonical URL. Untagged traffic from `t.co` or `x.com` may still be observable as referral traffic if the browser preserves the source; it cannot reliably be assigned to a post. ChatGPT Search links may carry `utm_source=chatgpt.com`; the referring origin can also provide a signal. Report visits without either signal as direct or unknown.
