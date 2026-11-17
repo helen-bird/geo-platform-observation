@@ -1,4 +1,4 @@
-"""Install the opt-out-aware Google tag on editorial pages only."""
+"""Install the consent gate on public research reading pages."""
 from functools import lru_cache
 import json
 from pathlib import Path
@@ -22,9 +22,21 @@ def configuration():
     paths = {r['path'] for r in reports} | {
         'learning-hub/index.html',
         'learning-hub/measurement/index.html',
+        'learning-hub/review-evidence/index.html',
+        'learning-hub/review-evidence/record.html',
         'reviews/interim-review/historical-replication/index.html',
+        'reviews/interim-review/historical-replication/technical-appendix.html',
         'reviews/interim-review/prompt-framing/index.html',
+        'reviews/interim-review/prompt-framing/technical-appendix.html',
+        'evidence/index.html',
     }
+    for r in reports:
+        appendix = r.get('appendix', str(Path(r['path']).with_name('technical-appendix.html')))
+        if appendix:
+            paths.add(appendix)
+    manifest = ROOT/'evidence/manifest.json'
+    if manifest.exists():
+        paths.update(r['path'] for r in json.loads(manifest.read_text())['responses'])
     return id_, paths
 
 
@@ -37,7 +49,7 @@ def decorate_head(head, path):
 
 
 def refresh_static_readers():
-    """Reapply the head tag to editorial HTML with no regular Python generator."""
+    """Apply the head tag to reading pages, including freshly generated evidence."""
     for path in configuration()[1]:
         dest = ROOT/path
         if not dest.is_file():

@@ -1,4 +1,4 @@
-/* Editorial analytics. Load the Google tag only after a visitor opts in. */
+/* Research-site analytics. Load the Google tag only after a visitor opts in. */
 (() => {
   const id = document.currentScript?.dataset.measurementId;
   const page = new URL(window.location.href);
@@ -11,6 +11,25 @@
   const disabled = 'ga-disable-' + id;
   const distributionCampaign = 'geo_lab_08_distribution';
   const distributionLinks = new Set(['seo_llm_1wp32i3', 'websiteseo_1xts2lu', 'aeo_1xnzat4']);
+  const qaKey = 'geo-analytics-qa-tab-v1';
+  const webQa = 'website';
+  const pagePath = page.pathname.replace(/\/index\.html$/, '/');
+  const source = page.searchParams.get('utm_source')?.toLowerCase();
+  const campaign = page.searchParams.get('utm_campaign');
+  const content = page.searchParams.get('utm_content');
+  const distribution = pagePath === project + 'learning-hub/measurement/' &&
+    source === 'reddit' && page.searchParams.get('utm_medium') === 'comment' &&
+    campaign === distributionCampaign && distributionLinks.has(content);
+  let qaGroup;
+  if (page.searchParams.getAll('geo_test').includes('1')) {
+    qaGroup = distribution ? content : webQa;
+    try { sessionStorage.setItem(qaKey, qaGroup); } catch { /* URL still protects this page. */ }
+  } else {
+    try {
+      const savedGroup = sessionStorage.getItem(qaKey);
+      if (savedGroup === webQa || distributionLinks.has(savedGroup)) qaGroup = savedGroup;
+    } catch { /* Tab storage is unavailable. */ }
+  }
   let choice;
   try { choice = localStorage.getItem(key); } catch { /* Browser blocks storage. */ }
   let loaded = false;
@@ -22,20 +41,14 @@
     loaded = true;
 
     // Pass only the recognized campaign labels and an origin-level referrer.
-    const location = new URL(page.pathname.replace(/\/index\.html$/, '/'), page.origin);
-    const qa = page.searchParams.get('geo_test') === '1';
-    const source = page.searchParams.get('utm_source')?.toLowerCase();
-    const campaign = page.searchParams.get('utm_campaign');
-    const content = page.searchParams.get('utm_content');
-    const distribution = location.pathname === project + 'learning-hub/measurement/' &&
-      source === 'reddit' && page.searchParams.get('utm_medium') === 'comment' &&
-      campaign === distributionCampaign && distributionLinks.has(content);
-    if (distribution) {
+    const location = new URL(pagePath, page.origin);
+    const redditQa = distributionLinks.has(qaGroup);
+    if (redditQa || (distribution && !qaGroup)) {
       location.searchParams.set('utm_source', 'reddit');
       location.searchParams.set('utm_medium', 'comment');
-      location.searchParams.set('utm_campaign', qa ? distributionCampaign + '_qa' : distributionCampaign);
-      location.searchParams.set('utm_content', content);
-    } else if (qa) {
+      location.searchParams.set('utm_campaign', redditQa ? distributionCampaign + '_qa' : distributionCampaign);
+      location.searchParams.set('utm_content', redditQa ? qaGroup : content);
+    } else if (qaGroup) {
       location.searchParams.set('utm_source', 'geo-qa');
       location.searchParams.set('utm_medium', 'test');
       location.searchParams.set('utm_campaign', 'analytics-setup');
@@ -50,7 +63,7 @@
     let referrer = '';
     try {
       const ref = new URL(document.referrer);
-      if (ref.protocol === 'https:' || ref.protocol === 'http:') referrer = ref.origin + '/';
+      if (!qaGroup && (ref.protocol === 'https:' || ref.protocol === 'http:')) referrer = ref.origin + '/';
     } catch { /* Direct visit or source withheld. */ }
 
     window.dataLayer = window.dataLayer || [];
@@ -60,18 +73,18 @@
     const settings = {
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
-      // Each of the three QA links starts with a separate GA client/session cookie.
-      cookie_prefix: qa && distribution ? 'geolab_qa_' + content : 'geolab',
+      // Every QA group has its own cookies, including ordinary site diagnostics.
+      cookie_prefix: qaGroup ? 'geolab_qa_' + qaGroup : 'geolab',
       cookie_path: project,
       page_location: location.href,
       page_referrer: referrer,
-      // gtag's supported campaign fields explicitly match the sanitized URL.
-      ...(distribution ? {
-        campaign_source: 'reddit', campaign_medium: 'comment',
-        campaign_name: location.searchParams.get('utm_campaign'), campaign_content: content
-      } : {}),
-      ...(qa ? {debug_mode: true} : {})
+      ...(qaGroup ? {debug_mode: true} : {})
     };
+    // Pass recognized labels explicitly as well as in the sanitized page URL.
+    for (const [utm, field] of Object.entries({utm_source: 'campaign_source',
+      utm_medium: 'campaign_medium', utm_campaign: 'campaign_name', utm_content: 'campaign_content'})) {
+      if (location.searchParams.has(utm)) settings[field] = location.searchParams.get(utm);
+    }
     // The connected Google tag can initialize on the js event, before config.
     // Seed the same settings first so that its initial hit also uses our consent,
     // sanitized URL, campaign and QA cookie/debug settings.
@@ -122,6 +135,11 @@
   function show(prompt) {
     container.replaceChildren();
     container.toggleAttribute('data-prompt', prompt && !blocked);
+    if (qaGroup) {
+      const status = document.createElement('p');
+      status.textContent = 'Analytics test mode. Keep this tab for testing.';
+      container.append(status);
+    }
     const link = document.createElement('a');
     link.href = project + 'privacy.html';
     link.textContent = 'Analytics privacy';
