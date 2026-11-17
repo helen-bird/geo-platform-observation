@@ -11,23 +11,37 @@
   const disabled = 'ga-disable-' + id;
   const distributionCampaign = 'geo_lab_08_distribution';
   const distributionLinks = new Set(['seo_llm_1wp32i3', 'websiteseo_1xts2lu', 'aeo_1xnzat4']);
+  const directoryPlacements = [
+    ["pitchwall", "directory", "pitchwall_kit"],
+    ["uneed", "directory", "uneed_kit"],
+    ["peerlist", "directory", "peerlist_kit"],
+    ["startupstash", "directory", "startupstash_kit"]
+  ];
   const qaKey = 'geo-analytics-qa-tab-v1';
   const webQa = 'website';
   const pagePath = page.pathname.replace(/\/index\.html$/, '/');
   const source = page.searchParams.get('utm_source')?.toLowerCase();
   const campaign = page.searchParams.get('utm_campaign');
   const content = page.searchParams.get('utm_content');
-  const distribution = pagePath === project + 'learning-hub/measurement/' &&
+  const guidePath = pagePath === project + 'learning-hub/measurement/';
+  const distribution = guidePath &&
     source === 'reddit' && page.searchParams.get('utm_medium') === 'comment' &&
     campaign === distributionCampaign && distributionLinks.has(content);
+  const directory = guidePath && campaign === distributionCampaign &&
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']
+      .every(field => page.searchParams.getAll(field).length === 1)
+    ? directoryPlacements.find(([name, medium, placement]) =>
+      name === page.searchParams.get('utm_source') && medium === page.searchParams.get('utm_medium') && placement === content)
+    : undefined;
   let qaGroup;
   if (page.searchParams.getAll('geo_test').includes('1')) {
-    qaGroup = distribution ? content : webQa;
+    qaGroup = directory?.[2] || (distribution ? content : webQa);
     try { sessionStorage.setItem(qaKey, qaGroup); } catch { /* URL still protects this page. */ }
   } else {
     try {
       const savedGroup = sessionStorage.getItem(qaKey);
-      if (savedGroup === webQa || distributionLinks.has(savedGroup)) qaGroup = savedGroup;
+      if (savedGroup === webQa || distributionLinks.has(savedGroup) ||
+          directoryPlacements.some(([, , placement]) => placement === savedGroup)) qaGroup = savedGroup;
     } catch { /* Tab storage is unavailable. */ }
   }
   let choice;
@@ -43,7 +57,14 @@
     // Pass only the recognized campaign labels and an origin-level referrer.
     const location = new URL(pagePath, page.origin);
     const redditQa = distributionLinks.has(qaGroup);
-    if (redditQa || (distribution && !qaGroup)) {
+    const directoryQa = directoryPlacements.find(([, , placement]) => placement === qaGroup);
+    if (directoryQa || (directory && !qaGroup)) {
+      const [name, medium, placement] = directoryQa || directory;
+      location.searchParams.set('utm_source', name);
+      location.searchParams.set('utm_medium', medium);
+      location.searchParams.set('utm_campaign', directoryQa ? distributionCampaign + '_qa' : distributionCampaign);
+      location.searchParams.set('utm_content', placement);
+    } else if (redditQa || (distribution && !qaGroup)) {
       location.searchParams.set('utm_source', 'reddit');
       location.searchParams.set('utm_medium', 'comment');
       location.searchParams.set('utm_campaign', redditQa ? distributionCampaign + '_qa' : distributionCampaign);
