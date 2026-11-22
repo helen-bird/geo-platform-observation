@@ -71,7 +71,7 @@ def finish_page(document, stage, kind='reader'):
         return 'href="'+escape(href, quote=True)+'"'
     nav = re.sub(r'href="([^"]*)"', canonical_navigation, nav)
     document = document[:match.start()] + nav + document[match.end():]
-    fields = [('Author','Helen Bird'),('Observation period' if selected.get('record_type')=='technical_learning_record' else 'Experiment date',selected['experiment_dates']),('First published',selected['first_published']),('Last revised',selected['last_revised']),('Version','v'+selected['version'])]
+    fields = [('Author','Helen Bird'),('Observation period' if selected.get('record_type') in {'technical_learning_record', 'distribution_learning_record'} else 'Experiment date',selected['experiment_dates']),('First published',selected['first_published']),('Last revised',selected['last_revised']),('Version','v'+selected['version'])]
     note = '<blockquote class="report-version" id="report-version"><p>'+' · '.join('<strong>'+escape(k)+':</strong> '+escape(v) for k,v in fields)+'</p><p>'+escape(selected['revision_note'])+'</p><p><a href="'+relative('report-versions.json')+'">Version metadata</a> · <a href="'+relative('CHANGELOG.md')+'">Revision history</a> · <a href="'+relative('reviews/2026-11-02-stages-01-02.md')+'">Cross-report review decisions</a> · <a href="'+relative('reviews/2026-11-03-stage04.md')+'">Stage 4 review decisions</a> · <a href="'+relative('reviews/2026-11-04-technical-maintenance.md')+'">Technical maintenance</a></p></blockquote>'
     document = document.replace('</main>',note+'</main>',1)
     document = document.replace('</head>','<style>'+CSS+'</style></head>',1)

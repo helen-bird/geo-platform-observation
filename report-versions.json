@@ -84,6 +84,19 @@
       "last_revised": "2026-11-13",
       "version": "1.0",
       "revision_note": "Observational reanalysis of 60 existing creator answers, source audits and verification of the guide and evidence rollout. No new AI answers or recommendation lift measured."
+    },
+    {
+      "stage": 8,
+      "title": "Distribution for Indie Creators",
+      "path": "stages/08-distribution/index.html",
+      "record_type": "distribution_learning_record",
+      "monitor": false,
+      "experiment_dates": "2026-11-13 to 2026-11-22 (analytics and distribution snapshot, Beijing time)",
+      "first_published": "2026-11-22",
+      "first_publication_evidence": "First public edition recorded in the repository history.",
+      "last_revised": "2026-11-22",
+      "version": "1.0",
+      "revision_note": "Initial field report on X posts, Reddit replies and free directory submissions. Includes reviewed website aggregates and a reusable one-week distribution test. No AI-answer experiment."
     }
   ]
 }

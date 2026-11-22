@@ -132,7 +132,7 @@ def _structured(path, kind, stage, title, description):
     # Original AI-answer archives retain their original experiment-series parts.
     # hasPart is not an exhaustive catalog; technical learning records and research reviews belong
     # in the hub/report graph without rewriting unchanged answer archives.
-    series_reports = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') not in {'technical_learning_record', 'research_review'}]
+    series_reports = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') not in {'technical_learning_record', 'research_review', 'distribution_learning_record'}]
     series = {'@type': 'CreativeWorkSeries', '@id': SERIES_ID, 'name': 'GEO Lab', 'url': canonical_url(HUB_PATH), 'author': {'@id': PERSON_ID}, 'isPartOf': {'@id': SITE_ID}, 'hasPart': [{'@id': canonical_url(r['path'])+'#article'} for r in series_reports]}
     is_own_article = kind in {'reader', 'appendix'} and selected is not None
     page_type = 'CollectionPage' if kind in {'hub', 'evidence-index'} else ('Article' if is_own_article else 'WebPage')

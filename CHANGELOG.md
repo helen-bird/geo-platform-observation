@@ -2,6 +2,10 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-22
+
+- **Lab #08 v1.0:** published the distribution field report, its one-week test plan and reviewed aggregate evidence. The snapshot separates community activity, link clicks, site requests, downloads and verified public listings.
+
 ## 2026-11-13
 
 - **Lab #07 v1.0:** published the Brand Authority study and its reviewed 60-answer coding, rules and recount script. It documents the measurement guide, workbook and individual evidence release. No post-release recommendation lift was measured.

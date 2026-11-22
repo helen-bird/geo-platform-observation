@@ -96,7 +96,7 @@ def main():
         person = nodes[PERSON_ID]
         assert person == {'@type': 'Person', '@id': PERSON_ID, 'name': 'Helen Bird', 'url': canonical_url(HUB_PATH)}
         assert nodes[SITE_ID]['@type'] == 'WebSite' and nodes[SERIES_ID]['@type'] == 'CreativeWorkSeries'
-        expected_series = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') not in {'technical_learning_record', 'research_review'}]
+        expected_series = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') not in {'technical_learning_record', 'research_review', 'distribution_learning_record'}]
         assert nodes[SERIES_ID]['hasPart'] == [{'@id': canonical_url(r['path'])+'#article'} for r in expected_series]
         breadcrumbs = [node for node in graph if node['@type'] == 'BreadcrumbList']
         assert len(breadcrumbs) == 1

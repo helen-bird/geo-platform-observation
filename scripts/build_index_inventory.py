@@ -18,7 +18,8 @@ def build():
     reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
     primary = {'learning-hub/index.html', 'evidence/index.html'} | {r['path'] for r in reports}
     appendices = {path for r in reports if (path := appendix_path(r))}
-    outside_monitor = {r['path'] for r in reports if r.get('monitor') is False}
+    outside_monitor = {path for r in reports if r.get('monitor') is False
+                       for path in (r['path'], appendix_path(r)) if path}
     urls, excluded, known = [], [], set()
     for p in sorted(ROOT.rglob('*.html')):
         name=p.relative_to(ROOT).as_posix()

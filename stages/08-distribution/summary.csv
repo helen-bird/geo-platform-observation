@@ -1,0 +1,41 @@
+layer,window_cst,channel_or_item,metric,value,evidence_state
+platform_engagement,through 2026-11-22,X Lab 06,impressions,61,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Lab 06,engagements,8,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Lab 06,link_clicks,2,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Lab 07,impressions,75,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Lab 07,engagements,8,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Lab 07,link_clicks,2,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Interim Review Part 2,impressions,45,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Interim Review Part 2,engagements,5,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Interim Review Part 2,link_clicks,0,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Lab 08 discussion,impressions,52,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Lab 08 discussion,engagements,9,OWNER_ANALYTICS
+platform_engagement,through 2026-11-22,X Lab 08 discussion,link_clicks,,NOT_APPLICABLE
+distribution_action,2026-11-16,Reddit,comments_published,3,PUBLICATION_RECORD
+platform_engagement,2026-11-22,Reddit three replies,views,0,AUTHOR_REPORTED
+platform_engagement,2026-11-22,Reddit three replies,net_vote_signal,0,AUTHOR_REPORTED
+platform_engagement,2026-11-22,Reddit three replies,replies,0,AUTHOR_REPORTED
+website_referral,2026-11-22,Reddit three replies,tagged_sessions,,NOT_APPLICABLE_NO_PUBLISHED_LINK
+distribution_action,2026-11-17,Directories,screened,15,PUBLICATION_RECORD
+distribution_action,2026-11-17,Directories,submitted_or_queued,7,PR_AND_RECEIPT_RECORDS
+independent_pickup,2026-11-22,Directories,verified_public_listings,0,NO_CONFIRMED_PICKUP
+website_measurement,2026-11-13 to 2026-11-22,GA4 raw,sessions,11,OWNER_ANALYTICS
+website_measurement,2026-11-13 to 2026-11-22,GA4 raw,active_users,7,OWNER_ANALYTICS
+website_measurement,2026-11-13 to 2026-11-22,GA4 raw,views,16,OWNER_ANALYTICS
+resource_usage,2026-11-13 to 2026-11-22,GA4 raw,worksheet_download_clicks,7,KNOWN_TESTS
+website_measurement,2026-11-13 to 2026-11-22,GA4 after QA,sessions,1,UNKNOWN_SOURCE
+website_measurement,2026-11-13 to 2026-11-22,GA4 after QA,active_users,1,OWNER_ANALYTICS
+website_measurement,2026-11-13 to 2026-11-22,GA4 after QA,views,0,OWNER_ANALYTICS
+resource_usage,2026-11-13 to 2026-11-22,GA4 after QA,worksheet_download_clicks,0,NO_CONFIRMED_NON_TEST_EVENTS
+website_measurement,2026-11-17,Guide endpoint outside marked QA,eligible_requests,13,REQUEST_COUNTER
+website_measurement,2026-11-18,Guide endpoint outside marked QA,eligible_requests,15,REQUEST_COUNTER
+website_measurement,2026-11-19,Guide endpoint outside marked QA,eligible_requests,3,REQUEST_COUNTER
+website_measurement,2026-11-20,Guide endpoint outside marked QA,eligible_requests,4,REQUEST_COUNTER
+website_measurement,2026-11-21,Guide endpoint outside marked QA,eligible_requests,13,REQUEST_COUNTER
+website_measurement,2026-11-22,Guide endpoint outside marked QA,eligible_requests,1,REQUEST_COUNTER_PARTIAL_DAY
+website_measurement,2026-11-17 to 2026-11-22,Guide endpoint,eligible_requests_without_source_label,47,UNATTRIBUTED
+website_measurement,2026-11-17 to 2026-11-22,Guide endpoint,eligible_requests_with_pitchwall_label,2,ACTUAL_ORIGIN_UNKNOWN
+website_measurement,2026-11-17 to 2026-11-22,Guide endpoint,explicitly_marked_qa_requests,6,QA
+repository_traffic,2026-11-08 to 2026-11-21 (UTC),GitHub repository,views,6,OWNER_TRAFFIC_API
+repository_traffic,2026-11-08 to 2026-11-21 (UTC),GitHub repository,unique_visitors,3,OWNER_TRAFFIC_API
+ai_visibility,through 2026-11-22,All channels,recommendation_change,,NOT_MEASURED
