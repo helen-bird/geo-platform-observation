@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Build a small canonical-HTML sitemap offline from actual report records.
 
-Only editorial report routes belong here. Public data, evidence archives,
+Only editorial report, resource and index routes belong here. Public data, evidence archives,
 error pages and source code remain available through their ordinary links.
 """
 from datetime import date
 from html.parser import HTMLParser
 import json
 from pathlib import Path
-from site_metadata import appendix_path
+from site_metadata import MEASUREMENT_GUIDE_PATH, appendix_path
 import re
 from urllib.parse import urljoin, urlsplit
 import xml.etree.ElementTree as ET
@@ -88,15 +88,18 @@ def entries():
     if len(dates) == 1:
         entry.update(lastmod=validated_date(next(iter(dates))), lastmod_source='Visible Learning Hub Updated field')
     result.insert(1, entry)
+    # The guide is independently useful. Record lastmod after a verified release.
+    read_page(MEASUREMENT_GUIDE_PATH)
+    result.insert(2, {'path': MEASUREMENT_GUIDE_PATH, 'loc': canonical_url(MEASUREMENT_GUIDE_PATH)})
     # The evidence index is a useful navigation page in the monitoring scope.
     # Its response timestamps are not the page modification date: omit lastmod.
     evidence_path = 'evidence/index.html'
     read_page(evidence_path)
     result.append({'path': evidence_path, 'loc': canonical_url(evidence_path)})
     urls = [e['loc'] for e in result]
-    expected_count = len(reports) + sum(bool(appendix_path(r)) for r in reports) + 2
+    expected_count = len(reports) + sum(bool(appendix_path(r)) for r in reports) + 3
     if len(result) != expected_count or len(set(urls)) != len(result):
-        raise ValueError('Expected unique routes for each report, appendix and both navigation indexes')
+        raise ValueError('Expected unique routes for each report, appendix, navigation index and the measurement guide')
     if any(not u.startswith(SITE) or urlsplit(u).query or urlsplit(u).fragment for u in urls):
         raise ValueError('Sitemap URLs must stay canonical and within the project')
     manifest=ROOT/'monitoring/google-index/urls.json'

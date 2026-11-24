@@ -62,9 +62,13 @@ def render():
     anchors = '<a href="#measure-your-product">Measure AI recommendations</a>' + ''.join('<a href="#lab-'+str(r['stage'])+'">#'+f'{r["stage"]:02d}'+' · '+escape(r['title'])+'</a>' for r in reports)
     anchors += '<a href="#interim-review">'+escape(INTERIM_LABEL)+'</a>'
     anchors += '<a href="#interim-review-part-2">'+escape(INTERIM_PART2_LABEL)+'</a>'
-    article = ('<section class="lesson" id="measure-your-product"><p class="lesson-name">Hands-on guide</p>'
-               '<h2>Does AI search recommend my product?</h2><p>Choose one buyer question, record a baseline, and repeat after a documented change.</p>'
-               '<div class="links"><a href="measurement/">Read the measurement guide</a>'
+    article = ('<section class="lesson" id="measure-your-product">'
+               '<h2>Does AI search recommend my product?</h2><p>Use a free guide and Excel worksheet for solo founders.</p>'
+               '<ul><li><a href="measurement/#start">Run your first measurement</a> with one buyer question and a fixed test setup.</li>'
+               '<li><a href="measurement/#diagnose-results">Decide what to check next</a> when your page is missing, listed as a source or cited without a recommendation.</li>'
+               '<li><a href="measurement/#reproduce-a-result">Recalculate a result</a> from the saved public evidence.</li>'
+               '<li><a href="measurement/#change">Measure again after a change</a> and compare like-for-like results.</li></ul>'
+               '<div class="links"><a href="measurement/">Read the free GEO measurement guide</a>'
                '<a href="measurement/ai-recommendation-measurement.xlsx" download>Download the Excel worksheet</a>'
                '<a href="review-evidence/">Trace and recalculate review results</a></div></section>')
     for r in reports:
@@ -107,8 +111,21 @@ def render():
                 '<h2>How does question framing change recommendations?</h2><p>Six questions and 120 web-search answers track how resource and creator prompts change recommendations, source lists and author naming.</p>'
                 '<div class="links"><a href="'+part2+'">Read the report</a><a href="'+part2+'technical-appendix.html">Methods and evidence</a>'
                 '<a href="'+part2+'public-data.zip">Download public data</a></div></article>')
+    author = ('<section class="afterword" id="helen-bird"><h2>About Helen Bird</h2>'
+              '<p>I build practical AI applications and developer tools, and explore what agent workflows and automation can make easier. I ship small AI tools in public and share notes on how AI changes the way we travel, learn, and heal.</p>'
+              '<p>I started GEO Learning Log to understand why ChatGPT and Grok suggest different sources for the same question. Now I test how builders can tell when AI recommends their work and whether that changes after an update.</p>'
+              '<h3>How I run the experiments</h3>'
+              '<p>For like-for-like comparisons, I hold the question and settings steady, repeat the runs, and record failures and missing evidence. I score mentions, citations, and recommendations separately. The reports include methods and, where possible, redacted records that readers can use to check the results.</p>'
+              '<h3>Start with these studies</h3>'
+              '<ul><li><a href="'+review+'technical-appendix.html#data">Historical replication</a> uses 300 new answers to show how small samples can change the conclusions you draw.</li>'
+              '<li><a href="../stages/09-visibility-baseline/technical-appendix.html">ChatGPT web visibility baseline</a> records 180 selected answers and two capture failures, with quotes and source coverage available for review.</li>'
+              '<li><a href="../stages/07-brand-authority/#8-data-reproduction-and-limits">Creator recommendation audit</a> shows how I checked the reasons AI gave for recommending specific people and resources.</li></ul>'
+              '<p>These are my own studies. Independent replication and the effect of the Measurement Kit on AI recommendations are still open questions.</p>'
+              '<div class="links"><a href="measurement/">Use the free Measurement Kit</a><a href="https://github.com/helen-bird">Find me on GitHub</a></div></section>')
     document = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Helen Bird · GEO Learning Hub</title><meta name="description" content="A question-oriented index of Helen Bird's ongoing GEO learning experiments, original public data, reports and limitations."><link rel="canonical" href="'''+SITE+'''learning-hub/"><style>'''+CSS+'''</style></head><body><a class="skip" href="#main">Skip to learning questions</a><div class="layout"><nav aria-label="Learning Hub contents"><strong>GEO Learning Log</strong><div class="nav-links"><a href="#main" aria-current="page">Learning Hub</a>'''+anchors+'''<a href="#use-evidence">Use the evidence</a></div><div class="nav-group"><a href="https://github.com/helen-bird/geo-platform-observation">Repository and data guide</a><a href="../report-versions.json">Report versions</a><a href="../CHANGELOG.md">Revision history</a></div><p>An ongoing learning record.</p></nav><main id="main"><h1>Helen Bird · GEO Learning Hub</h1><p class="lead">Start with a question, then explore the research and its sources.</p><p class="author"><strong>Author:</strong> Helen Bird · <strong>Published:</strong> '''+DATE+''' · <strong>Updated:</strong> '''+DATE+'''</p><blockquote><p>The experiments, technical observations and research review document what each source measures and where its conclusions apply.</p><p>This new index is a content-organization practice suggested by the creator audit. Whether it improves AI discovery or recommendations remains untested.</p></blockquote><div class="lessons">'''+article+'''</div><section class="afterword" id="use-evidence"><h2>Use the evidence</h2><ul><li><strong>Read by user intent.</strong> Results from different tasks should not be pooled into a universal recommendation score.</li><li><strong>Keep outcomes distinct.</strong> Page citation, content-brand recommendation, personal-name mention and personal recommendation are different observations.</li><li><strong>Check the collection interface.</strong> Labs #03 and #04 use OpenAI Responses API + web search. They do not represent consumer ChatGPT Search performance.</li></ul><p>Labs #01–#05 and #09 link to methods and public data. Labs #05 and #08 publish reviewed aggregates. Labs #06 and #07 include methods and evidence links on their report pages. Private originals and account evidence remain outside this public repository. Use GitHub’s Copy permalink to cite a fixed revision, and include the answer or observation ID.</p><p>New questions and experiments will be added as learning continues. Earlier methods, corrections and limitations remain visible in the record.</p></section><p class="footer">Helen Bird · GEO Learning Log · <a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p></main></div></body></html>'''
     document = document.replace('<strong>Updated:</strong> '+DATE, '<strong>Updated:</strong> '+UPDATED)
+    document = document.replace('<a href="#use-evidence">Use the evidence</a></div>', '<a href="#use-evidence">Use the evidence</a><a href="#helen-bird">About the author</a></div>')
+    document = document.replace('<p class="footer">Helen Bird', author + '<p class="footer">Helen Bird')
     document = document.replace('<a href="../report-versions.json">Report versions</a>', '<a href="../evidence/">Browse original answers</a><a href="../report-versions.json">Report versions</a>')
     document = document.replace('<a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p>', '<a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a> · <a href="../sitemap.xml">Sitemap</a></p>')
     from site_metadata import finalize_page
@@ -151,7 +168,7 @@ def check():
         errors.append('Learning Hub has collapsed content')
     if '<html lang="en">' not in document or re.search(r'[\u3400-\u9fff]', document):
         errors.append('Learning Hub must be English')
-    for required in ['Helen Bird', 'Author:', 'Published:', 'Updated:',
+    for required in ['Helen Bird', 'Author:', 'Published:', 'Updated:', 'id="helen-bird"',
                      'not represent consumer ChatGPT Search', 'remains untested']:
         if required not in document:
             errors.append('Missing provenance or limitation: '+required)

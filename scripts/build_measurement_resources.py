@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Build a measurement guide and a row-level index from the published review data."""
 import argparse
+import csv
 from html import escape
+from io import StringIO
 import json
 from pathlib import Path
 from urllib.parse import urlencode
 
+from build_interim_review import subset_rates
 from build_learning_hub import CSS
 from site_metadata import canonical_url, finalize_page
 
@@ -20,7 +23,10 @@ GUIDE = 'learning-hub/measurement/index.html'
 INDEX = 'learning-hub/review-evidence/index.html'
 RECORD = 'learning-hub/review-evidence/record.html'
 SHEET = 'ai-recommendation-measurement.xlsx'
+PROMPT_CSV = 'prompt-starters.csv'
 CASE = 'IR2-GROK-WEB-EVIDENCE-CREATOR-'
+LAB09 = 'stages/09-visibility-baseline'
+GUIDE_V1 = '15b222bddb55255ca67cc9409e126834450fb029'
 EXTRA_CSS = '''
 .step{padding:25px 0;border-top:1px solid var(--line)}.step h2{max-width:36ch}
 .callout{padding:15px 18px;border:1px solid var(--line);background:var(--soft);border-radius:8px}
@@ -31,6 +37,42 @@ td:last-child a+a{margin-left:14px}tr:target{background:#fff2c4}
 code{overflow-wrap:anywhere}details{padding:12px 0;border-top:1px solid var(--line)}
 summary{cursor:pointer;font-weight:650}pre{background:var(--soft);padding:14px;white-space:pre-wrap;overflow-wrap:anywhere}
 '''
+GUIDE_CSS = '''
+.kit-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin:22px 0}
+.kit-download{display:inline-block;padding:10px 16px;border:1px solid var(--accent);border-radius:7px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
+.kit-download:hover{background:#105761;text-decoration:underline}
+.kit-specs{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:9px 20px;max-width:72ch;margin:22px 0 30px;padding:15px 18px;border-block:1px solid var(--line)}
+.kit-specs dt{font-weight:650}.kit-specs dd{min-width:0;margin:0}
+.kit-preview{max-width:78ch;margin:16px 0 0}.kit-preview caption{text-align:left}
+.kit-prompts{list-style:none;padding:0;margin-top:8px;max-width:72ch}
+.kit-prompts li{display:flex;gap:8px 14px;align-items:baseline;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}
+.kit-prompts p{margin:0}.kit-copy{flex:none;font:inherit;font-size:14px;min-height:36px;padding:3px 9px;background:white;color:var(--accent);border:1px solid #9cb7bb;border-radius:5px;cursor:pointer}
+.kit-copy:hover{background:var(--soft)}.kit-prompts+.kit-section-label{margin-top:24px}
+.kit-builder{max-width:72ch;margin:22px 0;padding:12px 16px;border:1px solid var(--line);border-radius:7px}
+.kit-builder legend{font-weight:650;padding:0 6px}.kit-builder label{display:block;font-weight:600}
+.kit-builder input{display:block;width:100%;max-width:45ch;min-height:40px;margin:3px 0 12px;padding:6px 8px;font:inherit;color:var(--ink);border:1px solid #9cb7bb;border-radius:5px}
+.kit-generated{margin-top:14px}.kit-generated output{display:block;margin-bottom:10px;overflow-wrap:anywhere}
+.kit-status{min-height:1.65em;font-size:14px;color:var(--muted)}
+.kit-faq dt{font-weight:700;margin:13px 0 4px}.kit-faq dd{margin:0 0 16px;max-width:72ch}
+.kit-next{font-weight:650}
+@media(max-width:650px){.kit-actions{align-items:stretch;flex-direction:column;gap:14px}.kit-download{text-align:center}
+.kit-specs{grid-template-columns:1fr;gap:2px}.kit-specs dd{margin:0 0 8px}
+.kit-copy,.kit-builder input{min-height:44px}.kit-preview th,.kit-preview td{padding:7px 8px}}
+'''
+STARTER_PROMPTS = (
+    ('Category discovery', 'Unbranded discovery', (
+        'What free tools help a solo founder schedule customer interviews?',
+        'Which lightweight bug trackers work well for a two-person software team?',
+    )),
+    ('Problem discovery', 'Unbranded discovery', (
+        'How can a one-person SaaS team track failed payments without a paid dashboard?',
+        'How can I collect and prioritise feature requests from early customers on a small budget?',
+    )),
+    ('Named comparison', 'Named diagnostic', (
+        'What should I check before choosing between [my product] and [alternative] for [task]?',
+        'Which features of [my product] and [alternative] help a solo founder with [task]?',
+    )),
+)
 def load_part(route):
     files = {}
     for kind in ('answers', 'measurements'):
@@ -80,48 +122,258 @@ def example_data(part):
 
 def shell(path, title, description, nav, body):
     links = ''.join(f'<a href="{escape(link, quote=True)}">{escape(label)}</a>' for link,label in nav)
+    css = CSS + EXTRA_CSS + (GUIDE_CSS if path == GUIDE else '')
     document = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} · GEO Lab</title>
 <meta name="description" content="{escape(description, quote=True)}"><link rel="canonical" href="{canonical_url(path)}">
-<style>{CSS}{EXTRA_CSS}</style>{'<meta name="robots" content="noindex">' if path == RECORD else ''}</head><body><a class="skip" href="#main">Skip to content</a>
+<style>{css}</style>{'<meta name="robots" content="noindex">' if path == RECORD else ''}</head><body><a class="skip" href="#main">Skip to content</a>
 <div class="layout"><nav aria-label="Page contents"><strong>GEO Learning Log</strong><div class="nav-links">{links}</div></nav>
 <main id="main"><h1>{escape(title)}</h1>{body}<p class="footer">GEO Learning Log · <a href="../">Learning Hub</a> · <a href="{REPO}">Repository</a></p></main></div></body></html>'''
     return finalize_page(document, path, kind='evidence-index' if path == INDEX else 'guide')
 
 
-def guide(example):
+def m2_example():
+    data = ROOT / LAB09 / 'data'
+    prompts = json.loads((data / 'prompts.json').read_text())
+    observations = [(line_no, json.loads(line)) for line_no, line in
+                    enumerate((data / 'observations.jsonl').read_text().splitlines(), 1)]
+    selected = [(line, row) for line, row in observations if row['prompt_id'] == 'M2']
+    rows = [row for _, row in selected]
+    n = len(rows)
+    known_more = [row for row in rows if row['panel_coverage'] == 'complete']
+    observed_search = sum(row['search_evidence'] == 'yes' for row in rows)
+    scores = {key: sum(row['scores'][key] for row in rows) for key in ('mention', 'citation', 'recommendation')}
+    more_hits = sum(row['target_in_more'] == 1 for row in known_more)
+    split = [sum(row['effort'] == effort for row in rows) for effort in ('medium', 'high')]
+    assert (n, split, len(known_more), more_hits, observed_search, sum(scores.values())) == (30, [15, 15], 23, 0, 23, 0)
+    fixed_observations = f'{REPO}/blob/{GUIDE_V1}/{LAB09}/data/observations.jsonl'
+    complete_row = next(line for line, row in selected if row['panel_coverage'] == 'complete')
+    missing_row = next(line for line, row in selected if row['panel_coverage'] != 'complete')
+    return {
+        'prompt': next(row['text'] for row in prompts if row['id'] == 'M2'),
+        'n': n, 'known_more': len(known_more), 'more_hits': more_hits,
+        'unknown_more': n - len(known_more), 'observed_search': observed_search,
+        'unknown_search': n - observed_search, 'scores': scores,
+        'fixed_observations': fixed_observations,
+        'complete_row': f'{fixed_observations}#L{complete_row}',
+        'missing_row': f'{fixed_observations}#L{missing_row}',
+    }
+
+
+def replication_example(part):
+    route = 'historical-replication'
+    conditions = json.loads((ROOT / REVIEW / route / 'data/conditions.json').read_text())
+    condition = 'S6-Q3-GROK'
+    records = [(line, row) for line, row in part['measurements'].values()
+               if row['condition_id'] == condition]
+    field = 'candidate_artur-ferreira_recommendation'
+    values = [row['binary'][field] for _, row in records]
+    assert len(values) == 15 and all(type(value) is bool for value in values)
+    examples = [next((line, row) for line, row in records if row['binary'][field] is value)
+                for value in (True, False)]
+    return {
+        'prompt': next(row['prompt'] for row in conditions if row['condition_id'] == condition),
+        'full_n': len(values), 'full_yes': sum(values),
+        'subsets': {n: subset_rates(values, n) for n in (3, 10)},
+        'examples': [(canonical_url(RECORD) + record_url(route, row['answer_id'], 'answer').removeprefix('record.html'),
+                      permalink(route, 'measurements.jsonl', line)) for line, row in examples],
+    }
+
+
+def reproduction_section(example):
+    route = 'historical-replication'
+    full_rate = f'{example["full_yes"]}/{example["full_n"]}'
+    rows = ''.join(
+        f'<tr><th scope="row">{n} of {example["full_n"]}</th>'
+        f'<td>{metrics["min"]:.0%} to {metrics["max"]:.0%}</td>'
+        f'<td>{metrics["over_20_pp"]:,}/{metrics["subsets"]:,} '
+        f'({metrics["over_20_pp"]/metrics["subsets"]:.2%})</td></tr>'
+        for n, metrics in example['subsets'].items()
+    )
+    examples = ' · '.join(
+        f'<a href="{escape(answer, quote=True)}">{label} original answer</a> '
+        f'(<a href="{escape(coding, quote=True)}">saved code</a>)'
+        for label, (answer, coding) in zip(('Yes', 'No'), example['examples'])
+    )
+    return f'''
+<section class="step" id="reproduce-a-result"><h2>Reproduce a result from 15 saved answers</h2>
+<p>A historical Grok Expert batch asked the following question. The target was Artur Ferreira or his work, and <strong>{full_rate} answers ({example['full_yes']/example['full_n']:.1%})</strong> actively recommended the target.</p>
+<blockquote><p>{escape(example['prompt'])}</p></blockquote>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Recount of three-answer and ten-answer subsets"><table><caption>How much the recorded rate changed when keeping fewer answers</caption>
+<thead><tr><th scope="col">Answers kept</th><th scope="col">Recommendation rate range</th><th scope="col">Subsets more than 20 percentage points from {full_rate}</th></tr></thead>
+<tbody>{rows}</tbody></table></div>
+<p><strong>Try the recount.</strong> Read a Yes and a No example. Then open the fixed measurements, filter <code>condition_id</code> to <code>S6-Q3-GROK</code>, and count the true values in <code>candidate_artur-ferreira_recommendation</code>. The denominator is all {example['full_n']} coded responses in that batch. To check the table, enumerate every group of 3 and every group of 10 from those same responses, then compare each group’s rate with {full_rate}. The original build script calculates both distributions offline.</p>
+<p>{examples}</p>
+<p><a href="{permalink(route, 'conditions.json')}">Fixed questions and settings</a> · <a href="{permalink(route, 'measurements.jsonl')}">Fixed measurement records</a> · <a href="../../{REVIEW}/{route}/technical-appendix.html#data">Reproduce the published calculation</a></p>
+<p><strong>Apply it to your own work.</strong> Use three answers to practise capture and scoring, then pre-plan a larger batch before making a decision. Subsets reuse the same 15 answers. They show sensitivity in this batch, and the figures do not establish how many responses your own study needs.</p></section>'''
+
+
+def prompt_library():
+    sections = []
+    for group, (label, use, prompts) in enumerate(STARTER_PROMPTS, 1):
+        rows = []
+        for number, prompt in enumerate(prompts, 1):
+            key = f'kit-prompt-{group}-{number}'
+            rows.append(f'<li><p id="{key}">{escape(prompt)}</p><button type="button" class="kit-copy" hidden data-copy="{key}" aria-label="Copy {label.lower()} example {number}">Copy</button></li>')
+        intro = ('<p>Use these questions to check how AI describes named options. Measure unprompted discovery with a separate, unbranded question.</p>'
+                 if use == 'Named diagnostic' else '')
+        sections.append(f'<h3 class="kit-section-label">{escape(label)}</h3>{intro}<ul class="kit-prompts">{"".join(rows)}</ul>')
+    return ''.join(sections)
+
+
+def prompt_csv():
+    output = StringIO()
+    writer = csv.writer(output, lineterminator='\n')
+    writer.writerow(('Intent', 'Prompt', 'Use'))
+    writer.writerows((intent, prompt, use) for intent, use, prompts in STARTER_PROMPTS for prompt in prompts)
+    return output.getvalue()
+
+
+PROMPT_BUILDER = '''
+<form id="kit-prompt-builder" hidden>
+<fieldset class="kit-builder"><legend>Make a question for your product category</legend>
+<p>Try an audience and the job they want to do. This runs in your browser. Your entries stay on this page.</p>
+<label for="kit-audience">Buyer or team</label><input id="kit-audience" required maxlength="100" placeholder="a solo founder">
+<label for="kit-task">Task, starting with an action verb</label><input id="kit-task" required maxlength="140" placeholder="schedule customer interviews">
+<button type="submit" class="kit-copy">Build a question</button>
+<p id="kit-generated" class="kit-generated" hidden><output for="kit-audience kit-task" id="kit-generated-question" aria-live="polite"></output>
+<button type="button" class="kit-copy" data-copy="kit-generated-question" aria-label="Copy the question you built">Copy</button></p></fieldset></form>
+<p id="kit-copy-status" class="kit-status" role="status" hidden></p>
+<script>
+(() => {
+  const form = document.getElementById("kit-prompt-builder");
+  const audience = document.getElementById("kit-audience");
+  const task = document.getElementById("kit-task");
+  const result = document.getElementById("kit-generated-question");
+  const resultBlock = document.getElementById("kit-generated");
+  const status = document.getElementById("kit-copy-status");
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    const buyer = audience.value.trim();
+    const action = task.value.trim().replace(/[.?!]+$/, "").trim();
+    if (!buyer || !action) {
+      status.hidden = false;
+      status.textContent = "Enter a buyer and a task to build a question.";
+      (buyer ? task : audience).focus();
+      return;
+    }
+    resultBlock.hidden = false;
+    result.textContent = "What free tools can help " + buyer + " " + action + "?";
+    status.hidden = true;
+  });
+  form.addEventListener("input", () => { resultBlock.hidden = true; status.hidden = true; });
+  form.hidden = false;
+  if (!navigator.clipboard?.writeText) return;
+  document.querySelectorAll("[data-copy]").forEach(button => {
+    button.hidden = false;
+    button.addEventListener("click", async () => {
+      const text = document.getElementById(button.dataset.copy).textContent;
+      status.hidden = false;
+      try {
+        await navigator.clipboard.writeText(text);
+        status.textContent = "Question copied.";
+      } catch {
+        status.textContent = "Copy unavailable. Select the question text and copy it.";
+      }
+    });
+  });
+})();
+</script>
+'''
+
+
+def guide(example, replication):
+    first = example['records'][0]
+    m2 = m2_example()
+    lab09 = '../../' + LAB09 + '/'
+    previous = f'{REPO}/tree/{GUIDE_V1}/learning-hub/measurement'
     body = f'''
-<p class="lead">A repeatable baseline for solo founders: choose one buyer question, record what AI search actually recommends, and check again after a documented change.</p>
-<p class="author">By Helen Bird · GEO Learning Log</p>
-<div class="callout"><strong>Start here:</strong> <a href="{SHEET}" download>Download the Excel worksheet</a>. It includes a blank template and a worked example using ten previously published responses.</div>
+<p class="lead">See whether ChatGPT, Grok, or another AI search interface recommends your product. Start with one buyer question, keep the answers, then repeat after a documented change.</p>
+<p class="author">By <a href="../#helen-bird">Helen Bird</a> · GEO Learning Log · Measurement Kit v2.0</p>
+<div class="kit-actions"><a class="kit-download" href="{SHEET}" download>Download the free Excel worksheet</a><a class="kit-next" href="#start">Start your first measurement</a></div>
+<dl class="kit-specs" aria-label="What the kit includes">
+<dt>Who it’s for</dt><dd>Solo founders and indie SaaS teams measuring AI recommendations on a small budget.</dd>
+<dt>What you get</dt><dd>A step-by-step guide, copyable prompts, a blank Excel workbook with worked examples and before-and-after results, and a checklist for interpreting what you find.</dd>
+<dt>What you need</dt><dd>Access to the AI interface you want to measure. The .xlsx download requires no sign-in. Use it locally to record manual tests.</dd>
+</dl>
+<div class="table-wrap kit-preview" tabindex="0" role="region" aria-label="Worksheet preview"><table><caption>Worksheet preview · one saved answer from the <a href="#worked-example">real Grok case</a></caption>
+<thead><tr><th scope="col">Slot / evidence</th><th scope="col">Named</th><th scope="col">Final citation</th><th scope="col">Recommended</th></tr></thead>
+<tbody><tr><th scope="row"><a href="{escape(first['answer'], quote=True)}">{escape(first['slot'])} · saved answer</a></th><td>{first['mention']}</td><td>{first['citation']}</td><td>{first['recommendation']}</td></tr></tbody>
+</table></div>
+<section class="step" id="start"><h2>Start with one question and one test setup</h2>
+<p>Open <strong>Start here</strong> in the workbook. Write down the exact question, the target or accepted aliases, the interface and model settings, and the number of answers you plan to collect. Try three answers to practise the workflow before committing to a full batch. Mark practice attempts separately.</p>
+<ol><li>Choose a question that real buyers would ask.</li><li>Save each answer and its sources in the workbook.</li><li>Read the counts in <strong>Results</strong>, then <a href="#diagnose-results">check where the evidence stops</a> before choosing a change.</li></ol></section>
 <section class="step" id="choose"><h2>1. Choose one real buyer question</h2>
-<p>Start with a question a prospective user would ask before knowing your product. For example, replace the brackets in “What free tools help [buyer] do [task]?” with a real audience and task. Save the exact wording. Define the target product and acceptable aliases before testing; record a company's name separately if it is not the product name.</p>
-<p>Use one worksheet copy for each exact question, target and environment. If you change wording or compare an API with a web interface, keep those results separate.</p></section>
+<p>For a discovery test, use a question someone would ask before learning your product name. Save its exact wording. Define whether you are tracking a person, project, product or distinctive resource. Record a company or author separately if their name alone does not identify the product.</p>
+<p>Use one workbook copy for each exact question and target. Compare like-for-like settings. Keep consumer web and API measurements separate, even if the model names look similar.</p>
+<div id="prompt-library"><h3>Copy a starting question</h3><p>Adapt a question to your buyers before you freeze it. Change an input or the wording only when you want to start a separate test. <a href="{PROMPT_CSV}" download>Download the six starters as CSV</a>.</p>
+{prompt_library()}{PROMPT_BUILDER}</div></section>
 <section class="step" id="run"><h2>2. Run and save the baseline</h2>
-<ol><li>Write down the number of planned slots and the retry rule. Ten runs can be a manageable pilot. Treat the result as a snapshot; use more runs and multiple collection windows for decisions that need better precision.</li>
-<li>Use a fresh session each time. Keep the interface, model, search setting, locale and personalization settings consistent. Record both whether search was enabled and what activity was actually observable.</li>
-<li>Save the full answer, final links, separately observed queries or source panel, and the time. Log failed attempts; if a retry is allowed, use the same slot and a new attempt ID. Select at most one complete answer per slot. Save answers privately unless you have checked them for sensitive information.</li></ol></section>
-<section class="step" id="score"><h2>3. Score three things separately</h2>
-<div class="table-wrap"><table><caption>Coding guide</caption><thead><tr><th scope="col">Field</th><th scope="col">Yes means</th></tr></thead><tbody>
-<tr><th scope="row">Mention</th><td>The target or a predeclared alias is explicitly named in the answer.</td></tr>
-<tr><th scope="row">Citation</th><td>An identifiable final answer citation points to a target-owned or target-authored source, using the ownership rule you set before testing.</td></tr>
-<tr><th scope="row">Recommendation</th><td>The answer actively suggests the target as a fit for the user's task. A neutral description, rejection or mere link does not count.</td></tr></tbody></table></div>
-<blockquote><p>Use <strong>No</strong> when the needed evidence is observable and the event did not occur. Use <strong>Unknown</strong> when it cannot be judged. A domain in a search result or a separate source panel does not establish a final citation.</p></blockquote>
-<p>Report each event as Yes / (Yes + No), alongside the number of selected answers, unknowns and failed attempts. If no judgment is possible, show no rate. A failure is an attempt outcome, not a negative answer.</p></section>
+<ol><li>Number the planned slots and set a retry rule before you run. Ten answers can be a manageable pilot. Use more answers across different collection windows when the decision requires better precision.</li>
+<li>Start a fresh session each time. Record platform, interface, model label, reasoning level, locale, and personalization. Save the search setting and whether you observed search separately.</li>
+<li>In <strong>Attempts</strong>, record the time, slot and attempt ID, and where the full answer is saved. Preserve failed attempts. Give a retry a new attempt ID and the same slot. Select at most one complete answer per slot.</li>
+<li>In <strong>Sources</strong>, attach each exact URL to its attempt and indicate where it appeared. In <strong>Competitors</strong>, save each recommended alternative with a consistent name, its position and the exact excerpt. Keep raw conversations private unless they are reviewed for sensitive information.</li></ol></section>
+<section class="step" id="score"><h2>3. Distinguish what was named, cited and recommended</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Evidence coding rules"><table><caption>What counts as a positive observation</caption><thead><tr><th scope="col">Measure</th><th scope="col">When to mark Yes</th></tr></thead><tbody>
+<tr><th scope="row">Mention</th><td>The final answer explicitly names the target or a predeclared alias.</td></tr>
+<tr><th scope="row">Recommendation</th><td>The answer actively suggests the target for the buyer’s task. A neutral description, rejection or link alone gets No.</td></tr>
+<tr><th scope="row">Strict final citation</th><td>An identifiable link or inline citation in the final answer points to the target’s own or authored material under your ownership rule.</td></tr>
+<tr><th scope="row">Observed citation in Lab #09</th><td>A recorded body link, inline citation card or main source points to the target. Keep the original link role and note incomplete coverage.</td></tr>
+<tr><th scope="row">More exposure</th><td>A target URL appears in the separately labelled More list. A captured positive can be scored with partial coverage. Score No only when the complete list is available. Report coverage alongside the rate.</td></tr></tbody></table></div>
+<blockquote><p>Record <strong>No</strong> when the needed evidence is available and no qualifying event appears. Record <strong>Unknown</strong> when coverage is insufficient. A page shown only in More leaves recommendation and citation unchanged. A failed attempt remains in the attempt record and supplies no answer-level score.</p></blockquote>
+<p>Report Yes / (Yes + No), unknowns and failed attempts for each measure. A missing denominator produces no rate. Compare the original Lab #09 observed-citation count alongside panel coverage: absence in the saved links does not establish absence from an uncaptured panel.</p></section>
+<section class="step" id="diagnose-results"><h2>Diagnose the result before changing your page</h2>
+<p>Check the specific page or resource that answers the buyer’s question. Record where it appeared, and pick the next check that addresses that observation.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Troubleshooting by observed outcome"><table><caption>Search-to-answer diagnostic checklist</caption>
+<thead><tr><th scope="col">What you observed</th><th scope="col">What to check next</th><th scope="col">What to save</th></tr></thead>
+<tbody>
+<tr><th scope="row">Target page absent from the captured answer and complete sources</th><td>Open the canonical URL anonymously and check that the current page is readable. Then use a separate exact-title or branded search to see whether the specific page appears. Check indexing and crawl eligibility where tools are available.</td><td>The exact URL, version cue, date and separate diagnostic result. A successful direct visit does not establish natural discovery. See <a href="../../stages/05-technical-discoverability/">Lab #05’s technical checks</a>.</td></tr>
+<tr><th scope="row">Target page appears only in More</th><td>Check whether it is the buyer-facing page or evidence about an adjacent topic. Compare the page and an actually recommended source. Which decision-critical fact, example, or free download answers this particular question?</td><td>The More URL, one competing recommendation with its matching page and the specific gap you can test. See <a href="{lab09}#sources">the Lab #09 source sightings</a>.</td></tr>
+<tr><th scope="row">Target is cited but not recommended</th><td>Read the sentence around the citation. Check whether the page supplies background or confirms that the product meets the requested constraints. Inspect what the recommended options actually deliver.</td><td>The linked sentence, target and competing URLs, and the missing detail if one can be verified. A citation by itself establishes source visibility.</td></tr>
+<tr><th scope="row">Target is recommended but referrals are unconfirmed</th><td>Follow the actual link as a signed-out visitor. Check the landing page and test your attribution separately from live traffic. Keep tagged test visits separate from measured reader visits and downloads.</td><td>The exact answer link, resolved destination and any confirmed visit or download signal. Consent and missing attribution can leave real traffic unobserved. See <a href="../../stages/08-distribution/#finding-3">Lab #08’s traffic and attribution checks</a>.</td></tr>
+<tr><th scope="row">Search or source evidence is missing</th><td>Mark coverage Unknown. Score what you can see in a complete answer and keep the record. If the answer itself failed, use the retry rule you set before collection.</td><td>Which panel or answer portion was unavailable. Use <a href="#m2-example">the M2 case</a> to see how to report known and unknown denominators together.</td></tr>
+</tbody></table></div>
+<p>Keep diagnostic queries separate from your unbranded measurement and repeat the original wording and settings when you <a href="#change">retest a real change</a>.</p></section>
 <section class="step" id="change"><h2>4. Record a change and repeat</h2>
-<p>Save the page URL, what changed, the version and its deployment time. Wait until you can check whether the new version is available to the search path you are testing; record that evidence and its limits. Repeat the same question, settings and collection procedure. Keep a contemporaneous comparison question or unchanged page if possible, and note platform changes.</p>
-<blockquote><p>A movement from, for example, 2/10 to 4/10 is a difference between two observed batches. It does not by itself show that the webpage edit caused the change. A search index check, a final citation and an AI recommendation measure different things.</p></blockquote></section>
-<section class="step" id="worked-example"><h2>Worked example: a real baseline</h2>
+<ol><li><strong>Freeze the baseline.</strong> Save the existing page or resource, published URL, exact question, scoring rule, settings and attempts.</li>
+<li><strong>Record the change.</strong> Save what shipped, the new version and the actual deployment time. Record outside promotion separately.</li>
+<li><strong>Check whether the new version can be found.</strong> Verify the live version and that its content is readable. Check for evidence of that version in relevant search results or official index tools. Record what you can verify and mark unknowns. Access by direct link only establishes that the page can be fetched.</li>
+<li><strong>Run Retest 1 and Retest 2.</strong> Repeat the same question, settings, slot and retry rules. Collect the second retest in a later window, such as one week later. Track platform changes and keep a reference question, resource or set of competitors when possible.</li></ol>
+<p>Use <strong>Results</strong> to compare matching conditions in percentage points. Split results when the interface, effort, search setting, prompt version or scoring rule changes.</p>
+<blockquote><p><strong>Illustrative numbers.</strong> If recommendations move from 2/10 to 4/10, report 20% to 40% (+20 percentage points), with both denominators. Repeated batches help assess whether the difference persists. Platform changes and other events can still account for some or all of it.</p></blockquote></section>
+<section class="step" id="worked-example"><h2>Worked example · an author’s baseline</h2>
 <p>Target: <strong>Helen Bird as a person</strong>. This example transfers one existing condition from Interim Review Part 2: Grok Expert consumer web, fresh ordinary sessions, explicit native web search, X and conversation history personalization off during collection.</p>
 <blockquote><p>{escape(example['prompt'])}</p></blockquote>
 <ul><li><strong>Mention: 8/10.</strong> The answer named Helen Bird.</li><li><strong>Recommendation: 7/10.</strong> The answer suggested Helen Bird herself; listing a resource alone did not qualify.</li><li><strong>Final citation: no estimable rate.</strong> Ten selected answers; ten unknown. Source panels were observed, but the capture cannot attribute a final citation to Helen Bird. No follow-up batch was collected for this worksheet.</li></ul>
 <p>In slot B01, the answer puts Helen Bird among the creators it says stand out. That counts as a mention and a recommendation. In B07, it describes her work in a background paragraph without selecting her as a recommended creator. The published coding counts a mention only.</p>
-<p>In the workbook, open <strong>Worked example</strong> and compare the row codes with the saved answers. <a href="../review-evidence/#worked-example">Trace the exact ten rows and their coding</a>.</p></section>
-<p>Related reading: <a href="../../stages/03-question-sensitivity/">Question sensitivity</a> · <a href="../../stages/05-technical-discoverability/">Technical discoverability</a> · <a href="../review-evidence/">Interim review evidence and reproduction</a></p>'''
-    return shell(GUIDE,'Measure AI recommendations for your product',
-                 'A free guide and worksheet to record an AI search recommendation baseline, score the evidence and repeat after a change.',
-                 [('../','Learning Hub'),('#choose','Choose a question'),('#run','Run the baseline'),('#score','Score the evidence'),
-                  ('#change','Repeat after a change'),('#worked-example','Worked example')],body)
+<p>In the workbook, open <strong>Examples</strong> and compare the row codes with the saved answers. <a href="../review-evidence/#worked-example">Trace the exact ten rows and their coding</a>.</p></section>
+<section class="step" id="m2-example"><h2>Worked example · a resource with zero recommendations</h2>
+<p>Lab #09 asked ChatGPT about a resource a solo founder could use, in 15 fresh sessions at Medium and 15 at High. This case tracks Helen Bird and clearly attributable resources, including the Measurement Kit. It is separate from the Grok author example above.</p>
+<blockquote><p>{escape(m2['prompt'])}</p></blockquote>
+<ul><li><strong>Recommendation: {m2['scores']['recommendation']}/{m2['n']}.</strong> No answer recommended the target.</li>
+<li><strong>Mention and observed citation: {m2['scores']['mention']}/{m2['n']} and {m2['scores']['citation']}/{m2['n']}.</strong> No answer named the target or contained a recorded qualifying source. Some main source evidence is unavailable.</li>
+<li><strong>More exposure: {m2['more_hits']}/{m2['known_more']} complete panels.</strong> A further {m2['unknown_more']} answers were left unknown in the historical coding.</li>
+<li><strong>Search evidence:</strong> observed in {m2['observed_search']} answers, unknown in {m2['unknown_search']}. Search activity and complete source coverage are recorded independently.</li></ul>
+<p><strong>Check the denominators.</strong> In the <a href="{m2['fixed_observations']}">fixed observations</a>, filter <code>prompt_id</code> to <code>M2</code>. Count all selected rows for recommendations. For the complete-panel rate, count rows with <code>panel_coverage</code> set to <code>complete</code> and sum their <code>target_in_more</code> values. Compare a <a href="{m2['complete_row']}">complete panel with no target</a> and a <a href="{m2['missing_row']}">row with incomplete coverage</a>.</p>
+<p>At this point, you can inspect the resources that answered the task well, check how your own guide addresses it, and keep a change record before retesting. The original 0/{m2['n']} is a baseline for this question and batch.</p>
+<p><a href="{lab09}">Read the Lab #09 report</a> · <a href="{lab09}technical-appendix.html#coverage">Check scoring and coverage</a> · <a href="{lab09}public-data.zip">Download the public evidence</a></p></section>
+{reproduction_section(replication)}
+<section class="step" id="common-questions"><h2>When the result is unclear</h2>
+<dl class="kit-faq">
+<dt>Can I claim improvement if the model or prompt changed?</dt><dd>Report the two results with their conditions and keep the change in your log. Start a new baseline with the current settings before making a like-for-like comparison.</dd>
+<dt>Can I read the rate as zero when the sources are missing?</dt><dd>Score what is visible in the final answer. Mark the missing panel as Unknown. Show the number of known answers next to the numerator and keep the missing answers in the coverage total.</dd>
+<dt>When should I run the first retest?</dt><dd>Check the live URL and the current version first. Look for dated evidence of the new content in your chosen search path. If discoverability remains unknown, record that limit before interpreting the retest.</dd>
+</dl></section>
+<section class="step" id="design-notes"><h2>Method and version history</h2>
+<p><a href="../#helen-bird">Helen Bird</a> publishes small AI search experiments in the GEO Learning Log. The <a href="#reproduce-a-result">15-answer recount</a> shows why the guide separates practice runs from measured batches. <a href="{lab09}technical-appendix.html#coverage">Lab #09’s coverage audit</a> shows why it keeps recommendations, primary citations and More separate. Read the <a href="../../stages/07-brand-authority/">Lab #07 report</a> for how the original kit was built and the <a href="../../stages/06-content-optimization/">Lab #06 evidence review</a> for what content changes can support.</p>
+<p><strong>v2.0</strong> adds a prompt library, source roles, a second retest, a search-to-answer diagnostic checklist and experiments readers can recount. The guide first appeared on <time datetime="2026-11-13">November 13, 2026</time>. The <a href="{previous}">previous guide and workbook</a> are preserved in the versioned project archive.</p>
+</section>'''
+    return shell(GUIDE,'Free GEO Visibility Measurement Guide & Worksheet for Solo Founders',
+                 'A free step-by-step GEO visibility guide and Excel worksheet for solo founders. Capture AI recommendations, citations and sources, then repeat under the same conditions.',
+                 [('../','Learning Hub'),('#start','Quick start'),('#choose','Choose a question'),('#run','Run the baseline'),
+                  ('#score','Score the evidence'),('#diagnose-results','Diagnose the result'),('#change','Repeat after a change'),
+                  ('#worked-example','Worked examples'),('#reproduce-a-result','Reproduce a result'),
+                  ('#design-notes','Method and versions')],body)
 
 
 def row_links(route, key):
@@ -247,6 +499,7 @@ def main():
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--example-json', action='store_true', help='Print the worked-example inputs for the workbook')
     group.add_argument('--check', action='store_true')
+    parser.add_argument('--guide-only', action='store_true', help='Build or check only the measurement guide')
     args = parser.parse_args()
     parts = {route: load_part(route) for route in VERSIONS}
     assert [len(p['answers']) for p in parts.values()] == [300, 120]
@@ -254,14 +507,19 @@ def main():
     if args.example_json:
         print(json.dumps(example))
         return
-    for path, html in ((GUIDE,guide(example)),(INDEX,evidence(parts,example)),(RECORD,reader())):
+    replication = replication_example(parts['historical-replication'])
+    pages = [(GUIDE, guide(example, replication)), (str(Path(GUIDE).with_name(PROMPT_CSV)), prompt_csv())]
+    if not args.guide_only:
+        pages.extend(((INDEX, evidence(parts, example)), (RECORD, reader())))
+    for path, content in pages:
         target = ROOT/path
         if args.check:
-            assert target.read_text() == html, f'Rebuild {path}'
+            assert target.read_text() == content, f'Rebuild {path}'
         else:
             target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_text(html)
-    print('Measurement guide and evidence index: 420 selected answers, 10 worked-example rows.')
+            target.write_text(content)
+    print('Measurement guide: public worked examples, diagnostic checklist and recount.' if args.guide_only else
+          'Measurement guide and evidence index: 420 selected answers, 10 worked-example rows.')
 
 if __name__ == '__main__':
     main()

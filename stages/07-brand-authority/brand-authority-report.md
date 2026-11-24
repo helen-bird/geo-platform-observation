@@ -146,6 +146,8 @@ The comparison justifies **why to build the asset now**: we could see the task p
 
 ## 7. How to apply this to your own brand
 
+Use the [free measurement guide and worksheet](https://helen-bird.github.io/geo-platform-observation/learning-hub/measurement/#start) to set up your first baseline and record enough detail to repeat it.
+
 1. **Pick a job with a real user behind it.** Pull one question from a buyer conversation or support thread. Write it in the user's words without your brand. For example, a backup SaaS might measure “Which backup tools let a small GitHub team restore one deleted repository?” A question about generic backup is a separate condition.
 2. **Record your baseline before changing pages.** Save the exact question, environment and plan. Use fresh sessions and keep platform results separate. Ten valid runs per setup can give an initial reading. Increase repetitions and use several windows when the decision needs more precision. Save full answers, visible queries or sources, and failed attempts. Score mentions, citations and recommendations separately.
 3. **Audit actual alternatives.** Pick two or three repeatedly recommended options on that question. Locate the work each answer is pointing to, then check the page and owner independently. For backup software, an actionable gap might be a restore walkthrough that identifies supported plans, demonstrates a real restoration and states limitations. A source panel with your domain but no recommendation is a lead to inspect; it does not tell you why the model omitted you.

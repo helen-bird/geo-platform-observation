@@ -112,6 +112,7 @@ def reader(rows):
                           for name, count in sorted(recs.items(), key=lambda entry: (-entry[1], entry[0]))[:7]])
     bounds = '<p>This batch gives a starting measurement for these exact six questions. It has no comparable prior week or controlled content change. Earlier experiments used other questions or collection conditions. The study records visible answers and sources, with no visibility into the model’s full retrieval or selection process.</p>'
     bounds += '<p><a href="technical-appendix.html">Read the scoring and coverage notes</a> · <a href="public-data.zip">Download the redacted evidence</a></p>'
+    bounds += '<p><a href="../../learning-hub/measurement/#change">Set up your own repeat measurement</a> with an exact prompt, a saved baseline and a change record.</p>'
     return page('index.html', TITLE,
                 'A 180-answer ChatGPT web baseline measuring GEO mentions, citations, recommendations, and appearances in additional sources.',
                 [('findings', 'What appeared in the answers?', outcomes),

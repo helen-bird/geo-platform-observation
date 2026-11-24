@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
-from site_metadata import ROOT, SITE, HUB_PATH, PERSON_ID, SITE_ID, SERIES_ID, appendix_path, canonical_url, finalize_page
+from site_metadata import ROOT, SITE, HUB_PATH, MEASUREMENT_GUIDE_PATH, PERSON_ID, SITE_ID, SERIES_ID, appendix_path, canonical_url, finalize_page
 
 
 class Metadata(HTMLParser):
@@ -59,7 +59,7 @@ def _local(url):
 def _fixture_checks():
     body = '<body><p>Original answer text.</p><a href="https://example.org/source?keep=1">Source URL</a></body></html>'
     doc = '<html><head><title>Original archive title</title><meta name="description" content="Original response archive C-Q1-R1 with real source links."></head>'+body
-    for path, kind, stage in [('index.html', 'reader', 1), ('technical-appendix.html', 'appendix', 1), (HUB_PATH, 'hub', None), ('evidence/stage-01/C-Q1-R1.html', 'evidence', 1)]:
+    for path, kind, stage in [('index.html', 'reader', 1), ('technical-appendix.html', 'appendix', 1), (HUB_PATH, 'hub', None), (MEASUREMENT_GUIDE_PATH, 'guide', None), ('evidence/stage-01/C-Q1-R1.html', 'evidence', 1)]:
         result = finalize_page(doc, path, kind, stage)
         assert result[result.index('<body>'):] == body, 'Head metadata must not rewrite original answer text or URL'
         assert finalize_page(result, path, kind, stage) == result, 'Metadata must be idempotent'
@@ -68,7 +68,7 @@ def _fixture_checks():
 def main():
     _fixture_checks()
     reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
-    targets = [(HUB_PATH, 'hub', None)]
+    targets = [(HUB_PATH, 'hub', None), (MEASUREMENT_GUIDE_PATH, 'guide', None)]
     for report in reports:
         targets.append((report['path'], 'reader', report))
         if appendix := appendix_path(report):
@@ -109,14 +109,18 @@ def main():
         body = ' '.join(parsed.body_text)
         assert 'Helen Bird' in body, (path, 'Publisher identity must also be visible')
         articles = [node for node in graph if node['@type'] == 'Article']
-        if kind in ('reader', 'appendix'):
+        if kind in ('reader', 'appendix', 'guide'):
             assert len(articles) == 1
             article = articles[0]
             assert article['author'] == {'@id': PERSON_ID}
-            assert article['datePublished'] == report['first_published']
-            assert article['dateModified'] == report['last_revised']
-            assert article['datePublished'] <= article['dateModified']
-            assert article['datePublished'] in body and article['dateModified'] in body
+            if report is not None:
+                assert article['datePublished'] == report['first_published']
+                assert article['dateModified'] == report['last_revised']
+                assert article['datePublished'] <= article['dateModified']
+                assert article['datePublished'] in body and article['dateModified'] in body
+            else:
+                assert parsed.meta['author'] == ['Helen Bird'] and parsed.meta['og:type'] == ['article']
+                assert all(article[key] in body for key in ('datePublished', 'dateModified') if key in article)
             assert article['headline'] == parsed.title and article['url'] == expected
             assert nodes[article['mainEntityOfPage']['@id']]['@type'] == 'WebPage'
             assert 'breadcrumb' not in article, 'Breadcrumb belongs on the WebPage node'

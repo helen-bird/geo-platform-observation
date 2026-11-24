@@ -16,6 +16,7 @@ from site_analytics import decorate_head
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://helen-bird.github.io/geo-platform-observation/'
 HUB_PATH = 'learning-hub/index.html'
+MEASUREMENT_GUIDE_PATH = 'learning-hub/measurement/index.html'
 PERSON_ID = SITE + 'learning-hub/#helen-bird'
 SITE_ID = SITE + '#website'
 SERIES_ID = SITE + 'learning-hub/#geo-lab'
@@ -135,12 +136,15 @@ def _structured(path, kind, stage, title, description):
     series_reports = [r for r in reports if kind not in {'evidence', 'evidence-index'} or r.get('record_type') not in {'technical_learning_record', 'research_review', 'distribution_learning_record',
                                                                    'consumer_visibility_baseline'}]
     series = {'@type': 'CreativeWorkSeries', '@id': SERIES_ID, 'name': 'GEO Lab', 'url': canonical_url(HUB_PATH), 'author': {'@id': PERSON_ID}, 'isPartOf': {'@id': SITE_ID}, 'hasPart': [{'@id': canonical_url(r['path'])+'#article'} for r in series_reports]}
-    is_own_article = kind in {'reader', 'appendix'} and selected is not None
+    is_guide = kind == 'guide' and path == MEASUREMENT_GUIDE_PATH
+    is_own_article = is_guide or (kind in {'reader', 'appendix'} and selected is not None)
     page_type = 'CollectionPage' if kind in {'hub', 'evidence-index'} else ('Article' if is_own_article else 'WebPage')
     page_id = url + ('#article' if is_own_article else '#webpage')
     page = {'@type': page_type, '@id': page_id, 'url': url, 'name': title, 'description': description, 'inLanguage': 'en', 'publisher': {'@id': PERSON_ID}, 'isPartOf': [{'@id': SITE_ID}, {'@id': SERIES_ID}]}
     if is_own_article:
-        page.update(headline=title, author={'@id': PERSON_ID}, mainEntityOfPage=url, datePublished=selected['first_published'], dateModified=selected['last_revised'])
+        page.update(headline=title, author={'@id': PERSON_ID}, mainEntityOfPage=url)
+        if selected is not None:
+            page.update(datePublished=selected['first_published'], dateModified=selected['last_revised'])
         if kind == 'appendix':
             page['about'] = {'@id': canonical_url(selected['path'])+'#article'}
     elif kind == 'hub':
@@ -186,9 +190,10 @@ def finalize_page(document, path, kind='reader', stage=None):
     attrs = lambda value: escape(value, quote=True)
     metadata = '<link rel="canonical" href="'+attrs(canonical_url(path))+'">'
     metadata += '<meta name="description" content="'+attrs(description)+'">'
-    if kind in {'reader', 'appendix', 'hub'}:
+    is_guide = kind == 'guide' and path == MEASUREMENT_GUIDE_PATH
+    if is_guide or kind in {'reader', 'appendix', 'hub'}:
         metadata += '<meta name="author" content="Helen Bird">'
-    metadata += '<meta property="og:type" content="'+('article' if kind in {'reader', 'appendix'} else 'website')+'">'
+    metadata += '<meta property="og:type" content="'+('article' if is_guide or kind in {'reader', 'appendix'} else 'website')+'">'
     metadata += '<meta property="og:title" content="'+attrs(title)+'">'
     metadata += '<meta property="og:description" content="'+attrs(description)+'">'
     metadata += '<meta property="og:url" content="'+attrs(canonical_url(path))+'">'

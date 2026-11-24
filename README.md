@@ -4,6 +4,8 @@ An ongoing record of experiments, resource reviews, and lessons from learning Ge
 
 **[Explore the GEO Learning Hub](https://helen-bird.github.io/geo-platform-observation/learning-hub/)** — start with a user question, then follow the report, public dataset and complete evidence appendix.
 
+**[Free GEO measurement guide and worksheet](https://helen-bird.github.io/geo-platform-observation/learning-hub/measurement/)** for solo founders tracking how AI search tools mention, cite or recommend their products.
+
 Maintained by **Helen Bird**. The hub was published on **November 3, 2026**; each entry records the original experiment, first-publication and last-revision dates.
 
 ## Learning records
@@ -29,6 +31,8 @@ New stages will be added as learning and experiments are completed. Each stage d
 ## Revisions and evidence
 
 [Report versions](report-versions.json) · [Changelog](CHANGELOG.md) · [Stage 1 / Stage 2 review decisions](reviews/2026-11-02-stages-01-02.md) · [Stage 4 review decisions](reviews/2026-11-03-stage04.md)
+
+To cite a result, include Helen Bird, the lab or guide title, the specific version, and a permalink to the relevant method or data. Include the public answer ID when discussing an individual answer. The repository also provides [citation metadata](CITATION.cff).
 
 Each reader leads with bounded findings. Lab #06 is a narrative review with references and methodology on the report page. Lab #07 is an observational reanalysis with reviewed coding and reproduction instructions. Labs #01–#05, #08 and #09 have separate appendices. Stage 5 is a technical learning record with reviewed aggregates, not a new AI-answer experiment or a public raw Search Console export. Later source audits and user-reported follow-ups are explicitly separate from the experiment-date outcomes. The November 7 B/C retest is an unconfirmed review proposal, with no results or automation.
 

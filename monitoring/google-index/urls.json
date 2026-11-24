@@ -675,11 +675,11 @@
     {
       "url": "https://helen-bird.github.io/geo-platform-observation/learning-hub/measurement/",
       "source_file": "learning-hub/measurement/index.html",
-      "category": "excluded",
+      "category": "primary_content",
       "monitor": false,
-      "sitemap_include": false,
-      "indexing_desired": false,
-      "decision_reason": "Verification, error template or non-editorial support file"
+      "sitemap_include": true,
+      "indexing_desired": true,
+      "decision_reason": "Public editorial guide included in the sitemap; outside the active monitoring scope"
     },
     {
       "url": "https://helen-bird.github.io/geo-platform-observation/learning-hub/review-evidence/",

@@ -145,7 +145,7 @@ def reader(summary):
 <figure><img src="finite-panel-sensitivity.svg" alt="Four panels comparing the effect of keeping 3, 5, 7, 10 or 15 answers on measured rates and list overlap."><figcaption>Subset distributions from the observed 15-answer panels. At 15, there is only one possible subset.</figcaption></figure>
 <p>Three runs can show that an outcome occurred. Ten to fifteen can support a more informative description of a fixed prompt. Estimating a rate to a specific precision requires a separate sample-size decision.</p>'''
     conclusions += note('The OpenAI arm measures the API setup. Earlier ChatGPT consumer results used a different environment. This comparison does not identify a causal effect of GEO optimization.')
-    conclusions += '<p><a href="technical-appendix.html">See all twelve historical claim decisions and the public evidence.</a></p>'
+    conclusions += '<p><a href="technical-appendix.html">See all twelve historical claim decisions and the public evidence.</a> <a href="../../../learning-hub/measurement/#reproduce-a-result">Recalculate an example result yourself.</a></p>'
     return page('index.html', title, 'GEO Lab interim review of 300 new AI search answers, which historical findings held up, and what changes when only three or ten runs are kept.',
                 [('hypotheses', '1. What did we expect?', assumptions), ('validation', '2. How did we test it?', method), ('conclusions', '3. What did we find?', conclusions)],
                 '<a href="technical-appendix.html">Methods and evidence</a> <a href="../../../learning-hub/review-evidence/#part-1">Find original answers</a>')

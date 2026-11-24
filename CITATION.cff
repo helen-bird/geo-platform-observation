@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the specific lab or guide you use and include a fixed link to the relevant version or data."
+title: "GEO Learning Log"
+authors:
+  - family-names: Bird
+    given-names: Helen
+url: "https://helen-bird.github.io/geo-platform-observation/learning-hub/"
+repository-code: "https://github.com/helen-bird/geo-platform-observation"
+preferred-citation:
+  type: generic
+  title: "GEO Learning Log"
+  authors:
+    - family-names: Bird
+      given-names: Helen
+  url: "https://helen-bird.github.io/geo-platform-observation/learning-hub/"

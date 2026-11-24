@@ -4,7 +4,7 @@ import json,re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
-from site_metadata import appendix_path
+from site_metadata import MEASUREMENT_GUIDE_PATH, appendix_path
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE='https://helen-bird.github.io/geo-platform-observation/'
@@ -16,10 +16,11 @@ class Page(HTMLParser):
         if t=='meta'and a.get('name','').lower()in('robots','googlebot')and'noindex'in a.get('content','').lower():self.noindex=True
 def build():
     reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
-    primary = {'learning-hub/index.html', 'evidence/index.html'} | {r['path'] for r in reports}
+    primary = {'learning-hub/index.html', 'evidence/index.html', MEASUREMENT_GUIDE_PATH} | {r['path'] for r in reports}
     appendices = {path for r in reports if (path := appendix_path(r))}
     outside_monitor = {path for r in reports if r.get('monitor') is False
                        for path in (r['path'], appendix_path(r)) if path}
+    outside_monitor.add(MEASUREMENT_GUIDE_PATH)
     urls, excluded, known = [], [], set()
     for p in sorted(ROOT.rglob('*.html')):
         name=p.relative_to(ROOT).as_posix()
@@ -35,7 +36,9 @@ def build():
         reason=('Original research and learning-navigation entry'if category=='primary_content'else'Independent original answer/method/failure/source archive'if category=='technical_appendix'else'Supplemental individual response archive, kept crawlable but outside the initial editorial monitor'if name.startswith('evidence/')else'Verification, error template or non-editorial support file')
         if name in outside_monitor:
             reason = 'Editorial report included in the sitemap; outside the active monitoring scope'
-        row={'url':canonical,'source_file':name,'category':category,'monitor':monitor,'sitemap_include':important and not page.noindex,'indexing_desired':monitor or name.startswith('evidence/'),'decision_reason':reason}
+        if name == MEASUREMENT_GUIDE_PATH:
+            reason = 'Public editorial guide included in the sitemap; outside the active monitoring scope'
+        row={'url':canonical,'source_file':name,'category':category,'monitor':monitor,'sitemap_include':important and not page.noindex,'indexing_desired':monitor or name.startswith('evidence/') or name == MEASUREMENT_GUIDE_PATH,'decision_reason':reason}
         (urls if monitor else excluded).append(row)
     expected=len(primary | appendices)-len(outside_monitor)
     assert len(urls)==expected,(len(urls),expected)
