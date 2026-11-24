@@ -28,6 +28,8 @@ def configuration():
         'reviews/interim-review/historical-replication/technical-appendix.html',
         'reviews/interim-review/prompt-framing/index.html',
         'reviews/interim-review/prompt-framing/technical-appendix.html',
+        'reviews/visibility-baseline/index.html',
+        'reviews/visibility-baseline/technical-appendix.html',
         'evidence/index.html',
     }
     for r in reports:

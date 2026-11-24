@@ -56,6 +56,7 @@ def main():
             assert not re.search(pattern, value, re.I), (name, label)
     interim = DIST / 'reviews/interim-review/historical-replication'
     interim_part2 = DIST / 'reviews/interim-review/prompt-framing'
+    visibility = DIST / 'reviews/visibility-baseline'
     page_paths = [DIST / name for name in ['index.html','technical-appendix.html',
         'stages/02-post-discovery/index.html','stages/02-post-discovery/technical-appendix.html',
         'stages/03-question-sensitivity/index.html','stages/03-question-sensitivity/technical-appendix.html',
@@ -63,7 +64,7 @@ def main():
         'stages/05-technical-discoverability/index.html','stages/05-technical-discoverability/technical-appendix.html',
         'stages/06-content-optimization/index.html','stages/07-brand-authority/index.html',
         'stages/08-distribution/index.html','stages/08-distribution/technical-appendix.html']]
-    page_paths += [folder / name for folder in (interim, interim_part2)
+    page_paths += [folder / name for folder in (interim, interim_part2, visibility)
                    for name in ('index.html', 'technical-appendix.html')]
     pages = {}
     for path in page_paths:
@@ -81,7 +82,7 @@ def main():
             assert f'GEO Lab Interim Review · Part {part}' in document
             if path.name == 'index.html':
                 assert {'hypotheses', 'validation', 'conclusions'} <= page.ids
-        else:
+        elif path.parent != visibility:
             assert 'id="report-version"' in document
         if path.name == 'index.html':
             assert path.stat().st_size < 100_000, 'Keep full evidence in the appendix'
@@ -145,6 +146,8 @@ def main():
     build_prompt_framing.check()
     import build_learning_hub
     build_learning_hub.check()
+    import build_visibility_baseline
+    build_visibility_baseline.load_and_check()
     import check_site_metadata
     check_site_metadata.main()
     import check_sitemap

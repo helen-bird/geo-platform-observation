@@ -59,6 +59,7 @@ def render():
     anchors = '<a href="#measure-your-product">Measure AI recommendations</a>' + ''.join('<a href="#lab-'+str(r['stage'])+'">#'+f'{r["stage"]:02d}'+' · '+escape(r['title'])+'</a>' for r in reports)
     anchors += '<a href="#interim-review">'+escape(INTERIM_LABEL)+'</a>'
     anchors += '<a href="#interim-review-part-2">'+escape(INTERIM_PART2_LABEL)+'</a>'
+    anchors += '<a href="#visibility-baseline">ChatGPT visibility baseline</a>'
     article = ('<section class="lesson" id="measure-your-product"><p class="lesson-name">Hands-on guide</p>'
                '<h2>Does AI search recommend my product?</h2><p>Choose one buyer question, record a baseline, and repeat after a documented change.</p>'
                '<div class="links"><a href="measurement/">Read the measurement guide</a>'
@@ -102,6 +103,13 @@ def render():
                 '<h2>How does question framing change recommendations?</h2><p>Six questions and 120 web-search answers track how resource and creator prompts change recommendations, source lists and author naming.</p>'
                 '<div class="links"><a href="'+part2+'">Read the report</a><a href="'+part2+'technical-appendix.html">Methods and evidence</a>'
                 '<a href="'+part2+'public-data.zip">Download public data</a></div></article>')
+    visibility = relative('reviews/visibility-baseline/index.html')
+    article += ('<article class="lesson" id="visibility-baseline"><p class="lesson-name">Measurement baseline</p>'
+                '<h2>How often does ChatGPT recommend my GEO work?</h2>'
+                '<p>180 answers across six questions and two thinking levels show what appears in final answers and additional sources.</p>'
+                '<div class="links"><a href="'+visibility+'">Read the report</a>'
+                '<a href="'+visibility+'technical-appendix.html">Methods and evidence</a>'
+                '<a href="'+visibility+'public-data.zip">Download redacted answers</a></div></article>')
     document = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Helen Bird · GEO Learning Hub</title><meta name="description" content="A question-oriented index of Helen Bird's ongoing GEO learning experiments, original public data, reports and limitations."><link rel="canonical" href="'''+SITE+'''learning-hub/"><style>'''+CSS+'''</style></head><body><a class="skip" href="#main">Skip to learning questions</a><div class="layout"><nav aria-label="Learning Hub contents"><strong>GEO Learning Log</strong><div class="nav-links"><a href="#main" aria-current="page">Learning Hub</a>'''+anchors+'''<a href="#use-evidence">Use the evidence</a></div><div class="nav-group"><a href="https://github.com/helen-bird/geo-platform-observation">Repository and data guide</a><a href="../report-versions.json">Report versions</a><a href="../CHANGELOG.md">Revision history</a></div><p>An ongoing learning record.</p></nav><main id="main"><h1>Helen Bird · GEO Learning Hub</h1><p class="lead">Start with a question, then explore the research and its sources.</p><p class="author"><strong>Author:</strong> Helen Bird · <strong>Published:</strong> '''+DATE+''' · <strong>Updated:</strong> '''+DATE+'''</p><blockquote><p>The experiments, technical observations and research review document what each source measures and where its conclusions apply.</p><p>This new index is a content-organization practice suggested by the creator audit. Whether it improves AI discovery or recommendations remains untested.</p></blockquote><div class="lessons">'''+article+'''</div><section class="afterword" id="use-evidence"><h2>Use the evidence</h2><ul><li><strong>Read by user intent.</strong> Results from different tasks should not be pooled into a universal recommendation score.</li><li><strong>Keep outcomes distinct.</strong> Page citation, content-brand recommendation, personal-name mention and personal recommendation are different observations.</li><li><strong>Check the collection interface.</strong> Labs #03 and #04 use OpenAI Responses API + web search. They do not represent consumer ChatGPT Search performance.</li></ul><p>Labs #01–#05 link to methods and public data. Labs #05 and #08 publish reviewed aggregates. Labs #06 and #07 include methods and evidence links on their report pages. Private originals and account evidence remain outside this public repository. Use GitHub’s Copy permalink to cite a fixed revision, and include the answer or observation ID.</p><p>New questions and experiments will be added as learning continues. Earlier methods, corrections and limitations remain visible in the record.</p></section><p class="footer">Helen Bird · GEO Learning Log · <a href="https://github.com/helen-bird/geo-platform-observation">GitHub repository</a></p></main></div></body></html>'''
     document = document.replace('<strong>Updated:</strong> '+DATE, '<strong>Updated:</strong> '+UPDATED)
     document = document.replace('<a href="../report-versions.json">Report versions</a>', '<a href="../evidence/">Browse original answers</a><a href="../report-versions.json">Report versions</a>')
@@ -137,8 +145,9 @@ def check():
     parser = HubParser()
     parser.feed(document)
     errors = []
-    if parser.lessons != [f'lab-{n}' for n in sorted(QUESTIONS)] + ['interim-review', 'interim-review-part-2']:
-        errors.append('Learning Hub must list the interim review after the ordered labs')
+    if parser.lessons != [f'lab-{n}' for n in sorted(QUESTIONS)] + [
+            'interim-review', 'interim-review-part-2', 'visibility-baseline']:
+        errors.append('Learning Hub must list the reviews and measurement baseline after the ordered labs')
     if len(parser.ids) != len(set(parser.ids)):
         errors.append('Learning Hub has duplicate section IDs')
     if parser.closed_sections:

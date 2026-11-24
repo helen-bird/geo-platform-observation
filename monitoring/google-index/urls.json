@@ -763,6 +763,24 @@
       "decision_reason": "Verification, error template or non-editorial support file"
     },
     {
+      "url": "https://helen-bird.github.io/geo-platform-observation/reviews/visibility-baseline/",
+      "source_file": "reviews/visibility-baseline/index.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/reviews/visibility-baseline/technical-appendix.html",
+      "source_file": "reviews/visibility-baseline/technical-appendix.html",
+      "category": "excluded",
+      "monitor": false,
+      "sitemap_include": false,
+      "indexing_desired": false,
+      "decision_reason": "Verification, error template or non-editorial support file"
+    },
+    {
       "url": "https://helen-bird.github.io/geo-platform-observation/stages/06-content-optimization/",
       "source_file": "stages/06-content-optimization/index.html",
       "category": "primary_content",
