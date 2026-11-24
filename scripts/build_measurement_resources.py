@@ -120,11 +120,11 @@ def example_data(part):
     return {'prompt': cfg['prompts']['evidence-creator']['prompt'], 'records': records}
 
 
-def shell(path, title, description, nav, body):
+def shell(path, title, description, nav, body, *, search_title=None):
     links = ''.join(f'<a href="{escape(link, quote=True)}">{escape(label)}</a>' for link,label in nav)
     css = CSS + EXTRA_CSS + (GUIDE_CSS if path == GUIDE else '')
     document = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} · GEO Lab</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(search_title or title)} · GEO Lab</title>
 <meta name="description" content="{escape(description, quote=True)}"><link rel="canonical" href="{canonical_url(path)}">
 <style>{css}</style>{'<meta name="robots" content="noindex">' if path == RECORD else ''}</head><body><a class="skip" href="#main">Skip to content</a>
 <div class="layout"><nav aria-label="Page contents"><strong>GEO Learning Log</strong><div class="nav-links">{links}</div></nav>
@@ -369,11 +369,11 @@ def guide(example, replication):
 <p><strong>v2.0</strong> adds a prompt library, source roles, a second retest, a search-to-answer diagnostic checklist and experiments readers can recount. The guide first appeared on <time datetime="2026-11-13">November 13, 2026</time>. The <a href="{previous}">previous guide and workbook</a> are preserved in the versioned project archive.</p>
 </section>'''
     return shell(GUIDE,'Free GEO Visibility Measurement Guide & Worksheet for Solo Founders',
-                 'A free step-by-step GEO visibility guide and Excel worksheet for solo founders. Capture AI recommendations, citations and sources, then repeat under the same conditions.',
+                 'A free GEO guide and Excel worksheet for solo founders to track AI mentions, citations, and recommendations and compare results after a change.',
                  [('../','Learning Hub'),('#start','Quick start'),('#choose','Choose a question'),('#run','Run the baseline'),
                   ('#score','Score the evidence'),('#diagnose-results','Diagnose the result'),('#change','Repeat after a change'),
                   ('#worked-example','Worked examples'),('#reproduce-a-result','Reproduce a result'),
-                  ('#design-notes','Method and versions')],body)
+                  ('#design-notes','Method and versions')],body,search_title='Free GEO Visibility Guide & Excel Worksheet')
 
 
 def row_links(route, key):

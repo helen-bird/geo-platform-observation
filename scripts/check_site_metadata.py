@@ -120,6 +120,7 @@ def main():
                 assert article['datePublished'] in body and article['dateModified'] in body
             else:
                 assert parsed.meta['author'] == ['Helen Bird'] and parsed.meta['og:type'] == ['article']
+                assert len(parsed.title) < 70 and 25 <= len(parsed.meta['description'][0]) <= 160, (path, 'Guide metadata exceeds Bing URL Inspection length guidance')
                 assert all(article[key] in body for key in ('datePublished', 'dateModified') if key in article)
             assert article['headline'] == parsed.title and article['url'] == expected
             assert nodes[article['mainEntityOfPage']['@id']]['@type'] == 'WebPage'

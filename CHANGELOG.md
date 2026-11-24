@@ -4,6 +4,7 @@ Dates use Asia/Shanghai. First-publication dates refer to this repository's publ
 
 ## 2026-11-24
 
+- Shortened the Measurement Kit search title and description in response to Bing Webmaster Tools' live inspection. The visible guide heading, downloadable files and research data are preserved.
 - **Measurement Kit v2.0** expands the free guide and worksheet with a prompt library, result diagnostics, source and competitor tracking, two follow-up rounds, and a reproducible example. The Learning Hub adds an author section and task links, and the sitemap now includes the guide. Lab #09 keeps its original baseline. The effect of the changes will be measured separately.
 - **Lab #09 v1.1:** moved the ChatGPT web visibility baseline into the numbered learning series. Added the common report navigation, version note and methods page entry. The original report URLs lead to the new pages. The 180 redacted answers and their measurement results are unchanged.
 - **Lab #09 v1.0:** published the first edition of the six-question visibility baseline with two thinking levels and a separate treatment of additional sources.
