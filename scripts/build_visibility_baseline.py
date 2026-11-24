@@ -10,13 +10,12 @@ from zipfile import ZipFile
 
 from build_learning_hub import CSS
 from build_stage5_report import EXTRA, note, table
-from report_series import CSS as SERIES_CSS, series_navigation
-from site_metadata import finalize_page
+from report_series import finish_page
 
 ROOT = Path(__file__).resolve().parents[1]
-ROUTE = 'reviews/visibility-baseline'
+ROUTE = 'stages/09-visibility-baseline'
 FOLDER = ROOT / ROUTE
-TITLE = 'How often does ChatGPT recommend my GEO work?'
+TITLE = 'GEO Lab #09: How often does ChatGPT recommend my GEO work?'
 PROMPTS = ('U1', 'U2', 'O1', 'O2', 'M1', 'M2')
 METRICS = ('mention', 'citation', 'recommendation')
 EFFORTS = ('medium', 'high')
@@ -33,8 +32,6 @@ def read_jsonl(name):
 
 
 def page(filename, title, description, sections):
-    reports = json.loads((ROOT / 'report-versions.json').read_text())['reports']
-    series = series_navigation(reports, ROUTE, f'{ROUTE}/index.html')
     navigation = ''.join(f'<a href="#{key}">{heading}</a>' for key, heading, _ in sections)
     content = ''.join(f'<section id="{key}"><h2>{heading}</h2>{body}</section>'
                       for key, heading, body in sections)
@@ -43,15 +40,15 @@ def page(filename, title, description, sections):
     document = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)}</title><meta name="description" content="{escape(description, quote=True)}">
-<style>{CSS}{EXTRA}{SERIES_CSS}</style></head>
+<style>{CSS}{EXTRA}</style></head>
 <body><a class="skip" href="#main">Skip to report</a><div class="layout">
-<nav aria-label="Visibility study contents">{series}<strong>On this page</strong><div class="nav-links">{navigation}</div>
+<nav aria-label="GEO Lab 09 contents"><strong>On this page</strong><div class="nav-links">{navigation}</div>
 <div class="nav-group">{alternate}<a href="public-data.zip">Download redacted data</a></div></nav>
-<main id="main"><p class="lesson-name">GEO Learning Log · Measurement baseline</p><h1>{escape(title)}</h1>
-<p class="author">Helen Bird · Observed November 23–24, 2026 (Beijing time) · v1.0</p>
+<main id="main"><p class="lesson-name">GEO Lab #09 · AI Visibility Baseline</p><h1>{escape(title)}</h1>
+<p class="author">Helen Bird · Observed November 23–24, 2026 (Beijing time)</p>
 {content}<p class="footer"><a href="../../learning-hub/">GEO Learning Hub</a> · <a href="https://github.com/helen-bird/geo-platform-observation">Repository</a></p></main>
 </div></body></html>'''
-    return finalize_page(document, f'{ROUTE}/{filename}', kind='reader')
+    return finish_page(document, 9, 'reader' if filename == 'index.html' else 'appendix')
 
 
 def hit_count(rows, metric):
@@ -142,7 +139,7 @@ def appendix(rows, attempts):
     sources += note('The overall 0/180 citation count uses recorded evidence. A sensitivity view restricted to 144 full panels also has zero observed primary citations. The broader visibility count is 10/144, or 6.9% (Wilson 95% reference interval 3.8%–12.3%). The complete-panel subset is defined by evidence availability.')
     data = '<p>The download includes 180 redacted answer texts, the six frozen prompts, answer-level codes and a manifest of 182 attempts. It omits private session URLs, UI or account metadata, raw browser captures and failed answer bodies. Public IDs follow planned positions. Source links have tracking and other nonessential URL parameters removed.</p>'
     data += '<p><a href="data/observations.jsonl">Answer-level observations</a> · <a href="data/attempts.jsonl">Attempt manifest</a> · <a href="data/prompts.json">Exact prompts</a> · <a href="public-data.zip">Redacted answer archive</a></p>'
-    return page('technical-appendix.html', 'GEO visibility baseline: methods and evidence',
+    return page('technical-appendix.html', 'GEO Lab #09: AI Visibility Methods and Evidence',
                 'Scoring definitions, evidence coverage, failures and redacted answers for the one-time ChatGPT web baseline.',
                 [('sample', 'Sample and attempts', counts), ('coding', 'Scoring rules', rules),
                  ('coverage', 'Source panel coverage', sources), ('data', 'Data and reproduction', data)])

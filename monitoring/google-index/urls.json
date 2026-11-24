@@ -763,7 +763,7 @@
       "decision_reason": "Verification, error template or non-editorial support file"
     },
     {
-      "url": "https://helen-bird.github.io/geo-platform-observation/reviews/visibility-baseline/",
+      "url": "https://helen-bird.github.io/geo-platform-observation/reviews/visibility-baseline/index.html",
       "source_file": "reviews/visibility-baseline/index.html",
       "category": "excluded",
       "monitor": false,
@@ -810,6 +810,24 @@
     {
       "url": "https://helen-bird.github.io/geo-platform-observation/stages/08-distribution/technical-appendix.html",
       "source_file": "stages/08-distribution/technical-appendix.html",
+      "category": "technical_appendix",
+      "monitor": false,
+      "sitemap_include": true,
+      "indexing_desired": false,
+      "decision_reason": "Editorial report included in the sitemap; outside the active monitoring scope"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/09-visibility-baseline/",
+      "source_file": "stages/09-visibility-baseline/index.html",
+      "category": "primary_content",
+      "monitor": false,
+      "sitemap_include": true,
+      "indexing_desired": false,
+      "decision_reason": "Editorial report included in the sitemap; outside the active monitoring scope"
+    },
+    {
+      "url": "https://helen-bird.github.io/geo-platform-observation/stages/09-visibility-baseline/technical-appendix.html",
+      "source_file": "stages/09-visibility-baseline/technical-appendix.html",
       "category": "technical_appendix",
       "monitor": false,
       "sitemap_include": true,

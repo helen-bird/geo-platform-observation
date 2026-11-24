@@ -2,6 +2,11 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-24
+
+- **Lab #09 v1.1:** moved the ChatGPT web visibility baseline into the numbered learning series. Added the common report navigation, version note and methods page entry. The original report URLs lead to the new pages. The 180 redacted answers and their measurement results are unchanged.
+- **Lab #09 v1.0:** published the first edition of the six-question visibility baseline with two thinking levels and a separate treatment of additional sources.
+
 ## 2026-11-22
 
 - **Lab #08 v1.0:** published the distribution field report, its one-week test plan and reviewed aggregate evidence. The snapshot separates community activity, link clicks, site requests, downloads and verified public listings.

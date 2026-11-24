@@ -1,0 +1,38 @@
+[
+  {
+    "id": "U1",
+    "intent": "understand",
+    "kind": "information",
+    "text": "I'm a solo founder. What is GEO, and how is it different from traditional SEO?"
+  },
+  {
+    "id": "U2",
+    "intent": "understand",
+    "kind": "resource",
+    "text": "What free, trustworthy resources would you recommend to a small-business marketer learning GEO from scratch?"
+  },
+  {
+    "id": "O1",
+    "intent": "improve",
+    "kind": "information",
+    "text": "How can a small SaaS team improve its chances of being recommended in ChatGPT?"
+  },
+  {
+    "id": "O2",
+    "intent": "improve",
+    "kind": "resource",
+    "text": "What practical, evidence-backed GEO guides would you recommend to an indie developer with no dedicated SEO team?"
+  },
+  {
+    "id": "M1",
+    "intent": "measure",
+    "kind": "information",
+    "text": "How can I tell whether GEO changes actually improve my product's mentions, citations, and recommendations in AI answers?"
+  },
+  {
+    "id": "M2",
+    "intent": "measure",
+    "kind": "resource",
+    "text": "Can you recommend a free step-by-step guide or worksheet for measuring GEO visibility for a solo founder?"
+  }
+]

@@ -97,6 +97,19 @@
       "last_revised": "2026-11-22",
       "version": "1.0",
       "revision_note": "Initial field report on X posts, Reddit replies and free directory submissions. Includes reviewed website aggregates and a reusable one-week distribution test. No AI-answer experiment."
+    },
+    {
+      "stage": 9,
+      "title": "AI Visibility Baseline",
+      "path": "stages/09-visibility-baseline/index.html",
+      "record_type": "consumer_visibility_baseline",
+      "monitor": false,
+      "experiment_dates": "2026-11-23 to 2026-11-24 (Beijing time)",
+      "first_published": "2026-11-24",
+      "first_publication_evidence": "Git commit ca9b390 published the first redacted edition at the original review route.",
+      "last_revised": "2026-11-24",
+      "version": "1.1",
+      "revision_note": "Moved this 180-answer consumer web experiment into the numbered GEO Lab series as Lab #09. Counts, coding and redacted evidence are unchanged."
     }
   ]
 }

@@ -56,15 +56,15 @@ def main():
             assert not re.search(pattern, value, re.I), (name, label)
     interim = DIST / 'reviews/interim-review/historical-replication'
     interim_part2 = DIST / 'reviews/interim-review/prompt-framing'
-    visibility = DIST / 'reviews/visibility-baseline'
     page_paths = [DIST / name for name in ['index.html','technical-appendix.html',
         'stages/02-post-discovery/index.html','stages/02-post-discovery/technical-appendix.html',
         'stages/03-question-sensitivity/index.html','stages/03-question-sensitivity/technical-appendix.html',
         'stages/04-creator-benchmark/index.html','stages/04-creator-benchmark/technical-appendix.html',
         'stages/05-technical-discoverability/index.html','stages/05-technical-discoverability/technical-appendix.html',
         'stages/06-content-optimization/index.html','stages/07-brand-authority/index.html',
-        'stages/08-distribution/index.html','stages/08-distribution/technical-appendix.html']]
-    page_paths += [folder / name for folder in (interim, interim_part2, visibility)
+        'stages/08-distribution/index.html','stages/08-distribution/technical-appendix.html',
+        'stages/09-visibility-baseline/index.html','stages/09-visibility-baseline/technical-appendix.html']]
+    page_paths += [folder / name for folder in (interim, interim_part2)
                    for name in ('index.html', 'technical-appendix.html')]
     pages = {}
     for path in page_paths:
@@ -73,7 +73,7 @@ def main():
         assert all(page.details), 'All evidence details must remain expanded'
         assert 'data-report-series="v1"' in document
         series_labels = ['#01 · AI Recommendations','#02 · Content Discovery','#03 · Prompt Sensitivity',
-                         '#04 · Creator Benchmark','#05 · Technical Discoverability', '#06 · Content Optimization for AI Search', '#07 · Brand Authority', '#08 · Distribution for Indie Creators', 'Interim Review · Part 1',
+                         '#04 · Creator Benchmark','#05 · Technical Discoverability', '#06 · Content Optimization for AI Search', '#07 · Brand Authority', '#08 · Distribution for Indie Creators', '#09 · AI Visibility Baseline', 'Interim Review · Part 1',
                          'Interim Review · Part 2']
         offsets = [document.index(label) for label in series_labels]
         assert offsets == sorted(offsets), 'Keep the interim review after the ordered lab entries'
@@ -82,7 +82,7 @@ def main():
             assert f'GEO Lab Interim Review · Part {part}' in document
             if path.name == 'index.html':
                 assert {'hypotheses', 'validation', 'conclusions'} <= page.ids
-        elif path.parent != visibility:
+        else:
             assert 'id="report-version"' in document
         if path.name == 'index.html':
             assert path.stat().st_size < 100_000, 'Keep full evidence in the appendix'
@@ -120,7 +120,7 @@ def main():
         for platform in case['selected_for_platforms']:
             assert any(r['platform']==platform and r['question_id']=='Q3' and any(o['entity']==case['entity'] and o.get('recommendation') is True for o in r['observations']) for r in runs)
     versions = load('report-versions.json')['reports']
-    assert [r['stage'] for r in versions] == list(range(1, 9))
+    assert [r['stage'] for r in versions] == list(range(1, 10))
     assert all(r['first_published'] <= r['last_revised'] for r in versions)
     follow = load('stages/02-post-discovery/data/post-publication-checks.json')
     assert follow['original_six_cell_outcomes_unchanged'] is True
