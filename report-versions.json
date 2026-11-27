@@ -111,5 +111,17 @@
       "version": "1.1",
       "revision_note": "Moved this 180-answer consumer web experiment into the numbered GEO Lab series as Lab #09. Counts, coding and redacted evidence are unchanged."
     }
+  ],
+  "supplements": [
+    {
+      "stage": 9,
+      "title": "Measurement Kit Optimization and Retest",
+      "path": "stages/09-visibility-baseline/measurement-kit-retest/index.html",
+      "experiment_dates": "2026-11-23 to 2026-11-27 (baseline through first retest, Beijing time)",
+      "first_published": "2026-11-27",
+      "last_revised": "2026-11-27",
+      "version": "1.0",
+      "revision_note": "Benchmarked alternatives from the original M2 answers, documented the v2.0 release, and published 30 redacted first-retest answers. The original Lab #09 baseline stays at its existing route."
+    }
   ]
 }

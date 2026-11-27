@@ -27,6 +27,9 @@ class Page(HTMLParser):
             self.details.append('open' in attrs)
 
 def main():
+    import build_measurement_kit_retest
+    from site_metadata import appendix_path, supplements
+
     assert not subprocess.check_output(['git', 'ls-files', '--', 'audits'], cwd=ROOT, text=True).strip(), 'Local audit evidence must not be tracked for publication'
     texts = []
     files = [p for p in DIST.rglob('*') if p.is_file() and not {'.git', '__pycache__', 'audits'}.intersection(p.relative_to(DIST).parts)]
@@ -66,6 +69,7 @@ def main():
         'stages/09-visibility-baseline/index.html','stages/09-visibility-baseline/technical-appendix.html']]
     page_paths += [folder / name for folder in (interim, interim_part2)
                    for name in ('index.html', 'technical-appendix.html')]
+    page_paths += [DIST / path for record in supplements() for path in (record['path'], appendix_path(record))]
     pages = {}
     for path in page_paths:
         page = Page(); document = path.read_text(); page.feed(document); pages[path.resolve()] = page
@@ -148,6 +152,7 @@ def main():
     build_learning_hub.check()
     import build_visibility_baseline
     build_visibility_baseline.load_and_check()
+    build_measurement_kit_retest.load()
     import check_site_metadata
     check_site_metadata.main()
     import check_sitemap

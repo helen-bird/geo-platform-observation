@@ -38,12 +38,13 @@ def series_navigation(reports, directory, selected_path, kind='reader'):
     return '<div class="experiment-series" data-report-series="v1" aria-label="GEO Lab learning series"><strong>GEO Lab learning records</strong>'+links+'</div>'
 
 
-def finish_page(document, stage, kind='reader'):
+def finish_page(document, stage, kind='reader', *, supplement=None):
     """Add a series selector and a provenance note, without editing answer text."""
     if 'data-report-series="v1"' in document:
         raise ValueError('Series navigation has already been inserted')
     reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
-    selected = next(r for r in reports if r['stage'] == stage)
+    parent = next(r for r in reports if r['stage'] == stage)
+    selected = supplement or parent
     directory = posixpath.dirname(selected['path']) or '.'
     relative = lambda path: posixpath.relpath(path, directory)
     series = series_navigation(reports, directory, selected['path'], kind)

@@ -14,7 +14,7 @@ from report_series import INTERIM_LABEL, INTERIM_PART2_LABEL, INTERIM_PART2_READ
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://helen-bird.github.io/geo-platform-observation/'
 DATE = '2026-11-03'
-UPDATED = '2026-11-24'
+UPDATED = '2026-11-27'
 QUESTIONS = {
     1: ('How do AI search engines choose sources?',
         'Repeated GEO questions to ChatGPT Search and Grok show differences in recommended entities, cited sources and repeat overlap. Citation, mention and recommendation are separate observations.',
@@ -100,6 +100,9 @@ def render():
         article += '<div class="links"><a href="'+escape(relative(r['path']),quote=True)+'">Read '+('learning record' if number==5 else 'report')+'</a><a href="'+escape(at('public-data.zip'),quote=True)+'">Download '+('public summary' if number==5 else 'public data')+'</a><a href="'+escape(at('technical-appendix.html'),quote=True)+'">'+('Methods and source notes' if number==5 else 'Read original evidence')+'</a></div>'
         if number == 1:
             article += '<p><a href="https://x.com/bird_helen67403/status/2116080254523445676">Original GEO Lab #01 post</a></p>'
+        if number == 9:
+            article += ('<p><a href="'+escape(at('measurement-kit-retest/index.html'), quote=True)+'">'
+                        'Supplement · How I optimized and retested the Measurement Kit</a></p>')
         article += '</article>'
     review = relative(INTERIM_READER)
     article += ('<article class="lesson" id="interim-review"><p class="lesson-name">GEO Lab '+escape(INTERIM_LABEL)+'</p>'

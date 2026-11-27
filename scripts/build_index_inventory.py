@@ -4,7 +4,7 @@ import json,re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
-from site_metadata import MEASUREMENT_GUIDE_PATH, appendix_path
+from site_metadata import MEASUREMENT_GUIDE_PATH, appendix_path, supplements
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE='https://helen-bird.github.io/geo-platform-observation/'
@@ -16,10 +16,13 @@ class Page(HTMLParser):
         if t=='meta'and a.get('name','').lower()in('robots','googlebot')and'noindex'in a.get('content','').lower():self.noindex=True
 def build():
     reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
+    extra_reports = supplements()
+    reports += extra_reports
     primary = {'learning-hub/index.html', 'evidence/index.html', MEASUREMENT_GUIDE_PATH} | {r['path'] for r in reports}
     appendices = {path for r in reports if (path := appendix_path(r))}
     outside_monitor = {path for r in reports if r.get('monitor') is False
                        for path in (r['path'], appendix_path(r)) if path}
+    outside_monitor.update(path for r in extra_reports for path in (r['path'], appendix_path(r)))
     outside_monitor.add(MEASUREMENT_GUIDE_PATH)
     urls, excluded, known = [], [], set()
     for p in sorted(ROOT.rglob('*.html')):

@@ -43,7 +43,7 @@ def page(filename, title, description, sections):
 <style>{CSS}{EXTRA}</style></head>
 <body><a class="skip" href="#main">Skip to report</a><div class="layout">
 <nav aria-label="GEO Lab 09 contents"><strong>On this page</strong><div class="nav-links">{navigation}</div>
-<div class="nav-group">{alternate}<a href="public-data.zip">Download redacted data</a></div></nav>
+<div class="nav-group">{alternate}<a href="measurement-kit-retest/">Supplement · Optimization and retest</a><a href="public-data.zip">Download redacted data</a></div></nav>
 <main id="main"><p class="lesson-name">GEO Lab #09 · AI Visibility Baseline</p><h1>{escape(title)}</h1>
 <p class="author">Helen Bird · Observed November 23–24, 2026 (Beijing time)</p>
 {content}<p class="footer"><a href="../../learning-hub/">GEO Learning Hub</a> · <a href="https://github.com/helen-bird/geo-platform-observation">Repository</a></p></main>
@@ -110,6 +110,7 @@ def reader(rows):
     measurement += table(['Resource or provider', 'Mentioned', 'Recommended'],
                          [(escape(name), f'{mentioned[name]}/30', f'{count}/30')
                           for name, count in sorted(recs.items(), key=lambda entry: (-entry[1], entry[0]))[:7]])
+    measurement += '<p><a href="measurement-kit-retest/">See how I used this shortlist to rebuild and retest the Measurement Kit.</a></p>'
     bounds = '<p>This batch gives a starting measurement for these exact six questions. It has no comparable prior week or controlled content change. Earlier experiments used other questions or collection conditions. The study records visible answers and sources, with no visibility into the model’s full retrieval or selection process.</p>'
     bounds += '<p><a href="technical-appendix.html">Read the scoring and coverage notes</a> · <a href="public-data.zip">Download the redacted evidence</a></p>'
     bounds += '<p><a href="../../learning-hub/measurement/#change">Set up your own repeat measurement</a> with an exact prompt, a saved baseline and a change record.</p>'

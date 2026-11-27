@@ -8,7 +8,7 @@ from datetime import date
 from html.parser import HTMLParser
 import json
 from pathlib import Path
-from site_metadata import MEASUREMENT_GUIDE_PATH, appendix_path
+from site_metadata import MEASUREMENT_GUIDE_PATH, appendix_path, supplements
 import re
 from urllib.parse import urljoin, urlsplit
 import xml.etree.ElementTree as ET
@@ -71,6 +71,7 @@ def read_page(path):
 def entries():
     """Use only confirmed routes; the hub date comes from its visible text."""
     reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
+    reports += supplements()
     result = []
     for report in reports:
         path = report['path']

@@ -6,6 +6,7 @@ This one-time study records 180 answers collected on November 23–24, 2026 (Bei
 - [Methods and source evidence](https://helen-bird.github.io/geo-platform-observation/stages/09-visibility-baseline/technical-appendix.html)
 - [Exact prompts](data/prompts.json), [observation codes](data/observations.jsonl), and [attempts](data/attempts.jsonl)
 - [Redacted data download](public-data.zip), including answer text, observed primary links, and excerpts behind alternative-resource codes
+- [Measurement Kit optimization and retest](measurement-kit-retest/), a supplement that benchmarks recommended resources, documents the v2.0 release, and compares a new 30-answer M2 batch
 
 Public IDs identify positions in the frozen plan. The `F` suffix identifies a failed capture. The `R` suffix identifies the valid replacement for that position. The search field records whether search was explicitly observed. Panel coverage separates complete panels, earlier partial evidence and a completed answer with no panel displayed. Target hits in the “More” list stay separate from Citation.
 

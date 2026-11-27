@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
-from site_metadata import ROOT, SITE, HUB_PATH, MEASUREMENT_GUIDE_PATH, PERSON_ID, SITE_ID, SERIES_ID, appendix_path, canonical_url, finalize_page
+from site_metadata import ROOT, SITE, HUB_PATH, MEASUREMENT_GUIDE_PATH, PERSON_ID, SITE_ID, SERIES_ID, appendix_path, canonical_url, finalize_page, supplements
 
 
 class Metadata(HTMLParser):
@@ -69,7 +69,7 @@ def main():
     _fixture_checks()
     reports = json.loads((ROOT/'report-versions.json').read_text())['reports']
     targets = [(HUB_PATH, 'hub', None), (MEASUREMENT_GUIDE_PATH, 'guide', None)]
-    for report in reports:
+    for report in reports + supplements():
         targets.append((report['path'], 'reader', report))
         if appendix := appendix_path(report):
             targets.append((appendix, 'appendix', report))

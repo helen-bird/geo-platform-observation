@@ -2,6 +2,10 @@
 
 Dates use Asia/Shanghai. First-publication dates refer to this repository's public editions, supported by Git history and the retained edition records. Original experiment dates, publication dates and later observations are separate.
 
+## 2026-11-27
+
+- **Lab #09 supplement v1.0.** Published the M2 competitor audit, Measurement Kit v2.0 changes and first retest with 30 redacted answers. The first round recorded 16/30 recommendations three days after release, compared with 0/30 before release. The supplement and its navigation links are a site change after the first retest.
+
 ## 2026-11-24
 
 - Shortened the Measurement Kit search title and description in response to Bing Webmaster Tools' live inspection. The visible guide heading, downloadable files and research data are preserved.

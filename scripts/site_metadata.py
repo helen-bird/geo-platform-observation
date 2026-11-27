@@ -114,6 +114,10 @@ def _reports():
     return json.loads((ROOT/'report-versions.json').read_text())['reports']
 
 
+def supplements():
+    return json.loads((ROOT/'report-versions.json').read_text()).get('supplements', [])
+
+
 def _description(path, head, title):
     if path in DESCRIPTIONS:
         return DESCRIPTIONS[path]
@@ -126,7 +130,10 @@ def _description(path, head, title):
 
 def _structured(path, kind, stage, title, description):
     reports = _reports()
-    selected = next((r for r in reports if r['stage'] == stage), None)
+    parent = next((r for r in reports if r['stage'] == stage), None)
+    supplement = next((r for r in supplements() if r['stage'] == stage
+                       and path in (r['path'], appendix_path(r))), None)
+    selected = supplement or parent
     url = canonical_url(path)
     person = {'@type': 'Person', '@id': PERSON_ID, 'name': 'Helen Bird', 'url': canonical_url(HUB_PATH)}
     website = {'@type': 'WebSite', '@id': SITE_ID, 'name': 'GEO Learning Log', 'url': SITE, 'publisher': {'@id': PERSON_ID}, 'inLanguage': 'en'}
@@ -148,12 +155,14 @@ def _structured(path, kind, stage, title, description):
         if kind == 'appendix':
             page['about'] = {'@id': canonical_url(selected['path'])+'#article'}
     elif kind == 'hub':
-        page.update(author={'@id': PERSON_ID}, datePublished='2026-11-03', dateModified=max(r['last_revised'] for r in reports), about={'@id': SERIES_ID})
+        page.update(author={'@id': PERSON_ID}, datePublished='2026-11-03', dateModified=max(r['last_revised'] for r in reports + supplements()), about={'@id': SERIES_ID})
     # Evidence pages describe an archive curated/published by Helen Bird, not
     # authorship of the original platform-generated answer. No author is added.
     trail = [('GEO Learning Log', SITE)]
     if path not in {'index.html', HUB_PATH}:
         trail.append(('GEO Learning Hub', canonical_url(HUB_PATH)))
+    if supplement:
+        trail.append((f'GEO Lab #{stage:02d} · '+parent['title'], canonical_url(parent['path'])))
     if selected and path != selected['path']:
         trail.append((f'GEO Lab #{stage:02d} · '+selected['title'], canonical_url(selected['path'])))
     if trail[-1][1] != url:

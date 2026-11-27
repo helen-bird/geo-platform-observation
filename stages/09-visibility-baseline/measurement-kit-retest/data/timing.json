@@ -1,0 +1,10 @@
+{
+  "timezone": "Asia/Shanghai",
+  "kit_deployed": "2026-11-24T20:04:33+08:00",
+  "metadata_deployed": "2026-11-24T20:24:27+08:00",
+  "title_check_submitted": "2026-11-27T20:39:58+08:00",
+  "retest_first_submitted": "2026-11-27T20:57:44+08:00",
+  "retest_last_submitted": "2026-11-27T21:36:36+08:00",
+  "kit_release_commit": "c29189118f818cfdfc238c979ad2185665e02a32",
+  "metadata_commit": "cc8b93b2fd243dc7319cd560998e58f504e96ecc"
+}
